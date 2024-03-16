@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST | DASHBOARD</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="views/styles/style.css">
+</head>
+
+<body>
+    <!-- ASIDE CONTAINER -->
+    <div class="container">
+        <aside class="left-section">
+
+            <div class="sidebar">
+
+                <div class="logo">
+                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
+                    <a href="#"><img src="views/imgs/logo3.png" alt="logo"></a>
+                </div>
+
+
+                <div class="item" id="active">
+                    <i class='bx bx-home-alt-2'></i>
+                    <a href="#">Dashboard</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-grid-alt'></i>
+                    <a href="#">Ordenes</a>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-user-detail'></i>
+                    <a href="#">Empleados</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-task'></i>
+                    <a href="#">Inventario</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cog'></i>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+
+            <div class="log-out sidebar">
+                <div class="item">
+                    <i class='bx bx-log-out'></i>
+                    <a href="#">Log-out</a>
+                </div>
+
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <button class="menu-btn" id="menu-open"></button>
+                <i class='bx bx-menu'></i>
+            </header>
+
+            <div class="separator">
+                <div class="info">
+                    <h3>Admin Dashboard</h3>
+                    <a href="#">View All</a>
+                </div>
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="views/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #242422;
+}
+
+i {
+    font-size: 24px;
+}
+
+:root {
+    /******************** COLORS ********************/
+    /* #0f172b, f6f6f9, #f88208, #FEA116, #242422 */
+
+    --primary-color: #fea116;
+    --secundary-color: #242422;
+    --body-bg: #f6f6f9;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    height: 100vh;
+}
+
+.container .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 40px 40px 40px;
+}
+
+.container .left-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .left-section .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.container .left-section .logo a {
+    font-weight: 800;
+    font-size: 18px;
+    color: #242422;
+}
+
+.menu-btn {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #d1e6f9;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.container .left-section .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container .left-section .sidebar .item {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.container .left-section .sidebar i {
+    color: var(--secundary-color);
+    transition: all 0.3s ease;
+    font-size: 30px;
+}
+
+.container .left-section .sidebar a {
+    color: var(--secundary-color);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a,
+.container .left-section .sidebar .item#active i,
+.container .left-section .upgrade .link i {
+    color: var(--primary-color);
+}
+
+.container .left-section .sidebar .item a::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: var(--primary-color);
+    right: -30px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(116%);
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a::after {
+    width: 8px;
+    height: 8px;
+}
+
+main {
+    border-right: 2px solid #f0f0f0;
+    border-left: 2px solid #f0f0f0;
+    padding: 40px 40px 0 40px;
+    background: var(--body-bg);
+}
+
+main header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
