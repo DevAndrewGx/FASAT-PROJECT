@@ -23,7 +23,7 @@ let defaultOptions = {
             enabled: false,
         },
         width: "100%",
-        hight: 180,
+        height: 250,
         offsetY: 18,
     },
 

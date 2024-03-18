@@ -12,6 +12,25 @@
 <body>
     <!-- ASIDE CONTAINER -->
     <div class="container">
+
+        <header>
+            <nav>
+                <ul class="items-right">
+                    <li>
+                        <a href="#"><i class='bx bx-search'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class='bx bx-bell'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="views/imgs/avatar-02.jpg" alt="admin" width="60px"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
         <aside class="left-section">
 
             <div class="sidebar">
@@ -52,10 +71,15 @@
 
             </div>
         </aside>
+
+
         <!-- END OF SIDEBAR -->
+        <!-- HEADER STYLES -->
+
 
         <!-- MAIN CONTENT -->
         <main>
+
             <h1>Admin Dashboard</h1>
             <!-- <header>
                 <button class="menu-btn" id="menu-open"></button>
@@ -180,6 +204,49 @@
                 </div>
             </div>
 
+            <div id="orders-employees">
+
+                <div class="employee">
+                    <h2>Employees</h2>
+                    <p id="list">List of employees</p>
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-17.jpg" alt="avatar-17">
+                        </div>
+                        <div class="info">
+                            <h3>Juan Andres</h3>
+                            <p>Mesero</p>
+                            <p>andres@fast.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-13.jpg" alt="avatar-13">
+                        </div>
+                        <div class="info">
+                            <h3>Fernando Gabriel</h3>
+                            <p>Cheff</p>
+                            <p>fer@fast.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-06.jpg" alt="avatar-06">
+                        </div>
+                        <div class="info">
+                            <h3>Maria Antonia</h3>
+                            <p>Mesera</p>
+                            <p>Andres@fast.com</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <!-- <div class="separator">
                 <div class="info">
                     <h3>Admin Dashboard</h3>
@@ -191,6 +258,8 @@
                 </div>
             </div> -->
         </main>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="views/js/app.js"></script>
