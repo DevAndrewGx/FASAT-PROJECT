@@ -1,0 +1,228 @@
+.page-header {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main .nav-sections {
+    position: relative;
+    width: 100%;
+}
+
+main h1 {
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+main .nav-sections nav {
+    width: 100%;
+    padding: 20px 0 15px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid orange;
+}
+
+main .nav-sections nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+main .nav-sections nav ul li {
+    list-style: none;
+}
+
+.nav-sections nav ul li a {
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 17;
+    transition: 0.4s;
+}
+
+.nav-sections nav ul li#active a {
+    background: orange;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+}
+
+.nav-sections nav ul li a:hover {
+    color: orange;
+}
+.card {
+    margin: 0 0 25px;
+    border: 1px solid #e8ebed;
+    border-radius: 6px;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.search-set .btn-filter {
+    background: #ff9f43;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.search-set .search-input {
+    position: relative;
+}
+.search-set .search-input input[type="search"] {
+    background: 0 0;
+    height: 40px;
+    border: 1px solid rgba(145, 158, 171, 0.32);
+    width: 200px;
+    border-radius: 5px;
+    padding: 0 15px 0 30px;
+}
+
+.search-set .search-input .btn-searchset {
+    padding: 2px;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+.swal2-actions .swal2-confirm {
+    margin-right: 10px;
+}
+.wordset ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+.wordset ul li a {
+    display: block;
+}
+
+.page-title h4,
+.page-title h6 {
+    margin: 0;
+}
+
+.page-btn {
+    display: flex;
+    gap: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table-top {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+.table thead {
+    background: #fafbfe;
+}
+.page-header .btn-added {
+    background: #ff9f43;
+    padding: 7px 15px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.page-header .btn-added img {
+    filter: brightness(0) invert(1);
+}
+
+/* table.dataTable > thead .sorting:after,
+table.dataTable > thead .sorting_asc:after,
+table.dataTable > thead .sorting_desc:after,
+table.dataTable > thead .sorting_asc_disabled:after,
+table.dataTable > thead .sorting_desc_disabled:after {
+    right: 0.5em;
+    content: "\f107";
+    font-family: "font awesome 5 free";
+    top: 14px;
+    color: #babfc7;
+    font-size: 12px;
+    opacity: 1;
+}
+table.dataTable > thead .sorting:before,
+table.dataTable > thead .sorting_asc:before,
+table.dataTable > thead .sorting_desc:before,
+table.dataTable > thead .sorting_asc_disabled:before,
+table.dataTable > thead .sorting_desc_disabled:before {
+    right: 0.5em;
+    content: "\f106";
+    font-family: "font awesome 5 free";
+    top: 5px;
+    color: #babfc7;
+    font-size: 12px;
+    opacity: 1;
+} */
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* thead {
+    background-color: #f2f2f2;
+} */
+
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+td input[type="checkbox"],
+th input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 0;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn-view {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+}

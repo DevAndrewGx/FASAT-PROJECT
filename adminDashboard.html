@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST | DASHBOARD</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="views/styles/style.css">
+
+</head>
+
+<body>
+    <!-- ASIDE CONTAINER -->
+    <div class="main-container">
+
+        <header>
+            <nav>
+                <ul class="items-right">
+                    <li>
+                        <a href="#"><i class='bx bx-search'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class='bx bx-bell'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="views/imgs/avatar-02.jpg" alt="admin" width="60px"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="left-section">
+
+            <div class="sidebar">
+
+                <div class="logo">
+                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
+                    <a href="#"><img src="views/imgs/LOGOf.png" alt="logo" width="100"></a>
+                </div>
+
+
+                <div class="item" id="active">
+                    <i class='bx bx-home-alt-2'></i>
+                    <a href="adminDashboard.html">Dashboard</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-grid-alt'></i>
+                    <a href="#">Ordenes</a>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-user-detail'></i>
+                    <a href="gestionEmpleados.html">Empleados</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-transfer-alt'></i>
+                    <a href="gestionVentas.html">Ventas</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-task'></i>
+                    <a href="gestionInventario.html">Inventario</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cog'></i>
+                    <a href="#">Ajustes</a>
+                </div>
+            </div>
+
+            <div class="log-out sidebar">
+                <div class="item">
+                    <i class='bx bx-log-out'></i>
+                    <a href="#">Log-out</a>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- END OF SIDEBAR -->
+        <!-- HEADER STYLES -->
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <h1>Admin Dashboard</h1>
+            <!-- <header>
+                <button class="menu-btn" id="menu-open"></button>
+                <i class='bx bx-menu'></i>
+            </header> -->
+
+
+
+            <div class="analyse">
+                <!-- STOCK
+                            SALES
+                            SALES-INCOME
+                            ORDERS TODAY -->
+                <div id="stock">
+                    <div class="status">
+                        <div class="info">
+                            <h2>90 +</h2>
+                            <h3>Elementos en stock</h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="item">
+                                <i class='bx bx-package'></i>
+                            </div>
+
+                            <div class="value">
+                                <p>+ 7%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orders">
+                    <div class="status">
+                        <div class="info">
+                            <h2>15 +</h2>
+                            <h3>Ordenes hoy </h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="item">
+                                <i class='bx bx-cart-download'></i>
+                            </div>
+
+                            <div class="value">
+                                <p>+ 5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="sales-income">
+                    <div class="status">
+                        <div class="info">
+                            <h2>$80.000</h2>
+                            <h3>Ingresos Ventas</h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="item">
+                                <i class='bx bxs-dish'></i>
+                            </div>
+
+                            <div class="value">
+                                <p>+ 7%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="total-sales">
+                    <div class="status">
+                        <div class="info">
+                            <h2>100 +</h2>
+                            <h3>Total Ventas</h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="item">
+                                <i class='bx bx-trending-up'></i>
+                            </div>
+
+                            <div class="value">
+                                <p>+ 15%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CHART ANALYTICS -->
+            <div class="charts-analytics">
+                <div class="chart">
+                    <h2>Productos Stock</h2>
+                    <p>Mes-a-mes Comparación</p>
+
+                    <div class="pulse">
+                    </div>
+                    <div class="chart-area">
+                        <div class="grid"></div>
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <h2>Ventas & Gastos</h2>
+                    <p>Mes-a-mes Comparison</p>
+                    <div class="pulse-sale">
+
+                    </div>
+                    <span id="sale-span">Ventas</span>
+
+                    <div class="pulse-expense">
+
+                    </div>
+                    <span id="expense-span">Gastos</span>
+
+                    <div class="chart-area chart-ExSa">
+                        <div class="grid"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="orders-employees">
+
+                <div class="employee">
+                    <h2>Empleados</h2>
+                    <p id="list">Lista de empleados</p>
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-17.jpg" alt="avatar-17">
+                        </div>
+                        <div class="info">
+                            <h3>Juan Andres</h3>
+                            <p>Mesero</p>
+                            <p>andres@fast.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-13.jpg" alt="avatar-13">
+                        </div>
+                        <div class="info">
+                            <h3>Fernando Gabriel</h3>
+                            <p>Cheff</p>
+                            <p>fer@fast.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="data-employee">
+                        <div class="img">
+                            <img src="views/imgs/avatar-06.jpg" alt="avatar-06">
+                        </div>
+                        <div class="info">
+                            <h3>Maria Antonia</h3>
+                            <p>Mesera</p>
+                            <p>Andres@fast.com</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="separator">
+                <div class="info">
+                    <h3>Admin Dashboard</h3>
+                    <a href="#">View All</a>
+                </div>
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div> -->
+        </main>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="views/js/app.js"></script>
+    <script src="views/js/appChart.js"></script>
+</body>
+
+</html>

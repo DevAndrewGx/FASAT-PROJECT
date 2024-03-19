@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST | DASHBOARD</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="views/styles/style.css">
+    <link rel="stylesheet" href="views/styles/empleados/empleadosStyles.css">
+    <link rel="stylesheet" href="views/styles/stylesUI.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- ASIDE CONTAINER -->
+    <div class="main-container">
+
+        <header>
+            <nav>
+                <ul class="items-right">
+                    <li>
+                        <a href="#"><i class='bx bx-search'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class='bx bx-bell'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="views/imgs/avatar-02.jpg" alt="admin" width="60px"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="left-section">
+
+            <div class="sidebar">
+
+                <div class="logo">
+                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
+                    <a href="#"><img src="views/imgs/logo3.png" alt="logo"></a>
+                </div>
+
+
+                <div class="item">
+                    <i class='bx bx-home-alt-2'></i>
+                    <a href="adminDashboard.html">Dashboard</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-grid-alt'></i>
+                    <a href="#">Ordenes</a>
+                </div>
+                <div class="item" id="active">
+                    <i class='bx bxs-user-detail'></i>
+                    <a href="gestionEmpleados.html">Empleados</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-transfer-alt'></i>
+                    <a href="gestionVentas.html">Ventas</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-task'></i>
+                    <a href="gestionInventario.html">Inventario</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cog'></i>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+
+            <div class="log-out sidebar">
+                <div class="item">
+                    <i class='bx bx-log-out'></i>
+                    <a href="#">Log-out</a>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- END OF SIDEBAR -->
+        <!-- HEADER STYLES -->
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <h1>Empleados</h1>
+            <div class="page-wrapper">
+                <div class="content">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h4>Lista de Usuarios</h4>
+                            <h6>Administra tus usuarios</h6>
+                        </div>
+                        <div class="page-btn">
+                            <a href="crearEmpleado.html" class="btn btn-added"><i class="fas fa-plus"></i> Agregar
+                                Usuario</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-top">
+                                <div class="wordset">
+                                    <ul>
+                                        <li>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><i
+                                                    class="fas fa-file-pdf"></i></a>
+                                        </li>
+                                        <li>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><i
+                                                    class="fas fa-file-excel"></i></a>
+                                        </li>
+                                        <li>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="top" title="imprimir"><i
+                                                    class="fas fa-print"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table  datanew">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                                        <th>Nombre de Usuario</th>
+                                        <th>Teléfono</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Rol</th>
+                                        <th>Creado el</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Thomas</td>
+                                        <td>+12163547758 </td>
+                                        <td><a href="mailto:thomas@example.com">thomas@example.com</a> </td>
+                                        <td>Administrador</td>
+                                        <td>15/03/2022</td>
+                                        <td><span class="bg-lightgreen badges">Activo</span></td>
+                                        <td>
+                                            <a class="me-3" href="editarEmpleado.html">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Maria</td>
+                                        <td>+12163547759 </td>
+                                        <td><a href="mailto:maria@example.com">maria@example.com</a> </td>
+                                        <td>Chef</td>
+                                        <td>16/03/2022</td>
+                                        <td><span class="bg-lightgreen badges">Activo</span></td>
+                                        <td>
+                                            <a class="me-3" href="editarEmpleado.html">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Juan</td>
+                                        <td>+12163547760 </td>
+                                        <td><a href="mailto:juan@example.com">juan@example.com</a> </td>
+                                        <td>Mesero</td>
+                                        <td>17/03/2022</td>
+                                        <td><span class="bg-lightgreen badges">Activo</span></td>
+                                        <td>
+                                            <a class="me-3" href="editarEmpleado.html">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>Sofía</td>
+                                        <td>+12163547761 </td>
+                                        <td><a href="mailto:sofia@example.com">sofia@example.com</a> </td>
+                                        <td>Inventario</td>
+                                        <td>18/03/2022</td>
+                                        <td><span class="bg-lightgreen badges">Activo</span></td>
+                                        <td>
+                                            <a class="me-3" href="editarEmpleado.html">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="views/js/app.js"></script>
+    <script src="views/js/appChart.js"></script>
+</body>
+
+</html>

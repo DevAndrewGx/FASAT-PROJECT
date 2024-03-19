@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST | DASHBOARD</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="views/styles/style.css">
+    <link rel="stylesheet" href="views/styles/stylesUI.css">
+    <link rel="stylesheet" href="views/styles/inventario/lista.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- ASIDE CONTAINER -->
+    <div class="main-container">
+
+        <header>
+            <nav>
+                <ul class="items-right">
+                    <li>
+                        <a href="#"><i class='bx bx-search'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class='bx bx-bell'></i></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="views/imgs/avatar-02.jpg" alt="admin" width="60px"></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="left-section">
+
+            <div class="sidebar">
+
+                <div class="logo">
+                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
+                    <a href="#"><img src="views/imgs/logo3.png" alt="logo"></a>
+                </div>
+
+
+                <div class="item">
+                    <i class='bx bx-home-alt-2'></i>
+                    <a href="adminDashboard.html">Dashboard</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-grid-alt'></i>
+                    <a href="#">Ordenes</a>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-user-detail'></i>
+                    <a href="gestionEmpleados.html">Empleados</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-transfer-alt'></i>
+                    <a href="gestionVentas.html">Ventas</a>
+                </div>
+                <div class="item" id="active">
+                    <i class='bx bx-task'></i>
+                    <a href="#">Inventario</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cog'></i>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+
+            <div class="log-out sidebar">
+                <div class="item">
+                    <i class='bx bx-log-out'></i>
+                    <a href="#">Log-out</a>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- END OF SIDEBAR -->
+        <!-- HEADER STYLES -->
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <div class="nav-sections">
+                <nav>
+                    <ul>
+                        <li id="active"><a href="#">Lista Productos</a></li>
+                        <li><a href="listaCategorias.html">Lista Categorias</a></li>
+                        <li><a href="#">Control de Stock</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h1>Lista productos</h1>
+            <p>Gestiona tus productos</p>
+
+            <div class="page-wrapper">
+
+                <div class="page-header">
+
+                    <!-- <div class="page-title">
+                        <h4>Lista de Productos</h4>
+                        <h6>Administra tus productos</h6>
+                    </div> -->
+                    <div class="page-btn">
+                        <a href="crearProducto.html" class="btn btn-added"><i class="fas fa-plus"></i> Agregar Nuevo
+                            Producto</a>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" id="select-all">
+                                </th>
+                                <th>Producto</th>
+                                <th>SKU</th>
+                                <th>Categoría</th>
+                                <th>Marca</th>
+                                <th>Precio</th>
+                                <th>Unidad</th>
+                                <th>Cantidad</th>
+                                <th>Creado Por</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Pizza</td>
+                                <td>PT0012</td>
+                                <td>Comida Rápida</td>
+                                <td>N/D</td>
+                                <td>12.99</td>
+                                <td>pc</td>
+                                <td>50.00</td>
+                                <td>Admin</td>
+                                <td>
+                                    <a href="detallesProducto.html" class="btn-link">
+                                        <button class="btn btn-view"><i class="far fa-eye"></i> Ver</button>
+                                    </a>
+                                    <a href="editarProducto.html" class="btn-link">
+                                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                                    </a>
+                                    <a href="#" class="btn-link">
+                                        <button class="btn btn-delete"><i class="fas fa-trash-alt"></i>
+                                            Eliminar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Hamburguesa</td>
+                                <td>HB0034</td>
+                                <td>Comida Rápida</td>
+                                <td>N/D</td>
+                                <td>8.99</td>
+                                <td>pc</td>
+                                <td>30.00</td>
+                                <td>Admin</td>
+                                <td>
+                                    <a href="detallesProducto.html" class="btn-link">
+                                        <button class="btn btn-view"><i class="far fa-eye"></i> Ver</button>
+                                    </a>
+                                    <a href="editarProducto.html" class="btn-link">
+                                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                                    </a>
+                                    <a href="#" class="btn-link">
+                                        <button class="btn btn-delete"><i class="fas fa-trash-alt"></i>
+                                            Eliminar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Ensalada César</td>
+                                <td>EN0056</td>
+                                <td>Ensaladas</td>
+                                <td>N/D</td>
+                                <td>6.99</td>
+                                <td>pc</td>
+                                <td>20.00</td>
+                                <td>Admin</td>
+                                <td>
+                                    <a href="detallesProducto.html" class="btn-link">
+                                        <button class="btn btn-view"><i class="far fa-eye"></i> Ver</button>
+                                    </a>
+                                    <a href="editarProducto.html" class="btn-link">
+                                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                                    </a>
+                                    <a href="#" class="btn-link">
+                                        <button class="btn btn-delete"><i class="fas fa-trash-alt"></i>
+                                            Eliminar</button>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Sushi</td>
+                                <td>SH0089</td>
+                                <td>Comida Asiática</td>
+                                <td>N/D</td>
+                                <td>15.99</td>
+                                <td>pc</td>
+                                <td>40.00</td>
+                                <td>Admin</td>
+                                <td>
+                                    <a href="detallesProducto.html" class="btn-link">
+                                        <button class="btn btn-view"><i class="far fa-eye"></i> Ver</button>
+                                    </a>
+                                    <a href="editarProducto.html" class="btn-link">
+                                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                                    </a>
+                                    <a href="#" class="btn-link">
+                                        <button class="btn btn-delete"><i class="fas fa-trash-alt"></i>
+                                            Eliminar</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>Tacos</td>
+                                <td>TC0075</td>
+                                <td>Comida Mexicana</td>
+                                <td>N/D</td>
+                                <td>10.99</td>
+                                <td>pc</td>
+                                <td>35.00</td>
+                                <td>Admin</td>
+                                <td>
+                                    <a href="detallesProducto.html" class="btn-link">
+                                        <button class="btn btn-view"><i class="far fa-eye"></i> Ver</button>
+                                    </a>
+                                    <a href="editarProducto.html" class="btn-link">
+                                        <button class="btn btn-edit"><i class="fas fa-edit"></i> Editar</button>
+                                    </a>
+                                    <a href="#" class="btn-link">
+                                        <button class="btn btn-delete"><i class="fas fa-trash-alt"></i>
+                                            Eliminar</button>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table><br>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-outline-primary" id="dashboardBtn"><i class="fas fa-home"></i> Panel
+                            Principal</button>
+                        <div class="btn-group" role="group"><br>
+                            <button class="btn btn-outline-primary" id="prevPageBtn"><i
+                                    class="fas fa-chevron-left"></i></button>
+                            <button class="btn btn-outline-primary" id="nextPageBtn"><i
+                                    class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="views/js/app.js"></script>
+</body>
+
+
+
+</html>

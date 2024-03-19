@@ -28,7 +28,7 @@ i {
     --font-family: "Manrope", sans-serif;
 }
 
-.container {
+.main-container {
     display: grid;
     grid-template-columns: 280px 1fr;
     grid-template-rows: 60px 1fr;
@@ -36,27 +36,34 @@ i {
     height: 100vh;
 }
 
-.container .left-section {
+.main-container .left-section {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* max-width: 80px; */
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 40px 40px 40px;
     grid-area: side;
+    border-right: 2px solid #f0f0f0;
+    min-height: 100vh;
+    min-width: 280px;
 }
 
-.container .left-section .logo {
+.main-container .left-section .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.container .left-section .logo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.main-container .left-section .logo img {
+    width: 160px;
+    height: 70px;
+    object-fit: contain;
 }
 
-.container .left-section .logo a {
+.main-container .left-section .logo a {
     font-weight: 800;
     font-size: 18px;
     color: #242422;
@@ -79,25 +86,25 @@ i {
     color: var(--primary-color);
 }
 
-.container .left-section .sidebar {
+.main-container .left-section .sidebar {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.container .left-section .sidebar .item {
+.main-container .left-section .sidebar .item {
     display: flex;
     gap: 15px;
     cursor: pointer;
 }
 
-.container .left-section .sidebar i {
+.main-container .left-section .sidebar i {
     color: var(--secundary-color);
     transition: all 0.3s ease;
     font-size: 30px;
 }
 
-.container .left-section .sidebar a {
+.main-container .left-section .sidebar a {
     color: var(--secundary-color);
     display: flex;
     align-items: center;
@@ -105,15 +112,16 @@ i {
     font-size: 17px;
     position: relative;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.container .left-section .sidebar .item#active a,
-.container .left-section .sidebar .item#active i,
-.container .left-section .upgrade .link i {
+.main-container .left-section .sidebar .item#active a,
+.main-container .left-section .sidebar .item#active i,
+.main-container .left-section .upgrade .link i {
     color: var(--primary-color);
 }
 
-.container .left-section .sidebar .item a::after {
+.main-container .left-section .sidebar .item a::after {
     position: absolute;
     content: "";
     width: 0px;
@@ -126,7 +134,7 @@ i {
     transition: all 0.3s ease;
 }
 
-.container .left-section .sidebar .item#active a::after {
+.main-container .left-section .sidebar .item#active a::after {
     width: 8px;
     height: 8px;
 }
@@ -165,8 +173,8 @@ header ul li a img {
 main {
     width: 100%;
     border-right: 2px solid #f0f0f0;
-    border-left: 2px solid #f0f0f0;
-    padding: 30px 40px 0 40px;
+    /* border-left: 2px solid #f0f0f0; */
+    padding: 30px 30px 0 30px;
     background: var(--body-bg);
     padding-bottom: 30px;
     grid-area: main;
@@ -286,7 +294,7 @@ main .chart .pulse-sale {
     width: 14px;
     background: var(--primary-color);
     top: 52px;
-    right: 250px;
+    right: 270px;
     border-radius: 50%;
     color: #f9f9f9;
 }
@@ -312,7 +320,7 @@ main .chart span#sale-span {
 main .chart span#sale-span {
     position: absolute;
     top: 47px;
-    right: 210px;
+    right: 200px;
     color: #f9f9f9;
 }
 
