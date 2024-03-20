@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
 :root {
     --primary: #fea116;
     --light: #f1f8ff;
     --dark: #0f172b;
-    --nav: #003366;
+    --nav: #fff;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
 }
 
 .col-lg-6 p {
@@ -46,24 +52,41 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
+    color: #000;
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
     font-size: 15px;
-    color: var(--light) !important;
+    /* color: var(--light) ; */
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
-    transition: 0.5s;
+    transition: 0.4s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    top: 60px;
+    left: 0;
+    transition: 0.4s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 70%;
 }
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
+    color: #000;
     padding: 20px 0;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary) !important;
+    color: var(--primary);
 }
 
 .navbar-dark .navbar-brand img {
@@ -94,8 +117,8 @@
 
 /* Hero Header */
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
-        url(../imgs/img/bg-hero.jpg);
+    /* background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+        url(../imgs/img/bg-hero.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,6 +140,8 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
     transition: 0.5s;
     border-radius: 20px; /* Añadido: bordes redondeados */
+    height: 250px;
+    border-radius: 10px;
 }
 
 .service-item:hover {

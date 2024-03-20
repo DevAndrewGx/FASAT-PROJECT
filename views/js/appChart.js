@@ -22,8 +22,10 @@ let defaultOptions = {
         zoom: {
             enabled: false,
         },
+        // WIDTH FOR CHART
         width: "100%",
-        height: 250,
+        // HEIGHT FOR CHART
+        height: 280,
         offsetY: 18,
     },
 
