@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
-
+/* START GLOBAL STYLES */
 * {
     padding: 0;
     margin: 0;
@@ -16,6 +16,58 @@ i {
     font-size: 24px;
 }
 
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2196f3;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-view {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+td input[type="checkbox"],
+th input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 0;
+}
+
 :root {
     /******************** COLORS ********************/
     /* #0f172b, f6f6f9, #f88208, #FEA116, #242422 */
@@ -27,6 +79,8 @@ i {
     --color-label: #a7a7a7;
     --font-family: "Manrope", sans-serif;
 }
+
+/* END GLOBAL STYLES */
 
 .main-container {
     display: grid;
@@ -89,7 +143,7 @@ i {
 .main-container .left-section .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
 .main-container .left-section .sidebar .item {
@@ -178,6 +232,11 @@ main {
     background: var(--body-bg);
     padding-bottom: 30px;
     grid-area: main;
+}
+
+main h1 {
+    margin-top: 15px;
+    font-size: 25px;
 }
 
 main .analyse {
@@ -503,3 +562,177 @@ main .employee p#list {
     font-size: 14px;
     margin: 0 0 20px;
 }
+
+/* STYLES FOR TABLES AND FORMS MODULES STOCK, SALES , EMPLOOYES */
+
+main .page-wrapper {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main .page-header .btn-added {
+    background: #ff9f43;
+    padding: 7px 15px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+main .page-title h4 {
+    margin: 0;
+    color: #333;
+}
+
+main .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+main .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-top {
+    margin-bottom: 30px;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #fafbfe;
+}
+
+main table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+main .table th,
+main .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+main .table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+main .table tr:hover {
+    background-color: #f5f5f5;
+}
+
+table .checkboxs {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+table .checkmarks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+table .checkboxs input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+table .checkboxs input[type="checkbox"]:checked ~ .checkmarks {
+    background-color: #2196f3;
+}
+
+table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btn:hover {
+    background-color: #0b7dda;
+}
+
+.btn.btn-added {
+    background-color: #4caf50;
+}
+
+.btn.btn-added:hover {
+    background-color: #d48700;
+}
+
+.btn.confirm-text {
+    background-color: #f44336;
+}
+
+.btn.confirm-text:hover {
+    background-color: #d32f2f;
+}
+
+.badges {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bg-lightgreen {
+    background-color: #4caf50;
+}
+
+.bg-lightred {
+    background-color: #f44336;
+}
+
+.wordset ul {
+    list-style: none; /* Quitar las viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+.wordset ul li {
+    display: inline-block; /* Alinear los elementos horizontalmente */
+    margin-right: 10px; /* Espacio entre los íconos */
+}
+
+.wordset ul li:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último ícono */
+}
+
+/* END STYLES FOR FORMS AND TABLES */

@@ -1,0 +1,145 @@
+/* CUMSTON STYLES FOR THIS PAGE */
+
+main .nav-sections {
+    position: relative;
+    width: 100%;
+}
+
+main .nav-sections nav {
+    width: 100%;
+    padding: 20px 0 15px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid orange;
+}
+
+main .nav-sections nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+main .nav-sections nav ul li {
+    list-style: none;
+}
+
+.nav-sections nav ul li a {
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 17;
+    transition: 0.4s;
+}
+
+.nav-sections nav ul li#active a {
+    background: orange;
+    border-radius: 2px 2px 0 0;
+    color: #fff;
+}
+
+.nav-sections nav ul li a:hover {
+    color: orange;
+}
+
+
+/* DETAILS SECTION FOR STOCK PRODUCT */
+
+/* CSS */
+.productdetails ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px; /* Añadir espacio entre los detalles */
+}
+
+.productdetails ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Espacio entre los elementos */
+    padding-bottom: 10px; /* Espacio entre la línea y el siguiente elemento */
+    border-bottom: 1px solid #e0e0e0; /* Línea separadora con color más sutil */
+}
+
+.productdetails ul li h4 {
+    font-weight: bold;
+    width: 30%;
+    text-align: left;
+    margin-bottom: 0; /* Eliminar el margen inferior */
+    font-size: 16px; /* Tamaño de letra ajustado */
+}
+
+.productdetails ul li h6 {
+    width: 70%;
+    text-align: left;
+    margin-bottom: 0; /* Eliminar el margen inferior */
+    font-size: 16px; /* Tamaño de letra ajustado */
+    color: #555; /* Color de texto ligeramente más oscuro */
+}
+
+.productdetails ul li h4:first-child,
+.productdetails ul li h6:first-child {
+    margin-top: 0; /* Eliminar el margen superior del primer elemento */
+}
+
+.productdetails ul li:last-child {
+    margin-bottom: 0; /* Eliminar el margen inferior del último elemento */
+    border-bottom: none; /* Eliminar la línea separadora del último elemento */
+}
+
+
+/* .search-set .btn-filter {
+    background: #ff9f43;
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+} */
+
+/* .search-set .search-input {
+    position: relative;
+}
+.search-set .search-input input[type="search"] {
+    background: 0 0;
+    height: 40px;
+    border: 1px solid rgba(145, 158, 171, 0.32);
+    width: 200px;
+    border-radius: 5px;
+    padding: 0 15px 0 30px;
+} */
+
+/* .search-set .search-input .btn-searchset {
+    padding: 2px;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+} */
+
+/* .swal2-actions .swal2-confirm {
+    margin-right: 10px;
+}
+.wordset ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+.wordset ul li a {
+    display: block;
+}
+
+.page-title h4,
+.page-title h6 {
+    margin: 0;
+} */
+
+/* .page-btn {
+    display: flex;
+    gap: 10px;
+} */
+
+/* .table-container {
+    overflow-x: auto;
+} */
+
+/* .page-header .btn-added img {
+    filter: brightness(0) invert(1);
+} */
+
+/* .btn i {
+    margin-right: 5px;
+} */

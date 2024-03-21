@@ -30,9 +30,9 @@ body {
 }
 
 .logo {
-    width: 100px;
-    height: 90px;
-    margin-bottom: -20px; /* Ajustar el margen inferior */
+    width: 150px;
+    height: 60px;
+    margin-bottom: 20px; /* Ajustar el margen inferior */
 }
 
 h2 {
