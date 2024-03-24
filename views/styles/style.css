@@ -15,6 +15,27 @@ a {
 i {
     font-size: 24px;
 }
+/**************** STYLES BADGES *************/
+.badges {
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    min-width: 80px;
+}
+
+.badges.bg-lightgreen {
+    background: #28c76f;
+}
+.badges.bg-lightred {
+    background: #ea5455;
+}
+.badges.bg-lightyellow {
+    background: #f90;
+}
 
 .btn {
     display: inline-block;
@@ -587,6 +608,8 @@ main .page-header {
 }
 
 main .page-header .btn-added {
+    display: flex;
+    align-items: center;
     background: #ff9f43;
     padding: 10px 15px;
     color: #fff;
@@ -622,7 +645,7 @@ main table {
 main table.dataTable {
     clear: both;
     margin-top: 6px !important;
-    margin-bottom: 6px !important;
+    margin-bottom: 20px !important;
     max-width: none !important;
     border-collapse: separate !important;
     border-spacing: 0;
@@ -638,12 +661,29 @@ main .table td {
 main .table th {
     background-color: #f0f0f0;
     font-weight: bold;
+    outline: none;
+}
+table.dataTable thead > tr > th.dt-orderable-desc:hover {
+    outline: 0 !important;
 }
 
-main .table tr:hover {
+main .table tr {
+    border-bottom: 0;
+}
+
+main table.dataTable tbody > tr:hover {
     background-color: #f5f5f5;
 }
-table.dataTable > thead .sorting:after {
+
+.table tbody tr td {
+    padding: 10px;
+    color: #637381;
+    font-weight: 500;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+/* table.dataTable > thead .sorting:after {
     right: 0.5em;
     content: "\f107";
     font-family: "font awesome 5 free";
@@ -660,7 +700,7 @@ table.dataTable > thead .sorting:before {
     color: #babfc7;
     font-size: 12px;
     opacity: 1;
-}
+} */
 table .checkboxs {
     position: relative;
     display: inline-block;
@@ -700,7 +740,11 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
     transform: rotate(45deg);
 }
 
-.btn:hover {
+.dt-length {
+    float: left;
+    font-size: 12px;
+}
+/* .btn:hover {
     background-color: #0b7dda;
 }
 
@@ -718,24 +762,7 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 
 .btn.confirm-text:hover {
     background-color: #d32f2f;
-}
-
-.badges {
-    padding: 4px 8px;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.bg-lightgreen {
-    background-color: #4caf50;
-}
-
-.bg-lightred {
-    background-color: #f44336;
-}
+} */
 
 .wordset ul {
     list-style: none; /* Quitar las viñetas */

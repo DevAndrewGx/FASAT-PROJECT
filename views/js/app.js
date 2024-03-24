@@ -33,6 +33,17 @@ navegationItems.forEach((element) => {
 // DATA-TABLES
 document.addEventListener("DOMContentLoaded", function () {
     const table = document.getElementById("example");
-    const dataTable = new DataTable(table);
+    const dataTable = new DataTable(table, {
+        bFilter: true,
+        sDom: "fBtlpi",
+        pagingType: "none",
+        ordering: true,
+        language: {
+            search: "",
+            sLengthMenu: "Mostrar: _MENU_", // Personaliza el texto del selector de longitud de página
+            searchPlaceholder: "Search...",
+            info: "_START_ - _END_ de _TOTAL_ items",
+        },
+    });
     return dataTable;
 });
