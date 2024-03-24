@@ -1,9 +1,8 @@
+// EFECT FOR SIDEBAR ELEMENTS
 const sidebarItems = document.querySelectorAll(
     ".container .left-section .sidebar .item"
 );
-
 let activeItem = sidebarItems[0];
-
 sidebarItems.forEach((element) => {
     element.addEventListener("click", () => {
         if (activeItem) {
@@ -15,11 +14,11 @@ sidebarItems.forEach((element) => {
     });
 });
 
-
-const navegationItems = document.querySelectorAll('main .nav-sections nav ul li');
-
+// EFECT FOR STOCK NAVBAR ELEMENTS
+const navegationItems = document.querySelectorAll(
+    "main .nav-sections nav ul li"
+);
 let activeNavItem = navegationItems[0];
-
 navegationItems.forEach((element) => {
     element.addEventListener("click", () => {
         if (activeNavItem) {
@@ -29,4 +28,11 @@ navegationItems.forEach((element) => {
         element.setAttribute("id", "active");
         activeItem = element;
     });
-})
+});
+
+// DATA-TABLES
+document.addEventListener("DOMContentLoaded", function () {
+    const table = document.getElementById("example");
+    const dataTable = new DataTable(table);
+    return dataTable;
+});
