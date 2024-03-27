@@ -242,11 +242,12 @@ header nav {
 header nav ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 header nav ul li {
     list-style: none;
+    padding: 6px 0 0 0;
 }
 
 header nav ul li a {
@@ -254,7 +255,7 @@ header nav ul li a {
 }
 header ul li a img {
     border-radius: 50%;
-    width: 45px;
+    width: 40px;
     margin-top: 5px;
 }
 
@@ -693,24 +694,7 @@ main table.dataTable tbody > tr:hover {
     vertical-align: middle;
     white-space: nowrap;
 }
-/* table.dataTable > thead .sorting:after {
-    right: 0.5em;
-    content: "\f107";
-    font-family: "font awesome 5 free";
-    top: 14px;
-    color: #babfc7;
-    font-size: 12px;
-    opacity: 1;
-}
-table.dataTable > thead .sorting:before {
-    right: 0.5em;
-    content: "\f106";
-    font-family: "font awesome 5 free";
-    top: 5px;
-    color: #babfc7;
-    font-size: 12px;
-    opacity: 1;
-} */
+
 table .checkboxs {
     position: relative;
     display: inline-block;
@@ -754,25 +738,6 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
     float: left;
     font-size: 12px;
 }
-/* .btn:hover {
-    background-color: #0b7dda;
-}
-
-.btn.btn-added {
-    background-color: #4caf50;
-}
-
-.btn.btn-added:hover {
-    background-color: #d48700;
-}
-
-.btn.confirm-text {
-    background-color: #f44336;
-}
-
-.btn.confirm-text:hover {
-    background-color: #d32f2f;
-} */
 
 .wordset ul {
     list-style: none; /* Quitar las viñetas */
@@ -787,6 +752,27 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 
 .wordset ul li:last-child {
     margin-right: 0; /* Eliminar margen derecho del último ícono */
+}
+
+/* CUMSTOM STYLES FOR SEARCH BUTTON DATATABLES*/
+
+div.dt-container div.dt-search {
+    text-align: left !important;
+    padding-top: 10px;
+}
+
+div.dt-container div.dt-search input {
+    position: relative;
+    background-image: url("../imgs/icons/search-white.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    height: 40px;
+    border: 1px solid #919eab52;
+    width: 200px;
+    border-radius: 5px;
+    padding: 0 5px 0 30px;
+    margin-bottom: 10px;
 }
 
 /* END STYLES FOR FORMS AND TABLES */

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ordering: true,
         language: {
             search: " ",
-            sLengthMenu: "Mostrar _MENU_ registros", // Personalizado según tu requerimiento
+            sLengthMenu: "Mostrar _MENU_", // Personalizado según tu requerimiento
             searchPlaceholder: "Search...",
             info: "_START_ - _END_ de _TOTAL_ items",
         },

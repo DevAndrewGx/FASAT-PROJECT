@@ -7,7 +7,7 @@ main .nav-sections {
 
 main .nav-sections nav {
     width: 100%;
-    padding: 20px 0 15px;
+    padding: 20px 0 1px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-top: 5px solid orange;
@@ -24,9 +24,11 @@ main .nav-sections nav ul li {
 
 .nav-sections nav ul li a {
     padding: 15px 20px;
+    text-decoration: none;
     font-weight: 600;
     font-size: 17;
     transition: 0.4s;
+    color: #000;
 }
 
 .nav-sections nav ul li#active a {
@@ -38,7 +40,6 @@ main .nav-sections nav ul li {
 .nav-sections nav ul li a:hover {
     color: orange;
 }
-
 
 /* DETAILS SECTION FOR STOCK PRODUCT */
 
@@ -82,64 +83,3 @@ main .nav-sections nav ul li {
     margin-bottom: 0; /* Eliminar el margen inferior del último elemento */
     border-bottom: none; /* Eliminar la línea separadora del último elemento */
 }
-
-
-/* .search-set .btn-filter {
-    background: #ff9f43;
-    width: 34px;
-    height: 34px;
-    margin-right: 10px;
-} */
-
-/* .search-set .search-input {
-    position: relative;
-}
-.search-set .search-input input[type="search"] {
-    background: 0 0;
-    height: 40px;
-    border: 1px solid rgba(145, 158, 171, 0.32);
-    width: 200px;
-    border-radius: 5px;
-    padding: 0 15px 0 30px;
-} */
-
-/* .search-set .search-input .btn-searchset {
-    padding: 2px;
-    border-radius: 50px;
-    position: absolute;
-    top: 5px;
-    left: 6px;
-} */
-
-/* .swal2-actions .swal2-confirm {
-    margin-right: 10px;
-}
-.wordset ul li {
-    margin: 0 10px;
-    list-style: none;
-}
-.wordset ul li a {
-    display: block;
-}
-
-.page-title h4,
-.page-title h6 {
-    margin: 0;
-} */
-
-/* .page-btn {
-    display: flex;
-    gap: 10px;
-} */
-
-/* .table-container {
-    overflow-x: auto;
-} */
-
-/* .page-header .btn-added img {
-    filter: brightness(0) invert(1);
-} */
-
-/* .btn i {
-    margin-right: 5px;
-} */

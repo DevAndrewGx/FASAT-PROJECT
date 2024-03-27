@@ -85,20 +85,3 @@
     border-radius: 5px;
     cursor: pointer;
 } */
-
-/* CUMSTOM STYLES FOR DATATABLES EMPLOYEES */
-
-div.dt-container div.dt-search {
-    text-align: left !important;
-    padding-top: 10px;
-}
-
-div.dt-container div.dt-search input {
-    position: relative;
-    height: 40px;
-    border: 1px solid #919eab52;
-    width: 200px;
-    border-radius: 5px;
-    padding: 0 5px 0 30px;
-    margin-bottom: 10px;
-}
