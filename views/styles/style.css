@@ -90,6 +90,16 @@ th input[type="checkbox"] {
     margin: 0;
 }
 
+ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0 !important;
+}
+
+ul li {
+    list-style: none;
+}
+
 :root {
     /******************** COLORS ********************/
     /* #0f172b, f6f6f9, #f88208, #FEA116, #242422 */
