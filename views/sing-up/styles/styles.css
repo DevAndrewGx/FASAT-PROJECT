@@ -48,10 +48,10 @@ h2 {
 }
 
 input {
-    width: calc(100% - 20px);
+    width: 91%;
     padding: 12px;
     font-size: 16px;
-    border: 2px solid #ced4da;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     transition: border-color 0.3s ease;
 }
@@ -75,7 +75,7 @@ input:not(:placeholder-shown) + label {
 }
 
 #btn-login {
-    width: 100%;
+    width: 92%;
     text-decoration: none;
     display: block;
     padding: 12px;

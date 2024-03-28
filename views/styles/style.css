@@ -259,6 +259,28 @@ header ul li a img {
     margin-top: 5px;
 }
 
+/* STYLES FOR DROPDOWN USER MENU*/
+.items-right .dropdown-toggle {
+    border: none;
+    padding-right: 0; /* Ajusta el padding derecho según sea necesario */
+}
+
+.items-right .dropdown-toggle img {
+    margin-right: 0; /* Ajusta el margen derecho según sea necesario */
+}
+
+.items-right .dropdown-toggle::after {
+    border: 0;
+}
+
+/* .items-right > li > a.dropdown-toggle {
+    color: #212b36;
+    font-size: 15px;
+    line-height: 70px;
+    height: 100px;
+    width: 40px;
+    padding: 0 15px;
+} */
 /* STYLES FOR MAIN  */
 
 main {
