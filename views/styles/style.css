@@ -98,6 +98,7 @@ ul {
 
 ul li {
     list-style: none;
+    position: relative;
 }
 
 :root {
@@ -263,6 +264,7 @@ header ul li a img {
 .items-right .dropdown-toggle {
     border: none;
     padding-right: 0; /* Ajusta el padding derecho según sea necesario */
+    width: 40px;
 }
 
 .items-right .dropdown-toggle img {
@@ -273,14 +275,81 @@ header ul li a img {
     border: 0;
 }
 
-/* .items-right > li > a.dropdown-toggle {
-    color: #212b36;
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    color: #637381;
+    padding: 7px 10px !important;
     font-size: 15px;
-    line-height: 70px;
-    height: 100px;
-    width: 40px;
-    padding: 0 15px;
-} */
+}
+
+.dropdown-menu .dropdown-item.logout {
+    color: #f62d51;
+}
+
+.dropdown-menu .dropdown-item img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.dropdown-menu .profilename .user-img .status {
+    bottom: 10px;
+}
+
+.dropdown-menu .profilename .profileset {
+    padding: 10px 10px 3px;
+    display: flex;
+}
+
+.dropdown-menu .profilename .profileset h6 {
+    font-size: 12px;
+    color: #212b36;
+    font-weight: 500;
+}
+
+.dropdown-menu .profilename .profileset h5 {
+    font-size: 12px;
+    color: #637381;
+}
+
+.dropdown-menu .profilename .profileset .user-img {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.items-right .user-img .status1::before {
+    border: 2px solid #fff;
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    display: inline-block;
+    background: #28c76f;
+}
+
+.items-right .user-img .status2::before {
+    border: 2px solid #fff;
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #28c76f;
+}
+
+.dropdown-menu .profilename .profileset img {
+    width: 38px;
+    border-radius: 50%;
+}
 /* STYLES FOR MAIN  */
 
 main {
