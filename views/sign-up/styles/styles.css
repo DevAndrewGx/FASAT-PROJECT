@@ -75,9 +75,7 @@ input:not(:placeholder-shown) + label {
 }
 
 #btn-login {
-    width: 92%;
-    text-decoration: none;
-    display: block;
+    width: 100%;
     padding: 12px;
     font-size: 16px;
     background-color: #fea116;
