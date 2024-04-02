@@ -393,11 +393,14 @@ main .analyse > div {
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08);
+    /* box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08); */
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 }
 
 main .analyse > div#stock {
     /* background: #9fc4f0; */
+
     border-left: 7px solid #9fc4f0;
 }
 
@@ -483,7 +486,8 @@ main .chart {
     background: #1b1b1b;
     padding: 30px;
     border-radius: 24px;
-    box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 }
 
 /* 
@@ -708,7 +712,8 @@ main #orders-employees .employee {
     background: #fff;
     padding: 30px;
     border-radius: 24px;
-    box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 }
 
 main .employee .data-employee {
