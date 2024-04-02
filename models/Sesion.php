@@ -24,7 +24,7 @@ class Sesion
 
                 session_start();
                 // las variables de secion son para el archivo de seguridad de rutas o de permisos de rutas...
-                $_SESSION['IDROLES'] = $f['IDROLES'];
+                $_SESSION['IDROL'] = $f['IDROL'];
                 $_SESSION['Rol'] = $f['Rol'];
                 $_SESSION['auntenticado'] = "SI";
 
