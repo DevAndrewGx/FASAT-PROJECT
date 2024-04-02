@@ -283,6 +283,13 @@ header ul li a img {
     font-size: 15px;
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff9f43 !important;
+}
+
 .dropdown-menu .dropdown-item.logout {
     color: #f62d51;
 }
@@ -381,32 +388,42 @@ main .analyse .status {
 
 main .analyse > div {
     background: #fff;
-    padding: 1.8rem;
-    border-radius: 20px;
+    padding: 1.5rem;
+    border-radius: 10px;
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08);
 }
 
 main .analyse > div#stock {
-    background: #9fc4f0;
+    /* background: #9fc4f0; */
+    border-left: 7px solid #9fc4f0;
 }
 
 main .analyse > div#orders {
-    background: #fcf49a;
+    /* background: #fcf49a; */
+    border-left: 7px solid #f9e92f;
 }
 
 main .analyse > div#sales-income {
-    background: #def5c7;
+    /* background: #def5c7; */
+    border-left: 7px solid #a2e361;
 }
 
 main .analyse > div#total-sales {
-    background: #f9ca7b;
+    /* background: #f9ca7b; */
+    border-left: 7px solid #f9ca7b;
 }
 
 main .analyse > div .info h2 {
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
+}
+
+main .analyse > div .info h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
 }
 
 main .analyse .progress {
@@ -414,10 +431,38 @@ main .analyse .progress {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    background: none;
+    height: auto;
 }
 
 main .analyse .progress .item i {
     font-size: 35px;
+    background: transparent;
+    height: auto;
+}
+
+.analyse #stock .progress .item i {
+    color: #fff;
+    background: #9fc4f0;
+    border-radius: 5px;
+}
+
+.analyse #orders .progress .item i {
+    color: #fff;
+    background: #f9e92f;
+    border-radius: 5px;
+}
+
+.analyse #sales-income .progress .item i {
+    color: #fff;
+    background: #a2e361;
+    border-radius: 5px;
+}
+
+.analyse #total-sales .progress .item i {
+    color: #fff;
+    background: #f9ca7b;
+    border-radius: 5px;
 }
 
 main .analyse .progress .value p {
