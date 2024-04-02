@@ -483,25 +483,17 @@ main .charts-analytics {
 
 main .chart {
     position: relative;
-    background: #1b1b1b;
+    /* background: #1b1b1b; */
+    background: #f9f9f9;
     padding: 30px;
     border-radius: 24px;
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 }
 
-/* 
-main .chart:first-child {
-    grid-column-start: 2;
-    grid-column-end: 3;
-} */
-
-/* main .chart:nth-child(2) {
-    grid-column: span 2;
-} */
 
 main .chart h2 {
-    color: #f9f9f9;
+    color: #000;
     font-size: 26px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -509,7 +501,7 @@ main .chart h2 {
 }
 
 main .chart p {
-    color: #f9f9f9;
+    color: #000;
     font-size: 14px;
     margin: 0 0 16px;
 }
@@ -549,22 +541,15 @@ main .chart .pulse-expense {
 main .chart span#sale-span {
     position: absolute;
     top: 47px;
-    right: 215px;
-    color: #f9f9f9;
-}
-
-main .chart span#sale-span {
-    position: absolute;
-    top: 47px;
     right: 200px;
-    color: #f9f9f9;
+    color: #000;
 }
 
 main .chart span#expense-span {
     position: absolute;
     top: 47px;
     right: 90px;
-    color: #f9f9f9;
+    color: #000;
 }
 
 main .chart .pulse::after {
@@ -667,7 +652,7 @@ main .chart .chart-area .grid {
     );
 }
 
-main .chart .chart-area .grid::after {
+/* main .chart .chart-area .grid::after {
     content: "";
     position: inherit;
     z-index: -1;
@@ -681,7 +666,7 @@ main .chart .chart-area .grid::after {
         rgba(27, 27, 27, 0.9),
         rgba(27, 27, 27, 1)
     );
-}
+} */
 
 body .apexcharts-tooltip.apexcharts-theme-light {
     color: #fff;

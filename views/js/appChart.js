@@ -63,23 +63,24 @@ let barOptions = {
         type: "gradient",
         gradient: {
             type: "vertical",
-            opacityForm: 1,
-            opacityTo: 0,
+            opacityFrom: 1,
+            opacityTo: 1,
             stops: [0, 100],
             colorStops: [
                 {
                     offset: 0,
-                    opacity: 0.2,
-                    color: "#ffffff",
+                    opacity: 0.5, // Ajusta la opacidad según lo tenue que desees el azul
+                    color: "#F79501", // Puedes cambiar este color azul según tus preferencias
                 },
                 {
                     offset: 100,
-                    opacity: 0.2,
-                    color: "#ffffff",
+                    opacity: 0.2, // Ajusta la opacidad según lo tenue que desees el azul
+                    color: "#FEC570", // Puedes cambiar este color azul según tus preferencias
                 },
             ],
         },
     },
+
     stroke: {
         colors: [primaryColor],
         lineCap: "round",
@@ -159,35 +160,39 @@ let barOptionsExSa = {
         },
     },
     series: [
-        { name: "Sales", data: [30, 68, 38, 51, 60, 80] },
+        {
+            name: "Sales",
+            data: [30, 65, 28, 70, 60, 80],
+            fill: {
+                type: "gradient",
+                gradient: {
+                    type: "vertical",
+                    opacityForm: 1,
+                    opacityTo: 0,
+                    stops: [0, 100],
+                    colorStops: [
+                        {
+                            offset: 0,
+                            opacity: 0.2,
+                            color: "red",
+                        },
+                        {
+                            offset: 100,
+                            opacity: 0.2,
+                            color: "yellow",
+                        },
+                    ],
+                },
+            },
+        },
         {
             name: "Expenses",
-            data: [11, 52, 65, 20, 40, 90],
+            data: [15, 50, 18, 85, 40, 90],
         },
     ],
 
     colors: [primaryColor, thirdColor],
-    fill: {
-        type: "gradient",
-        gradient: {
-            type: "vertical",
-            opacityForm: 1,
-            opacityTo: 0,
-            stops: [0, 100],
-            colorStops: [
-                {
-                    offset: 0,
-                    opacity: 0.2,
-                    color: "#ffffff",
-                },
-                {
-                    offset: 100,
-                    opacity: 0.2,
-                    color: "#ffffff",
-                },
-            ],
-        },
-    },
+
     stroke: {
         colors: [primaryColor, thirdColor],
         lineCap: "round",
