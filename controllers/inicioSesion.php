@@ -2,7 +2,7 @@
 
 //  require_once() para enlazar las dependencias necesarias
 require_once("../models/Conexion.php");
-require_once("../models/Sesion.php");
+require_once("../models/Sesion.php");;
 
 // Recuperamos info enviada a traves del fomulario con el superGlobal POST
 $usuario = $_POST['user'];

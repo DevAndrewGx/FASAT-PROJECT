@@ -26,10 +26,11 @@ class Sesion
                 // las variables de secion son para el archivo de seguridad de rutas o de permisos de rutas...
                 $_SESSION['IDROL'] = $f['IDROL'];
                 $_SESSION['Rol'] = $f['Rol'];
-                $_SESSION['AUTENTICADO'] = "SI";
+                $_SESSION['autenticado'] = "SI";
 
                 if ($f['Rol'] == "Administrador") {
                     echo '<script>alert("Bienvenido Admin :)")</script>';
+                    echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
                 } //else {
                 //     echo '<script>alert("Bienvenido Inmobiliaria")</script>';

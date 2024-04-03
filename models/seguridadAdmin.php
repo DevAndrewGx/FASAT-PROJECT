@@ -2,10 +2,9 @@
 
 session_start();
 
-if (!isset($_SESSION['AUTENTICADO'])) {
-
+if (!isset($_SESSION['autenticado'])) {
     echo '<script>alert("Por favor, inicie sesión")</script>';
-    echo "<script>location.href='../views/sign-up/login.php'</script>";
+    echo "<script>location.href='../../../views/sign-up/login.php'</script>";
 }
 
 if ($_SESSION['Rol'] != 'Administrador') {
