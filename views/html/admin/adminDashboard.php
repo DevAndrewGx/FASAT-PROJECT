@@ -29,8 +29,7 @@
                     </li>
 
                     <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="user-img">
                                 <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
                                 <span class="status1 online"></span></span>
@@ -53,11 +52,9 @@
                                 <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
                                     My
                                     Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg"
-                                        alt="settings">Settings</a>
+                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>
                                 <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="../../sign-up/login.php"><img
-                                        src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
+                                <a class="dropdown-item logout pb-0" href="../../../controllers/cerrarSesion.php"><img src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
                             </div>
                         </div>
                     </li>
@@ -301,9 +298,7 @@
 
 
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- APP JS -->
     <script src="../../js/app.js"></script>

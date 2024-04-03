@@ -26,11 +26,11 @@ class Sesion
                 // las variables de secion son para el archivo de seguridad de rutas o de permisos de rutas...
                 $_SESSION['IDROL'] = $f['IDROL'];
                 $_SESSION['Rol'] = $f['Rol'];
-                $_SESSION['auntenticado'] = "SI";
+                $_SESSION['AUTENTICADO'] = "SI";
 
                 if ($f['Rol'] == "Administrador") {
                     echo '<script>alert("Bienvenido Admin :)")</script>';
-                    echo "<script>location.href='../views/html/admin/adminDashboard.html'</script>";
+                    echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
                 } //else {
                 //     echo '<script>alert("Bienvenido Inmobiliaria")</script>';
                 //     echo "<script>location.href='../Views/inmoApartamentos.php'</script>";
@@ -45,10 +45,11 @@ class Sesion
         }
     }
 
-    // public function cerrarSesion()
-    // {
-    //     session_start();
-    //     session_destroy();
-    //     echo "<script>location.href='../views/log-in.php'</script>";
-    // }
+    public function cerrarSesion()
+    {
+        session_start();
+        session_destroy();
+        echo "<script>alert('Testing message for log-out')</script>";
+        echo "<script>location.href='../views/sign-up/login.php'</script>";
+    }
 }
