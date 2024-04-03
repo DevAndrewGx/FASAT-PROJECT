@@ -4,7 +4,7 @@
 require_once("../models/Conexion.php");
 require_once("../models/Sesion.php");
 
-// Aterrizamos en variables los datos ingresados por el usuario, los cuales viajan a traves del metodo POST y los name de los campos
+// Recuperamos info enviada a traves del fomulario con el superGlobal POST
 $usuario = $_POST['user'];
 $claveMd = $_POST['password'];
 
