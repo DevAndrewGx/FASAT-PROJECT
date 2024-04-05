@@ -700,7 +700,7 @@ main #orders-employees > div {
     box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 }
 
-main #orders-employees .employee #more-details {
+/* main #orders-employees .employee #more-details {
     display: flex;
     justify-content: end;
 }
@@ -709,7 +709,7 @@ main #orders-employees .employee a {
     background: var(--primary-color);
     color: #fff;
     padding: 10px 17px;
-}
+} */
 
 main .employee h2 {
     color: var(--secundary-color);

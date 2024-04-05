@@ -271,6 +271,10 @@ require_once('../../../models/Sesion.php');
                             <p>Cheff</p>
                         </div>
 
+                        <div class="display-info">
+                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display"></a>
+                        </div>
+
                     </div>
 
                     <div class="data-employee">
@@ -281,11 +285,17 @@ require_once('../../../models/Sesion.php');
                             <h3>Maria Antonia</h3>
                             <p>Mesera</p>
                         </div>
+
+                        <!-- DISPLAY INFORMATION'S EMPLOYEES -->
+
+                        <div class="display-info">
+                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display"></a>
+                        </div>
                     </div>
                     <!-- BUTTON TO WATCH MORE DETAILS ABOUT EMPLOYEES -->
-                    <div id="more-details">
+                    <!-- <div id="more-details">
                         <a href="#">Mas detalles</a>
-                    </div>
+                    </div> -->
 
                 </div>
 
