@@ -1,3 +1,10 @@
+<?php
+require_once('../../../models/seguridadMesero.php');
+require_once('../../../models/Conexion.php');
+require_once('../../../models/Sesion.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +19,7 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 </head>
 
@@ -31,8 +38,35 @@
                         <a href="#"><i class='bx bx-bell'></i></a>
                     </li>
 
-                    <li>
-                        <a href="#"><img src="../../imgs/avatar-06.jpg" alt="admin" width="60px"></a>
+                    <li class="nav-item dropdown has-arrow main-drop">
+                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="user-img">
+                                <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
+                                <span class="status1 online"></span></span>
+                            </span>
+                        </a>
+
+                        <!-- DROPDOWN MENU -->
+
+                        <div class="dropdown-menu menu-drop-user">
+                            <div class="profilename">
+                                <div class="profileset">
+                                    <span class="user-img"><img src="../../imgs/avatar-06.jpg" alt="hello">
+                                        <span class="status2 online"></span></span>
+                                    <div class="profilesets">
+                                        <h6>Juanita Dow</h6>
+                                        <h5>Admin</h5>
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                                <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
+                                    My
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>
+                                <hr class="m-0">
+                                <a class="dropdown-item logout pb-0" href="../../../controllers/cerrarSesion.php"><img src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -48,7 +82,7 @@
                 </div>
 
 
-         
+
 
                 <div class="item" id="active">
                     <i class='bx bx-food-menu'></i>
@@ -108,7 +142,7 @@
 
 
     </div>
-    
+
     <script src="../../js/main.js"></script>
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -117,9 +151,12 @@
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
 </body>
 
 </html>

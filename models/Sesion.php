@@ -34,7 +34,7 @@ class Sesion
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
                 }else if($f['Rol'] == "Camarero") {
                     echo '<script>alert("Bienvenido Mesero")</script>';
-                    echo "<script>location.href='../views/html/mesero/meseroDashboard.html'</script>";
+                    echo "<script>location.href='../views/html/mesero/meseroDashboard.php'</script>";
                 }
             } else {
                 echo '<script>alert("La clave es incorrecta")</script>';
