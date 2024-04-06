@@ -251,46 +251,61 @@ require_once('../../../models/Sesion.php');
                     <h2>Empleados</h2>
                     <p id="list">Lista de empleados</p>
                     <div class="data-employee">
-                        <div class="img">
-                            <img src="../../imgs/avatar-17.jpg"" alt=" avatar-17">
-                        </div>
-                        <div class="info">
-                            <h3>Juan Andres</h3>
-                            <p>Mesero</p>
 
+                        <div class="info-employee">
+                            <div class="img">
+                                <img src="../../imgs/avatar-17.jpg"" alt=" avatar-17">
+                            </div>
+                            <div class="info">
+                                <h3>Juan Andres</h3>
+                                <p>Mesero</p>
+
+                            </div>
                         </div>
 
-                    </div>
-
-                    <div class="data-employee">
-                        <div class="img">
-                            <img src="../../imgs/avatar-13.jpg"" alt=" avatar-13">
-                        </div>
-                        <div class="info">
-                            <h3>Fernando Gabriel</h3>
-                            <p>Cheff</p>
-                        </div>
 
                         <div class="display-info">
-                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display"></a>
+                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
                         </div>
 
                     </div>
 
                     <div class="data-employee">
-                        <div class="img">
-                            <img src="../../imgs/avatar-06.jpg" alt="avatar-06">
+
+                        <div class="info-employee">
+                            <div class="img">
+                                <img src="../../imgs/avatar-13.jpg"" alt=" avatar-13">
+                            </div>
+                            <div class="info">
+                                <h3>Fernando Gabriel</h3>
+                                <p>Cheff</p>
+                            </div>
                         </div>
-                        <div class="info">
-                            <h3>Maria Antonia</h3>
-                            <p>Mesera</p>
+
+
+                        <div class="display-info">
+                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
                         </div>
+
+                    </div>
+
+                    <div class="data-employee">
+                        <div class="info-employee">
+                            <div class="img">
+                                <img src="../../imgs/avatar-06.jpg" alt="avatar-06">
+                            </div>
+                            <div class="info">
+                                <h3>Maria Antonia</h3>
+                                <p>Mesera</p>
+                            </div>
+                        </div>
+
 
                         <!-- DISPLAY INFORMATION'S EMPLOYEES -->
-
                         <div class="display-info">
-                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display"></a>
+                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
                         </div>
+
                     </div>
                     <!-- BUTTON TO WATCH MORE DETAILS ABOUT EMPLOYEES -->
                     <!-- <div id="more-details">
