@@ -151,6 +151,7 @@ function mostrarFormulario() {
         confirmButtonText: 'Registrar',
         cancelButtonText: 'Cancelar',
         showLoaderOnConfirm: true,
+        allowOutsideClick: false, //false para evitar cierre indeseado
         preConfirm: () => {
             const metodoPago = document.getElementById('metodoPago').value;
           
@@ -230,13 +231,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Llamar a la función mostrarFormulario()
     const mesasSeleccionadas = mostrarFormulario();
-    // Hacer algo con las mesas seleccionadas, por ejemplo, imprimir en la consola
+    // Hacer algo con las mesas seleccionadas
     console.log("Mesas seleccionadas:", mesasSeleccionadas);
 });
-
-
-// Función para alternar la selección de una mesa
-function toggleSeleccion(idMesa) {
-    var mesa = document.getElementById(idMesa);
-    mesa.classList.toggle('seleccionada');
-}
