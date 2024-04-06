@@ -8,7 +8,7 @@ class Sesion
         $con = new Conexion();
         $objConexion = $con->getConexion();
 
-        $consultar = "SELECT * FROM usuarios JOIN roles ON roles.IDROL = usuarios.idUsuario WHERE Correo=:email";
+        $consultar = "SELECT * FROM usuarios JOIN roles ON roles.IDROL = usuarios.idRol WHERE Correo=:email";
         $statement = $objConexion->prepare($consultar);
 
         $statement->bindParam(":email", $email);
@@ -32,10 +32,10 @@ class Sesion
                     echo '<script>alert("Bienvenido Admin :)")</script>';
                     echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
-                } //else {
-                //     echo '<script>alert("Bienvenido Inmobiliaria")</script>';
-                //     echo "<script>location.href='../Views/inmoApartamentos.php'</script>";
-                // }
+                }else if($f['Rol'] == "Camarero") {
+                    echo '<script>alert("Bienvenido Mesero")</script>';
+                    echo "<script>location.href='../views/html/mesero/meseroDashboard.html'</script>";
+                }
             } else {
                 echo '<script>alert("La clave es incorrecta")</script>';
                 echo "<script>location.href='../views/sign-up/login.php'</script>";
