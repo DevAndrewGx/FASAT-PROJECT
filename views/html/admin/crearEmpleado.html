@@ -123,102 +123,101 @@
 
                     <div class="">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <label>Nombres</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese Nombres">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Tipo documento</label>
-                                        <select class="form-control select">
-                                            <option>Seleccione</option>
-                                            <option>CC</option>
-                                            <option>CC EXTRAGERIA</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Documento</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese documento">
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" placeholder="Ingrese correo">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Contraseña</label>
-                                        <div class="pass-group">
-                                            <input type="password" class="form-control pass-input"
-                                                placeholder="Ingresar contraseña">
-                                            <!-- Icono para ocultar/mostrar contraseña -->
-                                            <span class="fas toggle-passworda fa-eye-slash"></span>
+
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Nombres</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese Nombres" name="nombre">
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <label>Apellidos</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese usuario">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Rol</label>
-                                        <select class="form-control select">
-                                            <option>Seleccione</option>
-                                            <option>Mesero</option>
-                                            <option>Cheff</option>
-                                            <option>Encargado inventario</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Telefono</label>
-                                        <input type="text" class="form-control"
-                                            placeholder="Ingrese numero de telefono">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Direccion</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese Direccion">
-                                    </div>
-                                    
-                                   
-
-                                    <div class="form-group">
-                                        <label>Confirm Password</label>
-                                        <div class="pass-group">
-                                            <input type="password" class="form-control pass-inputs"
-                                                placeholder="Confirmar Contraseña">
-                                            <!-- Icono para ocultar/mostrar contraseña -->
-                                            <span class="fas toggle-passworda fa-eye-slash"></span>
+                                        <div class="form-group">
+                                            <label>Tipo documento</label>
+                                            <select class="form-control select">
+                                                <option>Seleccione</option>
+                                                <option>CC</option>
+                                                <option>CC EXTRAGERIA</option>
+                                            </select>
                                         </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- <div class="col-lg-3 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <label>Direccion</label>
-                                        <input type="text" class="form-control" placeholder="Ingrese Direccion">
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-3 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <label>Foto de perfil</label>
-                                        <div class="image-upload image-upload-new">
-                                            <input type="file">
-                                            <div class="image-uploads">
-                                                <img src="../../imgs/icons/upload.svg" alt="img">
-                                                <h4>Arrastra el archivo</h4>
+                                        <div class="form-group">
+                                            <label>Documento</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese documento" name="documento">
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" placeholder="Ingrese correo" name="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Contraseña</label>
+                                            <div class="pass-group">
+                                                <input type="password" class="form-control pass-input" placeholder="Ingresar contraseña" name="password">
+                                                <!-- Icono para ocultar/mostrar contraseña -->
+                                                <span class="fas toggle-passworda fa-eye-slash"></span>
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                    <div class="col-lg-3 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Apellidos</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese usuario" name="apellidos">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Rol</label>
+                                            <select class="form-control select">
+                                                <option>Seleccione</option>
+                                                <option>Mesero</option>
+                                                <option>Cheff</option>
+                                                <option>Encargado inventario</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Telefono</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese numero de telefono" name="telefono">
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                            <label>Direccion</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese Direccion" name="direccion">
+                                        </div>
+                                    
+                                    
+                                    
+                                        <div class="form-group">
+                                            <label>Confirm Password</label>
+                                            <div class="pass-group">
+                                                <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña"
+                                                    name="password-validate">
+                                                <!-- Icono para ocultar/mostrar contraseña -->
+                                                <span class="fas toggle-passworda fa-eye-slash"></span>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    
+                                    <div class="col-lg-3 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Foto de perfil</label>
+                                            <div class="image-upload image-upload-new">
+                                                <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
+                                                <div class="image-uploads">
+                                                    <img src="../../imgs/icons/upload.svg" alt="img">
+                                                    <h4>Arrastra el archivo</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn btn-added me-2">Aceptar</button>
+                                        <button type="button" class="btn btn-secondary">Cancelar</button>
+                                    </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <button type="submit" class="btn btn-added me-2">Aceptar</button>
-                                    <button type="button" class="btn btn-secondary">Cancelar</button>
-                                </div>
-                            </div>
+                            </form>
+
+
+
                         </div>
                     </div>
                 </div>
