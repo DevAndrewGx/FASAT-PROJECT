@@ -910,26 +910,35 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
+/********* CUSTOM DT-FIELDS FOR PAGINATION FEATURES ***********/
+.dt-info, 
+.dt-paging { 
+    float: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+
+
+.dt-paging {
+    display: inline-block;
+}
 
 .dt-length {
     float: left;
     font-size: 12px;
 }
 
-.wordset ul {
-    list-style: none; /* Quitar las viñetas */
-    margin: 0;
-    padding: 0;
+.pagination li.active a.page-link { 
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 5px;
 }
 
-.wordset ul li {
-    display: inline-block; /* Alinear los elementos horizontalmente */
-    margin-right: 10px; /* Espacio entre los íconos */
+.dt-length #dt-length-0 {
+    margin-left: 10px;
 }
 
-.wordset ul li:last-child {
-    margin-right: 0; /* Eliminar margen derecho del último ícono */
-}
 
 /* CUMSTOM STYLES FOR SEARCH BUTTON DATATABLES*/
 
