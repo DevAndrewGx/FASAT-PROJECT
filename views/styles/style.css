@@ -760,6 +760,12 @@ main #orders-employees #orders h2 {
     letter-spacing: 0.5px;
     margin: 0 0 2px;
 }
+main #orders-employees #orders p {
+    color: var(--secundary-color);
+    font-size: 14px;
+}
+
+
 
 /* STYLES FOR TABLES AND FORMS MODULES STOCK, SALES , EMPLOOYES */
 
@@ -834,6 +840,16 @@ main .table th {
     background-color: #f0f0f0;
     font-weight: bold;
     outline: none;
+}
+main .table td .employee-img img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    
+}
+main .table td a {
+    text-decoration: none;
+    color: #212b36;
 }
 table.dataTable thead > tr > th.dt-orderable-desc:hover {
     outline: 0 !important;

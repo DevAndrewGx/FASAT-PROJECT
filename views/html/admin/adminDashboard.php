@@ -16,6 +16,11 @@ require_once('../../../models/Sesion.php');
 
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
+
     <link rel="stylesheet" href="../../styles/style.css">
 
 </head>
@@ -315,22 +320,62 @@ require_once('../../../models/Sesion.php');
                 </div>
 
                 <div id="orders">
-                    <h2>Ordenes </h2>
-                    <p id="list">Lista de ordenes</p>
+                    <h2>Productos</h2>
+                    <p>Ultimos productos mas vendidos</p>
+                    <table id="example" class="table table-responsive datanew">
+                        <thead>
+                            <tr>
+                                <th>h</th>
+                                <th>First</th>
+                                <th>Last</th>
+                                <th>Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>
 
 
     </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
     <!-- APEXCHART LIBRARY -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../../js/appChart.js"></script>
 
+    <!-- DATA-TABLES -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
 
     <!-- APP JS -->
     <script src="../../js/app.js"></script>
