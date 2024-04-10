@@ -15,6 +15,17 @@ a {
 i {
     font-size: 24px;
 }
+
+.btn-principal { 
+    background: #ff9f43;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.btn-principal:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
 /**************** STYLES BADGES *************/
 .badges {
     font-size: 12px;
@@ -37,7 +48,7 @@ i {
     background: #f90;
 }
 
-.btn {
+/* .btn {
     display: inline-block;
     padding: 8px 16px;
     background-color: #2196f3;
@@ -46,7 +57,7 @@ i {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
+} */
 
 .btn-view {
     background-color: #007bff;
