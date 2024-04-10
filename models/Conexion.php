@@ -8,7 +8,7 @@ class Conexion
         $user = "root";
         $password = "";
         $host = "localhost";
-        $db = "proyecto";
+        $db = "test_fast1";
 
         // Cramos un objeto conexino PDO
 

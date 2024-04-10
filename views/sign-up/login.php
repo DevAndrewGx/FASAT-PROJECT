@@ -19,7 +19,7 @@
             <form method="POST" action="../../controllers/inicioSesion.php">
                 <div class="input-container">
                     <input type="text" id="username" placeholder="" name="user" required>
-                    <label for="username">Username</label>
+                    <label for="username">Correo</label>
                 </div>
                 <div class="input-container">
                     <input type="password" id="password" placeholder="" name="password" required>

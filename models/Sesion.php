@@ -8,7 +8,7 @@ class Sesion
         $con = new Conexion();
         $objConexion = $con->getConexion();
 
-        $consultar = "SELECT * FROM usuarios JOIN roles ON roles.IDROL = usuarios.idRol WHERE Correo=:email";
+        $consultar = "SELECT * FROM usuarios WHERE correo=:email";
         $statement = $objConexion->prepare($consultar);
 
         $statement->bindParam(":email", $email);
@@ -20,19 +20,19 @@ class Sesion
 
         if ($f = $statement->fetch()) {
             //validamos la clave ingresada con la clave de la DB
-            if ($clave == $f['Password']) {
+            if ($clave == $f['password']) {
 
                 session_start();
                 // las variables de secion son para el archivo de seguridad de rutas o de permisos de rutas...
-                $_SESSION['IDROL'] = $f['IDROL'];
-                $_SESSION['Rol'] = $f['Rol'];
+                $_SESSION['id_usuario'] = $f['id_usuario'];
+                $_SESSION['rol'] = $f['rol'];
                 $_SESSION['autenticado'] = "SI";
 
-                if ($f['Rol'] == "Administrador") {
+                if ($f['rol'] == "Administrador") {
                     echo '<script>alert("Bienvenido Admin :)")</script>';
                     echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
-                }else if($f['Rol'] == "Camarero") {
+                }else if($f['rol'] == "Camarero") {
                     echo '<script>alert("Bienvenido Mesero")</script>';
                     echo "<script>location.href='../views/html/mesero/meseroDashboard.php'</script>";
                 }

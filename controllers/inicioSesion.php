@@ -13,7 +13,6 @@ if (strlen($usuario) > 0 && strlen($claveMd) > 0) {
     $objConsultas = new Sesion();
     $result = $objConsultas->validarSesion($usuario, $claveMd);
 } else {
-
     echo '<script>alert("Por favor, complete todos los campos")</script>';
     echo '<script>location.href="../views/sign-up/login.php"</script>';
 }

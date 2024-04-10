@@ -7,7 +7,7 @@ if (!isset($_SESSION['autenticado'])) {
     echo "<script>location.href='../../../views/sign-up/login.php'</script>";
 }
 
-if ($_SESSION['Rol'] != 'Administrador') {
+if ($_SESSION['rol'] != 'Administrador') {
 
     echo '<script>alert("No posee los permisos para acceder a esta interfaz")</script>';
 
