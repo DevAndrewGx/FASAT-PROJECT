@@ -15,26 +15,20 @@ class Consultas
         $consulta->bindParam(':documento', $documento);
         $consulta->bindParam(':correo', $email);
         $consulta->execute();
-        // fetch() para corvertir un texto separado por comas en un array. Este no existira si en la consulta no se obtuvo nada.
         $fila = $consulta->fetch();
 
         if ($fila) {
 
             echo '<script>alert("Ya existe un usuario en el sistema con este correo o documento")</script>';
-            echo "<script>location.href='../Vista/html/Administrador/adminUsu.php'</script>";
+            echo "<script>location.href='../views/html/admin/crearEmpleado.php'</script>";
         } else {
 
-            // SE CREA LA VARIABLE QUE CONTENDRÁ LA CONSULTA A EJECUTAR EN LA TABLA usuario
-
             $sql1 = 'INSERT INTO usuarios (documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, password, foto) VALUES (:documento, :rol, :estado, :tipo_documento, :nombres, :apellidos, :telefono, :direccion, :correo, :password, :foto)';
-
             $sql2 = 'INSERT INTO horarios(hora_entrada, hora_salida, id_usuario) VALUES(:entrada, :salida, :id_usuario)';
 
-            // PREPARAMOS TODO LO NOCESARIO PARA EJECUTAR LA FUNCION ANTERIOR
             $consulta1 = $conexion->prepare($sql1);
             $consulta2 = $conexion->prepare($sql2);
 
-            // CONVERTIMOS LOS ARGUMENTOS EN PARAMETROS
             $consulta1->bindParam(':documento', $documento);
             $consulta1->bindParam(':rol', $rol);
             $consulta1->bindParam(':estado', $estado);
@@ -47,32 +41,21 @@ class Consultas
             $consulta1->bindParam(':password', $password);
             $consulta1->bindParam(':foto', $foto);
 
-
-
-
-            // EJECUTAMOS LA CONSULTA PARA RECUPERAR DESPUES EL ID DEL USUARIO PARA INSERTARLO EN LA TABLA USUARIOS
-            $consulta1->execute();
-
-
-            // Obtenemos el id_usuario recientemente INSERTADO
-            $id_usuario_insertado = $conexion->lastInsertId();
             $consulta2->bindParam(':entrada', $desdeHorario);
             $consulta2->bindParam(':salida', $hastaHorario);
-            $consulta2->bindParam(':id_usuario', $id_usuario_insertado);
 
-            $result = $consulta2->execute();
-           
+            // TENEMOS QUE RETORNAR TRUE PARA QUE APAREZCA LA ALERTA DEPENDIENDO SI SE INSERTO LOS DATOS EN LA BASE
+            if ($consulta1->execute()) {
+                $id_usuario_insertado = $conexion->lastInsertId();
+                $consulta2->bindParam(':id_usuario', $id_usuario_insertado);
 
-            // Verificamos si la consulta fue exitosa para lanzar la alerta
-
-            if($result) {
-                // Ambas consultas fueron exitosas, enviamos una respuesta de éxito
-                echo json_encode(["success" => true]);
-               
-                
-            }else {
-                // Si la inserción en la tabla de horarios falla, devuelve un mensaje de error
-                echo json_encode(["success" => false, "message" => "Error al insertar horario"]);
+                if ($consulta2->execute()) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
             }
         }
     }

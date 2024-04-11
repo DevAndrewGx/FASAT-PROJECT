@@ -123,22 +123,22 @@
                     <p>Gestiona tus empleados</p>
                     <?php
                     
-                    if (isset($_SESSION['msg'])) {
-                        $respuesta = $_SESSION['msg'];
+                    // if (isset($_SESSION['msg'])) {
+                    //     $respuesta = $_SESSION['msg'];
                     ?>
-                        <script>
+                        <!-- <script>
                             alert('Im here');
                             Swal.fire(
                                 '¡Usuario registrado!',
-                                '<?php $respuesta ?>',
+                                '<// $respuesta ?>',
                                 'success'
                             )
-                        </script>
+                        </script> -->
                     <?php
-                        unset($_SESSION['msg']);
-                    } else {
-                        echo '<script>alert("doesnt exist")</script>';
-                    }
+                        // unset($_SESSION['msg']);
+                    //} else {
+                        // echo '<script>alert("doesnt exist")</script>';
+                    //}
                     ?>
                 </div>
                 <div class="page-btn">
@@ -317,42 +317,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-    <script>
-        // Realizar la solicitud AJAX
-        $.ajax({
-            url: '../../../controllers/registrarEmpleado.php', // Nombre de tu archivo PHP que manejará la solicitud
-            method: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(response) {
-                // Manejar la respuesta del servidor
-                if (response.success) {
-                    // Mostrar una alerta SweetAlert de éxito
-                    Swal.fire({
-                        icon: 'success',
-                        title: '¡Usuario registrado!',
-                        text: 'El usuario ha sido registrado exitosamente.',
-                    });
-                } else {
-                    // Mostrar una alerta SweetAlert de error
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Hubo un problema al registrar el usuario.',
-                    });
-                }
-            },
-            error: function() {
-                // Mostrar una alerta SweetAlert de error en caso de que la solicitud falle
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Hubo un problema al realizar la solicitud.',
-                });
-            }
-        });
-    </script>
 </body>
-
 </html>
