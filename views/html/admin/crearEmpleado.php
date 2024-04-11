@@ -28,8 +28,7 @@
                     </li>
 
                     <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="user-img">
                                 <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
                                 <span class="status1 online"></span></span>
@@ -52,11 +51,9 @@
                                 <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
                                     My
                                     Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg"
-                                        alt="settings">Settings</a>
+                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>
                                 <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg"
-                                        alt="logout">Logout</a>
+                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
                             </div>
                         </div>
                     </li>
@@ -124,16 +121,16 @@
                     <div class="">
                         <div class="card-body">
 
-                            <form action="">
+                            <form action="../../../controllers/registrarEmpleado.php" method="POST" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label>Nombres</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese Nombres" name="nombre">
+                                            <input type="text" class="form-control" placeholder="Ingrese Nombres" name="nombres">
                                         </div>
                                         <div class="form-group">
                                             <label>Tipo documento</label>
-                                            <select class="form-control select">
+                                            <select class="form-control select" name="tipoDocumento">
                                                 <option>Seleccione</option>
                                                 <option>CC</option>
                                                 <option>CC EXTRAGERIA</option>
@@ -143,14 +140,14 @@
                                             <label>Documento</label>
                                             <input type="text" class="form-control" placeholder="Ingrese documento" name="documento">
                                         </div>
-                                    
+
                                         <div class="form-group">
                                             <label>Email</label>
                                             <input type="email" class="form-control" placeholder="Ingrese correo" name="email">
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                     <div class="col-lg-3 col-sm-6 col-12">
                                         <div class="form-group">
                                             <label>Apellidos</label>
@@ -158,7 +155,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Rol</label>
-                                            <select class="form-control select">
+                                            <select class="form-control select" name="rol">
                                                 <option>Seleccione</option>
                                                 <option>Mesero</option>
                                                 <option>Cheff</option>
@@ -169,16 +166,16 @@
                                             <label>Telefono</label>
                                             <input type="text" class="form-control" placeholder="Ingrese numero de telefono" name="telefono">
                                         </div>
-                                    
+
                                         <div class="form-group">
                                             <label>Direccion</label>
                                             <input type="text" class="form-control" placeholder="Ingrese Direccion" name="direccion">
                                         </div>
-                                    
-                                    
-                                    
-                                        
-                                    
+
+
+
+
+
                                     </div>
 
                                     <div class="col-lg-3 col-sm-6 col-12">
@@ -188,7 +185,7 @@
                                                 <div class="pass-group col-lg-6">
                                                     <input type="time" class="form-control pass-input" name="desdeHorario">
                                                     <!-- Icono para ocultar/mostrar contraseña -->
-                                                   
+
                                                 </div>
                                                 <div class="pass-group col-lg-6">
                                                     <input type="time" class="form-control pass-input" name="hastaHorario">
@@ -207,8 +204,7 @@
                                         <div class="form-group">
                                             <label>Confirm Password</label>
                                             <div class="pass-group">
-                                                <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña"
-                                                    name="password-validate">
+                                                <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
                                                 <!-- Icono para ocultar/mostrar contraseña -->
                                                 <span class="fas toggle-passworda fa-eye-slash"></span>
                                             </div>
@@ -227,7 +223,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <a href="#" class="btn btn-principal me-2">Aceptar</a>
+                                        <button type="submit" href="#" class="btn btn-principal me-2">Aceptar</button>
                                         <!-- <a href="gestionEmpleados.html" class="btn btn-danger">Cancelar</a> -->
                                     </div>
                                 </div>
@@ -246,9 +242,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../../js/app.js"></script>
 </body>
 
