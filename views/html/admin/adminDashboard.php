@@ -94,7 +94,7 @@ require_once('../../../models/Sesion.php');
                 </div>
                 <div class="item">
                     <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.html">Empleados</a>
+                    <a href="gestionEmpleados.php">Empleados</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-transfer-alt'></i>

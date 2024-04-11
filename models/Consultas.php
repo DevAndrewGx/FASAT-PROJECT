@@ -60,7 +60,20 @@ class Consultas
             $consulta2->bindParam(':salida', $hastaHorario);
             $consulta2->bindParam(':id_usuario', $id_usuario_insertado);
 
-            $consulta2->execute();
+            $result = $consulta2->execute();
+           
+
+            // Verificamos si la consulta fue exitosa para lanzar la alerta
+
+            if($result) {
+                // Ambas consultas fueron exitosas, enviamos una respuesta de éxito
+                echo json_encode(["success" => true]);
+               
+                
+            }else {
+                // Si la inserción en la tabla de horarios falla, devuelve un mensaje de error
+                echo json_encode(["success" => false, "message" => "Error al insertar horario"]);
+            }
         }
     }
 }

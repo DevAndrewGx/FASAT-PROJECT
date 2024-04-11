@@ -31,8 +31,7 @@
                     </li>
 
                     <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="user-img">
                                 <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
                                 <span class="status1 online"></span></span>
@@ -55,11 +54,9 @@
                                 <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
                                     My
                                     Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg"
-                                        alt="settings">Settings</a>
+                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>
                                 <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg"
-                                        alt="logout">Logout</a>
+                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
                             </div>
                         </div>
                     </li>
@@ -124,10 +121,28 @@
                 <div class="page-title">
                     <h1>Empleados</h1>
                     <p>Gestiona tus empleados</p>
+                    <?php
+                    
+                    if (isset($_SESSION['msg'])) {
+                        $respuesta = $_SESSION['msg'];
+                    ?>
+                        <script>
+                            alert('Im here');
+                            Swal.fire(
+                                '¡Usuario registrado!',
+                                '<?php $respuesta ?>',
+                                'success'
+                            )
+                        </script>
+                    <?php
+                        unset($_SESSION['msg']);
+                    } else {
+                        echo '<script>alert("doesnt exist")</script>';
+                    }
+                    ?>
                 </div>
                 <div class="page-btn">
-                    <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg"
-                            alt="plussvg"> Agregar
+                    <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="plussvg"> Agregar
                         Empleado</a>
                 </div>
             </div>
@@ -299,10 +314,45 @@
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <script>
+        // Realizar la solicitud AJAX
+        $.ajax({
+            url: '../../../controllers/registrarEmpleado.php', // Nombre de tu archivo PHP que manejará la solicitud
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(response) {
+                // Manejar la respuesta del servidor
+                if (response.success) {
+                    // Mostrar una alerta SweetAlert de éxito
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Usuario registrado!',
+                        text: 'El usuario ha sido registrado exitosamente.',
+                    });
+                } else {
+                    // Mostrar una alerta SweetAlert de error
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Hubo un problema al registrar el usuario.',
+                    });
+                }
+            },
+            error: function() {
+                // Mostrar una alerta SweetAlert de error en caso de que la solicitud falle
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al realizar la solicitud.',
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

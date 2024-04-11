@@ -121,7 +121,7 @@
                     <div class="">
                         <div class="card-body">
 
-                            <form action="../../../controllers/registrarEmpleado.php" method="POST" enctype="multipart/form-data">
+                            <form action="../../../controllers/registrarEmpleado.php" method="POST" enctype="multipart/form-data" id="formularioRegistro">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-6 col-12">
                                         <div class="form-group">

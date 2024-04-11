@@ -1,7 +1,9 @@
 <?php
+// Iniciar la sesión antes de cualquier otra salida
+session_start();
+
 require_once("../models/Conexion.php");
 require_once("../models/Consultas.php");
-
 
 $nombres = $_POST['nombres'];
 $tipoDocumento = $_POST['tipoDocumento'];
@@ -17,21 +19,26 @@ $password = $_POST['password'];
 $verificarPassword = $_POST['validarPassword'];
 $estado = "Activo";
 
-
 if (strlen($nombres) > 0 && strlen($tipoDocumento) > 0 && strlen($documento) > 0 && strlen($email) > 0 && strlen($apellidos) > 0 && strlen($rol) > 0 && strlen($telefono) > 0 && strlen($direccion) > 0 && strlen($desdeHorario) > 0 && strlen($hastaHorario) > 0 && strlen($password) > 0 && strlen($verificarPassword) > 0 && strlen($estado) > 0) {
-
 
     $foto = $_FILES['foto']['name'];
     if (strlen($foto) > 0) {
-
         $fotoMovida = '../../Uploads/Usuario/' . $_FILES['foto']['name'];
         // MOVEMOS EL ARCHIVO A LA CARPETA UPLOADS CON LA FUNCIÓN DE PHP move_uploaded_file()
         // tmp_name: NOMBRE TEMPORAL DEL ARCHIVO
         $mover = move_uploaded_file($_FILES['foto']['tmp_name'], '../views/uploads/' . $foto . '');
     }
     if ($verificarPassword == $password) {
+
         $objConsultas = new Consultas();
         $result = $objConsultas->registrarEmpleado($nombres, $tipoDocumento, $documento, $email, $apellidos, $rol, $telefono, $direccion, $desdeHorario, $hastaHorario, $password, $fotoMovida, $estado);
+
+        // Asignar mensaje a la sesión
+        $_SESSION['msg'] = "¡Usuario registrado!";
+
+        // Redireccionar después de registrar y asignar la sesión
+        header('Location: ../views/html/admin/gestionEmpleados.php');
+        exit(); // Asegura que el script se detenga aquí y no se ejecute más
     } else {
         echo '<script>alert("Las claves no coinciden intentalo nuevamente")</script>';
         echo '<script>location.href="../views/html/admin/crearEmpleado.php"</script>';
