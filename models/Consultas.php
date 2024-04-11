@@ -2,7 +2,7 @@
 class Consultas
 {
 
-    public function registrarEmpleado($nombres, $tipoDocumento, $documento, $email, $apellidos, $rol, $telefono, $direccion, $desdeHorario, $hastaHorario, $password,$foto, $estado)
+    public function registrarEmpleado($nombres, $tipoDocumento, $documento, $email, $apellidos, $rol, $telefono, $direccion, $desdeHorario, $hastaHorario, $password, $foto, $estado)
     {
 
         // SE CREA EL OBJETO DE LA CONEXION (Esto nunca puede faltar)
@@ -25,8 +25,8 @@ class Consultas
         } else {
 
             // SE CREA LA VARIABLE QUE CONTENDRÁ LA CONSULTA A EJECUTAR EN LA TABLA usuario
-            
-            $sql1= 'INSERT INTO usuarios (documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, password, foto) VALUES (:documento, :rol, :estado, :tipo_documento, :nombres, :apellidos, :telefono, :direccion, :correo, :password, :foto)';
+
+            $sql1 = 'INSERT INTO usuarios (documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, password, foto) VALUES (:documento, :rol, :estado, :tipo_documento, :nombres, :apellidos, :telefono, :direccion, :correo, :password, :foto)';
 
             $sql2 = 'INSERT INTO horarios(hora_entrada, hora_salida, id_usuario) VALUES(:entrada, :salida, :id_usuario)';
 
@@ -47,15 +47,20 @@ class Consultas
             $consulta1->bindParam(':password', $password);
             $consulta1->bindParam(':foto', $foto);
 
+
+
+
+            // EJECUTAMOS LA CONSULTA PARA RECUPERAR DESPUES EL ID DEL USUARIO PARA INSERTARLO EN LA TABLA USUARIOS
+            $consulta1->execute();
+
+
+            // Obtenemos el id_usuario recientemente INSERTADO
+            $id_usuario_insertado = $conexion->lastInsertId();
             $consulta2->bindParam(':entrada', $desdeHorario);
             $consulta2->bindParam(':salida', $hastaHorario);
-            $consulta2->bindParam(':id_usuario', $fila['id_usuario']);
+            $consulta2->bindParam(':id_usuario', $id_usuario_insertado);
 
-            
-            // EJECUTAMOS EL INSERT DE LA TABLA usuario
-            $consulta1->execute();
             $consulta2->execute();
         }
     }
 }
-
