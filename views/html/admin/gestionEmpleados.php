@@ -1,7 +1,7 @@
 <?php
 require_once('../../../models/seguridadAdmin.php');
 require_once('../../../models/Consultas.php');
-require_once('../../../controllers/mostrarEmpleados.php');
+
 require_once('../../../models/Conexion.php');
 require_once('../../../models/Sesion.php');
 ?>
@@ -161,10 +161,41 @@ require_once('../../../models/Sesion.php');
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <?php
-
-                            mostrarEmpleados();
-                            ?>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="employee-img">
+                                            <img src="' . $f['foto'] . '" alt="employee">
+                                        </a>
+                                        <a href="#">' . $f['nombres'] . '</a>
+                                    </td>
+                                    <td>' . $f['apellidos'] . '</td>
+                                    <td>' . $f['documento'] . '</td>
+                                    <td>' . $f['tipo_documento'] . '</td>
+                                    <td>' . $f['telefono'] . '</td>
+                                    <td><a href="mailto:' . $f['correo'] . '">' . $f['correo'] . '</a></td>
+                                    <td><span class="bg-lightgreen badges">' . $f['estado'] . '</span></td>
+                                    <td>' . $f['rol'] . '</td>
+                                    <td>' . $f['fecha_de_creacion'] . '</td>
+                                    <td>
+                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                            <img src="../../imgs/icons/eye.svg" alt="eye">
+                                        </a>
+                                        <a class="me-3" href="editarEmpleado.html">
+                                            <img src="../../imgs/icons/edit.svg" alt="eye">
+                                        </a>
+                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                            <img src="../../imgs/icons/trash.svg" alt="trash">
+                                        </a>
+                                    </td>
+                                </tr> -->
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -176,9 +207,87 @@ require_once('../../../models/Sesion.php');
 
     </div>
 
-    <script src="../../js/app.js"></script>
+    <!-- <script src="../../js/app.js"></script> -->
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- TESTING BACKEND DATATABLE FEATURES -->
+    <script>
+        $(document).ready(function() {
+            let dataTable = $('#example').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "order": [],
+                "ajax": {
+                    "url": "../../../controllers/mostrarEmpleados.php",
+                    "type": "POST",
+                    "dataType": "json"
+                },
+                "columns": [{
+                        "data": null,
+                        "render": function(data, type, row) {
+                            return `<label class="checkboxs">
+                              <input type="checkbox">
+                              <span class="checkmarks"></span>
+                          </label>`;
+                        }
+                    },
+                    {
+                        "data": "foto",
+                        "render": function(data, type, row) {
+                            return `<a href="#" class="employee-img">
+                              <img src="${data}" alt="employee">
+                          </a>
+                          <a href="#">${row.nombres}</a>`;
+                        }
+                    },
+                    {
+                        "data": "apellidos"
+                    },
+                    {
+                        "data": "documento"
+                    },
+                    {
+                        "data": "tipo_documento"
+                    },
+                    {
+                        "data": "telefono"
+                    },
+                    {
+                        "data": "correo"
+                    },
+                    {
+                        "data": "estado"
+                    },
+                    {
+                        "data": "rol"
+                    },
+                    {
+                        "data": "fecha_de_creacion"
+                    },
+                    {
+                        "data": null,
+                        "render": function(data, type, row) {
+                            return `<a class="me-3 confirm-text" href="javascript:void(0);">
+                                <img src="../../imgs/icons/eye.svg" alt="eye">
+                            </a>
+                            <a class="me-3" href="editarEmpleado.html">
+                                <img src="../../imgs/icons/edit.svg" alt="eye">
+                            </a>
+                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                                <img src="../../imgs/icons/trash.svg" alt="trash">
+                            </a>`;
+                        }
+                    }
+                ],
+                "columnDefs": [{
+                    "defaultContent": "-",
+                    "targets": "_all",
+                    "orderable": false
+                }]
+            });
+        });
+    </script>
     <!-- DataTable -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>

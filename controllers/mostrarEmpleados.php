@@ -1,58 +1,24 @@
-
 <?php
-function mostrarEmpleados()
-{
+require_once("../models/Conexion.php");
+require_once("../models/Consultas.php");
 
-    $objConsultas = new Consultas();
-    // $result = $objConsultas -> ;
-    $resultado = $objConsultas->cargarEmpleados();
+// Verificar si las claves existen en $_POST antes de acceder a ellas
+$registrosPorPagina = isset($_POST['length']) ? $_POST['length'] : null;
+$inicio = isset($_POST['start']) ? $_POST['start'] : null;
+$columna = isset($_POST['order'][0]['column']) ? $_POST['order'][0]['column'] : null;
+$columnIndex = isset($_POST['order'][0]['column']) ? $_POST['order'][0]['column'] : null;
+$columnName = isset($_POST['columns'][$columnIndex]['data']) ? $_POST['columns'][$columnIndex]['data'] : null;
+$orden = isset($_POST['order'][0]['dir']) ? $_POST['order'][0]['dir'] : null;
+$busqueda = isset($_POST['search']['value']) ? $_POST['search']['value'] : null;
 
+$objConsultas = new Consultas();
+$datos = $objConsultas->cargarDatosEmpleados($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName);
 
-    if (!isset($resultado)) {
-        echo "<h2>No hay empleados registrados</h2>";
-        return;
-    }
+$respuesta = array(
+    "draw" => isset($_POST['draw']) ? intval($_POST['draw']) : null,
+    "recordsTotal" => $objConsultas->totalRegistros(),
+    "recordsFiltered" => $objConsultas->totalRegistrosFiltrados($busqueda),
+    "data" => $datos
+);
 
-    foreach ($resultado as $f) {
-        echo '
-            <tbody>
-                                <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="' . $f['foto'] . '" alt="employee">
-                                        </a>
-                                        <a href="#">' . $f['nombres'] . '</a>
-                                    </td>
-                                    <td>' . $f['apellidos'] . '</td>
-                                    <td>' . $f['documento'] . '</td>
-                                    <td>' . $f['tipo_documento'] . '</td>
-                                    <td>' . $f['telefono'] . '</td>
-                                    <td><a href="mailto:thomas@example.com">' . $f['correo'] . '</a> </td>
-                                    <td><span class="bg-lightgreen badges">' . $f['estado'] . '</span></td>
-                                    <td>' . $f['rol'] . '</td>
-
-                                    <td>' . $f['fecha_de_creacion'] . '</td>
-                                    <td>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
-
-                                        </a>
-                                    </td>
-                                </tr>
-            </tbody>
-        ';
-    }
-}
-?>
+echo json_encode($respuesta);

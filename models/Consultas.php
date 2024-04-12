@@ -61,25 +61,85 @@ class Consultas
     }
 
 
-    public function cargarEmpleados() { 
-        $f = null;
-        // we need to create object conection
+    public function cargarDatosEmpleados($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName)
+    {
+
+        // Crear objeto de conexión
         $objConexion = new Conexion();
-        $conexion = $objConexion -> getConexion();
+        $conexion = $objConexion->getConexion();
+
+        $sql = "SELECT documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, foto, fecha_de_creacion FROM usuarios";
 
 
-        // we're gonna create query to retrieve user data
-        
-        $sql = "SELECT documento,rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, correo, foto, fecha_de_creacion FROM usuarios";
+        if (!empty($busqueda)) {
 
-        $consulta = $conexion -> prepare($sql);
-        $consulta -> execute();
-
-        while ($resultado = $consulta->fetch()) {
-            $f[] = $resultado;
+            $searchValue = $busqueda;
+            $sql .= " WHERE nombres LIKE '%$searchValue%' ";
+            $sql .= " OR apellidos LIKE '%$searchValue%' ";
+            $sql .= " OR telefono LIKE '%$searchValue%' ";
+            $sql .= " OR direccion LIKE '%$searchValue%' ";
+            $sql .= " OR documento LIKE '%$searchValue%' ";
+            $sql .= " OR correo LIKE '%$searchValue%' ";
+            $sql .= " OR rol LIKE '%$searchValue%' ";
+            $sql .= " OR tipo_documento LIKE '%$searchValue%' ";
+            $sql .= " OR estado LIKE '%$searchValue%' ";
+            $sql .= " OR fecha_de_creacion LIKE '%$searchValue%' ";
         }
-        
-        return $f;
-        
+
+
+        if ($columna != null && $orden != null ) {
+            
+            $sql .= " ORDER BY $columnName $orden";
+        } else {
+            $sql .= " ORDER BY id_usuario DESC";
+        }
+
+        if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
+            $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
+        }
+
+        $consulta = $conexion->prepare($sql);
+        $consulta->execute();
+
+        $data = $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+        return $data;
+    }
+
+    public function totalRegistros()
+    {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->getConexion();
+
+        $stmt = $conexion->prepare("SELECT COUNT(*) as total FROM usuarios");
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
+    }
+
+    public function totalRegistrosFiltrados($busqueda)
+    {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->getConexion();
+
+        $sql = "SELECT COUNT(*) as total FROM usuarios";
+
+        if (!empty($busqueda)) {
+            $searchValue = $busqueda;
+            $sql .= " WHERE nombres LIKE '%$searchValue%' ";
+            $sql .= " OR apellidos LIKE '%$searchValue%' ";
+            $sql .= " OR telefono LIKE '%$searchValue%' ";
+            $sql .= " OR direccion LIKE '%$searchValue%' ";
+            $sql .= " OR documento LIKE '%$searchValue%' ";
+            $sql .= " OR correo LIKE '%$searchValue%' ";
+            $sql .= " OR rol LIKE '%$searchValue%' ";
+            $sql .= " OR tipo_documento LIKE '%$searchValue%' ";
+            $sql .= " OR estado LIKE '%$searchValue%' ";
+            $sql .= " OR fecha_de_creacion LIKE '%$searchValue%' ";
+        }
+
+        $stmt = $conexion->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
     }
 }

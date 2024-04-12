@@ -26,7 +26,7 @@
 
         $foto = $_FILES['foto']['name'];
         if (strlen($foto) > 0) {
-            $fotoMovida = '../../Uploads/Usuario/' . $_FILES['foto']['name'];
+            $fotoMovida = '../../uploads/' . $_FILES['foto']['name'];
             $mover = move_uploaded_file($_FILES['foto']['tmp_name'], '../views/uploads/' . $foto . '');
         }
 
