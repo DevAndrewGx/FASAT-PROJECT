@@ -59,4 +59,27 @@ class Consultas
             }
         }
     }
+
+
+    public function cargarEmpleados() { 
+        $f = null;
+        // we need to create object conection
+        $objConexion = new Conexion();
+        $conexion = $objConexion -> getConexion();
+
+
+        // we're gonna create query to retrieve user data
+        
+        $sql = "SELECT documento,rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, correo, foto, fecha_de_creacion FROM usuarios";
+
+        $consulta = $conexion -> prepare($sql);
+        $consulta -> execute();
+
+        while ($resultado = $consulta->fetch()) {
+            $f[] = $resultado;
+        }
+        
+        return $f;
+        
+    }
 }

@@ -1,3 +1,11 @@
+<?php
+require_once('../../../models/seguridadAdmin.php');
+require_once('../../../models/Consultas.php');
+require_once('../../../controllers/mostrarEmpleados.php');
+require_once('../../../models/Conexion.php');
+require_once('../../../models/Sesion.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,25 +129,7 @@
                 <div class="page-title">
                     <h1>Empleados</h1>
                     <p>Gestiona tus empleados</p>
-                    <?php
-                    
-                    // if (isset($_SESSION['msg'])) {
-                    //     $respuesta = $_SESSION['msg'];
-                    ?>
-                        <!-- <script>
-                            alert('Im here');
-                            Swal.fire(
-                                '¡Usuario registrado!',
-                                '<// $respuesta ?>',
-                                'success'
-                            )
-                        </script> -->
-                    <?php
-                        // unset($_SESSION['msg']);
-                    //} else {
-                        // echo '<script>alert("doesnt exist")</script>';
-                    //}
-                    ?>
+
                 </div>
                 <div class="page-btn">
                     <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="plussvg"> Agregar
@@ -149,6 +139,7 @@
             <div class="page-wrapper">
                 <div class="content">
                     <div class="table-responsive">
+
                         <table id="example" class="table table-responsive datanew">
                             <thead>
                                 <tr>
@@ -158,143 +149,22 @@
                                             <span class="checkmarks"></span>
                                         </label>
                                     </th>
-                                    <th>Nombre de Usuario</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Documento</th>
+                                    <th>Tipo Documento</th>
                                     <th>Teléfono</th>
-                                    <th>Correo Electrónico</th>
+                                    <th>Correo</th>
+                                    <th>Estado</th>
                                     <th>Rol</th>
                                     <th>Creado el</th>
-                                    <th>Estado</th>
                                     <th>Acción</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="../../imgs/avatar-13.jpg" alt="employee">
-                                        </a>
-                                        <a href="#">Thomas</a>
-                                    </td>
-                                    <td>+12163547758 </td>
-                                    <td><a href="mailto:thomas@example.com">thomas@example.com</a> </td>
-                                    <td>Administrador</td>
-                                    <td>15/03/2022</td>
-                                    <td><span class="bg-lightgreen badges">Activo</span></td>
-                                    <td>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
+                            <?php
 
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="../../imgs/avatar-04.jpg" alt="employee">
-                                        </a>
-                                        <a href="#">Maria</a>
-                                    </td>
-                                    <td>+12163547759 </td>
-                                    <td><a href="mailto:maria@example.com">maria@example.com</a> </td>
-                                    <td>Chef</td>
-                                    <td>16/03/2022</td>
-                                    <td><span class="bg-lightgreen badges">Activo</span></td>
-                                    <td>
-                                        <a class="me-3" href="editarEmpleado.html">
-
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="edit">
-
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
-
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="../../imgs/avatar-17.jpg" alt="employee">
-                                        </a>
-                                        <a href="#">Juan</a>
-                                    </td>
-                                    <td>+12163547760 </td>
-                                    <td><a href="mailto:juan@example.com">juan@example.com</a> </td>
-                                    <td>Mesero</td>
-                                    <td>17/03/2022</td>
-                                    <td><span class="bg-lightgreen badges">Activo</span></td>
-                                    <td>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="edit">
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="../../imgs/avatar-03.jpg" alt="employee">
-                                        </a>
-                                        <a href="#">Sofia</a>
-                                    </td>
-                                    <td>+12163547761 </td>
-                                    <td><a href="mailto:sofia@example.com">sofia@example.com</a> </td>
-                                    <td>Inventario</td>
-                                    <td>18/03/2022</td>
-                                    <td><span class="bg-lightgreen badges">Activo</span></td>
-                                    <td>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="edit">
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            mostrarEmpleados();
+                            ?>
                         </table>
                     </div>
                 </div>
@@ -318,4 +188,5 @@
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
+
 </html>
