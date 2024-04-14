@@ -1,5 +1,5 @@
 <?php
-// require_once('../../../models/seguridadMesero.php');
+require_once('../../../models/seguridadMesero.php');
 require_once('../../../models/Conexion.php');
 require_once('../../../models/Sesion.php');
 ?>
@@ -120,22 +120,39 @@ require_once('../../../models/Sesion.php');
                     <!-- Contenedor de las mesas -->
                     <div id="contenedor">
                         <!-- Mesas -->
-                        <div class="mesa redonda" id="mesa1" onclick="toggleSeleccion('mesa1')">1</div>
-                        <div class="mesa redonda" id="mesa2" onclick="toggleSeleccion('mesa2')">2</div>
-                        <div class="mesa cuadrada" id="mesa3" onclick="toggleSeleccion('mesa3')">3</div>
-                        <div class="mesa cuadrada" id="mesa4" onclick="toggleSeleccion('mesa4')">4</div>
-                        <div class="mesa redonda" id="mesa5" onclick="toggleSeleccion('mesa5')">5</div>
-                        <div class="mesa cuadrada" id="mesa6" onclick="toggleSeleccion('mesa6')">6</div>
-                        <div class="mesa cuadrada" id="mesa7" onclick="toggleSeleccion('mesa7')">7</div>
-                        <div class="mesa redonda" id="mesa8" onclick="toggleSeleccion('mesa8')">8</div>
-                        <div class="mesa cuadrada" id="mesa9" onclick="toggleSeleccion('mesa9')">9</div>
-                        <div class="mesa redonda" id="mesa10" onclick="toggleSeleccion('mesa10')">10</div>
+                        <div class="mesa redonda" id="mesa1" onclick="toggleSeleccion('mesa1')">1
+                            <button class=" btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none; ">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa redonda" id="mesa2" onclick="toggleSeleccion('mesa2')">2
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa cuadrada" id="mesa3" onclick="toggleSeleccion('mesa3')">3
+                            <button class=" btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa cuadrada" id="mesa4" onclick="toggleSeleccion('mesa4')">4
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa redonda" id="mesa5" onclick="toggleSeleccion('mesa5')">5
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa cuadrada" id="mesa6" onclick="toggleSeleccion('mesa6')">6
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa cuadrada" id="mesa7" onclick="toggleSeleccion('mesa7')">7
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa redonda" id="mesa8" onclick="toggleSeleccion('mesa8')">8
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa cuadrada" id="mesa9" onclick="toggleSeleccion('mesa9')">9
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
+                        <div class="mesa redonda" id="mesa10" onclick="toggleSeleccion('mesa10')">10
+                            <button class="btn btn-primary btn-registrar-mesa" onclick="mostrarFormulario()" style="display: none;">Abrir Mesa</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Botón para registrar orden -->
-            <button class="btn btn-primary registrar-orden-btn" onclick="mostrarFormulario()">Registrar Orden</button>
 
 
         </main-mesa>

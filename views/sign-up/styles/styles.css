@@ -103,3 +103,7 @@ input:not(:placeholder-shown) + label {
 .bottom-text a:hover {
     text-decoration: underline;
 }
+
+.warning-text{
+    color: #cf4432;
+}

@@ -66,11 +66,26 @@
 
 
 //Mesas 
+
 // Función para alternar la selección de una mesa
 function toggleSeleccion(idMesa) {
+    // Ocultar todos los botones
+    document.querySelectorAll('.btn-registrar-mesa').forEach(btn => {
+        btn.style.display = 'none';
+    });
+
+    // Deseleccionar todas las mesas
+    document.querySelectorAll('.mesa').forEach(mesa => {
+        mesa.classList.remove('seleccionada');
+    });
+
+    // Seleccionar la mesa específica
     var mesa = document.getElementById(idMesa);
-    mesa.classList.toggle('seleccionada');
+    mesa.classList.add('seleccionada');
+    mesa.querySelector('.btn-registrar-mesa').style.display = 'block'; // Mostrar el botón en la mesa seleccionada
 }
+
+
 
 // Función para mostrar el formulario y devolver las mesas seleccionadas
 function mostrarFormulario() {

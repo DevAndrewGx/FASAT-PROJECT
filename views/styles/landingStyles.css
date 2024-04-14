@@ -12,7 +12,7 @@ body {
 }
 
 .col-lg-6 p {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .ff-secondary {
@@ -139,9 +139,11 @@ body {
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
     transition: 0.5s;
-    border-radius: 20px; /* Añadido: bordes redondeados */
-    height: 250px;
+    border-radius: 20px; 
+    height: 350px;
     border-radius: 10px;
+    text-align: left;
+    
 }
 
 .service-item:hover {
@@ -150,6 +152,7 @@ body {
 
 .service-item * {
     transition: 0.5s;
+    
 }
 
 .service-item:hover * {
@@ -161,23 +164,12 @@ body {
     border-bottom: 2px solid var(--primary);
 }
 
-.imagenSubs {
-    position: relative;
-    height: 100%;
-    min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, 0.1), rgba(15, 23, 43, 0.1)),
-        url(../imgs/img/video.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Footer */
 .footer {
     background-color: var(--dark);
     color: var(--light);
     padding: 50px 0;
-    overflow: hidden; /* Agregado: para limpiar floats */
+    overflow: hidden; 
 }
 
 .footer .section-title {
@@ -231,3 +223,74 @@ body {
     padding-right: 0;
     border-right: none;
 }
+
+
+
+
+
+
+
+/* Estilos adicionales para los contenedores de servicios */
+.col-lg-4 {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para los iconos de "Pedidos" e "Inventario" dentro de los servicios */
+
+.service-item i.fa-list-alt,
+.service-item i.fa-cart-plus {
+  
+    border-radius: 50%; 
+    padding: 15px; 
+    background-color: rgba(254, 161, 22, 0.2);
+}
+
+
+/* Estilos para los contenedores de "Pedidos" e "Inventario" */
+
+.service-item.pedidos,
+.service-item.inventario {
+    box-shadow: none; 
+    margin-top: 50px; 
+    border: none;
+    
+}
+
+.trabajos-title {
+    font-size: 50px; 
+}
+
+.calidad-text {
+    color: black;
+}
+
+.hero-image {
+    max-width: 100%; 
+    height: auto;
+    width: 80%; 
+}
+
+
+/* Estilos para las secciones de Misión y Visión */
+.container-xxl .bg-white {
+    background-color: #fff; 
+}
+
+.container-xxl .bg-white h2 {
+    color: #fea116; 
+}
+
+.container-xxl .bg-white p {
+    color: #000; 
+}
+
+/* Agregar margen superior a la sección de Visión */
+.col-lg-6.visión {
+    margin-top: 120px; 
+    
+}
+
+
+
