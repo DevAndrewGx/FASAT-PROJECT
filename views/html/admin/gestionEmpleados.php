@@ -274,7 +274,7 @@ require_once('../../../models/Sesion.php');
                             <a class="me-3" href="editarEmpleado.html">
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
-                            <a class="me-3 confirm-text" id="borrar-empleado" href="../../../controllers/borrarEmpleados.php?id=${row.id_usuario}">
+                            <a class="me-3 confirm-text" id="borrar-empleado" data-id="${row.id_usuario}" href="../../../controllers/borrarEmpleados.php?id=${row.id_usuario}">
                                 <img src="../../imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }
@@ -296,6 +296,8 @@ require_once('../../../models/Sesion.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script src="../../js/alertas.js"></script>
 </body>
 
 </html>

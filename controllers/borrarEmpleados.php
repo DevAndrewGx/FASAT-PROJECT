@@ -20,6 +20,6 @@
         }
     }else {
         echo "Something gone wrong";
-    } 
+    }
     echo json_encode($response);
 ?>
