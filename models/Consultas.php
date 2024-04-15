@@ -68,7 +68,7 @@ class Consultas
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql = "SELECT documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, foto, fecha_de_creacion FROM usuarios";
+        $sql = "SELECT id_usuario, documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, foto, fecha_de_creacion FROM usuarios";
 
 
         if (!empty($busqueda)) {
@@ -141,5 +141,31 @@ class Consultas
         $stmt = $conexion->prepare($sql);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
+    }
+
+    public function borrarEmpleado($id) { 
+        
+        $objConexion = new Conexion();
+        $conexion = $objConexion -> getConexion();
+
+        $sql1 = "DELETE FROM usuarios WHERE id_usuario = :id";
+        $sql2 = "DELETE FROM horarios WHERE id_usuario = :id";
+
+        $consulta1 = $conexion -> prepare($sql1);
+        $consulta1->bindParam(":id", $id);
+        
+
+        $consulta2 = $conexion->prepare($sql2);
+        $consulta2->bindParam(":id", $id);
+
+        // EJECUTAMOS PRIMERO LA CONSULTA2 PARA BORRAR PRIMERO EN HORARIO Y DESPUES EN USUARIOS
+        if($consulta2 ->execute()) {
+            $consulta1->execute();
+            return true; 
+        }else {
+            return false;
+        }
+        
+       
     }
 }

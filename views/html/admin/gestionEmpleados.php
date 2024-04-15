@@ -92,7 +92,7 @@ require_once('../../../models/Sesion.php');
                 </div>
                 <div class="item" id="active">
                     <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.html">Empleados</a>
+                    <a href="gestionEmpleados.php">Empleados</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-transfer-alt'></i>
@@ -274,7 +274,7 @@ require_once('../../../models/Sesion.php');
                             <a class="me-3" href="editarEmpleado.html">
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
-                            <a class="me-3 confirm-text" href="javascript:void(0);">
+                            <a class="me-3 confirm-text" id="borrar-empleado" href="../../../controllers/borrarEmpleados.php?id=${row.id_usuario}">
                                 <img src="../../imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }
