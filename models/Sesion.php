@@ -33,8 +33,9 @@ class Sesion
                     echo '<script>alert("Bienvenido Admin :)")</script>';
                     echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
-                }else if($f['rol'] == "Camarero") {
+                }else if($f['rol'] == "Mesero") {
                     echo '<script>alert("Bienvenido Mesero")</script>';
+                    echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/mesero/meseroDashboard.php'</script>";
                 }
             } else {
