@@ -168,27 +168,37 @@ class Consultas
     }
 
 
-    public function actualizarEmpleados($id_usuario, $documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion) {
+    public function actualizarEmpleados($id_usuario, $documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion, $hora_entrada, $hora_salida) {
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, foto = :foto, fecha_de_creacion = :fecha_de_creacion WHERE id_usuario = :id_usuario";
-        
-        $statement = $conexion -> prepare($sql);
+        $sql1 ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, foto = :foto, fecha_de_creacion = :fecha_de_creacion WHERE id_usuario = :id_usuario";
+        $sql2 = "UPDATE horarios SET hora_entrada = :hora_entrada, hora_salida = :hora_salida WHERE id_usuario = :id_usuario";
+        $consulta1 = $conexion -> prepare($sql1);
+    
+        $consulta1->bindParam(":id_usuario", $id_usuario);
+        $consulta1->bindParam(":documento", $documento);
+        $consulta1->bindParam(":rol", $rol);
+        $consulta1->bindParam(":estado", $estado);
+        $consulta1->bindParam(":tipo_documento", $tipo_documento);
+        $consulta1->bindParam(":nombres", $nombres);
+        $consulta1->bindParam(":apellidos", $apellidos);
+        $consulta1->bindParam(":telefono", $telefono);
+        $consulta1->bindParam(":direccion", $direccion);
+        $consulta1->bindParam(":correo", $correo);
+        $consulta1->bindParam(":foto", $foto);
+        $consulta1->bindParam(":fecha_de_creacion", $fecha_de_creacion);
 
-        $statement->bindParam(":id_usuario", $id_usuario);
-        $statement->bindParam(":documento", $documento);
-        $statement->bindParam(":rol", $rol);
-        $statement->bindParam(":estado", $estado);
-        $statement->bindParam(":tipo_documento", $tipo_documento);
-        $statement->bindParam(":nombres", $nombres);
-        $statement->bindParam(":apellidos", $apellidos);
-        $statement->bindParam(":telefono", $telefono);
-        $statement->bindParam(":direccion", $direccion);
-        $statement->bindParam(":correo", $correo);
-        $statement->bindParam(":foto", $foto);
-        $statement->bindParam(":fecha_de_creacion", $fecha_de_creacion);
-        
-        $statement->execute();
+        $consulta2 = $conexion -> prepare($sql2);
+        $consulta2->bindParam(":hora_entrada", $hora_entrada);
+        $consulta2->bindParam(":hora_salida", $hora_salida);
+       
+        // primero actualizamos la segunda y despues la primera para la depencia de las tablas
+        if($consulta2->execute()) {
+            $consulta1->execute();
+            return true;
+        }else { 
+            return false; 
+        }
     }
 }
