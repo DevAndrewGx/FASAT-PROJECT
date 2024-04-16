@@ -166,4 +166,29 @@ class Consultas
             return false;
         }   
     }
+
+
+    public function actualizarEmpleados($id_usuario, $documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion) {
+        $objConexion = new Conexion();
+        $conexion = $objConexion->getConexion();
+
+        $sql ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, foto = :foto, fecha_de_creacion = :fecha_de_creacion WHERE id_usuario = :id_usuario";
+        
+        $statement = $conexion -> prepare($sql);
+
+        $statement->bindParam(":id_usuario", $id_usuario);
+        $statement->bindParam(":documento", $documento);
+        $statement->bindParam(":rol", $rol);
+        $statement->bindParam(":estado", $estado);
+        $statement->bindParam(":tipo_documento", $tipo_documento);
+        $statement->bindParam(":nombres", $nombres);
+        $statement->bindParam(":apellidos", $apellidos);
+        $statement->bindParam(":telefono", $telefono);
+        $statement->bindParam(":direccion", $direccion);
+        $statement->bindParam(":correo", $correo);
+        $statement->bindParam(":foto", $foto);
+        $statement->bindParam(":fecha_de_creacion", $fecha_de_creacion);
+        
+        $statement->execute();
+    }
 }
