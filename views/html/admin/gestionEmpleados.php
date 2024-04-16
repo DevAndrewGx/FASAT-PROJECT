@@ -214,7 +214,11 @@ require_once('../../../models/Sesion.php');
     <!-- TESTING BACKEND DATATABLE FEATURES -->
     <script type="module">
         // IMPORT OUR FUNCTIONS TO STAR WORKING WITH ALERTS 
-        import { mostrarError, mostrarExito, mostrarConfirmacionBorrar } from '../../js/alertas.js';
+        import {
+            mostrarError,
+            mostrarExito,
+            mostrarConfirmacionBorrar
+        } from '../../js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#example').DataTable({
                 "processing": true,
@@ -273,7 +277,7 @@ require_once('../../../models/Sesion.php');
                             return `<a class="me-3 confirm-text" href="javascript:void(0);" data-id="${row.id_usuario}">
                                 <img src="../../imgs/icons/eye.svg" alt="eye">
                             </a>
-                            <a class="me-3" href="editarEmpleado.html">
+                            <a class="me-3 botonActualizar" data-id="${row.id_usuario}" href="#">
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
                             <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="#">
@@ -289,14 +293,31 @@ require_once('../../../models/Sesion.php');
                 }]
             });
 
-            // Agrega un event listener para el botón eliminar
+            // Agregando un eventlistener para borrar data
             $('#example').on('click', '.botonEliminar', function(e) {
                 e.preventDefault();
 
                 const id_usuario = $(this).data('id');
-                
+
                 mostrarConfirmacionBorrar(id_usuario);
             });
+            // Agregando un eventlistener para actualizar data
+            $('#example').on('click', '.botonActualizar', function(e) {
+                console.log("it's working")
+                e.preventDefault();
+
+                const id_usuario = $(this).data('id');
+                // recuperamos la data del boton donde hicimos click
+                const datosUsuario = dataTable.row($(this).closest('tr')).data();
+
+                $.post("../../../controllers/actualizarEmpleados.php", {
+                    id_usuario,
+                    datosUsuario
+                }, function(response) {
+                    console.log(response);
+                });
+
+            })
         });
     </script>
     <!-- DataTable -->

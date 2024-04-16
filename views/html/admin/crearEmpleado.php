@@ -230,9 +230,6 @@
                                     </div>
                                 </div>
                             </form>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -264,7 +261,6 @@
                     .then((response) => response.json())
                     .then((data) => {
                         if (data.success) {
-                            alert("perro hp");
                             mostrarExito(
                                 "Usuario Creado",
                                 "El usuario ha sido creado exitosamente",
@@ -291,7 +287,5 @@
     </script>
     <script src="../../js/app.js"></script>
     <script src="../../js/alertas.js"></script>
-
 </body>
-
 </html>
