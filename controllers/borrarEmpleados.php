@@ -2,14 +2,16 @@
     require_once("../models/Conexion.php");
     require_once("../models/Consultas.php");
 
+ 
     $response = [
         'success' => false,
         'message' => ''
     ];
 
-    $id = $_GET['id'];
+    $data = json_decode(file_get_contents("php://input"), true);
     
-    if(isset($id)) {
+    if(isset($data['id_usuario'])) {
+        $id = $data['id_usuario'];
         $objConsulta = new Consultas();
         $consulta = $objConsulta -> borrarEmpleado($id);
 
@@ -21,5 +23,7 @@
     }else {
         echo "Something gone wrong";
     }
+
     echo json_encode($response);
+    exit;
 ?>

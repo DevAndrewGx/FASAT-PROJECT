@@ -212,7 +212,9 @@ require_once('../../../models/Sesion.php');
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <!-- TESTING BACKEND DATATABLE FEATURES -->
-    <script>
+    <script type="module">
+        // IMPORT OUR FUNCTIONS TO STAR WORKING WITH ALERTS 
+        import { mostrarError, mostrarExito, mostrarConfirmacionBorrar } from '../../js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#example').DataTable({
                 "processing": true,
@@ -227,18 +229,18 @@ require_once('../../../models/Sesion.php');
                         "data": null,
                         "render": function(data, type, row) {
                             return `<label class="checkboxs">
-                              <input type="checkbox">
-                              <span class="checkmarks"></span>
-                          </label>`;
+                      <input type="checkbox">
+                      <span class="checkmarks"></span>
+                  </label>`;
                         }
                     },
                     {
                         "data": "foto",
                         "render": function(data, type, row) {
                             return `<a href="#" class="employee-img">
-                              <img src="${data}" alt="employee">
-                          </a>
-                          <a href="#">${row.nombres}</a>`;
+                      <img src="${data}" alt="employee">
+                  </a>
+                  <a href="#">${row.nombres}</a>`;
                         }
                     },
                     {
@@ -268,13 +270,13 @@ require_once('../../../models/Sesion.php');
                     {
                         "data": null,
                         "render": function(data, type, row) {
-                            return `<a class="me-3 confirm-text" href="javascript:void(0);">
+                            return `<a class="me-3 confirm-text" href="javascript:void(0);" data-id="${row.id_usuario}">
                                 <img src="../../imgs/icons/eye.svg" alt="eye">
                             </a>
                             <a class="me-3" href="editarEmpleado.html">
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
-                            <a class="me-3 confirm-text" id="borrar-empleado" data-id="${row.id_usuario}" href="../../../controllers/borrarEmpleados.php?id=${row.id_usuario}">
+                            <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="#">
                                 <img src="../../imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }
@@ -285,6 +287,15 @@ require_once('../../../models/Sesion.php');
                     "targets": "_all",
                     "orderable": false
                 }]
+            });
+
+            // Agrega un event listener para el botón eliminar
+            $('#example').on('click', '.botonEliminar', function(e) {
+                e.preventDefault();
+
+                const id_usuario = $(this).data('id');
+                
+                mostrarConfirmacionBorrar(id_usuario);
             });
         });
     </script>
@@ -297,7 +308,7 @@ require_once('../../../models/Sesion.php');
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script src="../../js/alertas.js"></script>
+    <script type="module" src="../../js/alertas.js"></script>
 </body>
 
 </html>

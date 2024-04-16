@@ -1,62 +1,4 @@
-
-// Alertas.js for creating an employee
-document.addEventListener("DOMContentLoaded", () => {
-
-    const form = document.getElementById("formularioRegistro");
-    const botonEliminar = document.getElementById("borrar-empleado");  
-
-
-    if(form) {
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(form);
-
-            fetch("../../../controllers/registrarEmpleado.php", {
-                method: "POST",
-                body: formData,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    if (data.success) {
-                        mostrarExito(
-                            "Usuario Creado",
-                            "El usuario ha sido creado exitosamente",
-                            "gestionEmpleados.php"
-                        );
-                    } else {
-                        mostrarError(
-                            "Error",
-                            "Ocurrió un error al registrar el usuario",
-                            ""
-                        );
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                    mostrarError(
-                        "Error",
-                        "Ocurrió un error al registrar el usuario",
-                        ""
-                    );
-                });
-        });
-    }
-
-    if(botonEliminar) {
-        // REMOVE FEATURES FOR EMPLOYEE
-        botonEliminar.addEventListener("click", (e) => {
-            e.preventDefault();
-            mostrarConfirmacionBorrar();
-        });
-    }
-    
-   
-});
-
-
-
-function mostrarExito(title, text, redirectURL) {
+export function mostrarExito(title, text, redirectURL) {
     Swal.fire({
         title: title,
         text: text,
@@ -70,7 +12,7 @@ function mostrarExito(title, text, redirectURL) {
     });
 }
 
-function mostrarError(title, text, redirectURL) {
+export function mostrarError(title, text, redirectURL) {
     Swal.fire({
         title: title,
         text: text,
@@ -85,7 +27,7 @@ function mostrarError(title, text, redirectURL) {
 
 // Alerts for removing an employee
 
-function mostrarConfirmacionBorrar() {
+export function mostrarConfirmacionBorrar(id_usuario) {
     Swal.fire({
         title: "¿Estás seguro?",
         text: "Esta acción no se puede deshacer",
@@ -97,27 +39,38 @@ function mostrarConfirmacionBorrar() {
         if (result.isConfirmed) {
             fetch("../../../controllers/borrarEmpleados.php", {
                 method: "POST",
+                body: JSON.stringify({
+                    id_usuario,
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
             })
                 .then((response) => response.json())
                 .then((data) => {
                     if (data.success) {
                         mostrarExito(
-                            "Usuario eliminado",
+                            "Usuario Eliminado Exitosamente",
                             "El usuario ha sido eliminado exitosamente",
                             ""
                         );
                     } else {
                         mostrarError(
-                            "El usuario no se puede eliminar",
-                            "Hubo un problema en la consulta",
+                            "Usuario no se eliminado",
+                            "El usuario no ha sido eliminado",
                             ""
                         );
                     }
                 })
                 .catch((error) => {
                     console.error("Error:", error);
-                    mostrarError();
+                    mostrarError(
+                        "Usuario no se eliminado",
+                        "El usuario no ha sido eliminado",
+                        ""
+                    );
                 });
         }
     });
 }
+

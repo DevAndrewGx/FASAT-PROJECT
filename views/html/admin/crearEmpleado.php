@@ -245,9 +245,53 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../../js/app.js"></script>
+    <script type="module">
+        // we have to import our functions from alerts to work here
+        import { mostrarError, mostrarExito} from '../../js/alertas.js';
+        // Alertas.js for creating an employee
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("formularioRegistro");
 
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+
+                fetch("../../../controllers/registrarEmpleado.php", {
+                        method: "POST",
+                        body: formData,
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.success) {
+                            alert("perro hp");
+                            mostrarExito(
+                                "Usuario Creado",
+                                "El usuario ha sido creado exitosamente",
+                                "gestionEmpleados.php"
+                            );
+                        } else {
+                            mostrarError(
+                                "Error",
+                                "Ocurrió un error al registrar el usuario",
+                                ""
+                            );
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                        mostrarError(
+                            "Error",
+                            "Ocurrió un error al registrar el usuario",
+                            ""
+                        );
+                    });
+            });
+        });
+    </script>
+    <script src="../../js/app.js"></script>
     <script src="../../js/alertas.js"></script>
+
 </body>
 
 </html>

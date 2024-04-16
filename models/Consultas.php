@@ -164,8 +164,6 @@ class Consultas
             return true; 
         }else {
             return false;
-        }
-        
-       
+        }   
     }
 }
