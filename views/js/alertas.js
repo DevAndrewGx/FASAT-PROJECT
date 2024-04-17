@@ -74,3 +74,10 @@ export function mostrarConfirmacionBorrar(id_usuario) {
     });
 }
 
+
+// function to remove employees 
+
+// creamos una funcion para recivir la data del sevidor para poner mostrarla en el fomrulario
+export function enviarDatosAlFormulario(data) {
+  
+}

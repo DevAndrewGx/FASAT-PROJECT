@@ -201,4 +201,42 @@ class Consultas
             return false; 
         }
     }
+
+    public function obtenerEmpleados($id)
+    {
+        $f = []; // Inicializar como un array vacío
+
+        try {
+            $objConexion = new Conexion();
+            $conexion = $objConexion->getConexion();
+
+            $sql = "SELECT * FROM usuarios JOIN horarios ON usuarios.id_usuario = horarios.id_usuario WHERE usuarios.id_usuario = :id_usuario";
+
+            // Depuración: Imprimir la consulta SQL
+            // echo "Consulta SQL: " . $sql . "<br>";
+
+            $consulta = $conexion->prepare($sql);
+            $consulta->bindParam(":id_usuario", $id);
+
+            $consulta->execute(); // Ejecutar la consulta
+
+            while ($data = $consulta->fetch()) {
+                $f[] = $data;
+            }
+
+            $conexion = null; // Cerrar la conexión
+
+        } catch (Exception $e) {
+            // Lanzar la excepción para manejarla en el código que llama a este método
+            throw new Exception("Error en la consulta: " . $e->getMessage());
+        }
+
+        // Depuración: Imprimir el resultado de la consulta
+        // echo "Resultados: ";
+        // print_r($f);
+        // echo "<br>";
+
+        return $f;
+    }
+
 }
