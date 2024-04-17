@@ -280,6 +280,7 @@ require_once('../../../models/Sesion.php');
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
                             <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="editarEmpleado.php">
+                            <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="editarEmpleado.php">
                                 <img src="../../imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }

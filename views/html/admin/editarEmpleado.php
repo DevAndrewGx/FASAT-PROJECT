@@ -7,7 +7,11 @@
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../styles/style.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../styles/empleados/stylesEmpleado.css">
+=======
+    <link rel="stylesheet" href="../../styles/empleados/empleadosStyles.css">
+>>>>>>> 01df057a548d3c91a11becf5f24d98c3b26cfd30
 
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -209,6 +213,7 @@
 
         </main>
     </div>
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function() {
@@ -245,6 +250,28 @@
     </script>
     <script src="../../js/alertas.js"></script>
     <script src="../../js/app.js"></script>
+=======
+
+    <script type="module">
+        // creamos una funcion para recivir la data del sevidor para poner mostrarla en el fomrulario
+        export function enviarDatosAlFormulario(data) {
+            $('#nombres').val(data.nombres);
+            $('#tipo_documento').val(data.tipo_documento);
+            $('#documento').val(data.documento);
+            $('#email').val(data.email);
+            $('#apellidos').val(data.apellidos);
+            $('#rol').val(data.rol);
+            $('#telefono').val(data.telefono);
+            $('#direccion').val(data.direccion);
+            $('#desdeHorario').val(data.hora_entrada);
+            $('#hastaHorario').val(data.hora_salida);
+            $('#foto').val(data.hora_salida);
+            // Llenar los otros campos necesarios del formulario
+        }
+    </script>
+    <script src="../../js/app.js"></script>
+
+>>>>>>> 01df057a548d3c91a11becf5f24d98c3b26cfd30
 </body>
 
 </html>
