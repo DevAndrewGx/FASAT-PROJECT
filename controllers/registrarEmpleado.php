@@ -3,6 +3,7 @@
     require_once("../models/Conexion.php");
     require_once("../models/Consultas.php");
 
+    // creamos un arregloasoc para enviar la respuesta al cliente de nuevo
     $response = [
         'success' => false,
         'message' => ''

@@ -280,7 +280,7 @@ require_once('../../../models/Sesion.php');
                             <a class="me-3 botonActualizar" data-id="${row.id_usuario}" href="#">
                                 <img src="../../imgs/icons/edit.svg" alt="eye">
                             </a>
-                            <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="#">
+                            <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="editarEmpleado.php">
                                 <img src="../../imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }
@@ -303,21 +303,23 @@ require_once('../../../models/Sesion.php');
             });
             // Agregando un eventlistener para actualizar data
             $('#example').on('click', '.botonActualizar', function(e) {
-                console.log("it's working")
                 e.preventDefault();
 
                 const id_usuario = $(this).data('id');
-                // recuperamos la data del boton donde hicimos click
-                const datosUsuario = dataTable.row($(this).closest('tr')).data();
 
-                $.post("../../../controllers/actualizarEmpleados.php", {
-                    id_usuario,
-                    datosUsuario
+                $.post("../../../controllers/obtenerRegistroEmpleados.php", {
+                    id_usuario
                 }, function(response) {
-                    console.log(response);
-                });
+                    // Procesar la respuesta y llenar el formulario en otro archivo
+                    let data = JSON.parse(response);
 
-            })
+                    // Enviar los datos al formulario que esta en otro archivo aparte
+                    enviarDatosAlFormulario(data);
+                });
+            });
+
+
+            // const datosUsuario = dataTable.row($(this).closest('tr')).data();
         });
     </script>
     <!-- DataTable -->
