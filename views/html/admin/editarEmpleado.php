@@ -7,12 +7,7 @@
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../styles/style.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../../styles/empleados/stylesEmpleado.css">
-=======
-    <link rel="stylesheet" href="../../styles/empleados/empleadosStyles.css">
->>>>>>> 01df057a548d3c91a11becf5f24d98c3b26cfd30
-
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -60,7 +55,7 @@
                 </div>
                 <div class="item" id="active">
                     <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.html">Empleados</a>
+                    <a href="gestionEmpleados.php">Empleados</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-transfer-alt'></i>
@@ -183,7 +178,7 @@
                                         <div class="form-group">
                                             <label>Confirm Password</label>
                                             <div class="pass-group">
-                                                <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
+                                                <input type="password" id="verifyPassword" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
                                                 <!-- Icono para ocultar/mostrar contraseña -->
                                                 <span class="fas toggle-passworda fa-eye-slash"></span>
                                             </div>
@@ -202,7 +197,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <button type="submit" href="#" class="btn btn-principal me-2">Aceptar</button>
+                                        <button type="submit" href="#" id="actualizarEmpleado" class="btn btn-principal me-2">Aceptar</button>
                                     </div>
                                 </div>
                             </form>
@@ -214,7 +209,11 @@
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script>
+    <script type="module">
+        import {
+            mostrarError,
+            mostrarExito
+        } from '../../js/alertas.js';
         $(document).ready(function() {
             // Obtener el id_usuario de la URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -240,11 +239,62 @@
                     $('#desdeHorario').val(data[0].hora_entrada);
                     $('#hastaHorario').val(data[0].hora_salida);
                     $('#foto').val(data[0].foto);
+
+
                 });
             } else {
                 // Mostrar un mensaje de error o redirigir a otra página
                 console.error('No se proporcionó el id_usuario');
             }
+
+            // function to updateEmployee
+            $(document).on('click', '#actualizarEmpleado', function(e) {
+                e.preventDefault();
+
+                // Obtenemos los valores del formularios
+                let nombres = $('#nombres').val();
+                let tipoDocumento = $('#tipo_documento').val();
+                let documento = $('#documento').val();
+                let email = $('#email').val();
+                let apellidos = $('#apellidos').val();
+                let rol = $('#rol').val();
+                let telefono = $('#telefono').val();
+                let direccion = $('#direccion').val();
+                let desdeHorario = $('#desdeHorario').val();
+                let hastaHorario = $('#hastaHorario').val();
+                let foto = $("#foto").val();
+
+
+                // enviamos la data en un objeto para mejor visualizacion
+                let data = {
+                    nombres,
+                    tipoDocumento,
+                    documento,
+                    email,
+                    apellidos,
+                    rol,
+                    telefono,
+                    direccion,
+                    desdeHorario,
+                    hastaHorario,
+                    password: $("#password").val(),
+                    verificarPassword: $("#verifyPassword").val(),
+                    foto
+                }
+
+                $.post("../../../controllers/actualizarEmpleados.php", {
+                    data
+                }, function(response) {
+                    // convertimos la respuesta a un JSON
+                    let data = JSON.parse(response);
+
+                    if (data.success) {
+                        mostrarExito("Usuario Actualizado", "Usuario Actualizado Correctamente", "gestionEmpleados.php");
+                    } else {
+                        mostrarError("Error", "El usuario no pudo ser actualizado", "");
+                    }
+                })
+            })
         });
     </script>
     <script src="../../js/alertas.js"></script>

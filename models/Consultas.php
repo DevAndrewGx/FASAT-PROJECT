@@ -168,7 +168,7 @@ class Consultas
     }
 
 
-    public function actualizarEmpleados($id_usuario, $documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion, $hora_entrada, $hora_salida) {
+    public function actualizarEmpleados($documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion, $hora_entrada, $hora_salida) {
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
