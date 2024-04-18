@@ -168,13 +168,17 @@ class Consultas
     }
 
 
-    public function actualizarEmpleados($documento, $rol, $estado, $tipo_documento, $nombres, $apellidos, $telefono, $direccion, $correo, $foto, $fecha_de_creacion, $hora_entrada, $hora_salida) {
+    public function actualizarEmpleados($id_usuario, $nombres, $tipo_documento, $documento, $correo, $apellidos, $rol, $telefono, $direccion, $hora_entrada, $hora_salida, $password, $fotoMovida, $estado) {
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql1 ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, foto = :foto, fecha_de_creacion = :fecha_de_creacion WHERE id_usuario = :id_usuario";
+        $sql1 ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, password = :password, foto = :foto WHERE id_usuario = :id_usuario";
+
+
         $sql2 = "UPDATE horarios SET hora_entrada = :hora_entrada, hora_salida = :hora_salida WHERE id_usuario = :id_usuario";
+
         $consulta1 = $conexion -> prepare($sql1);
+        $consulta2 = $conexion->prepare($sql2);
     
         $consulta1->bindParam(":id_usuario", $id_usuario);
         $consulta1->bindParam(":documento", $documento);
@@ -186,10 +190,10 @@ class Consultas
         $consulta1->bindParam(":telefono", $telefono);
         $consulta1->bindParam(":direccion", $direccion);
         $consulta1->bindParam(":correo", $correo);
-        $consulta1->bindParam(":foto", $foto);
-        $consulta1->bindParam(":fecha_de_creacion", $fecha_de_creacion);
+        $consulta1->bindParam(':password', $password);
+        $consulta1->bindParam(":foto", $fotoMovida);
 
-        $consulta2 = $conexion -> prepare($sql2);
+        $consulta2->bindParam(":id_usuario", $id_usuario);
         $consulta2->bindParam(":hora_entrada", $hora_entrada);
         $consulta2->bindParam(":hora_salida", $hora_salida);
        

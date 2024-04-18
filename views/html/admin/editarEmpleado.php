@@ -11,6 +11,8 @@
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -178,7 +180,7 @@
                                         <div class="form-group">
                                             <label>Confirm Password</label>
                                             <div class="pass-group">
-                                                <input type="password" id="verifyPassword" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
+                                                <input type="password" id="verifyPassword" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="verificarPassword">
                                                 <!-- Icono para ocultar/mostrar contraseña -->
                                                 <span class="fas toggle-passworda fa-eye-slash"></span>
                                             </div>
@@ -248,8 +250,14 @@
             }
 
             // function to updateEmployee
-            $(document).on('click', '#actualizarEmpleado', function(e) {
+            $(document).on('submit', '#formularioRegistro', function(e) {
                 e.preventDefault();
+
+                const form = document.getElementById("formularioRegistro");
+                const id_usuario = urlParams.get('id_usuario');
+
+                const formData = new FormData(form);
+                formData.append('id_usuario', id_usuario);
 
                 // Obtenemos los valores del formularios
                 let nombres = $('#nombres').val();
@@ -264,33 +272,22 @@
                 let hastaHorario = $('#hastaHorario').val();
                 let foto = $("#foto").val();
 
+                $.ajax({
+                    url: "../../../controllers/actualizarEmpleados.php",
+                    method: "POST",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        let data = JSON.parse(response);
 
-                // enviamos la data en un objeto para mejor visualizacion
-                let data = {
-                    nombres,
-                    tipoDocumento,
-                    documento,
-                    email,
-                    apellidos,
-                    rol,
-                    telefono,
-                    direccion,
-                    desdeHorario,
-                    hastaHorario,
-                    password: $("#password").val(),
-                    verificarPassword: $("#verifyPassword").val(),
-                    foto
-                }
-
-                $.post("../../../controllers/actualizarEmpleados.php", {
-                    data
-                }, function(response) {
-                    // convertimos la respuesta a un JSON
-                    let data = JSON.parse(response);
-
-                    if (data.success) {
-                        mostrarExito("Usuario Actualizado", "Usuario Actualizado Correctamente", "gestionEmpleados.php");
-                    } else {
+                        if (data.success) {
+                            mostrarExito("Usuario Actualizado", "Usuario Actualizado Correctamente", "gestionEmpleados.php");
+                        } else {
+                            mostrarError("Error", "El usuario no pudo ser actualizado", "");
+                        }
+                    },
+                    error: function(response) {
                         mostrarError("Error", "El usuario no pudo ser actualizado", "");
                     }
                 })

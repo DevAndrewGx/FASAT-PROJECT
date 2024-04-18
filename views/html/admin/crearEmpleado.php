@@ -123,7 +123,7 @@
                     <div class="">
                         <div class="card-body">
 
-                            <form action="../../../controllers/registrarEmpleado.php" method="POST" enctype="multipart/form-data" id="formularioRegistro">
+                            <form enctype="multipart/form-data" id="formularioRegistro">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-6 col-12">
                                         <div class="form-group">
@@ -244,7 +244,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="module">
         // we have to import our functions from alerts to work here
-        import { mostrarError, mostrarExito} from '../../js/alertas.js';
+        import {
+            mostrarError,
+            mostrarExito
+        } from '../../js/alertas.js';
         // Alertas.js for creating an employee
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("formularioRegistro");
@@ -288,4 +291,5 @@
     <script src="../../js/app.js"></script>
     <script src="../../js/alertas.js"></script>
 </body>
+
 </html>
