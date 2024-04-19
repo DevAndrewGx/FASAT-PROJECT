@@ -215,8 +215,7 @@ require_once('../../../models/Sesion.php');
         import {
             mostrarError,
             mostrarExito,
-            mostrarConfirmacionBorrar,
-            enviarDatosAlFormulario
+            mostrarConfirmacionBorrar
         } from '../../js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#example').DataTable({

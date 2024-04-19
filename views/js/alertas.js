@@ -4,7 +4,7 @@ export function mostrarExito(title, text, redirectURL) {
         text: text,
         icon: "success",
         confirmButtonText: "Aceptar",
-        allowOutsideClick: false, //false para evitar cierre indeseado
+        allowOutsideClick: false, 
     }).then((result) => {
         if (result.isConfirmed) {
             window.location.href = redirectURL;
@@ -18,6 +18,7 @@ export function mostrarError(title, text, redirectURL) {
         text: text,
         icon: "error",
         confirmButtonText: "Aceptar",
+        allowOutsideClick: false,
     }).then((result) => {
         if (result.isConfirmed) {
             window.location.href = redirectURL;
@@ -35,6 +36,7 @@ export function mostrarConfirmacionBorrar(id_usuario) {
         showCancelButton: true,
         confirmButtonText: "Sí, eliminar",
         cancelButtonText: "Cancelar",
+        allowOutsideClick: false,
     }).then((result) => {
         if (result.isConfirmed) {
             fetch("../../../controllers/borrarEmpleados.php", {
