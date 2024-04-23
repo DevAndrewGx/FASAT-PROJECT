@@ -289,7 +289,16 @@ require_once('../../../models/Sesion.php');
                     "defaultContent": "-",
                     "targets": "_all",
                     "orderable": false
-                }]
+                }],
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros",
+                    "zeroRecords": "No se encontraron resultados",
+                    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "search": "Buscar:",
+                    "processing": "Procesando..."
+                }
             });
 
             // Agregando un eventlistener para borrar data
@@ -306,12 +315,9 @@ require_once('../../../models/Sesion.php');
                 const id_usuario = $(this).data('id');
                 window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
             });
-
-
-
-            // const datosUsuario = dataTable.row($(this).closest('tr')).data();
         });
     </script>
+
     <!-- DataTable -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
