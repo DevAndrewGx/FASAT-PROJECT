@@ -29,36 +29,3 @@ navegationItems.forEach((element) => {
         activeItem = element;
     });
 });
-
-// DATA-TABLES
-document.addEventListener("DOMContentLoaded", function () {
-    const table = document.getElementById("example");
-    const dataTable = new DataTable(table, {
-        bFilter: true,
-        sDom: "fBtlpi",
-        pagingType: "numbers",
-        ordering: true,
-        language: {
-            search: " ",
-            sLengthMenu: "Mostrar: _MENU_", // Personalizado según tu requerimiento
-            searchPlaceholder: "Search...",
-            info: "_START_ - _END_ de _TOTAL_ items",
-        },
-        initComplete: function (settings, json) {
-            const filterInput = document.querySelector(".dataTables_filter");
-            const tableSearch = document.getElementById("tableSearch");
-            const searchInput = document.querySelector(".search-input");
-
-            if (filterInput) {
-                tableSearch.appendChild(filterInput);
-            }
-
-            if (filterInput) {
-                const clonedFilterInput = filterInput.cloneNode(true);
-                searchInput.appendChild(clonedFilterInput);
-            }
-        },
-    });
-
-    return dataTable;
-});
