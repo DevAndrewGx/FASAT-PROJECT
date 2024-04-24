@@ -18,8 +18,53 @@ require_once('../../../models/Sesion.php');
     <link rel="stylesheet" href="../../styles/empleados/stylesEmpleado.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- DataTables -->
+    <!-- DataTables styles-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
+    <!-- Tu CSS personalizado para la tabla responsive -->
+    <!-- <style>
+        /* CSS para pantalla grande */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        /* CSS para pantalla pequeña */
+        @media (max-width: 768px) {
+            .table-responsive {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .table-responsive table {
+                width: 100%;
+            }
+
+            .table-responsive table thead {
+                display: none;
+            }
+
+            .table-responsive table,
+            .table-responsive table tbody,
+            .table-responsive table th,
+            .table-responsive table td,
+            .table-responsive table tr {
+                display: block;
+            }
+
+            .table-responsive table tr {
+                margin-bottom: 15px;
+            }
+
+            .table-responsive table td {
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .table-responsive table td:last-child {
+                border-bottom: 0;
+            }
+        }
+    </style>     -->
 </head>
 
 <body>
@@ -138,8 +183,7 @@ require_once('../../../models/Sesion.php');
             <div class="page-wrapper">
                 <div class="content">
                     <div class="table-responsive">
-
-                        <table id="empleados" class="table table-responsive datanew w-100">
+                        <table id="empleados" class="table datanew">
                             <thead>
                                 <tr>
                                     <th>
@@ -161,39 +205,7 @@ require_once('../../../models/Sesion.php');
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- <tr>
-                                    <td>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="employee-img">
-                                            <img src="' . $f['foto'] . '" alt="employee">
-                                        </a>
-                                        <a href="#">' . $f['nombres'] . '</a>
-                                    </td>
-                                    <td>' . $f['apellidos'] . '</td>
-                                    <td>' . $f['documento'] . '</td>
-                                    <td>' . $f['tipo_documento'] . '</td>
-                                    <td>' . $f['telefono'] . '</td>
-                                    <td><a href="mailto:' . $f['correo'] . '">' . $f['correo'] . '</a></td>
-                                    <td><span class="bg-lightgreen badges">' . $f['estado'] . '</span></td>
-                                    <td>' . $f['rol'] . '</td>
-                                    <td>' . $f['fecha_de_creacion'] . '</td>
-                                    <td>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/eye.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3" href="editarEmpleado.html">
-                                            <img src="../../imgs/icons/edit.svg" alt="eye">
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="../../imgs/icons/trash.svg" alt="trash">
-                                        </a>
-                                    </td>
-                                </tr> -->
+                                <!-- Aqui vamos insertar la data con jquery -->
                             </tbody>
                         </table>
                     </div>
@@ -287,7 +299,7 @@ require_once('../../../models/Sesion.php');
                 "columnDefs": [{
                     "defaultContent": "-",
                     "targets": "_all",
-                    "orderable": false
+                    "orderable": true
                 }],
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ registros",
@@ -301,7 +313,7 @@ require_once('../../../models/Sesion.php');
             });
 
             // Agregando un eventlistener para borrar data
-            $('#example').on('click', '.botonEliminar', function(e) {
+            $('#empleados').on('click', '.botonEliminar', function(e) {
                 e.preventDefault();
 
                 const id_usuario = $(this).data('id');
@@ -309,7 +321,7 @@ require_once('../../../models/Sesion.php');
                 mostrarConfirmacionBorrar(id_usuario);
             });
             // Agregando un eventlistener para actualizar data
-            $('#example').on('click', '.botonActualizar', function(e) {
+            $('#empleados').on('click', '.botonActualizar', function(e) {
                 e.preventDefault();
                 const id_usuario = $(this).data('id');
                 window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
@@ -317,12 +329,13 @@ require_once('../../../models/Sesion.php');
         });
     </script>
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <!-- DataTable -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
