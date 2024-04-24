@@ -20,57 +20,18 @@ require_once('../../../models/Sesion.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables styles-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
-    <!-- Tu CSS personalizado para la tabla responsive -->
-    <!-- <style>
-        /* CSS para pantalla grande */
-        .table-responsive {
-            overflow-x: auto;
-        }
+    <!-- RESPONSIVE -->
 
-        /* CSS para pantalla pequeña */
-        @media (max-width: 768px) {
-            .table-responsive {
-                display: block;
-                width: 100%;
-                overflow-x: auto;
-            }
 
-            .table-responsive table {
-                width: 100%;
-            }
-
-            .table-responsive table thead {
-                display: none;
-            }
-
-            .table-responsive table,
-            .table-responsive table tbody,
-            .table-responsive table th,
-            .table-responsive table td,
-            .table-responsive table tr {
-                display: block;
-            }
-
-            .table-responsive table tr {
-                margin-bottom: 15px;
-            }
-
-            .table-responsive table td {
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .table-responsive table td:last-child {
-                border-bottom: 0;
-            }
-        }
-    </style>     -->
+    <!-- TESTING DATATABLES -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
 </head>
 
 <body>
     <!-- ASIDE CONTAINER -->
     <div class="main-container">
-
         <header>
             <nav>
                 <ul class="items-right">
@@ -183,7 +144,7 @@ require_once('../../../models/Sesion.php');
             <div class="page-wrapper">
                 <div class="content">
                     <div class="table-responsive">
-                        <table id="empleados" class="table datanew">
+                        <table id="empleados" class="table datanew nowrap" style="width: 100%;">
                             <thead>
                                 <tr>
                                     <th>
@@ -220,6 +181,36 @@ require_once('../../../models/Sesion.php');
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTable -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"> </script>
+
+    <!-- Responsive dataTables -->
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.js"></script>
+
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.js"></script>
+
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="module" src="../../js/alertas.js"></script>
+
+
+
+
+    <!-- TESTING DATATABLES -->
+
+
+
     <!-- TESTING BACKEND DATATABLE FEATURES -->
     <script type="module">
         // IMPORT OUR FUNCTIONS TO STAR WORKING WITH ALERTS 
@@ -230,6 +221,12 @@ require_once('../../../models/Sesion.php');
         } from '../../js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#empleados').DataTable({
+
+                // "drawCallback": function(settings) {
+                //     $('.table-responsive').css('overflow-x', 'auto');
+                //     $('#empleados').DataTable().columns.adjust();
+                // },
+                "responsive": true,
                 "processing": true,
                 "serverSide": true,
                 "order": [],
@@ -310,7 +307,7 @@ require_once('../../../models/Sesion.php');
                     "search": "Buscar:",
                     "processing": "Procesando..."
                 }
-            });
+            }).fnAdjustColumnSizing();
 
             // Agregando un eventlistener para borrar data
             $('#empleados').on('click', '.botonEliminar', function(e) {
@@ -328,18 +325,6 @@ require_once('../../../models/Sesion.php');
             });
         });
     </script>
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <!-- DataTable -->
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-    <!-- JS BOOTSTRAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- SWEETALERT2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-    <script type="module" src="../../js/alertas.js"></script>
 </body>
 
 </html>

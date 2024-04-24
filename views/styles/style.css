@@ -134,6 +134,12 @@ ul li {
     height: 100vh;
 }
 
+
+.main-container .table-responsive { 
+    width: 100%;
+    overflow-x: auto;
+}
+
 .main-container .left-section {
     display: flex;
     position: fixed;
