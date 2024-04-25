@@ -181,10 +181,6 @@ require_once('../../../models/Sesion.php');
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-
     <!-- JS BOOTSTRAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 

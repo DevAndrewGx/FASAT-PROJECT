@@ -16,8 +16,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
-
+    <div class="main-wrapper">
         <header>
             <nav>
                 <ul class="items-right">
@@ -110,134 +109,136 @@
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
 
 
         <!-- MAIN CONTENT -->
-        <main>
-            <h1>Manejo de usuarios</h1>
-            <p>Agregar usuario</p>
-            <div class="page-wrapper">
-                <div class="content">
+        <main class="page-wrapper" style="min-height: 995px">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Manejo de usuarios</h1>
+                        <p>Agregar usuario</p>
 
-                    <div class="">
-                        <div class="card-body">
+                    </div>
+                </div>
 
-                            <form enctype="multipart/form-data" id="formularioRegistro">
-                                <div class="row">
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="form-group">
-                                            <label>Nombres</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese Nombres" name="nombres">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Tipo documento</label>
-                                            <select class="form-control select" name="tipoDocumento">
-                                                <option>Seleccione</option>
-                                                <option>CC</option>
-                                                <option>CC EXTRAGERIA</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Documento</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese documento" name="documento">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Email</label>
-                                            <input type="email" class="form-control" placeholder="Ingrese correo" name="email">
-                                        </div>
-
+                <div class="card">
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" id="formularioRegistro">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Nombres</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese Nombres" name="nombres">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo documento</label>
+                                        <select class="form-control select" name="tipoDocumento">
+                                            <option>Seleccione</option>
+                                            <option>CC</option>
+                                            <option>CC EXTRAGERIA</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Documento</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese documento" name="documento">
                                     </div>
 
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="form-group">
-                                            <label>Apellidos</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese usuario" name="apellidos">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Rol</label>
-                                            <select class="form-control select" name="rol">
-                                                <option>Seleccione</option>
-                                                <option>Mesero</option>
-                                                <option>Cheff</option>
-                                                <option>Encargado inventario</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Telefono</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese numero de telefono" name="telefono">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Direccion</label>
-                                            <input type="text" class="form-control" placeholder="Ingrese Direccion" name="direccion">
-                                        </div>
-
-
-
-
-
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" placeholder="Ingrese correo" name="email">
                                     </div>
 
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="form-group">
-                                            <label>Horario</label>
-                                            <div class="row">
-                                                <div class="pass-group col-lg-6">
-                                                    <input type="time" class="form-control pass-input" name="desdeHorario">
-                                                    <!-- Icono para ocultar/mostrar contraseña -->
+                                </div>
 
-                                                </div>
-                                                <div class="pass-group col-lg-6">
-                                                    <input type="time" class="form-control pass-input" name="hastaHorario">
-                                                    <!-- Icono para ocultar/mostrar contraseña -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Contraseña</label>
-                                            <div class="pass-group">
-                                                <input type="password" class="form-control pass-input" placeholder="Ingresar contraseña" name="password">
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Apellidos</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese usuario" name="apellidos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Rol</label>
+                                        <select class="form-control select" name="rol">
+                                            <option>Seleccione</option>
+                                            <option>Mesero</option>
+                                            <option>Cheff</option>
+                                            <option>Encargado inventario</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Telefono</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese numero de telefono" name="telefono">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Direccion</label>
+                                        <input type="text" class="form-control" placeholder="Ingrese Direccion" name="direccion">
+                                    </div>
+
+
+
+
+
+                                </div>
+
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Horario</label>
+                                        <div class="row">
+                                            <div class="pass-group col-lg-6">
+                                                <input type="time" class="form-control pass-input" name="desdeHorario">
                                                 <!-- Icono para ocultar/mostrar contraseña -->
-                                                <span class="fas toggle-passworda fa-eye-slash"></span>
+
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Confirm Password</label>
-                                            <div class="pass-group">
-                                                <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
+                                            <div class="pass-group col-lg-6">
+                                                <input type="time" class="form-control pass-input" name="hastaHorario">
                                                 <!-- Icono para ocultar/mostrar contraseña -->
-                                                <span class="fas toggle-passworda fa-eye-slash"></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-sm-6 col-12">
-                                        <div class="form-group">
-                                            <label>Foto de perfil</label>
-                                            <div class="image-upload image-upload-new">
-                                                <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
-                                                <div class="image-uploads">
-                                                    <img src="../../imgs/icons/upload.svg" alt="img">
-                                                    <h4>Arrastra el archivo</h4>
-                                                </div>
-                                            </div>
+                                    <div class="form-group">
+                                        <label>Contraseña</label>
+                                        <div class="pass-group">
+                                            <input type="password" class="form-control pass-input" placeholder="Ingresar contraseña" name="password">
+                                            <!-- Icono para ocultar/mostrar contraseña -->
+                                            <span class="fas toggle-passworda fa-eye-slash"></span>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <button type="submit" href="#" class="btn btn-principal me-2">Aceptar</button>
-                                        <!-- <a href="gestionEmpleados.html" class="btn btn-danger">Cancelar</a> -->
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <div class="pass-group">
+                                            <input type="password" class="form-control pass-inputs" placeholder="Confirmar Contraseña" name="validarPassword">
+                                            <!-- Icono para ocultar/mostrar contraseña -->
+                                            <span class="fas toggle-passworda fa-eye-slash"></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-lg-3 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label>Foto de perfil</label>
+                                        <div class="image-upload image-upload-new">
+                                            <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
+                                            <div class="image-uploads">
+                                                <img src="../../imgs/icons/upload.svg" alt="img">
+                                                <h4>Arrastra el archivo</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit" href="#" class="btn btn-principal me-2">Aceptar</button>
+                                    <!-- <a href="gestionEmpleados.html" class="btn btn-danger">Cancelar</a> -->
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+
+
+
         </main>
-
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- JS BOOTSTRAP -->
