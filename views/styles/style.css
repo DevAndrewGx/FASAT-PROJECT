@@ -16,7 +16,7 @@ i {
     font-size: 24px;
 }
 
-.btn-principal { 
+.btn-principal {
     background: #ff9f43;
     padding: 10px 15px;
     color: #fff;
@@ -239,7 +239,6 @@ ul li {
     height: 8px;
 }
 
-
 header {
     background: #fff;
     border-bottom: 2px solid #f0f0f0;
@@ -269,7 +268,7 @@ header nav ul li {
     padding: 6px 0 0 0;
 }
 
-header nav ul li a   {
+header nav ul li a {
     color: #000;
 }
 header ul li a img {
@@ -740,10 +739,9 @@ main .employee .data-employee {
     gap: 15px;
     margin-bottom: 15px;
 }
-main .employee .data-employee .info-employee { 
+main .employee .data-employee .info-employee {
     display: flex;
     gap: 15px;
-
 }
 main .employee .data-employee h3 {
     font-size: 20px;
@@ -773,8 +771,6 @@ main #orders-employees #orders p {
     font-size: 14px;
 }
 
-
-
 /* STYLES FOR TABLES AND FORMS MODULES STOCK, SALES , EMPLOOYES */
 
 .page-wrapper {
@@ -794,18 +790,18 @@ main #orders-employees #orders p {
     }
 }
 .page-wrapper .content {
-    padding: 0 0 30px;          
+    padding: 0 0 30px;
 }
 @media (max-width: 991px) {
     .page-wrapper .content {
         padding: 15px;
     }
-}           
-.page-wrapper .content .page-header { 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
+}
+.page-wrapper .content .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
 }
 
 .page-wrapper .content .card {
@@ -883,7 +879,6 @@ main .table td .employee-img img {
     width: 50px;
     border-radius: 50%;
     margin-right: 5px;
-    
 }
 main .table td a {
     text-decoration: none;
@@ -951,53 +946,52 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 
 /* TABLE RESPONSIVE */
 
-
 @media (max-width: 575.98px) {
-  .table-responsive-sm {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-sm > .table-bordered {
-    border: 0;
-  }
+    .table-responsive-sm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-sm > .table-bordered {
+        border: 0;
+    }
 }
 
 @media (max-width: 767.98px) {
-  .table-responsive-md {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-md > .table-bordered {
-    border: 0;
-  }
+    .table-responsive-md {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-md > .table-bordered {
+        border: 0;
+    }
 }
 
 @media (max-width: 991.98px) {
-  .table-responsive-lg {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-lg > .table-bordered {
-    border: 0;
-  }
+    .table-responsive-lg {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-lg > .table-bordered {
+        border: 0;
+    }
 }
 
 @media (max-width: 1199.98px) {
-  .table-responsive-xl {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .table-responsive-xl > .table-bordered {
-    border: 0;
-  }
+    .table-responsive-xl {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-xl > .table-bordered {
+        border: 0;
+    }
 }
 
 /* .table-responsive {
@@ -1014,8 +1008,6 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
     padding-top: 5px;
 } */
 
-
-
 /* .dt-paging {
     display: inline-block;
 } */
@@ -1025,7 +1017,7 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
     font-size: 12px;
 } */
 
-.pagination li.active a.page-link { 
+.pagination li.active a.page-link {
     background: var(--primary-color);
     border-color: var(--primary-color);
     border-radius: 5px;
@@ -1033,8 +1025,7 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 
 .dt-length #dt-length-0 {
     margin-left: 10px;
-} 
-
+}
 
 /* CUMSTOM STYLES FOR SEARCH BUTTON DATATABLES*/
 
@@ -1054,28 +1045,24 @@ div.dt-container div.dt-search input {
 
 /* END STYLES FOR FORMS AND TABLES */
 
-
-
 /* Estilos para las mesas */
-
 
 main-mesa {
     width: 100%;
     border-right: 2px solid #f0f0f0;
     /* border-left: 2px solid #f0f0f0; */
     padding: 30px 30px 37px 30px;
-    background: var(--body-bg); 
+    background: var(--body-bg);
     grid-area: main;
 }
 /* Estilos para el contenedor de las mesas */
 #contenedor {
-    position: relative; 
+    position: relative;
     width: 700px;
-    height: 600px; 
-    background-color: #ffffff; 
+    height: 600px;
+    background-color: #ffffff;
     border: 3px solid #000;
 }
-
 
 /* Estilos para las mesas */
 .mesa {
@@ -1089,8 +1076,8 @@ main-mesa {
     color: #333;
     cursor: pointer;
     border-radius: 50%;
-    position: absolute; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: absolute;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para mesas cuadradas */
@@ -1104,16 +1091,46 @@ main-mesa {
 }
 
 /* Ubicaciones específicas para las mesas */
-#mesa1 { top: 20%; left: 10%; }
-#mesa2 { top: 20%; left: 35%; }
-#mesa3 { top: 20%; left: 60%; }
-#mesa4 { top: 50%; left: 10%; }
-#mesa5 { top: 50%; left: 35%; }
-#mesa6 { top: 50%; left: 60%; }
-#mesa7 { top: 75%; left: 10%; }
-#mesa8 { top: 75%; left: 35%; }
-#mesa9 { top: 75%; left: 60%; }
-#mesa10 { top: 50%; left: 85%; }
+#mesa1 {
+    top: 20%;
+    left: 10%;
+}
+#mesa2 {
+    top: 20%;
+    left: 35%;
+}
+#mesa3 {
+    top: 20%;
+    left: 60%;
+}
+#mesa4 {
+    top: 50%;
+    left: 10%;
+}
+#mesa5 {
+    top: 50%;
+    left: 35%;
+}
+#mesa6 {
+    top: 50%;
+    left: 60%;
+}
+#mesa7 {
+    top: 75%;
+    left: 10%;
+}
+#mesa8 {
+    top: 75%;
+    left: 35%;
+}
+#mesa9 {
+    top: 75%;
+    left: 60%;
+}
+#mesa10 {
+    top: 50%;
+    left: 85%;
+}
 
 /* Estilos para las mesas seleccionadas */
 .mesa.seleccionada {
@@ -1123,5 +1140,46 @@ main-mesa {
 
 /* Estilos para el botón "Registrar Orden" */
 .registrar-orden-btn {
-    margin-top: 20px; 
+    margin-top: 20px;
+}
+
+/* perfil */
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.card-body {
+    padding: 40px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.profile-details {
+    padding-left: 20px;
+}
+.profile-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.profile-details h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+.form-group label {
+    font-weight: bold;
+    color: #495057;
+}
+.form-control[disabled],
+.form-control[disabled]:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+    cursor: default;
 }
