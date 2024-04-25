@@ -13,7 +13,7 @@
     <div class="container">
         <div class="login-container">
             <div class="logo-container">
-                <a href="../html/admin/adminDashboard.html"><img src="../imgs/LOGOf.png" alt="Logo" class="logo"></a>
+                <a href="../html/admin/adminDashboard.php"><img src="../imgs/LOGOf.png" alt="Logo" class="logo"></a>
                 <h2>Inicia sesión</h2>
             </div>
             <form method="POST" action="../../controllers/inicioSesion.php">

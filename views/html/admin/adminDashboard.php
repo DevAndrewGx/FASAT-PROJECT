@@ -27,7 +27,7 @@ require_once('../../../models/Sesion.php');
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -121,20 +121,10 @@ require_once('../../../models/Sesion.php');
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
-
 
         <!-- MAIN CONTENT -->
-        <main>
-
+        <main class="page-wrapper" style="min-height: 995px">
             <h1>Admin Dashboard</h1>
-            <!-- <header>
-                <button class="menu-btn" id="menu-open"></button>
-                <i class='bx bx-menu'></i>
-            </header> -->
-
-
-
             <div class="analyse">
                 <!-- STOCK
                             SALES

@@ -115,7 +115,6 @@ ul li {
 :root {
     /******************** COLORS ********************/
     /* #0f172b, f6f6f9, #f88208, #FEA116, #242422 */
-
     --primary-color: #fea116;
     --secundary-color: #242422;
     --third-color: #ff0060;
@@ -126,22 +125,18 @@ ul li {
 
 /* END GLOBAL STYLES */
 
-.main-container {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: "side header" "side main";
-    height: 100vh;
-}
-
-
-.main-container .table-responsive { 
+.main-wrapper {
     width: 100%;
-    overflow-x: auto;
+    border-right: 2px solid #f0f0f0;
+    /* border-left: 2px solid #f0f0f0; */
+    padding: 30px 30px 0 30px;
+    background: var(--body-bg);
+    padding-bottom: 30px;
 }
 
-.main-container .left-section {
+.main-wrapper .left-section {
     display: flex;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
@@ -152,23 +147,23 @@ ul li {
     grid-area: side;
     border-right: 2px solid #f0f0f0;
     min-height: 100vh;
-    min-width: 280px;
+    min-width: 260px;
     background: #fff;
 }
 
-.main-container .left-section .logo {
+.main-wrapper .left-section .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.main-container .left-section .logo img {
+.main-wrapper .left-section .logo img {
     width: 160px;
     height: 70px;
     object-fit: contain;
 }
 
-.main-container .left-section .logo a {
+.main-wrapper .left-section .logo a {
     font-weight: 800;
     font-size: 18px;
     color: #242422;
@@ -191,25 +186,25 @@ ul li {
     color: var(--primary-color);
 }
 
-.main-container .left-section .sidebar {
+.main-wrapper .left-section .sidebar {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.main-container .left-section .sidebar .item {
+.main-wrapper .left-section .sidebar .item {
     display: flex;
     gap: 15px;
     cursor: pointer;
 }
 
-.main-container .left-section .sidebar i {
+.main-wrapper .left-section .sidebar i {
     color: var(--secundary-color);
     transition: all 0.3s ease;
     font-size: 30px;
 }
 
-.main-container .left-section .sidebar a {
+.main-wrapper .left-section .sidebar a {
     color: var(--secundary-color);
     display: flex;
     align-items: center;
@@ -220,13 +215,13 @@ ul li {
     text-decoration: none;
 }
 
-.main-container .left-section .sidebar .item#active a,
-.main-container .left-section .sidebar .item#active i,
-.main-container .left-section .upgrade .link i {
+.main-wrapper .left-section .sidebar .item#active a,
+.main-wrapper .left-section .sidebar .item#active i,
+.main-wrapper .left-section .upgrade .link i {
     color: var(--primary-color);
 }
 
-.main-container .left-section .sidebar .item a::after {
+.main-wrapper .left-section .sidebar .item a::after {
     position: absolute;
     content: "";
     width: 0px;
@@ -239,15 +234,21 @@ ul li {
     transition: all 0.3s ease;
 }
 
-.main-container .left-section .sidebar .item#active a::after {
+.main-wrapper .left-section .sidebar .item#active a::after {
     width: 8px;
     height: 8px;
 }
 
+
 header {
     background: #fff;
     border-bottom: 2px solid #f0f0f0;
-    grid-area: header;
+    height: 60px;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 header nav {
@@ -268,7 +269,7 @@ header nav ul li {
     padding: 6px 0 0 0;
 }
 
-header nav ul li a {
+header nav ul li a   {
     color: #000;
 }
 header ul li a img {
@@ -375,16 +376,6 @@ header ul li a img {
     border-radius: 50%;
 }
 /* STYLES FOR MAIN  */
-
-main {
-    width: 100%;
-    border-right: 2px solid #f0f0f0;
-    /* border-left: 2px solid #f0f0f0; */
-    padding: 30px 30px 0 30px;
-    background: var(--body-bg);
-    padding-bottom: 30px;
-    grid-area: main;
-}
 
 main h1 {
     margin-top: 15px;
@@ -786,13 +777,14 @@ main #orders-employees #orders p {
 
 /* STYLES FOR TABLES AND FORMS MODULES STOCK, SALES , EMPLOOYES */
 
-main .page-wrapper {
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.page-wrapper {
+    margin: 0 0 0 265px;
+    padding: 60px 0 0;
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 @media (max-width: 991px) {
@@ -802,21 +794,35 @@ main .page-wrapper {
     }
 }
 .page-wrapper .content {
-    padding: 25px;          
+    padding: 0 0 30px;          
 }
 @media (max-width: 991px) {
     .page-wrapper .content {
         padding: 15px;
     }
 }           
-
-main .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.page-wrapper .content .page-header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
 
+.page-wrapper .content .card {
+    margin: 0 0 25px;
+    border: 1px solid #e8ebed;
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+@media (max-width: 991px) {
+    .card .card-body {
+        padding: 15px;
+    }
+}
 main .page-header .btn-added {
     display: flex;
     align-items: center;
@@ -947,21 +953,19 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 
 
 @media (max-width: 575.98px) {
-  .table-responsive {
+  .table-responsive-sm {
     display: block;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  /* .table-responsive-sm > .table-bordered {
+  .table-responsive-sm > .table-bordered {
     border: 0;
-  } */
+  }
 }
 
-
-
 @media (max-width: 767.98px) {
-  .table-responsive {
+  .table-responsive-md {
     display: block;
     width: 100%;
     overflow-x: auto;
@@ -973,7 +977,7 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 }
 
 @media (max-width: 991.98px) {
-  .table-responsive {
+  .table-responsive-lg {
     display: block;
     width: 100%;
     overflow-x: auto;
@@ -985,7 +989,7 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 }
 
 @media (max-width: 1199.98px) {
-  .table-responsive {
+  .table-responsive-xl {
     display: block;
     width: 100%;
     overflow-x: auto;

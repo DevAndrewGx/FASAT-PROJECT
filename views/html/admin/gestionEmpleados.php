@@ -21,17 +21,15 @@ require_once('../../../models/Sesion.php');
     <!-- DataTables styles-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
     <!-- RESPONSIVE -->
-
-
     <!-- TESTING DATATABLES -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
-    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css"/>
 </head>
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
         <header>
             <nav>
                 <ul class="items-right">
@@ -124,60 +122,61 @@ require_once('../../../models/Sesion.php');
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
-
-
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="page-wrapper" style="min-height: 995px">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Empleados</h1>
+                        <p>Gestiona tus empleados</p>
 
-            <div class="page-header">
-                <div class="page-title">
-                    <h1>Empleados</h1>
-                    <p>Gestiona tus empleados</p>
+                    </div>
+                    <div class="page-btn">
+                        <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="plussvg"> Agregar
+                            Empleado</a>
+                    </div>
+                </div>
 
-                </div>
-                <div class="page-btn">
-                    <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="plussvg"> Agregar
-                        Empleado</a>
-                </div>
-            </div>
-            <div class="page-wrapper">
-                <div class="content">
-                    <div class="table-responsive">
-                        <table id="empleados" class="table datanew nowrap" style="width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <label class="checkboxs">
-                                            <input type="checkbox">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </th>
-                                    <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>Documento</th>
-                                    <th>Tipo Documento</th>
-                                    <th>Teléfono</th>
-                                    <th>Correo</th>
-                                    <th>Estado</th>
-                                    <th>Rol</th>
-                                    <th>Creado el</th>
-                                    <th>Acción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Aqui vamos insertar la data con jquery -->
-                            </tbody>
-                        </table>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="empleados" class="table datanew nowrap" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
+                                        <th>Documento</th>
+                                        <th>Tipo Documento</th>
+                                        <th>Teléfono</th>
+                                        <th>Correo</th>
+                                        <th>Estado</th>
+                                        <th>Rol</th>
+                                        <th>Creado el</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Aqui vamos insertar la data con jquery -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+        </main>
     </div>
 
-    </main>
 
 
-    </div>
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -204,13 +203,6 @@ require_once('../../../models/Sesion.php');
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="../../js/alertas.js"></script>
 
-
-
-
-    <!-- TESTING DATATABLES -->
-
-
-
     <!-- TESTING BACKEND DATATABLE FEATURES -->
     <script type="module">
         // IMPORT OUR FUNCTIONS TO STAR WORKING WITH ALERTS 
@@ -221,11 +213,6 @@ require_once('../../../models/Sesion.php');
         } from '../../js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#empleados').DataTable({
-
-                // "drawCallback": function(settings) {
-                //     $('.table-responsive').css('overflow-x', 'auto');
-                //     $('#empleados').DataTable().columns.adjust();
-                // },
                 "responsive": true,
                 "processing": true,
                 "serverSide": true,
@@ -295,7 +282,7 @@ require_once('../../../models/Sesion.php');
                 ],
                 "columnDefs": [{
                     "defaultContent": "-",
-                    "targets": "_all",
+                    "targets": [0, 3, 4],
                     "orderable": true
                 }],
                 "language": {
@@ -307,7 +294,7 @@ require_once('../../../models/Sesion.php');
                     "search": "Buscar:",
                     "processing": "Procesando..."
                 }
-            }).fnAdjustColumnSizing();
+            });
 
             // Agregando un eventlistener para borrar data
             $('#empleados').on('click', '.botonEliminar', function(e) {
