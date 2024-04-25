@@ -1145,13 +1145,13 @@ main-mesa {
 
 /* perfil */
 
-.card {
+.profile-container .card {
     border: none;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
-.card-body {
+.profile-container .card-body {
     padding: 40px;
 }
 .profile-img {
