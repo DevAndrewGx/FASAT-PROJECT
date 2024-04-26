@@ -16,7 +16,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -83,183 +83,169 @@
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
-
 
         <!-- MAIN CONTENT -->
-        <main>
-            <div class="nav-sections">
-                <nav>
-                    <ul>
-                        <li><a href="gestionInventario.html">Lista Productos</a></li>
-                        <li id="active"><a href="listaCategorias.html">Lista Categorias</a></li>
-                        <li><a href="#">Control de Stock</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-
-
-            <div class="page-header">
-
-                <div class="page-title">
-                    <h1>Lista Categorias</h1>
-                    <p>Administra categorias</p>
+        <main class="page-wrapper" style="min-height: 995px;">
+            <div class="content">
+                <div class="nav-sections">
+                    <nav>
+                        <ul>
+                            <li><a href="gestionInventario.html">Lista Productos</a></li>
+                            <li id="active"><a href="listaCategorias.html">Lista Categorias</a></li>
+                            <li><a href="#">Control de Stock</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="page-btn">
-                    <a href="addCategory.html" class="btn btn-added"><img src="../../imgs/icons/plus.svg"
-                            alt="add-icon">
-                        Agregar Nueva
-                        categoria</a>
+
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Lista Categorias</h1>
+                        <p>Administra categorias</p>
+                    </div>
+                    <div class="page-btn">
+                        <a href="addCategory.html" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="add-icon">
+                            Agregar Nueva
+                            categoria</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="page-wrapper">
-
-
-                <div class="table-responsive">
-                    <table id="example" class="table table-responsive datanew">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </th>
-
-                                <th>Nombre de la Categoría</th>
-                                <th>Código de la Categoría</th>
-                                <th>Descripción</th>
-
-                                <th>Acción</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>La Trattoria</td>
-                                <td>Downtown</td>
-                                <td>Italiana</td>
-
-
-
-                                <td>
-                                    <a href="editarCategory.html">
-                                        <img src="../../imgs/icons/edit.svg" alt="edit">
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../imgs/icons/trash.svg" alt="edit">
-                                    </a>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>La Trattoria</td>
-                                <td>Downtown</td>
-                                <td>Italiana</td>
-
-
-                                <td>
-                                    <a href="editarCategory.html">
-                                        <img src="../../imgs/icons/edit.svg" alt="edit">
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../imgs/icons/trash.svg" alt="edit">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>La Trattoria</td>
-                                <td>Downtown</td>
-                                <td>Italiana</td>
-
-
-
-                                <td>
-                                    <a href="editarCategory.html">
-                                        <img src="../../imgs/icons/edit.svg" alt="edit">
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../imgs/icons/trash.svg" alt="edit">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>La Trattoria</td>
-                                <td>Downtown</td>
-                                <td>Italiana</td>
-
-
-
-                                <td>
-                                    <a href="editarCategory.html">
-                                        <img src="../../imgs/icons/edit.svg" alt="edit">
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../imgs/icons/trash.svg" alt="edit">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>La Trattoria</td>
-                                <td>Downtown</td>
-                                <td>Italiana</td>
-
-                                <td>
-                                    <a href="editarCategory.html">
-                                        <img src="../../imgs/icons/edit.svg" alt="edit">
-                                    </a>
-                                    <a href="#">
-                                        <img src="../../imgs/icons/trash.svg" alt="edit">
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table><br>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-outline-primary" id="dashboardBtn"><i class="fas fa-home"></i> Panel
-                            Principal</button>
-                        <div class="btn-group" role="group"><br>
-                            <button class="btn btn-outline-primary" id="prevPageBtn"><i
-                                    class="fas fa-chevron-left"></i></button>
-                            <button class="btn btn-outline-primary" id="nextPageBtn"><i
-                                    class="fas fa-chevron-right"></i></button>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="table table-responsive datanew">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                        
+                                        <th>Nombre de la Categoría</th>
+                                        <th>Código de la Categoría</th>
+                                        <th>Descripción</th>
+                        
+                                        <th>Acción</th>
+                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>La Trattoria</td>
+                                        <td>Downtown</td>
+                                        <td>Italiana</td>
+                        
+                        
+                        
+                                        <td>
+                                            <a href="editarCategory.html">
+                                                <img src="../../imgs/icons/edit.svg" alt="edit">
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../imgs/icons/trash.svg" alt="edit">
+                                            </a>
+                                        </td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>La Trattoria</td>
+                                        <td>Downtown</td>
+                                        <td>Italiana</td>
+                        
+                        
+                                        <td>
+                                            <a href="editarCategory.html">
+                                                <img src="../../imgs/icons/edit.svg" alt="edit">
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../imgs/icons/trash.svg" alt="edit">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>La Trattoria</td>
+                                        <td>Downtown</td>
+                                        <td>Italiana</td>
+                        
+                        
+                        
+                                        <td>
+                                            <a href="editarCategory.html">
+                                                <img src="../../imgs/icons/edit.svg" alt="edit">
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../imgs/icons/trash.svg" alt="edit">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>La Trattoria</td>
+                                        <td>Downtown</td>
+                                        <td>Italiana</td>
+                        
+                        
+                        
+                                        <td>
+                                            <a href="editarCategory.html">
+                                                <img src="../../imgs/icons/edit.svg" alt="edit">
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../imgs/icons/trash.svg" alt="edit">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="checkboxs">
+                                                <input type="checkbox">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </td>
+                                        <td>La Trattoria</td>
+                                        <td>Downtown</td>
+                                        <td>Italiana</td>
+                        
+                                        <td>
+                                            <a href="editarCategory.html">
+                                                <img src="../../imgs/icons/edit.svg" alt="edit">
+                                            </a>
+                                            <a href="#">
+                                                <img src="../../imgs/icons/trash.svg" alt="edit">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+        </main>
     </div>
     <script src="../../js/app.js"></script>
     <!-- JQuery -->

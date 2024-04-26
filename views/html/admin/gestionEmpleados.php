@@ -122,6 +122,7 @@ require_once('../../../models/Sesion.php');
 
 
         <!-- END OF SIDEBAR -->
+        
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px">
             <div class="content">

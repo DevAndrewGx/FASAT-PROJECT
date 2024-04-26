@@ -16,7 +16,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -114,72 +114,63 @@
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
-
-
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="page-wrapper" style="min-height: 995px;">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Perfil </h1>
+                        <p>Vista del Perfil</p>
+                        
+                    </div>
+                </div>
 
-
-
-            </head>
-
-            <body>
-                <div class="container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10 profile-container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="profile-container">
                             <div class="card shadow">
+
                                 <div class="card-body d-flex align-items-center">
                                     <div class="profile-img mr-4">
-                                        <img src="../../imgs/img/perfil.jpg" alt="Profile Picture"
-                                            class="img-fluid rounded-circle">
-                                    </div>
-                                    <div class="profile-details">
-                                        <h2>Perfil de William Castillo</h2>
-                                        <h4>Vista del Perfil</h4>
+                                        <img src="../../imgs/img/perfil.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
                                         <a href="editarPerfil.html" class="btn btn-primary mt-3">Editar</a>
                                     </div>
+                                
                                 </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="firstName">Nombre</label>
-                                                    <input type="text" class="form-control" id="firstName"
-                                                        value="William" disabled>
-                                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="firstName">Nombre</label>
+                                                <input type="text" class="form-control" id="firstName" value="William" disabled>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="lastName">Apellido</label>
-                                                    <input type="text" class="form-control" id="lastName"
-                                                        value="Castillo" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="email">Correo Electrónico</label>
-                                                    <input type="email" class="form-control" id="email"
-                                                        value="william@example.com" disabled>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="phone">Teléfono</label>
-                                                    <input type="text" class="form-control" id="phone"
-                                                        value="+1452 876 5432" disabled>
-                                                </div>
-                                            </div>
-
                                         </div>
-                                    </form>
-                                </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="lastName">Apellido</label>
+                                                <input type="text" class="form-control" id="lastName" value="Castillo" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">Correo Electrónico</label>
+                                                <input type="email" class="form-control" id="email" value="william@example.com" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone">Teléfono</label>
+                                                <input type="text" class="form-control" id="phone" value="+1452 876 5432" disabled>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
         </main>
 
 

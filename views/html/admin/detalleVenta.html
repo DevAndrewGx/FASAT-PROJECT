@@ -19,7 +19,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -90,119 +90,116 @@
 
 
         <!-- MAIN CONTENT -->
-        <main>
-
-            <div class="page-wrapper">
-                <div class="content">
-                    <div class="page-header">
-                        <div class="page-title">
-                            <h4>Detalles de la Orden</h4>
-                            <h6>Detalles de la orden de un restaurante</h6>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-sales-split">
-                                <h2>Detalle de la Orden: #123</h2>
-                                <ul>
-                                    <li><a href="javascript:void(0);"><i class="fas fa-edit"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fas fa-file-pdf"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fas fa-file-excel"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fas fa-print"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="invoice-box table-height"
-                                style="overflow: auto;margin:15px auto;padding: 0;font-size: 14px;line-height: 24px;color: #555;">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Plato</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio</th>
-                                            <th>Descuento</th>
-                                            <th>Impuesto</th>
-                                            <th>Subtotal</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Hamburguesa con queso</td>
-                                            <td>2</td>
-                                            <td>100.00</td>
-                                            <td>0.00</td>
-                                            <td>10.00</td>
-                                            <td>220.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pizza Pepperoni</td>
-                                            <td>1</td>
-                                            <td>150.00</td>
-                                            <td>0.00</td>
-                                            <td>15.00</td>
-                                            <td>165.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ensalada César</td>
-                                            <td>1</td>
-                                            <td>80.00</td>
-                                            <td>0.00</td>
-                                            <td>8.00</td>
-                                            <td>88.00</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <label>Impuesto de la Orden</label>
-                                        <input type="text" class="form-control mb-3">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="total-order w-100 max-widthauto m-auto mb-4">
-                                        <ul>
-                                            <li>
-                                                <h4>Impuesto de la Orden</h4>
-                                                <h5>$ 33.00 (10.00%)</h5>
-                                            </li>
-                                            <li>
-                                                <h4>Descuento</h4>
-                                                <h5>$ 0.00</h5>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="total-order w-100 max-widthauto m-auto mb-4">
-                                        <ul>
-                                            <li>
-                                                <h4>Envío</h4>
-                                                <h5>$ 0.00</h5>
-                                            </li>
-                                            <li class="total">
-                                                <h4>Total General</h4>
-                                                <h5>$ 473.00</h5>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 text-center">
-                                <a href="javascript:void(0);" class="btn btn-success me-2">Actualizar</a>
-                                <a href="javascript:void(0);" class="btn btn-danger">Cancelar</a>
-                            </div>
-                        </div>
+        <main class="page-wrapper" style="min-height: 995px;">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h4>Detalles de la Orden</h4>
+                        <h6>Detalles de la orden de un restaurante</h6>
                     </div>
                 </div>
             </div>
 
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-sales-split">
+                        <h2>Detalle de la Orden: #123</h2>
+                        <ul>
+                            <li><a href="javascript:void(0);"><i class="fas fa-edit"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fas fa-file-pdf"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fas fa-file-excel"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fas fa-print"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="invoice-box table-height"
+                        style="overflow: auto;margin:15px auto;padding: 0;font-size: 14px;line-height: 24px;color: #555;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Plato</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Descuento</th>
+                                    <th>Impuesto</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hamburguesa con queso</td>
+                                    <td>2</td>
+                                    <td>100.00</td>
+                                    <td>0.00</td>
+                                    <td>10.00</td>
+                                    <td>220.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Pizza Pepperoni</td>
+                                    <td>1</td>
+                                    <td>150.00</td>
+                                    <td>0.00</td>
+                                    <td>15.00</td>
+                                    <td>165.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Ensalada César</td>
+                                    <td>1</td>
+                                    <td>80.00</td>
+                                    <td>0.00</td>
+                                    <td>8.00</td>
+                                    <td>88.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Impuesto de la Orden</label>
+                                <input type="text" class="form-control mb-3">
+                            </div>
+                        </div>
+                
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="total-order w-100 max-widthauto m-auto mb-4">
+                                <ul>
+                                    <li>
+                                        <h4>Impuesto de la Orden</h4>
+                                        <h5>$ 33.00 (10.00%)</h5>
+                                    </li>
+                                    <li>
+                                        <h4>Descuento</h4>
+                                        <h5>$ 0.00</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="total-order w-100 max-widthauto m-auto mb-4">
+                                <ul>
+                                    <li>
+                                        <h4>Envío</h4>
+                                        <h5>$ 0.00</h5>
+                                    </li>
+                                    <li class="total">
+                                        <h4>Total General</h4>
+                                        <h5>$ 473.00</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-12 text-center">
+                        <a href="javascript:void(0);" class="btn btn-success me-2">Actualizar</a>
+                        <a href="javascript:void(0);" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </div>
+            </div>
         </main>
 
 

@@ -16,7 +16,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -113,311 +113,305 @@
 
 
         <!-- END OF SIDEBAR -->
-        <!-- HEADER STYLES -->
-
 
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="page-wrapper" style="min-height: 995px;">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Ventas</h1>
+                        <p>Gestiona tus Ventas</p>
+                    </div>
+                </div>
+            </div>
 
-            <h1>Ventas</h1>
-            <p>Gestiona tus Ventas</p>
-            <div class="page-wrapper">
-                <div class="table-responsive">
-                    <table id="example" class="table table-responsive datanew">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" id="select-all">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </th>
-                                <th class="sorting">Camarero</th>
-                                <th class="sorting">Cliente</th>
-                                <th class="sorting">Mesa</th>
-
-                                <th class="sorting">Total</th>
-                                <th class="sorting">Pagado</th>
-                                <th class="sorting">Pendiente</th>
-
-                                <th class="sorting">Fecha</th>
-                                <th class="sorting">Estado</th>
-                                <th class="sorting">Pago</th>
-                                <th class="text-center">Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TABLEROW1 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Juan Pérez</td>
-                                <td>Mesa 1</td>
-                                <td>5</td>
-
-                                <td>150.00</td>
-                                <td>150.00</td>
-                                <td>0.00</td>
-
-                                <td>19 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Entregada</span></td>
-                                <td><span class="badges bg-lightgreen">Pagado</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- TABLEROW2 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Marta González</td>
-                                <td>Mesa 2</td>
-                                <td>8</td>
-
-                                <td>80.00</td>
-                                <td>0.00</td>
-                                <td>80.00</td>
-
-                                <td>20 Nov 2022</td>
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- TABLEROW3 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Luisa Martínez</td>
-                                <td>Mesa 3</td>
-                                <td>3</td>
-
-                                <td>120.00</td>
-                                <td>0.00</td>
-                                <td>120.00</td>
-                                <td>21 Nov 2022</td>
-
-                                <td><span class="badges bg-lightgreen">Entregada</span></td>
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- TABLEROW4 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Carlos Sánchez</td>
-                                <td>Mesa 4</td>
-                                <td>7</td>
-                                <td>90.00</td>
-                                <td>0.00</td>
-                                <td>90.00</td>
-                                <td>22 Nov 2022</td>
-
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TABLEROW5 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Carlos Sánchez</td>
-                                <td>Mesa 4</td>
-                                <td>7</td>
-                                <td>90.00</td>
-                                <td>0.00</td>
-                                <td>90.00</td>
-                                <td>22 Nov 2022</td>
-
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td><span class="badges bg-lightred">Pendiente</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TABLEROW6 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Carlos Sánchez</td>
-                                <td>Mesa 4</td>
-                                <td>7</td>
-                                <td>90.00</td>
-                                <td>0.00</td>
-                                <td>90.00</td>
-
-                                <td>22 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Entregada</span></td>
-                                <td><span class="badges bg-lightgreen">Pagado</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TABLEROW7 -->
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox">
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Carlos Sánchez</td>
-                                <td>Mesa 4</td>
-                                <td>7</td>
-                                <td>90.00</td>
-                                <td>0.00</td>
-                                <td>90.00</td>
-
-                                <td>22 Nov 2022</td>
-                                <td><span class="badges bg-lightgreen">Entregada</span></td>
-                                <td><span class="badges bg-lightgreen">Pagado</span></td>
-                                <td class="text-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Acción
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
-                                                    Venta</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
-                                            <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                            <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <!-- <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-outline-primary" id="dashboardBtn"><i class="fas fa-home"></i> Panel
-                            Principal</button>
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-outline-primary" id="prevPageBtn"><i
-                                    class="fas fa-chevron-left"></i></button>
-                            <button class="btn btn-outline-primary" id="nextPageBtn"><i
-                                    class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div> -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="example" class="table table-responsive datanew">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" id="select-all">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </th>
+                                    <th class="sorting">Camarero</th>
+                                    <th class="sorting">Cliente</th>
+                                    <th class="sorting">Mesa</th>
+                    
+                                    <th class="sorting">Total</th>
+                                    <th class="sorting">Pagado</th>
+                                    <th class="sorting">Pendiente</th>
+                    
+                                    <th class="sorting">Fecha</th>
+                                    <th class="sorting">Estado</th>
+                                    <th class="sorting">Pago</th>
+                                    <th class="text-center">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- TABLEROW1 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Juan Pérez</td>
+                                    <td>Mesa 1</td>
+                                    <td>5</td>
+                    
+                                    <td>150.00</td>
+                                    <td>150.00</td>
+                                    <td>0.00</td>
+                    
+                                    <td>19 Nov 2022</td>
+                                    <td><span class="badges bg-lightgreen">Entregada</span></td>
+                                    <td><span class="badges bg-lightgreen">Pagado</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TABLEROW2 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Marta González</td>
+                                    <td>Mesa 2</td>
+                                    <td>8</td>
+                    
+                                    <td>80.00</td>
+                                    <td>0.00</td>
+                                    <td>80.00</td>
+                    
+                                    <td>20 Nov 2022</td>
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TABLEROW3 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Luisa Martínez</td>
+                                    <td>Mesa 3</td>
+                                    <td>3</td>
+                    
+                                    <td>120.00</td>
+                                    <td>0.00</td>
+                                    <td>120.00</td>
+                                    <td>21 Nov 2022</td>
+                    
+                                    <td><span class="badges bg-lightgreen">Entregada</span></td>
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TABLEROW4 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Carlos Sánchez</td>
+                                    <td>Mesa 4</td>
+                                    <td>7</td>
+                                    <td>90.00</td>
+                                    <td>0.00</td>
+                                    <td>90.00</td>
+                                    <td>22 Nov 2022</td>
+                    
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                    
+                                <!-- TABLEROW5 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Carlos Sánchez</td>
+                                    <td>Mesa 4</td>
+                                    <td>7</td>
+                                    <td>90.00</td>
+                                    <td>0.00</td>
+                                    <td>90.00</td>
+                                    <td>22 Nov 2022</td>
+                    
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td><span class="badges bg-lightred">Pendiente</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                    
+                                <!-- TABLEROW6 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Carlos Sánchez</td>
+                                    <td>Mesa 4</td>
+                                    <td>7</td>
+                                    <td>90.00</td>
+                                    <td>0.00</td>
+                                    <td>90.00</td>
+                    
+                                    <td>22 Nov 2022</td>
+                                    <td><span class="badges bg-lightgreen">Entregada</span></td>
+                                    <td><span class="badges bg-lightgreen">Pagado</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                    
+                                <!-- TABLEROW7 -->
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>Carlos Sánchez</td>
+                                    <td>Mesa 4</td>
+                                    <td>7</td>
+                                    <td>90.00</td>
+                                    <td>0.00</td>
+                                    <td>90.00</td>
+                    
+                                    <td>22 Nov 2022</td>
+                                    <td><span class="badges bg-lightgreen">Entregada</span></td>
+                                    <td><span class="badges bg-lightgreen">Pagado</span></td>
+                                    <td class="text-center">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Acción
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Detalles de la
+                                                        Venta</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="detalleVenta.html">Editar Venta</a></li>
+                                                <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                <li><a class="dropdown-item" href="#">Eliminar Venta</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                    
+                            </tbody>
+                        </table>
+                
+                    </div>
                 </div>
             </div>
 
         </main>
-
-
     </div>
   
     <!-- JQuery -->

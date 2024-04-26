@@ -14,7 +14,7 @@
 
 <body>
     <!-- ASIDE CONTAINER -->
-    <div class="main-container">
+    <div class="main-wrapper">
 
         <header>
             <nav>
@@ -85,16 +85,18 @@
 
 
         <!-- MAIN CONTENT -->
-        <main>
+        <main class="page-wrapper" style="min-height: 995px;">
+            <div class="content">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Manejo de inventario</h1>
+                        <p>Agregar nuevo producto</p>
+                    </div>
+                </div>
 
-            <h1>Inventario</h1>
-            <div class="container-stock">
+
                 <div class="card">
                     <div class="card-body">
-                        <div class="page-header">
-                            <h4>Agregar Producto</h4>
-                            <h6>Crear nuevo producto</h6>
-                        </div>
                         <form>
                             <div class="form-group row">
                                 <label for="nombreProducto" class="col-lg-2 col-form-label">Nombre del Producto</label>
@@ -207,8 +209,6 @@
                 </div>
             </div>
         </main>
-
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="views/js/app.js"></script>
