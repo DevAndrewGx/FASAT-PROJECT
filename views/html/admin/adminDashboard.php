@@ -61,7 +61,7 @@ require_once('../../../models/Sesion.php');
                                     </div>
                                 </div>
                                 <hr class="m-0">
-                                <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
+                                <a class="dropdown-item" href="perfil.html"> <img src="../../imgs/icons/user.svg" alt="user">
                                     My
                                     Profile</a>
                                 <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>

@@ -22,9 +22,9 @@ require_once('../../../models/Sesion.php');
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
     <!-- RESPONSIVE -->
     <!-- TESTING DATATABLES -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
-    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css"/>
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
 </head>
 
 <body>
@@ -122,7 +122,7 @@ require_once('../../../models/Sesion.php');
 
 
         <!-- END OF SIDEBAR -->
-        
+
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px">
             <div class="content">
@@ -278,10 +278,10 @@ require_once('../../../models/Sesion.php');
                     }
                 ],
                 "columnDefs": [{
-                    "defaultContent": "-",
-                    "targets": [0, 3, 4],
-                    "orderable": true
+                    "targets": [0, 10], 
+                    "orderable": false 
                 }],
+                // Configuramos el idioma
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ registros",
                     "zeroRecords": "No se encontraron resultados",
