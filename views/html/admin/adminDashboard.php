@@ -1,5 +1,5 @@
 <?php
-require_once('../../../models/seguridadAdmin.php');
+// require_once('../../../models/seguridadAdmin.php');
 require_once('../../../models/Conexion.php');
 require_once('../../../models/Sesion.php');
 ?>
