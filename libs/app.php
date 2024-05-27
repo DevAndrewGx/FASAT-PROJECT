@@ -92,7 +92,6 @@
                     // No existe el archivo, entonces ejecuta el error
                     // Lo enviamos a una pagina 404 ya que no existe ese archivo tampoco.
                     $controller = new Errores();
-                    error_log('ITS HERE');
                     $controller->render();
 
 
