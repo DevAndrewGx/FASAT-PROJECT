@@ -10,33 +10,34 @@
 
             // validamos si la sesion ya existe en el constructor
             if(session_status() == PHP_SESSION_NONE) {
-                // we have to initializer our sessions if it doesn't exist
+                // si no existe creamos una nueva session
                 session_start();
 
             }
         }
 
-        // function to set up a new session for the current user
+
+        // funcion para guardar el nombre del usuario en la session
         public function setCurrentUser($user) {
             $_SESSION[$this->sessionName] = $user;
         }
 
 
-        //function to get the current user
-
+        
+        // funcion para obtener la session del usuario actual
         public function getCurrentUser() {
             return $_SESSION[$this->sessionName];
         }
 
 
-        // function to close the session
+        // esta funcion nos ayuda a cerrar la session 
         public function closeSession() { 
-            session_unset();
-            session_destroy();
+            session_unset(); //esta funcion nos permite borrar todas las variables de session que tengamos
+            session_destroy(); // finalmente destruimos la session
         }
 
 
-        // function to know if session is already exist
+        // esta funcion es util para saber si aun existe la session
         public function exist() {
             return isset($_SESSION[$this->sessionName]);
         }

@@ -21,7 +21,7 @@
     require_once('libs/controller.php');
     require_once('libs/model.php');
     require_once('libs/view.php');
-
+    require_once('classes/sessionController.php');
     // En libs vamos a tener nuestros archivos base para que funcione nuestra aplicacion
     require_once('libs/app.php');
 
