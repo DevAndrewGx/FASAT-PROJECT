@@ -1,80 +1,36 @@
-[23-May-2024 22:47:10 Europe/Berlin] Testing errors
-[23-May-2024 22:47:10 Europe/Berlin] im here
-[23-May-2024 22:47:10 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 22:47:10 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 22:47:10 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 22:49:00 Europe/Berlin] Testing errors
-[23-May-2024 22:49:00 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 22:49:00 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 22:49:00 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 22:49:00 Europe/Berlin] Testing errors
-[23-May-2024 22:49:00 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 22:49:00 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 22:49:00 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:04:28 Europe/Berlin] Testing errors
-[23-May-2024 23:04:28 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:04:28 Europe/Berlin] ITS HERE
-[23-May-2024 23:04:29 Europe/Berlin] Testing errors
-[23-May-2024 23:04:29 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:04:29 Europe/Berlin] ITS HERE
-[23-May-2024 23:05:18 Europe/Berlin] Testing errors
-[23-May-2024 23:05:18 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:05:18 Europe/Berlin] ITS HERE
-[23-May-2024 23:05:19 Europe/Berlin] Testing errors
-[23-May-2024 23:05:19 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:05:19 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:05:19 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:05:58 Europe/Berlin] Testing errors
-[23-May-2024 23:05:58 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:05:58 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:05:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:05:58 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:05:58 Europe/Berlin] ITS HERE
-[23-May-2024 23:07:01 Europe/Berlin] Testing errors
-[23-May-2024 23:07:01 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:07:01 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:07:01 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:10:58 Europe/Berlin] Testing errors
-[23-May-2024 23:10:58 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:10:58 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:10:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:10:58 Europe/Berlin] Testing errors
-[23-May-2024 23:10:58 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:10:58 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:10:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:14:26 Europe/Berlin] Testing errors
-[23-May-2024 23:14:26 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:14:26 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:14:26 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:15:19 Europe/Berlin] Testing errors
-[23-May-2024 23:15:19 Europe/Berlin] APP::construct-> No hay controlador especificado
-[23-May-2024 23:15:19 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:15:19 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:22:10 Europe/Berlin] Testing errors
-[23-May-2024 23:22:10 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:22:10 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:22:10 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:22:11 Europe/Berlin] Testing errors
-[23-May-2024 23:22:11 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:22:11 Europe/Berlin] ITS HERE
-[23-May-2024 23:22:22 Europe/Berlin] Testing errors
-[23-May-2024 23:22:22 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-May-2024 23:22:22 Europe/Berlin] Login::construct -> inicio de login
-[23-May-2024 23:22:22 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-May-2024 23:23:18 Europe/Berlin] Testing errors
-[23-May-2024 23:23:18 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:23:18 Europe/Berlin] ITS HERE
-[23-May-2024 23:23:21 Europe/Berlin] Testing errors
-[23-May-2024 23:23:21 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:23:21 Europe/Berlin] ITS HERE
-[23-May-2024 23:35:25 Europe/Berlin] Testing errors
-[23-May-2024 23:35:25 Europe/Berlin] Errores::construct -> inicio de errores
-[23-May-2024 23:35:25 Europe/Berlin] ITS HERE
-[24-May-2024 00:01:13 Europe/Berlin] Testing errors
-[24-May-2024 00:01:13 Europe/Berlin] APP::construct->No hay controlador especificado
-[24-May-2024 00:01:13 Europe/Berlin] Login::construct -> inicio de login
-[24-May-2024 00:01:13 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[26-May-2024 04:25:48 Europe/Berlin] Testing errors
-[26-May-2024 04:25:48 Europe/Berlin] APP::construct->No hay controlador especificado
-[26-May-2024 04:25:48 Europe/Berlin] Login::construct -> inicio de login
-[26-May-2024 04:25:48 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[05-Jun-2024 15:59:52 Europe/Berlin] Testing errors
+[05-Jun-2024 15:59:52 Europe/Berlin] SessionController::validateSession()
+[05-Jun-2024 15:59:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Session::exists() in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php:122
+Stack trace:
+#0 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(77): SessionController->existsSession()
+#1 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(54): SessionController->validateSession()
+#2 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(23): SessionController->init()
+#3 C:\xampp\htdocs\FASTPROJECT\controllers\login.php(8): SessionController->__construct()
+#4 C:\xampp\htdocs\FASTPROJECT\libs\app.php(47): Login->__construct()
+#5 C:\xampp\htdocs\FASTPROJECT\index.php(34): App->__construct()
+#6 {main}
+  thrown in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 122
+[05-Jun-2024 16:00:21 Europe/Berlin] Testing errors
+[05-Jun-2024 16:00:21 Europe/Berlin] Errores::construct -> inicio de errores
+[05-Jun-2024 16:00:21 Europe/Berlin] Testing errors
+[05-Jun-2024 16:00:21 Europe/Berlin] APP::construct->No hay controlador especificado
+[05-Jun-2024 16:00:25 Europe/Berlin] Testing errors
+[05-Jun-2024 16:00:25 Europe/Berlin] Errores::construct -> inicio de errores
+[05-Jun-2024 16:00:26 Europe/Berlin] Testing errors
+[05-Jun-2024 16:00:26 Europe/Berlin] SessionController::validateSession()
+[05-Jun-2024 16:00:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[05-Jun-2024 16:00:26 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[05-Jun-2024 16:00:26 Europe/Berlin] SessionController::validateSession() public page
+[05-Jun-2024 16:00:26 Europe/Berlin] Login::construct -> inicio de login
+[05-Jun-2024 16:00:26 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[05-Jun-2024 16:12:55 Europe/Berlin] Testing errors
+[05-Jun-2024 16:12:55 Europe/Berlin] APP::construct->No hay controlador especificado
+[05-Jun-2024 16:12:57 Europe/Berlin] Testing errors
+[05-Jun-2024 16:12:57 Europe/Berlin] Errores::construct -> inicio de errores
+[05-Jun-2024 16:13:00 Europe/Berlin] Testing errors
+[05-Jun-2024 16:13:01 Europe/Berlin] SessionController::validateSession()
+[05-Jun-2024 16:13:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[05-Jun-2024 16:13:01 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[05-Jun-2024 16:13:01 Europe/Berlin] SessionController::validateSession() public page
+[05-Jun-2024 16:13:01 Europe/Berlin] Login::construct -> inicio de login
+[05-Jun-2024 16:13:01 Europe/Berlin] Login::render -> Carga la pagina principal del login

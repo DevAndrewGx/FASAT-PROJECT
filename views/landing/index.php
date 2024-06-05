@@ -52,7 +52,7 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <a href="views/sign-up/signup.html" class="btn btn-primary py-2 px-4 me-3">Prueba</a>
-                        <a href="views/sign-up/login.php" class="btn btn-primary py-2 px-4">Iniciar sesión</a>
+                        <a href="<?php echo constant('URL')?>login" class="btn btn-primary py-2 px-4">Iniciar sesión</a>
                     </div>
                 </div>
             </nav>

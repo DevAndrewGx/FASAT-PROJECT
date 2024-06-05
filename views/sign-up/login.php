@@ -16,7 +16,7 @@
                 <a href="../html/admin/adminDashboard.php"><img src="../imgs/LOGOf.png" alt="Logo" class="logo"></a>
                 <h2>Inicia sesión</h2>
             </div>
-            <form method="POST" action="../../controllers/inicioSesion.php">
+            <form action="<?php echo constant('URL'); ?>/login/authenticate" method="POST">
                 <div class="input-container">
                     <input type="text" id="username" placeholder="" name="user" required>
                     <label for="username">Correo</label>

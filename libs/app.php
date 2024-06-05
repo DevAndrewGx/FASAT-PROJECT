@@ -24,13 +24,11 @@
                     // usamos la nomenclatura class+metodo+mensaje para especificar el error
                     error_log('APP::construct->No hay controlador especificado');
                     // creamos una variable para cargar el controlador por default
-                    $archivoController = 'controllers/login.php';
+                    $archivoController = 'controllers/landing.php';
                     // llamamos el controlador
                     require_once($archivoController);
                     // creamos una instancia del controlador
-                    $controller = new Login();
-                    // cargamos su modelo
-                    $controller->loadModel('login');
+                    $controller = new Landing();
                     // renderizamos la vista o la mostramos
                     $controller->render();
                     // salimos de la funcion

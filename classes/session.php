@@ -38,7 +38,7 @@
 
 
         // esta funcion es util para saber si aun existe la session
-        public function exist() {
+        public function exists() {
             return isset($_SESSION[$this->sessionName]);
         }
     }
