@@ -4,9 +4,9 @@
 
         // creamos los atributos de nuestra clase que son las columnas de nuestra base de datos
         private $idRol;
-        private $idEstado;
         private $idFoto;
         private $idHorario;
+        private $idEstado;
         private $documento;
         private $tipoDocumento;
         private $nombres;
@@ -15,6 +15,13 @@
         private $direccion;
         private $correo;
         private $password;
+
+        // atributos adicionales para el nombre de las tablas relacionadas con usuarios
+        // private $rol;
+        // private $estado;
+        // private $foto;
+        // private $horario;
+
 
         public function __construct() {
             parent::__construct();
@@ -33,6 +40,10 @@
             $this->correo = '';
             $this->password = '';
 
+            // $this->rol = '';
+            // $this->estado = '';
+            // $this->foto = '';
+            // $this->horario = '';
 
         }
 
@@ -285,7 +296,7 @@
         public function getIdEstado(){        return $this->idEstado;}
         public function getIdFoto(){          return $this->idFoto;}
         public function getIdHorario(){       return $this->idHorario;}
-        public function getDocumnto(){        return $this->documento;}
+        public function getDocumento(){        return $this->documento;}
         public function getTipoDocumento(){   return $this->tipoDocumento;}
         public function getNombres(){         return $this->nombres;}
         public function getApellidos(){       return $this->apellidos;}

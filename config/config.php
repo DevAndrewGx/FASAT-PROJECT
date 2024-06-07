@@ -3,7 +3,7 @@
 
     define('URL', 'http://localhost/FASTPROJECT/');
     define('HOST', 'localhost');
-    define('DB', 'test_fast1');
+    define('DB', 'test_fast3');
     define('USER', 'root');
     define('PASSWORD', '');
     define('CHARSET', 'utf8mb4');

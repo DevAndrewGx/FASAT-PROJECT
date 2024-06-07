@@ -6,7 +6,7 @@ class SessionController extends Controller
 
     // creamos nuestros atributos
     private $userSession;
-    private $username;
+    private $userCorreo;
     private $userid;
     private $defaultSites;
 
@@ -28,9 +28,9 @@ class SessionController extends Controller
         return $this->userSession;
     }
 
-    public function getUsername()
+    public function getUserCorreo()
     {
-        return $this->username;
+        return $this->userCorreo;
     }
 
     public function getUserId()
@@ -78,7 +78,7 @@ class SessionController extends Controller
             // obtenemos el rol para los permisos, con todo el usuario.
             $role = $this->getUserSessionData()->getIdRol();
 
-            error_log("sessionController::validateSession(): username:" . $this->user->getUsername() . " - role: " . $this->user->getRole());
+            error_log("sessionController::validateSession(): username:" . $this->user->getUserCorreo() . " - role: " . $this->user->getIdRol());
             // validamos si a la pagina a entrar es publica o privada
             if ($this->isPublic()) {
                 // si la pagina es publica entonces que lo rediriga a la pagina principal de cada rol
@@ -151,8 +151,8 @@ class SessionController extends Controller
     public function initialize($user)
     {
         error_log("sessionController::initialize(): user: " . $user->getNombres());
-        $this->session->setCurrentUser($user->getId());
-        $this->authorizeAccess($user->getRole());
+        $this->session->setCurrentUser($user->getDocumento());
+        $this->authorizeAccess($user['rol']);
     }
 
 

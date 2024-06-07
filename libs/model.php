@@ -1,9 +1,11 @@
-<?php 
+<?php
 
-    // esta es la clase base de donde van extender todos nuestros modelos
-    // ademas que aqui vamos a implementar la conexion con la base de datos
+// esta es la clase base de donde van extender todos nuestros modelos
+// ademas que aqui vamos a implementar la conexion con la base de datos
 
-    // requerimos nuestro archivo de IModel para implementarlo en cada modelo
+// requerimos nuestro archivo de IModel para implementarlo en cada modelo
+
+include_once 'libs/imodel.php';
     class Model { 
         
         protected $db;

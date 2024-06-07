@@ -11,36 +11,73 @@
 
 
     // esta funcion nos permitira realizar el login de nuestro aplicativo
-    public function login($username, $password)
-    {
-        // insertar datos en la BD
-        error_log("login: inicio");
-        // cuando vamos acceder a la bd siempre usamos trycatch
-        try {
-            //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
-            $query = $this->prepare('SELECT * FROM usuarios WHERE documento = :documento');
-            $query->execute(['username' => $username]);
+        public function loginByCorreo($correo, $password)
+        {
+            // insertar datos en la BD
+            error_log("loginByCorreo: inicio");
+            // cuando vamos acceder a la bd siempre usamos trycatch
+            try {
+                //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
+                $query = $this->prepare('SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol WHERE u.correo  = :correo');
+                $query->execute([
+                    'correo' => $correo
+                ]);
 
-            if ($query->rowCount() == 1) {
-                $item = $query->fetch(PDO::FETCH_ASSOC);
+                if ($query->rowCount() == 1) {
+                    $item = $query->fetch(PDO::FETCH_ASSOC);
 
-                $user = new UserModel();
-                $user->from($item);
+                    $user = new UserModel();
+                    $user->from($item);
 
-                error_log('login: user id ' . $user->getDocumnto());
+                    error_log('login: user correo ' . $user->getCorreo());
 
-                if (password_verify($password, $user->getPassword())) {
-                    error_log('login: success');
-                    //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
-                    return $user;
-                    //return $user->getId();
-                } else {
-                    return NULL;
+                    if ($password == $user->getPassword()) {
+                        error_log('login: success');
+                        //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
+                        return $user;
+                        //return $user->getId();
+                    } else {
+                        return NULL;
+                    }
                 }
+            } catch (PDOException $e) {
+                return NULL;
             }
-        } catch (PDOException $e) {
-            return NULL;
         }
-    }
+
+        public function loginByDocumento($documento, $password)
+        {
+            // insertar datos en la BD
+            error_log("loginByDocumento: inicio");
+            // cuando vamos acceder a la bd siempre usamos trycatch
+            try {
+                //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
+                $query = $this->prepare(' SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.idRol = r.id 
+                WHERE u.documento = :documento');
+                $query->execute([
+                    'documento' => $documento
+                ]);
+
+                if ($query->rowCount() == 1) {
+                    $item = $query->fetch(PDO::FETCH_ASSOC);
+
+                    $user = new UserModel();
+                    $user->from($item);
+
+                    error_log('login: user documento' . $user->getDocumento());
+
+                    if (password_verify($password, $user->getPassword())) {
+                        error_log('login: success');
+                        //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
+                        return $user;
+                        //return $user->getId();
+                    } else {
+                        return NULL;
+                    }
+                }
+            } catch (PDOException $e) {
+                return NULL;
+            }
+        }
     }
 ?>
