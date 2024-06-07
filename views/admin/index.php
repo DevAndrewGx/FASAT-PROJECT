@@ -261,7 +261,7 @@
 
 
                         <div class="display-info">
-                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
+                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
                         </div>
 
                     </div>
@@ -280,7 +280,7 @@
 
 
                         <div class="display-info">
-                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
+                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
                         </div>
 
                     </div>
@@ -299,7 +299,7 @@
 
                         <!-- DISPLAY INFORMATION'S EMPLOYEES -->
                         <div class="display-info">
-                            <a href="#"><img src="../../imgs/icons/eye.svg" alt="eye-display">Mostrar</a>
+                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
                         </div>
 
                     </div>
@@ -355,10 +355,9 @@
 
     <!-- APEXCHART LIBRARY -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="../../js/appChart.js"></script>
-
-    <!-- DATA-TABLES -->
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/charts.js"></script> <!-- DATA-TABLES -->
+        <script src = "https://cdn.datatables.net/2.0.3/js/dataTables.min.js" >
+    </script>
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 

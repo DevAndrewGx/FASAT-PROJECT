@@ -75,3 +75,55 @@ Stack trace:
 [07-Jun-2024 15:16:25 Europe/Berlin] Testing errors
 [07-Jun-2024 15:17:02 Europe/Berlin] Testing errors
 [07-Jun-2024 15:17:38 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:14 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:14 Europe/Berlin] APP::construct->No hay controlador especificado
+[07-Jun-2024 15:32:15 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:15 Europe/Berlin] Errores::construct -> inicio de errores
+[07-Jun-2024 15:32:19 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:19 Europe/Berlin] SessionController::validateSession()
+[07-Jun-2024 15:32:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[07-Jun-2024 15:32:19 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[07-Jun-2024 15:32:19 Europe/Berlin] SessionController::validateSession() public page
+[07-Jun-2024 15:32:19 Europe/Berlin] Login::construct -> inicio de login
+[07-Jun-2024 15:32:19 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[07-Jun-2024 15:32:19 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:19 Europe/Berlin] Errores::construct -> inicio de errores
+[07-Jun-2024 15:32:58 Europe/Berlin] Testing errors
+[07-Jun-2024 15:32:58 Europe/Berlin] SessionController::validateSession()
+[07-Jun-2024 15:32:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[07-Jun-2024 15:32:58 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[07-Jun-2024 15:32:58 Europe/Berlin] SessionController::validateSession() public page
+[07-Jun-2024 15:32:58 Europe/Berlin] Login::construct -> inicio de login
+[07-Jun-2024 15:32:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[07-Jun-2024 15:33:03 Europe/Berlin] Testing errors
+[07-Jun-2024 15:33:03 Europe/Berlin] SessionController::validateSession()
+[07-Jun-2024 15:33:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[07-Jun-2024 15:33:03 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[07-Jun-2024 15:33:03 Europe/Berlin] SessionController::validateSession() public page
+[07-Jun-2024 15:33:03 Europe/Berlin] Login::construct -> inicio de login
+[07-Jun-2024 15:33:03 Europe/Berlin] loginByCorreo: inicio
+[07-Jun-2024 15:33:03 Europe/Berlin] login: user correo juan@example.com
+[07-Jun-2024 15:33:03 Europe/Berlin] login: success
+[07-Jun-2024 15:33:03 Europe/Berlin] Login::authenticate() passed
+[07-Jun-2024 15:33:03 Europe/Berlin] sessionController::initialize(): user: Juan
+[07-Jun-2024 15:33:03 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[07-Jun-2024 15:33:03 Europe/Berlin] Testing errors
+[07-Jun-2024 15:37:40 Europe/Berlin] Testing errors
+[07-Jun-2024 15:37:41 Europe/Berlin] Testing errors
+[07-Jun-2024 15:42:27 Europe/Berlin] Testing errors
+[07-Jun-2024 15:42:40 Europe/Berlin] Testing errors
+[07-Jun-2024 15:42:40 Europe/Berlin] Testing errors
+[07-Jun-2024 15:42:59 Europe/Berlin] Testing errors
+[07-Jun-2024 15:42:59 Europe/Berlin] Testing errors
+[07-Jun-2024 15:43:15 Europe/Berlin] Testing errors
+[07-Jun-2024 15:43:15 Europe/Berlin] Testing errors
+[07-Jun-2024 15:45:01 Europe/Berlin] Testing errors
+[07-Jun-2024 15:45:01 Europe/Berlin] Errores::construct -> inicio de errores
+[07-Jun-2024 15:45:04 Europe/Berlin] Testing errors
+[07-Jun-2024 15:45:04 Europe/Berlin] Errores::construct -> inicio de errores
+[07-Jun-2024 15:48:51 Europe/Berlin] Testing errors
+[07-Jun-2024 15:48:52 Europe/Berlin] Testing errors
+[07-Jun-2024 15:48:52 Europe/Berlin] Testing errors
+[07-Jun-2024 15:49:09 Europe/Berlin] Testing errors
+[07-Jun-2024 15:49:09 Europe/Berlin] Testing errors
+[07-Jun-2024 15:49:09 Europe/Berlin] Testing errors
