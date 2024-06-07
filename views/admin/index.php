@@ -1,7 +1,7 @@
 <?php
 // require_once('../../../models/seguridadAdmin.php');
-require_once('../../../models/Conexion.php');
-require_once('../../../models/Sesion.php');
+// require_once('../../../models/Conexion.php');
+// require_once('../../../models/Sesion.php');
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ require_once('../../../models/Sesion.php');
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
 
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
 
 </head>
 
@@ -43,7 +43,7 @@ require_once('../../../models/Sesion.php');
                     <li class="nav-item dropdown has-arrow main-drop">
                         <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="user-img">
-                                <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
+                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="admin">
                                 <span class="status1 online"></span></span>
                             </span>
                         </a>
@@ -80,7 +80,8 @@ require_once('../../../models/Sesion.php');
 
                 <div class="logo">
                     <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="../../imgs/LOGOf.png" alt="logo" width="100"></a>
+                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
+
                 </div>
 
 
@@ -249,7 +250,7 @@ require_once('../../../models/Sesion.php');
 
                         <div class="info-employee">
                             <div class="img">
-                                <img src="../../imgs/avatar-17.jpg"" alt=" avatar-17">
+                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
                             </div>
                             <div class="info">
                                 <h3>Juan Andres</h3>
@@ -269,7 +270,7 @@ require_once('../../../models/Sesion.php');
 
                         <div class="info-employee">
                             <div class="img">
-                                <img src="../../imgs/avatar-13.jpg"" alt=" avatar-13">
+                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
                             </div>
                             <div class="info">
                                 <h3>Fernando Gabriel</h3>
@@ -287,7 +288,7 @@ require_once('../../../models/Sesion.php');
                     <div class="data-employee">
                         <div class="info-employee">
                             <div class="img">
-                                <img src="../../imgs/avatar-06.jpg" alt="avatar-06">
+                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
                             </div>
                             <div class="info">
                                 <h3>Maria Antonia</h3>

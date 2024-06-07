@@ -78,7 +78,7 @@ class SessionController extends Controller
             // obtenemos el rol para los permisos, con todo el usuario.
             $role = $this->getUserSessionData()->getIdRol();
 
-            error_log("sessionController::validateSession(): username:" . $this->user->getUserCorreo() . " - role: " . $this->user->getIdRol());
+            error_log("sessionController::validateSession(): username:" . $this->user->getCorreo() . " - role: " . $this->user->getIdRol());
             // validamos si a la pagina a entrar es publica o privada
             if ($this->isPublic()) {
                 // si la pagina es publica entonces que lo rediriga a la pagina principal de cada rol
@@ -152,7 +152,7 @@ class SessionController extends Controller
     {
         error_log("sessionController::initialize(): user: " . $user->getNombres());
         $this->session->setCurrentUser($user->getDocumento());
-        $this->authorizeAccess($user['rol']);
+        $this->authorizeAccess($user->getRol());
     }
 
 
@@ -222,7 +222,7 @@ class SessionController extends Controller
     {
         error_log("sessionController::authorizeAccess(): role: $role");
         switch ($role) {
-            case 'admin':
+            case 'Administrador':
                 $this->redirect($this->defaultSites['admin'], []);
                 break;
             case 'mesero':

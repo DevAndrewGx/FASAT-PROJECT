@@ -1,0 +1,1130 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+/* START GLOBAL STYLES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    color: #242422;
+}
+
+i {
+    font-size: 24px;
+}
+
+.btn-principal {
+    background: #ff9f43;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.btn-principal:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+/**************** STYLES BADGES *************/
+.badges {
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    min-width: 80px;
+}
+
+.badges.bg-lightgreen {
+    background: #28c76f;
+}
+.badges.bg-lightred {
+    background: #ea5455;
+}
+.badges.bg-lightyellow {
+    background: #f90;
+}
+
+/* .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2196f3;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+.btn-view {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead {
+    background-color: #fafbfe;
+}
+
+th {
+    position: relative;
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+td input[type="checkbox"],
+th input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0 !important;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+}
+
+:root {
+    /******************** COLORS ********************/
+    /* #0f172b, f6f6f9, #f88208, #FEA116, #242422 */
+    --primary-color: #fea116;
+    --secundary-color: #242422;
+    --third-color: #ff0060;
+    --body-bg: #f6f6f9;
+    --color-label: #a7a7a7;
+    --font-family: "Manrope", sans-serif;
+}
+
+/* END GLOBAL STYLES */
+
+.main-wrapper {
+    width: 100%;
+    border-right: 2px solid #f0f0f0;
+    /* border-left: 2px solid #f0f0f0; */
+    padding: 30px 30px 0 30px;
+    background: var(--body-bg);
+    padding-bottom: 30px;
+}
+
+.main-wrapper .left-section {
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* max-width: 80px; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 40px 40px 40px;
+    grid-area: side;
+    border-right: 2px solid #f0f0f0;
+    min-height: 100vh;
+    min-width: 260px;
+    background: #fff;
+}
+
+.main-wrapper .left-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-wrapper .left-section .logo img {
+    width: 160px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.main-wrapper .left-section .logo a {
+    font-weight: 800;
+    font-size: 18px;
+    color: #242422;
+}
+
+.menu-btn {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #d1e6f9;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.main-wrapper .left-section .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main-wrapper .left-section .sidebar .item {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.main-wrapper .left-section .sidebar i {
+    color: var(--secundary-color);
+    transition: all 0.3s ease;
+    font-size: 30px;
+}
+
+.main-wrapper .left-section .sidebar a {
+    color: var(--secundary-color);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.main-wrapper .left-section .sidebar .item#active a,
+.main-wrapper .left-section .sidebar .item#active i,
+.main-wrapper .left-section .upgrade .link i {
+    color: var(--primary-color);
+}
+
+.main-wrapper .left-section .sidebar .item a::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: var(--primary-color);
+    right: -30px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(116%);
+    transition: all 0.3s ease;
+}
+
+.main-wrapper .left-section .sidebar .item#active a::after {
+    width: 8px;
+    height: 8px;
+}
+
+header {
+    background: #fff;
+    border-bottom: 2px solid #f0f0f0;
+    height: 60px;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header nav {
+    display: flex;
+    padding: 0 30px;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 6px 0 0 0;
+}
+
+header nav ul li a {
+    color: #000;
+}
+header ul li a img {
+    border-radius: 50%;
+    width: 40px;
+    margin-top: 5px;
+}
+
+/* STYLES FOR DROPDOWN USER MENU*/
+.items-right .dropdown-toggle {
+    border: none;
+    padding-right: 0; /* Ajusta el padding derecho según sea necesario */
+    width: 40px;
+}
+
+.items-right .dropdown-toggle img {
+    margin-right: 0; /* Ajusta el margen derecho según sea necesario */
+}
+
+.items-right .dropdown-toggle::after {
+    border: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    color: #637381;
+    padding: 7px 10px !important;
+    font-size: 15px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff9f43 !important;
+}
+
+.dropdown-menu .dropdown-item.logout {
+    color: #f62d51;
+}
+
+.dropdown-menu .dropdown-item img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.dropdown-menu .profilename .user-img .status {
+    bottom: 10px;
+}
+
+.dropdown-menu .profilename .profileset {
+    padding: 10px 10px 3px;
+    display: flex;
+}
+
+.dropdown-menu .profilename .profileset h6 {
+    font-size: 12px;
+    color: #212b36;
+    font-weight: 500;
+}
+
+.dropdown-menu .profilename .profileset h5 {
+    font-size: 12px;
+    color: #637381;
+}
+
+.dropdown-menu .profilename .profileset .user-img {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.items-right .user-img .status1::before {
+    border: 2px solid #fff;
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    display: inline-block;
+    background: #28c76f;
+}
+
+.items-right .user-img .status2::before {
+    border: 2px solid #fff;
+    content: "";
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #28c76f;
+}
+
+.dropdown-menu .profilename .profileset img {
+    width: 38px;
+    border-radius: 50%;
+}
+/* STYLES FOR MAIN  */
+
+main h1 {
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+main .analyse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+}
+
+main .analyse .status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .analyse > div {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 50px 100px rgb(0, 0, 0, 0.08); */
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
+}
+
+main .analyse > div#stock {
+    /* background: #9fc4f0; */
+
+    border-left: 7px solid #9fc4f0;
+}
+
+main .analyse > div#orders {
+    /* background: #fcf49a; */
+    border-left: 7px solid #f9e92f;
+}
+
+main .analyse > div#sales-income {
+    /* background: #def5c7; */
+    border-left: 7px solid #a2e361;
+}
+
+main .analyse > div#total-sales {
+    /* background: #f9ca7b; */
+    border-left: 7px solid #f9ca7b;
+}
+
+main .analyse > div .info h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main .analyse > div .info h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+main .analyse .progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    height: auto;
+}
+
+main .analyse .progress .item i {
+    font-size: 35px;
+    background: transparent;
+    height: auto;
+}
+
+.analyse #stock .progress .item i {
+    color: #fff;
+    background: #9fc4f0;
+    border-radius: 5px;
+}
+
+.analyse #orders .progress .item i {
+    color: #fff;
+    background: #f9e92f;
+    border-radius: 5px;
+}
+
+.analyse #sales-income .progress .item i {
+    color: #fff;
+    background: #a2e361;
+    border-radius: 5px;
+}
+
+.analyse #total-sales .progress .item i {
+    color: #fff;
+    background: #f9ca7b;
+    border-radius: 5px;
+}
+
+main .analyse .progress .value p {
+    font-size: 20px;
+    font-family: 800;
+}
+
+/* STYLES FOR CHART ANALYTICS MAIN CONTENT */
+main .charts-analytics {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+main .chart {
+    position: relative;
+    /* background: #1b1b1b; */
+    background: #fff;
+    padding: 30px;
+    border-radius: 24px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
+}
+
+main .chart h2 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px;
+}
+
+main .chart p {
+    color: #000;
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+main .chart .pulse {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: var(--primary-color);
+    top: 52px;
+    right: 40px;
+    border-radius: 50%;
+}
+
+main .chart .pulse-sale {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: var(--primary-color);
+    top: 52px;
+    right: 270px;
+    border-radius: 50%;
+    color: #f9f9f9;
+}
+
+main .chart .pulse-expense {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: var(--third-color);
+    top: 52px;
+    right: 160px;
+    border-radius: 50%;
+    color: #f9f9f9;
+}
+
+main .chart span#sale-span {
+    position: absolute;
+    top: 47px;
+    right: 200px;
+    color: #000;
+}
+
+main .chart span#expense-span {
+    position: absolute;
+    top: 47px;
+    right: 90px;
+    color: #000;
+}
+
+main .chart .pulse::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    animation: pulse 2s linear infinite;
+    transform-origin: center;
+    opacity: 0.8;
+    scale: 0;
+}
+
+main .chart .pulse-sale::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    animation: pulse 2s linear infinite;
+    transform-origin: center;
+    opacity: 0.8;
+    scale: 0;
+}
+
+main .chart .pulse-expense::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--third-color);
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    animation: pulse 2s linear infinite;
+    transform-origin: center;
+    opacity: 0.8;
+    scale: 0;
+}
+
+@keyframes pulse-sale {
+    70% {
+        scale: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-expense {
+    70% {
+        scale: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    70% {
+        scale: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+main .chart .chart-area {
+    position: relative;
+}
+
+main .chart .chart-area .grid {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0% 3%,
+        #f9f9f9 3% 3.5%,
+        transparent 3% 18.65%
+    );
+}
+
+/* main .chart .chart-area .grid::after {
+    content: "";
+    position: inherit;
+    z-index: -1;
+    top: inherit;
+    bottom: inherit;
+    width: inherit;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(27, 27, 27, 1),
+        rgba(27, 27, 27, 0.9),
+        rgba(27, 27, 27, 1)
+    );
+} */
+
+body .apexcharts-tooltip.apexcharts-theme-light {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    padding: 8px 6px 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 0;
+}
+
+.apexcharts-tooltip-title,
+.apexcharts-zaxlistoolttip-bottom.apexcharts-theme-light {
+    display: none;
+}
+
+main #orders-employees {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+main #orders-employees > div {
+    position: relative;
+    background: #fff;
+    padding: 30px;
+    border-radius: 24px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
+}
+
+main #orders-employees .employee #more-details {
+    display: flex;
+    justify-content: end;
+}
+
+main #orders-employees .employee a {
+    background: #efeef5;
+    color: #212b36;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main #orders-employees .employee a img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+main .employee h2 {
+    color: var(--secundary-color);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px;
+}
+
+main .employee .data-employee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+main .employee .data-employee .info-employee {
+    display: flex;
+    gap: 15px;
+}
+main .employee .data-employee h3 {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+main .employee .data-employee img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+main .employee p#list {
+    color: var(--secundary-color);
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+main #orders-employees #orders h2 {
+    color: var(--secundary-color);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px;
+}
+main #orders-employees #orders p {
+    color: var(--secundary-color);
+    font-size: 14px;
+}
+
+/* STYLES FOR TABLES AND FORMS MODULES STOCK, SALES , EMPLOOYES */
+
+.page-wrapper {
+    margin: 0 0 0 265px;
+    padding: 60px 0 0;
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 991px) {
+    .page-wrapper {
+        margin: 0;
+        padding: 60px 0 0;
+    }
+}
+.page-wrapper .content {
+    padding: 0 0 30px;
+}
+@media (max-width: 991px) {
+    .page-wrapper .content {
+        padding: 15px;
+    }
+}
+.page-wrapper .content .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-top: 25px;
+}
+
+.page-wrapper .content .card {
+    margin: 0 0 25px;
+    border: 1px solid #e8ebed;
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.card .card-body {
+    padding: 20px;
+}
+@media (max-width: 991px) {
+    .card .card-body {
+        padding: 15px;
+    }
+}
+main .page-header .btn-added {
+    display: flex;
+    align-items: center;
+    background: #ff9f43;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+main .page-header .btn-added i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+main .page-title h4 {
+    margin: 0;
+    color: #333;
+}
+
+/*********************** TABLES ************************/
+main .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-top {
+    margin-bottom: 30px;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+main table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 20px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+}
+
+main .table th,
+main .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+main .table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    outline: none;
+}
+main .table td .employee-img img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+main .table td a {
+    text-decoration: none;
+    color: #212b36;
+}
+table.dataTable thead > tr > th.dt-orderable-desc:hover {
+    outline: 0 !important;
+}
+
+main .table tr {
+    border-bottom: 0;
+}
+
+main table.dataTable tbody > tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table tbody tr td {
+    padding: 10px;
+    color: #637381;
+    font-weight: 500;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+table .checkboxs {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+table .checkmarks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+table .checkboxs input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+table .checkboxs input[type="checkbox"]:checked ~ .checkmarks {
+    background-color: #2196f3;
+}
+
+table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+
+/********* CUSTOM DT-FIELDS FOR PAGINATION FEATURES ***********/
+/* .dt-info, 
+.dt-paging { 
+    float: right;
+    padding-right: 15px;
+    padding-top: 5px;
+} */
+
+/* .dt-paging {
+    display: inline-block;
+} */
+
+
+
+.pagination li.active a.page-link {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.dt-length #dt-length-0 {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+/* CUMSTOM STYLES FOR SEARCH BUTTON DATATABLES*/
+
+div.dt-container div.dt-search input {
+    position: relative;
+    background-image: url("../imgs/icons/search-white.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    height: 40px;
+    border: 1px solid #919eab52;
+    width: 200px;
+    border-radius: 5px;
+    padding: 0 5px 0 30px;
+    margin-bottom: 10px;
+}
+
+/* END STYLES FOR FORMS AND TABLES */
+
+/* Estilos para las mesas */
+
+main-mesa {
+    width: 100%;
+    border-right: 2px solid #f0f0f0;
+    /* border-left: 2px solid #f0f0f0; */
+    padding: 30px 30px 37px 30px;
+    background: var(--body-bg);
+    grid-area: main;
+}
+/* Estilos para el contenedor de las mesas */
+#contenedor {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    background-color: #ffffff;
+    border: 3px solid #000;
+}
+
+/* Estilos para las mesas */
+.mesa {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para mesas cuadradas */
+.mesa.cuadrada {
+    border-radius: 10px;
+}
+
+/* Estilos para mesas redondas */
+.mesa.redonda {
+    border-radius: 50%;
+}
+
+/* Ubicaciones específicas para las mesas */
+#mesa1 {
+    top: 20%;
+    left: 10%;
+}
+#mesa2 {
+    top: 20%;
+    left: 35%;
+}
+#mesa3 {
+    top: 20%;
+    left: 60%;
+}
+#mesa4 {
+    top: 50%;
+    left: 10%;
+}
+#mesa5 {
+    top: 50%;
+    left: 35%;
+}
+#mesa6 {
+    top: 50%;
+    left: 60%;
+}
+#mesa7 {
+    top: 75%;
+    left: 10%;
+}
+#mesa8 {
+    top: 75%;
+    left: 35%;
+}
+#mesa9 {
+    top: 75%;
+    left: 60%;
+}
+#mesa10 {
+    top: 50%;
+    left: 85%;
+}
+
+/* Estilos para las mesas seleccionadas */
+.mesa.seleccionada {
+    background-color: #ffcc00;
+    border-color: #ff9900;
+}
+
+/* Estilos para el botón "Registrar Orden" */
+.registrar-orden-btn {
+    margin-top: 20px;
+}
+
+/* perfil */
+
+.profile-container .card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.profile-container .card-body {
+    padding: 40px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.profile-details {
+    padding-left: 20px;
+}
+.profile-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.profile-details h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+.form-group label {
+    font-weight: bold;
+    color: #495057;
+}
+.form-control[disabled],
+.form-control[disabled]:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+    cursor: default;
+}

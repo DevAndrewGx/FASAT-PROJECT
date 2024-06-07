@@ -26,7 +26,7 @@
                 if ($query->rowCount() == 1) {
                     $item = $query->fetch(PDO::FETCH_ASSOC);
 
-                    $user = new UserModel();
+                    $user = new JoinUserRolModel();
                     $user->from($item);
 
                     error_log('login: user correo ' . $user->getCorreo());
