@@ -29,103 +29,21 @@
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
 
-        <header>
-            <nav>
-                <ul class="items-right">
-                    <li>
-                        <a href="#"><i class='bx bx-search'></i></a>
-                    </li>
 
-                    <li>
-                        <a href="#"><i class='bx bx-bell'></i></a>
-                    </li>
-
-                    <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="user-img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="admin">
-                                <span class="status1 online"></span></span>
-                            </span>
-                        </a>
-
-                        <!-- DROPDOWN MENU -->
-
-                        <div class="dropdown-menu menu-drop-user">
-                            <div class="profilename">
-                                <div class="profileset">
-                                    <span class="user-img"><img src="../../imgs/avatar-06.jpg" alt="hello">
-                                        <span class="status2 online"></span></span>
-                                    <div class="profilesets">
-                                        <h6>Juanita Dow</h6>
-                                        <h5>Admin</h5>
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <a class="dropdown-item" href="perfil.html"> <img src="../../imgs/icons/user.svg" alt="user">
-                                    My
-                                    Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg" alt="settings">Settings</a>
-                                <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="../../../controllers/cerrarSesion.php"><img src="../../imgs/icons/log-out.svg" alt="logout">Logout</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="left-section">
-
-            <div class="sidebar">
-
-                <div class="logo">
-                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
-
-                </div>
+        <?php require_once('views/header.php') ?>
+        <?php require_once('aside.php') ?>
 
 
-                <div class="item" id="active">
-                    <i class='bx bx-home-alt-2'></i>
-                    <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="#">Ordenes</a>
-                </div>
-                <div class="item">
-                    <i class='bx bxs-user-detail'></i>
-                    <a href="<?php echo constant('URL'); ?>empleados">Empleados</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-transfer-alt'></i>
-                    <a href="gestionVentas.html">Ventas</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-task'></i>
-                    <a href="gestionInventario.html">Inventario</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Ajustes</a>
-                </div>
-            </div>
 
-            <div class="log-out sidebar">
-                <div class="item">
-                    <i class='bx bx-log-out'></i>
-                    <a href="../../sing-up/login.html">Log-out</a>
-                </div>
-
-            </div>
-        </aside>
-
-
-        <!-- END OF SIDEBAR -->
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px">
             <h1>Admin Dashboard</h1>
+
+            <nav class="nav-main">
+                <a href="homeAdmin.php" id="actual" data-navegation="#admin">Admin</a>
+            </nav>
+
             <div class="analyse">
                 <!-- STOCK
                             SALES
@@ -365,10 +283,8 @@
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-
-
     <!-- APP JS -->
-    <script src="../../js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 </body>
 
 </html>

@@ -215,10 +215,11 @@ ul li {
     text-decoration: none;
 }
 
-.main-wrapper .left-section .sidebar .item#active a,
-.main-wrapper .left-section .sidebar .item#active i,
+.main-wrapper .left-section .sidebar .item.active a,
+.main-wrapper .left-section .sidebar .item.active i,
 .main-wrapper .left-section .upgrade .link i {
     color: var(--primary-color);
+    
 }
 
 .main-wrapper .left-section .sidebar .item a::after {
@@ -234,7 +235,7 @@ ul li {
     transition: all 0.3s ease;
 }
 
-.main-wrapper .left-section .sidebar .item#active a::after {
+.main-wrapper .left-section .sidebar .item.active a::after {
     width: 8px;
     height: 8px;
 }

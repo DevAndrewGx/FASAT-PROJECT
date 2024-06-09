@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables -->
@@ -18,53 +18,7 @@
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
 
-        <header>
-            <nav>
-                <ul class="items-right">
-                    <li>
-                        <a href="#"><i class='bx bx-search'></i></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class='bx bx-bell'></i></a>
-                    </li>
-
-                    <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <span class="user-img">
-                                <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
-                                <span class="status1 online"></span></span>
-                            </span>
-                        </a>
-
-                        <!-- DROPDOWN MENU -->
-
-                        <div class="dropdown-menu menu-drop-user">
-                            <div class="profilename">
-                                <div class="profileset">
-                                    <span class="user-img"><img src="../../imgs/avatar-06.jpg" alt="hello">
-                                        <span class="status2 online"></span></span>
-                                    <div class="profilesets">
-                                        <h6>Juanita Dow</h6>
-                                        <h5>Admin</h5>
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
-                                    My
-                                    Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg"
-                                        alt="settings">Settings</a>
-                                <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg"
-                                        alt="logout">Logout</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <?php require_once('views/header.php') ?>
 
         <aside class="left-section">
 
@@ -72,13 +26,13 @@
 
                 <div class="logo">
                     <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="../../imgs/LOGOf.png" alt="logo"></a>
+                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
                 </div>
 
 
                 <div class="item">
                     <i class='bx bx-home-alt-2'></i>
-                    <a href="adminDashboard.php">Dashboard</a>
+                    <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-grid-alt'></i>
@@ -88,7 +42,7 @@
                     <i class='bx bxs-user-detail'></i>
                     <a href="gestionEmpleados.php">Empleados</a>
                 </div>
-                <div class="item" id="active">
+                <div class="item">
                     <i class='bx bx-transfer-alt'></i>
                     <a href="gestionVentas.html">Ventas</a>
                 </div>
@@ -140,11 +94,11 @@
                                     <th class="sorting">Camarero</th>
                                     <th class="sorting">Cliente</th>
                                     <th class="sorting">Mesa</th>
-                    
+
                                     <th class="sorting">Total</th>
                                     <th class="sorting">Pagado</th>
                                     <th class="sorting">Pendiente</th>
-                    
+
                                     <th class="sorting">Fecha</th>
                                     <th class="sorting">Estado</th>
                                     <th class="sorting">Pago</th>
@@ -163,18 +117,17 @@
                                     <td>Juan Pérez</td>
                                     <td>Mesa 1</td>
                                     <td>5</td>
-                    
+
                                     <td>150.00</td>
                                     <td>150.00</td>
                                     <td>0.00</td>
-                    
+
                                     <td>19 Nov 2022</td>
                                     <td><span class="badges bg-lightgreen">Entregada</span></td>
                                     <td><span class="badges bg-lightgreen">Pagado</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -199,18 +152,17 @@
                                     <td>Marta González</td>
                                     <td>Mesa 2</td>
                                     <td>8</td>
-                    
+
                                     <td>80.00</td>
                                     <td>0.00</td>
                                     <td>80.00</td>
-                    
+
                                     <td>20 Nov 2022</td>
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -235,18 +187,17 @@
                                     <td>Luisa Martínez</td>
                                     <td>Mesa 3</td>
                                     <td>3</td>
-                    
+
                                     <td>120.00</td>
                                     <td>0.00</td>
                                     <td>120.00</td>
                                     <td>21 Nov 2022</td>
-                    
+
                                     <td><span class="badges bg-lightgreen">Entregada</span></td>
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -275,13 +226,12 @@
                                     <td>0.00</td>
                                     <td>90.00</td>
                                     <td>22 Nov 2022</td>
-                    
+
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -295,7 +245,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                    
+
                                 <!-- TABLEROW5 -->
                                 <tr>
                                     <td>
@@ -311,13 +261,12 @@
                                     <td>0.00</td>
                                     <td>90.00</td>
                                     <td>22 Nov 2022</td>
-                    
+
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td><span class="badges bg-lightred">Pendiente</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -331,7 +280,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                    
+
                                 <!-- TABLEROW6 -->
                                 <tr>
                                     <td>
@@ -346,14 +295,13 @@
                                     <td>90.00</td>
                                     <td>0.00</td>
                                     <td>90.00</td>
-                    
+
                                     <td>22 Nov 2022</td>
                                     <td><span class="badges bg-lightgreen">Entregada</span></td>
                                     <td><span class="badges bg-lightgreen">Pagado</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -367,7 +315,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                    
+
                                 <!-- TABLEROW7 -->
                                 <tr>
                                     <td>
@@ -382,14 +330,13 @@
                                     <td>90.00</td>
                                     <td>0.00</td>
                                     <td>90.00</td>
-                    
+
                                     <td>22 Nov 2022</td>
                                     <td><span class="badges bg-lightgreen">Entregada</span></td>
                                     <td><span class="badges bg-lightgreen">Pagado</span></td>
                                     <td class="text-center">
                                         <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Acción
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -403,17 +350,17 @@
                                         </div>
                                     </td>
                                 </tr>
-                    
+
                             </tbody>
                         </table>
-                
+
                     </div>
                 </div>
             </div>
 
         </main>
     </div>
-  
+
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- DataTable -->
@@ -421,9 +368,7 @@
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script src="../../js/app.js"></script>
 </body>

@@ -8,21 +8,21 @@
         </div>
 
 
-        <div class="item">
+        <div class="item active" id="dashboard">
             <i class='bx bx-home-alt-2'></i>
             <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
         </div>
-        <div class="item">
+        <div class="item" id="ordenes" >
             <i class='bx bx-grid-alt'></i>
             <a href="#">Ordenes</a>
         </div>
-        <div class="item" id="active">
+        <div class="item" id="empleados">
             <i class='bx bxs-user-detail'></i>
             <a href="<?php echo constant('URL'); ?>empleados">Empleados</a>
         </div>
-        <div class="item">
+        <div class="item" id="ventas">
             <i class='bx bx-transfer-alt'></i>
-            <a href="gestionVentas.html">Ventas</a>
+            <a href="<?php echo constant('URL'); ?>ventas">ventas</a>
         </div>
         <div class="item">
             <i class='bx bx-task'></i>
