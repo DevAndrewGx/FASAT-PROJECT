@@ -69,7 +69,7 @@ class SessionController extends Controller
      * para entrar a las páginas
      */
 
-    // funcion para implementar el fluo de autorizacion para entrar a las paginas
+    // funcion para implementar el flujo de autorizacion para entrar a las paginas
     function validateSession()
     {
         error_log('SessionController::validateSession()');
@@ -146,7 +146,7 @@ class SessionController extends Controller
         return $this->user;
     }
 
-
+    
     // la funcion initialize nos va permitir llamar authorizeAccess y establecer el
     public function initialize($user)
     {

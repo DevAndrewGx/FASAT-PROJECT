@@ -87,7 +87,7 @@
 
                 <div class="item" id="active">
                     <i class='bx bx-home-alt-2'></i>
-                    <a href="adminDashboard.html">Dashboard</a>
+                    <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-grid-alt'></i>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="item">
                     <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.php">Empleados</a>
+                    <a href="<?php echo constant('URL'); ?>empleados">Empleados</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-transfer-alt'></i>
@@ -356,7 +356,7 @@
     <!-- APEXCHART LIBRARY -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="<?php echo constant('URL'); ?>public/js/charts.js"></script> <!-- DATA-TABLES -->
-        <script src = "https://cdn.datatables.net/2.0.3/js/dataTables.min.js" >
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js">
     </script>
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

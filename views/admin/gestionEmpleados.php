@@ -1,9 +1,9 @@
 <?php
-require_once('../../../models/seguridadAdmin.php');
-require_once('../../../models/Consultas.php');
+// require_once('../../../models/seguridadAdmin.php');
+// require_once('../../../models/Consultas.php');
 
-require_once('../../../models/Conexion.php');
-require_once('../../../models/Sesion.php');
+// require_once('../../../models/Conexion.php');
+// require_once('../../../models/Sesion.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +14,8 @@ require_once('../../../models/Sesion.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../../styles/empleados/stylesEmpleado.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables styles-->
@@ -81,13 +81,13 @@ require_once('../../../models/Sesion.php');
 
                 <div class="logo">
                     <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="../../imgs/LOGOf.png" alt="logo"></a>
+                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
                 </div>
 
 
                 <div class="item">
                     <i class='bx bx-home-alt-2'></i>
-                    <a href="adminDashboard.php">Dashboard</a>
+                    <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-grid-alt'></i>
@@ -95,7 +95,7 @@ require_once('../../../models/Sesion.php');
                 </div>
                 <div class="item" id="active">
                     <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.php">Empleados</a>
+                    <a href="<?php echo constant('URL'); ?>empleados">Empleados</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-transfer-alt'></i>
@@ -198,7 +198,7 @@ require_once('../../../models/Sesion.php');
 
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script type="module" src="../../js/alertas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
     <!-- TESTING BACKEND DATATABLE FEATURES -->
     <script type="module">
@@ -207,7 +207,7 @@ require_once('../../../models/Sesion.php');
             mostrarError,
             mostrarExito,
             mostrarConfirmacionBorrar
-        } from '../../js/alertas.js';
+        } from '<?php echo constant('URL');?>public/js/alertas.js';
         $(document).ready(function() {
             let dataTable = $('#empleados').DataTable({
                 "responsive": true,
@@ -215,7 +215,7 @@ require_once('../../../models/Sesion.php');
                 "serverSide": true,
                 "order": [],
                 "ajax": {
-                    "url": "../../../controllers/mostrarEmpleados.php",
+                    "url": "<?php echo constant('URL')?>controllers/mostrarEmpleados.php",
                     "type": "POST",
                     "dataType": "json"
                 },
@@ -278,8 +278,8 @@ require_once('../../../models/Sesion.php');
                     }
                 ],
                 "columnDefs": [{
-                    "targets": [0, 10], 
-                    "orderable": false 
+                    "targets": [0, 10],
+                    "orderable": false
                 }],
                 // Configuramos el idioma
                 "language": {

@@ -31,10 +31,10 @@
             "description": "User profile and settings page"
         },
         {
-            "site": "admin", 
+            "site": "dashboard", 
             "access": "private", 
             "role": "admin",
-            "description": "Adim data sitio"
+            "description": "Admin data sitio"
         }
     ],
 
