@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAST | DASHBOARD</title>
+    <title>FAST | EMPLEADOS</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
@@ -30,7 +30,7 @@
 <body>
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
-        <header>
+        <!-- <header>
             <nav>
                 <ul class="items-right">
                     <li class="nav-item">
@@ -49,7 +49,7 @@
                             </span>
                         </a>
 
-                        <!-- DROPDOWN MENU -->
+                    
 
                         <div class="dropdown-menu menu-drop-user">
                             <div class="profilename">
@@ -73,9 +73,12 @@
                     </li>
                 </ul>
             </nav>
-        </header>
+        </header> -->
 
-        <aside class="left-section">
+        <?php require_once('views/header.php')?>
+        <?php require_once('aside.php')?>
+
+        <!-- <aside class="left-section">
 
             <div class="sidebar">
 
@@ -118,7 +121,7 @@
                 </div>
 
             </div>
-        </aside>
+        </aside> -->
 
 
         <!-- END OF SIDEBAR -->
@@ -215,7 +218,7 @@
                 "serverSide": true,
                 "order": [],
                 "ajax": {
-                    "url": "<?php echo constant('URL')?>controllers/mostrarEmpleados.php",
+                    "url": "<?php echo constant('URL')?>/controllers/mostrarEmpleados.php",
                     "type": "POST",
                     "dataType": "json"
                 },

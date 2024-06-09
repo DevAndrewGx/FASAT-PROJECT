@@ -136,11 +136,12 @@ class Consultas
             $sql .= " OR tipo_documento LIKE '%$searchValue%' ";
             $sql .= " OR estado LIKE '%$searchValue%' ";
             $sql .= " OR fecha_de_creacion LIKE '%$searchValue%' ";
+        
+            $stmt = $conexion->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
         }
 
-        $stmt = $conexion->prepare($sql);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
     }
 
     public function borrarEmpleado($id) { 
