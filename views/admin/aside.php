@@ -22,7 +22,7 @@
         </div>
         <div class="item" id="ventas">
             <i class='bx bx-transfer-alt'></i>
-            <a href="<?php echo constant('URL'); ?>ventas">ventas</a>
+            <a href="<?php echo constant('URL'); ?>ventas">Ventas</a>
         </div>
         <div class="item">
             <i class='bx bx-task'></i>

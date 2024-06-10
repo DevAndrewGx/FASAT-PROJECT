@@ -20,53 +20,8 @@
 
         <?php require_once('views/header.php') ?>
 
-        <aside class="left-section">
+        <?php require_once('aside.php') ?>
 
-            <div class="sidebar">
-
-                <div class="logo">
-                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
-                </div>
-
-
-                <div class="item">
-                    <i class='bx bx-home-alt-2'></i>
-                    <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="#">Ordenes</a>
-                </div>
-                <div class="item">
-                    <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.php">Empleados</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-transfer-alt'></i>
-                    <a href="gestionVentas.html">Ventas</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-task'></i>
-                    <a href="gestionInventario.html">Inventario</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Ajustes</a>
-                </div>
-            </div>
-
-            <div class="log-out sidebar">
-                <div class="item">
-                    <i class='bx bx-log-out'></i>
-                    <a href="../../sing-up/login.html">Log-out</a>
-                </div>
-
-            </div>
-        </aside>
-
-
-        <!-- END OF SIDEBAR -->
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
@@ -74,7 +29,10 @@
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Ventas</h1>
-                        <p>Gestiona tus Ventas</p>
+                        <nav class="nav-main">
+                            <a href="homeAdmin.php">Admin</a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#ventas"> / Ventas </a>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -370,7 +328,7 @@
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="../../js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 </body>
 
 </html>
