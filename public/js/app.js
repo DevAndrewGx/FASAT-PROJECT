@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
    activeAside();
 });
 
-
-
-
 // EFECT FOR STOCK NAVBAR ELEMENTS
 const navegationItems = document.querySelectorAll(
     "main .nav-sections nav ul li"

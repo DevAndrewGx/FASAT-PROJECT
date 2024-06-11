@@ -7,7 +7,7 @@ class Conexion
         $user = "root";
         $password = "";
         $host = "localhost";
-        $db = "test_fast2";
+        $db = "test_fast3";
         $charset = 'utf8';  // Añadido punto y coma
 
         // Creamos un objeto conexión PDO  // Corregido el comentario

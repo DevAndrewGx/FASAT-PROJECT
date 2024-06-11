@@ -63,16 +63,14 @@ class Consultas
 
     public function cargarDatosEmpleados($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName)
     {
-
         // Crear objeto de conexión
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql = "SELECT id_usuario, documento, rol, estado, tipo_documento, nombres, apellidos, telefono, direccion, correo, foto, fecha_de_creacion FROM usuarios";
 
+        $sql = "SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol";
 
         if (!empty($busqueda)) {
-
             $searchValue = $busqueda;
             $sql .= " WHERE nombres LIKE '%$searchValue%' ";
             $sql .= " OR apellidos LIKE '%$searchValue%' ";
@@ -86,22 +84,28 @@ class Consultas
             $sql .= " OR fecha_de_creacion LIKE '%$searchValue%' ";
         }
 
-
-        if ($columna != null && $orden != null ) {
-            
+        if ($columna != null && $orden != null) {
             $sql .= " ORDER BY $columnName $orden";
         } else {
-            $sql .= " ORDER BY id_usuario DESC";
+            $sql .= " ORDER BY documento DESC";
         }
 
         if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
             $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
         }
 
-        $consulta = $conexion->prepare($sql);
-        $consulta->execute();
+        // Imprimir la consulta SQL para depuración
+        error_log("Consulta SQL: $sql");
 
+        $consulta = $conexion->prepare($sql);
+
+        $consulta->execute();
         $data = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        // print_r("DATAFETCH->CARGARDATOS" . json_encode($data));
+        // print_r($data);
+        if (empty($data)) {
+            error_log("No se encontraron datos");
+        }
 
         return $data;
     }
@@ -122,7 +126,7 @@ class Consultas
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql = "SELECT COUNT(*) as total FROM usuarios";
+        $sql = "SELECT COUNT(*) as total, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol";
 
         if (!empty($busqueda)) {
             $searchValue = $busqueda;

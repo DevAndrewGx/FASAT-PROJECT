@@ -19,12 +19,12 @@
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables styles-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
     <!-- RESPONSIVE -->
-    <!-- TESTING DATATABLES -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
-    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /> -->
+    <!-- <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" /> -->
+    <!-- <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" /> -->
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
                     </div>
                     <div class="page-btn">
-                        <a href="crearEmpleado.php" class="btn btn-added"><img src="../../imgs/icons/plus.svg" alt="plussvg"> Agregar
+                        <a href="crearEmpleado.php" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
                             Empleado</a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="empleados" class="table datanew nowrap" style="width: 100%;">
+                            <table id="data-empleados" class="table datanew nowrap" style="width: 100%;">
                                 <thead>
                                     <tr>
                                         <th>
@@ -93,25 +93,15 @@
         </main>
     </div>
 
-
-
-
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-
-    <!-- JS BOOTSTRAP -->
+    <!-- Bootstrap JS 5.3.0 Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-    <!-- DataTable -->
+    <!-- DataTables -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"> </script>
+    <!-- DataTables Bootstrap 5 integration -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 
-    <!-- Responsive dataTables -->
-    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.js"></script>
-
-    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.js"></script>
-
-    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -126,13 +116,13 @@
             mostrarConfirmacionBorrar
         } from '<?php echo constant('URL'); ?>public/js/alertas.js';
         $(document).ready(function() {
-            let dataTable = $('#empleados').DataTable({
+            let dataTable = $('#data-empleados').DataTable({
                 "responsive": true,
                 "processing": true,
                 "serverSide": true,
                 "order": [],
                 "ajax": {
-                    "url": "<?php echo constant('URL') ?>/controllers/mostrarEmpleados.php",
+                    "url": "<?php echo constant('URL') ?>controllers/mostrarEmpleados.php",
                     "type": "POST",
                     "dataType": "json"
                 },
@@ -211,7 +201,7 @@
             });
 
             // Agregando un eventlistener para borrar data
-            $('#empleados').on('click', '.botonEliminar', function(e) {
+            $('#data-empleados').on('click', '.botonEliminar', function(e) {
                 e.preventDefault();
 
                 const id_usuario = $(this).data('id');
@@ -219,7 +209,7 @@
                 mostrarConfirmacionBorrar(id_usuario);
             });
             // Agregando un eventlistener para actualizar data
-            $('#empleados').on('click', '.botonActualizar', function(e) {
+            $('#data-empleados').on('click', '.botonActualizar', function(e) {
                 e.preventDefault();
                 const id_usuario = $(this).data('id');
                 window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
