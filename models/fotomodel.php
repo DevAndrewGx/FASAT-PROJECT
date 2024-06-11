@@ -30,7 +30,7 @@
             try {
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
                 $query = $this->prepare('INSERT INTO fotos(foto, tipo)
-                VALUES (foto, tipo)');
+                VALUES (:foto, :tipo)');
 
                 // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
                 $query->execute([
@@ -104,7 +104,7 @@
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('UPDATE usuarios SET foto = :foto, tipo = :tipo WHERE id_foto = :id');
+                $query = $this->prepare('UPDATE fotos SET foto = :foto, tipo = :tipo WHERE id_foto = :id');
                 $query->execute([
                     'id'=> $this->idFoto,
                     'foto' => $this->foto,
