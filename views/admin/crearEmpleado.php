@@ -174,11 +174,6 @@
                                         <label>Direccion</label>
                                         <input type="text" class="form-control" placeholder="Ingrese Direccion" name="direccion">
                                     </div>
-
-
-
-
-
                                 </div>
 
                                 <div class="col-lg-3 col-sm-6 col-12">
