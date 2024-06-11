@@ -18,7 +18,7 @@
         </div>
         <div class="item" id="empleados">
             <i class='bx bxs-user-detail'></i>
-            <a href="<?php echo constant('URL'); ?>empleados">Empleados</a>
+            <a href="<?php echo constant('URL'); ?>users">Usuarios</a>
         </div>
         <div class="item" id="ventas">
             <i class='bx bx-transfer-alt'></i>

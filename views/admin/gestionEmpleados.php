@@ -172,14 +172,14 @@
                         "data": null,
                         "render": function(data, type, row) {
                             return `<a class="me-3 confirm-text" href="javascript:void(0);" data-id="${row.id_usuario}">
-                                <img src="../../imgs/icons/eye.svg" alt="eye">
+                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/eye.svg" alt="eye">
                             </a>
                             <a class="me-3 botonActualizar" data-id="${row.id_usuario}" href="editarEmpleado.php">
-                                <img src="../../imgs/icons/edit.svg" alt="eye">
+                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/edit.svg" alt="eye">
                             </a>
                     
                             <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="editarEmpleado.php">
-                                <img src="../../imgs/icons/trash.svg" alt="trash">
+                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/trash.svg" alt="trash">
                             </a>`;
                         }
                     }
