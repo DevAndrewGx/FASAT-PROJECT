@@ -134,13 +134,20 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="listRolid">Tipo usuario</label>
-                                <select class="form-control" data-live-search="true" id="listRolid" name="listRolid" required>
+                                <label for="rol">Rol</label>
+                                <!-- <select class="form-control" data-live-search="true" id="listRolid" name="listRolid" required>
+                                </select> -->
+                                <select class="form-control select" name="rol" id="rol" require>
+                                    <option>Seleccione</option>
+                                    <option>Mesero</option>
+                                    <option>Cheff</option>
+                                    <option>Encargado inventario</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="listStatus">Status</label>
+                                <label for="listStatus">Estado</label>
                                 <select class="form-control selectpicker" id="listStatus" name="listStatus" required>
+                                    <option value="#">Seleccione</option>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
                                 </select>
@@ -148,8 +155,28 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="txtPassword">Password</label>
+                                <label for="txtPassword">Contraseña</label>
                                 <input type="password" class="form-control" id="txtPassword" name="txtPassword">
+
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="validarPassword">Confirmar contraseña</label>
+                                <input type="password" class="form-control pass-inputs" id="validarPassword" name="validarPassword">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Foto de perfil</label>
+                                <div class="image-upload image-upload-new col-md-6">
+                                    <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
+                                    <div class="image-uploads">
+                                        <img src="<?php echo constant('URL')?>/public/imgs/icons/upload.svg" alt="img">
+                                        <h4>Arrastra el archivo</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tile-footer">

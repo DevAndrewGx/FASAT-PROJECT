@@ -71,8 +71,8 @@
 .image-upload {
     border: 1px solid #919eab52;
     position: relative;
-    margin-bottom: 35px;
     border-radius: 5px;
+   
 }
 
 .image-upload:hover {
@@ -102,7 +102,7 @@
     color: #212b36;
 }
 .image-upload.image-upload-new input[type="file"] {
-    height: 258px;
+    height: 245px;
 }
 .image-upload.image-upload-new .image-uploads {
     height: 100%;
