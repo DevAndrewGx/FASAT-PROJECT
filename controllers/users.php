@@ -38,7 +38,6 @@ class Users extends SessionController
         $userModel = new UserModel();
 
         // seteamos la data de un nuevo objeto
-
         $userModel->setNombres($this->getPost('nombres'));
         $userModel->setDocumento($this->getPost('documento'));
         $userModel->setTipoDocumento($this->getPost('tipoDocumento'));
@@ -47,7 +46,6 @@ class Users extends SessionController
         $userModel->setIdRol($this->getPost('rol'));
         $userModel->setTelefono($this->getPost('telefono'));
         $userModel->setDireccion($this->getPost('direccion'));
-        $userModel->setIdHorario($this->getPost('desdeHorario'));
 
         
 

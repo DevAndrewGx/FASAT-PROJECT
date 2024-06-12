@@ -21,7 +21,7 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
 
-    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
 
 </head>
 

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | EMPLEADOS</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/dashboard.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
                     </div>
                     <div class="page-btn">
-                        <a href="crearEmpleado.php" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
+                        <a href="#" onclick="openModal();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
                             Empleado</a>
                     </div>
                 </div>
@@ -93,15 +93,82 @@
         </main>
     </div>
 
-    <!-- JQuery -->
+    <!-- Modal -->
+    <div class="modal fade" id="modalFormUsuario" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="titleModal">Nuevo Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formUsuario" name="formUsuario" class="form-horizontal">
+                        <input type="hidden" id="idUsuario" name="idUsuario" value="">
+                        <p class="text-primary">Todos los campos son obligatorios.</p>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txtIdentificacion">Identificación</label>
+                                <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtNombre">Nombres</label>
+                                <input type="text" class="form-control valid validText" id="txtNombre" name="txtNombre" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtApellido">Apellidos</label>
+                                <input type="text" class="form-control valid validText" id="txtApellido" name="txtApellido" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtTelefono">Teléfono</label>
+                                <input type="text" class="form-control valid validNumber" id="txtTelefono" name="txtTelefono" required="" onkeypress="return controlTag(event);">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtEmail">Email</label>
+                                <input type="email" class="form-control valid validEmail" id="txtEmail" name="txtEmail" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="listRolid">Tipo usuario</label>
+                                <select class="form-control" data-live-search="true" id="listRolid" name="listRolid" required>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="listStatus">Status</label>
+                                <select class="form-control selectpicker" id="listStatus" name="listStatus" required>
+                                    <option value="1">Activo</option>
+                                    <option value="2">Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtPassword">Password</label>
+                                <input type="password" class="form-control" id="txtPassword" name="txtPassword">
+                            </div>
+                        </div>
+                        <div class="tile-footer">
+                            <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-danger" type="button" data-bs-dismiss="modal"><i class='bx bxs-x-circle'></i>Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <!-- Bootstrap JS 5.3.0 Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <!-- DataTables Bootstrap 5 integration -->
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
-
 
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -109,7 +176,6 @@
 
     <!-- TESTING BACKEND DATATABLE FEATURES -->
     <script type="module">
-        // IMPORT OUR FUNCTIONS TO STAR WORKING WITH ALERTS 
         import {
             mostrarError,
             mostrarExito,
@@ -188,7 +254,6 @@
                     "targets": [0, 10],
                     "orderable": false
                 }],
-                // Configuramos el idioma
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ registros",
                     "zeroRecords": "No se encontraron resultados",
@@ -200,15 +265,12 @@
                 }
             });
 
-            // Agregando un eventlistener para borrar data
             $('#data-empleados').on('click', '.botonEliminar', function(e) {
                 e.preventDefault();
-
                 const id_usuario = $(this).data('id');
-
                 mostrarConfirmacionBorrar(id_usuario);
             });
-            // Agregando un eventlistener para actualizar data
+
             $('#data-empleados').on('click', '.botonActualizar', function(e) {
                 e.preventDefault();
                 const id_usuario = $(this).data('id');
@@ -218,6 +280,7 @@
     </script>
 
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+
 </body>
 
 </html>

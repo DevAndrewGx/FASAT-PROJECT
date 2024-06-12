@@ -16,16 +16,29 @@ i {
     font-size: 24px;
 }
 
-.btn-principal {
-    background: #ff9f43;
-    padding: 10px 15px;
-    color: #fff;
+.btn { 
+    display: inline-flex !important;
+    align-items: center;
+    gap: 3px;
 }
 
-.btn-principal:hover {
+.btn i { 
+    font-size: 20px;
+}
+
+.btn-primary {
+    background: #ff9f43 !important;
+    
+    padding: 10px 15px;
+    color: #fff;
+    border: none !important;
+}
+
+.btn-primary:hover {
     background: var(--primary-color);
     color: #fff;
 }
+
 /**************** STYLES BADGES *************/
 .badges {
     font-size: 12px;
