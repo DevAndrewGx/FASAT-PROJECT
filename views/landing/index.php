@@ -33,6 +33,27 @@
 </head>
 
 <body>
+    <header>
+        <!-- Hero Header -->
+        <div id="hero-header" class="hero-header container-xxl-fluid py-5 mb-5 d-flex align-items-center justify-content-center">
+            <!-- <div class="hero-header-background">
+                <img src="<?php echo constant('URL') ?>public/imgs/wave-haikei.png" alt="Logo" width="100%">
+            </div> -->
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-4 text-primary mb-4 animated slideInRight trabajos-title">¡Potencia tu Restaurante con FAST!</h1>
+                        <p class="lead mb-4 animated fadeInLeft delay-1s">Mejora la eficiencia de tu restaurante con nuestro software especializado en la gestión de pedidos, ventas, inventario y facturación.</p>
+                        <a href="#" class="btn btn-primary btn-lg animated fadeInUp delay-2s">Prueba gratis FAST</a>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                        <img class="img-fluid rounded hero-image animated fadeInRight delay-1s" src="views/imgs/img/uno.png" alt="hero">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container-xxl  p-0">
 
         <div class="container-xxl position-relative p-0">
@@ -57,24 +78,7 @@
                 </div>
             </nav>
         </div>
-        <!-- Hero Header -->
-        <div id="hero-header" class="hero-header container-xxl-fluid py-5 mb-5 d-flex align-items-center justify-content-center">
-            <!-- <div class="hero-header-background">
-                <img src="<?php echo constant('URL') ?>public/imgs/wave-haikei.png" alt="Logo" width="100%">
-            </div> -->
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <h1 class="display-4 text-primary mb-4 animated slideInRight trabajos-title">¡Potencia tu Restaurante con FAST!</h1>
-                        <p class="lead mb-4 animated fadeInLeft delay-1s">Mejora la eficiencia de tu restaurante con nuestro software especializado en la gestión de pedidos, ventas, inventario y facturación.</p>
-                        <a href="#" class="btn btn-primary btn-lg animated fadeInUp delay-2s">Prueba gratis FAST</a>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                        <img class="img-fluid rounded hero-image animated fadeInRight delay-1s" src="views/imgs/img/uno.png" alt="hero">
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <!-- beneficio -->
@@ -296,11 +300,10 @@
 
 
     <script>
-
         // forma para agreegar el background a un selector con JQUERY
         $(document).ready(function() {
-            var url = '<?php echo constant('URL'); ?>public/imgs/wave-haikei.png';
-            $('.hero-header').css('background-image', 'url(' + url + ')');
+            var urlBackgroundHero = '<?php echo constant('URL'); ?>views/imgs/img/hero-fondo.png';
+            $('.hero-header').css('background-image', 'url(' + urlBackgroundHero + ')');
         });
     </script>
 
