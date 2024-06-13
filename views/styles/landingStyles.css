@@ -36,14 +36,14 @@ body {
 }
 
 .hero-header {
-    position: relative;
     min-height: 90vh; 
-    background-image: url('../imgs/img/hero-fondo.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     margin-bottom: -1px; 
+   
 }
+
 
 
 .trabajos-title {
@@ -64,7 +64,7 @@ body {
 }
 
 .lead {
-    color: white;
+    color: #000;
 }
 
 .hero-image {
@@ -278,7 +278,6 @@ body {
     background-size: cover;
     border-radius: 10px;
     overflow: hidden; 
-   
     flex: 1; 
     margin-left: 40px; 
 }

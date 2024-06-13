@@ -22,13 +22,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Librerias-->
-    <link href="../pluggins/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="<?php echo constant('URL') ?>views/pluggins/lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Bootstrap-->
-    <link href="../styles/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo constant('URL') ?>views/styles/bootstrap.min.css" rel="stylesheet">
 
     <!-- style -->
-    <link href="../styles/landingStyles.css" rel="stylesheet">
+    <link href="<?php echo constant('URL') ?>views/styles/landingStyles.css" rel="stylesheet">
 
 </head>
 
@@ -38,7 +38,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <img src="../imgs/LOGOf.png" alt="Logo" width="200">
+                    <img src="<?php echo constant('URL') ?>public/imgs/LOGOf.png" alt="Logo" width="200">
                 </a>
                 <button class="navbar-toggler navbar-toggler-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span>
@@ -52,13 +52,16 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <a href="views/sign-up/signup.html" class="btn btn-primary py-2 px-4 me-3">Prueba</a>
-                        <a href="<?php echo constant('URL')?>login" class="btn btn-primary py-2 px-4">Iniciar sesión</a>
+                        <a href="<?php echo constant('URL') ?>login" class="btn btn-primary py-2 px-4">Iniciar sesión</a>
                     </div>
                 </div>
             </nav>
         </div>
         <!-- Hero Header -->
         <div id="hero-header" class="hero-header container-xxl-fluid py-5 mb-5 d-flex align-items-center justify-content-center">
+            <!-- <div class="hero-header-background">
+                <img src="<?php echo constant('URL') ?>public/imgs/wave-haikei.png" alt="Logo" width="100%">
+            </div> -->
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 text-center text-lg-start">
@@ -67,14 +70,14 @@
                         <a href="#" class="btn btn-primary btn-lg animated fadeInUp delay-2s">Prueba gratis FAST</a>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                        <img class="img-fluid rounded hero-image animated fadeInRight delay-1s" src="../imgs/img/uno.png" alt="hero">
+                        <img class="img-fluid rounded hero-image animated fadeInRight delay-1s" src="views/imgs/img/uno.png" alt="hero">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- beneficio -->
+    <!-- beneficio -->
 
     <section id="beneficios" class="py-5">
         <div class="container">
@@ -112,7 +115,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- acerca de nosotros -->
     <section id="acerca-de" class="py-5">
@@ -127,153 +130,153 @@
                     <p class="about-content mb-4">Con un equipo diverso y altamente cualificado, nos enorgullece ofrecer un servicio excepcional a nuestros clientes. Cada miembro aporta una perspectiva única y valiosa.</p>
                 </div>
                 <div class="col-lg-6 order-lg-2 team-image">
-                    <!-- imagen  -->
+                    <!-- <img src="<?php echo constant('URL') ?>views/imgs/img/about-section.png" alt="about-section-img" width="100%"> -->
                 </div>
             </div>
         </div>
     </section>
-    
 
 
 
-<!-- caracteristicas -->
-<section id="fast-features" class="py-5">
-    <div class="container d-flex align-items-center">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="section-image">
-                    <img src="../imgs/img/caracteristicas.png" alt="Imagen de Características">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="section-content">
-                    <h3 class="subsection-title">Software Potente y Flexible</h3>
-                    <p>Fast ofrece un software potente y flexible que se adapta a las necesidades únicas de tu restaurante. Desde la gestión de inventario hasta la programación de empleados, Fast tiene todo lo que necesitas para llevar tu negocio al siguiente nivel.</p>
-                    <h3 class="subsection-title">Optimiza la Gestión de tu Restaurante con FAST</h3>
-                    <p>Con la información adecuada a tu alcance, puedes tomar decisiones informadas y estratégicas que impulsen el crecimiento de tu restaurante.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- preguntas frecuentes -->
-
-<section id="faq" class="py-5">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">Preguntas Frecuentes sobre FAST</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">1. ¿Qué es FAST y cómo puede ayudar a mi restaurante?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
+    <!-- caracteristicas -->
+    <section id="fast-features" class="py-5">
+        <div class="container d-flex align-items-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-image">
+                        <img src="../imgs/img/caracteristicas.png" alt="Imagen de Características">
+                    </div>
                 </div>
-                <div class="answer">
-                    <p>FAST es un software de gestión diseñado específicamente para restaurantes. Ayuda a simplificar la gestión diaria de pedidos, ventas, inventario y facturación, lo que mejora la eficiencia y el rendimiento operativo de tu restaurante.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">2. ¿Es FAST adecuado para mi tipo de restaurante?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
-                </div>
-                <div class="answer">
-                    <p>FAST es ideal para una amplia variedad de restaurantes, desde pequeños negocios familiares hasta cadenas de restaurantes. Nuestro software es altamente adaptable y puede personalizarse para satisfacer las necesidades específicas de tu restaurante.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">3. ¿Es difícil de usar FAST?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
-                </div>
-                <div class="answer">
-                    <p>No, FAST está diseñado con una interfaz intuitiva y fácil de usar. Ofrecemos capacitación y soporte técnico para garantizar que puedas aprovechar al máximo todas las funciones de nuestro software.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">4. ¿Cómo puedo obtener soporte técnico si tengo algún problema?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
-                </div>
-                <div class="answer">
-                    <p>Ofrecemos soporte técnico dedicado a través de correo electrónico. Nuestro equipo de expertos está disponible para ayudarte con cualquier pregunta o problema que puedas tener.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">5. ¿Hay algún costo adicional aparte del precio del software?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
-                </div>
-                <div class="answer">
-                    <p>El costo de FAST incluye todas las actualizaciones de software y soporte técnico. No hay costos ocultos ni tarifas adicionales.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="question">
-                    <span class="question-text">6. ¿Puedo probar FAST antes de comprarlo?</span>
-                    <i class="fas fa-chevron-down arrow-icon"></i>
-                </div>
-                <div class="answer">
-                    <p>Sí, ofrecemos una demostración gratuita de FAST para que puedas ver cómo funciona nuestro software y cómo puede beneficiar a tu restaurante.</p>
+                <div class="col-md-6">
+                    <div class="section-content">
+                        <h3 class="subsection-title">Software Potente y Flexible</h3>
+                        <p>Fast ofrece un software potente y flexible que se adapta a las necesidades únicas de tu restaurante. Desde la gestión de inventario hasta la programación de empleados, Fast tiene todo lo que necesitas para llevar tu negocio al siguiente nivel.</p>
+                        <h3 class="subsection-title">Optimiza la Gestión de tu Restaurante con FAST</h3>
+                        <p>Con la información adecuada a tu alcance, puedes tomar decisiones informadas y estratégicas que impulsen el crecimiento de tu restaurante.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- contactos -->
+    <!-- preguntas frecuentes -->
 
-<section id="contact" class="py-5">
-    <div class="container contact-container">
-        <h2 class="contact-title">¿Tienes alguna pregunta sobre FAST?</h2>
-        <p class="contact-text">¿O estás interesado en saber más sobre cómo puede beneficiar a tu restaurante? ¡Estamos aquí para ayudarte!</p>
-        <form action="#" method="post" class="contact-form">
-            <div class="form-group">
-                <input type="email" class="form-control contact-email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-registrarse">Inicia tu prueba gratis</button>
-            <p class="small confirm-message">Al hacer clic en Regístrate, confirmas que estás de acuerdo con el tratamiento de tus datos.</p>
-        </form>
-    </div>
-</section>
-
-<!-- footer -->
-
-<footer id="footer">
-    <div class="footer-container">
-        <div class="footer-row">
-            <div class="footer-column footer-links-column">
-                <h4 class="footer-column-title">Enlaces Rápidos</h4>
-                <ul class="footer-links-list">
-                    <li><a href="#hero-header">Inicio</a></li>
-                    <li><a href="#beneficios">Funcionalidades</a></li>
-                    <li><a href="#acerca-de">Acerca de Nosotros</a></li>
-                    <li><a href="#faq">Preguntas Frecuentes</a></li>
-                    <li><a href="#contact">Contáctanos</a></li>
-
-                </ul>
-            </div>
-
-            <div class="footer-column footer-contact-column">
-                <h4 class="footer-column-title">Información de Contacto</h4>
-                <p class="footer-contact-info">
-                    Correo Electrónico: <a href="mailto:info@fastrestaurant.com">info@fastrestaurant.com</a><br>
-                    Teléfono: <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                </p>
-            </div>
-
-            <div class="footer-column footer-social-column">
-                <h4 class="footer-column-title">Redes Sociales</h4>
-                <p class="footer-social-description">Síguenos en nuestras redes sociales para obtener las últimas actualizaciones y noticias sobre FAST.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Preguntas Frecuentes sobre FAST</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">1. ¿Qué es FAST y cómo puede ayudar a mi restaurante?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>FAST es un software de gestión diseñado específicamente para restaurantes. Ayuda a simplificar la gestión diaria de pedidos, ventas, inventario y facturación, lo que mejora la eficiencia y el rendimiento operativo de tu restaurante.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">2. ¿Es FAST adecuado para mi tipo de restaurante?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>FAST es ideal para una amplia variedad de restaurantes, desde pequeños negocios familiares hasta cadenas de restaurantes. Nuestro software es altamente adaptable y puede personalizarse para satisfacer las necesidades específicas de tu restaurante.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">3. ¿Es difícil de usar FAST?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>No, FAST está diseñado con una interfaz intuitiva y fácil de usar. Ofrecemos capacitación y soporte técnico para garantizar que puedas aprovechar al máximo todas las funciones de nuestro software.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">4. ¿Cómo puedo obtener soporte técnico si tengo algún problema?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>Ofrecemos soporte técnico dedicado a través de correo electrónico. Nuestro equipo de expertos está disponible para ayudarte con cualquier pregunta o problema que puedas tener.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">5. ¿Hay algún costo adicional aparte del precio del software?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>El costo de FAST incluye todas las actualizaciones de software y soporte técnico. No hay costos ocultos ni tarifas adicionales.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-text">6. ¿Puedo probar FAST antes de comprarlo?</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="answer">
+                        <p>Sí, ofrecemos una demostración gratuita de FAST para que puedas ver cómo funciona nuestro software y cómo puede beneficiar a tu restaurante.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
+
+    <!-- contactos -->
+
+    <section id="contact" class="py-5">
+        <div class="container contact-container">
+            <h2 class="contact-title">¿Tienes alguna pregunta sobre FAST?</h2>
+            <p class="contact-text">¿O estás interesado en saber más sobre cómo puede beneficiar a tu restaurante? ¡Estamos aquí para ayudarte!</p>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <input type="email" class="form-control contact-email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-registrarse">Inicia tu prueba gratis</button>
+                <p class="small confirm-message">Al hacer clic en Regístrate, confirmas que estás de acuerdo con el tratamiento de tus datos.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-column footer-links-column">
+                    <h4 class="footer-column-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#hero-header">Inicio</a></li>
+                        <li><a href="#beneficios">Funcionalidades</a></li>
+                        <li><a href="#acerca-de">Acerca de Nosotros</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                        <li><a href="#contact">Contáctanos</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact-column">
+                    <h4 class="footer-column-title">Información de Contacto</h4>
+                    <p class="footer-contact-info">
+                        Correo Electrónico: <a href="mailto:info@fastrestaurant.com">info@fastrestaurant.com</a><br>
+                        Teléfono: <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    </p>
+                </div>
+
+                <div class="footer-column footer-social-column">
+                    <h4 class="footer-column-title">Redes Sociales</h4>
+                    <p class="footer-social-description">Síguenos en nuestras redes sociales para obtener las últimas actualizaciones y noticias sobre FAST.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -283,13 +286,23 @@
 
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class='bx bx-up-arrow-alt'></i></a>
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../pluggins/lib/wow/wow.min.js"></script>
-<script src="../pluggins/lib/easing/easing.min.js"></script>
-<script src="../pluggins/lib/waypoints/waypoints.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/landing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../pluggins/lib/wow/wow.min.js"></script>
+    <script src="../pluggins/lib/easing/easing.min.js"></script>
+    <script src="../pluggins/lib/waypoints/waypoints.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/landing.js"></script>
+
+
+    <script>
+
+        // forma para agreegar el background a un selector con JQUERY
+        $(document).ready(function() {
+            var url = '<?php echo constant('URL'); ?>public/imgs/wave-haikei.png';
+            $('.hero-header').css('background-image', 'url(' + url + ')');
+        });
+    </script>
 
 </body>
 
