@@ -71,7 +71,6 @@
                                         <th>Nombres</th>
                                         <th>Apellidos</th>
                                         <th>Documento</th>
-                                        <th>Tipo Documento</th>
                                         <th>Teléfono</th>
                                         <th>Correo</th>
                                         <th>Estado</th>
@@ -102,34 +101,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formUsuario" name="formUsuario" class="form-horizontal">
+                    <form id="formUsuario" name="formUsuario" class="form-horizontal" action="users/createUser" method="POST">
                         <input type="hidden" id="idUsuario" name="idUsuario" value="">
                         <p class="text-primary">Todos los campos son obligatorios.</p>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="txtIdentificacion">Identificación</label>
-                                <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion" required="">
+                                <input type="text" class="form-control" id="txtIdentificacion" name="documento" required="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="txtNombre">Nombres</label>
-                                <input type="text" class="form-control valid validText" id="txtNombre" name="txtNombre" required="">
+                                <input type="text" class="form-control valid validText" id="txtNombre" name="nombres" required="">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="txtApellido">Apellidos</label>
-                                <input type="text" class="form-control valid validText" id="txtApellido" name="txtApellido" required="">
+                                <input type="text" class="form-control valid validText" id="txtApellido" name="apellidos" required="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="txtTelefono">Teléfono</label>
-                                <input type="text" class="form-control valid validNumber" id="txtTelefono" name="txtTelefono" required="" onkeypress="return controlTag(event);">
+                                <input type="text" class="form-control valid validNumber" id="txtTelefono" name="telefono" required="" onkeypress="return controlTag(event);">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="txtEmail">Email</label>
-                                <input type="email" class="form-control valid validEmail" id="txtEmail" name="txtEmail" required="">
+                                <input type="email" class="form-control valid validEmail" id="txtEmail" name="email" required="">
                             </div>
                         </div>
                         <div class="row">
@@ -139,24 +138,26 @@
                                 </select> -->
                                 <select class="form-control select" name="rol" id="rol" require>
                                     <option>Seleccione</option>
-                                    <option>Mesero</option>
-                                    <option>Cheff</option>
-                                    <option>Encargado inventario</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Mesero</option>
+                                    <option value="3">Cheff</option>
+                                    <option value="4">Cajero</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="listStatus">Estado</label>
-                                <select class="form-control selectpicker" id="listStatus" name="listStatus" required>
-                                    <option value="#">Seleccione</option>
+                                <select class="form-control selectpicker" id="listStatus" name="estado" required>
+                                    <option>Seleccione</option>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
+                                    <option value="3">Pendiente</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="txtPassword">Contraseña</label>
-                                <input type="password" class="form-control" id="txtPassword" name="txtPassword">
+                                <input type="password" class="form-control" id="txtPassword" name="password">
 
                             </div>
 
@@ -173,7 +174,7 @@
                                 <div class="image-upload image-upload-new col-md-6">
                                     <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
                                     <div class="image-uploads">
-                                        <img src="<?php echo constant('URL')?>/public/imgs/icons/upload.svg" alt="img">
+                                        <img src="<?php echo constant('URL') ?>public/imgs/icons/upload.svg" alt="img">
                                         <h4>Arrastra el archivo</h4>
                                     </div>
                                 </div>
@@ -242,9 +243,6 @@
                     },
                     {
                         "data": "documento"
-                    },
-                    {
-                        "data": "tipo_documento"
                     },
                     {
                         "data": "telefono"

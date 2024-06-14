@@ -53,22 +53,23 @@
 
             try {
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-                $query = $this->prepare('INSERT INTO usuarios(id_rol, id_estado, documento, tipo_documento, nombres, apellidos, telefono, direccion, correo, password, id_foto, id_horario)
-                VALUES (:id_rol, :id_estado, :documento, :tipo_documento, :nombres, :apellidos, :telefono, :direccion, :correo, :password, :id_foto, id_horario)');
+                // $query = $this->prepare('INSERT INTO usuarios (id_rol, id_estado, documento, nombres, apellidos, telefono, correo, password, id_foto)
+                // VALUES (:id_rol, :id_estado, :documento, :nombres, :apellidos, :telefono, :correo, :password, :id_foto)');
+
+                $query = $this->prepare('INSERT INTO usuarios (id_rol, id_estado, documento, nombres, apellidos, telefono, correo, password, id_foto)
+                                VALUES (:id_rol, :id_estado, :documento, :nombres, :apellidos, :telefono, :correo, :password, :id_foto)');
 
                 // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
                 $query->execute([
                     'id_rol' => $this->idRol,
                     'id_estado' => $this->idEstado,
                     'documento' => $this->documento,
-                    'tipo_documento' => $this->tipoDocumento,
                     'nombres' => $this->nombres,
                     'apellidos' => $this->apellidos,
                     'telefono' => $this->telefono,
-                    'direccion' => $this->direccion,
-                    'correo' => $this->password,
-                    'id_foto' => $this->idFoto,
-                    'id_horario' => $this->idHorario,
+                    'correo' => $this->correo,
+                    'password' => $this->password, 
+                    'id_foto' => $this->idFoto
                 ]);
                 // salimos de la funcion
                 return;
@@ -98,11 +99,9 @@
                     $item->setIdFoto($row['id_foto']);
                     $item->setIdHorario($row['id_horario']);
                     $item->setDocumento($row['documento']);
-                    $item->setTipoDocumento($row['tipo_documento']);
                     $item->setNombres($row['nombres']);
                     $item->setApellidos($row['apellidos']);
                     $item->setTelefono($row['telefono']);
-                    $item->setDireccion($row['direccion']);
                     $item->setCorreo($row['correo']);
                     $item->setPassword($row['password'], false);
                     
@@ -137,13 +136,10 @@
                 $this->setIdRol($user['id_rol']);
                 $this->setIdEstado($user['id_estado']);
                 $this->setIdFoto($user['id_foto']);
-                $this->setIdHorario($user['id_horario']);
                 $this->setDocumento($user['documento']);
-                $this->setTipoDocumento($user['tipo_documento']);
                 $this->setNombres($user['nombres']);
                 $this->setApellidos($user['apellidos']);
                 $this->setTelefono($user['telefono']);
-                $this->setDireccion($user['direccion']);
                 $this->setCorreo($user['correo']);
                 $this->setPassword($user['password'], false);
                 

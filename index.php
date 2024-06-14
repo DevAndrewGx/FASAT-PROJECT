@@ -32,6 +32,7 @@
     require_once('config/config.php');
 
     include_once 'models/usermodel.php';
+    include_once 'models/fotomodel.php';
     include_once 'models/joinUserRolModel.php';
 
     // Esto va hacer que automaticamente se ejecute el contructor y empieze a hacer las validaciones

@@ -18,7 +18,8 @@
 
 
         public function __construct() { 
-        
+            
+            parent::__construct();
             $this->foto = '';
             $this->tipo = '';
         }
@@ -29,20 +30,20 @@
 
             try {
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-                $query = $this->prepare('INSERT INTO fotos(foto, tipo)
-                VALUES (:foto, :tipo)');
+                $query = $this->prepare('INSERT INTO fotos(foto, tipo) VALUES (:foto, :tipo)');
 
                 // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
                 $query->execute([
                     'foto' => $this->foto,
                     'tipo' => $this->tipo
                 ]);
+
                 // salimos de la funcion
-                return;
+                return true;
             }catch(PDOException $e) {
                 error_log('FOTOMODEL::save->PDOException'.$e);
                 // salimos de la funcion
-                return;
+                return false;
             }
         }
 
@@ -117,6 +118,10 @@
                 return false;
             }
         }
-        // funcioin para traer y consultar todas las fotos
+
+
+        public function getLastInsertId() { 
+            return $this->db->connect()->lastInsertId();
+        }
     }
 ?>
