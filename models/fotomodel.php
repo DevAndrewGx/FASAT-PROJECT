@@ -7,14 +7,7 @@
         private $idFoto;
         private $foto;
         private $tipo;
-        // setters y getters
-        public function setIdFoto($id){             $this->idFoto = $id;}
-        public function setFoto($foto){         $this->foto = $foto;}
-        public function setTipo($tipo){     $this->tipo = $tipo;}
-
-        public function getIdFoto(){           return $this->idFoto;}
-        public function getFoto(){        return $this->foto;}
-        public function getTipo(){          return $this->tipo;}
+        
 
 
         public function __construct() { 
@@ -29,16 +22,20 @@
         public function save() {
 
             try {
+                $conn = $this->db->connect();
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-                $query = $this->prepare('INSERT INTO fotos(foto, tipo) VALUES (:foto, :tipo)');
-
+                $query = $conn->prepare('INSERT INTO fotos (foto, tipo) VALUES (:foto, :tipo)');
                 // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
                 $query->execute([
                     'foto' => $this->foto,
                     'tipo' => $this->tipo
                 ]);
+                  // tomamos el id insertado para hacer la relacion con nuestra tabla de usuarios
+                $getLastInsertId = $conn->lastInsertId();
+                error_log('FotoModel::save -> lastId -> ' . $getLastInsertId);
 
-                // salimos de la funcion
+                // Asignar el ID de la foto al modelo actual
+                $this->setIdFoto($getLastInsertId);
                 return true;
             }catch(PDOException $e) {
                 error_log('FOTOMODEL::save->PDOException'.$e);
@@ -111,6 +108,7 @@
                     'foto' => $this->foto,
                     'tipo' => $this->tipo,
                 ]);
+              
                 return true;
             } catch (PDOException $e) {
                 error_log('USERMODEL::update->PDOException' . $e);
@@ -118,10 +116,13 @@
                 return false;
             }
         }
+        // setters y getters
+        public function setIdFoto($id){             $this->idFoto = $id;}
+        public function setFoto($foto){         $this->foto = $foto;}
+        public function setTipo($tipo){     $this->tipo = $tipo;}
 
-
-        public function getLastInsertId() { 
-            return $this->db->connect()->lastInsertId();
-        }
+        public function getIdFoto(){           return $this->idFoto;}
+        public function getFoto(){        return $this->foto;}
+        public function getTipo(){          return $this->tipo;}
     }
 ?>

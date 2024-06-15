@@ -179,6 +179,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" name="tipoFoto" value="Usuarios">
                         </div>
                         <div class="tile-footer">
                             <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;

@@ -49,26 +49,31 @@ class Users extends SessionController
         $userModel->setIdEstado($this->getPost('estado'));
         $userModel->setPassword($this->getPost('password'));
 
-        
         // creamos un objeto de tipo foto
         $fotoModel = new FotoModel();
         $fotoModel->setFoto($this->getPost('foto'));
-        $fotoModel->setTipo('Usuario');
-
-        // insetamos primero la foto
-        if($fotoModel->save()) {
-            error_log('Users::createUser -> Se guardo la foto correctamente');
-            $idFoto = $fotoModel->getLastInsertId();
-            $userModel->setIdFoto($idFoto);
-
-            $userModel->save();
-            $this->redirect('users', []);
-        }
-
-        error_log('Users::createUser -> No se guardo la foto correctamente');
+        $fotoModel->setTipo($this->getPost('tipoFoto'));
         
+        // insertamos primero la foto
+        if ($fotoModel->save()) {
+            error_log('Users::createUser -> Se guardó la foto correctamente');
+            $idFoto = $fotoModel->getIdFoto();
+            error_log('Users::createUser -> idFoto: ' . $idFoto);
 
-
+            if ($idFoto) {
+                $userModel->setIdFoto($idFoto);
+                if ($userModel->save()) {
+                    error_log('Users::createUser -> Se guardó el usuario correctamente');
+                    $this->redirect('users', []);
+                } else {
+                    error_log('Users::createUser -> No se guardó el usuario');
+                }
+            } else {
+                error_log('Users::createUser -> No se obtuvo el id de la foto');
+            }
+        } else {
+            error_log('Users::createUser -> No se guardó la foto correctamente');
+        }
     }
 }
 
