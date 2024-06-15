@@ -27,3 +27,144 @@
 [15-Jun-2024 05:03:02 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
 [15-Jun-2024 05:03:03 Europe/Berlin] Testing errors
 [15-Jun-2024 05:03:03 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:04:50 Europe/Berlin] Testing errors
+[15-Jun-2024 05:04:50 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:05:48 Europe/Berlin] Testing errors
+[15-Jun-2024 05:05:48 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:48 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:05:48 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:48 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:05:48 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:05:49 Europe/Berlin] Testing errors
+[15-Jun-2024 05:05:49 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:05:53 Europe/Berlin] Testing errors
+[15-Jun-2024 05:05:53 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:53 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:05:53 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:53 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:05:53 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:05:55 Europe/Berlin] Testing errors
+[15-Jun-2024 05:05:55 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:05:59 Europe/Berlin] Testing errors
+[15-Jun-2024 05:05:59 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:05:59 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:05:59 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:05:59 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:05:59 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:00 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:01 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:06 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:06 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:06 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:06 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:06 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:06 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:08 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:08 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:25 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:26 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:26 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:26 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:26 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:26 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:27 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:27 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:36 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:36 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:36 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:36 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:36 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:36 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:37 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:37 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:49 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:49 Europe/Berlin] APP::construct->No hay controlador especificado
+[15-Jun-2024 05:06:49 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:49 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:50 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:50 Europe/Berlin] Errores::construct -> inicio de errores
+[15-Jun-2024 05:06:50 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:50 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[15-Jun-2024 05:06:50 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[15-Jun-2024 05:06:50 Europe/Berlin] SessionController::validateSession() public page
+[15-Jun-2024 05:06:50 Europe/Berlin] Login::construct -> inicio de login
+[15-Jun-2024 05:06:50 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[15-Jun-2024 05:06:54 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:54 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[15-Jun-2024 05:06:54 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[15-Jun-2024 05:06:54 Europe/Berlin] SessionController::validateSession() public page
+[15-Jun-2024 05:06:54 Europe/Berlin] Login::construct -> inicio de login
+[15-Jun-2024 05:06:54 Europe/Berlin] loginByCorreo: inicio
+[15-Jun-2024 05:06:54 Europe/Berlin] login: user correo juan@example.com
+[15-Jun-2024 05:06:54 Europe/Berlin] login: success
+[15-Jun-2024 05:06:54 Europe/Berlin] Login::authenticate() passed
+[15-Jun-2024 05:06:54 Europe/Berlin] sessionController::initialize(): user: Juan
+[15-Jun-2024 05:06:54 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[15-Jun-2024 05:06:54 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:56 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:56 Europe/Berlin] SessionController::validateSession()
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[15-Jun-2024 05:06:56 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[15-Jun-2024 05:06:56 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[15-Jun-2024 05:06:56 Europe/Berlin] Users::construct -> controlador usuarios
+[15-Jun-2024 05:06:56 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[15-Jun-2024 05:06:57 Europe/Berlin] Testing errors
+[15-Jun-2024 05:06:57 Europe/Berlin] Errores::construct -> inicio de errores
