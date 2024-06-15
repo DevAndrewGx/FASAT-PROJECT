@@ -14,18 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | EMPLEADOS</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
-    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- DataTables styles-->
+    <!-- DataTables styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
-    <!-- RESPONSIVE -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /> -->
-    <!-- <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" /> -->
-    <!-- <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" /> -->
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
 </head>
+
 
 <body>
     <!-- ASIDE CONTAINER -->
