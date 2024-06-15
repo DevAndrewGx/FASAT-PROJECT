@@ -98,7 +98,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formUsuario" name="formUsuario" class="form-horizontal" action="users/createUser" method="POST">
+                    <form id="formUsuario" name="formUsuario" class="form-horizontal" action="users/createUser" method="POST" enctype="multipart/form-data">
                         <input type="hidden" id="idUsuario" name="idUsuario" value="">
                         <p class="text-primary">Todos los campos son obligatorios.</p>
 
@@ -274,7 +274,7 @@
                     }
                 ],
                 "columnDefs": [{
-                    "targets": [0, 10],
+                    "targets": [0, 9],
                     "orderable": false
                 }],
                 "language": {

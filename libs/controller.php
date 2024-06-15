@@ -50,6 +50,21 @@
             return true;
         }
 
+        // creamos una funcion para verificar si exiten parametros que sean de tipo FILE
+        function existFILES($params) {
+
+            // recorreremos con un foreach los parametros para verificar si existen
+            foreach($params as $param) {
+                // si no existe el parametro
+                if(!isset($_FILES[$param])) {
+                    error_log('Controller::existPOST -> No existe el parametro '.$param);
+                    return;
+                }
+            }
+
+            return true;
+        }
+
 
         // creamos una funcion para verificar los parametros que traemos de la URL
 

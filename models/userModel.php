@@ -72,11 +72,11 @@
                     'id_foto' => $this->idFoto
                 ]);
                 // salimos de la funcion
-                return;
+                return true;
             }catch(PDOException $e) {
                 error_log('USERMODEL::save->PDOException'.$e);
                 // salimos de la funcion
-                return;
+                return false;
             }
         }
 
