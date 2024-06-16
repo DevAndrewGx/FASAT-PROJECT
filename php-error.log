@@ -119,3 +119,16 @@
 [15-Jun-2024 22:46:13 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
 [15-Jun-2024 22:46:14 Europe/Berlin] Testing errors
 [15-Jun-2024 22:46:14 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Jun-2024 02:00:55 Europe/Berlin] Testing errors
+[16-Jun-2024 02:00:55 Europe/Berlin] SessionController::validateSession()
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::validateSession(): username:juan@example.com - role: 1
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[16-Jun-2024 02:00:55 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[16-Jun-2024 02:00:55 Europe/Berlin] sessionController::getUserSessionData(): Juan
+[16-Jun-2024 02:00:55 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Jun-2024 02:00:55 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[16-Jun-2024 02:00:57 Europe/Berlin] Testing errors
+[16-Jun-2024 02:00:57 Europe/Berlin] Errores::construct -> inicio de errores

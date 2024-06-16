@@ -16,7 +16,9 @@ class Users extends SessionController
     function render()
     {
         error_log('Users::render -> Carga la pagina principal de los empleados');
-        $this->view->render('admin/gestionEmpleados');
+        $this->view->render('admin/gestionEmpleados', [ 
+            'users' => $this->getAllUsersRelations()
+        ]);
     }
 
     // Metodo para crear un nuevo usuario
@@ -93,7 +95,7 @@ class Users extends SessionController
         // construirmos el archivo final
         $archivoDestino = $directorioDestino . $hash;
         $uploadIsOk = false;
-        
+
         // luego verificamos si el archivo que se subio es una imagen valida
         $check = getimagesize($foto['tmp_name']);
 
@@ -116,6 +118,10 @@ class Users extends SessionController
                 $fotoObjeto->setTipo($this->getPost('tipoFoto'));
             }
         }
+    }
+    
+    function getAllUsersRelations() { 
+        $res = [];
     }
 }
 
