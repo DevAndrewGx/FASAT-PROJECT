@@ -1,7 +1,7 @@
 <?php
 // controlador para modulos empleados
 
-class Users extends SessionController
+class Users extends SessionController 
 {
     private $user;
 
@@ -16,9 +16,7 @@ class Users extends SessionController
     function render()
     {
         error_log('Users::render -> Carga la pagina principal de los empleados');
-        $this->view->render('admin/gestionEmpleados', [ 
-            'users' => $this->getAllUsersRelations()
-        ]);
+        $this->view->render('admin/gestionEmpleados', []);
     }
 
     // Metodo para crear un nuevo usuario
@@ -119,10 +117,70 @@ class Users extends SessionController
             }
         }
     }
-    
-    function getAllUsersRelations() { 
-        $res = [];
+
+    public function getUsers()
+    {
+        header('Content-Type: application/json');
+
+        // Verificar si el usuario está autenticado
+        if (!$this->existsSession()) {
+            http_response_code(401); // Código de estado HTTP 401: No autorizado
+            echo json_encode(['error' => 'No autenticado']);
+            die();
+        }
+
+        // Obtener los parámetros enviados por DataTables
+        $draw = intval($_GET['draw']);
+        $start = intval($_GET['start']);
+        $length = intval($_GET['length']);
+        $search = $_GET['search']['value'];
+        $orderColumnIndex = intval($_GET['order'][0]['column']);
+        $orderDir = $_GET['order'][0]['dir'];
+        $columns = $_GET['columns'];
+        $orderColumnName = $columns[$orderColumnIndex]['data'];
+
+        // Crear objeto del modelo
+        $userRelationObject = new JoinUserRelationsModel();
+
+        // Obtener datos filtrados
+        $usersData = $userRelationObject->cargarDatosEmpleados($length, $start, $orderColumnIndex, $orderDir, $search, $orderColumnName);
+
+        // Total de registros después de aplicar filtros de búsqueda
+        $totalFiltered = $userRelationObject->totalRegistrosFiltrados($search);
+
+        // Total de registros en la tabla
+        $totalRecords = $userRelationObject->totalRegistros();
+
+        $arrayDataUsers = json_decode(json_encode($usersData, JSON_UNESCAPED_UNICODE), true);
+
+        // Iterar sobre el arreglo y agregar 'options' a cada usuario
+        // for ($i = 0; $i < count($arrayDataUsers); $i++) {
+        //     $arrayDataUsers[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
+        //     $arrayDataUsers[$i]['options'] = '
+        //     <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataUsers[$i]['documento'] . '" >
+        //         <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
+        //     </a>
+        //     <a class="me-3 botonActualizar" data-id="' . $arrayDataUsers[$i]['documento'] . '" href="editarEmpleado.php">
+        //         <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
+        //     </a>
+        //     <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataUsers[$i]['documento'] . '" href="editarEmpleado.php">
+        //         <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
+        //     </a>
+        // ';
+        // }
+
+        $response = [
+            "draw" => $draw,
+            "recordsTotal" => $totalRecords,
+            "recordsFiltered" => $totalFiltered,
+            "data" => $arrayDataUsers
+        ];
+
+        echo json_encode($response, JSON_UNESCAPED_UNICODE);
+        die();
     }
-}
+
+
+}   
 
 

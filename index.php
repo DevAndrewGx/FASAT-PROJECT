@@ -34,6 +34,7 @@
     include_once 'models/usermodel.php';
     include_once 'models/fotomodel.php';
     include_once 'models/joinUserRolModel.php';
+    include_once 'models/joinUserRelationsModel.php';
 
     // Esto va hacer que automaticamente se ejecute el contructor y empieze a hacer las validaciones
     $app = new App();   

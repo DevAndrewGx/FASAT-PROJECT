@@ -12,6 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="<?php echo constant('URL'); ?>">
     <title>FAST | EMPLEADOS</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS de Bootstrap -->
@@ -201,7 +202,7 @@
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
     <!-- TESTING BACKEND DATATABLE FEATURES -->
-    <script type="module">
+    <!-- <script type="module">
         import {
             mostrarError,
             mostrarExito,
@@ -222,9 +223,9 @@
                         "data": null,
                         "render": function(data, type, row) {
                             return `<label class="checkboxs">
-                      <input type="checkbox">
-                      <span class="checkmarks"></span>
-                  </label>`;
+                        <input type="checkbox">
+                        <span class="checkmarks"></span>
+                        </label>`;
                         }
                     },
                     {
@@ -300,7 +301,9 @@
                 window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
             });
         });
-    </script>
+    </script> -->
+
+    <script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
 
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 

@@ -23,20 +23,20 @@ class SessionController extends Controller
         $this->init();
     }
 
-    public function getUserSession()
-    {
-        return $this->userSession;
-    }
+    // public function getUserSession()
+    // {
+    //     return $this->userSession;
+    // }
 
-    public function getUserCorreo()
-    {
-        return $this->userCorreo;
-    }
+    // public function getUserCorreo()
+    // {
+    //     return $this->userCorreo;
+    // }
 
-    public function getUserId()
-    {
-        return $this->userid;
-    }
+    // public function getUserId()
+    // {
+    //     return $this->userid;
+    // }
 
     // Esta funcion la vamos a implementar para leer el JSON y asi dar los permisos
     private function init()
@@ -198,9 +198,10 @@ class SessionController extends Controller
 
         for ($i = 0; $i < sizeof($this->sites); $i++) {
             // aqui verificamos el rol y el sitio, entonces si, si tiene acceso retornamos true
-            if ($currentURL === $this->sites[$i]['site'] && $this->sites[$i]['role'] === $role) {
+            if ($currentURL == $this->sites[$i]['site'] && $this->sites[$i]['role'] == $role) {
+                error_log("SessionController::isAuthorized -> Role ".$role." is validate for this site ".$currentURL);
                 return true;
-            }
+            }   
         }
         return false;
     }

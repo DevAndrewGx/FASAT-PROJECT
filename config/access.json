@@ -13,10 +13,16 @@
             "description": "Login para la autenticacion"
         },
         {
-            "site": "dashboard", 
+            "site": "admin", 
             "access": "private", 
             "role": "admin",
             "description": "Dashboard del admin para gestionar la app"
+        },
+        {
+            "site": "users", 
+            "access": "private", 
+            "role": "admin",
+            "description": "Datatable que muestra los empleados"
         },
         {
             "site": "mesero", 
