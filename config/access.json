@@ -15,13 +15,13 @@
         {
             "site": "admin", 
             "access": "private", 
-            "role": "admin",
+            "role": "Administrador",
             "description": "Dashboard del admin para gestionar la app"
         },
         {
             "site": "users", 
             "access": "private", 
-            "role": "admin",
+            "role": "Administrador",
             "description": "Datatable que muestra los empleados"
         },
         {
@@ -39,7 +39,7 @@
         {
             "site": "dashboard", 
             "access": "private", 
-            "role": "admin",
+            "role": "Administrador",
             "description": "Admin data sitio"
         }
     ],

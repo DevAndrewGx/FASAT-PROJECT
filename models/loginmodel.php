@@ -18,26 +18,20 @@
             // cuando vamos acceder a la bd siempre usamos trycatch
             try {
                 //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
-                $query = $this->prepare('SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol WHERE u.correo  = :correo');
-                $query->execute([
-                    'correo' => $correo
-                ]);
+                $userObject = new JoinUserRolModel();
+                $user = $userObject->get($correo);
 
-                if ($query->rowCount() == 1) {
-                    $item = $query->fetch(PDO::FETCH_ASSOC);
-
-                    $user = new JoinUserRolModel();
-                    $user->from($item);
+                if ($user) {
 
                     error_log('login: user correo ' . $user->getCorreo());
 
                     if ($password == $user->getPassword()) {
-                        error_log('login: success');
-                        //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
-                        return $user;
+                        error_log('loginByCorreo: success');
+                        return $user; // Retorna el objeto $user si la contraseña coincide
                         //return $user->getId();
                     } else {
-                        return NULL;
+                        error_log('loginByCorreo: contraseña incorrecta');
+                        return null; // Retorna NULL si la contraseña no coincide
                     }
                 }
             } catch (PDOException $e) {

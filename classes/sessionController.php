@@ -70,45 +70,46 @@ class SessionController extends Controller
      */
 
     // funcion para implementar el flujo de autorizacion para entrar a las paginas
-    function validateSession()
+    public function validateSession()
     {
         error_log('SessionController::validateSession()');
-        //Si existe la sesión
-        if ($this->existsSession()) {
-            // obtenemos el rol para los permisos, con todo el usuario.
-            $role = $this->getUserSessionData()->getIdRol();
 
-            error_log("sessionController::validateSession(): username:" . $this->user->getCorreo() . " - role: " . $this->user->getIdRol());
-            // validamos si a la pagina a entrar es publica o privada
+        // Verificar si la solicitud es AJAX
+        $isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+
+        // Si existe la sesión
+        if ($this->existsSession()) {
+            // Obtenemos el rol para los permisos, con todo el usuario.
+            $role = $this->getUserSessionData()->getRol();
+
+            error_log("sessionController::validateSession(): username:" . $this->user->getCorreo() . " - role: " . $this->user->getRol());
+
             if ($this->isPublic()) {
-                // si la pagina es publica entonces que lo rediriga a la pagina principal de cada rol
+                // Si la página es pública entonces que lo rediriga a la página principal de cada rol
                 $this->redirectDefaultSiteByRole($role);
                 error_log("SessionController::validateSession() => sitio público, redirige al main de cada rol");
             } else {
-                // si no es public hacemos la validacion de usuario para el login
+                // Validación de usuario para el login
                 if ($this->isAuthorized($role)) {
                     error_log("SessionController::validateSession() => autorizado, lo deja pasar");
-                    //si el usuario está en una página de acuerdo
-                    // a sus permisos termina el flujo
                 } else {
                     error_log("SessionController::validateSession() => no autorizado, redirige al main de cada rol");
-                    // si el usuario no tiene permiso para estar en
-                    // esa página lo redirije a la página de inicio
                     $this->redirectDefaultSiteByRole($role);
                 }
             }
         } else {
-            //No existe ninguna sesión
-            //se valida si el acceso es público o no
+            // No existe ninguna sesión
             if ($this->isPublic()) {
                 error_log('SessionController::validateSession() public page');
-                //la pagina es publica
-                //no pasa nada
             } else {
-                //la página no es pública
-                //redirect al index de mi pagina 
-                error_log('SessionController::validateSession() redirect al login');
-                header('location: ' . constant('URL') . '');
+                if ($isAjax) {
+                    // Si es una solicitud AJAX y no hay sesión, responde con un código de estado HTTP 401
+                    http_response_code(401);
+                    echo json_encode(['error' => 'Usuario no autenticado']);
+                } else {
+                    error_log('SessionController::validateSession() redirect al login');
+                    header('location: ' . constant('URL') . 'login');
+                }
             }
         }
     }
@@ -137,7 +138,7 @@ class SessionController extends Controller
     function getUserSessionData()
     {
         $id = $this->session->getCurrentUser();
-        $this->user = new UserModel();
+        $this->user = new JoinUserRolModel();
 
         // obtenemos la data del usuario que tiene session en user apartir del id
         $this->user->get($id);
@@ -151,11 +152,9 @@ class SessionController extends Controller
     public function initialize($user)
     {
         error_log("sessionController::initialize(): user: " . $user->getNombres());
-        $this->session->setCurrentUser($user->getDocumento());
+        $this->session->setCurrentUser($user->getCorreo());
         $this->authorizeAccess($user->getRol());
     }
-
-
     
     // funcion para validar si una pagina es publica o no
     private function isPublic()
@@ -179,14 +178,13 @@ class SessionController extends Controller
     {
         $url = '';
         for ($i = 0; $i < sizeof($this->sites); $i++) {
-
-            // dependiendo del rol, lo redirijimos a una pagina u otra
+            // Dependiendo del rol, lo redirigimos a una página u otra
             if ($this->sites[$i]['role'] === $role) {
-                $url = '/manage/' . $this->sites[$i]['site'];
+                $url = '/' . $this->sites[$i]['site'];
                 break;
-            } 
+            }
         }
-        // redirigimos finalmente con url mapeada
+        // Redirigimos finalmente con URL mapeada
         header('location: ' . $url);
     }
 
@@ -201,7 +199,9 @@ class SessionController extends Controller
             if ($currentURL == $this->sites[$i]['site'] && $this->sites[$i]['role'] == $role) {
                 error_log("SessionController::isAuthorized -> Role ".$role." is validate for this site ".$currentURL);
                 return true;
-            }   
+            }else {
+                error_log("SessionController::isAuthorized -> Role " . $role . " isn't validate for this site " . $currentURL);
+            }  
         }
         return false;
     }

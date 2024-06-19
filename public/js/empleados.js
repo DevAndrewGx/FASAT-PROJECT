@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             {"data":"correo"},
             {"data":"estado"},
             {"data":"rol"},
-            {"data":"fecha_de_creacion"},
-            {"data":"acciones"}
+            {"data":"fechaCreacion"},
+            {"data":"options"}
         ],
         "columnDefs": [{
             "targets": [0, 9],
