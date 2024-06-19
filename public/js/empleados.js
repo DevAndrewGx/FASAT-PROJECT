@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const baseUrl = document.querySelector('meta[name="base-url"]').getAttribute('content');
     let dataTable = $("#data-empleados").DataTable({
+        
         "responsive": true,
         "processing": true,
         "serverSide": true,
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 "data": null,
                 "render": function(data, type, row) {
-                    return '<img src="' + row.foto + '" alt="Foto" style="width:30px; height:30px; border-radius:50%;"> ' + row.nombres;
+                    return '<img src="'+baseUrl+'public/imgs/uploads/' + row.foto + '" alt="Foto" style="width:45px; height:45px; border-radius:50%;"> ' + row.nombres;
                 }
             },
             {"data":"apellidos"},
@@ -39,5 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "targets": [0, 9],
             "orderable": false
         }],
-    });
+       
+    }); 
 });

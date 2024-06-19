@@ -98,8 +98,25 @@ td {
     text-align: left;
 }
 
-table#data-empleados thead {
-    background-color: red !important;
+table#data-empleados thead tr th {
+    background-color: #fafbfe !important;
+    border: 0;
+    border-bottom: 2px solid #e9ecef;
+}
+
+table#data-empleados tbody tr td {
+    padding: 10px;
+    color: #637381;
+    font-weight: 500;
+    border: 0;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+    white-space: nowrap;
+    
+}
+
+table#data-empleados tbody tr:hover > td {
+    background-color: #f5f5f5;
 }
 
 
@@ -790,7 +807,7 @@ main #orders-employees #orders p {
 
 .page-wrapper {
     margin: 0 0 0 265px;
-    padding: 60px 0 0;
+    padding: 45px 0 0;
     position: relative;
     left: 0;
     -webkit-transition: all 0.2s ease;
@@ -824,7 +841,7 @@ main #orders-employees #orders p {
     margin: 30px 0 25px;
     border: 1px solid #e8ebed;
     border-radius: 6px;
-    padding: 25px;
+    padding: 15px;
 }
 
 .card .card-body {
@@ -908,18 +925,8 @@ main .table tr {
     border-bottom: 0;
 }
 
-main table.dataTable tbody > tr:hover {
-    background-color: #f5f5f5;
-}
 
-.table tbody tr td {
-    padding: 10px;
-    color: #637381;
-    font-weight: 500;
-    border-bottom: 1px solid #e9ecef;
-    vertical-align: middle;
-    white-space: nowrap;
-}
+
 
 table .checkboxs {
     position: relative;
@@ -999,9 +1006,16 @@ div.dt-container div.dt-search input {
     border: 1px solid #919eab52;
     width: 200px;
     border-radius: 5px;
-    padding: 0 5px 0 30px;
+    padding: 0 2px 0 30px;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
+
+div.dt-container div.dt-search input:focus { 
+    outline: none;
+    box-shadow: none;
+}
+
 
 /* END STYLES FOR FORMS AND TABLES */
 
