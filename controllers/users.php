@@ -27,11 +27,16 @@ class Users extends SessionController
         if(!$this->existPOST(['documento', 'nombres', 'apellidos', 'telefono', 'email', 'rol', 'estado', 'password', 'validarPassword'] && !$this->existFILES('foto'))) {
             // Redirigimos otravez al dashboard
             error_log('Users::createUser -> Hay algun error en los parametros enviados en el formulario');
+
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_EMPTY]);
             return;
         }
 
         if($this->user == NULL) {
             error_log('Users::createUser -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
             return;
         }
 
@@ -66,15 +71,21 @@ class Users extends SessionController
 
                 if ($userModel->save()) {
                     error_log('Users::createUser -> Se guardó el usuario correctamente');
-                    $this->redirect('users', []);
+                    echo json_encode(['status' => true, 'message' => SuccessMessages::SUCCESS_ADMIN_NEWDATAUSER]);
+                    return;
+                    // $this->redirect('users', []);
                 } else {
                     error_log('Users::createUser -> No se guardó el usuario');
+                    echo json_encode(['status' => false, 'message' =>ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                    return;
                 }
             } else {
                 error_log('Users::createUser -> No se obtuvo el id de la foto');
+                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_PHOTO]);
             }
         } else {
             error_log('Users::createUser -> No se guardó la foto correctamente');
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_PHOTO]);
         }
     }
     

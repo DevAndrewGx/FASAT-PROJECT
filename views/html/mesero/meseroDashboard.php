@@ -71,18 +71,13 @@ require_once('../../../models/Sesion.php');
                 </ul>
             </nav>
         </header>
-
         <aside class="left-section">
-
             <div class="sidebar">
 
                 <div class="logo">
                     <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
                     <a href="#"><img src="../../imgs/LOGOf.png" alt="logo"></a>
                 </div>
-
-
-
 
                 <div class="item" id="active">
                     <i class='bx bx-food-menu'></i>

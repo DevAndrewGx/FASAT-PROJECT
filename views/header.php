@@ -22,7 +22,7 @@
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="user-img">
-                            <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="admin">
+                            <img src="<?php echo constant('URL'); ?>public/imgs/uploads/6287c061ca1c7859774d2e4f6f9e31e1.jpg" alt="admin">
                             <span class="status1 online"></span></span>
                         </span>
                     </a>
