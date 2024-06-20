@@ -5,6 +5,7 @@ $(document).ready(function () {
         responsive: true,
         processing: true,
         serverSide: true,
+        pageLength: 10, // Muestra 10 registros por página
         language: {
             lengthMenu: "Mostrar _MENU_ registros",
             zeroRecords: "No se encontraron resultados",
@@ -93,12 +94,14 @@ $(document).ready(function () {
                         icon: "error",
                         confirmButtonText: "Ok",
                     }).then((result) => {
-                        // Cerrar el modal
-                        $("#formUsuario").closest(".modal").modal("hide");
-                        // Limpiar el formulario
-                        $("#formUsuario")[0].reset();
+                        if(result.isConfirmed) {
+                            // Cerrar el modal
+                            $("#formUsuario").closest(".modal").modal("hide");
+                            // Limpiar el formulario
+                            $("#formUsuario")[0].reset();
+                        }
+                       
                     });
-
                 }
             },
             error: function () {
@@ -108,10 +111,12 @@ $(document).ready(function () {
                     icon: "error",
                     confirmButtonText: "Ok",
                 }).then((result) => {
-                    // Cerrar el modal
-                    $("#formUsuario").closest(".modal").modal("hide");
-                    // Limpiar el formulario
-                    $("#formUsuario")[0].reset();
+                    if(result.isConfirmed) {
+                        // Cerrar el modal
+                        $("#formUsuario").closest(".modal").modal("hide");
+                        // Limpiar el formulario
+                        $("#formUsuario")[0].reset();
+                    }
                 });
             },
         });
