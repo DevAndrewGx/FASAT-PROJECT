@@ -76,31 +76,32 @@ $(document).ready(function () {
                         title: "Éxito",
                         text: data.message,
                         icon: "success",
+                        allowOutsideClick: false,
                         confirmButtonText: "Ok",
-                    }).then((result) => { 
-                        if(result.isConfirmed) {
+                    }).then((result) => {
+                        if (result.isConfirmed) {
                             // ahora cerramos el modal si el resultado es confirmado
                             $("#formUsuario").closest(".modal").modal("hide");
                             // Limpiar el formulario
                             $("#formUsuario")[0].reset();
+                            // Recargar la tabla
+                            dataTable.ajax.reload(null, false);
                         }
                     });
-
-                }
-                 else {
+                } else {
                     Swal.fire({
                         title: "Error",
                         text: data.message,
                         icon: "error",
+                        allowOutsideClick: false,
                         confirmButtonText: "Ok",
                     }).then((result) => {
-                        if(result.isConfirmed) {
+                        if (result.isConfirmed) {
                             // Cerrar el modal
                             $("#formUsuario").closest(".modal").modal("hide");
                             // Limpiar el formulario
                             $("#formUsuario")[0].reset();
                         }
-                       
                     });
                 }
             },
@@ -109,9 +110,10 @@ $(document).ready(function () {
                     title: "Error",
                     text: "Hubo un problema con la solicitud.",
                     icon: "error",
+                    allowOutsideClick: false,
                     confirmButtonText: "Ok",
                 }).then((result) => {
-                    if(result.isConfirmed) {
+                    if (result.isConfirmed) {
                         // Cerrar el modal
                         $("#formUsuario").closest(".modal").modal("hide");
                         // Limpiar el formulario
@@ -120,5 +122,80 @@ $(document).ready(function () {
                 });
             },
         });
+    });
+
+    // function para borrar un usuario
+    $("#data-empleados").on("click", ".botonEliminar", function (e) {
+        e.preventDefault();
+        const id_usuario = $(this).data("id");
+        const id_foto = $(this).data("idfoto");
+        console.log(id_usuario);
+        console.log(id_foto);
+
+        // const baseUrl = $('meta[name="base-url"]').attr("content");
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: baseUrl + "users/delete",
+                    type: "POST",
+                    processData: false,
+                    contentType: "application/json",
+                    data: JSON.stringify({ id_usuario: id_usuario, id_foto: id_foto }),
+                    success: function (response) {
+                        // convertimos la data a un JSON
+                        let data = JSON.parse(response);
+
+                        if (data.success) {
+                            Swal.fire({
+                                title: "Exito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // Cerrar el modal
+                                    $("#formUsuario")
+                                        .closest(".modal")
+                                        .modal("hide");
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                            });
+                        }
+                    },
+                    error: function (response) {
+                        // convertimos la data a un JSON
+                        let data = JSON.parse(response);
+
+                        Swal.fire({
+                            title: "Error",
+                            text: data.message,
+                            icon: "error",
+                            allowOutsideClick: false,
+                        });
+                    },
+                });
+            }
+        });
+    });
+
+    // function para actualizar la data del usuario
+    $("#data-empleados").on("click", ".botonActualizar", function (e) {
+        e.preventDefault();
+        const id_usuario = $(this).data("id");
+        window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
     });
 });

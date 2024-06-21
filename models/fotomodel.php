@@ -1,6 +1,6 @@
 <?php 
 
-    class FotoModel extends Model  { 
+    class FotoModel extends Model   { 
         
         // creamos los atributos de la clase
 
@@ -95,6 +95,21 @@
                 error_log('FOTOMODEL::getAll->PDOException'.$e);
                 // salimos de la funcion
                 return;
+            }
+        }
+
+        // funcion para eliminar un usuario
+        public function delete($id) {
+            try {
+                $query = $this->prepare('DELETE FROM fotos WHERE id_foto = :id');
+                $query->execute([
+                    'id'=> $id
+                ]);
+                
+                return true;
+            }catch(PDOException $e) {
+                error_log('FOTOMODEL::delete->PDOException' . $e);
+                return false;
             }
         }
 

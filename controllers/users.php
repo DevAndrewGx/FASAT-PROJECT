@@ -43,7 +43,7 @@ class Users extends SessionController
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
         error_log('Users::createUser -> Es posible crear un nuevo usuario');
         // creamos un objeto de tipo user
-        $userModel = new UserModel();
+        $userModel = new UsersModel();
         // seteamos la data de un nuevo objeto
         $userModel->setDocumento($this->getPost('documento'));
         $userModel->setNombres($this->getPost('nombres'));
@@ -71,24 +71,24 @@ class Users extends SessionController
 
                 if ($userModel->save()) {
                     error_log('Users::createUser -> Se guardó el usuario correctamente');
-                    echo json_encode(['status' => true, 'message' => SuccessMessages::SUCCESS_ADMIN_NEWDATAUSER]);
+                    echo json_encode(['status' => true, 'message' => "El usuario fue creado exitosamente!"]);
                     return;
                     // $this->redirect('users', []);
                 } else {
                     error_log('Users::createUser -> No se guardó el usuario');
-                    echo json_encode(['status' => false, 'message' =>ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                    echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
                     return;
                 }
             } else {
                 error_log('Users::createUser -> No se obtuvo el id de la foto');
-                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_PHOTO]);
+                echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
             }
         } else {
             error_log('Users::createUser -> No se guardó la foto correctamente');
-            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_PHOTO]);
+            echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
         }
     }
-    
+
     function createPhoto(FotoModel $fotoObjeto, $foto) {
         // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
         $foto = isset($_FILES[$foto]) ? $_FILES[$foto]: null;
@@ -172,10 +172,10 @@ class Users extends SessionController
                 <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataUsers[$i]['documento'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-id="' . $arrayDataUsers[$i]['documento'] . '" href="editarEmpleado.php">
+                <a class="me-3 botonActualizar" data-id="' . $arrayDataUsers[$i]['documento'] . '" data-idfoto="' . $arrayDataUsers[$i]['idFoto'] . '" href="editarEmpleado.php">
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
-                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataUsers[$i]['documento'] . '" href="editarEmpleado.php">
+                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataUsers[$i]['documento'] . '" data-idfoto="' . $arrayDataUsers[$i]['idFoto'] . '" href="editarEmpleado.php">
                     <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                 </a>
             ';
@@ -194,6 +194,44 @@ class Users extends SessionController
             error_log('Error en getUsers: ' . $e->getMessage());
             echo json_encode(['error' => $e->getMessage()]);
         }
+      
+    }
+
+    // funcion para verificar y borrar usuarios
+
+    function delete()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        // Verificar si los datos fueron recibidos correctamente
+        if (isset($data['id_usuario']) && isset($data['id_foto'])) {
+
+            $idUser = $data['id_usuario'];
+            $idFoto = $data['id_foto'];
+            var_dump($idUser);
+            var_dump($idFoto);
+            // Creando un objeto de tipo FotoModel
+            $fotoModel = new FotoModel();
+            // Eliminar la foto asociada
+            if ($fotoModel->delete($idFoto)) {
+                // Eliminar el usuario
+                $res = $this->model->delete($idUser);
+                if ($res) {
+                    error_log('Users::deleteUser -> Se eliminó el usuario correctamente');
+                    echo json_encode(['status' => true, 'message' => "El usuario fue eliminado exitosamente!"]);
+                    return;
+                } else {
+                    error_log('Users::deleteUser -> No se pudo eliminar el usuario, intente nuevamente');
+                    echo json_encode(['status' => false, 'message' => "No se pudo eliminar el usuario, intente nuevamente!"]);
+                    return;
+                }
+            } else {
+                error_log('Users::delete -> No se pudo eliminar la foto, el ID de la foto es -> ' . $idFoto);
+                echo json_encode(['status' => false, 'message' => "No se eliminó la foto correctamente. Código: 500"]);
+            }
+
+        }
+
       
     }
 

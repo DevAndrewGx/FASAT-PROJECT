@@ -24,6 +24,6 @@ include_once 'libs/imodel.php';
         function prepare($query) { 
             return $this->db->connect()->prepare($query);
         }
-
+        
     }
 ?>

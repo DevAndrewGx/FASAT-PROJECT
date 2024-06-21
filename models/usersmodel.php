@@ -1,6 +1,6 @@
 <?php
     // Todos los modelos heredan de la clase model y implementar la interfaz IModel la cual nos permitira hacer el crud.
-    class UserModel extends Model implements IModel{
+    class UsersModel extends Model implements IModel{
 
         // creamos los atributos de nuestra clase que son las columnas de nuestra base de datos
         private $idRol;
@@ -300,6 +300,22 @@
         public function getDireccion(){       return $this->direccion;}
         public function getCorreo(){          return $this->correo;}
         public function getPassword(){        return $this->password;}
+
+
+        public function beginTransaction() {
+            $this->beginTransaction();
+        }
+
+        public function commit() {
+            $this->commit();
+        }
+
+        public function rollBack() {
+            $this->rollBack();
+        }
     }
+
+
+    
 
 ?>

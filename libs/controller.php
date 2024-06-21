@@ -118,6 +118,11 @@
             // utilizamos header para redirigir al usuario a la pagina que esta especificando
             header('Location: '. constant('URL') . $route . $params);
         }
+
+        
+
+
+        
     }
 
 ?>

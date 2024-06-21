@@ -25,13 +25,13 @@
 
                     error_log('login: user correo ' . $user->getCorreo());
 
-                    if ($password == $user->getPassword()) {
-                        error_log('loginByCorreo: success');
-                        return $user; // Retorna el objeto $user si la contraseña coincide
+                    if (password_verify($password, $user->getPassword())) {
+                        error_log('login: success');
+                        //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
+                        return $user;
                         //return $user->getId();
                     } else {
-                        error_log('loginByCorreo: contraseña incorrecta');
-                        return null; // Retorna NULL si la contraseña no coincide
+                        return NULL;
                     }
                 }
             } catch (PDOException $e) {

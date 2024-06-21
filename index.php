@@ -31,7 +31,7 @@
 
     require_once('config/config.php');
 
-    include_once 'models/usermodel.php';
+    include_once 'models/usersmodel.php';
     include_once 'models/fotomodel.php';
     include_once 'models/joinUserRolModel.php';
     include_once 'models/joinUserRelationsModel.php';
