@@ -40,10 +40,6 @@
             $this->correo = '';
             $this->password = '';
 
-            // $this->rol = '';
-            // $this->estado = '';
-            // $this->foto = '';
-            // $this->horario = '';
 
         }
 
@@ -92,7 +88,7 @@
                 // FETCH_ASSOCretorna un objeto de clave y valor
                 while($row = $query->fetch(PDO::FETCH_ASSOC)) {
                     // // a cada elemento de la db le creamos un nuevo UserModel para rellenar sus respectivos campos con los setters
-                    $item = new UserModel();
+                    $item = new UsersModel();
 
                     $item->setIdRol($row['id_rol']);
                     $item->setIdEstado($row['id_estado']);
@@ -153,16 +149,16 @@
         // funcion para eliminar un usuario
         public function delete($documento) {
             try {
-                $query = $this->prepare('DELETE FROM usuarios WHERE documento= :documento');
+                error_log("UserModel::delete -> Si esta borrando el usuario :)");
+                $query = $this->prepare('DELETE FROM usuarios WHERE documento = :documento');
                 $query->execute([
                     'documento'=> $documento
                 ]);
 
-
-                return;
+                return true;
             }catch(PDOException $e) {
                 error_log('USERMODEL::delete->PDOException' . $e);
-                return;
+                return false;
             }
         }
 

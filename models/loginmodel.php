@@ -25,7 +25,7 @@
 
                     error_log('login: user correo ' . $user->getCorreo());
 
-                    if (password_verify($password, $user->getPassword())) {
+                    if ($password == $user->getPassword()) {
                         error_log('login: success');
                         //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
                         return $user;
@@ -55,7 +55,7 @@
                 if ($query->rowCount() == 1) {
                     $item = $query->fetch(PDO::FETCH_ASSOC);
 
-                    $user = new UserModel();
+                    $user = new UsersModel();
                     $user->from($item);
 
                     error_log('login: user documento' . $user->getDocumento());

@@ -208,8 +208,6 @@ class Users extends SessionController
 
             $idUser = $data['id_usuario'];
             $idFoto = $data['id_foto'];
-            var_dump($idUser);
-            var_dump($idFoto);
             // Creando un objeto de tipo FotoModel
             $fotoModel = new FotoModel();
             // Eliminar la foto asociada
@@ -219,11 +217,11 @@ class Users extends SessionController
                 if ($res) {
                     error_log('Users::deleteUser -> Se eliminó el usuario correctamente');
                     echo json_encode(['status' => true, 'message' => "El usuario fue eliminado exitosamente!"]);
-                    return;
+                    return true;
                 } else {
                     error_log('Users::deleteUser -> No se pudo eliminar el usuario, intente nuevamente');
                     echo json_encode(['status' => false, 'message' => "No se pudo eliminar el usuario, intente nuevamente!"]);
-                    return;
+                    return false;
                 }
             } else {
                 error_log('Users::delete -> No se pudo eliminar la foto, el ID de la foto es -> ' . $idFoto);

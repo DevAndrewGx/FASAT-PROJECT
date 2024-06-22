@@ -152,22 +152,23 @@ $(document).ready(function () {
                     success: function (response) {
                         // convertimos la data a un JSON
                         let data = JSON.parse(response);
-
-                        if (data.success) {
+                        if (data.status) {
                             Swal.fire({
-                                title: "Exito",
+                                title: "Éxito",
                                 text: data.message,
                                 icon: "success",
                                 allowOutsideClick: false,
+                                confirmButtonText: "Ok",
                             }).then((result) => {
                                 if (result.isConfirmed) {
                                     // Cerrar el modal
-                                    $("#formUsuario")
-                                        .closest(".modal")
-                                        .modal("hide");
+                                    $("#formUsuario").closest(".modal").modal("hide");
+                                    // Recargar la tabla
+                                    dataTable.ajax.reload(null, false);
                                 }
                             });
                         } else {
+                            console.log("Error here");
                             Swal.fire({
                                 title: "Error",
                                 text: data.message,
@@ -179,7 +180,7 @@ $(document).ready(function () {
                     error: function (response) {
                         // convertimos la data a un JSON
                         let data = JSON.parse(response);
-
+                        console.log("Error here");
                         Swal.fire({
                             title: "Error",
                             text: data.message,
