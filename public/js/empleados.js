@@ -197,6 +197,52 @@ $(document).ready(function () {
     $("#data-empleados").on("click", ".botonActualizar", function (e) {
         e.preventDefault();
         const id_usuario = $(this).data("id");
-        window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
+        $('#titleModal').html("Actualizar usuario");
+        $('.modal-header').removeClass("headerRegister").addClass("headerUpdate");
+        $('#btnText').text("Actualizar");
+
+        // enviamos la peticion para traer la data y establecerla en el modal
+        $.ajax({
+            url: baseUrl + "users/getUsers",
+            type: "GET",
+            dataType: "json",
+            data: JSON.stringify({ id_usuario: id_usuario }),
+            success: function (response) {
+                console.log(response); // Para ver la respuesta completa
+                if (response.status) {
+                    console.log("Response is success");
+
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data && response.data.length > 0) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        var userData = response.data[0];
+
+                        $("#identificacion").val(userData.documento);
+                        console.log(userData.documento);
+                        $("#nombres").val(userData.nombres);
+                        $("#apellidos").val(userData.apellidos);
+                        $("#telefono").val(userData.telefono);
+                        $("#email").val(userData.correo);
+                        $("#estado").val(userData.idEstado); // Asumiendo que 'estado' es el campo correcto
+                        $("#rol").val(userData.idRol); // Asumiendo que 'rol' es el campo correcto
+                        console.log((userData.rol));
+                        $("#fechaCreacion").val(userData.fechaCreacion); // Asumiendo que 'fechaCreacion' es el campo correcto
+
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                $("#modalFormUsuario").modal("show");
+            },
+        });
     });
 });

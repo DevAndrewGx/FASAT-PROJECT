@@ -105,37 +105,35 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="txtIdentificacion">Identificación</label>
-                                <input type="text" class="form-control" id="txtIdentificacion" name="documento" required="">
+                                <label for="identificacion">Identificación</label>
+                                <input type="text" class="form-control" id="identificacion" name="documento" required="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="txtNombre">Nombres</label>
-                                <input type="text" class="form-control valid validText" id="txtNombre" name="nombres" required="">
+                                <label for="nombres">Nombres</label>
+                                <input type="text" class="form-control valid validText" id="nombres" name="nombres" required="">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="txtApellido">Apellidos</label>
-                                <input type="text" class="form-control valid validText" id="txtApellido" name="apellidos" required="">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="form-control valid validText" id="apellidos" name="apellidos" required="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="txtTelefono">Teléfono</label>
-                                <input type="text" class="form-control valid validNumber" id="txtTelefono" name="telefono" required="" onkeypress="return controlTag(event);">
+                                <label for="telefono">Teléfono</label>
+                                <input type="text" class="form-control valid validNumber" id="telefono" name="telefono" required="">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="txtEmail">Email</label>
-                                <input type="email" class="form-control valid validEmail" id="txtEmail" name="email" required="">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control valid validEmail" id="email" name="email" required="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="rol">Rol</label>
-                                <!-- <select class="form-control" data-live-search="true" id="listRolid" name="listRolid" required>
-                                </select> -->
                                 <select class="form-control select" name="rol" id="rol" require>
-                                    <option>Seleccione</option>
+                                    <option selected="true">Seleccione</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Mesero</option>
                                     <option value="3">Cheff</option>
@@ -143,8 +141,8 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="listStatus">Estado</label>
-                                <select class="form-control selectpicker" id="listStatus" name="estado" required>
+                                <label for="estado">Estado</label>
+                                <select class="form-control selectpicker" id="estado" name="estado" required>
                                     <option>Seleccione</option>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
@@ -154,8 +152,8 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="txtPassword">Contraseña</label>
-                                <input type="password" class="form-control" id="txtPassword" name="password">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password">
 
                             </div>
 
@@ -170,7 +168,7 @@
                             <div class="form-group">
                                 <label>Foto de perfil</label>
                                 <div class="image-upload image-upload-new col-md-6">
-                                    <input type="file" name="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
+                                    <input type="file" name="foto" id="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
                                     <div class="image-uploads">
                                         <img src="<?php echo constant('URL') ?>public/imgs/icons/upload.svg" alt="img">
                                         <h4>Arrastra el archivo</h4>
@@ -201,110 +199,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
-    <!-- TESTING BACKEND DATATABLE FEATURES -->
-    <!-- <script type="module">
-        import {
-            mostrarError,
-            mostrarExito,
-            mostrarConfirmacionBorrar
-        } from '<?php echo constant('URL'); ?>public/js/alertas.js';
-        $(document).ready(function() {
-            let dataTable = $('#data-empleados').DataTable({
-                "responsive": true,
-                "processing": true,
-                "serverSide": true,
-                "order": [],
-                "ajax": {
-                    "url": "<?php echo constant('URL') ?>controllers/mostrarEmpleados.php",
-                    "type": "POST",
-                    "dataType": "json"
-                },
-                "columns": [{
-                        "data": null,
-                        "render": function(data, type, row) {
-                            return `<label class="checkboxs">
-                        <input type="checkbox">
-                        <span class="checkmarks"></span>
-                        </label>`;
-                        }
-                    },
-                    {
-                        "data": "foto",
-                        "render": function(data, type, row) {
-                            return `<a href="#" class="employee-img">
-                      <img src="${data}" alt="employee">
-                  </a>
-                  <a href="#">${row.nombres}</a>`;
-                        }
-                    },
-                    {
-                        "data": "apellidos"
-                    },
-                    {
-                        "data": "documento"
-                    },
-                    {
-                        "data": "telefono"
-                    },
-                    {
-                        "data": "correo"
-                    },
-                    {
-                        "data": "estado"
-                    },
-                    {
-                        "data": "rol"
-                    },
-                    {
-                        "data": "fecha_de_creacion"
-                    },
-                    {
-                        "data": null,
-                        "render": function(data, type, row) {
-                            return `<a class="me-3 confirm-text" href="javascript:void(0);" data-id="${row.id_usuario}">
-                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/eye.svg" alt="eye">
-                            </a>
-                            <a class="me-3 botonActualizar" data-id="${row.id_usuario}" href="editarEmpleado.php">
-                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/edit.svg" alt="eye">
-                            </a>
-                    
-                            <a class="me-3 confirm-text botonEliminar" data-id="${row.id_usuario}" href="editarEmpleado.php">
-                                <img src="<?php echo constant('URL') ?>/public/imgs/icons/trash.svg" alt="trash">
-                            </a>`;
-                        }
-                    }
-                ],
-                "columnDefs": [{
-                    "targets": [0, 9],
-                    "orderable": false
-                }],
-                "language": {
-                    "lengthMenu": "Mostrar _MENU_ registros",
-                    "zeroRecords": "No se encontraron resultados",
-                    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-                    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-                    "search": "Buscar:",
-                    "processing": "Procesando..."
-                }
-            });
-
-            $('#data-empleados').on('click', '.botonEliminar', function(e) {
-                e.preventDefault();
-                const id_usuario = $(this).data('id');
-                mostrarConfirmacionBorrar(id_usuario);
-            });
-
-            $('#data-empleados').on('click', '.botonActualizar', function(e) {
-                e.preventDefault();
-                const id_usuario = $(this).data('id');
-                window.location.href = `editarEmpleado.php?id_usuario=${id_usuario}`;
-            });
-        });
-    </script> -->
-
     <script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
-
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 
 </body>

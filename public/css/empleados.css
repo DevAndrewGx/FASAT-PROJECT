@@ -117,7 +117,7 @@
 
 /* STYLES FOR MODALS */
 
-.headerRegister, .header-primary { 
+.headerRegister, .header-primary, .headerUpdate { 
     background: #ff9f43;
     color: #fff;
 }

@@ -185,7 +185,8 @@ class Users extends SessionController
                 "draw" => $draw,
                 "recordsTotal" => $totalRecords,
                 "recordsFiltered" => $totalFiltered,
-                "data" => $arrayDataUsers
+                "data" => $arrayDataUsers,
+                "status" => true
             ];
 
             echo json_encode($response, JSON_UNESCAPED_UNICODE);
@@ -198,7 +199,6 @@ class Users extends SessionController
     }
 
     // funcion para verificar y borrar usuarios
-
     function delete()
     {
         $data = json_decode(file_get_contents('php://input'), true);
@@ -232,8 +232,6 @@ class Users extends SessionController
 
       
     }
-
-
 }   
 
 

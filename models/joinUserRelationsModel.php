@@ -79,7 +79,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
             'fechaCreacion' => $this->fechaCreacion,
             'idRol' => $this->idRol,
             'rol' => $this->rol,
-            'id_estado' => $this->idEstado,
+            'idEstado' => $this->idEstado,
             'estado' => $this->estado,
             'idFoto' => $this->idFoto,
             'foto' => $this->foto,

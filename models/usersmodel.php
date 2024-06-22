@@ -297,21 +297,5 @@
         public function getCorreo(){          return $this->correo;}
         public function getPassword(){        return $this->password;}
 
-
-        public function beginTransaction() {
-            $this->beginTransaction();
-        }
-
-        public function commit() {
-            $this->commit();
-        }
-
-        public function rollBack() {
-            $this->rollBack();
-        }
     }
-
-
-    
-
 ?>
