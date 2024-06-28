@@ -58,7 +58,7 @@ class Users extends SessionController
         $fotoModel = new FotoModel();
         // llamamos la funcion para crear una imagen
         // var_dump($this->getPost('foto'));
-        $this->createPhoto($fotoModel, 'foto');
+        $this->createPhoto($fotoModel);
 
         // insertamos primero la foto
         if ($fotoModel->save()) {
@@ -73,7 +73,6 @@ class Users extends SessionController
                     error_log('Users::createUser -> Se guardó el usuario correctamente');
                     echo json_encode(['status' => true, 'message' => "El usuario fue creado exitosamente!"]);
                     return;
-                    // $this->redirect('users', []);
                 } else {
                     error_log('Users::createUser -> No se guardó el usuario');
                     echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
@@ -89,9 +88,9 @@ class Users extends SessionController
         }
     }
 
-    function createPhoto(FotoModel $fotoObjeto, $foto) {
+    function createPhoto(FotoModel $fotoObjeto) {
         // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
-        $foto = isset($_FILES[$foto]) ? $_FILES[$foto]: null;
+        $foto = isset($_FILES['name']) ? $_FILES['name']: null;
         // creamos el directorio de destino donde queremos guardar la imagen
         $directorioDestino = 'public/imgs/uploads/'; 
 
@@ -235,8 +234,7 @@ class Users extends SessionController
         // recuperamos la data del cuerpo de la request
         $data = json_decode(file_get_contents('php://input'), true);
     
-        if (isset($data['pid_usuario'])) {
-            
+        if (isset($data['id_usuario'])) {
             $idUser = $data['id_usuario'];
             // Eliminar traer usuario
             $res = $this->model->get($idUser);
@@ -261,6 +259,69 @@ class Users extends SessionController
             return false;  
         }
     }
-}   
+
+    // funcion para actualizar data
+    function updateUser() {
+        error_log('Users::updateUser -> Funcion para actualizar un usuario');
+        // validamos la data que viene del formulario, en este caso la negamos para el primer caso
+        if (!$this->existPOST(['documento', 'nombres', 'apellidos', 'telefono', 'email', 'rol', 'estado', 'password', 'validarPassword'] && !$this->existFILES('foto'))) {
+            // Redirigimos otravez al dashboard
+            error_log('Users::udpateUser -> Hay algun error en los parametros enviados en el formulario');
+
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_EMPTY]);
+            return;
+        }
+        if ($this->user == NULL) {
+            error_log('Users::updateUser -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+            return;
+        }
+
+
+        // si no entra a niguna validacion, significa que la data y el usuario estan correctos
+        error_log('Users::updateUser -> Es posible actualizar un usaurio');
+        // creamos un objeto de tipo user
+        $userModel = new UsersModel();
+        // seteamos la data de un nuevo objeto
+        $userModel->setDocumento($this->getPost('documento'));
+        $userModel->setNombres($this->getPost('nombres'));
+        $userModel->setApellidos($this->getPost('apellidos'));
+        $userModel->setTelefono($this->getPost('telefono'));
+        $userModel->setCorreo($this->getPost('email'));
+        $userModel->setIdRol($this->getPost('rol'));
+        $userModel->setIdEstado($this->getPost('estado'));
+        $userModel->setPassword($this->getPost('password'));
+
+
+        // creamos un objeto de tipo foto
+        $fotoModel = new FotoModel();
+        // llamamos la funcion para crear una imagen ya que nos permitira setear la nueva data en nuevo objeto
+        $this->createPhoto($fotoModel);
+
+        // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
+
+        if($fotoModel->update()) { 
+            // actualizamos la data del usuario
+            $res = $this->model->update();
+
+            // validamos si la consulta o la respuesta es correcta
+            if($res) {
+                error_log('Users::updateUser -> Se actualizo el usuario correctamente');
+                echo json_encode(['status' => true, 'message' => "El usuario fue actualizado exitosamente!"]);
+                return;
+            }else {
+                error_log('Users::updateUser -> Error en la consulta del Back');
+                echo json_encode(['status' => true, 'message' => "Error 500, nose actualizo la data!"]);
+                return;
+            }
+        }else {
+            error_log('Users::updateUser -> No se puedo actualizar la foto');
+            echo json_encode(['status' => true, 'message' => "Error 500, NO se actualizo la foto!"]);
+            return;
+        }
+    }
+}
 
 

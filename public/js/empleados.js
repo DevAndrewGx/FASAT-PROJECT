@@ -217,11 +217,7 @@ $(document).ready(function () {
             dataType: "json",
             data: JSON.stringify({ id_usuario: id_usuario }),
             success: function (response) {
-                console.log(response); // Para ver la respuesta completa
                 if (response.status) {
-                    console.log("Response is success");
-                    console.log(response.data);
-                    console.log(response.data.length < 0);
                     // Verifica que response.data no sea undefined o null
                     if (response.data) {
                         // Asumiendo que necesitas el primer elemento del array data

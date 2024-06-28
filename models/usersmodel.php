@@ -169,22 +169,18 @@
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, id_horario = :id_horario, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, password = :password WHERE documento = :documento');
+                $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password WHERE documento = :documento');
                 $query->execute([
                     'documento'=> $this->documento,
                     'id_rol' => $this->idRol,
                     'id_estado' => $this->idEstado,
                     'id_foto' => $this->idFoto,
-                    'id_horario' => $this->idHorario,
-                    'tipo_documento' => $this->tipoDocumento,
                     'nombres' => $this->nombres,
                     'apellidos' => $this->apellidos,
                     'telefono' => $this->telefono,
-                    'direccion' => $this->direccion,
                     'correo' => $this->correo,
                     'password' => $this->password,
                 ]);
-
                 return true;
             } catch (PDOException $e) {
                 error_log('USERMODEL::update->PDOException' . $e);

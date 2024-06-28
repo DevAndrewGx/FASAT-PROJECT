@@ -2026,3 +2026,65 @@ Stack trace:
 [28-Jun-2024 16:54:47 Europe/Berlin] Users::construct -> controlador usuarios
 [28-Jun-2024 16:54:47 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FASTPROJECT\controllers\users.php on line 245
 [28-Jun-2024 16:54:47 Europe/Berlin] Users::get -> El usuario se trajo correctamente-> Array
+[28-Jun-2024 17:32:28 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:28 Europe/Berlin] APP::construct->No hay controlador especificado
+[28-Jun-2024 17:32:28 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:28 Europe/Berlin] Errores::construct -> inicio de errores
+[28-Jun-2024 17:32:28 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:28 Europe/Berlin] Errores::construct -> inicio de errores
+[28-Jun-2024 17:32:30 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:30 Europe/Berlin] SessionController::validateSession()
+[28-Jun-2024 17:32:30 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:30 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[28-Jun-2024 17:32:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[28-Jun-2024 17:32:30 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[28-Jun-2024 17:32:30 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[28-Jun-2024 17:32:30 Europe/Berlin] Login::construct -> inicio de login
+[28-Jun-2024 17:32:30 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[28-Jun-2024 17:32:38 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::validateSession()
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[28-Jun-2024 17:32:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[28-Jun-2024 17:32:38 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:38 Europe/Berlin] Users::construct -> controlador usuarios
+[28-Jun-2024 17:32:38 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[28-Jun-2024 17:32:39 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:39 Europe/Berlin] Errores::construct -> inicio de errores
+[28-Jun-2024 17:32:40 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::validateSession()
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1719588759630, url => users
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1719588759630, url => users
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[28-Jun-2024 17:32:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[28-Jun-2024 17:32:40 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:40 Europe/Berlin] Users::construct -> controlador usuarios
+[28-Jun-2024 17:32:43 Europe/Berlin] Testing errors
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::validateSession()
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUser, url => users
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUser, url => users
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[28-Jun-2024 17:32:43 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[28-Jun-2024 17:32:43 Europe/Berlin] sessionController::getUserSessionData(): a
+[28-Jun-2024 17:32:43 Europe/Berlin] Users::construct -> controlador usuarios
+[28-Jun-2024 17:32:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FASTPROJECT\controllers\users.php on line 244
+[28-Jun-2024 17:32:43 Europe/Berlin] Users::get -> El usuario se trajo correctamente-> Array
