@@ -140,7 +140,7 @@
                 $this->setPassword($user['password'], false);
                 
                 //retornamos this porque es el mismo objeto que ya contiene la informacion
-                return $this;
+                return $user;
             } catch (PDOException $e) {
                 error_log('USERMODEL::getId->PDOException' . $e);
             }

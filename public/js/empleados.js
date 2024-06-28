@@ -148,7 +148,10 @@ $(document).ready(function () {
                     type: "POST",
                     processData: false,
                     contentType: "application/json",
-                    data: JSON.stringify({ id_usuario: id_usuario, id_foto: id_foto }),
+                    data: JSON.stringify({
+                        id_usuario: id_usuario,
+                        id_foto: id_foto,
+                    }),
                     success: function (response) {
                         // convertimos la data a un JSON
                         let data = JSON.parse(response);
@@ -162,7 +165,9 @@ $(document).ready(function () {
                             }).then((result) => {
                                 if (result.isConfirmed) {
                                     // Cerrar el modal
-                                    $("#formUsuario").closest(".modal").modal("hide");
+                                    $("#formUsuario")
+                                        .closest(".modal")
+                                        .modal("hide");
                                     // Recargar la tabla
                                     dataTable.ajax.reload(null, false);
                                 }
@@ -197,25 +202,28 @@ $(document).ready(function () {
     $("#data-empleados").on("click", ".botonActualizar", function (e) {
         e.preventDefault();
         const id_usuario = $(this).data("id");
-        $('#titleModal').html("Actualizar usuario");
-        $('.modal-header').removeClass("headerRegister").addClass("headerUpdate");
-        $('#btnText').text("Actualizar");
+        $("#titleModal").html("Actualizar usuario");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
 
         // enviamos la peticion para traer la data y establecerla en el modal
         $.ajax({
-            url: baseUrl + "users/getUsers",
-            type: "GET",
+            url: baseUrl + "users/get",
+            type: "POST",
             dataType: "json",
             data: JSON.stringify({ id_usuario: id_usuario }),
             success: function (response) {
                 console.log(response); // Para ver la respuesta completa
                 if (response.status) {
                     console.log("Response is success");
-
+                    console.log(response.data);
+                    console.log(response.data.length < 0);
                     // Verifica que response.data no sea undefined o null
-                    if (response.data && response.data.length > 0) {
+                    if (response.data) {
                         // Asumiendo que necesitas el primer elemento del array data
-                        var userData = response.data[0];
+                        var userData = response.data;
 
                         $("#identificacion").val(userData.documento);
                         console.log(userData.documento);
@@ -223,11 +231,10 @@ $(document).ready(function () {
                         $("#apellidos").val(userData.apellidos);
                         $("#telefono").val(userData.telefono);
                         $("#email").val(userData.correo);
-                        $("#estado").val(userData.idEstado); // Asumiendo que 'estado' es el campo correcto
-                        $("#rol").val(userData.idRol); // Asumiendo que 'rol' es el campo correcto
-                        console.log((userData.rol));
+                        $("#estado").val(userData.id_estado); // Asumiendo que 'estado' es el campo correcto
+                        $("#rol").val(userData.id_rol); // Asumiendo que 'rol' es el campo correcto
+                        console.log(userData.rol);
                         $("#fechaCreacion").val(userData.fechaCreacion); // Asumiendo que 'fechaCreacion' es el campo correcto
-
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }

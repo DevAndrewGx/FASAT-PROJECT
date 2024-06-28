@@ -229,8 +229,37 @@ class Users extends SessionController
             }
 
         }
+    }
 
-      
+    function get() {
+        // recuperamos la data del cuerpo de la request
+        $data = json_decode(file_get_contents('php://input'), true);
+    
+        if (isset($data['id_usuario'])) {
+            
+            $idUser = $data['id_usuario'];
+            // Eliminar traer usuario
+            $res = $this->model->get($idUser);
+            $arrayData = json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+            if ($arrayData) {
+                error_log('Users::get -> El usuario se trajo correctamente-> '.$res);
+                $response = [
+                    "data" => $arrayData,
+                    "status" => true,
+                    "message" => "Se obtuvo la data correctamente"
+                ];
+                echo json_encode($response, JSON_UNESCAPED_UNICODE);
+                die();
+            } else {
+                error_log('Users::deleteUser -> No se pudo obtener el usuario correctamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
+                return false;
+            }
+        }else {
+            error_log('Users::deleteUser -> No se obtuvo el id del usuario ');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar el usuario, intente nuevamente!"]);
+            return false;  
+        }
     }
 }   
 
