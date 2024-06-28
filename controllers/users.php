@@ -231,11 +231,11 @@ class Users extends SessionController
         }
     }
 
-    function get() {
+    function getUser() {
         // recuperamos la data del cuerpo de la request
         $data = json_decode(file_get_contents('php://input'), true);
     
-        if (isset($data['id_usuario'])) {
+        if (isset($data['pid_usuario'])) {
             
             $idUser = $data['id_usuario'];
             // Eliminar traer usuario

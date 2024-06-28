@@ -1,5 +1,7 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    // variable bandera para actualizar data
+    let editar = false;
 
     let dataTable = $("#data-empleados").DataTable({
         responsive: true,
@@ -61,7 +63,9 @@ $(document).ready(function () {
         const formData = new FormData(form);
 
         $.ajax({
-            url: baseUrl + "users/createUser",
+            //como estamos utilizando el mismo formulario para crear entonces tenemos que actualizar 
+            // de la misma manera
+            url: editar === false ? baseUrl + "users/createUser" : "users/updateUser",
             type: "POST",
             processData: false,
             contentType: false,
@@ -131,8 +135,6 @@ $(document).ready(function () {
         const id_foto = $(this).data("idfoto");
         console.log(id_usuario);
         console.log(id_foto);
-
-        // const baseUrl = $('meta[name="base-url"]').attr("content");
         Swal.fire({
             title: "¿Estás seguro?",
             text: "Esta acción no se puede deshacer",
@@ -210,7 +212,7 @@ $(document).ready(function () {
 
         // enviamos la peticion para traer la data y establecerla en el modal
         $.ajax({
-            url: baseUrl + "users/get",
+            url: baseUrl + "users/getUser",
             type: "POST",
             dataType: "json",
             data: JSON.stringify({ id_usuario: id_usuario }),
@@ -225,16 +227,21 @@ $(document).ready(function () {
                         // Asumiendo que necesitas el primer elemento del array data
                         var userData = response.data;
 
+                        // seteamos la data en los campos
                         $("#identificacion").val(userData.documento);
                         console.log(userData.documento);
                         $("#nombres").val(userData.nombres);
                         $("#apellidos").val(userData.apellidos);
                         $("#telefono").val(userData.telefono);
                         $("#email").val(userData.correo);
-                        $("#estado").val(userData.id_estado); // Asumiendo que 'estado' es el campo correcto
-                        $("#rol").val(userData.id_rol); // Asumiendo que 'rol' es el campo correcto
+                        $("#estado").val(userData.id_estado); 
+                        $("#rol").val(userData.id_rol); 
                         console.log(userData.rol);
-                        $("#fechaCreacion").val(userData.fechaCreacion); // Asumiendo que 'fechaCreacion' es el campo correcto
+                        $("#fechaCreacion").val(userData.fechaCreacion); 
+
+                        //cambiamos el valor de la bandera a true ya que si esta en modo edicion 
+                        editar = true;
+
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }
