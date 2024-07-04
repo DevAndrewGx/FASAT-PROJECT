@@ -61,11 +61,12 @@ $(document).ready(function () {
 
         let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
         const formData = new FormData(form);
-
+        
+        var editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
         $.ajax({
             //como estamos utilizando el mismo formulario para crear entonces tenemos que actualizar 
             // de la misma manera
-            url: editar === false ? baseUrl + "users/createUser" : "users/updateUser",
+            url: editar == false ? baseUrl + "users/createUser" : baseUrl+"users/updateUser",
             type: "POST",
             processData: false,
             contentType: false,
@@ -73,7 +74,6 @@ $(document).ready(function () {
             success: function (response) {
                 // convertimos la data a un JSON
                 let data = JSON.parse(response);
-
                 // verificamos que el status de la respuesta sea true o false
                 if (data.status) {
                     Swal.fire({
@@ -232,12 +232,7 @@ $(document).ready(function () {
                         $("#email").val(userData.correo);
                         $("#estado").val(userData.id_estado); 
                         $("#rol").val(userData.id_rol); 
-                        console.log(userData.rol);
                         $("#fechaCreacion").val(userData.fechaCreacion); 
-
-                        //cambiamos el valor de la bandera a true ya que si esta en modo edicion 
-                        editar = true;
-
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }

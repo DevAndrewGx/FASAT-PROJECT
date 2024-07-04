@@ -49,13 +49,11 @@
 
             try {
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-                // $query = $this->prepare('INSERT INTO usuarios (id_rol, id_estado, documento, nombres, apellidos, telefono, correo, password, id_foto)
-                // VALUES (:id_rol, :id_estado, :documento, :nombres, :apellidos, :telefono, :correo, :password, :id_foto)');
 
                 $query = $this->prepare('INSERT INTO usuarios (id_rol, id_estado, documento, nombres, apellidos, telefono, correo, password, id_foto)
                                 VALUES (:id_rol, :id_estado, :documento, :nombres, :apellidos, :telefono, :correo, :password, :id_foto)');
 
-                // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
+            // Ejecutamos la query y hacemos la referencia de los placeholders a los atributos de la clase
                 $query->execute([
                     'id_rol' => $this->idRol,
                     'id_estado' => $this->idEstado,
@@ -170,6 +168,18 @@
             try {
                 // we have to use prepare because we're going to assing
                 $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password WHERE documento = :documento');
+
+                 // Registrar los valores de los campos
+                error_log('USERMODEL::update -> Valores antes de la actualización:');
+                error_log('documento: ' . $this->documento);
+                error_log('id_rol: ' . $this->idRol);
+                error_log('id_estado: ' . $this->idEstado);
+                error_log('id_foto: ' . $this->idFoto);
+                error_log('nombres: ' . $this->nombres);
+                error_log('apellidos: ' . $this->apellidos);
+                error_log('telefono: ' . $this->telefono);
+                error_log('correo: ' . $this->correo);
+                error_log('password: ' . $this->password);
                 $query->execute([
                     'documento'=> $this->documento,
                     'id_rol' => $this->idRol,
@@ -181,10 +191,20 @@
                     'correo' => $this->correo,
                     'password' => $this->password,
                 ]);
-                return true;
+
+                // Verificar si se ha actualizado alguna fila
+                if ($query->rowCount() > 0) {
+                    return true;
+                } else {
+                    error_log('USERMODEL::update -> No se actualizó ninguna fila');
+                   
+                    return false;
+                    
+
+                }
+
             } catch (PDOException $e) {
                 error_log('USERMODEL::update->PDOException' . $e);
-
                 return false;
             }
         }

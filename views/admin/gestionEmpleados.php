@@ -154,16 +154,13 @@
                             <div class="form-group col-md-6">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password">
-
                             </div>
-
-
+                            
                             <div class="form-group col-md-6">
                                 <label for="validarPassword">Confirmar contraseña</label>
                                 <input type="password" class="form-control pass-inputs" id="validarPassword" name="validarPassword">
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="form-group">
                                 <label>Foto de perfil</label>

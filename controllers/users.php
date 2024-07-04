@@ -90,7 +90,7 @@ class Users extends SessionController
 
     function createPhoto(FotoModel $fotoObjeto) {
         // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
-        $foto = isset($_FILES['name']) ? $_FILES['name']: null;
+        $foto = isset($_FILES['foto']) ? $_FILES['foto']: null;
         // creamos el directorio de destino donde queremos guardar la imagen
         $directorioDestino = 'public/imgs/uploads/'; 
 
@@ -278,10 +278,9 @@ class Users extends SessionController
             echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
             return;
         }
-
-
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
         error_log('Users::updateUser -> Es posible actualizar un usaurio');
+
         // creamos un objeto de tipo user
         $userModel = new UsersModel();
         // seteamos la data de un nuevo objeto
@@ -294,7 +293,6 @@ class Users extends SessionController
         $userModel->setIdEstado($this->getPost('estado'));
         $userModel->setPassword($this->getPost('password'));
 
-
         // creamos un objeto de tipo foto
         $fotoModel = new FotoModel();
         // llamamos la funcion para crear una imagen ya que nos permitira setear la nueva data en nuevo objeto
@@ -302,10 +300,11 @@ class Users extends SessionController
 
         // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
 
-        if($fotoModel->update()) { 
+        if($fotoModel->update()) {
+            $idFoto = $fotoModel->getIdFoto();
+            $userModel->setIdFoto($idFoto);
             // actualizamos la data del usuario
-            $res = $this->model->update();
-
+            $res = $userModel->update();
             // validamos si la consulta o la respuesta es correcta
             if($res) {
                 error_log('Users::updateUser -> Se actualizo el usuario correctamente');
@@ -313,12 +312,12 @@ class Users extends SessionController
                 return;
             }else {
                 error_log('Users::updateUser -> Error en la consulta del Back');
-                echo json_encode(['status' => true, 'message' => "Error 500, nose actualizo la data!"]);
+                echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
                 return;
             }
         }else {
-            error_log('Users::updateUser -> No se puedo actualizar la foto');
-            echo json_encode(['status' => true, 'message' => "Error 500, NO se actualizo la foto!"]);
+            error_log('Users::updateUser -> No se pudo actualizar la foto');
+            echo json_encode(['status' => false, 'message' => "Error 500, NO se actualizo la foto!"]);
             return;
         }
     }
