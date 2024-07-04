@@ -1,0 +1,57 @@
+{
+    "sites": [
+        {
+            "site": "", 
+            "access": "public", 
+            "role": "",
+            "description": "Home page or default public landing page"
+        },
+        {
+            "site": "login", 
+            "access": "public", 
+            "role": "",
+            "description": "Login para la autenticacion"
+        },
+        {
+            "site": "admin", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Dashboard del admin para gestionar la app"
+        },
+        {
+            "site": "ventas", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Tabla donde se visualizan las ventas"
+        },
+        {
+            "site": "users", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Datatable que muestra los empleados"
+        },
+        {
+            "site": "mesero", 
+            "access": "private", 
+            "role": "mesero",
+            "description": "Pagina principal para mesero"
+        },
+        {
+            "site": "user", 
+            "access": "private", 
+            "role": "user",
+            "description": "User profile and settings page"
+        },
+        {
+            "site": "dashboard", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Admin data sitio"
+        }
+    ],
+
+    "default-sites": {
+        "user": "dashboard",
+        "admin": "admin"
+    }
+}

@@ -23,21 +23,6 @@ class SessionController extends Controller
         $this->init();
     }
 
-    // public function getUserSession()
-    // {
-    //     return $this->userSession;
-    // }
-
-    // public function getUserCorreo()
-    // {
-    //     return $this->userCorreo;
-    // }
-
-    // public function getUserId()
-    // {
-    //     return $this->userid;
-    // }
-
     // Esta funcion la vamos a implementar para leer el JSON y asi dar los permisos
     private function init()
     {
@@ -180,14 +165,13 @@ class SessionController extends Controller
         for ($i = 0; $i < sizeof($this->sites); $i++) {
             // Dependiendo del rol, lo redirigimos a una página u otra
             if ($this->sites[$i]['role'] === $role) {
-                $url = '/' . $this->sites[$i]['site'];
+                $url = $this->sites[$i]['site'];
                 break;
             }
         }
         // Redirigimos finalmente con URL mapeada
-        header('location: ' . $url);
+        header('location: ' .constant('URL'). $url);
     }
-
     // esta funcion nos sirve para validar, si ese usuario esta autorizado para entrar y ver esa pagina
     private function isAuthorized($role)
     {

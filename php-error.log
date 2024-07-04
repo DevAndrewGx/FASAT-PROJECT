@@ -1,19 +1,259 @@
-[04-Jul-2024 17:53:32 Europe/Berlin] Testing errors
-[04-Jul-2024 17:53:32 Europe/Berlin] PHP Warning:  file_get_contents(config/access.json): Failed to open stream: No such file or directory in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 60
-[04-Jul-2024 17:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 49
-[04-Jul-2024 17:53:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 51
-[04-Jul-2024 17:53:32 Europe/Berlin] SessionController::validateSession()
-[04-Jul-2024 17:53:32 Europe/Berlin] sessionController::getUserSessionData(): a
-[04-Jul-2024 17:53:32 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
-[04-Jul-2024 17:53:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
-[04-Jul-2024 17:53:32 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[04-Jul-2024 17:53:32 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: sizeof(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php:168
-Stack trace:
-#0 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(87): SessionController->isPublic()
-#1 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(54): SessionController->validateSession()
-#2 C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php(23): SessionController->init()
-#3 C:\xampp\htdocs\FASTPROJECT\controllers\users.php(10): SessionController->__construct()
-#4 C:\xampp\htdocs\FASTPROJECT\libs\app.php(47): Users->__construct()
-#5 C:\xampp\htdocs\FASTPROJECT\index.php(40): App->__construct()
-#6 {main}
-  thrown in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 168
+[04-Jul-2024 18:04:23 Europe/Berlin] Testing errors
+[04-Jul-2024 18:04:23 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:04:23 Europe/Berlin] Testing errors
+[04-Jul-2024 18:04:23 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:04:24 Europe/Berlin] Testing errors
+[04-Jul-2024 18:04:24 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:04:25 Europe/Berlin] Testing errors
+[04-Jul-2024 18:04:25 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:04:25 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:04:25 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:04:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:04:25 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:04:25 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:04:25 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:04:25 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:05:51 Europe/Berlin] Testing errors
+[04-Jul-2024 18:05:51 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:05:51 Europe/Berlin] Testing errors
+[04-Jul-2024 18:05:51 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:05:51 Europe/Berlin] Testing errors
+[04-Jul-2024 18:05:51 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:05:53 Europe/Berlin] Testing errors
+[04-Jul-2024 18:05:53 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:05:53 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:05:53 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:05:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:05:53 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:05:53 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:05:53 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:05:53 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:06:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:02 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:06:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:02 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:03 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:03 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:04 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:04 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:06:04 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:04 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:06:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:06:04 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:06:04 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:06:04 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:06:04 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:06:26 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[04-Jul-2024 18:06:26 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[04-Jul-2024 18:06:26 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:26 Europe/Berlin] Users::construct -> controlador usuarios
+[04-Jul-2024 18:06:26 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[04-Jul-2024 18:06:26 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:26 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:27 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1720109187105, url => users
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1720109187105, url => users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[04-Jul-2024 18:06:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[04-Jul-2024 18:06:27 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:27 Europe/Berlin] Users::construct -> controlador usuarios
+[04-Jul-2024 18:06:27 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:27 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:30 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:30 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:06:31 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:31 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:36 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:36 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:06:38 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:38 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:06:38 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:06:38 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:06:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:06:38 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:06:38 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:06:38 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:06:38 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:06:46 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:47 Europe/Berlin] Testing errors
+[04-Jul-2024 18:06:47 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:00 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:08:01 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:01 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:02 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:02 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:08:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:08:02 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:08:02 Europe/Berlin] SessionController::validateSession() public page
+[04-Jul-2024 18:08:02 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:08:02 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:08:11 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:11 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:08:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[04-Jul-2024 18:08:11 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:08:11 Europe/Berlin] SessionController::validateSession() public page
+[04-Jul-2024 18:08:11 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:08:11 Europe/Berlin] loginByCorreo: inicio
+[04-Jul-2024 18:08:11 Europe/Berlin] login: user correo a@example.com
+[04-Jul-2024 18:08:11 Europe/Berlin] login: success
+[04-Jul-2024 18:08:11 Europe/Berlin] Login::authenticate() passed
+[04-Jul-2024 18:08:11 Europe/Berlin] sessionController::initialize(): user: a
+[04-Jul-2024 18:08:11 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[04-Jul-2024 18:08:11 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:11 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:11 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:22 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:22 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:08:22 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:22 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:22 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:22 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:23 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:23 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:08:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:08:23 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:08:23 Europe/Berlin] SessionController::validateSession() public page
+[04-Jul-2024 18:08:23 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:08:23 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:08:30 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:30 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:08:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:08:30 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:08:30 Europe/Berlin] SessionController::validateSession() public page
+[04-Jul-2024 18:08:30 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:08:30 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:08:39 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:39 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:08:40 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:40 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:40 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:40 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:08:41 Europe/Berlin] Testing errors
+[04-Jul-2024 18:08:41 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:08:41 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:08:41 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:08:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:08:41 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:08:41 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:08:41 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:08:41 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:11:01 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:01 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:11:01 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:01 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:11:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:02 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:11:07 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:07 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:11:07 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:11:07 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:11:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:11:07 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:11:07 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:11:07 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:11:07 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:11:23 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:23 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:11:24 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:24 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:11:27 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:27 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:11:27 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:27 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:11:27 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:11:27 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:11:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:11:27 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:11:27 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:11:27 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:11:27 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:11:36 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:36 Europe/Berlin] Testing errors
+[04-Jul-2024 18:11:36 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:12:51 Europe/Berlin] Testing errors
+[04-Jul-2024 18:12:51 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:12:52 Europe/Berlin] Testing errors
+[04-Jul-2024 18:12:52 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:00 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:13:00 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:00 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:01 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:01 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:02 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:13:02 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:13:02 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:13:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:13:02 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:13:02 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:13:02 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:13:02 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:13:02 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:03 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:03 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:15 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:15 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:13:15 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:16 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:16 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:16 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:17 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:17 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:13:17 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:13:17 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:13:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:13:17 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:13:17 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:13:17 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:13:17 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:13:17 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:17 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:17 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:19 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:19 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:19 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:37 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:37 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:13:37 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:37 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:45 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:45 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Jul-2024 18:13:45 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:45 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:46 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:46 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Jul-2024 18:13:47 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:47 Europe/Berlin] SessionController::validateSession()
+[04-Jul-2024 18:13:47 Europe/Berlin] sessionController::getUserSessionData(): a
+[04-Jul-2024 18:13:47 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[04-Jul-2024 18:13:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Jul-2024 18:13:47 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Jul-2024 18:13:47 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[04-Jul-2024 18:13:47 Europe/Berlin] Login::construct -> inicio de login
+[04-Jul-2024 18:13:47 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Jul-2024 18:13:47 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:47 Europe/Berlin] Testing errors
+[04-Jul-2024 18:13:47 Europe/Berlin] Errores::construct -> inicio de errores
