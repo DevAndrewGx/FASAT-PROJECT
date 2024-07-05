@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../../styles/inventario/stylesStock.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables -->
@@ -18,102 +17,8 @@
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
 
-        <header>
-            <nav>
-                <ul class="items-right">
-                    <li>
-                        <a href="#"><i class='bx bx-search'></i></a>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class='bx bx-bell'></i></a>
-                    </li>
-
-                    <li class="nav-item dropdown has-arrow main-drop">
-                        <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <span class="user-img">
-                                <img src="../../imgs/avatar-06.jpg" alt="admin" width="60px">
-                                <span class="status1 online"></span></span>
-                            </span>
-                        </a>
-
-                        <!-- DROPDOWN MENU -->
-
-                        <div class="dropdown-menu menu-drop-user">
-                            <div class="profilename">
-                                <div class="profileset">
-                                    <span class="user-img"><img src="../../imgs/avatar-06.jpg" alt="hello">
-                                        <span class="status2 online"></span></span>
-                                    <div class="profilesets">
-                                        <h6>Juanita Dow</h6>
-                                        <h5>Admin</h5>
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <a class="dropdown-item" href="#"> <img src="../../imgs/icons/user.svg" alt="user">
-                                    My
-                                    Profile</a>
-                                <a class="dropdown-item" href="#"><img src="../../imgs/icons/settings.svg"
-                                        alt="settings">Settings</a>
-                                <hr class="m-0">
-                                <a class="dropdown-item logout pb-0" href="#"><img src="../../imgs/icons/log-out.svg"
-                                        alt="logout">Logout</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <aside class="left-section">
-
-            <div class="sidebar">
-
-                <div class="logo">
-                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="../../imgs/LOGOf.png" alt="logo"></a>
-                </div>
-
-
-                <div class="item">
-                    <i class='bx bx-home-alt-2'></i>
-                    <a href="adminDashboard.php">Dashboard</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="#">Ordenes</a>
-                </div>
-                <div class="item">
-                    <i class='bx bxs-user-detail'></i>
-                    <a href="gestionEmpleados.php">Empleados</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-transfer-alt'></i>
-                    <a href="gestionVentas.html">Ventas</a>
-                </div>
-                <div class="item" id="active">
-                    <i class='bx bx-task'></i>
-                    <a href="#">Inventario</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Settings</a>
-                </div>
-            </div>
-
-            <div class="log-out sidebar">
-                <div class="item">
-                    <i class='bx bx-log-out'></i>
-                    <a href="../../sing-up/login.html">Log-out</a>
-                </div>
-
-            </div>
-        </aside>
-
-
-        <!-- END OF SIDEBAR -->
-
+        <?php require_once('views/header.php') ?>
+        <?php require_once('aside.php') ?>
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
@@ -130,11 +35,13 @@
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Inventario</h1>
-                        <p>Gestiona tus productos</p>
+                        <nav class="nav-main">
+                            <a href="homeAdmin.php">Admin</a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
+                        </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="crearProducto.html" class="btn btn-added"><img src="../../imgs/icons/plus.svg"
-                                alt="add-icon">
+                        <a href="crearProducto.html" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Agregar Nuevo
                             Producto</a>
                     </div>
@@ -294,18 +201,20 @@
                 </div>
             </div>
 
-            <script src="../../js/app.js"></script>
-            <!-- JQuery -->
+            <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-            <!-- DataTable -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+            <!-- DataTables -->
             <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-            <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-            <!-- JS BOOTSTRAP -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+            <!-- DataTables Bootstrap 5 integration -->
+            <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+
+            <!-- SWEETALERT2 -->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            
+            <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+            <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+        </main>
 </body>
 
 

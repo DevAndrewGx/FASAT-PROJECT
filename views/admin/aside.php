@@ -25,9 +25,9 @@
             <i class='bx bx-transfer-alt'></i>
             <a href="<?php echo constant('URL'); ?>ventas">Ventas</a>
         </div>
-        <div class="item">
+        <div class="item" id="inventario">
             <i class='bx bx-task'></i>
-            <a href="gestionInventario.html">Inventario</a>
+            <a href="<?php echo constant('URL'); ?>inventario">Inventario</a>
         </div>
         <div class="item">
             <i class='bx bx-cog'></i>

@@ -10,7 +10,6 @@ const activeAside = () => {
         items.forEach(item => {
             item.classList.remove("active");
         });
-
         // Añade la clase 'active' al elemento actual
         const seccion = document.querySelector(actual);
         console.log(seccion);
