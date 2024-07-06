@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
+
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.min.css">
+
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/inventario.css">
 </head>
 
 <body>
@@ -20,9 +23,12 @@
         <?php require_once('views/header.php') ?>
         <?php require_once('aside.php') ?>
 
+
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
+
             <div class="content">
+
                 <div class="nav-sections">
                     <nav>
                         <ul>
@@ -32,6 +38,7 @@
                         </ul>
                     </nav>
                 </div>
+
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Inventario</h1>
@@ -211,7 +218,7 @@
 
             <!-- SWEETALERT2 -->
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-            
+
             <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
             <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
         </main>

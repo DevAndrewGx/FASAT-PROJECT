@@ -1,7 +1,11 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
-    // variable bandera para actualizar data
-    let editar = false;
+
+    // variables globales para datos especificos 
+    let globalIdUsuario;
+    let globalIdFoto;
+
+
 
     let dataTable = $("#data-empleados").DataTable({
         responsive: true,
@@ -61,8 +65,14 @@ $(document).ready(function () {
 
         let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
         const formData = new FormData(form);
-        
         var editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+
+        if(editar) { 
+            // cuando estamos en el modo editar agreamos la data del id y la foto al formdata
+            formData.append("id_usuario", globalIdUsuario);
+            formData.append("id_foto", globalIdFoto);
+        }
+
         $.ajax({
             //como estamos utilizando el mismo formulario para crear entonces tenemos que actualizar 
             // de la misma manera
@@ -133,8 +143,6 @@ $(document).ready(function () {
         e.preventDefault();
         const id_usuario = $(this).data("id");
         const id_foto = $(this).data("idfoto");
-        console.log(id_usuario);
-        console.log(id_foto);
         Swal.fire({
             title: "¿Estás seguro?",
             text: "Esta acción no se puede deshacer",
@@ -203,7 +211,11 @@ $(document).ready(function () {
     // function para actualizar la data del usuario
     $("#data-empleados").on("click", ".botonActualizar", function (e) {
         e.preventDefault();
-        const id_usuario = $(this).data("id");
+
+        // Obtener los valores de data-id y data-idfoto del botón clicado y almacenarlos en variables globales
+        globalIdUsuario = $(this).data("id");
+        globalIdFoto = $(this).data("idfoto");
+
         $("#titleModal").html("Actualizar usuario");
         $(".modal-header")
             .removeClass("headerRegister")
@@ -215,7 +227,7 @@ $(document).ready(function () {
             url: baseUrl + "users/getUser",
             type: "POST",
             dataType: "json",
-            data: JSON.stringify({ id_usuario: id_usuario }),
+            data: JSON.stringify({ id_usuario: globalIdUsuario }),
             success: function (response) {
                 if (response.status) {
                     // Verifica que response.data no sea undefined o null
@@ -230,9 +242,9 @@ $(document).ready(function () {
                         $("#apellidos").val(userData.apellidos);
                         $("#telefono").val(userData.telefono);
                         $("#email").val(userData.correo);
-                        $("#estado").val(userData.id_estado); 
-                        $("#rol").val(userData.id_rol); 
-                        $("#fechaCreacion").val(userData.fechaCreacion); 
+                        $("#estado").val(userData.id_estado);
+                        $("#rol").val(userData.id_rol);
+                        $("#fechaCreacion").val(userData.fechaCreacion);
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }

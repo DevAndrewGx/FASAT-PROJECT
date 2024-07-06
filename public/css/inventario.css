@@ -1,5 +1,4 @@
 /* CUMSTON STYLES FOR THIS PAGE */
-
 main .nav-sections {
     position: relative;
     width: 100%;
@@ -18,12 +17,13 @@ main .nav-sections nav ul {
     gap: 15px;
 }
 
+
 main .nav-sections nav ul li {
     list-style: none;
 }
 
 .nav-sections nav ul li a {
-    padding: 17px 20px;
+    padding: 15px 20px;
     text-decoration: none;
     font-weight: 600;
     font-size: 17;

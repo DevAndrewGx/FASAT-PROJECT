@@ -105,7 +105,7 @@
                 $query->execute([
                     'id'=> $id
                 ]);
-                
+
                 return true;
             }catch(PDOException $e) {
                 error_log('FOTOMODEL::delete->PDOException' . $e);
@@ -113,17 +113,17 @@
             }
         }
 
-        public function update() {
+        public function update($id) {
 
             try {
                 // we have to use prepare because we're going to assing
                 $query = $this->prepare('UPDATE fotos SET foto = :foto, tipo = :tipo WHERE id_foto = :id');
                 $query->execute([
-                    'id'=> $this->idFoto,
+                    'id'=> $id,
                     'foto' => $this->foto,
                     'tipo' => $this->tipo,
                 ]);
-              
+
                 return true;
             } catch (PDOException $e) {
                 error_log('USERMODEL::update->PDOException' . $e);

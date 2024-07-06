@@ -300,8 +300,11 @@ class Users extends SessionController
 
         // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
 
-        if($fotoModel->update()) {
-            $idFoto = $fotoModel->getIdFoto();
+        // idFoto para actualizar la data
+        $idFoto = $this->getPost('id_foto');
+        
+        if($fotoModel->update($idFoto)) {
+            error_log("Users::updateUser -> el id de la foto es -> ".$idFoto);
             $userModel->setIdFoto($idFoto);
             // actualizamos la data del usuario
             $res = $userModel->update();
