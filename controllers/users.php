@@ -307,7 +307,7 @@ class Users extends SessionController
             error_log("Users::updateUser -> el id de la foto es -> ".$idFoto);
             $userModel->setIdFoto($idFoto);
             // actualizamos la data del usuario
-            $res = $userModel->update();
+            $res = $userModel->update($this->getPost("id_usuario"));
             // validamos si la consulta o la respuesta es correcta
             if($res) {
                 error_log('Users::updateUser -> Se actualizo el usuario correctamente');

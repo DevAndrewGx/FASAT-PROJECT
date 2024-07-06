@@ -163,25 +163,16 @@
         // function para actualizar un usuario
         // no recibe parametro porque va llamar get primero para obtener la data 
         // entonces alli get va asignar los valores para evitar traerlos en este caso.
-        public function update() {
+        public function update($id_usuario) {
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password WHERE documento = :documento');
+                $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password, documento = :documento WHERE documento = :id_usuario');
 
-                 // Registrar los valores de los campos
-                error_log('USERMODEL::update -> Valores antes de la actualización:');
-                error_log('documento: ' . $this->documento);
-                error_log('id_rol: ' . $this->idRol);
-                error_log('id_estado: ' . $this->idEstado);
-                error_log('id_foto: ' . $this->idFoto);
-                error_log('nombres: ' . $this->nombres);
-                error_log('apellidos: ' . $this->apellidos);
-                error_log('telefono: ' . $this->telefono);
-                error_log('correo: ' . $this->correo);
-                error_log('password: ' . $this->password);
+
                 $query->execute([
-                    'documento'=> $this->documento,
+                    'id_usuario'=> $id_usuario,
+                    'documento' => $this->documento,
                     'id_rol' => $this->idRol,
                     'id_estado' => $this->idEstado,
                     'id_foto' => $this->idFoto,

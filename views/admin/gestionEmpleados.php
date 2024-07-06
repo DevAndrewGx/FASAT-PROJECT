@@ -100,9 +100,7 @@
                 </div>
                 <div class="modal-body">
                     <form id="formUsuario" name="formUsuario" class="form-horizontal" enctype="multipart/form-data">
-                        <input type="hidden" id="idUsuario" name="idUsuario" value="">
                         <p class="text-primary">Todos los campos son obligatorios.</p>
-
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="identificacion">Identificación</label>
