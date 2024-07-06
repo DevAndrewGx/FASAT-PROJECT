@@ -299,7 +299,6 @@ class Users extends SessionController
         $this->createPhoto($fotoModel);
 
         // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
-
         // idFoto para actualizar la data
         $idFoto = $this->getPost('id_foto');
         

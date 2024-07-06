@@ -25,7 +25,7 @@
 
                     error_log('login: user correo ' . $user->getCorreo());
 
-                    if ($password == $user->getPassword()) {
+                    if (password_verify($password, $user->getPassword())) {
                         error_log('login: success');
                         //return ['id' => $item['id'], 'username' => $item['username'], 'role' => $item['role']];
                         return $user;

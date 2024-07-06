@@ -45,7 +45,7 @@
                                 Profile</a>
                             <a class="dropdown-item" href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/settings.svg" alt="user">Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item logout pb-0" href="../../../controllers/cerrarSesion.php"><img src="<?php echo constant('URL'); ?>public/imgs/icons/log-out.svg" alt="logout">Logout</a>
+                            <a class="dropdown-item logout pb-0" href="<?php echo constant("URL"); ?>logout"><img src="<?php echo constant('URL'); ?>public/imgs/icons/log-out.svg" alt="logout">Logout</a>
                         </div>
                     </div>
                 </li>
