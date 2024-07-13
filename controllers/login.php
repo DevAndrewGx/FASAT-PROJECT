@@ -58,5 +58,61 @@
                 $this->redirect('login', ['error' => ErrorsMessages::ERROR_LOGIN_AUTHENTICATE]);
             }
         }
+
+
+         // Función para cambiar la contraseña del usuario
+
+    public function setPassword() {
+        // Definición de la función strClean dentro de setPassword
+        function strClean($str) {
+            return trim($str); 
+        }
+
+        // setPassword
+        if (empty($_POST['identificacion']) || empty($_POST['txtEmail']) || empty($_POST['txtToken']) || empty($_POST['txtPassword']) || empty($_POST['txtPasswordConfirm'])) {
+            $arrResponse = array(
+                'status' => false,
+                'msg' => 'Error de datos'
+            );
+        } else {
+            $intIdpersona = intval($_POST['identificacion']);
+            $strPassword = $_POST['txtPassword'];
+            $strPasswordConfirm = $_POST['txtPasswordConfirm'];
+            $strEmail = strClean($_POST['txtEmail']);
+            $strToken = strClean($_POST['txtToken']);
+
+            if ($strPassword != $strPasswordConfirm) {
+                $arrResponse = array(
+                    'status' => false,
+                    'msg' => 'Las contraseñas no son iguales.'
+                );
+            } else {
+                $arrResponseUser = $this->model->getUsuario($strEmail, $strToken, $intIdpersona);
+                if (empty($arrResponseUser)) {
+                    $arrResponse = array(
+                        'status' => false,
+                        'msg' => 'Error de datos.'
+                    );
+                } else {
+                    $strPassword = hash("SHA256", $strPassword);
+                    $requestPass = $this->model->insertPassword($intIdpersona, $strPassword);
+
+                    if ($requestPass) {
+                        $arrResponse = array(
+                            'status' => true,
+                            'msg' => 'Contraseña actualizada con éxito.'
+                        );
+                    } else {
+                        $arrResponse = array(
+                            'status' => false,
+                            'msg' => 'No es posible realizar el proceso, intente más tarde.'
+                        );
+                    }
+                }
+            }
+        }
+        echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+        die();
+    }
     }
 ?>
