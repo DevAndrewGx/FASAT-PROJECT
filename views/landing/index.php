@@ -134,7 +134,7 @@
                     <p class="about-content mb-4">Con un equipo diverso y altamente cualificado, nos enorgullece ofrecer un servicio excepcional a nuestros clientes. Cada miembro aporta una perspectiva única y valiosa.</p>
                 </div>
                 <div class="col-lg-6 order-lg-2 team-image">
-                    <!-- <img src="<?php echo constant('URL') ?>views/imgs/img/about-section.png" alt="about-section-img" width="100%"> -->
+                    <img src="<?php echo constant('URL') ?>views/imgs/img/about-section.png" alt="about-section-img">
                 </div>
             </div>
         </div>
@@ -149,7 +149,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="section-image">
-                        <img src="../imgs/img/caracteristicas.png" alt="Imagen de Características">
+                        <img src="<?php echo constant('URL') ?>views/imgs/img/caracteristicas.png" alt="Imagen de Características">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -292,11 +292,11 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../pluggins/lib/wow/wow.min.js"></script>
-    <script src="../pluggins/lib/easing/easing.min.js"></script>
-    <script src="../pluggins/lib/waypoints/waypoints.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/landing.js"></script>
+    <script src="views/pluggins/lib/wow/wow.min.js"></script>
+    <script src="views/pluggins/lib/easing/easing.min.js"></script>
+    <script src="views/pluggins/lib/waypoints/waypoints.min.js"></script>
+    <script src="views/js/main.js"></script>
+    <script src="views/js/landing.js"></script>
 
 
     <script>
@@ -305,7 +305,15 @@
             var urlBackgroundHero = '<?php echo constant('URL'); ?>views/imgs/img/hero-fondo.png';
             $('.hero-header').css('background-image', 'url(' + urlBackgroundHero + ')');
         });
+
+        $(document).ready(function() {
+            var urlTeamImage = '<?php echo $urlTeamImage; ?>';
+            $('.team-image').css('background-image', 'url(' + urlTeamImage + ')');
+        });
+
     </script>
+
+    
 
 </body>
 

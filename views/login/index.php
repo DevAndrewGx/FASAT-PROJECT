@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 <button type="submit" id="btn-login">Login</button>
                 <p class="bottom-text">¿Olvidaste tu contraseña? Haz click <a href="#" id="btn-olvido-pass">aquí</a>.</p>
             </form>
-            <form id="formOlvidoPass" method="POST" action="<?php echo constant("URL")?>" class="forget-form" style="display: none;">
+            <form id="formOlvidoPass" method="POST" action="<?php echo constant("URL") ?>" class="forget-form" style="display: none;">
                 <h2>Olvidaste tu contraseña?</h2>
                 <div class="input-container">
                     <input type="email" id="txtEmailReset" placeholder="Email" required>
