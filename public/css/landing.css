@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 /* Definición de variables de color */
 :root {
     --primary: #fea116;
     --light: #f1f8ff;
     --dark: #0f172b;
-    --nav: #fff; 
+    --nav: #fff;
 }
 
 /* Estilo del cuerpo del documento */
 body {
     font-family: "Inter", sans-serif;
     margin-top: 80px;
-    background-color: #fff; 
+    background-color: #fff;
 }
 
 /* Tamaño del texto para los párrafos dentro de columnas de tamaño grande */
@@ -36,30 +36,28 @@ body {
 }
 
 .hero-header {
-    min-height: 90vh; 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    margin-bottom: -1px; 
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: -1px;
 }
-
-
 
 .trabajos-title {
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: var(--dark); 
+    color: var(--dark);
 }
 
 .trabajos-subtitle {
-    font-size: 1.25rem; 
-    color: var(--dark); 
+    font-size: 1.25rem;
+    color: var(--dark);
 }
 
 .p-texto {
-    font-size: 1rem; 
-    color: var(--dark); 
+    font-size: 1rem;
+    color: var(--dark);
 }
 
 .lead {
@@ -68,11 +66,8 @@ body {
 
 .hero-image {
     max-width: 100%;
-    height: auto; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
-
-
 
 .back-to-top {
     position: fixed;
@@ -91,14 +86,13 @@ body {
     left: 0;
     z-index: 1000;
     background-color: var(--nav);
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 .navbar-brand img {
     max-height: 60px;
     margin-top: 10px;
-    transition: max-height 0.5s; 
-    
+    transition: max-height 0.5s;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -110,7 +104,7 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     outline: none;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link::after {
@@ -119,9 +113,9 @@ body {
     width: 0;
     height: 2px;
     background: var(--primary);
-    top: calc(100% - 10px); 
+    top: calc(100% - 10px);
     left: 0;
-    transition: width 0.4s ease; 
+    transition: width 0.4s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover::after,
@@ -141,7 +135,6 @@ body {
 .sticky-top.navbar-dark .navbar-brand img {
     max-height: 45px;
 }
-
 
 @media (max-width: 991.98px) {
     .navbar-dark .navbar-collapse {
@@ -165,8 +158,12 @@ body {
 #beneficios {
     position: relative;
     z-index: 2;
-    animation: fadeIn 0.5s ease; 
-    background-image: linear-gradient(to bottom, rgba(240, 248, 255, 1), rgba(240, 248, 255, 0)); 
+    animation: fadeIn 0.5s ease;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(240, 248, 255, 1),
+        rgba(240, 248, 255, 0)
+    );
 }
 
 @keyframes fadeIn {
@@ -184,14 +181,14 @@ body {
     background-color: #f0f8ff;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 30px; 
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .beneficio-item:hover {
-    transform: translateY(-5px) scale(1.02); 
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); 
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .section-title {
@@ -207,19 +204,19 @@ body {
 }
 
 .beneficio-item i {
-    font-size: 4rem; 
-    color: #ffa500; 
+    font-size: 4rem;
+    color: #ffa500;
     margin-bottom: 20px;
     display: block;
 }
 
 .beneficio-item p {
-    font-size: 1.1rem; 
-    color: #333333; 
-    margin-bottom: 0; 
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 0;
     font-weight: bold;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 .beneficio-item:not(:last-child) {
@@ -227,20 +224,20 @@ body {
 }
 
 .beneficio-item:hover {
-    opacity: 0.9; 
+    opacity: 0.9;
 }
 
 /* acerca de nosotros */
 
 #acerca-de {
-    background-color: #f0f8ff; 
-    padding: 80px 0; 
+    background-color: #f0f8ff;
+    padding: 80px 0;
 }
 
 #acerca-de .container {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
 }
 
 #acerca-de .section-title {
@@ -248,14 +245,14 @@ body {
     color: #333333;
     font-weight: bold;
     margin-bottom: 30px;
-    text-align: left; 
+    text-align: left;
 }
 
 #acerca-de .section-subtitle {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 40px;
-    text-align: left; 
+    text-align: left;
 }
 
 #acerca-de .about-subtitle {
@@ -268,68 +265,65 @@ body {
 #acerca-de .about-content {
     font-size: 1.1rem;
     color: #666;
-    line-height: 1.6; 
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
 .team-image {
-
     background-size: cover;
     border-radius: 10px;
-    overflow: hidden; 
-    flex: 1; 
-    margin-left: 40px; 
+    overflow: hidden;
+    flex: 1;
+    margin-left: 40px;
 }
 
 .team-image img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease; 
-    border-radius: 10px; 
+    transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .team-image img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-
 #acerca-de .col-lg-6 {
-    max-width: 50%; 
+    max-width: 50%;
 }
 
 #acerca-de .about-subtitle::before {
-    content: ""; 
+    content: "";
     display: block;
-    width: 50px; 
-    height: 4px; 
-    background-color: #fea116; 
+    width: 50px;
+    height: 4px;
+    background-color: #fea116;
     margin-bottom: 10px;
 }
 
 /* Estilos para dispositivos pequeños (como teléfonos móviles) */
 @media (max-width: 768px) {
     #acerca-de .row {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
     }
 
     #acerca-de .col-lg-6 {
-        max-width: 100%; 
+        max-width: 100%;
     }
 
     #acerca-de .section-title,
     #acerca-de .section-subtitle,
     #acerca-de .about-subtitle,
     #acerca-de .about-content {
-        text-align: center; 
+        text-align: center;
     }
 
     #acerca-de .team-image {
-        margin-top: 20px; 
+        margin-top: 20px;
     }
 }
 
 /* caracteristicas */
-
 
 #fast-features {
     padding: 80px 0;
@@ -366,9 +360,6 @@ body {
     line-height: 1.6;
     margin-bottom: 25px;
 }
-
-
-
 
 /* preguntas frecuentes */
 
@@ -468,7 +459,6 @@ body {
 
 /* contactos */
 
-
 /* Estilos para la sección de contacto */
 #contact {
     background-color: #f9f9f9;
@@ -498,25 +488,26 @@ body {
 
 .contact-email {
     border-radius: 25px;
-    padding: 15px 20px;
+    padding: 15px 50px 15px 70px;
     border: 1px solid #ccc;
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     font-size: 16px;
     margin-bottom: 20px;
+    margin-left: 15px;
     transition: border-color 0.3s ease;
 }
 
 .contact-email:focus {
     border-color: #007bff;
-    outline: none; 
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .btn-registrarse {
     border-radius: 25px;
     padding: 15px 35px;
     font-size: 18px;
-    background-color: #007bff;
+    background-color: #feaf39;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -524,14 +515,15 @@ body {
 }
 
 .btn-registrarse:hover {
-    background-color: #0056b3;
+    background-color: #feaa2d;
+    color: #fff;
 }
 
 .confirm-message {
     font-size: 14px;
     color: #666;
     margin-top: 15px;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 /* Estilos para el footer */
@@ -559,7 +551,7 @@ body {
 
 /* Estilos para las columnas dentro del footer */
 .footer-column {
-    flex-basis: calc(33.3333% - 20px); 
+    flex-basis: calc(33.3333% - 20px);
     margin-bottom: 30px;
 }
 
@@ -614,6 +606,7 @@ body {
 
 .social-links .social-link i {
     font-size: 20px;
+    margin: 10px 0;
 }
 
 .social-links .social-link:hover {

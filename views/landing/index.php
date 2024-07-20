@@ -28,7 +28,7 @@
     <link href="<?php echo constant('URL') ?>views/styles/bootstrap.min.css" rel="stylesheet">
 
     <!-- style -->
-    <link href="<?php echo constant('URL') ?>views/styles/landingStyles.css" rel="stylesheet">
+    <link href="<?php echo constant('URL') ?>public/css/landing.css" rel="stylesheet">
 
 </head>
 

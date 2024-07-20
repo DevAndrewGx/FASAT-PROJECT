@@ -1403,3 +1403,268 @@
 [18-Jul-2024 05:30:10 Europe/Berlin] Errores::construct -> inicio de errores
 [18-Jul-2024 05:30:10 Europe/Berlin] Testing errors
 [18-Jul-2024 05:30:10 Europe/Berlin] Errores::construct -> inicio de errores
+[18-Jul-2024 05:34:26 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:26 Europe/Berlin] APP::construct->No hay controlador especificado
+[18-Jul-2024 05:34:26 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[18-Jul-2024 05:34:27 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:27 Europe/Berlin] Errores::construct -> inicio de errores
+[18-Jul-2024 05:34:32 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:32 Europe/Berlin] SessionController::validateSession()
+[18-Jul-2024 05:34:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[18-Jul-2024 05:34:32 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[18-Jul-2024 05:34:32 Europe/Berlin] SessionController::validateSession() public page
+[18-Jul-2024 05:34:32 Europe/Berlin] Login::construct -> inicio de login
+[18-Jul-2024 05:34:32 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[18-Jul-2024 05:34:35 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:35 Europe/Berlin] APP::construct->No hay controlador especificado
+[18-Jul-2024 05:34:35 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[18-Jul-2024 05:34:35 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:35 Europe/Berlin] Errores::construct -> inicio de errores
+[18-Jul-2024 05:34:38 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:38 Europe/Berlin] SessionController::validateSession()
+[18-Jul-2024 05:34:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[18-Jul-2024 05:34:38 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[18-Jul-2024 05:34:38 Europe/Berlin] SessionController::validateSession() public page
+[18-Jul-2024 05:34:38 Europe/Berlin] Login::construct -> inicio de login
+[18-Jul-2024 05:34:38 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[18-Jul-2024 05:34:41 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:41 Europe/Berlin] APP::construct->No hay controlador especificado
+[18-Jul-2024 05:34:41 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[18-Jul-2024 05:34:42 Europe/Berlin] Testing errors
+[18-Jul-2024 05:34:42 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:15:26 Europe/Berlin] Testing errors
+[20-Jul-2024 04:15:26 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:15:26 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:15:27 Europe/Berlin] Testing errors
+[20-Jul-2024 04:15:27 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:18:45 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:45 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:18:45 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:18:46 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:46 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:18:48 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:48 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:18:48 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:18:49 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:49 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:18:56 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:56 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:18:56 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:18:57 Europe/Berlin] Testing errors
+[20-Jul-2024 04:18:57 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:19:10 Europe/Berlin] Testing errors
+[20-Jul-2024 04:19:10 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:19:10 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:20:33 Europe/Berlin] Testing errors
+[20-Jul-2024 04:20:33 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:20:33 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:20:34 Europe/Berlin] Testing errors
+[20-Jul-2024 04:20:34 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:20:48 Europe/Berlin] Testing errors
+[20-Jul-2024 04:20:48 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:20:48 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:21:01 Europe/Berlin] Testing errors
+[20-Jul-2024 04:21:01 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:21:01 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:21:02 Europe/Berlin] Testing errors
+[20-Jul-2024 04:21:02 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:21:53 Europe/Berlin] Testing errors
+[20-Jul-2024 04:21:53 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:21:53 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:22:27 Europe/Berlin] Testing errors
+[20-Jul-2024 04:22:27 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:22:27 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:23:11 Europe/Berlin] Testing errors
+[20-Jul-2024 04:23:12 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:23:12 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:23:12 Europe/Berlin] Testing errors
+[20-Jul-2024 04:23:12 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:23:45 Europe/Berlin] Testing errors
+[20-Jul-2024 04:23:45 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:23:45 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:23:46 Europe/Berlin] Testing errors
+[20-Jul-2024 04:23:46 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:24:10 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:10 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:24:10 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:24:11 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:11 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:24:13 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:13 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:24:24 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:24 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:24:24 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:24:24 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:24 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:24:25 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:25 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:24:25 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:24:25 Europe/Berlin] Testing errors
+[20-Jul-2024 04:24:25 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:25:02 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:02 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:25:02 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:25:02 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:02 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:25:03 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:03 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:25:25 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:25 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:25:25 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:25:25 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:25 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:25:26 Europe/Berlin] Testing errors
+[20-Jul-2024 04:25:26 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:15 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:15 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:15 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:15 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:15 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:16 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:16 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:16 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:16 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:16 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:16 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:16 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:16 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:16 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:16 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:16 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:16 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:16 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:17 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:17 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:22 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:22 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:22 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:22 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:22 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:22 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:22 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:22 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:22 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:22 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:23 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:23 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:23 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:23 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:23 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:25 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:25 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:25 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:26 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:26 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:26 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:26 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:38 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:38 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:38 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:38 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:26:39 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:39 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:39 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:26:49 Europe/Berlin] Testing errors
+[20-Jul-2024 04:26:49 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:26:49 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:27:29 Europe/Berlin] Testing errors
+[20-Jul-2024 04:27:29 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:27:29 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:28:14 Europe/Berlin] Testing errors
+[20-Jul-2024 04:28:14 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:28:14 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:28:18 Europe/Berlin] Testing errors
+[20-Jul-2024 04:28:18 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:29:17 Europe/Berlin] Testing errors
+[20-Jul-2024 04:29:17 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:29:17 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:29:18 Europe/Berlin] Testing errors
+[20-Jul-2024 04:29:18 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:30:00 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:30:00 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:30:01 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:01 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:30:02 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:02 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:30:02 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:30:04 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:04 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:30:06 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:06 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:30:06 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:30:33 Europe/Berlin] Testing errors
+[20-Jul-2024 04:30:33 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:30:33 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:31:28 Europe/Berlin] Testing errors
+[20-Jul-2024 04:31:28 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:31:28 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:31:29 Europe/Berlin] Testing errors
+[20-Jul-2024 04:31:29 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:35:02 Europe/Berlin] Testing errors
+[20-Jul-2024 04:35:02 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:35:02 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:35:04 Europe/Berlin] Testing errors
+[20-Jul-2024 04:35:04 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:35:04 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:35:05 Europe/Berlin] Testing errors
+[20-Jul-2024 04:35:05 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:35:05 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:29 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:29 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:29 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:33 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:33 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:33 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:33 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:33 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:33 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:34 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:34 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:34 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:37 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:37 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:37 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:37 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:37 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:37 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:36:38 Europe/Berlin] Testing errors
+[20-Jul-2024 04:36:38 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:36:38 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:37:13 Europe/Berlin] Testing errors
+[20-Jul-2024 04:37:13 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:37:13 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:37:14 Europe/Berlin] Testing errors
+[20-Jul-2024 04:37:14 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:37:14 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:38:23 Europe/Berlin] Testing errors
+[20-Jul-2024 04:38:23 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:38:23 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:38:23 Europe/Berlin] Testing errors
+[20-Jul-2024 04:38:23 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:38:23 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:39:18 Europe/Berlin] Testing errors
+[20-Jul-2024 04:39:18 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:39:18 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:39:19 Europe/Berlin] Testing errors
+[20-Jul-2024 04:39:19 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:39:19 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:39:24 Europe/Berlin] Testing errors
+[20-Jul-2024 04:39:24 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:39:24 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:39:26 Europe/Berlin] Testing errors
+[20-Jul-2024 04:39:26 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Jul-2024 04:39:41 Europe/Berlin] Testing errors
+[20-Jul-2024 04:39:41 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:39:41 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Jul-2024 04:40:18 Europe/Berlin] Testing errors
+[20-Jul-2024 04:40:19 Europe/Berlin] SessionController::validateSession()
+[20-Jul-2024 04:40:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Jul-2024 04:40:19 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Jul-2024 04:40:19 Europe/Berlin] SessionController::validateSession() public page
+[20-Jul-2024 04:40:19 Europe/Berlin] Login::construct -> inicio de login
+[20-Jul-2024 04:40:19 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Jul-2024 04:43:37 Europe/Berlin] Testing errors
+[20-Jul-2024 04:43:37 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Jul-2024 04:43:37 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
