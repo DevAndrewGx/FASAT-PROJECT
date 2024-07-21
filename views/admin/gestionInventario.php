@@ -41,10 +41,11 @@
 
                 <div class="page-header">
                     <div class="page-title">
-                        <h1>Inventario</h1>
+                        <h1>Productos</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
                             <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Productos </a>
                         </nav>
                     </div>
                     <div class="page-btn">

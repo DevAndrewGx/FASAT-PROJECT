@@ -1,4 +1,14 @@
 // EFECT FOR SIDEBAR ELEMENTS
+const arrowAside = document.querySelector(
+    ".main-wrapper .left-section .logo .bx.bxs-chevron-left-circle"
+);
+const sideBar = document.querySelector('.left-section');
+
+
+arrowAside.addEventListener('click', () => { 
+    console.log('axxx')
+    sideBar.classList.toggle('close');
+});
 
 const activeAside = () => {
     const actual = document.getElementById("actual").getAttribute("data-navegation");
@@ -16,7 +26,6 @@ const activeAside = () => {
         seccion.classList.add("active");
     }
 };
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,7 +66,7 @@ navegationItems.forEach((element) => {
 function openModal()
 {
     rowTable = "";
-    document.querySelector('#idUsuario').value ="";
+    // document.querySelector('#idUsuario').value ="";
     document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
     document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
     document.querySelector('#btnText').innerHTML ="Guardar";
