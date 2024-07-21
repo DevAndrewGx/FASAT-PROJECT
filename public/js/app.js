@@ -6,8 +6,13 @@ const sideBar = document.querySelector('.left-section');
 
 
 arrowAside.addEventListener('click', () => { 
-    console.log('axxx')
     sideBar.classList.toggle('close');
+    
+    if(sideBar.classList.contains('close')) { 
+        arrowAside.classList.replace('bxs-chevron-left-circle', 'bxs-chevron-right-circle')
+    }else { 
+        arrowAside.classList.replace('bxs-chevron-right-circle', 'bxs-chevron-left-circle')
+    }
 });
 
 const activeAside = () => {

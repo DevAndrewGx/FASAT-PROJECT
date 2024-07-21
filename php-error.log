@@ -4113,3 +4113,54 @@
 [21-Jul-2024 06:04:07 Europe/Berlin] Inventario::render -> Carga la pagina principal del inventario
 [21-Jul-2024 06:04:07 Europe/Berlin] Testing errors
 [21-Jul-2024 06:04:07 Europe/Berlin] Errores::construct -> inicio de errores
+[21-Jul-2024 06:12:00 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::validateSession()
+[21-Jul-2024 06:12:01 Europe/Berlin] sessionController::getUserSessionData(): admin
+[21-Jul-2024 06:12:01 Europe/Berlin] sessionController::validateSession(): username:admin@example.com - role: Administrador
+[21-Jul-2024 06:12:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] sessionController::isPublic(): currentURL => inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[21-Jul-2024 06:12:01 Europe/Berlin] Inventario::construct -> controlador inventariio
+[21-Jul-2024 06:12:01 Europe/Berlin] Inventario::render -> Carga la pagina principal del inventario
+[21-Jul-2024 06:12:01 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:01 Europe/Berlin] Errores::construct -> inicio de errores
+[21-Jul-2024 06:12:04 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::validateSession()
+[21-Jul-2024 06:12:04 Europe/Berlin] sessionController::getUserSessionData(): a
+[21-Jul-2024 06:12:04 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[21-Jul-2024 06:12:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] sessionController::isPublic(): currentURL => inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[21-Jul-2024 06:12:04 Europe/Berlin] Inventario::construct -> controlador inventariio
+[21-Jul-2024 06:12:04 Europe/Berlin] Inventario::render -> Carga la pagina principal del inventario
+[21-Jul-2024 06:12:04 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:04 Europe/Berlin] Errores::construct -> inicio de errores
+[21-Jul-2024 06:12:55 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::validateSession()
+[21-Jul-2024 06:12:55 Europe/Berlin] sessionController::getUserSessionData(): a
+[21-Jul-2024 06:12:55 Europe/Berlin] sessionController::validateSession(): username:a@example.com - role: Administrador
+[21-Jul-2024 06:12:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] sessionController::isPublic(): currentURL => inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/inventario, url => inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[21-Jul-2024 06:12:55 Europe/Berlin] Inventario::construct -> controlador inventariio
+[21-Jul-2024 06:12:55 Europe/Berlin] Inventario::render -> Carga la pagina principal del inventario
+[21-Jul-2024 06:12:55 Europe/Berlin] Testing errors
+[21-Jul-2024 06:12:55 Europe/Berlin] Errores::construct -> inicio de errores
