@@ -18,6 +18,7 @@
     require_once('libs/database.php');
     require_once('classes/erroresmessages.php');
     require_once('classes/sucessmesages.php');
+    require_once('classes/clienteFunciones.php');
     require_once('libs/controller.php');
     require_once('libs/model.php');
     require_once('libs/view.php');
@@ -35,6 +36,7 @@
     include_once 'models/fotomodel.php';
     include_once 'models/joinUserRolModel.php';
     include_once 'models/joinUserRelationsModel.php';
+    
 
     // Esto va hacer que automaticamente se ejecute el contructor y empieze a hacer las validaciones
     $app = new App();   
