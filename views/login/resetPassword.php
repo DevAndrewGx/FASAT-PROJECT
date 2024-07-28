@@ -4,7 +4,7 @@ $documento = $_GET['documento'] ?? $_POST['user_id'] ?? '';
 $documento = $_GET['token'] ?? $_POST['token'] ?? '';
 
 if($documento == '' || $token == '' ){
-     header("Location: index.php"); //regresa al inicio
+    header("Location: index.php"); //regresa al inicio
     exit;
 }
 

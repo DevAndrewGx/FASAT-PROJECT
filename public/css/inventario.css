@@ -41,9 +41,71 @@ main .nav-sections nav ul li {
     color: orange;
 }
 
+/* STYLS FOR FILTER TO SHOW PRODUCTS */
+
+.nav-sections:nth-child(2) nav { 
+    margin-top: 15px;
+    border-top: none;
+    padding: 15px 15px 2px;
+    border-radius: 5px;
+}
+
+.nav-sections:nth-child(2) nav ul .select-menu {
+    width: 200px;
+}
+
+.nav-sections:nth-child(2) nav ul .select-menu .select-btn { 
+    display: flex;
+    height: 45px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ebebf3;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+nav ul .select-menu .select-btn i { 
+    font-size: 18px;
+}
+
+nav ul .select-menu .options { 
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+nav ul .select-menu .options .option { 
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+nav ul .select-menu .options .option:hover { 
+    background: #f2f2f2;
+}
+
+
+/* .nav-sections:nth-child(2) nav ul select  { 
+    
+    position: relative;
+    border: 1px solid #ebebf3;
+    cursor: pointer;
+    background: none;
+    border-radius: 5px;
+    padding: 10px 15px 10px 10px;
+} */
+
 /* DETAILS SECTION FOR STOCK PRODUCT */
 
-/* CSS */
 .productdetails ul {
     list-style: none;
     padding-left: 0;

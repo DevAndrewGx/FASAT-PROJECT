@@ -39,6 +39,42 @@
                     </nav>
                 </div>
 
+
+                <div class="nav-sections">
+                    <nav>
+                        <!-- cunstom selects -->
+                        <ul>
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="select-placeholder">Categoria</span>
+                                    <i class='bx bxs-chevron-down'></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Comidas rapidas</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- <select name="categorias-filter" id="categorias-filter">
+                                <option value="#">Categoria</option>
+                                <option value="#">Categoria</option>
+                                <option value="#">Categoria</option>
+                                <option value="#">Categoria</option>
+                            </select > -->
+                            <select name="categorias-filter" id="categorias-filter">
+                                <option value="#">Subcategoria</option>
+                            </select>
+                            <select name="categorias-filter" id="categorias-filter">
+                                <option value="#">Producto</option>
+                            </select>
+                            <!-- <li id="active"><a href="#"></a></li>
+                            <li><a href="listaCategorias.html">Lista Categorias</a></li>
+                            <li><a href="#">Control de Stock</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Productos</h1>

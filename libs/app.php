@@ -91,10 +91,7 @@
                     // Lo enviamos a una pagina 404 ya que no existe ese archivo tampoco.
                     $controller = new Errores();
                     $controller->render();
-
-
                 }
-
             }
         }
     ?>

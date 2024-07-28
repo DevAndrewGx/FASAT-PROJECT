@@ -1,20 +1,34 @@
-// EFECT FOR SIDEBAR ELEMENTS
+
 const arrowAside = document.querySelector(
     ".main-wrapper .left-section .logo .bx.bxs-chevron-left-circle"
 );
 const sideBar = document.querySelector('.left-section');
 
+// Debemos crear una variable para colapsar tambien el page wrapper cuando colapse la sidebar
+
+const pageWrapper = document.querySelector('.main-wrapper .page-wrapper');
+
+
+
 
 arrowAside.addEventListener('click', () => { 
+    // toggle para el sidebar
     sideBar.classList.toggle('close');
-    
+    // toggle para el contenido principal
+    pageWrapper.classList.toggle('close');
+
+    // cambiar el icono
     if(sideBar.classList.contains('close')) { 
         arrowAside.classList.replace('bxs-chevron-left-circle', 'bxs-chevron-right-circle')
     }else { 
         arrowAside.classList.replace('bxs-chevron-right-circle', 'bxs-chevron-left-circle')
     }
+    
+    
+    
 });
 
+// EFECT FOR SIDEBAR ELEMENTS
 const activeAside = () => {
     const actual = document.getElementById("actual").getAttribute("data-navegation");
     console.log(actual);

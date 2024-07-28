@@ -294,6 +294,10 @@ ul li {
     height: 40px;
 }
 
+.main-wrapper .page-wrapper.close {
+    margin-left: 100px;
+}
+
 .main-wrapper .left-section.close .logo i { 
     margin-right: 20px;
 }
@@ -844,7 +848,7 @@ main #orders-employees #orders p {
     left: 0;
     -webkit-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+    transition: all .3s ease-in-out;
 }
 
 @media (max-width: 991px) {
@@ -853,6 +857,7 @@ main #orders-employees #orders p {
         padding: 60px 0 0;
     }
 }
+
 .page-wrapper .content {
     padding: 0 0 30px;
 }
