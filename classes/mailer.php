@@ -50,6 +50,7 @@ class Mailer
             } else {
                 return false;
             }
+            
         } catch (Exception $e) {
             echo "Error al enviar el correo electronico: {$mail->ErrorInfo}";
             return false;

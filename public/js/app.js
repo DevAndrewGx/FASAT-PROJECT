@@ -3,9 +3,7 @@ const arrowAside = document.querySelector(
     ".main-wrapper .left-section .logo .bx.bxs-chevron-left-circle"
 );
 const sideBar = document.querySelector('.left-section');
-
 // Debemos crear una variable para colapsar tambien el page wrapper cuando colapse la sidebar
-
 const pageWrapper = document.querySelector('.main-wrapper .page-wrapper');
 
 

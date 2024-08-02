@@ -9,7 +9,7 @@
 
         function render() {
             error_log('CambiarPassword::render -> Carga la pagina principal para cambiar password');
-            $this->view->render('login/cambiarpassword', []);
+            $this->view->render('login/index#form-forgetpassword', []);
         }
     }
 ?>

@@ -51,12 +51,14 @@ main .nav-sections nav ul li {
 }
 
 .nav-sections:nth-child(2) nav ul .select-menu {
+    position: relative;
     width: 200px;
 }
 
 .nav-sections:nth-child(2) nav ul .select-menu .select-btn { 
     display: flex;
-    height: 45px;
+    cursor: pointer;
+    height: 40px;
     background: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -69,22 +71,39 @@ main .nav-sections nav ul li {
 
 nav ul .select-menu .select-btn i { 
     font-size: 18px;
+    transition: 0.3s;
 }
 
 nav ul .select-menu .options { 
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    margin-top: 20px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    display: none;
+}
+
+nav ul .select-menu.active .options {
+    display: block;
+}
+
+nav ul .select-menu.active .select-btn i {
+
+    transform: rotate(-180deg);
 }
 
 nav ul .select-menu .options .option { 
     display: flex;
+    transition: 0.4s;
+    margin: auto;
     height: 55px;
     cursor: pointer;
-    padding: 0 16px;
+    padding: 5px 16px;
     border-radius: 8px;
     align-items: center;
 }
@@ -92,6 +111,12 @@ nav ul .select-menu .options .option {
 nav ul .select-menu .options .option:hover { 
     background: #f2f2f2;
 }
+
+nav ul .select-menu .options .option .option-text {
+    font-size: 15px;
+}
+
+
 
 
 /* .nav-sections:nth-child(2) nav ul select  { 

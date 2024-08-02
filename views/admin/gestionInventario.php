@@ -54,20 +54,71 @@
                                         <span class="option-text">Comidas rapidas</span>
                                     </li>
 
+                                    <li class="option">
+                                        <span class="option-text">Platos especiales</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Ensaladas</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Bebidas</span>
+                                    </li>
+
                                 </ul>
                             </div>
-                            <!-- <select name="categorias-filter" id="categorias-filter">
-                                <option value="#">Categoria</option>
-                                <option value="#">Categoria</option>
-                                <option value="#">Categoria</option>
-                                <option value="#">Categoria</option>
-                            </select > -->
-                            <select name="categorias-filter" id="categorias-filter">
-                                <option value="#">Subcategoria</option>
-                            </select>
-                            <select name="categorias-filter" id="categorias-filter">
-                                <option value="#">Producto</option>
-                            </select>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="select-placeholder">Sub-categorias</span>
+                                    <i class='bx bxs-chevron-down'></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Sin sal</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Con azucar</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Dietica</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Espodarica</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="select-placeholder">Producto</span>
+                                    <i class='bx bxs-chevron-down'></i>
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <span class="option-text">Coca-cola</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Ensalada italiana</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Pollo asado</span>
+                                    </li>
+
+                                    <li class="option">
+                                        <span class="option-text">Espodarica</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                             <!-- <li id="active"><a href="#"></a></li>
                             <li><a href="listaCategorias.html">Lista Categorias</a></li>
                             <li><a href="#">Control de Stock</a></li> -->
@@ -258,6 +309,7 @@
 
             <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
             <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+            <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
         </main>
 </body>
 
