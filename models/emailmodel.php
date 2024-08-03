@@ -106,6 +106,7 @@ class EmailModel extends Model
         }
     }
 
+    
     function actualizaPassword($password)
     {
 

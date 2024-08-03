@@ -1,7 +1,7 @@
 <?php 
     // definimos nuestras constantes de configuracion para usarlas a lo largo del programa
 
-    define('URL', 'http://localhost/FASTPROJECT/');
+    define('URL', 'http://localhost/FAST-PROJECT/');
     define('HOST', 'localhost');
     define('DB', 'test_fast3');
     define('USER', 'root');
@@ -19,5 +19,4 @@
     define("MAIL_PORT", "587");
 
     session_start();
-
 ?>
