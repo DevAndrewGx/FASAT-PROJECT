@@ -35,7 +35,15 @@
     include_once 'models/fotomodel.php';
     include_once 'models/joinUserRolModel.php';
     include_once 'models/joinUserRelationsModel.php';
+    include_once 'models/emailmodel.php';
     
+
+    // MAILER para enviar correo
+    require_once 'classes/Mailer.php';
+    require_once 'config/config.php';
+    require 'PHPMailer-6.9.1/src/PHPMailer.php';
+    require 'PHPMailer-6.9.1/src/SMTP.php';
+    require 'PHPMailer-6.9.1/src/Exception.php';
 
     // Esto va hacer que automaticamente se ejecute el contructor y empieze a hacer las validaciones
     $app = new App();   

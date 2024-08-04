@@ -267,7 +267,6 @@
 
 
         // Create getters and setters
-
         public function setIdRol($id){             $this->idRol = $id;}
         public function setIdEstado($id){         $this->idEstado = $id;}
         public function setIdFoto($id){     $this->idFoto = $id;}

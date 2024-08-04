@@ -4,7 +4,7 @@ class EmailModel extends Model
 {
 
     private $token;
-    private $user_id;
+    private $documento;
     private $correo;
 
     // function esNulo(array $parametos)
@@ -32,12 +32,11 @@ class EmailModel extends Model
     //     return false;
     // }
 
-
     // Esta funcion nos permite verificar si el email ya existe en la base de datos
     function emailExiste()
     {
         try {
-            $query = $this->query("SELECT documento FROM usuarios WHERE correo LIKE :correo LIMIT 1");
+            $query = $this->prepare("SELECT documento FROM usuarios WHERE correo = :correo LIMIT 1");
 
             $query->execute([
                 "correo" => $this->correo
@@ -48,6 +47,7 @@ class EmailModel extends Model
             }
             return false;
         } catch (PDOException $e) {
+            error_log("Correo: " . $this->correo);
             error_log('EmailModel::EmailExiste->PDOException' . $e);
             return false;
         }
@@ -67,12 +67,14 @@ class EmailModel extends Model
         try {
             $token = $this->generarToken();
 
-            $query = $this->prepare("UPDATE usuarios SET token_password = :token, password_request=1 WHERE documento = :documento");
+            // asiganamos el token
+            $this->setToken($token);
 
+            $query = $this->prepare("UPDATE usuarios SET token_password = :token, password_request = 1 WHERE correo = :correo"); 
 
             $query->execute([
                 'token' => $this->token,
-                'documento' => $this->user_id
+                'correo' => $this->correo
             ]);
 
             if ($query) {
@@ -93,7 +95,7 @@ class EmailModel extends Model
             $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password request = 1");
 
             $query->execute([
-                'documento' => $this->user_id,
+                'documento' => $this->documento,
                 'toke' => $this->token,
             ]);
 
@@ -118,7 +120,7 @@ class EmailModel extends Model
             $query->execute([
 
                 'password' => $password,
-                'documento' => $this->user_id
+                'documento' => $this->documento
             ]);
 
             if ($query->rowCount() > 0) {
@@ -130,4 +132,34 @@ class EmailModel extends Model
             return false;
         }
     }
+
+    function getUserDocumento() {
+        try {
+            // we have to use prepare because we're going to assing
+            $query = $this->prepare('SELECT * FROM usuarios WHERE correo = :correo');
+            $query->execute([
+                'correo' => $this->correo
+            ]);
+            // Como solo queremos obtener un valor, no hay necesidad de tener un while
+            $user = $query->fetch(PDO::FETCH_ASSOC);
+
+            // en este caso no hay necesidad de crear un objeto userModel, solo podemos llamar los metodos del mismo con objeto con this
+            $this->setDocumento($user['documento']);
+
+            //retornamos this porque es el mismo objeto que ya contiene la informacion
+            return $user;
+        } catch (PDOException $e) {
+            error_log('USERMODEL::getId->PDOException' . $e);
+        }
+    }
+
+
+      // Create getters and setters
+        public function setEmail($correo){             $this->correo = $correo;}
+        public function setToken($token){             $this->token = $token;}
+        public function setDocumento($documento){             $this->documento = $documento;}
+
+        public function getEmail(){             return $this->correo;}
+        public function getToken(){             return $this->token;}
+        public function getDocumento(){             return $this->documento;}
 }

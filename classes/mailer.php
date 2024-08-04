@@ -3,19 +3,14 @@
 
 use PHPMailer\PHPMailer\{PHPMailer, SMTP, Exception};
 
-
-
-
-
 class Mailer
 {
-
     function enviarEmail($correo, $asunto, $cuerpo)
     {
-        require_once '../config/config.php';
-        require '../PHPMailer-6.9.1/src/PHPMailer.php';
-        require '../PHPMailer-6.9.1/src/SMTP.php';
-        require '../PHPMailer-6.9.1/src/Exception.php';
+        // require_once '../config/config.php';
+        // require '../PHPMailer-6.9.1/src/PHPMailer.php';
+        // require '../PHPMailer-6.9.1/src/SMTP.php';
+        // require '../PHPMailer-6.9.1/src/Exception.php';
 
 
         $mail = new PHPMailer(true);

@@ -3,7 +3,7 @@
 
     define('URL', 'http://localhost/FASTPROJECT/');
     define('HOST', 'localhost');
-    define('DB', 'test_fast3');
+    define('DB', 'test_fast4');
     define('USER', 'root');
     define('PASSWORD', '');
     define('CHARSET', 'utf8mb4');
@@ -18,6 +18,6 @@
     define("MAIL_PASS", "Trabajo12345");
     define("MAIL_PORT", "587");
 
-    
+
     session_start();
 ?>
