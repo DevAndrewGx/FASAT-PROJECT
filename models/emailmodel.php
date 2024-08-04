@@ -32,6 +32,7 @@ class EmailModel extends Model
     //     return false;
     // }
 
+
     // Esta funcion nos permite verificar si el email ya existe en la base de datos
     function emailExiste()
     {
@@ -84,11 +85,12 @@ class EmailModel extends Model
         }
     }
 
+
     function verificarTokenRequest()
     {
 
         try {
-            $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password request=1");
+            $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password request = 1");
 
             $query->execute([
                 'documento' => $this->user_id,

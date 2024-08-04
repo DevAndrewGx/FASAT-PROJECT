@@ -17,6 +17,6 @@
         private $nombre;
         private $unidad_medida;
         
-    
     }
+
 ?>

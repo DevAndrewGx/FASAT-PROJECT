@@ -2119,3 +2119,114 @@
 [28-Jul-2024 22:26:19 Europe/Berlin] Inventario::render -> Carga la pagina principal del inventario
 [28-Jul-2024 22:26:20 Europe/Berlin] Testing errors
 [28-Jul-2024 22:26:20 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Aug-2024 03:14:39 Europe/Berlin] Testing errors
+[04-Aug-2024 03:14:40 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Aug-2024 03:14:40 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[04-Aug-2024 03:14:42 Europe/Berlin] Testing errors
+[04-Aug-2024 03:14:42 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Aug-2024 03:14:43 Europe/Berlin] Testing errors
+[04-Aug-2024 03:14:43 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Aug-2024 03:14:43 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[04-Aug-2024 03:14:43 Europe/Berlin] Testing errors
+[04-Aug-2024 03:14:44 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Aug-2024 03:15:33 Europe/Berlin] Testing errors
+[04-Aug-2024 03:15:33 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Aug-2024 03:15:33 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[04-Aug-2024 03:15:34 Europe/Berlin] Testing errors
+[04-Aug-2024 03:15:34 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Aug-2024 03:16:36 Europe/Berlin] Testing errors
+[04-Aug-2024 03:16:37 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:16:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Aug-2024 03:16:37 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Aug-2024 03:16:37 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:16:37 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:16:37 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:49:20 Europe/Berlin] Testing errors
+[04-Aug-2024 03:49:20 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:49:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Aug-2024 03:49:20 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Aug-2024 03:49:20 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:49:20 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:49:20 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:51:23 Europe/Berlin] Testing errors
+[04-Aug-2024 03:51:23 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:51:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:23 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:23 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:51:23 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:51:23 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:51:40 Europe/Berlin] Testing errors
+[04-Aug-2024 03:51:40 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:51:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:40 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:40 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:51:40 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:51:40 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:51:46 Europe/Berlin] Testing errors
+[04-Aug-2024 03:51:46 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:51:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:46 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:46 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:51:46 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:51:46 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:51:58 Europe/Berlin] Testing errors
+[04-Aug-2024 03:51:58 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:51:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:58 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:51:58 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:51:58 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:51:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:56:52 Europe/Berlin] Testing errors
+[04-Aug-2024 03:56:52 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:56:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:52 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:52 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:56:52 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:56:52 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:56:55 Europe/Berlin] Testing errors
+[04-Aug-2024 03:56:55 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:56:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:55 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:55 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:56:55 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:56:55 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:56:58 Europe/Berlin] Testing errors
+[04-Aug-2024 03:56:58 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:56:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=dave%40gmal.com, url => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:58 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=dave%40gmal.com
+[04-Aug-2024 03:56:58 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:56:58 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:56:58 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:57:12 Europe/Berlin] Testing errors
+[04-Aug-2024 03:57:12 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Aug-2024 03:57:12 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[04-Aug-2024 03:57:13 Europe/Berlin] Testing errors
+[04-Aug-2024 03:57:13 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Aug-2024 03:57:15 Europe/Berlin] Testing errors
+[04-Aug-2024 03:57:15 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:57:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Aug-2024 03:57:15 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Aug-2024 03:57:15 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:57:15 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:57:15 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:59:12 Europe/Berlin] Testing errors
+[04-Aug-2024 03:59:12 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:59:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[04-Aug-2024 03:59:12 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[04-Aug-2024 03:59:12 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:59:12 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:59:12 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 03:59:20 Europe/Berlin] Testing errors
+[04-Aug-2024 03:59:20 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 03:59:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=c%40gmail.com, url => login?email=c%40gmail.com
+[04-Aug-2024 03:59:20 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=c%40gmail.com
+[04-Aug-2024 03:59:20 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 03:59:20 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 03:59:20 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Aug-2024 04:07:18 Europe/Berlin] Testing errors
+[04-Aug-2024 04:07:18 Europe/Berlin] SessionController::validateSession()
+[04-Aug-2024 04:07:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login?email=c%40gmail.com, url => login?email=c%40gmail.com
+[04-Aug-2024 04:07:18 Europe/Berlin] sessionController::isPublic(): currentURL => login?email=c%40gmail.com
+[04-Aug-2024 04:07:18 Europe/Berlin] SessionController::validateSession() public page
+[04-Aug-2024 04:07:18 Europe/Berlin] Login::construct -> inicio de login
+[04-Aug-2024 04:07:18 Europe/Berlin] Login::render -> Carga la pagina principal del login
