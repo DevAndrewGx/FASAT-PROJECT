@@ -84,7 +84,6 @@
 
 
         // funciones para evitar escribir la sitaxis de get y post para recuperar data
-
         function getGet($name) {
             return $_GET[$name];
         }

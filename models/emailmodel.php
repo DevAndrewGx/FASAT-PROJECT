@@ -24,13 +24,7 @@ class EmailModel extends Model
     //     } else false;
     // }
 
-    // function validarPassword($password, $repassword)
-    // {
-    //     if (strcmp($password, $repassword) === 0) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
+    
 
     // Esta funcion nos permite verificar si el email ya existe en la base de datos
     function emailExiste()
@@ -87,16 +81,15 @@ class EmailModel extends Model
         }
     }
 
-
     function verificarTokenRequest()
     {
 
         try {
-            $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password request = 1");
+            $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password_request = 1");
 
             $query->execute([
                 'documento' => $this->documento,
-                'toke' => $this->token,
+                'token' => $this->token,
             ]);
 
             if ($query->rowCount() > 0) {
@@ -110,7 +103,7 @@ class EmailModel extends Model
         }
     }
 
-    
+
     function actualizaPassword($password)
     {
 
