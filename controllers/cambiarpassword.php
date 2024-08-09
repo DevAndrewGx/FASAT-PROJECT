@@ -90,22 +90,30 @@ class CambiarPassword extends Controller
             return;
         }
 
+    
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
         error_log('CambiarPassword::changePassword -> se puede cambiar la contraseña');
 
         // creamos un objeto de emailModel para validar el token
         $emailObject = new EmailModel();
-        if (!$emailObject->verificarTokenRequest($this->getPost('token'), $this->getPost('documento'))) {
+        $emailObject->setToken($this->getGet('token'));
+        $emailObject->setDocumento($this->getGet('documento'));
+        $documento = isset($_GET['documento']) ? $_GET['documento'] : null;
+        $token = isset($_GET['token']) ? $_GET['token'] : null;
+
+        var_dump($documento);
+        var_dump($token);
+        
+        if (!$emailObject->verificarTokenRequest()) {
             echo json_encode(['status' => false, 'message' => "No se puede obtener los parametros de la URL"]);
-            var_dump($this->getPost('token'));
-            var_dump($this->getPost('documento'));
-            var_dump($this->getPost('password'));
-            var_dump($this->getPost('repassword'));
+            // var_dump($this->getPost('token'));
+            // var_dump($this->getPost('documento'));
+            // var_dump($this->getPost('password'));
+            // var_dump($this->getPost('repassword'));
             return;
         }
 
         // verificamos que las contraseñas vengan del formulario
-
         if ($this->getPost('password') && $this->getPost('repassword')) {
 
             $password = trim($this->getPost('password'));

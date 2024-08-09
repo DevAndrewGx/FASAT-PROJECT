@@ -1,40 +1,175 @@
-[08-Aug-2024 04:35:39 Europe/Berlin] Testing errors
-[08-Aug-2024 04:35:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:35:39 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:36:42 Europe/Berlin] Testing errors
-[08-Aug-2024 04:36:42 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:36:42 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:38:21 Europe/Berlin] Testing errors
-[08-Aug-2024 04:38:21 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[08-Aug-2024 04:38:28 Europe/Berlin] Testing errors
-[08-Aug-2024 04:38:28 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:38:28 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:38:44 Europe/Berlin] Testing errors
-[08-Aug-2024 04:38:44 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[08-Aug-2024 04:38:57 Europe/Berlin] Testing errors
-[08-Aug-2024 04:38:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:38:57 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:38:57 Europe/Berlin] PHP Warning:  Undefined array key "tsxoken" in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 92
-[08-Aug-2024 04:39:13 Europe/Berlin] Testing errors
-[08-Aug-2024 04:39:13 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[08-Aug-2024 04:39:33 Europe/Berlin] Testing errors
-[08-Aug-2024 04:39:33 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:39:33 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:40:08 Europe/Berlin] Testing errors
-[08-Aug-2024 04:40:08 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[08-Aug-2024 04:40:14 Europe/Berlin] Testing errors
-[08-Aug-2024 04:40:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:40:14 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:43:51 Europe/Berlin] Testing errors
-[08-Aug-2024 04:43:51 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
-[08-Aug-2024 04:43:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 42
-[08-Aug-2024 04:43:51 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
-[08-Aug-2024 04:43:51 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
-[08-Aug-2024 04:44:56 Europe/Berlin] Testing errors
-[08-Aug-2024 04:44:56 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[08-Aug-2024 04:45:06 Europe/Berlin] Testing errors
-[08-Aug-2024 04:45:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:45:06 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[08-Aug-2024 04:45:11 Europe/Berlin] Testing errors
-[08-Aug-2024 04:45:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FASTPROJECT\libs\controller.php on line 74
-[08-Aug-2024 04:45:11 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 02:34:44 Europe/Berlin] Testing errors
+[09-Aug-2024 02:34:44 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:35:41 Europe/Berlin] Testing errors
+[09-Aug-2024 02:35:41 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:35:41 Europe/Berlin] Testing errors
+[09-Aug-2024 02:35:41 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:35:41 Europe/Berlin] Testing errors
+[09-Aug-2024 02:35:41 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:35:42 Europe/Berlin] Testing errors
+[09-Aug-2024 02:35:42 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:35:51 Europe/Berlin] Testing errors
+[09-Aug-2024 02:35:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 02:35:51 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 02:35:51 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 02:36:04 Europe/Berlin] Testing errors
+[09-Aug-2024 02:36:04 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[09-Aug-2024 02:36:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[09-Aug-2024 02:36:04 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[09-Aug-2024 02:36:04 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[09-Aug-2024 02:37:39 Europe/Berlin] Testing errors
+[09-Aug-2024 02:37:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 02:37:39 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 02:37:39 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 02:38:41 Europe/Berlin] Testing errors
+[09-Aug-2024 02:38:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 02:38:41 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 02:38:41 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 02:38:41 Europe/Berlin] Testing errors
+[09-Aug-2024 02:38:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 02:38:41 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 02:38:41 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 02:52:59 Europe/Berlin] Testing errors
+[09-Aug-2024 02:52:59 Europe/Berlin] APP::construct->No hay controlador especificado
+[09-Aug-2024 02:52:59 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[09-Aug-2024 02:52:59 Europe/Berlin] Testing errors
+[09-Aug-2024 02:52:59 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 02:53:00 Europe/Berlin] Testing errors
+[09-Aug-2024 02:53:00 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 02:53:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[09-Aug-2024 02:53:00 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 02:53:00 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 02:53:00 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 02:53:00 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 02:53:08 Europe/Berlin] Testing errors
+[09-Aug-2024 02:53:08 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 02:53:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[09-Aug-2024 02:53:08 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 02:53:08 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 02:53:08 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 02:53:08 Europe/Berlin] loginByCorreo: inicio
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 32
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 33
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 34
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 35
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 36
+[09-Aug-2024 02:53:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 37
+[09-Aug-2024 02:53:08 Europe/Berlin] login: user correo 
+[09-Aug-2024 02:53:08 Europe/Berlin] Login::authenticate() user and/or password wrong
+[09-Aug-2024 02:53:08 Europe/Berlin] Testing errors
+[09-Aug-2024 02:53:08 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 02:53:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[09-Aug-2024 02:53:08 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[09-Aug-2024 02:53:08 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 02:53:08 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 02:53:08 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 03:12:52 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:52 Europe/Berlin] APP::construct->No hay controlador especificado
+[09-Aug-2024 03:12:52 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[09-Aug-2024 03:12:53 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:53 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:12:53 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:54 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:12:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[09-Aug-2024 03:12:54 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 03:12:54 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 03:12:54 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:12:54 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 03:12:57 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:57 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:12:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[09-Aug-2024 03:12:57 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 03:12:57 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 03:12:57 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:12:57 Europe/Berlin] loginByCorreo: inicio
+[09-Aug-2024 03:12:57 Europe/Berlin] login: user correo adminUpdate@example.com
+[09-Aug-2024 03:12:57 Europe/Berlin] login: success
+[09-Aug-2024 03:12:57 Europe/Berlin] Login::authenticate() passed
+[09-Aug-2024 03:12:57 Europe/Berlin] sessionController::initialize(): user: adminUpdate
+[09-Aug-2024 03:12:57 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[09-Aug-2024 03:12:57 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:57 Europe/Berlin] Testing errors
+[09-Aug-2024 03:12:57 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:13:08 Europe/Berlin] Testing errors
+[09-Aug-2024 03:13:08 Europe/Berlin] APP::construct->No hay controlador especificado
+[09-Aug-2024 03:13:08 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[09-Aug-2024 03:13:08 Europe/Berlin] Testing errors
+[09-Aug-2024 03:13:08 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:13:14 Europe/Berlin] Testing errors
+[09-Aug-2024 03:13:14 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:13:14 Europe/Berlin] sessionController::getUserSessionData(): adminUpdate
+[09-Aug-2024 03:13:14 Europe/Berlin] sessionController::validateSession(): username:adminUpdate@example.com - role: Administrador
+[09-Aug-2024 03:13:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[09-Aug-2024 03:13:14 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 03:13:14 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[09-Aug-2024 03:13:14 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:13:14 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 03:13:14 Europe/Berlin] Testing errors
+[09-Aug-2024 03:13:14 Europe/Berlin] Testing errors
+[09-Aug-2024 03:13:14 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:15:17 Europe/Berlin] Testing errors
+[09-Aug-2024 03:15:18 Europe/Berlin] APP::construct->No hay controlador especificado
+[09-Aug-2024 03:15:18 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[09-Aug-2024 03:15:18 Europe/Berlin] Testing errors
+[09-Aug-2024 03:15:18 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:15:21 Europe/Berlin] Testing errors
+[09-Aug-2024 03:15:21 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:15:22 Europe/Berlin] sessionController::getUserSessionData(): adminUpdate
+[09-Aug-2024 03:15:22 Europe/Berlin] sessionController::validateSession(): username:adminUpdate@example.com - role: Administrador
+[09-Aug-2024 03:15:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[09-Aug-2024 03:15:22 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 03:15:22 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[09-Aug-2024 03:15:22 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:15:22 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 03:15:22 Europe/Berlin] Testing errors
+[09-Aug-2024 03:15:22 Europe/Berlin] Testing errors
+[09-Aug-2024 03:15:22 Europe/Berlin] Errores::construct -> inicio de errores
+[09-Aug-2024 03:21:56 Europe/Berlin] Testing errors
+[09-Aug-2024 03:21:56 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:21:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[09-Aug-2024 03:21:56 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[09-Aug-2024 03:21:56 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 03:21:56 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:21:56 Europe/Berlin] loginByCorreo: inicio
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 32
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 33
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 34
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 35
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 36
+[09-Aug-2024 03:21:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRolModel.php on line 37
+[09-Aug-2024 03:21:56 Europe/Berlin] login: user correo 
+[09-Aug-2024 03:21:56 Europe/Berlin] Login::authenticate() user and/or password wrong
+[09-Aug-2024 03:21:56 Europe/Berlin] Testing errors
+[09-Aug-2024 03:21:56 Europe/Berlin] SessionController::validateSession()
+[09-Aug-2024 03:21:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[09-Aug-2024 03:21:56 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[09-Aug-2024 03:21:56 Europe/Berlin] SessionController::validateSession() public page
+[09-Aug-2024 03:21:56 Europe/Berlin] Login::construct -> inicio de login
+[09-Aug-2024 03:21:56 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[09-Aug-2024 03:28:41 Europe/Berlin] Testing errors
+[09-Aug-2024 03:28:41 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[09-Aug-2024 03:28:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[09-Aug-2024 03:28:41 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[09-Aug-2024 03:28:41 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[09-Aug-2024 03:30:02 Europe/Berlin] Testing errors
+[09-Aug-2024 03:30:08 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[09-Aug-2024 03:30:08 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[09-Aug-2024 03:30:08 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[09-Aug-2024 03:30:08 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[09-Aug-2024 03:30:20 Europe/Berlin] Testing errors
+[09-Aug-2024 03:30:20 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
+[09-Aug-2024 03:30:38 Europe/Berlin] Testing errors
+[09-Aug-2024 03:30:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 03:30:38 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 03:30:38 Europe/Berlin] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 03:30:38 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 03:31:24 Europe/Berlin] Testing errors
+[09-Aug-2024 03:31:33 Europe/Berlin] Testing errors
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 03:31:36 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 74
+[09-Aug-2024 03:31:36 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
+[09-Aug-2024 03:31:36 Europe/Berlin] PHP Warning:  Undefined array key "documento" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 88
