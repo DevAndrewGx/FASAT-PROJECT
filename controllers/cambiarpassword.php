@@ -90,6 +90,7 @@ class CambiarPassword extends Controller
             return;
         }
 
+    
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
         error_log('CambiarPassword::changePassword -> se puede cambiar la contraseña');
 
@@ -105,7 +106,6 @@ class CambiarPassword extends Controller
         }
 
         // verificamos que las contraseñas vengan del formulario
-
         if ($this->getPost('password') && $this->getPost('repassword')) {
 
             $password = trim($this->getPost('password'));

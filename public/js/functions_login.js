@@ -138,33 +138,7 @@ $(document).ready(function () {
                     },
                 });
 
-                // Mostrar mensaje de carga
-                // $("#divLoading").css("display", "flex");
-
-                // setTimeout(function () {
-                //     $("#divLoading").hide();
-
-                //     // Mostrar mensaje de éxito con SweetAlert2
-                //     swal(
-                //         {
-                //             title: "",
-                //             text: "Contraseña cambiada correctamente.",
-                //             type: "success",
-                //             confirmButtonText: "Iniciar sesión",
-                //             closeOnConfirm: false,
-                //         },
-                //         function (isConfirm) {
-                //             if (isConfirm) {
-                //                 window.location.href =
-                //                     '<?php echo constant("URL") ?>/login';
-                //             }
-                //         }
-                //     );
-
-                //     // Vaciar los campos de contraseña después de cambiarla
-                //     $("#txtPassword").val("");
-                //     $("#txtPasswordConfirm").val("");
-                // }, 2000); // Simular tiempo de respuesta del servidor
+               
             }
 
             

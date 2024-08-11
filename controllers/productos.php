@@ -17,7 +17,6 @@
             $this->view->render('admin/gestionInventario', []);
         }
 
-
         // creamos la funcion que nos permitira crear nuevos productos
         function createProduct() { 
             
