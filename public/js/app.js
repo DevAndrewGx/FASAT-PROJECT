@@ -78,9 +78,10 @@ navegationItems.forEach((element) => {
 //         }
 //     });
 
+
 // functions for modals
 
-function openModal()
+function openModalCreateUser()
 {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
@@ -90,4 +91,17 @@ function openModal()
     document.querySelector('#titleModal').innerHTML = "Nuevo Usuario";
     document.querySelector("#formUsuario").reset();
     $('#modalFormUsuario').modal('show');
+}
+
+
+function openModalCreateProduct()
+{
+    rowTable = "";
+    // document.querySelector('#idUsuario').value ="";
+    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
+    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
+    document.querySelector('#btnText').innerHTML ="Guardar";
+    document.querySelector('#titleModal').innerHTML = "Nuevo Producto";
+    document.querySelector("#formProduct").reset();
+    $('#modalFormCreateProduct').modal('show');
 }

@@ -25,7 +25,7 @@
             "description": "Tabla donde se visualizan las ventas"
         },
         {
-            "site": "inventario", 
+            "site": "productos", 
             "access": "private", 
             "role": "Administrador",
             "description": "Tabla donde se visualizan el inventario"

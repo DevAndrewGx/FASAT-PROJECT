@@ -28,7 +28,7 @@
         </div>
         <div class="item" id="inventario">
             <i class='bx bx-task'></i>
-            <a href="<?php echo constant('URL'); ?>inventario">Inventario</a>
+            <a href="<?php echo constant('URL'); ?>productos">Inventario</a>
         </div>
         <div class="item">
             <i class='bx bx-cog'></i>

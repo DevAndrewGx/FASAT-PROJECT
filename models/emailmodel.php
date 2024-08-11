@@ -93,7 +93,6 @@ class EmailModel extends Model
             ]);
 
             if ($query->rowCount() > 0) {
-
                 return true;
             }
             return false;

@@ -95,12 +95,12 @@ class CambiarPassword extends Controller
 
         // creamos un objeto de emailModel para validar el token
         $emailObject = new EmailModel();
-        if (!$emailObject->verificarTokenRequest($this->getPost('token'), $this->getPost('documento'))) {
+
+        $emailObject->setToken($this->getGet('token'));
+        $emailObject->setDocumento($this->getGet('documento'));
+
+        if (!$emailObject->verificarTokenRequest()) {
             echo json_encode(['status' => false, 'message' => "No se puede obtener los parametros de la URL"]);
-            var_dump($this->getPost('token'));
-            var_dump($this->getPost('documento'));
-            var_dump($this->getPost('password'));
-            var_dump($this->getPost('repassword'));
             return;
         }
 
@@ -133,46 +133,4 @@ class CambiarPassword extends Controller
         }
         return false;
     }
-
-
-
-    // $user_id = $_GET['documento'] ?? $_POST['user_id'] ?? '';
-    // $documento = $_GET['token'] ?? $_POST['token'] ?? '';
-
-    // if($user_id == '' || $token == '' ){
-    //     header("Location: index.php"); //regresa al inicio
-    //     exit;
-    // }
-
-
-    // $errors = [];
-
-    // if(!verificarTokenRequest($user_id, $token, $con )){
-
-    //     echo "No se pudo verificar la informacion";
-    //     exit;
-    // }
-
-    // if (!empty($_POST)) {
-    //     $password = trim($_POST['password']);
-    //     $repassword = trim($_POST['repassword']);
-
-    //     if (esNulo([$user_id, $token, $password, $repassword])) {
-    //         $errors[] = "Debe llenar todos los campos";
-    //     }
-
-    //     if (!validarPassword([$password, $repassword])) {
-    //         $errors[] = "Las contraseñas no coinciden";
-    //     }
-
-    //     if(count($errors)== 0){
-    //         $pass_hash = password_hash($password, PASSWORD_DEFAULT);
-    //         if (actualizaPassword($user_id, $password, $conn)){
-    //             echo "Contraseña modificada.<br><a href='login.php'>Iniciar sesion</a>";
-    //             exit;
-    //         }   else{
-    //             $errors[] = "Error al modificar contraseña. Intentalo nuevamente";
-    //         }
-    //     }
-    // }
 }

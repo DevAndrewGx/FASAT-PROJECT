@@ -136,7 +136,7 @@
                         </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="crearProducto.html" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                        <a href="#" onclick="openModalCreateProduct();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Agregar Nuevo
                             Producto</a>
                     </div>
@@ -296,21 +296,104 @@
                 </div>
             </div>
 
-            <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-            <!-- DataTables -->
-            <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-            <!-- DataTables Bootstrap 5 integration -->
-            <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 
-            <!-- SWEETALERT2 -->
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-            <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
-            <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-            <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
         </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalFormCreateProduct" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="titleModal">Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formProduct" name="formProduct" class="form-horizontal" enctype="multipart/form-data">
+                        <p class="text-primary">Todos los campos son obligatorios.</p>
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-6">
+                                <label for="identificacion" class="col-form-label">Nombre producto</label>
+                                <input type="text" class="form-control" id="identificacion" name="documento" required>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col-lg-6 col-md-6">
+                                <label for="categoria" class="col-form-label">Categoría</label>
+                                <select name="categoria" class="form-control select" id="categoria">
+                                    <option>Seleccionar categoria</option>
+                                    <option>Bebidas</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="subcategoria" class="col-form-label">Subcategoria</label>
+                                <select name="subcategoria" class="form-control select" id="subcategoria">
+                                    <option>Seleccionar subcategoria</option>
+                                    <option>Sin azucar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Precio" class="col-form-label">Precio</label>
+                                <input type="text" class="form-control valid validText" name="precio" required>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="disponibilidad" class="col-form-label">Permitir vender sin stock</label>
+                                <select name="disponibilidad" class="form-control select" id="disponibilidad">
+                                    <option>Seleccionar opcion</option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="telefono">Descripcion</label>
+                                <textarea rows="5" cols="50" name="descripcion" class="form-control" id="descripcion">
+
+                                </textarea>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Foto de producto</label>
+                                <div class="image-upload image-upload-new col-md-6">
+                                    <input type="file" name="foto" id="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
+                                    <div class="image-uploads">
+                                        <img src="<?php echo constant('URL') ?>public/imgs/icons/upload.svg" alt="img">
+                                        <h4>Arrastra el archivo</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="tipoFoto" value="Usuarios">
+                        </div>
+                        <div class="tile-footer">
+                            <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-danger" type="button" data-bs-dismiss="modal"><i class='bx bxs-x-circle'></i>Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <!-- DataTables Bootstrap 5 integration -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
 </body>
 
 

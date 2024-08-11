@@ -48,7 +48,7 @@
 
                     </div>
                     <div class="page-btn">
-                        <a href="#" onclick="openModal();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
+                        <a href="#" onclick="openModalCreateUser();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
                             Empleado</a>
                     </div>
                 </div>
