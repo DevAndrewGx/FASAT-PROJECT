@@ -313,8 +313,8 @@
                         <p class="text-primary">Todos los campos son obligatorios.</p>
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-6">
-                                <label for="identificacion" class="col-form-label">Nombre producto</label>
-                                <input type="text" class="form-control" id="identificacion" name="documento" required>
+                                <label for="nombreProducto" class="col-form-label">Nombre producto</label>
+                                <input type="text" class="form-control" id="nombreProducto" name="nombreProducto" required>
                             </div>
                         </div>
                         <div class="row">
@@ -323,10 +323,9 @@
                                 <label for="categoria" class="col-form-label">Categoría</label>
                                 <select name="categoria" class="form-control select" id="categoria">
                                     <option>Seleccionar categoria</option>
-                                    <option>Bebidas</option>
+                                    <option value="1">Postres</option>
                                 </select>
-
-                            </div>
+                            </div>  
 
                             <div class="form-group col-md-6">
                                 <label for="subcategoria" class="col-form-label">Subcategoria</label>
@@ -336,7 +335,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="Precio" class="col-form-label">Precio</label>
+                                <label for="precio" class="col-form-label">Precio</label>
                                 <input type="text" class="form-control valid validText" name="precio" required>
                             </div>
 
@@ -344,19 +343,17 @@
                                 <label for="disponibilidad" class="col-form-label">Permitir vender sin stock</label>
                                 <select name="disponibilidad" class="form-control select" id="disponibilidad">
                                     <option>Seleccionar opcion</option>
-                                    <option>Si</option>
-                                    <option>No</option>
+                                    <option value="SI">Si</option>
+                                    <option value="NO">No</option>
                                 </select>
                             </div>
 
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="telefono">Descripcion</label>
+                                <label for="descripcion">Descripcion</label>
                                 <textarea rows="5" cols="50" name="descripcion" class="form-control" id="descripcion">
-
                                 </textarea>
-
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Foto de producto</label>

@@ -36,6 +36,7 @@
     include_once 'models/joinUserRolModel.php';
     include_once 'models/joinUserRelationsModel.php';
     include_once 'models/emailmodel.php';
+    include_once 'models/productosmodel.php';
     
 
     // MAILER para enviar correo
