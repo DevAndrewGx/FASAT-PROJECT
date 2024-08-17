@@ -1,41 +1,20 @@
-const optionMenu = document.querySelector('.select-menu');
-const selectBtn = document.querySelector(".select-btn");
-const options = document.querySelectorAll(".option");
-const selectPlaceholder = document.querySelector(".select-placeholder");
-
-selectBtn.addEventListener('click', () => { 
-    optionMenu.classList.toggle('active');
-})
-
-options.forEach(option =>  {
-    option.addEventListener('click', () => { 
-        let selectedOption = option.querySelector('.option-text').textContent;
-        selectPlaceholder.textContent = selectedOption;
-        console.log(selectedOption);
-    })
-
-    console.log(option);
-})
-
-
-// funciones para el crud
-$(document).ready(function (){
+$(documento.ready(function (){
     
 
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
-    $("#formProduct").submit(function(e) {
-        console.log("It's here");
+    $("#modalFormCreateProduct").submit(function(e) {
+
         e.preventDefault();
-        let form = $(this)[0];
-        console.log(form);
-        // let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
+
+        
+        let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
         const formData = new FormData(form);
 
         $.ajax({
             url: baseUrl+"productos/createProduct",
             type: "POST",
-            processData: false,
+            processdata: false,
             contentType: false,
             data: formData,
             success: function(response) {
@@ -61,5 +40,4 @@ $(document).ready(function (){
             }
         })
     })
-});
-
+}));

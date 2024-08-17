@@ -65,6 +65,7 @@
                     'password' => $this->password, 
                     'id_foto' => $this->idFoto
                 ]);
+
                 // salimos de la funcion
                 return true;
             }catch(PDOException $e) {
