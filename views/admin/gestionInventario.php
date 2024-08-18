@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="<?php echo constant('URL'); ?>">
     <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -323,7 +324,7 @@
                                 <label for="categoria" class="col-form-label">Categoría</label>
                                 <select name="categoria" class="form-control select" id="categoria">
                                     <option>Seleccionar categoria</option>
-                                    <option value="1">Postres</option>
+                                    <option value="5">Cerveza</option>
                                 </select>
                             </div>  
 
@@ -331,7 +332,7 @@
                                 <label for="subcategoria" class="col-form-label">Subcategoria</label>
                                 <select name="subcategoria" class="form-control select" id="subcategoria">
                                     <option>Seleccionar subcategoria</option>
-                                    <option>Sin azucar</option>
+                                    <option value="1">Sin azucar</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">

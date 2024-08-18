@@ -26,7 +26,7 @@ class Productos extends SessionController
         // primero validamos si la data viene correctamente desde el formulario
         error_log('Productos::createProduct -> Funcion para crear nuevos productos');
 
-        if (!$this->existPOST(['nombre', 'categoria', 'precio', 'descripcion','disponibilidad'])) {
+        if (!$this->existPOST(['nombreProducto', 'categoria', 'subcategoria', 'precio', 'descripcion','disponibilidad'])) {
             error_log('Users::createUser -> Hay algun error en los parametros enviados en el formulario');
 
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
@@ -47,9 +47,10 @@ class Productos extends SessionController
         $productoObject = new ProductosModel();
         
         // asignamos los datos traidos del formulario a el objeto
-        $productoObject->setNombre($this->getPost('nombre'));
-        $productoObject->setNombre($this->getPost('categoria'));
-        $productoObject->setNombre($this->getPost('precio'));
+        $productoObject->setNombre($this->getPost('nombreProducto'));
+        $productoObject->setIdCategoria($this->getPost('categoria'));
+        $productoObject->set($this->getPost('subcategoria'));
+        $productoObject->setPrecio($this->getPost('precio'));
         $productoObject->setNombre($this->getPost('descripcion'));
         $productoObject->setNombre($this->getPost('disponibilidad'));
 
