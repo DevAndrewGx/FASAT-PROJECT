@@ -34,7 +34,6 @@ class Productos extends SessionController
             return;
         }
 
-
         if ($this->user == NULL) {
             error_log('Users::createUser -> El usuario de la session esta vacio');
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
