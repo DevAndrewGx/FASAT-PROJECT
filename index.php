@@ -10,7 +10,7 @@
     ini_set('log_errors', TRUE);
 
     // Para evitar imprimir echos o vardumps, utilizamos un archivo de errores para mejor vision de errores
-    ini_set("error_log", "C:/xampp/htdocs/FAST-PROJECT/php-error.log");
+    ini_set("error_log", "C:/xampp/htdocs/FASTPROJECT/php-error.log");
     error_log('Testing errors');
 
      // En libs vamos a tener nuestros archivos base para que funcione nuestra aplicacion
@@ -37,6 +37,7 @@
     include_once 'models/joinUserRelationsModel.php';
     include_once 'models/emailmodel.php';
     include_once 'models/productosmodel.php';
+    include_once 'models/categoriasmodel.php';
     
 
     // MAILER para enviar correo

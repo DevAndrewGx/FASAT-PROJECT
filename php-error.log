@@ -1,0 +1,192 @@
+[20-Aug-2024 01:41:15 Europe/Berlin] Testing errors
+[20-Aug-2024 01:41:15 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:41:15 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:41:18 Europe/Berlin] Testing errors
+[20-Aug-2024 01:41:18 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:41:21 Europe/Berlin] Testing errors
+[20-Aug-2024 01:41:21 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:41:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Aug-2024 01:41:21 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:41:21 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:41:21 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:41:21 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Aug-2024 01:41:32 Europe/Berlin] Testing errors
+[20-Aug-2024 01:41:32 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:41:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[20-Aug-2024 01:41:32 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:41:32 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:41:32 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:41:32 Europe/Berlin] loginByCorreo: inicio
+[20-Aug-2024 01:41:32 Europe/Berlin] login: user correo Juan@gmail.com
+[20-Aug-2024 01:41:32 Europe/Berlin] login: success
+[20-Aug-2024 01:41:32 Europe/Berlin] Login::authenticate() passed
+[20-Aug-2024 01:41:32 Europe/Berlin] sessionController::initialize(): user: Juan 
+[20-Aug-2024 01:41:32 Europe/Berlin] sessionController::authorizeAccess(): role: Mesero
+[20-Aug-2024 01:41:32 Europe/Berlin] PHP Warning:  Undefined array key "mesero" in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 214
+[20-Aug-2024 01:41:32 Europe/Berlin] Testing errors
+[20-Aug-2024 01:41:32 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:41:32 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:42:55 Europe/Berlin] Testing errors
+[20-Aug-2024 01:42:55 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:42:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/users, url => users
+[20-Aug-2024 01:42:55 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[20-Aug-2024 01:42:55 Europe/Berlin] SessionController::validateSession() redirect al login
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\FASTPROJECT\classes\session.php on line 29
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 32
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 33
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 34
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 35
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 36
+[20-Aug-2024 01:42:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FASTPROJECT\models\joinUserRolModel.php on line 37
+[20-Aug-2024 01:42:55 Europe/Berlin] sessionController::getUserSessionData(): 
+[20-Aug-2024 01:42:55 Europe/Berlin] Users::construct -> controlador usuarios
+[20-Aug-2024 01:42:55 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[20-Aug-2024 01:42:55 Europe/Berlin] Testing errors
+[20-Aug-2024 01:42:55 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:42:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Aug-2024 01:42:55 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:42:55 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:42:55 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:42:55 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Aug-2024 01:43:04 Europe/Berlin] Testing errors
+[20-Aug-2024 01:43:04 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:43:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[20-Aug-2024 01:43:04 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:43:04 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:43:04 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:43:04 Europe/Berlin] loginByCorreo: inicio
+[20-Aug-2024 01:43:04 Europe/Berlin] login: user correo Juan@gmail.com
+[20-Aug-2024 01:43:04 Europe/Berlin] login: success
+[20-Aug-2024 01:43:04 Europe/Berlin] Login::authenticate() passed
+[20-Aug-2024 01:43:04 Europe/Berlin] sessionController::initialize(): user: Juan 
+[20-Aug-2024 01:43:04 Europe/Berlin] sessionController::authorizeAccess(): role: Mesero
+[20-Aug-2024 01:43:04 Europe/Berlin] PHP Warning:  Undefined array key "mesero" in C:\xampp\htdocs\FASTPROJECT\classes\sessionController.php on line 214
+[20-Aug-2024 01:43:04 Europe/Berlin] Testing errors
+[20-Aug-2024 01:43:04 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:43:04 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:43:06 Europe/Berlin] Testing errors
+[20-Aug-2024 01:43:06 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:44:18 Europe/Berlin] Testing errors
+[20-Aug-2024 01:44:18 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:44:18 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:44:19 Europe/Berlin] Testing errors
+[20-Aug-2024 01:44:19 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:44:19 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:44:22 Europe/Berlin] Testing errors
+[20-Aug-2024 01:44:22 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:44:22 Europe/Berlin] sessionController::getUserSessionData(): Juan 
+[20-Aug-2024 01:44:22 Europe/Berlin] sessionController::validateSession(): username:Juan@gmail.com - role: Mesero
+[20-Aug-2024 01:44:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Aug-2024 01:44:22 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:44:22 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[20-Aug-2024 01:44:22 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:44:22 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Aug-2024 01:44:22 Europe/Berlin] Testing errors
+[20-Aug-2024 01:44:22 Europe/Berlin] PHP Warning:  require_once(../../../models/seguridadMesero.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FASTPROJECT\views\mesero\index.php on line 2
+[20-Aug-2024 01:44:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required '../../../models/seguridadMesero.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FASTPROJECT\views\mesero\index.php:2
+Stack trace:
+#0 C:\xampp\htdocs\FASTPROJECT\libs\view.php(22): require()
+#1 C:\xampp\htdocs\FASTPROJECT\controllers\mesero.php(16): View->render('mesero/index', Array)
+#2 C:\xampp\htdocs\FASTPROJECT\libs\app.php(87): Mesero->render()
+#3 C:\xampp\htdocs\FASTPROJECT\index.php(51): App->__construct()
+#4 {main}
+  thrown in C:\xampp\htdocs\FASTPROJECT\views\mesero\index.php on line 2
+[20-Aug-2024 01:44:40 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:46:39 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:39 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:39 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:46:58 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:58 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:58 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:46:58 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:46:59 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:46:59 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Testing errors
+[20-Aug-2024 01:46:59 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:36 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:36 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:36 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:37 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Testing errors
+[20-Aug-2024 01:47:38 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:48:51 Europe/Berlin] Testing errors
+[20-Aug-2024 01:48:51 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:48:51 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:48:52 Europe/Berlin] Testing errors
+[20-Aug-2024 01:48:52 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:48:53 Europe/Berlin] Testing errors
+[20-Aug-2024 01:48:53 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:48:53 Europe/Berlin] sessionController::getUserSessionData(): Juan 
+[20-Aug-2024 01:48:53 Europe/Berlin] sessionController::validateSession(): username:Juan@gmail.com - role: Mesero
+[20-Aug-2024 01:48:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Aug-2024 01:48:53 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:48:53 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[20-Aug-2024 01:48:53 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:48:53 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Aug-2024 01:48:53 Europe/Berlin] Testing errors
+[20-Aug-2024 01:48:53 Europe/Berlin] Testing errors
+[20-Aug-2024 01:48:53 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:49:06 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:06 Europe/Berlin] APP::construct->No hay controlador especificado
+[20-Aug-2024 01:49:06 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FASTPROJECT\views\landing\index.php on line 310
+[20-Aug-2024 01:49:08 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:08 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:49:09 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:09 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:49:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login, url => login
+[20-Aug-2024 01:49:09 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:49:09 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:49:09 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:49:09 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[20-Aug-2024 01:49:19 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:19 Europe/Berlin] SessionController::validateSession()
+[20-Aug-2024 01:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FASTPROJECT/login/authenticate, url => login
+[20-Aug-2024 01:49:19 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[20-Aug-2024 01:49:19 Europe/Berlin] SessionController::validateSession() public page
+[20-Aug-2024 01:49:19 Europe/Berlin] Login::construct -> inicio de login
+[20-Aug-2024 01:49:19 Europe/Berlin] loginByCorreo: inicio
+[20-Aug-2024 01:49:19 Europe/Berlin] login: user correo adminUpdate@example.com
+[20-Aug-2024 01:49:19 Europe/Berlin] login: success
+[20-Aug-2024 01:49:19 Europe/Berlin] Login::authenticate() passed
+[20-Aug-2024 01:49:19 Europe/Berlin] sessionController::initialize(): user: adminUpdate
+[20-Aug-2024 01:49:19 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[20-Aug-2024 01:49:19 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:19 Europe/Berlin] Testing errors
+[20-Aug-2024 01:49:19 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:50:35 Europe/Berlin] Testing errors
+[20-Aug-2024 01:50:35 Europe/Berlin] Testing errors
+[20-Aug-2024 01:50:35 Europe/Berlin] Errores::construct -> inicio de errores
+[20-Aug-2024 01:50:36 Europe/Berlin] Testing errors
+[20-Aug-2024 01:50:36 Europe/Berlin] Testing errors
+[20-Aug-2024 01:50:36 Europe/Berlin] Errores::construct -> inicio de errores

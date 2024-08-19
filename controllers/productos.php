@@ -49,13 +49,21 @@ class Productos extends SessionController
         // asignamos los datos traidos del formulario a el objeto
         $productoObject->setNombre($this->getPost('nombreProducto'));
         $productoObject->setIdCategoria($this->getPost('categoria'));
-        $productoObject->set($this->getPost('subcategoria'));
+        $productoObject->setIdSubcategoria($this->getPost('subcategoria'));
         $productoObject->setPrecio($this->getPost('precio'));
         $productoObject->setNombre($this->getPost('descripcion'));
         $productoObject->setNombre($this->getPost('disponibilidad'));
 
+
+        // creamos un objeto de categorias para asignar la subcategoria si es que tiene al objeto
+        $categoriaObject = new CategoriasModel();
+
         // verificamos si se pudo insertar data dentro la bd
         if($productoObject->save()) {
+
+            if() { 
+
+            }
             error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
             echo json_encode(['status' => true, 'message' => "El producto fue creado exitosamente!"]);
             return;

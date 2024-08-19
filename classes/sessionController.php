@@ -210,7 +210,7 @@ class SessionController extends Controller
             case 'Administrador':
                 $this->redirect($this->defaultSites['admin'], []);
                 break;
-            case 'mesero':
+            case 'Mesero':
                 $this->redirect($this->defaultSites['mesero'], []);
                 break;
             default:

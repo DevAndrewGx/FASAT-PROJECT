@@ -39,7 +39,7 @@
         {
             "site": "mesero", 
             "access": "private", 
-            "role": "mesero",
+            "role": "Mesero",
             "description": "Pagina principal para mesero"
         },
         {
@@ -58,6 +58,7 @@
 
     "default-sites": {
         "user": "dashboard",
-        "admin": "admin"
+        "admin": "admin",
+        "mesero": "mesero"
     }
 }

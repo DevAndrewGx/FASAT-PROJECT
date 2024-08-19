@@ -1,14 +1,12 @@
 <?php 
     // definimos nuestras constantes de configuracion para usarlas a lo largo del programa
-    define('URL', 'http://localhost/FAST-PROJECT/');
+    define('URL', 'http://localhost/FASTPROJECT/');
     define('HOST', 'localhost');
-    define('DB', 'test_fast4');
+    define('DB', 'test_fast5');
     define('USER', 'root');
     define('PASSWORD', '');
     define('CHARSET', 'utf8mb4');
     define("KEY_TOKEN","APR.wqc-354*");
-
-
 
     // datos para el envio de correo electronico
     define("MAIL_HOST","smtp.office365.com");

@@ -44,7 +44,7 @@
             
             try { 
                 // creamos la query para insertar datos dentro de la bd
-                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_stock, id_proveedor, id_categoria, nombre, precio_unitario, descripcion, permitir_sin_vender) VALUES(:id_foto, :id_stock, :id_proveedor, :id_categoria, :nombre, :precio_unitario, :descripcion, :disponibilidad)");
+                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_stock, id_proveedor, id_categoria, id_subcategoria, nombre, precio_unitario, descripcion, permitir_sin_vender) VALUES(:id_foto, :id_stock, :id_proveedor, :id_categoria, :nombre, :precio_unitario, :descripcion, :disponibilidad)");
 
                 $query->execute([
                     'id_foto'=>$this->id_foto,
@@ -60,7 +60,7 @@
                 // retornamos true para salirnos de la funcion
                 return true;
             }catch(PDOException $e) {
-               error_log('ProductoModel::save->PDOException'.$e);
+                error_log('ProductoModel::save->PDOException'.$e);
                 // salimos de la funcion
                 return false;
             }
@@ -73,16 +73,17 @@
         public function setIdStock($id) { $this->id_stock = $id;}
         public function setIdProvedor($id) { $this->id_provedor = $id;}
         public function setIdCategoria($categoria) { $this->id_categoria = $categoria;}
+        public function setIdSubCategoria($subcategoria) { $this->id_categoria = $subcategoria;}
         public function setPrecio($precio) { $this->precio = $precio;}
         public function setNombre($nombre) { $this->nombre = $nombre;}
         public function setDescripcion($descripcion) {  $this->descripcion = $descripcion;}
         public function setDisponibilidad($disponibilidad) { $this->disponibilidad = $disponibilidad;}
 
-
         public function getIdFoto() { return $this->id_foto;}
         public function getIdStock() { return $this->id_stock;}
         public function getIdProvedor() { return $this->id_provedor;}
         public function getIdCategoria() { return $this->id_categoria;}
+        public function getIdSubCategoria() { return $this->id_subcategoria;}
         public function getPrecio() { return $this->precio;}
         public function getNombre() { return $this->nombre;}
         public function getDescripcion() { return $this->descripcion;}
