@@ -82,7 +82,7 @@ class CambiarPassword extends Controller
     {
 
         // validamos el token y el documento que vienen de la url
-        if (!$this->existGET('documento', 'token')) {
+        if (!$this->existPost('documento', 'token')) {
             // Redirigimos otravez al dashboard
             error_log('CambiarPassword::changePasswor -> No existen parametros');
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
@@ -97,8 +97,8 @@ class CambiarPassword extends Controller
         // creamos un objeto de emailModel para validar el token
         $emailObject = new EmailModel();
 
-        $emailObject->setToken($this->getGet('token'));
-        $emailObject->setDocumento($this->getGet('documento'));
+        $emailObject->setToken($this->getPost('token'));
+        $emailObject->setDocumento($this->getPost('documento'));
 
         if (!$emailObject->verificarTokenRequest()) {
             echo json_encode(['status' => false, 'message' => "No se puede obtener los parametros de la URL"]);

@@ -21,8 +21,8 @@
             </div>
             <form id="formCambiarPass" autocomplete="off">
 
-            <input type="hidden" name="token" value="<?php $_GET['token'] ?>"/>
-            <input type="hidden" name="documento" value="<?php $_GET['documento']?>"/>
+            <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']) ?>"/>
+            <input type="hidden" name="documento" value="<?php echo htmlspecialchars($_GET['documento']) ?>"/>
                 <h2>Cambiar contraseña</h2>
                 <div class="input-container">
                     <input type="password" name="password" id="password" placeholder="" required>
