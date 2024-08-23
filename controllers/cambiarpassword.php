@@ -68,8 +68,8 @@ class CambiarPassword extends Controller
                     // $cuerpo = "<br>Si no hiciste esta solicitud puedes ignorar este correo.";
 
                     if ($mailer->enviarEmail($emailObject->getEmail(), $asunto, $cuerpo)) {
-                        echo "<p><b>Correo enviado</b></p>" . $emailObject->getEmail();
-                        echo "<p>Hemos enviado un correo electronico a la siquiente diireccion" . $emailObject->getEmail() . "para restablecer la contraseña</p>";
+                        // echo "<p><b>Correo enviado</b></p>" . $emailObject->getEmail();
+                        // echo "<p>Hemos enviado un correo electronico a la siquiente diireccion" . $emailObject->getEmail() . "para restablecer la contraseña</p>";
                         echo json_encode(['status' => true, 'message' => "El correo fue enviado correctamente"]);
                         exit;
                     }

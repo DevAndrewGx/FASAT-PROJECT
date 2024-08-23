@@ -1,169 +1,20 @@
-[23-Aug-2024 06:06:57 Europe/Berlin] Testing errors
-[23-Aug-2024 06:06:57 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[23-Aug-2024 06:07:12 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:12 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
-[23-Aug-2024 06:07:12 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[23-Aug-2024 06:07:36 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:36 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
-[23-Aug-2024 06:07:36 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:07:36 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:36 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:36 Europe/Berlin] loginByCorreo: inicio
-[23-Aug-2024 06:07:36 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
-[23-Aug-2024 06:07:36 Europe/Berlin] login: success
-[23-Aug-2024 06:07:36 Europe/Berlin] Login::authenticate() passed
-[23-Aug-2024 06:07:36 Europe/Berlin] sessionController::initialize(): user: Dave
-[23-Aug-2024 06:07:36 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
-[23-Aug-2024 06:07:36 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:37 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:37 Europe/Berlin] Errores::construct -> inicio de errores
-[23-Aug-2024 06:07:43 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:43 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[23-Aug-2024 06:07:43 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[23-Aug-2024 06:07:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
-[23-Aug-2024 06:07:43 Europe/Berlin] sessionController::isPublic(): currentURL => logout
-[23-Aug-2024 06:07:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
-[23-Aug-2024 06:07:43 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
-[23-Aug-2024 06:07:43 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:43 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-Aug-2024 06:07:43 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
-[23-Aug-2024 06:07:44 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:44 Europe/Berlin] Errores::construct -> inicio de errores
-[23-Aug-2024 06:07:45 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:45 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
-[23-Aug-2024 06:07:45 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:07:45 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:45 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:45 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-Aug-2024 06:07:49 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:49 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
-[23-Aug-2024 06:07:49 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:07:49 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:49 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:49 Europe/Berlin] loginByCorreo: inicio
-[23-Aug-2024 06:07:49 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
-[23-Aug-2024 06:07:49 Europe/Berlin] Login::authenticate() user and/or password wrong
-[23-Aug-2024 06:07:49 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:49 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:07:49 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:07:49 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:49 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:49 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-Aug-2024 06:07:55 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:55 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
-[23-Aug-2024 06:07:55 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:07:55 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:55 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:55 Europe/Berlin] loginByCorreo: inicio
-[23-Aug-2024 06:07:55 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
-[23-Aug-2024 06:07:55 Europe/Berlin] Login::authenticate() user and/or password wrong
-[23-Aug-2024 06:07:55 Europe/Berlin] Testing errors
-[23-Aug-2024 06:07:55 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:07:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:07:55 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:07:55 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:07:55 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:07:55 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-Aug-2024 06:08:30 Europe/Berlin] Testing errors
-[23-Aug-2024 06:08:30 Europe/Berlin] APP::construct->No hay controlador especificado
-[23-Aug-2024 06:08:30 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
-[23-Aug-2024 06:08:30 Europe/Berlin] Testing errors
-[23-Aug-2024 06:08:30 Europe/Berlin] Errores::construct -> inicio de errores
-[23-Aug-2024 06:08:31 Europe/Berlin] Testing errors
-[23-Aug-2024 06:08:31 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:08:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
-[23-Aug-2024 06:08:31 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:08:31 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:08:31 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:08:31 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-Aug-2024 06:08:44 Europe/Berlin] Testing errors
-[23-Aug-2024 06:08:44 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
-[23-Aug-2024 06:08:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
-[23-Aug-2024 06:08:44 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
-[23-Aug-2024 06:08:44 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
-[23-Aug-2024 06:08:58 Europe/Berlin] Testing errors
-[23-Aug-2024 06:08:58 Europe/Berlin] CambiarPassword::render -> Carga la pagina principal para cambiar password
-[23-Aug-2024 06:09:53 Europe/Berlin] Testing errors
-[23-Aug-2024 06:09:54 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
-[23-Aug-2024 06:09:54 Europe/Berlin] CambiarPassword::changePassword -> se puede cambiar la contraseña
-[23-Aug-2024 06:10:21 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:21 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:10:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
-[23-Aug-2024 06:10:21 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:10:21 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:10:21 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:10:21 Europe/Berlin] loginByCorreo: inicio
-[23-Aug-2024 06:10:21 Europe/Berlin] login: user correo fastSoftware2024@outlook.com
-[23-Aug-2024 06:10:21 Europe/Berlin] Login::authenticate() user and/or password wrong
-[23-Aug-2024 06:10:21 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:21 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:10:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:10:21 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
-[23-Aug-2024 06:10:21 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:10:21 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:10:21 Europe/Berlin] Login::render -> Carga la pagina principal del login
-[23-Aug-2024 06:10:28 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:28 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:10:28 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
-[23-Aug-2024 06:10:28 Europe/Berlin] sessionController::isPublic(): currentURL => login
-[23-Aug-2024 06:10:28 Europe/Berlin] SessionController::validateSession() public page
-[23-Aug-2024 06:10:28 Europe/Berlin] Login::construct -> inicio de login
-[23-Aug-2024 06:10:28 Europe/Berlin] loginByCorreo: inicio
-[23-Aug-2024 06:10:28 Europe/Berlin] login: user correo fastSoftware2024@outlook.com
-[23-Aug-2024 06:10:28 Europe/Berlin] login: success
-[23-Aug-2024 06:10:28 Europe/Berlin] Login::authenticate() passed
-[23-Aug-2024 06:10:28 Europe/Berlin] sessionController::initialize(): user: TEST
-[23-Aug-2024 06:10:28 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
-[23-Aug-2024 06:10:28 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:28 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:28 Europe/Berlin] Errores::construct -> inicio de errores
-[23-Aug-2024 06:10:30 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getUserSessionData(): TEST
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::validateSession(): username:fastSoftware2024@outlook.com - role: Administrador
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getUserSessionData(): TEST
-[23-Aug-2024 06:10:30 Europe/Berlin] Users::construct -> controlador usuarios
-[23-Aug-2024 06:10:30 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
-[23-Aug-2024 06:10:30 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:30 Europe/Berlin] Errores::construct -> inicio de errores
-[23-Aug-2024 06:10:30 Europe/Berlin] Testing errors
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::validateSession()
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getUserSessionData(): TEST
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::validateSession(): username:fastSoftware2024@outlook.com - role: Administrador
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724386230682, url => users
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724386230682, url => users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[23-Aug-2024 06:10:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[23-Aug-2024 06:10:30 Europe/Berlin] sessionController::getUserSessionData(): TEST
-[23-Aug-2024 06:10:30 Europe/Berlin] Users::construct -> controlador usuarios
+[23-Aug-2024 06:14:01 Europe/Berlin] Testing errors
+[23-Aug-2024 06:14:01 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[23-Aug-2024 06:14:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[23-Aug-2024 06:14:01 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[23-Aug-2024 06:14:01 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[23-Aug-2024 06:18:25 Europe/Berlin] Testing errors
+[23-Aug-2024 06:18:25 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[23-Aug-2024 06:18:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[23-Aug-2024 06:18:25 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[23-Aug-2024 06:18:25 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[23-Aug-2024 06:18:56 Europe/Berlin] Testing errors
+[23-Aug-2024 06:18:57 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[23-Aug-2024 06:18:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[23-Aug-2024 06:18:57 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[23-Aug-2024 06:18:57 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso
+[23-Aug-2024 06:19:30 Europe/Berlin] Testing errors
+[23-Aug-2024 06:19:30 Europe/Berlin] Email::SendEmail -> Funcion para enviar un email
+[23-Aug-2024 06:19:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[23-Aug-2024 06:19:30 Europe/Berlin] CambiarPassword::sendEmail -> Se puede enviar un correo
+[23-Aug-2024 06:19:30 Europe/Berlin] CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso

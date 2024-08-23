@@ -25,6 +25,7 @@ class Mailer
             $mail->Password   = MAIL_PASS;                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
             $mail->Port       = MAIL_PORT;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPDebug = 0; // Establece el nivel de depuración a 0 para desactivar la salida del log
 
             //Correo emisor y nombre
             $mail->setFrom(MAIL_USER, 'Software FAST');
