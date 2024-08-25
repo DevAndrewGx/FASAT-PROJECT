@@ -61,9 +61,9 @@ class Productos extends SessionController
         // verificamos si se pudo insertar data dentro la bd
         if($productoObject->save()) {
 
-            if() { 
+                // if() { 
 
-            }
+                // }
             error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
             echo json_encode(['status' => true, 'message' => "El producto fue creado exitosamente!"]);
             return;

@@ -45,6 +45,7 @@ const activeAside = () => {
 };
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
    activeAside();
 });
@@ -104,4 +105,17 @@ function openModalCreateProduct()
     document.querySelector('#titleModal').innerHTML = "Nuevo Producto";
     document.querySelector("#formProduct").reset();
     $('#modalFormCreateProduct').modal('show');
+}
+
+
+function openModalCreateCategory()
+{
+    rowTable = "";
+    // document.querySelector('#idUsuario').value ="";
+    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
+    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
+    document.querySelector('#btnText').innerHTML ="Guardar";
+    document.querySelector('#titleModal').innerHTML = "Nueva categoria";
+    document.querySelector("#formCategories").reset();
+    $("#modalFormCategories").modal("show");        
 }

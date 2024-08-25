@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/inventario.css">
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
 </head>
 
 <body>
@@ -30,11 +31,12 @@
 
             <div class="content">
 
+             
                 <div class="nav-sections">
                     <nav>
                         <ul>
-                            <li id="active"><a href="#">Lista Productos</a></li>
-                            <li><a href="listaCategorias.html">Lista Categorias</a></li>
+                            <li id="active"><a href="<?php echo constant('URL'); ?>productos">Lista Productos</a></li>
+                            <li><a href="<?php echo constant('URL'); ?>categorias">Lista Categorias</a></li>
                             <li><a href="#">Control de Stock</a></li>
                         </ul>
                     </nav>
@@ -133,7 +135,7 @@
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
                             <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Productos </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario-productos"> / Productos </a>
                         </nav>
                     </div>
                     <div class="page-btn">
@@ -303,7 +305,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="modalFormCreateProduct" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister">
                     <h5 class="modal-title" id="titleModal">Nuevo Producto</h5>
@@ -326,7 +328,7 @@
                                     <option>Seleccionar categoria</option>
                                     <option value="5">Cerveza</option>
                                 </select>
-                            </div>  
+                            </div>
 
                             <div class="form-group col-md-6">
                                 <label for="subcategoria" class="col-form-label">Subcategoria</label>
@@ -353,12 +355,11 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="descripcion">Descripcion</label>
-                                <textarea rows="5" cols="50" name="descripcion" class="form-control" id="descripcion">
-                                </textarea>
+                                <textarea rows="10" cols="50" name="descripcion" class="form-control" id="descripcion"></textarea>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Foto de producto</label>
-                                <div class="image-upload image-upload-new col-md-6">
+                                <div class="image-upload image-upload-new col-md-12">
                                     <input type="file" name="foto" id="foto" accept=".png, .jpg, .jpeg" aria-describedby="Foto Empleado">
                                     <div class="image-uploads">
                                         <img src="<?php echo constant('URL') ?>public/imgs/icons/upload.svg" alt="img">

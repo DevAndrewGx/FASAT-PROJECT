@@ -30,6 +30,12 @@
             "role": "Administrador",
             "description": "Tabla donde se visualizan el inventario"
         },
+         {
+            "site": "categorias", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Tabla donde se visualizan las categorias"
+        },
         {
             "site": "users", 
             "access": "private", 

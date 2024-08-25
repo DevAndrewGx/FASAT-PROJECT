@@ -22,6 +22,7 @@
         public function save() {
 
             try {
+                
                 $conn = $this->db->connect();
                 // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
                 $query = $conn->prepare('INSERT INTO fotos (foto, tipo) VALUES (:foto, :tipo)');

@@ -1,5 +1,4 @@
 $(documento.ready(function (){
-    
 
     const baseUrl = $('meta[name="base-url"]').attr("content");
 

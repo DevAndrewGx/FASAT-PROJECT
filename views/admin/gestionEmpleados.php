@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
-   p
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/empleados.css">
 </head>
 
 
@@ -104,59 +104,67 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="identificacion">Identificación</label>
-                                <input type="text" class="form-control" id="identificacion" name="documento" required="">
+                                <input type="number" class="form-control" id="identificacion" name="documento">
+                                <div id="identificacionError" class="invalid-feedback" style="display:none;">Por favor, ingresa una identificación válida.</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="nombres">Nombres</label>
-                                <input type="text" class="form-control valid validText" id="nombres" name="nombres" required="">
+                                <input type="text" class="form-control" id="nombres" name="nombres">
+                                <div id="nombresError" class="invalid-feedback" style="display:none;">Por favor, ingresa nombres válidos.</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="apellidos">Apellidos</label>
-                                <input type="text" class="form-control valid validText" id="apellidos" name="apellidos" required="">
+                                <input type="text" class="form-control" id="apellidos" name="apellidos">
+                                <div id="apellidosError" class="invalid-feedback" style="display:none;">Por favor, ingresa apellidos válidos.</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="telefono">Teléfono</label>
-                                <input type="text" class="form-control valid validNumber" id="telefono" name="telefono" required="">
+                                <input type="number" class="form-control" id="telefono" name="telefono">
+                                <div id="telefonoError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de teléfono válido.</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control valid validEmail" id="email" name="email" required="">
+                                <input type="email" class="form-control" id="email" name="email">
+                                <div id="emailError" class="invalid-feedback" style="display:none;">Por favor, ingresa un email válido.</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="rol">Rol</label>
-                                <select class="form-control select" name="rol" id="rol" require>
+                                <select class="form-control select" name="rol" id="rol">
                                     <option selected="true">Seleccione</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Mesero</option>
                                     <option value="3">Cheff</option>
                                     <option value="4">Cajero</option>
                                 </select>
+                                <div id="rolError" class="invalid-feedback" style="display:none;">Por favor, selecciona un rol.</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="estado">Estado</label>
-                                <select class="form-control selectpicker" id="estado" name="estado" required>
+                                <select class="form-control selectpicker" id="estado" name="estado">
                                     <option>Seleccione</option>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
                                     <option value="3">Pendiente</option>
                                 </select>
+                                <div id="estadoError" class="invalid-feedback" style="display:none;">Por favor, selecciona un estado.</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password">
+                                <div id="passwordError" class="invalid-feedback" style="display:none;">Campo obligatorio.</div>
                             </div>
-                            
                             <div class="form-group col-md-6">
                                 <label for="validarPassword">Confirmar contraseña</label>
                                 <input type="password" class="form-control pass-inputs" id="validarPassword" name="validarPassword">
+                                <div id="validarPasswordError" class="invalid-feedback" style="display:none;">Campo obligatorio.</div>
                             </div>
                         </div>
                         <div class="row">

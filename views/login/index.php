@@ -1,56 +1,5 @@
 <?php
 
-// $errors = [];
-// if (!empty($_POST)){
-//     $correo = trim(['correo']);
-
-//     if(esNulo([$correo])) {
-//         $errors[] = "Debe llenar todos los campos";
-//     }$documento = $_GET['documento'] ?? $_POST['user_id'] ?? '';
-
-//     if((!esEmail()[$correo])) {
-//         $errors[] = "Debe llenar todos los campos";
-//     }
-
-//     if(count($errors)==0){
-//         if(emailExiste($correo)){
-//            $sql = $this->query("SELECT documento, nombre FROM usuarios WHERE correo LIKE ? LIMIT 1");
-//            $sql->execute([$correo]);
-//            $row = $sql->fetch(PDO::FETCH_ASSOC);
-//            $user_id = $row['documento'];
-//            $nombres = $row['nombre'];
-
-//            $token = solicitaPassword($user_id, $con);
-
-//             if($token !== null){
-//                 require 'clases/Mailer.php';
-//                 $mailer = new Mailer();
-
-//                 $url = URL . '/reset_password.php?documento' . $documento . '&token=' . $token;
-
-
-//                 $asunto = "Recuperar password - Fast";
-//                 $cuerpo = "Estimado $nombre: <br> Si has solicitado el cambio de tu contraseña da click en el 
-//                 siquiente link <a href='$url'</a>"; 
-//                 $cuerpo .= "<br>Si no hiciste esta solicitud puedes ignorar este correo.";
-
-//                 if ($mailer->enviarEmail($correo, $asunto, $cuerpo)){
-//                     echo "<p><b>Correo enviado</b></p> $correo";
-//                     echo "<p>Hemos enviado un correo electronico a la siquiente diireccion $correo para restablecer la
-//                     contraseña</p>";
-//                     exit;
-//                 }
-//             }
-//         } else {
-//             $errors[] = "No existe una cuenta asociada a esta direccion de correo";
-//         }   
-
-//     }
-
-// }
-
-
-
 
 ?>
 <!DOCTYPE html>

@@ -41,6 +41,5 @@
             <i class='bx bx-log-out'></i>
             <a href="../../sing-up/login.html">Log-out</a>
         </div>
-
     </div>
 </aside>
