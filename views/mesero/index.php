@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="base-url" content="<?php echo constant('URL'); ?>">
-    <title>FAST | GESTIÓN DE CATEGORÍAS</title>
+    <title>FAST | DASHBOARD</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,9 +25,9 @@
                     <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
                     <i class='bx bxs-chevron-left-circle'></i>
                 </div>
-                <div class="item" id="categorias">
-                    <i class='bx bx-category'></i>
-                    <a href="#">Categorías</a>
+                <div class="item" id="ordenes">
+                    <i class='bx bx-grid-alt'></i>
+                    <a href="#">Ordenes</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-cog'></i>
@@ -46,35 +46,59 @@
             <div class="content">
                 <div class="page-header">
                     <div class="page-title">
-                        <h1>Gestión de Categorías</h1>
+                        <h1>Gestión de Pedidos</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminCat.php" id="actual" data-navegation="#categorias"> / Gestión de Categorías </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#ordenes"> / Gestión de Pedidos </a>
                         </nav>
                     </div>
                 </div>
                 
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">Agregar Nueva Categoría</h5>
-                        <!-- Botón para abrir el modal -->
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoriesModal">Agregar Categoría</button>
+                        <h5 class="card-title">Enviar Nuevo Pedido</h5>
+                        <button class="btn btn-primary" id="openOrderForm">Ingresar Orden</button>
                     </div>
                 </div>
                 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Lista de Categorías</h5>
+                        <h5 class="card-title">Historial de Pedidos</h5>
                         <div class="table-responsive">
-                            <table id="categoriesTable" class="table table-responsive datanew">
+                            <table id="ordersTable" class="table table-responsive datanew">
                                 <thead>
                                     <tr>
-                                        <th class="sorting">Nombre</th>
+                                        <th class="sorting">Mesa</th>
+                                        <th class="sorting">Mesero</th>
+                                        <th class="sorting">Plato</th>
+                                        <th class="sorting">Cantidad</th>
+                                        <th class="sorting">Fecha</th>
+                                        <th class="sorting">Estado</th>
                                         <th class="text-center">Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- Aquí se añadirán las categorías dinámicamente -->
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Juan Pérez</td>
+                                        <td>Pizza Margarita</td>
+                                        <td>2</td>
+                                        <td>19 Nov 2022</td>
+                                        <td><span class="badges bg-lightgreen">Entregada</span></td>
+                                        <td class="text-center">
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Acción
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Detalles del Pedido</a></li>
+                                                    <li><a class="dropdown-item" href="#">Editar Pedido</a></li>
+                                                    <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
+                                                    <li><a class="dropdown-item" href="#">Eliminar Pedido</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -84,91 +108,102 @@
         </main>
     </div>
 
-    <!-- Modal de Gestión de Categorías -->
-    <div class="modal fade" id="categoriesModal" tabindex="-1" aria-labelledby="categoriesModalLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="true">
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="categoriesModalLabel">Gestión de Categorías</h5>
+                    <h5 class="modal-title" id="orderModalLabel">Nuevo Pedido</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="categoriesForm">
+                    <form id="orderForm">
                         <div class="mb-3">
-                            <label for="categoryName" class="form-label">Nombre de la Categoría</label>
-                            <input type="text" class="form-control" id="categoryName" placeholder="Nombre de la Categoría">
-                            <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un nombre de categoría válido.</div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="checkbox" id="hasSubcategory"> 
-                            <label for="hasSubcategory">Agregar Subcategoría</label>
-                        </div>
-                        <div class="mb-3">
-                            <button type="button" class="btn btn-primary" id="addCategory">Agregar Categoría</button>
-                        </div>
-                        <div class="mb-3">
-                            <h5>Lista de Categorías</h5>
+                            <label for="mesas" class="form-label">Mesas</label>
                             <div class="table-responsive">
-                                <table class="table" id="categoriesTable">
+                                <table class="table" id="mesasTable">
                                     <thead>
                                         <tr>
-                                            <th>Nombre</th>
+                                            <th>Número de Mesa</th>
                                             <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Subcategorías -->
-    <div class="modal fade" id="subcategoryModal" tabindex="-1" aria-labelledby="subcategoryModalLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="subcategoryModalLabel">Agregar Subcategoría</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="subcategoryForm">
-                        <div class="mb-3">
-                            <label for="subcategoryName" class="form-label">Nombre de la Subcategoría</label>
-                            <input type="text" class="form-control" id="subcategoryName" placeholder="Nombre de la Subcategoría">
-                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un nombre de subcategoría válido.</div>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" id="mesaInput" min="1" placeholder="Número de mesa" aria-label="Número de mesa">
+                                <button type="button" class="btn btn-outline-secondary" id="addMesa">Agregar Mesa</button>
+                            </div>
+                            <div id="mesasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de mesa válido.</div>
                         </div>
                         <div class="mb-3">
-                            <button type="button" class="btn btn-primary" id="addSubcategory">Agregar Subcategoría</button>
-                        </div>
-                        <div class="mb-3">
-                            <h5>Lista de Subcategorías</h5>
+                            <label for="platos" class="form-label">Platos</label>
                             <div class="table-responsive">
-                                <table class="table" id="subcategoryTable">
+                                <table class="table" id="platosTable">
                                     <thead>
                                         <tr>
-                                            <th>Nombre</th>
+                                            <th>Nombre del Plato</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio Unitario</th>
+                                            <th>Subtotal</th>
                                             <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- Aquí se añadirán las subcategorías dinámicamente -->
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="input-group mb-3">
+                                <select class="form-select" id="platoSelect">
+                                    <option value="" disabled selected>Seleccionar Plato</option>
+                                    <option value="Pizza Margarita" data-price="150">Pizza Margarita - $150</option>
+                                    <option value="Ensalada Caesar" data-price="100">Ensalada Caesar - $100</option>
+                                </select>
+                                <input type="number" class="form-control" id="platoCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
+                                <button type="button" class="btn btn-outline-secondary" id="addPlato">Agregar Plato</button>
+                            </div>
+                            <div id="platosError" class="invalid-feedback" style="display:none;">Por favor, selecciona un plato y cantidad válidos.</div>
                         </div>
+                        <div class="mb-3">
+                            <label for="bebidas" class="form-label">Bebidas</label>
+                            <div class="table-responsive">
+                                <table class="table" id="bebidasTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de la Bebida</th>
+                                            <th>Cantidad</th>
+                                            <th>Precio Unitario</th>
+                                            <th>Subtotal</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select class="form-select" id="bebidaSelect">
+                                    <option value="" disabled selected>Seleccionar Bebida</option>
+                                    <option value="Coca-Cola" data-price="50">Coca-Cola - $50</option>
+                                    <option value="Agua Mineral" data-price="30">Agua Mineral - $30</option>
+                                </select>
+                                <input type="number" class="form-control" id="bebidaCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
+                                <button type="button" class="btn btn-outline-secondary" id="addBebida">Agregar Bebida</button>
+                            </div>
+                            <div id="bebidasError" class="invalid-feedback" style="display:none;">Por favor, selecciona una bebida y cantidad válidos.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="total" class="form-label">Total</label>
+                            <input type="text" class="form-control" id="total" readonly>
+                        </div>
+                        <input type="hidden" id="mesero" name="mesero">
+                        <input type="hidden" id="fecha" name="fecha">
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="submitOrder">Enviar Pedido</button>
                 </div>
             </div>
         </div>
@@ -180,109 +215,22 @@
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- DataTable -->
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-    <!-- SWEETALERT -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/categories.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
-
-    <!-- Script de manejo de categorías y subcategorías -->
-    <script>
-    $(document).ready(function() {
-        const categoriesTable = $('#categoriesTable tbody');
-        const subcategoryTable = $('#subcategoryTable tbody');
-
-        // Agregar categoría
-        $('#addCategory').click(function() {
-            const categoryName = $('#categoryName').val().trim();
-
-            if (categoryName === '') {
-                $('#categoryName').addClass('is-invalid');
-                $('#categoryNameError').show();
-            } else {
-                $('#categoryName').removeClass('is-invalid');
-                $('#categoryNameError').hide();
-
-                // Añadir nueva categoría a la tabla
-                const newRow = `<tr>
-                                    <td>${categoryName}</td>
-                                    <td class="text-center">
-                                        <button class="btn btn-warning btn-sm edit-category">Editar</button>
-                                        <button class="btn btn-danger btn-sm delete-category">Eliminar</button>
-                                    </td>
-                                </tr>`;
-                categoriesTable.append(newRow);
-
-                // Mostrar modal de subcategoría si el checkbox está marcado
-                if ($('#hasSubcategory').is(':checked')) {
-                    $('#categoriesModal').modal('hide');
-                    $('#subcategoryModal').modal('show');
-                }
-
-                $('#categoryName').val('');
-            }
-        });
-
-        // Editar categoría
-        categoriesTable.on('click', '.edit-category', function() {
-            const row = $(this).closest('tr');
-            const categoryName = row.find('td').eq(0).text();
-
-            $('#categoryName').val(categoryName);
-            row.remove();
-        });
-
-        // Eliminar categoría
-        categoriesTable.on('click', '.delete-category', function() {
-            $(this).closest('tr').remove();
-        });
-
-        // Agregar subcategoría
-        $('#addSubcategory').click(function() {
-            const subcategoryName = $('#subcategoryName').val().trim();
-
-            if (subcategoryName === '') {
-                $('#subcategoryName').addClass('is-invalid');
-                $('#subcategoryNameError').show();
-            } else {
-                $('#subcategoryName').removeClass('is-invalid');
-                $('#subcategoryNameError').hide();
-
-                // Añadir nueva subcategoría a la tabla
-                const newRow = `<tr>
-                                    <td>${subcategoryName}</td>
-                                    <td class="text-center">
-                                        <button class="btn btn-warning btn-sm edit-subcategory">Editar</button>
-                                        <button class="btn btn-danger btn-sm delete-subcategory">Eliminar</button>
-                                    </td>
-                                </tr>`;
-                subcategoryTable.append(newRow);
-                $('#subcategoryName').val('');
-            }
-        });
-
-        // Editar subcategoría
-        subcategoryTable.on('click', '.edit-subcategory', function() {
-            const row = $(this).closest('tr');
-            const subcategoryName = row.find('td').eq(0).text();
-
-            $('#subcategoryName').val(subcategoryName);
-            row.remove();
-        });
-
-        // Eliminar subcategoría
-        subcategoryTable.on('click', '.delete-subcategory', function() {
-            $(this).closest('tr').remove();
-        });
-    });
-    </script>
+  
 </body>
+<script src="../../js/main.js"></script>
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- DataTable -->
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- JS BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<!-- SWEETALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
+<script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+<script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+<script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 </html>
