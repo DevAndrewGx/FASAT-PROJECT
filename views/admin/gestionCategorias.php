@@ -53,141 +53,57 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table id="example" class="table table-responsive datanew">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
+                <div class="row gap-3">
+                    <div class="card mr-3 col-lg-6" style="width: 50%;">
 
-                                        <th>Categoría</th>
-                                        <th>Subcategoria</th>
-                                        <th>Tipo de categoria</th>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="data-categorias" class="table datanew nowrap" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <label class="checkboxs">
+                                                    <input type="checkbox">
+                                                    <span class="checkmarks"></span>
+                                                </label>
+                                            </th>
+                                            <th>Categoría</th>
+                                            <th>Tipo de categoria</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-lg-6" style="width: 48%;">
 
-                                        <th>Acción</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td>La Trattoria</td>
-                                        <td>Downtown</td>
-                                        <td>Italiana</td>
-
-
-
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td>La Trattoria</td>
-                                        <td>Downtown</td>
-                                        <td>Italiana</td>
-
-
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td>La Trattoria</td>
-                                        <td>Downtown</td>
-                                        <td>Italiana</td>
-
-
-
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td>La Trattoria</td>
-                                        <td>Downtown</td>
-                                        <td>Italiana</td>
-
-
-
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </td>
-                                        <td>La Trattoria</td>
-                                        <td>Downtown</td>
-                                        <td>Italiana</td>
-
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="data-categorias-subcategorias" class="table datanew nowrap" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <label class="checkboxs">
+                                                    <input type="checkbox">
+                                                    <span class="checkmarks"></span>
+                                                </label>
+                                            </th>
+                                            <th>Subcategoria</th>
+                                            <th>Categoria asociada</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
 
@@ -270,7 +186,7 @@
                             <div class="mb-3">
                                 <h5>Lista de Subcategorías</h5>
                                 <div class="table-responsive">
-                                    <table class="table" id="subcategoryTable">
+                                    <table id="data-empleados" class="table datanew nowrap" style="width: 100%;" id="subcategoryTable">
                                         <thead>
                                             <tr>
                                                 <th>Nombre</th>

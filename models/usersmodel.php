@@ -218,7 +218,6 @@
             $this->correo        = $array['correo'];
             $this->password      = $array['password'];
         }
-
         // esta funcion nos permitira validar si ya existe un usuario con ese documento o correo
         public function existUser($documento, $correo) {
             // this method is going to return true or false if the registered user is already in the database
@@ -256,7 +255,6 @@
                 return false;
             }
         }
-
         // esta funcion nos permitira crear un hash para la seguridad de la contraseña
         private function getHashedPassword($password) {
             // password_hash nos retorna un hash basado en unas condiciones que le demos
@@ -265,8 +263,6 @@
             // por que al decirle demasiadas veces va tener un constro de procesamiento mayor
             return password_hash($password, PASSWORD_DEFAULT,['cost' => 10]);
         }
-
-
         // Create getters and setters
         public function setIdRol($id){             $this->idRol = $id;}
         public function setIdEstado($id){         $this->idEstado = $id;}

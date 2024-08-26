@@ -1,7 +1,75 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
-    const categoriesTable = $("#categoriesTable tbody");
-    const subcategoryTable = $("#subcategoryTable tbody");
+
+
+    // creamos la variable para iniciar la datatable para mostrar los datos
+    let dataTableCategorias = $("#data-categorias").DataTable({
+        responsive: true,
+        processing: true,
+        serverSide: true,
+        pageLength: 10, // Muestra 10 registros por página
+        language: {
+            lengthMenu: "Mostrar _MENU_ Registros",
+            zeroRecords: "No se encontraron resultados",
+            info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
+            infoFiltered: "(filtrado de un total de _MAX_ registros)",
+            search: "Buscar:",
+            processing: "Procesando...",
+        },
+        ajax: {
+            url: baseUrl + "categorias/getCategories",
+            type: "GET",
+            dataType: "json",
+        },
+        columns: [
+            { data: "checkmarks" },
+            { data: "nombre_categoria" },
+            { data: "tipo_categoria" },
+            { data: "options" },
+        ],
+        columnDefs: [
+            {
+                targets: [0, 3],
+                orderable: false,
+            },
+        ],
+    });
+
+    let dataTableSubcategorias = $("#data-categorias-subcategorias").DataTable({
+        responsive: true,
+        processing: true,
+        serverSide: true,
+        pageLength: 10, // Muestra 10 registros por página
+        language: {
+            lengthMenu: "Mostrar _MENU_ Registros",
+            zeroRecords: "No se encontraron resultados",
+            info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            infoEmpty:
+                "Mostrando registros del 0 al 0 de un total de 0 registros",
+            infoFiltered: "(filtrado de un total de _MAX_ registros)",
+            search: "Buscar:",
+            processing: "Procesando...",
+        },
+        ajax: {
+            url: baseUrl + "categorias/getCategories",
+            type: "GET",
+            dataType: "json",
+        },
+        columns: [
+            { data: "checkmarks" },
+            { data: "nombre_subcategoria" },
+            { data: "tipo_categoria" },
+            { data: "options" },
+        ],
+        columnDefs: [
+            {
+                targets: [0, 3],
+                orderable: false,
+            },
+        ],
+    });
+
 
 
     // Funcion para agregar una nueva categoria
@@ -40,14 +108,11 @@ $(document).ready(function () {
 
                         // hacemos la petición para insertar la data
                         let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
-                        console.log(form);
                         const formData = new FormData(form);
 
                         // agregamos los datos de categorias para realizar la asociacíon
                         formData.append('nombreCategoria', categoryName);
-                        formData.append("tipoCategoria", categoryType);
-                        console.log(formData.append('nombreCategoria', categoryName));
-                        console.log(categoryType);                                          
+                        formData.append("tipoCategoria", categoryType);                                          
 
                         $.ajax({
                             url: baseUrl+"categorias/createCategory",
@@ -63,15 +128,20 @@ $(document).ready(function () {
                                         icon: "success",
                                         title: "Categoria y subcategoria creadas",
                                         text: data.message,
-                                        showConfirmButton: false,
+                                        showConfirmButton: true,
                                         allowOutsideClick: false,
-                                        timer: 5000,
-                                    }).then(function () {
+                                        confirmButtonText: "Ok",
+                                    }).then(function (result) {
                                         // Cerrar el modal y reiniciar el formulario
-                                        $("#formCategories")
-                                            .closest(".modal")
-                                            .modal("hide");
-                                        $("#formCategories")[0].reset();
+                                       if (result.isConfirmed) {
+                                           // Cerrar el modal y reiniciar el formulario
+                                            $("#formCategories").closest(".modal").modal("hide");
+                                            $("#formSubcategory").closest(".modal").modal("hide");
+                                            $("#formCategories")[0].reset();
+                                            $("#formSubcategory")[0].reset();
+                                            dataTableCategorias.ajax.reload(null, false);
+                                            dataTableSubcategorias.ajax.reload(null,false);
+                                       }
                                     });
                                 }
                             },
@@ -99,13 +169,18 @@ $(document).ready(function () {
                                 icon: "success",
                                 title: "Categoria creada",
                                 text: data.message,
-                                showConfirmButton: false,
+                                showConfirmButton: true,
                                 allowOutsideClick: false,
-                                timer: 5000,
-                            }).then(function () {
-                                // Cerrar el modal y reiniciar el formulario
-                                $("#formCategories").closest(".modal").modal("hide");
-                                $("#formCategories")[0].reset();
+                                confirmButtonText: "Ok",
+                            }).then(function (result) {
+                               if(result.isConfirmed) {
+                                    // Cerrar el modal y reiniciar el formulario
+                                    $("#formCategories").closest(".modal").modal("hide");
+                                    $("#formSubcategory").closest(".modal").modal("hide");
+                                    $("#formCategories")[0].reset();
+                                    $("#formSubcategory")[0].reset();
+                                    dataTable.ajax.reload(null, false);
+                               }
                             });
                         }
                     },

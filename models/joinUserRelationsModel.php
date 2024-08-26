@@ -127,8 +127,8 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
                 $item->from($p);
                 array_push($items, $item);
             }
-
             return $items;
+            
         } catch (PDOException $e) {
             error_log('JoinUserRelationsModel::cargarDatosEmpleados - ' . $e->getMessage());
             return [];

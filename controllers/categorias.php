@@ -16,9 +16,9 @@ class Categorias extends SessionController
 
 
     function render()
-    {
+    {   
         error_log('Categorias::render -> Carga la pagina principal de categorias');
-        $this->view->render('admin/gestionCategorias', []);
+        $this->view->render('admin/gestionCategorias');
     }
 
     // Funcion para crear una nueva categoria
@@ -83,8 +83,69 @@ class Categorias extends SessionController
                 
             }
         }
-        
-        
+    }
+
+
+    // Funcion para mostrar recuperar los datos en datatables
+    public function getCategories() { 
+
+        try {
+            // Obtener los parámetros enviados por DataTables
+            $draw = intval($_GET['draw']);
+            $start = intval($_GET['start']);
+            $length = intval($_GET['length']);
+            $search = $_GET['search']['value'];
+            $orderColumnIndex = intval($_GET['order'][0]['column']);
+            $orderDir = $_GET['order'][0]['dir'];
+            $columns = $_GET['columns'];
+            $orderColumnName = $columns[$orderColumnIndex]['data'];
+
+
+            //creamos un objeto del modelocategorias
+
+            $categoriaObj = new CategoriasModel();
+
+            //Obtenemos los datos filtrados
+            $categoriasData = $categoriaObj->cargarDatosCategorias($length, $start, $orderColumnIndex, $orderDir, $search, $orderColumnName);
+
+            $totalFiltered = $categoriaObj->totalRegistrosFiltrados($search);
+
+            $totalRecords = $categoriaObj->totalRegistros();
+
+            $arrayDataCategories = json_decode(json_encode($categoriasData, JSON_UNESCAPED_UNICODE), true);
+            
+            // error_log("Array: ".print_r($categoriasData));
+
+            // Iterar sobre el arreglo y agregar 'options' a cada usuario
+            for ($i = 0; $i < count($arrayDataCategories); $i++) {
+                $arrayDataCategories[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
+                $arrayDataCategories[$i]['options'] = '
+                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" >
+                    <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
+                </a>
+                <a class="me-3 botonActualizar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" href="#">
+                    <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
+                </a>
+                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" href="#">
+                    <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
+                </a>
+            ';
+            }
+
+            // retornamos la data en un arreglo asociativo con la data filtrada y asociada
+            $response = [
+                "draw" => $draw,
+                "recordsTotal" => $totalRecords,
+                "recordsFiltered" => $totalFiltered,
+                "data" => $arrayDataCategories,
+                "status" => true
+            ];
+            // devolvemos la data y terminamos el proceso
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
+            die();
+        }catch(Exception $e) {
+            error_log('Categorias::getCategories -> Error en traer los datos - getCategories'.$e->getMessage());
+        }
     }
 
 }

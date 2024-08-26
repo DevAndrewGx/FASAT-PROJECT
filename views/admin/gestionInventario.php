@@ -1,3 +1,9 @@
+<?php
+// llamamos al objeto de categorias para recorrerlo 
+$categories = $this->d['categories'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +37,7 @@
 
             <div class="content">
 
-             
+
                 <div class="nav-sections">
                     <nav>
                         <ul>
@@ -325,8 +331,13 @@
                             <div class="form-group col-lg-6 col-md-6">
                                 <label for="categoria" class="col-form-label">Categoría</label>
                                 <select name="categoria" class="form-control select" id="categoria">
-                                    <option>Seleccionar categoria</option>
-                                    <option value="5">Cerveza</option>
+                                    <?php
+                                    foreach ($categories as $cat) {
+                                    ?>
+                                        <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                 </select>
                             </div>
 

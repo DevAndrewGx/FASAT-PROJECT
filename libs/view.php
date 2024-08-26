@@ -14,9 +14,6 @@
         function render($nombre, $data = []) { 
             // variable d -> data
             $this->d = $data;
-
-
-
             $this->handleMessages();
             // llamamos el archivo con el nombre de la vista que queremos cargar
             require 'views/'.$nombre.'.php';

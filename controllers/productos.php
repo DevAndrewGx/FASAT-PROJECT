@@ -16,8 +16,11 @@ class Productos extends SessionController
 
     function render()
     {
+        // creamos un objeto de categorias para traer las categorias
+        $categoriaObj = new CategoriasModel();
+        $categories = $categoriaObj->getAll();
         error_log('Producto::render -> Carga la pagina principal ');
-        $this->view->render('admin/gestionInventario', []);
+        $this->view->render('admin/gestionInventario', ['categories' => $categories]);
     }
 
     // creamos la funcion que nos permitira crear nuevos productos
