@@ -60,32 +60,41 @@ class Users extends SessionController
         // var_dump($this->getPost('foto'));
         $this->createPhoto($fotoModel);
 
-        // insertamos primero la foto
-        if ($fotoModel->save()) {
-            error_log('Users::createUser -> Se guardó la foto correctamente');
-            $idFoto = $fotoModel->getIdFoto();
-            error_log('Users::createUser -> idFoto: ' . $idFoto);
-
-            if ($idFoto) {
-                $userModel->setIdFoto($idFoto);
-
-                if ($userModel->save()) {
-                    error_log('Users::createUser -> Se guardó el usuario correctamente');
-                    echo json_encode(['status' => true, 'message' => "El usuario fue creado exitosamente!"]);
-                    return;
+        // Primero validamos que el usuario que se esta tratando de ingresar no exista en la bd
+        if(!$userModel->existUser($this->getPost('documento'), $this->getPost('email'))) {
+             // insertamos primero la foto
+            if ($fotoModel->save()) {
+                error_log('Users::createUser -> Se guardó la foto correctamente');
+                $idFoto = $fotoModel->getIdFoto();
+                error_log('Users::createUser -> idFoto: ' . $idFoto);
+    
+                if ($idFoto) {
+                    $userModel->setIdFoto($idFoto);
+                    if ($userModel->save()) {
+                        error_log('Users::createUser -> Se guardó el usuario correctamente');
+                        echo json_encode(['status' => true, 'message' => "El usuario fue creado exitosamente!"]);
+                        return;
+                    } else {
+                        error_log('Users::createUser -> No se guardó el usuario');
+                        echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
+                        return;
+                    }
+                    
+                    
                 } else {
-                    error_log('Users::createUser -> No se guardó el usuario');
-                    echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
-                    return;
+                    error_log('Users::createUser -> No se obtuvo el id de la foto');
+                    echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
                 }
             } else {
-                error_log('Users::createUser -> No se obtuvo el id de la foto');
+                error_log('Users::createUser -> No se guardó la foto correctamente');
                 echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
-            }
-        } else {
-            error_log('Users::createUser -> No se guardó la foto correctamente');
-            echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
+            }   
+        }else {
+            error_log('Users::createUser -> El documento o email ya existen en la db');
+            echo json_encode(['status' => false, 'message' => "El documento o correo ya existen en el sistema, intentelo nuevamente"]);
+            return;
         }
+        
     }
 
     function createPhoto(FotoModel $fotoObjeto) {
