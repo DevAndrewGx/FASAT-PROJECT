@@ -12,7 +12,7 @@ class Users extends SessionController
         $this->user = $this->getUserSessionData();
         error_log('Users::construct -> controlador usuarios');
     }
-
+    
     function render()
     {
         error_log('Users::render -> Carga la pagina principal de los empleados');
@@ -96,7 +96,6 @@ class Users extends SessionController
         }
         
     }
-
     function createPhoto(FotoModel $fotoObjeto) {
         // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
         $foto = isset($_FILES['foto']) ? $_FILES['foto']: null;
