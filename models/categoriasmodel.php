@@ -142,13 +142,12 @@
                     $item->setIdCategoria($p['id_categoria']); 
                     $item->setNombreCategoria($p['nombre_categoria']);
                     $item->setNombreSubCategoria($p['nombre_subcategoria']);
-                    $item->setTipoCategoria($p['tipo_categoria']);
-                    error_log("Item: " . print_r($item, true));
+                    $item->setTipoCategoria($p['tipo_categoria']);  
 
                     array_push($items, $item);
-                }
-
-                return $items;
+                }   
+                
+                return $items;  
             } catch (PDOException $e) {
                 error_log('CategoriasModel::cargarDatosCategorias - ' . $e->getMessage());
                 return [];
@@ -202,6 +201,28 @@
             $this->nombre_categoria         = $array['nombre_categoria'];
             $this->nombre_subcategoria      = $array['nombre_subcategoria'];
             $this->tipo                     = $array['tipo_categoria'];
+        }
+
+        public function existCategory($categoria)
+        {
+
+            try {
+                $query = $this->prepare('SELECT nombre_categoria FROM categorias WHERE nombre_categoria = :nombre');
+
+                $query->execute([
+                    'nombre' => $categoria
+                ]);
+                //Si al momento de contar el resultado de la query y es mayor a cero eso significa que 
+                // ya existe una categoria con ese nombre
+                if ($query->rowCount() > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (PDOException $e) {
+                error_log('USERMODEL::existsUser->PDOException' . $e);
+                return;
+            }
         }
         public function getIdCategoria() { return $this->id_categoria;}
         public function getNombreCategoria() { return $this->nombre_categoria;}

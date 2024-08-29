@@ -143,6 +143,28 @@ $(document).ready(function () {
                                             dataTableSubcategorias.ajax.reload(null,false);
                                        }
                                     });
+                                }else { 
+                                    Swal.fire({
+                                        icon: "error",
+                                        title: "No se pudo guardar la categoria",
+                                        text: data.message,
+                                        showConfirmButton: true,
+                                        allowOutsideClick: false,
+                                        confirmButtonText: "Ok",
+                                    }).then(function (result) {
+                                        if (result.isConfirmed) {
+                                            // Cerrar el modal y reiniciar el formulario
+                                            $("#formCategories")    
+                                                .closest(".modal")
+                                                .modal("hide");
+                                            $("#formSubcategory")
+                                                .closest(".modal")
+                                                .modal("hide");
+                                            $("#formCategories")[0].reset();
+                                            $("#formSubcategory")[0].reset();
+                                            dataTable.ajax.reload(null, false);
+                                        }
+                                    });
                                 }
                             },
                         });
@@ -181,6 +203,28 @@ $(document).ready(function () {
                                     $("#formSubcategory")[0].reset();
                                     dataTable.ajax.reload(null, false);
                                }
+                            });
+                        }else { 
+                            Swal.fire({
+                                icon: "error",
+                                title: "No se pudo guardar la categoria",
+                                text: data.message,
+                                showConfirmButton: true,
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then(function (result) {
+                                if (result.isConfirmed) {
+                                    // Cerrar el modal y reiniciar el formulario
+                                    $("#formCategories")
+                                        .closest(".modal")
+                                        .modal("hide");
+                                    $("#formSubcategory")
+                                        .closest(".modal")
+                                        .modal("hide");
+                                    $("#formCategories")[0].reset();
+                                    $("#formSubcategory")[0].reset();
+                                    dataTable.ajax.reload(null, false);
+                                }
                             });
                         }
                     },
