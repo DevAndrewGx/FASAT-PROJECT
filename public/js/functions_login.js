@@ -5,6 +5,10 @@ $(document).ready(function () {
 
     efftectsUI();
 
+
+
+
+    
     // enviar la request con AJAX hacia el controlador EMAIL para enviar el mensaje
 
     $("#formOlvidoPass").submit(function (e) {
@@ -38,6 +42,14 @@ $(document).ready(function () {
                         $("#formOlvidoPass").fadeOut(200, function () {
                             $("#formLogin").fadeIn(200);
                         });
+                    });
+                } else if (data.errorCode === 'ACCOUNT_BLOCKED') {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Cuenta bloqueada",
+                        text: "Tu cuenta está bloqueada. Contacta al soporte para más detalles.",
+                        showConfirmButton: true,
+                        allowOutsideClick: false,
                     });
                 } else {
                     Swal.fire({
@@ -124,6 +136,14 @@ $(document).ready(function () {
                                 //Vaciar los campos de contraseña después de cambiarla
                                 $("#password").val("");
                                 $("#repassword").val("");
+                            });
+                        } else if (data.errorCode === 'ACCOUNT_BLOCKED') {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Cuenta bloqueada",
+                                text: "Tu cuenta está bloqueada. Contacta al soporte para más detalles.",
+                                showConfirmButton: true,
+                                allowOutsideClick: false,
                             });
                         } else {
                             Swal.fire({

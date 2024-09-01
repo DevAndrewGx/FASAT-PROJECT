@@ -41,6 +41,22 @@
                 // error_log("Login::error -> ". $user);
                 // si el usuario es diferente de null eso significa que si se autentico el usuario
                 if ($user != NULL) {
+
+
+                    // Verificamos si la cuenta está bloqueada
+                    if ($user->getEstado() === 'Bloqueado') {
+                        error_log('Login::authenticate() user blocked');
+                        // Si la cuenta está bloqueada, respondemos con un mensaje de error
+                        if ($this->isAjaxRequest()) {
+                            echo json_encode(['status' => false, 'errorCode' => 'ACCOUNT_BLOCKED', 'message' => 'Tu cuenta está bloqueada.']);
+                            exit;
+                        } else {
+                            // Redirigimos a una página de error para cuentas bloqueadas
+                            $this->redirect('login', ['error' => 'Tu cuenta está bloqueada.']);
+                            return;
+                        }
+                    }
+
                     // inicializa el proceso de las sesiones
                     error_log('Login::authenticate() passed');
                     $this->initialize($user);
@@ -66,7 +82,7 @@
         // Definición de la función strClean dentro de setPassword
         function strClean($str) {
             return trim($str); 
-        }
+        }   
 
         // setPassword
         if (empty($_POST['identificacion']) || empty($_POST['txtEmail']) || empty($_POST['txtToken']) || empty($_POST['txtPassword']) || empty($_POST['txtPasswordConfirm'])) {
@@ -114,5 +130,11 @@
         echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
         die();
     }
+
+    // Función para verificar si la solicitud es AJAX
+    private function isAjaxRequest() {
+        return !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+    }
+    
     }
 ?>
