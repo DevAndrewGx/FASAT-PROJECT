@@ -28,9 +28,8 @@ class LoginModel extends Model
                 error_log('login: user correo ' . $user->getCorreo());
 
                 if ($this->isUserBlocked($correo)) {
-                    return ['status' => false, 'message' => 'Cuenta bloqueada.'];
+                    return json_encode(['status' => false, 'message' => 'Cuenta bloqueada.']);
                 }
-
 
                 if (password_verify($password, $user->getPassword())) {
                     error_log('login: success');
@@ -70,7 +69,7 @@ class LoginModel extends Model
                 error_log('login: user documento' . $user->getDocumento());
 
                 if ($this->isUserBlocked($user->getCorreo())) {
-                    return ['status' => false, 'message' => 'Cuenta bloqueada.'];
+                    return json_encode(['status' => false, 'message' => 'Cuenta bloqueada.']);
                 }
 
                 if (password_verify($password, $user->getPassword())) {
@@ -120,10 +119,18 @@ class LoginModel extends Model
     // Verificar si el usuario está bloqueado
     private function isUserBlocked($correo)
     {
-        $query = $this->prepare('SELECT estado FROM usuarios WHERE correo = :correo');
+
+        $query = $this->prepare('SELECT u.correo, e.tipo FROM usuarios u JOIN estados_usuarios e ON u.id_estado = e.id_estado WHERE correo = :correo');
+
         $query->execute(['correo' => $correo]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        return $result && $result['id_estado'] == 2;
+        if($result['tipo'] === 'Inactivo') {
+            return true;
+        }
+
+        return false;
+
+        // return $result && $result['id_estado'] == 2;
     }
 }

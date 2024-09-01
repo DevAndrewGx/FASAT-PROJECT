@@ -41,13 +41,14 @@
                 // error_log("Login::error -> ". $user);
                 // si el usuario es diferente de null eso significa que si se autentico el usuario
                 if ($user != NULL) {
-
+                    
 
                     // Verificamos si la cuenta está bloqueada
                     if ($user->getEstado() === 'Bloqueado') {
                         error_log('Login::authenticate() user blocked');
                         // Si la cuenta está bloqueada, respondemos con un mensaje de error
                         if ($this->isAjaxRequest()) {
+                            error_log('Helloooooooo.........................................');
                             echo json_encode(['status' => false, 'errorCode' => 'ACCOUNT_BLOCKED', 'message' => 'Tu cuenta está bloqueada.']);
                             exit;
                         } else {
@@ -61,6 +62,7 @@
                     error_log('Login::authenticate() passed');
                     $this->initialize($user);
                 } else {
+                    error_log("EL USUARIO ESTA NULLO");
                     //error al registrar, que intente de nuevo
                     //$this->errorAtLogin('Nombre de usuario y/o password incorrecto');
                     error_log('Login::authenticate() user and/or password wrong');

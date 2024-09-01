@@ -5,6 +5,7 @@
         private $idRol;
         private $rol;
         private $documento;
+        private $estado;
         private $correo;
         private $nombres;
         private $password;
@@ -21,7 +22,7 @@
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol WHERE u.correo  = :correo');
+                $query = $this->prepare('SELECT u.*, r.rol, e.tipo FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol JOIN estados_usuarios e ON e.id_estado = u.id_estado WHERE u.correo  = :correo');
                 $query->execute([
                     'correo' => $correo
                 ]);
@@ -35,6 +36,7 @@
                 $this->setCorreo($user['correo']);
                 $this->setNombres($user['nombres']);
                 $this->setPassword($user['password'], false);
+                $this->setEstado($user['tipo']);
             
                 //retornamos this porque es el mismo objeto que ya contiene la informacion
                 return $this;
@@ -60,6 +62,7 @@
         public function getCorreo() { return $this->correo; }
         public function getNombres() { return $this->nombres; }
         public function getPassword() { return $this->password; }
+        public function getEstado() { return $this->estado; }
 
         public function setIdRol($id){             $this->idRol = $id;}
         public function setRol($rol){         $this->rol = $rol;}
@@ -67,6 +70,7 @@
         public function setCorreo($correo){     $this->correo = $correo;}
         public function setNombres($nombres){       $this->nombres = $nombres;}
         public function setPassword($password){       $this->password = $password;}
+        public function setEStado($estado) { return $this->estado = $estado; }
     
     }
 ?>

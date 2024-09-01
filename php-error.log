@@ -1,546 +1,128 @@
-        [29-Aug-2024 05:54:04 Europe/Berlin] Testing errors
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:54:04 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:54:04 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:54:04 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:54:04 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:54:04 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:55:02 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:55:02 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:02 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
-[29-Aug-2024 05:55:02 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:02 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 05:55:03 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703106, url => users
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703106, url => users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 05:55:03 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703107, url => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703107, url => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:55:03 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703108, url => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903703108, url => categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:55:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:03 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:55:03 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:55:03 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:55:06 Europe/Berlin] Testing errors
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:55:06 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:55:06 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:55:06 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:55:06 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:55:06 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:55:06 Europe/Berlin] Entra aqui...................
-[29-Aug-2024 05:57:39 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:39 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 05:57:39 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:39 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859487, url => users
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859487, url => users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 05:57:39 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859488, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859488, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:57:39 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859489, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903859489, url => categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:39 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:39 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:39 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:57:39 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:57:43 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:43 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:43 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:57:43 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:57:43 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:57:43 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:57:43 Europe/Berlin] Entra aqui...................
-[29-Aug-2024 05:57:46 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:46 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:46 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
-[29-Aug-2024 05:57:46 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:46 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 05:57:47 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867091, url => users
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867091, url => users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 05:57:47 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:47 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867092, url => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867092, url => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:57:47 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867093, url => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903867093, url => categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:47 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:47 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:47 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:57:47 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:57:52 Europe/Berlin] Testing errors
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:57:52 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:57:52 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:57:52 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:57:52 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:57:52 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:57:52 Europe/Berlin] Entra aqui...................
-[29-Aug-2024 05:58:40 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:40 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 05:58:40 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920511, url => users
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920511, url => users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 05:58:40 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920512, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920512, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:58:40 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:58:40 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920513, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724903920513, url => categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:58:40 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:40 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:58:40 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 05:58:40 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 05:58:45 Europe/Berlin] Testing errors
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:58:45 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:58:45 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:58:45 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:58:45 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:58:45 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:58:45 Europe/Berlin] Entra aqui...................
-[29-Aug-2024 05:59:03 Europe/Berlin] Testing errors
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/createCategory, url => categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 05:59:03 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 05:59:03 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] Categorias::createCategory -> Funcion para crear nuevas categorias
-[29-Aug-2024 05:59:03 Europe/Berlin] createCategory:: -> Es posible crear una nueva categoria
-[29-Aug-2024 05:59:03 Europe/Berlin] Controller::existPOST -> No existe el parametro subCategoriaNombre
-[29-Aug-2024 05:59:03 Europe/Berlin] Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria
-[29-Aug-2024 05:59:03 Europe/Berlin] Entra aqui...................
-[29-Aug-2024 06:04:49 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:49 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:49 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 06:04:57 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:57 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 06:04:57 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
-[29-Aug-2024 06:04:57 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:57 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 06:04:57 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904297286, url => users
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904297286, url => users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 06:04:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:04:57 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:57 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 06:04:59 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::isPublic(): currentURL => productos
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
-[29-Aug-2024 06:04:59 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:04:59 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:04:59 Europe/Berlin] Producto::construct -> Controlador producto
-[29-Aug-2024 06:04:59 Europe/Berlin] Producto::render -> Carga la pagina principal 
-[29-Aug-2024 06:04:59 Europe/Berlin] Testing errors
-[29-Aug-2024 06:04:59 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 06:05:00 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:00 Europe/Berlin] Errores::construct -> inicio de errores
-[29-Aug-2024 06:05:00 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:00 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300698, url => users
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::isPublic(): currentURL => users
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300698, url => users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:05:00 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] Users::construct -> controlador usuarios
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300699, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300699, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 06:05:00 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession()
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::validateSession(): username:admin@x.com - role: Administrador
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300700, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1724904300700, url => categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[29-Aug-2024 06:05:00 Europe/Berlin] sessionController::getUserSessionData(): admin
-[29-Aug-2024 06:05:00 Europe/Berlin] Categorias::construct -> Controlador categorias
-[29-Aug-2024 06:05:00 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
-[29-Aug-2024 06:05:00 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
-[29-Aug-2024 06:05:03 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:03 Europe/Berlin] Testing errors
-[29-Aug-2024 06:05:03 Europe/Berlin] Errores::construct -> inicio de errores
+[01-Sep-2024 04:33:00 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:00 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[01-Sep-2024 04:33:00 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 04:33:00 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:00 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:00 Europe/Berlin] loginByCorreo: inicio
+[01-Sep-2024 04:33:00 Europe/Berlin] login: user correo admin@x.com
+[01-Sep-2024 04:33:00 Europe/Berlin] login: success
+[01-Sep-2024 04:33:00 Europe/Berlin] Login::authenticate() user and/or password wrong
+[01-Sep-2024 04:33:01 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:01 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:01 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:01 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:01 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:01 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 04:33:41 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:41 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:41 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:41 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:41 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:41 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 04:33:43 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:44 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:44 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:44 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:44 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:44 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 04:33:44 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:44 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:44 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:44 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:44 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:44 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 04:33:45 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:45 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:45 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:45 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:45 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:45 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:45 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 04:33:50 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:50 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[01-Sep-2024 04:33:50 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 04:33:50 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:50 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:50 Europe/Berlin] loginByCorreo: inicio
+[01-Sep-2024 04:33:50 Europe/Berlin] login: user correo admin@x.com
+[01-Sep-2024 04:33:50 Europe/Berlin] login: success
+[01-Sep-2024 04:33:50 Europe/Berlin] EL USUARIO ESTA NULLO
+[01-Sep-2024 04:33:50 Europe/Berlin] Login::authenticate() user and/or password wrong
+[01-Sep-2024 04:33:50 Europe/Berlin] Testing errors
+[01-Sep-2024 04:33:50 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 04:33:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:50 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 04:33:50 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 04:33:50 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 04:33:50 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:00:41 Europe/Berlin] Testing errors
+[01-Sep-2024 05:00:41 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:00:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[01-Sep-2024 05:00:41 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 05:00:41 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:00:41 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:00:41 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:01:15 Europe/Berlin] Testing errors
+[01-Sep-2024 05:01:15 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:01:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:01:15 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:01:15 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:01:15 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:01:15 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:01:22 Europe/Berlin] Testing errors
+[01-Sep-2024 05:01:22 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:01:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[01-Sep-2024 05:01:22 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 05:01:22 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:01:22 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:01:22 Europe/Berlin] loginByCorreo: inicio
+[01-Sep-2024 05:01:22 Europe/Berlin] login: user correo admin@x.com
+[01-Sep-2024 05:01:22 Europe/Berlin] login: success
+[01-Sep-2024 05:01:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method JoinUserRolModel::getEstado() in C:\xampp\htdocs\FAST-PROJECT\controllers\login.php:47
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(77): Login->authenticate()
+#1 C:\xampp\htdocs\FAST-PROJECT\index.php(51): App->__construct()
+#2 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\controllers\login.php on line 47
+[01-Sep-2024 05:06:54 Europe/Berlin] Testing errors
+[01-Sep-2024 05:06:54 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:06:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[01-Sep-2024 05:06:54 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 05:06:54 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:06:54 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:06:54 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:06:59 Europe/Berlin] Testing errors
+[01-Sep-2024 05:06:59 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:06:59 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:06:59 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:06:59 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:06:59 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:06:59 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:07:00 Europe/Berlin] Testing errors
+[01-Sep-2024 05:07:00 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:07:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:07:00 Europe/Berlin] sessionController::isPublic(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[01-Sep-2024 05:07:00 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:07:00 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:07:00 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[01-Sep-2024 05:07:06 Europe/Berlin] Testing errors
+[01-Sep-2024 05:07:06 Europe/Berlin] SessionController::validateSession()
+[01-Sep-2024 05:07:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[01-Sep-2024 05:07:06 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[01-Sep-2024 05:07:06 Europe/Berlin] SessionController::validateSession() public page
+[01-Sep-2024 05:07:06 Europe/Berlin] Login::construct -> inicio de login
+[01-Sep-2024 05:07:06 Europe/Berlin] loginByCorreo: inicio
+[01-Sep-2024 05:07:06 Europe/Berlin] login: user correo admin@x.com
+[01-Sep-2024 05:07:06 Europe/Berlin] login: success
+[01-Sep-2024 05:07:06 Europe/Berlin] Login::authenticate() passed
+[01-Sep-2024 05:07:06 Europe/Berlin] sessionController::initialize(): user: admin
+[01-Sep-2024 05:07:06 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[01-Sep-2024 05:07:06 Europe/Berlin] Testing errors
+[01-Sep-2024 05:07:06 Europe/Berlin] Testing errors
+[01-Sep-2024 05:07:06 Europe/Berlin] Errores::construct -> inicio de errores
