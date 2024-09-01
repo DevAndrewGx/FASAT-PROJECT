@@ -59,24 +59,15 @@ class Categorias extends SessionController
         if (!$this->existPOST(['subCategoriaNombre'])) {
             error_log('Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria');
 
-            if(!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
-                error_log('Se puede crear una categoria correctamente ' . $this->getPost("nombreCategoria"));
-                if ($categoriaObj->saveCategory()) {
-                    error_log('Categorias::createCategory -> Se guardó un producto correctamente dentro de la bd');
-                    echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente!"]);
-                    return;
-                }
-            } else {
-                error_log('Entra aqui...................');
-                echo json_encode(['status' => false, 'message' => "La categoria ya se encuentra registrada en el sistema intentelo nuevamente"]);
+            if ($categoriaObj->saveCategory()) {
+                error_log('Categorias::createCategory -> Se guardó un producto correctamente dentro de la bd');
+                echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente!"]);
                 return;
             }
-           
         } else {
             // insertamos primero la data de categorias
 
             if (!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
-                error_log('Se puede crear una categoria correctamente '. $this->getPost("nombreCategoria"));
                 if ($categoriaObj->saveCategory()) {
                     error_log('Categorias::createCategory -> Se guardó la categoria correctamente');
                     $idCategoria = $categoriaObj->getIdCategoria();
