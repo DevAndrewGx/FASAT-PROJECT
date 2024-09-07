@@ -36,31 +36,32 @@
                 // error_log('Login::documento '. $documento);
                 // si el login es exitoso regresa solo el ID del usuario
                
-                $user = $this->model->loginBycorreo($correo, $password);
+
+                $loginObj = new LoginModel();
+                $user = $loginObj->loginBycorreo($correo, $password);
                 
                 // error_log("Login::error -> ". $user);
                 // si el usuario es diferente de null eso significa que si se autentico el usuario
                 if ($user != NULL) {
                     
-
+                    error_log("This is the state: ".$user->getEstado());
                     // Verificamos si la cuenta está bloqueada
-                    if ($user->getEstado() === 'Bloqueado') {
+                    if ($user->getEstado() === 'Inactivo') {
                         error_log('Login::authenticate() user blocked');
                         // Si la cuenta está bloqueada, respondemos con un mensaje de error
-                        if ($this->isAjaxRequest()) {
-                            error_log('Helloooooooo.........................................');
-                            echo json_encode(['status' => false, 'errorCode' => 'ACCOUNT_BLOCKED', 'message' => 'Tu cuenta está bloqueada.']);
-                            exit;
-                        } else {
-                            // Redirigimos a una página de error para cuentas bloqueadas
-                            $this->redirect('login', ['error' => 'Tu cuenta está bloqueada.']);
-                            return;
-                        }
+                        echo json_encode(['status' => false, 'message' => "Tu cuenta está bloqueada."]);
+                        exit;
+                        // if ($this->isAjaxRequest()) {
+                        //     error_log('Helloooooooo.........................................');
+                        //     echo json_encode(['status' => false, 'errorCode' => 'ACCOUNT_BLOCKED', 'message' => 'Tu cuenta está bloqueada.']);
+                        //     exit;    
+                        // }
                     }
 
                     // inicializa el proceso de las sesiones
                     error_log('Login::authenticate() passed');
                     $this->initialize($user);
+                    echo json_encode(['status' => true, 'message' => 'Login successful']);
                 } else {
                     error_log("EL USUARIO ESTA NULLO");
                     //error al registrar, que intente de nuevo

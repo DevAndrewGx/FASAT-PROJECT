@@ -36,41 +36,48 @@ $(document).ready(function () {
         ],
     });
 
-    let dataTableSubcategorias = $("#data-categorias-subcategorias").DataTable({
-        responsive: true,
-        processing: true,
-        serverSide: true,
-        pageLength: 10, // Muestra 10 registros por página
-        language: {
-            lengthMenu: "Mostrar _MENU_ Registros",
-            zeroRecords: "No se encontraron resultados",
-            info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-            infoEmpty:
-                "Mostrando registros del 0 al 0 de un total de 0 registros",
-            infoFiltered: "(filtrado de un total de _MAX_ registros)",
-            search: "Buscar:",
-            processing: "Procesando...",
-        },
-        ajax: {
-            url: baseUrl + "categorias/getCategories",
-            type: "GET",
-            dataType: "json",
-        },
-        columns: [
-            { data: "checkmarks" },
-            { data: "nombre_subcategoria" },
-            { data: "tipo_categoria" },
-            { data: "options" },
-        ],
-        columnDefs: [
-            {
-                targets: [0, 3],
-                orderable: false,
-            },
-        ],
-    });
-
-
+   let dataTableSubcategorias = $("#data-categorias-subcategorias").DataTable({
+       responsive: true,
+       processing: true,
+       serverSide: true,
+       pageLength: 10, // Muestra 10 registros por página
+       language: {
+           lengthMenu: "Mostrar _MENU_ Registros",
+           zeroRecords: "No se encontraron subcategorias asociadas",
+           info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+           infoEmpty:
+               "Mostrando registros del 0 al 0 de un total de 0 registros",
+           infoFiltered: "(filtrado de un total de _MAX_ registros)",
+           search: "Buscar:",
+           processing: "Procesando...",
+       },
+       ajax: {
+           url: baseUrl + "categorias/getCategories",
+           type: "GET",
+           dataType: "json",
+           dataSrc: function (json) {
+               // Filtrar las filas que tienen `nombre_subcategoria` null o vacío
+               return json.data.filter(function (item) {
+                   return (
+                       item.nombre_subcategoria !== null &&
+                       item.nombre_subcategoria !== ""
+                   );
+               });
+           },
+       },
+       columns: [
+           { data: "checkmarks" },
+           { data: "nombre_subcategoria" },
+           { data: "nombre_categoria" },
+           { data: "options" },
+       ],
+       columnDefs: [
+           {
+               targets: [0, 3],
+               orderable: false,
+           },
+       ],
+   });
 
     // Funcion para agregar una nueva categoria
     $("#formCategories").submit(function (e) {

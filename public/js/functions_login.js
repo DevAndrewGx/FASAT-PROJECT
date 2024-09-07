@@ -4,13 +4,36 @@ $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     efftectsUI();
+    // ahora como queremos mostrar alertas en el login, 
+    // entonces debemos modificar como funciona el login y enviar la data con ajax
+    // $("#formLogin").submit(function (e) { 
+    //     console.log('imhere')
+    //     e.preventDefault();
 
-
-
-
-    
+    //     let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
+    //     const formData = new FormData(form);
+    //     $.ajax({
+    //         url: baseUrl + "login/authenticate",    
+    //         type: "POST",
+    //         processData: false,
+    //         contentType: false,
+    //         data: formData,
+    //         success: function (response) {
+    //             let data = JSON.parse(response);
+    //             if (data.status == 'false') {
+    //                 console.log('false2')
+    //                  Swal.fire({
+    //                      icon: "error",
+    //                      title: "Cuenta bloqueada",
+    //                      text: "Tu cuenta está bloqueada. Contacta al soporte para más detalles.",
+    //                      showConfirmButton: true,
+    //                      allowOutsideClick: false,
+    //                  });
+    //             } 
+    //         },
+    //     });
+    // })
     // enviar la request con AJAX hacia el controlador EMAIL para enviar el mensaje
-
     $("#formOlvidoPass").submit(function (e) {
         e.preventDefault();
 

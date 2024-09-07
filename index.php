@@ -33,6 +33,7 @@
 
     include_once 'models/usersmodel.php';
     include_once 'models/fotomodel.php';
+    include_once 'models/loginmodel.php';
     include_once 'models/joinUserRolModel.php';
     include_once 'models/joinUserRelationsModel.php';
     include_once 'models/emailmodel.php';

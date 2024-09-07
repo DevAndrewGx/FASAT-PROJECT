@@ -136,7 +136,7 @@ class SessionController extends Controller
     // la funcion initialize nos va permitir llamar authorizeAccess y establecer el
     public function initialize($user)
     {
-        error_log("sessionController::initialize(): user: " . $user->getNombres());
+        // error_log("sessionController::initialize(): user: " . $user->getNombres());
         $this->session->setCurrentUser($user->getCorreo());
         $this->authorizeAccess($user->getRol());
     }

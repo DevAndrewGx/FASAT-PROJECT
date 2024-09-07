@@ -56,38 +56,44 @@ class Categorias extends SessionController
 
 
         // Si no existe la subcategoria insertamosla categoria sin ningun paso adicional mas
-        if (!$this->existPOST(['subCategoriaNombre'])) {
-            error_log('Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria');
+        if(!$categoriaObj->existCategory($this->getPost('nombreCategoria'))) {
+            if (!$this->existPOST(['subCategoriaNombre'])) {
+                error_log('Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria');
 
-            if ($categoriaObj->saveCategory()) {
-                error_log('Categorias::createCategory -> Se guardó un producto correctamente dentro de la bd');
-                echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente!"]);
-                return;
-            }
-        } else {
-            // insertamos primero la data de categorias
-
-            if (!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
                 if ($categoriaObj->saveCategory()) {
-                    error_log('Categorias::createCategory -> Se guardó la categoria correctamente');
-                    $idCategoria = $categoriaObj->getIdCategoria();
-                    $categoriaObj->setIdCategoria($idCategoria);
-                    // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
-                    $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
-
-                    if ($categoriaObj->saveSubCategory()) {
-                        echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente"]);
-                        return;
-                    } else {
-                        echo json_encode(['status' => true, 'message' => "No se guardo la data correctamente en subcategorias"]);
-                        return;
-                    }
+                    error_log('Categorias::createCategory -> Se guardó un producto correctamente dentro de la bd');
+                    echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente!"]);
+                    return;
                 }
             } else {
-                echo json_encode(['status' => false, 'message' => "La categoria ya se encuentra registrada en el sistema intentelo nuevamente"]);
-                return;
+                // insertamos primero la data de categorias
+
+                if (!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
+                    if ($categoriaObj->saveCategory()) {
+                        error_log('Categorias::createCategory -> Se guardó la categoria correctamente');
+                        $idCategoria = $categoriaObj->getIdCategoria();
+                        $categoriaObj->setIdCategoria($idCategoria);
+                        // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
+                        $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
+
+                        if ($categoriaObj->saveSubCategory()) {
+                            echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente"]);
+                            return;
+                        } else {
+                            echo json_encode(['status' => true, 'message' => "No se guardo la data correctamente en subcategorias"]);
+                            return;
+                        }
+                    }
+                } else {
+                    echo json_encode(['status' => false, 'message' => "La categoria ya se encuentra registrada en el sistema intentelo nuevamente"]);
+                    return;
+                }
             }
+        }else {
+            echo json_encode(['status' => false, 'message' => "La categoria ya se encuentra registrada en el sistema intentelo nuevamente"]);
+            return;
         }
+        
     }
 
 

@@ -37,7 +37,8 @@
                 $this->setNombres($user['nombres']);
                 $this->setPassword($user['password'], false);
                 $this->setEstado($user['tipo']);
-            
+                
+                // print_r($this->getEstado());
                 //retornamos this porque es el mismo objeto que ya contiene la informacion
                 return $this;
             } catch (PDOException $e) {
@@ -50,9 +51,11 @@
             $this->idRol= $array['id_rol'] ?? null;
             $this->rol = $array['rol'] ?? '';
             $this->documento = $array['documento'] ?? '';
+            $this->estado = $array['estado'] ?? '';
             $this->correo = $array['correo'] ?? '';
             $this->nombres = $array['nombres'] ?? '';
             $this->password = $array['password'] ?? '';
+            $this->estado = $array['tipo'] ?? '';
         }
 
 
@@ -70,7 +73,7 @@
         public function setCorreo($correo){     $this->correo = $correo;}
         public function setNombres($nombres){       $this->nombres = $nombres;}
         public function setPassword($password){       $this->password = $password;}
-        public function setEStado($estado) { return $this->estado = $estado; }
+        public function setEstado($estado) { return $this->estado = $estado; }
     
     }
 ?>

@@ -24,12 +24,11 @@ class LoginModel extends Model
             $user = $userObject->get($correo);
 
             if ($user) {
-
                 error_log('login: user correo ' . $user->getCorreo());
 
-                if ($this->isUserBlocked($correo)) {
-                    return json_encode(['status' => false, 'message' => 'Cuenta bloqueada.']);
-                }
+                // if ($this->isUserBlocked($correo)) {
+                //     return json_encode(['status' => false, 'message' => 'Cuenta bloqueada.']);
+                // }
 
                 if (password_verify($password, $user->getPassword())) {
                     error_log('login: success');
