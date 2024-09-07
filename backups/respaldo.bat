@@ -16,7 +16,7 @@ rem Crear el nombre del archivo con fecha y hora en formato YYYY-MM-DD_HH-MM
 set nombre=FAST_%anio%-%mes%-%dia%_%hora%-%minuto%.sql
 
 rem Ejecutar el volcado de la base de datos
-mysqldump -u admin test_fast5 > D:\xampp\htdocs\FAST-PROJECT\respaldos\%nombre%
+mysqldump -u admin test_fast5 > D:\xampp\htdocs\FAST-PROJECT\backups\%nombre%
 
 rem en caso de tener contraseña para el usuario
-rem se coloca asi mysqldump -u admin -p'mypassword' test_fast5 > D:\xampp\htdocs\FAST-PROJECT\respaldos\backup.sql
+rem se coloca asi mysqldump -u admin -p'mypassword' test_fast5 > D:\xampp\htdocs\FAST-PROJECT\backups\backup.sql
