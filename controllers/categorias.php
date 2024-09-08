@@ -159,4 +159,25 @@ class Categorias extends SessionController
             error_log('Categorias::getCategories -> Error en traer los datos - getCategories' . $e->getMessage());
         }
     }
+
+    // funcion para verificar y borrar usuarios
+    function delete()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+        // Verificar si los datos fueron recibidos correctamente
+        if (isset($data['id_categoria'])) {
+
+            $idCategoria = $data['id_categoria'];
+            $res = $this->model->delete($idCategoria);
+            if ($res) {
+                error_log('Users::delete -> Se eliminó la categoria correctamente');
+                echo json_encode(['status' => true, 'message' => "La categoria fue eliminada exitosamente!"]);
+                return true;
+            } else {
+                error_log('Categorias::delete -> No se pudo eliminar la categoria, intente nuevamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo eliminar la categoria, intente nuevamente!"]);
+                return false;
+            }
+        }
+    }
 }

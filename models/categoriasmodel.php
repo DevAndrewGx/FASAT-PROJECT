@@ -14,9 +14,9 @@
         public function __construct() {
             parent::__construct();
 
-            $id_categoria = 0;
-            $nombre_categoria = "";
-            $tipo = "";
+            $this->id_categoria = 0;
+            $this->nombre_categoria = "";
+            $this->tipo = "";
         }
 
         // funcion para crear una nueva categoria
@@ -183,6 +183,21 @@
             } catch (PDOException $e) {
                 error_log('JoinUserRelationsModel::totalRegistrosFiltrados - ' . $e->getMessage());
                 return 0;
+            }
+        }
+
+        public function delete($id_categoria) {
+            try {
+                error_log("CategoriasModel::delete -> Funcion para borrar categorias");
+                $query = $this->prepare('DELETE FROM categorias WHERE id_categoria = :id_categoria');
+                $query->execute([
+                    'id_categoria' => $id_categoria
+                ]);
+
+                return true;
+            } catch (PDOException $e) {
+                error_log('CategoriasModel::delete->PDOException' . $e);
+                return false;
             }
         }
 

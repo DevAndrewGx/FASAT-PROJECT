@@ -169,7 +169,8 @@ $(document).ready(function () {
                                                 .modal("hide");
                                             $("#formCategories")[0].reset();
                                             $("#formSubcategory")[0].reset();
-                                            dataTable.ajax.reload(null, false);
+                                            dataTableCategorias.ajax.reload(null, false);
+                                            dataTableSubcategorias.ajax.reload(null,false);
                                         }
                                     });
                                 }
@@ -208,7 +209,8 @@ $(document).ready(function () {
                                     $("#formSubcategory").closest(".modal").modal("hide");
                                     $("#formCategories")[0].reset();
                                     $("#formSubcategory")[0].reset();
-                                    dataTable.ajax.reload(null, false);
+                                    dataTableCategorias.ajax.reload(null, false);
+                                    dataTableSubcategorias.ajax.reload(null,false);
                                }
                             });
                         }else { 
@@ -230,7 +232,8 @@ $(document).ready(function () {
                                         .modal("hide");
                                     $("#formCategories")[0].reset();
                                     $("#formSubcategory")[0].reset();
-                                    dataTable.ajax.reload(null, false);
+                                    dataTableCategorias.ajax.reload(null, false);
+                                    dataTableSubcategorias.ajax.reload(null,false);
                                 }
                             });
                         }
@@ -240,60 +243,72 @@ $(document).ready(function () {
             $("#nombreCategoria").val("");
         }
     });
-
-    // Editar categoría
-    // categoriesTable.on("click", ".edit-category", function () {
-    //     const row = $(this).closest("tr");
-    //     const categoryName = row.find("td").eq(0).text();
-
-    //     $("#categoryName").val(categoryName);
-    //     row.remove();
-    // });
-
-    // Eliminar categoría
-    // categoriesTable.on("click", ".delete-category", function () {
-    //     $(this).closest("tr").remove();
-    // });
-
-    // Funcion para agregar una subcategoria
-    // $("#addSubcategory").click(function () {
-    //     const subcategoryName = $("#subcategoryName").val().trim();
-
-    //     // se hacen las respectivas validaciones de los campos
-    //     if (subcategoryName === "") {   
-    //         $("#subcategoryName").addClass("is-invalid");
-    //         $("#subcategoryNameError").show();
-
-            
-    //     } else {
-    //         $("#subcategoryName").removeClass("is-invalid");
-    //         $("#subcategoryNameError").hide();
-
-    //         // Añadir nueva subcategoría a la tabla
-    //         // const newRow = `<tr>
-    //         //                         <td>${subcategoryName}</td>
-    //         //                         <td class="text-center">
-    //         //                             <button class="btn btn-warning btn-sm edit-subcategory">Editar</button>
-    //         //                             <button class="btn btn-danger btn-sm delete-subcategory">Eliminar</button>
-    //         //                         </td>
-    //         //                     </tr>`;
-    //         // subcategoryTable.append(newRow);
-    //         // $("#subcategoryName").val("");
-    //     }
-    // });
-
-    // Editar subcategoría
-    // subcategoryTable.on("click", ".edit-subcategory", function () {
-    //     const row = $(this).closest("tr");
-    //     const subcategoryName = row.find("td").eq(0).text();
-
-    //     $("#subcategoryName").val(subcategoryName);
-    //     row.remove();
-    // });
-
-    // Eliminar subcategoría
-    // subcategoryTable.on("click", ".delete-subcategory", function () {
-    //     $(this).closest("tr").remove();
-    // });
-    // Creamos la funcion para enviar la peticion para crear una categoria
+    
+    // funcion para eliminar una categoria
+    $("#data-categorias").on("click", ".botonEliminar", function (e) {
+         e.preventDefault();
+         const id_categoria = $(this).data("id");
+         Swal.fire({
+             title: "¿Estás seguro?",
+             text: "Esta acción no se puede deshacer",
+             icon: "warning",
+             showCancelButton: true,
+             confirmButtonText: "Sí, eliminar",
+             cancelButtonText: "Cancelar",
+             allowOutsideClick: false,
+         }).then((result) => {
+             if (result.isConfirmed) {
+                 $.ajax({
+                     url: baseUrl + "categorias/delete",
+                     type: "POST",
+                     processData: false,
+                     contentType: "application/json",
+                     data: JSON.stringify({
+                        id_categoria: id_categoria,
+                     }),
+                     success: function (response) {
+                         let data = JSON.parse(response);
+                         if (data.status) {
+                             Swal.fire({
+                                 title: "Éxito",
+                                 text: data.message,
+                                 icon: "success",
+                                 allowOutsideClick: false,
+                                 confirmButtonText: "Ok",
+                             }).then((result) => {
+                                 if (result.isConfirmed) {
+                                    dataTableCategorias.ajax.reload(null, false);
+                                 }
+                             });
+                         } else {
+                             Swal.fire({
+                                 title: "Error",
+                                 text: data.message,
+                                 icon: "error",
+                                 allowOutsideClick: false,
+                                 confirmButtonText: "Ok",
+                             }).then((result) => {
+                                 if (result.isConfirmed) {
+                                     //  mantener el modal abierto para que el usuario intente de nuevo
+                                 }
+                             });
+                         }
+                     },
+                     error: function () {
+                         Swal.fire({
+                             title: "Error",
+                             text: "Hubo un problema con la solicitud.",
+                             icon: "error",
+                             allowOutsideClick: false,
+                             confirmButtonText: "Ok",
+                         }).then((result) => {
+                             if (result.isConfirmed) {
+                                 // mantener el modal abierto para que el usuario intente de nuevo
+                             }
+                         });
+                     },
+                 });
+             }
+         });
+     });
 });

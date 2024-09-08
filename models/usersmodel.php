@@ -117,7 +117,6 @@
         // funcion para obtener un usuario en especifico
         public function get($documento) {
 
-
             try {
                 // we have to use prepare because we're going to assing
                 $query = $this->prepare('SELECT * FROM usuarios WHERE documento = :documento');

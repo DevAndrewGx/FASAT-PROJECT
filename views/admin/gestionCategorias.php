@@ -139,7 +139,7 @@
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" id="addCategory">Agregar Categoría</button>
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <h5>Lista de Categorías</h5>
                                 <div class="table-responsive">
                                     <table class="table" id="categoriesTable">
@@ -154,7 +154,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -183,7 +183,7 @@
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" id="addSubcategory">Agregar Subcategoría</button>
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <h5>Lista de Subcategorías</h5>
                                 <div class="table-responsive">
                                     <table id="data-empleados" class="table datanew nowrap" style="width: 100%;" id="subcategoryTable">
@@ -194,15 +194,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- Aquí se añadirán las subcategorías dinámicamente -->
+                                       
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                            <div class="tile-footer">
+                            </div> -->
+                            <!-- <div class="tile-footer">
                                 <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
                                 <button class="btn btn-danger" type="button" data-bs-dismiss="modal"><i class='bx bxs-x-circle'></i>Cerrar</button>
-                            </div>
+                            </div> -->
                         </form>
                     </div>
                     <div class="modal-footer">
