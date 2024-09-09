@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    let isDisableButton = false;
 
 
     // creamos la variable para iniciar la datatable para mostrar los datos
@@ -81,48 +82,66 @@ $(document).ready(function () {
 
     // Funcion para agregar una nueva categoria
     $("#formCategories").submit(function (e) {
-        
         e.preventDefault();
+
+        isDisableButton = true;
+
+        // Deshabilitar el botón de envío de este formulario
+        const submitButton = $(this).find('button[type="submit"]');
+        
+        isDisableButton ? submitButton.prop("disabled", true) : submitButton.prop("disabled", false);
+        
+        // submitButton.prop("disabled", true);
+
         // evitamos el comportamiento por default
         const categoryName = $("#nombreCategoria").val().trim();
         const categoryType = $("#tipoCategoria").val();
         // realizamos las respectivas validaciones de los campos
-        if (categoryName === "" && categoryType === '') {
+        if (categoryName === "" && categoryType === "") {
             $("#nombreCategoria").addClass("is-invalid");
             $("#categoryNameError").show();
         } else {
             $("#nombreCategoria").removeClass("is-invalid");
             $("#categoryNameError").hide();
 
-            // Mostrar modal de subcategoría si el checkbox está marcado y enviar la data con el mismo funcionalmiento 
+            // Mostrar modal de subcategoría si el checkbox está marcado y enviar la data con el mismo funcionalmiento
             if ($("#hasSubcategory").is(":checked")) {
-                console.log('its checked');
+                console.log("its checked");
                 // ocultamos el modal anterior y mostramos el nuevo
                 $("#modalFormCategories").modal("hide");
                 $("#subcategoryModal").modal("show");
 
                 // Caso #2 donde le usuario crea una categoria con una subcategoria
                 $("#formSubcategory").submit(function (e) {
+
+
                     e.preventDefault();
+
+                       // Deshabilitar el botón de envío de este formulario
+                    const submitSubcategoryButton = $(this).find('button[type="submit"]');
+                    isDisableButton ? submitSubcategoryButton.prop("disabled", true) : submitSubcategoryButton.prop("disabled", false);
+
                     // se hacen las respectivas validaciones de los campos
-                    const subcategoryName = $("#subCategoriaNombre").val().trim();
+                    const subcategoryName = $("#subCategoriaNombre")
+                        .val()
+                        .trim();
                     if (subcategoryName === "") {
                         $("#subCategoriaNombre").addClass("is-invalid");
-                        $("#subcategoryNameError").show();  
+                        $("#subcategoryNameError").show();
                     } else {
                         $("#subCategoriaNombre").removeClass("is-invalid");
-                        $("#subcategoryNameError").hide();  
+                        $("#subcategoryNameError").hide();
 
                         // hacemos la petición para insertar la data
                         let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
                         const formData = new FormData(form);
 
                         // agregamos los datos de categorias para realizar la asociacíon
-                        formData.append('nombreCategoria', categoryName);
-                        formData.append("tipoCategoria", categoryType);                                          
+                        formData.append("nombreCategoria", categoryName);
+                        formData.append("tipoCategoria", categoryType);
 
                         $.ajax({
-                            url: baseUrl+"categorias/createCategory",
+                            url: baseUrl + "categorias/createCategory",
                             type: "POST",
                             processData: false,
                             contentType: false,
@@ -140,17 +159,29 @@ $(document).ready(function () {
                                         confirmButtonText: "Ok",
                                     }).then(function (result) {
                                         // Cerrar el modal y reiniciar el formulario
-                                       if (result.isConfirmed) {
-                                           // Cerrar el modal y reiniciar el formulario
-                                            $("#formCategories").closest(".modal").modal("hide");
-                                            $("#formSubcategory").closest(".modal").modal("hide");
+                                        if (result.isConfirmed) {
+                                            // Cerrar el modal y reiniciar el formulario
+                                            $("#formCategories")
+                                                .closest(".modal")
+                                                .modal("hide");
+                                            $("#formSubcategory")
+                                                .closest(".modal")
+                                                .modal("hide");
                                             $("#formCategories")[0].reset();
                                             $("#formSubcategory")[0].reset();
-                                            dataTableCategorias.ajax.reload(null, false);
-                                            dataTableSubcategorias.ajax.reload(null,false);
-                                       }
+                                            dataTableCategorias.ajax.reload(
+                                                null,
+                                                false
+                                            );
+                                            dataTableSubcategorias.ajax.reload(
+                                                null,
+                                                false
+                                            );
+                                            // habilitamos el boton nuevamente cuando el usuario acepta
+                                            isDisableButton = false;
+                                        }
                                     });
-                                }else { 
+                                } else {
                                     Swal.fire({
                                         icon: "error",
                                         title: "No se pudo guardar la categoria",
@@ -161,7 +192,7 @@ $(document).ready(function () {
                                     }).then(function (result) {
                                         if (result.isConfirmed) {
                                             // Cerrar el modal y reiniciar el formulario
-                                            $("#formCategories")    
+                                            $("#formCategories")
                                                 .closest(".modal")
                                                 .modal("hide");
                                             $("#formSubcategory")
@@ -169,17 +200,25 @@ $(document).ready(function () {
                                                 .modal("hide");
                                             $("#formCategories")[0].reset();
                                             $("#formSubcategory")[0].reset();
-                                            dataTableCategorias.ajax.reload(null, false);
-                                            dataTableSubcategorias.ajax.reload(null,false);
+                                            dataTableCategorias.ajax.reload(
+                                                null,
+                                                false
+                                            );
+                                            dataTableSubcategorias.ajax.reload(
+                                                null,
+                                                false
+                                            );
+
+                                            // habilitamos el boton nuevamente cuando el usuario acepta
+                                            isDisableButton = false;
                                         }
                                     });
                                 }
                             },
                         });
                     }
-                })
-
-            }else {
+                });
+            } else {
                 // Caso #1 donde le usuario solo crea categoria pero sin subcategoria
                 let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
                 console.log(form);
@@ -203,17 +242,30 @@ $(document).ready(function () {
                                 allowOutsideClick: false,
                                 confirmButtonText: "Ok",
                             }).then(function (result) {
-                               if(result.isConfirmed) {
+                                if (result.isConfirmed) {
                                     // Cerrar el modal y reiniciar el formulario
-                                    $("#formCategories").closest(".modal").modal("hide");
-                                    $("#formSubcategory").closest(".modal").modal("hide");
+                                    $("#formCategories")
+                                        .closest(".modal")
+                                        .modal("hide");
+                                    $("#formSubcategory")
+                                        .closest(".modal")
+                                        .modal("hide");
                                     $("#formCategories")[0].reset();
                                     $("#formSubcategory")[0].reset();
-                                    dataTableCategorias.ajax.reload(null, false);
-                                    dataTableSubcategorias.ajax.reload(null,false);
-                               }
+                                    dataTableCategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                    dataTableSubcategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+
+                                    // habilitamos el boton nuevamente cuando el usuario acepta
+                                    isDisableButton = false;
+                                }
                             });
-                        }else { 
+                        } else {
                             Swal.fire({
                                 icon: "error",
                                 title: "No se pudo guardar la categoria",
@@ -232,8 +284,14 @@ $(document).ready(function () {
                                         .modal("hide");
                                     $("#formCategories")[0].reset();
                                     $("#formSubcategory")[0].reset();
-                                    dataTableCategorias.ajax.reload(null, false);
-                                    dataTableSubcategorias.ajax.reload(null,false);
+                                    dataTableCategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                    dataTableSubcategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
                                 }
                             });
                         }
@@ -246,69 +304,77 @@ $(document).ready(function () {
     
     // funcion para eliminar una categoria
     $("#data-categorias").on("click", ".botonEliminar", function (e) {
-         e.preventDefault();
-         const id_categoria = $(this).data("id");
-         Swal.fire({
-             title: "¿Estás seguro?",
-             text: "Esta acción no se puede deshacer",
-             icon: "warning",
-             showCancelButton: true,
-             confirmButtonText: "Sí, eliminar",
-             cancelButtonText: "Cancelar",
-             allowOutsideClick: false,
-         }).then((result) => {
-             if (result.isConfirmed) {
-                 $.ajax({
-                     url: baseUrl + "categorias/delete",
-                     type: "POST",
-                     processData: false,
-                     contentType: "application/json",
-                     data: JSON.stringify({
+        e.preventDefault();
+        $(this).prop("disabled", true); // Deshabilitar el botón para que el usuario no di click como
+        const id_categoria = $(this).data("id");
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: baseUrl + "categorias/delete",
+                    type: "POST",
+                    processData: false,
+                    contentType: "application/json",
+                    data: JSON.stringify({
                         id_categoria: id_categoria,
-                     }),
-                     success: function (response) {
-                         let data = JSON.parse(response);
-                         if (data.status) {
-                             Swal.fire({
-                                 title: "Éxito",
-                                 text: data.message,
-                                 icon: "success",
-                                 allowOutsideClick: false,
-                                 confirmButtonText: "Ok",
-                             }).then((result) => {
-                                 if (result.isConfirmed) {
-                                    dataTableCategorias.ajax.reload(null, false);
-                                 }
-                             });
-                         } else {
-                             Swal.fire({
-                                 title: "Error",
-                                 text: data.message,
-                                 icon: "error",
-                                 allowOutsideClick: false,
-                                 confirmButtonText: "Ok",
-                             }).then((result) => {
-                                 if (result.isConfirmed) {
-                                     //  mantener el modal abierto para que el usuario intente de nuevo
-                                 }
-                             });
-                         }
-                     },
-                     error: function () {
-                         Swal.fire({
-                             title: "Error",
-                             text: "Hubo un problema con la solicitud.",
-                             icon: "error",
-                             allowOutsideClick: false,
-                             confirmButtonText: "Ok",
-                         }).then((result) => {
-                             if (result.isConfirmed) {
-                                 // mantener el modal abierto para que el usuario intente de nuevo
-                             }
-                         });
-                     },
-                 });
-             }
-         });
-     });
+                    }),
+                    success: function (response) {
+                        let data = JSON.parse(response);
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTableCategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                    dataTableSubcategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    //  mantener el modal abierto para que el usuario intente de nuevo
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // mantener el modal abierto para que el usuario intente de nuevo
+                            }
+                        });
+                    },
+                });
+            }
+        });
+    });
 });

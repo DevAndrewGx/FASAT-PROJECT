@@ -65,7 +65,7 @@
                 // saliimos de la funcion
                 return true;
             } catch (PDOException $e) {
-                error_log('CategoriasModel::save->PDOException' . $e);
+                error_log('CategoriasModel::saveSubCategory->PDOException' . $e);
                 // salimos de la funcion
                 return false;
             }
@@ -105,6 +105,29 @@
                 return $items;
             }catch(PDOException $e) {
                 error_log('CategoriasModel::getAll -> SQL error '.$e);
+            }
+        }
+
+        public function get($nombreCategoria) {
+
+            try {
+                // we have to use prepare because we're going to assing
+                $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :nombre_categoria LIMIT 1');
+                $query->execute([
+                    'nombre_categoria'=> $nombreCategoria
+                ]);
+                // Como solo queremos obtener un valor, no hay necesidad de tener un while
+                $category = $query->fetch(PDO::FETCH_ASSOC);
+                
+                // en este caso no hay necesidad de crear un objeto userModel, solo podemos llamar los metodos del mismo con objeto con this
+                $this->setIdCategoria($category['id_categoria']);
+                $this->setNombreCategoria($category['nombre_categoria']);
+                $this->setTipoCategoria($category['tipo_categoria']);
+                
+                //retornamos this porque es el mismo objeto que ya contiene la informacion
+                return $category;
+            } catch (PDOException $e) {
+                error_log('USERMODEL::getId->PDOException' . $e);
             }
         }
 
