@@ -61,7 +61,7 @@ class Categorias extends SessionController
             if ($categoriaObj->saveCategory()) {
                 $idCategoria = $categoriaObj->getIdCategoria();
                 $categoriaObj->setIdCategoria($idCategoria);
-                error_log('Categorias::createCategory -> Se guardó un producto correctamente dentro de la bd');
+                error_log('Categorias::createCategory -> Se guardo la categoria exitosamente');
                 echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente! CASO 1"]);
                 return;
             }
@@ -69,17 +69,26 @@ class Categorias extends SessionController
 
             // error_log('Existe la categoria? '. $categoriaObj->existCategory($this->getPost("nombreCategoria")));
             // error_log('La subcategoria a insertar es: '. $this->existPOST(['subCategoriaNombre']));
-            $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
-            // obtenemos los datos de la categoria con get para asginarlo al objeto y asi poder insertar la data correctamente
-            $categoriaObj->get($this->getPost('nombreCategoria'));
-            // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
-            if ($categoriaObj->saveSubCategory()) {
-                echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
-                return;
-            } else {
-                echo json_encode(['status' => true, 'message' => "No se guardo la data correctamente en subcategorias"]);
-                return;
+            if(!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
+                return; 
+            }else {
+                $categoriaObj->get($this->getPost('nombreCategoria'));
+
+                $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
+                // obtenemos los datos de la categoria con get para asginarlo al objeto y asi poder insertar la data correctamente
+
+                // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
+                if ($categoriaObj->saveSubCategory()) {
+                    error_log('Categorias::createCategory -> Se guardo la categoria y subcategoria exitosamente');
+                    echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
+                    return;
+                } else {
+                    echo json_encode(['status' => true, 'message' => "No se guardo la data correctamente en subcategorias"]);
+                    return;
+                }
             }
+            
+
         }else if(!$categoriaObj->existCategory($this->getPost("nombreCategoria")) &&  $this->existPOST(['subCategoriaNombre'])){
             // Si no existe la categoria aun, la crea con la subcategoria
             if ($categoriaObj->saveCategory()) {

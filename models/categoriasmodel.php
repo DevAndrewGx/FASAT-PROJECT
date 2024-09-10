@@ -61,7 +61,6 @@
                     'nombre' => $this->nombre_subcategoria,
                     'id' => $this->id_categoria,
                 ]);
-
                 // saliimos de la funcion
                 return true;
             } catch (PDOException $e) {
@@ -123,7 +122,7 @@
                 $this->setIdCategoria($category['id_categoria']);
                 $this->setNombreCategoria($category['nombre_categoria']);
                 $this->setTipoCategoria($category['tipo_categoria']);
-                
+
                 //retornamos this porque es el mismo objeto que ya contiene la informacion
                 return $category;
             } catch (PDOException $e) {

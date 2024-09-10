@@ -43,7 +43,7 @@
                 // si no existe el parametro
                 if(!isset($_POST[$param])) {
                     error_log('Controller::existPOST -> No existe el parametro '.$param);
-                    return;
+                    return false;
                 }
             }
 

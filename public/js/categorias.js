@@ -13,7 +13,8 @@ $(document).ready(function () {
             lengthMenu: "Mostrar _MENU_ Registros",
             zeroRecords: "No se encontraron resultados",
             info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-            infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
+            infoEmpty:
+                "Mostrando registros del 0 al 0 de un total de 0 registros",
             infoFiltered: "(filtrado de un total de _MAX_ registros)",
             search: "Buscar:",
             processing: "Procesando...",
@@ -22,6 +23,24 @@ $(document).ready(function () {
             url: baseUrl + "categorias/getCategories",
             type: "GET",
             dataType: "json",
+            dataSrc: function (json) {
+                // Crear un nuevo array para almacenar categorías únicas
+                let uniqueCategories = [];
+
+                // Usar un objeto temporal para verificar duplicados
+                let temp = {};
+
+                json.data.forEach(function (item) {
+                    // Usar el nombre de la categoría como clave para verificar duplicados
+                    if (!temp[item.nombre_categoria]) {
+                        temp[item.nombre_categoria] = true;
+                        uniqueCategories.push(item);
+                    }
+                });
+
+                // Devolver las categorías únicas
+                return uniqueCategories;
+            },
         },
         columns: [
             { data: "checkmarks" },
@@ -36,6 +55,7 @@ $(document).ready(function () {
             },
         ],
     });
+
 
    let dataTableSubcategorias = $("#data-categorias-subcategorias").DataTable({
        responsive: true,
