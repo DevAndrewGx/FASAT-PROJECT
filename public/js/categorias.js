@@ -55,8 +55,6 @@ $(document).ready(function () {
             },
         ],
     });
-
-
    let dataTableSubcategorias = $("#data-categorias-subcategorias").DataTable({
        responsive: true,
        processing: true,

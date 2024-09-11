@@ -55,6 +55,7 @@ class Categorias extends SessionController
         // validamos si la consulta fue correcta
 
 
+
         // Si no existe la subcategoria insertamosla categoria sin ningun paso adicional mas
         if(!$categoriaObj->existCategory($this->getPost('nombreCategoria')) && !$this->existPOST(['subCategoriaNombre'])) {
             error_log('Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria');

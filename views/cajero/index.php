@@ -154,8 +154,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        $(document).ready(function () {
-            $('.openRestaurantInfo').on('click', function () {
+        $(document).ready(function() {
+            $('.openRestaurantInfo').on('click', function() {
                 const mesa = $(this).data('mesa');
                 const precio = $(this).data('precio');
                 const platos = $(this).data('platos');
@@ -167,7 +167,7 @@
                 $('#continueToInvoice').data('bebidas', bebidas);
             });
 
-            $('#continueToInvoice').on('click', function () {
+            $('#continueToInvoice').on('click', function() {
                 const mesa = $(this).data('mesa');
                 const precio = $(this).data('precio');
                 const platos = $(this).data('platos');
@@ -179,7 +179,7 @@
                 $('#invoiceModal').modal('show');
             });
 
-            $('#generateInvoice').on('click', function () {
+            $('#generateInvoice').on('click', function() {
                 Swal.fire({
                     title: 'Factura Generada',
                     text: 'La factura ha sido generada con éxito.',
@@ -187,6 +187,7 @@
                     confirmButtonText: 'Cerrar'
                 }).then(() => {
                     $('#invoiceModal').modal('hide');
+                    $('#restaurantInfoModal').modal('hide');
                 });
             });
         });

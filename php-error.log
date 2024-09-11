@@ -783,3 +783,356 @@ LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
 [10-Sep-2024 05:02:46 Europe/Berlin] Categorias::construct -> Controlador categorias
 [10-Sep-2024 05:02:46 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
 [10-Sep-2024 05:02:46 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
+[11-Sep-2024 03:52:56 Europe/Berlin] Testing errors
+[11-Sep-2024 03:52:57 Europe/Berlin] APP::construct->No hay controlador especificado
+[11-Sep-2024 03:52:57 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[11-Sep-2024 03:53:01 Europe/Berlin] Testing errors
+[11-Sep-2024 03:53:01 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 03:53:01 Europe/Berlin] Testing errors
+[11-Sep-2024 03:53:02 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 03:53:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[11-Sep-2024 03:53:02 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 03:53:02 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 03:53:02 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 03:53:02 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[11-Sep-2024 03:53:07 Europe/Berlin] Testing errors
+[11-Sep-2024 03:53:07 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 03:53:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[11-Sep-2024 03:53:07 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 03:53:07 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 03:53:07 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 03:53:07 Europe/Berlin] loginByCorreo: inicio
+[11-Sep-2024 03:53:07 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[11-Sep-2024 03:53:07 Europe/Berlin] login: success
+[11-Sep-2024 03:53:07 Europe/Berlin] This is the state: Activo
+[11-Sep-2024 03:53:07 Europe/Berlin] Login::authenticate() passed
+[11-Sep-2024 03:53:07 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[11-Sep-2024 03:53:07 Europe/Berlin] Testing errors
+[11-Sep-2024 03:53:07 Europe/Berlin] Testing errors
+[11-Sep-2024 03:53:07 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 03:58:08 Europe/Berlin] Testing errors
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[11-Sep-2024 03:58:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 03:58:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 03:58:09 Europe/Berlin] Producto::construct -> Controlador producto
+[11-Sep-2024 03:58:09 Europe/Berlin] Producto::render -> Carga la pagina principal 
+[11-Sep-2024 03:58:09 Europe/Berlin] Testing errors
+[11-Sep-2024 03:58:09 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:28:46 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:46 Europe/Berlin] APP::construct->No hay controlador especificado
+[11-Sep-2024 04:28:46 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[11-Sep-2024 04:28:47 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:47 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:28:48 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:48 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:28:48 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:28:48 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:28:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[11-Sep-2024 04:28:48 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:28:48 Europe/Berlin] SessionController::validateSession() => sitio público, redirige al main de cada rol
+[11-Sep-2024 04:28:48 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:28:48 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[11-Sep-2024 04:28:48 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:49 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:49 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:28:50 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:28:51 Europe/Berlin] Users::construct -> controlador usuarios
+[11-Sep-2024 04:28:51 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[11-Sep-2024 04:28:51 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:51 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:28:51 Europe/Berlin] Testing errors
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726021731406, url => users
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726021731406, url => users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[11-Sep-2024 04:28:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:28:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:28:51 Europe/Berlin] Users::construct -> controlador usuarios
+[11-Sep-2024 04:29:35 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/createUser, url => users
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/createUser, url => users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[11-Sep-2024 04:29:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:29:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:29:35 Europe/Berlin] Users::construct -> controlador usuarios
+[11-Sep-2024 04:29:35 Europe/Berlin] Users::createUser -> Funcion para crear un nuevo usuario
+[11-Sep-2024 04:29:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 57
+[11-Sep-2024 04:29:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, bool given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[11-Sep-2024 04:29:35 Europe/Berlin] Users::createUser -> Es posible crear un nuevo usuario
+[11-Sep-2024 04:29:36 Europe/Berlin] FotoModel::save -> lastId -> 113
+[11-Sep-2024 04:29:36 Europe/Berlin] Users::createUser -> Se guardó la foto correctamente
+[11-Sep-2024 04:29:36 Europe/Berlin] Users::createUser -> idFoto: 113
+[11-Sep-2024 04:29:36 Europe/Berlin] Users::createUser -> Se guardó el usuario correctamente
+[11-Sep-2024 04:29:37 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=2&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726021731407, url => users
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=2&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726021731407, url => users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[11-Sep-2024 04:29:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:29:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:29:37 Europe/Berlin] Users::construct -> controlador usuarios
+[11-Sep-2024 04:29:41 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:29:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:29:41 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:29:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:29:41 Europe/Berlin] sessionController::isPublic(): currentURL => logout
+[11-Sep-2024 04:29:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site logout
+[11-Sep-2024 04:29:41 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[11-Sep-2024 04:29:41 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:41 Europe/Berlin] APP::construct->No hay controlador especificado
+[11-Sep-2024 04:29:41 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[11-Sep-2024 04:29:42 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:42 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:29:43 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:43 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:29:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[11-Sep-2024 04:29:43 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:29:43 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:29:43 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:29:43 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[11-Sep-2024 04:29:50 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:50 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:29:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[11-Sep-2024 04:29:50 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:29:50 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:29:50 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:29:50 Europe/Berlin] loginByCorreo: inicio
+[11-Sep-2024 04:29:50 Europe/Berlin] login: user correo cajero@x.com
+[11-Sep-2024 04:29:50 Europe/Berlin] login: success
+[11-Sep-2024 04:29:50 Europe/Berlin] This is the state: Activo
+[11-Sep-2024 04:29:50 Europe/Berlin] Login::authenticate() passed
+[11-Sep-2024 04:29:50 Europe/Berlin] sessionController::authorizeAccess(): role: Cajero
+[11-Sep-2024 04:29:50 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:50 Europe/Berlin] Testing errors
+[11-Sep-2024 04:29:50 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:30:00 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:30:00 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[11-Sep-2024 04:30:00 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[11-Sep-2024 04:30:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:30:00 Europe/Berlin] sessionController::isPublic(): currentURL => logout
+[11-Sep-2024 04:30:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:30:00 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[11-Sep-2024 04:30:00 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[11-Sep-2024 04:30:00 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[11-Sep-2024 04:30:02 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:02 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:30:02 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[11-Sep-2024 04:30:02 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:30:02 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:30:02 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:30:02 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[11-Sep-2024 04:30:21 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:21 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:30:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[11-Sep-2024 04:30:21 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:30:21 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:30:21 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:30:21 Europe/Berlin] loginByCorreo: inicio
+[11-Sep-2024 04:30:21 Europe/Berlin] login: user correo cajero@x.com
+[11-Sep-2024 04:30:21 Europe/Berlin] login: success
+[11-Sep-2024 04:30:21 Europe/Berlin] This is the state: Activo
+[11-Sep-2024 04:30:21 Europe/Berlin] Login::authenticate() passed
+[11-Sep-2024 04:30:21 Europe/Berlin] sessionController::authorizeAccess(): role: Cajero
+[11-Sep-2024 04:30:21 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:21 Europe/Berlin] Testing errors
+[11-Sep-2024 04:30:21 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:31:43 Europe/Berlin] Testing errors
+[11-Sep-2024 04:31:43 Europe/Berlin] Testing errors
+[11-Sep-2024 04:31:43 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:34:01 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:01 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[11-Sep-2024 04:34:01 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[11-Sep-2024 04:34:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:34:01 Europe/Berlin] sessionController::isPublic(): currentURL => logout
+[11-Sep-2024 04:34:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::isAuthorized -> Role Cajero isn't validate for this site logout
+[11-Sep-2024 04:34:01 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[11-Sep-2024 04:34:01 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:01 Europe/Berlin] APP::construct->No hay controlador especificado
+[11-Sep-2024 04:34:01 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[11-Sep-2024 04:34:03 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:03 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:34:09 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:09 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[11-Sep-2024 04:34:09 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:34:09 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:34:09 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:34:09 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[11-Sep-2024 04:34:10 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:10 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[11-Sep-2024 04:34:10 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[11-Sep-2024 04:34:10 Europe/Berlin] SessionController::validateSession() public page
+[11-Sep-2024 04:34:10 Europe/Berlin] Login::construct -> inicio de login
+[11-Sep-2024 04:34:10 Europe/Berlin] loginByCorreo: inicio
+[11-Sep-2024 04:34:10 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[11-Sep-2024 04:34:10 Europe/Berlin] login: success
+[11-Sep-2024 04:34:10 Europe/Berlin] This is the state: Activo
+[11-Sep-2024 04:34:10 Europe/Berlin] Login::authenticate() passed
+[11-Sep-2024 04:34:10 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[11-Sep-2024 04:34:10 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:11 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:11 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:34:13 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[11-Sep-2024 04:34:13 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:34:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:13 Europe/Berlin] Producto::construct -> Controlador producto
+[11-Sep-2024 04:34:13 Europe/Berlin] Producto::render -> Carga la pagina principal 
+[11-Sep-2024 04:34:13 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:13 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:34:15 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:34:15 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:15 Europe/Berlin] Categorias::construct -> Controlador categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[11-Sep-2024 04:34:15 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:15 Europe/Berlin] Errores::construct -> inicio de errores
+[11-Sep-2024 04:34:16 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726022055896, url => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726022055896, url => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:16 Europe/Berlin] Testing errors
+[11-Sep-2024 04:34:16 Europe/Berlin] Categorias::construct -> Controlador categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[11-Sep-2024 04:34:16 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::validateSession()
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726022055897, url => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726022055897, url => categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[11-Sep-2024 04:34:16 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[11-Sep-2024 04:34:16 Europe/Berlin] Categorias::construct -> Controlador categorias
+[11-Sep-2024 04:34:16 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[11-Sep-2024 04:34:16 Europe/Berlin] Query....SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC

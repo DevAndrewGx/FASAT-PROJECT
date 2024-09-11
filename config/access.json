@@ -59,12 +59,19 @@
             "access": "private", 
             "role": "Administrador",
             "description": "Admin data sitio"
+        },
+        {
+            "site": "cajero", 
+            "access": "private", 
+            "role": "cajero",
+            "description": "Cajero data sitio"
         }
     ],
 
     "default-sites": {
         "user": "dashboard",
         "admin": "admin",
-        "mesero": "mesero"
+        "mesero": "mesero",
+        "cajero": "cajero"
     }
 }

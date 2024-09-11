@@ -213,6 +213,9 @@ class SessionController extends Controller
             case 'Mesero':
                 $this->redirect($this->defaultSites['mesero'], []);
                 break;
+            case 'Cajero':
+                $this->redirect($this->defaultSites['cajero'], []);
+                break;
             default:
         }
     }
