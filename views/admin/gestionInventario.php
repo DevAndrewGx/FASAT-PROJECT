@@ -331,6 +331,7 @@ $categories = $this->d['categories'];
                             <div class="form-group col-lg-6 col-md-6">
                                 <label for="categoria" class="col-form-label">Categoría</label>
                                 <select name="categoria" class="form-control select" id="categoria">
+                                    <option value="#">Selecciona una categoria</option>
                                     <?php
                                     foreach ($categories as $cat) {
                                     ?>

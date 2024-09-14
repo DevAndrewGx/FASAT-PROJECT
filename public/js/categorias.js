@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    const submitButton = $(this).find('button[type="submit"]');
     let isDisableButton = false;
 
 
@@ -224,9 +225,6 @@ $(document).ready(function () {
                                                 null,
                                                 false
                                             );
-
-                                            // habilitamos el boton nuevamente cuando el usuario acepta
-                                            isDisableButton = false;
                                         }
                                     });
                                 }
@@ -473,4 +471,11 @@ $(document).ready(function () {
             }
         });
     });
+
+    // Funcion para habilitar nuevamente el boton
+    $("#modalFormCategories").on("hidden.bs.modal", function () {
+        // Habilita el botón al cerrar el modal
+        $(submitButton).prop("disable", false);
+    });
+
 });

@@ -81,7 +81,7 @@
 
             try { 
                 // ejecutamos la consulta con query porque no se estan enviando parametros
-                $query = $this->query("SELECT * FROM categorias c INNER JOIN sub_categorias s ON c.id_categoria = s.id_categoria");
+                $query = $this->query("SELECT * FROM categorias");
                 
                   // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
                 // FETCH_ASSOC retorna un objeto de clave y valor

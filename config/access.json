@@ -65,6 +65,12 @@
             "access": "private", 
             "role": "cajero",
             "description": "Cajero data sitio"
+        },
+        {
+            "site": "cheff", 
+            "access": "private", 
+            "role": "cheff",
+            "description": "Cajero data sitio"
         }
     ],
 
@@ -72,6 +78,7 @@
         "user": "dashboard",
         "admin": "admin",
         "mesero": "mesero",
-        "cajero": "cajero"
+        "cajero": "cajero",
+        "cheff": "cheff"
     }
 }
