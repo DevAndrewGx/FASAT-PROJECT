@@ -143,20 +143,20 @@ class Categorias extends SessionController
             $totalRecords = $categoriaObj->totalRegistros();
 
             $arrayDataCategories = json_decode(json_encode($categoriasData, JSON_UNESCAPED_UNICODE), true);
-
+            // print_r($arrayDataCategories);
             // error_log("Array: ".print_r($categoriasData));
 
             // Iterar sobre el arreglo y agregar 'options' a cada usuario
             for ($i = 0; $i < count($arrayDataCategories); $i++) {
                 $arrayDataCategories[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                 $arrayDataCategories[$i]['options'] = '
-                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" >
+                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" href="#">
+                <a class="me-3 botonActualizar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
-                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '" href="#">
+                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                 </a>
             ';
@@ -198,4 +198,27 @@ class Categorias extends SessionController
             }
         }
     }
+
+
+    // funcion para eliminar una subcategoria de una categoria ya existente
+    function deleteSubCategoria()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+        // Verificar si los datos fueron recibidos correctamente
+        if (isset($data['idSubCategoria'])) {
+
+            $idSubCategoria = $data['idSubCategoria'];
+            $res = $this->model->deleteSubCategoria($idSubCategoria);
+            if ($res) {
+                error_log('Users::deleteSubCategoria -> Se eliminó una subCategoria correctamente');
+                echo json_encode(['status' => true, 'message' => "La subcategoria fue eliminada exitosamente!"]);
+                return true;
+            } else {
+                error_log('Categorias::deleteSubCategoria -> No se pudo eliminar la subcategoria, intente nuevamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo eliminar la subcategoria, intente nuevamente!"]);
+                return false;
+            }
+        }
+    }
+    
 }

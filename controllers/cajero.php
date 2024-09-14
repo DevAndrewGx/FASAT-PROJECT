@@ -11,7 +11,6 @@ class Cajero extends Controller
     function render()
     {
         // $stats = $this->getStatistics();
-
         $this->view->render('cajero/index', []);
     }
 }

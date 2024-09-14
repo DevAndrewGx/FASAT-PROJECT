@@ -102,12 +102,10 @@ $(document).ready(function () {
     $("#formCategories").submit(function (e) {
         e.preventDefault();
 
-        isDisableButton = true;
 
         // Deshabilitar el botón de envío de este formulario
         const submitButton = $(this).find('button[type="submit"]');
-        
-        isDisableButton ? submitButton.prop("disabled", true) : submitButton.prop("disabled", false);
+        submitButton.prop("disabled", true);
         
         // submitButton.prop("disabled", true);
 
@@ -137,7 +135,7 @@ $(document).ready(function () {
 
                        // Deshabilitar el botón de envío de este formulario
                     const submitSubcategoryButton = $(this).find('button[type="submit"]');
-                    isDisableButton ? submitSubcategoryButton.prop("disabled", true) : submitSubcategoryButton.prop("disabled", false);
+                    submitSubcategoryButton.prop("disabled", true);
 
                     // se hacen las respectivas validaciones de los campos
                     const subcategoryName = $("#subCategoriaNombre")
@@ -195,8 +193,8 @@ $(document).ready(function () {
                                                 null,
                                                 false
                                             );
-                                            // habilitamos el boton nuevamente cuando el usuario acepta
-                                            isDisableButton = false;
+                                            submitSubcategoryButton.prop("disabled", false);
+                                            submitButton.prop("disabled", false);
                                         }
                                     });
                                 } else {
@@ -278,9 +276,9 @@ $(document).ready(function () {
                                         null,
                                         false
                                     );
-
+                                    console.log('El boton se habilita nuevamente');
                                     // habilitamos el boton nuevamente cuando el usuario acepta
-                                    isDisableButton = false;
+                                    submitButton.prop("disabled", false);
                                 }
                             });
                         } else {
@@ -316,7 +314,6 @@ $(document).ready(function () {
                     },
                 });
             }
-            $("#nombreCategoria").val("");
         }
     });
     
@@ -342,6 +339,87 @@ $(document).ready(function () {
                     contentType: "application/json",
                     data: JSON.stringify({
                         id_categoria: id_categoria,
+                    }),
+                    success: function (response) {
+                        let data = JSON.parse(response);
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTableCategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                    dataTableSubcategorias.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    //  mantener el modal abierto para que el usuario intente de nuevo
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // mantener el modal abierto para que el usuario intente de nuevo
+                            }
+                        });
+                    },
+                });
+            }
+        });
+    });
+
+
+    // funcion para eliminar una subcategorias
+    $("#data-categorias-subcategorias").on("click", ".botonEliminar", function(e) {
+        console.log('its inside');
+        // cancelamos el evento por default
+        e.preventDefault();
+        // creamos la variable para almacenar el id que viene del fomulario
+        const idSubCategoria = $(this).data("id-s");
+        console.log(idSubCategoria);
+        // creamos la alerta para la confirmación del usuario
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: baseUrl + "categorias/deleteSubCategoria",
+                    type: "POST",
+                    processData: false,
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        idSubCategoria: idSubCategoria,
                     }),
                     success: function (response) {
                         let data = JSON.parse(response);

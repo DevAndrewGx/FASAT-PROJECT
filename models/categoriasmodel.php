@@ -6,6 +6,7 @@
         private $id_categoria;
         private $nombre_categoria;
         // atributos adicionales para las subcategorias
+        private $id_sub_categoria;
         private $nombre_subcategoria;
         private $tipo;
 
@@ -136,7 +137,7 @@
             $items = [];
 
             try {
-                $sql = "SELECT c.*, s.nombre_subcategoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria";  
+                $sql = "SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria";  
                 error_log('ejecucion de la query cargarCategorias'.$sql);
                 if (!empty($busqueda)) {
                     $searchValue = $busqueda;
@@ -164,6 +165,7 @@
                     $item->setIdCategoria($p['id_categoria']); 
                     $item->setNombreCategoria($p['nombre_categoria']);
                     $item->setNombreSubCategoria($p['nombre_subcategoria']);
+                    $item->setIdSubCategoria($p['id_sub_categoria']);
                     $item->setTipoCategoria($p['tipo_categoria']);  
 
                     array_push($items, $item);
@@ -223,12 +225,28 @@
             }
         }
 
+         public function deleteSubCategoria($idSubCategoria) {
+            try {
+                error_log("CategoriasModel::delete -> Funcion para borrar las subcategorias asociadas a una categoria");
+                $query = $this->prepare('DELETE FROM sub_categorias WHERE id_sub_categoria = :id');
+                $query->execute([
+                    'id' => $idSubCategoria
+                ]);
+
+                return true;
+            } catch (PDOException $e) {
+                error_log('CategoriasModel::delete->PDOException' . $e);
+                return false;
+            }
+        }
+
         public function jsonSerialize()
         {
             return [
                 'id_categoria' => $this->id_categoria,
                 'nombre_categoria' => $this->nombre_categoria,
                 'nombre_subcategoria' => $this->nombre_subcategoria,
+                'id_sub_categoria' => $this->id_sub_categoria,
                 'tipo_categoria' => $this->tipo
             ];
         }
@@ -263,11 +281,13 @@
         }
         public function getIdCategoria() { return $this->id_categoria;}
         public function getNombreCategoria() { return $this->nombre_categoria;}
+        public function getIdSubCategoria() { return $this->id_sub_categoria;}
         public function getNombreSubCategoria() { return $this->nombre_subcategoria;}
         public function getTipoCategoria() { return $this->tipo;}
         public function setIdCategoria($id) { return $this->id_categoria = $id;}
         public function setNombreCategoria($nombre) { $this->nombre_categoria = $nombre;}
         public function setTipoCategoria($tipo) { $this->tipo = $tipo;}
+        public function setIdSubCategoria($id) {$this->id_sub_categoria = $id;}
         public function setNombreSubCategoria($nombre) { return $this->nombre_subcategoria = $nombre;}
     }
 ?>
