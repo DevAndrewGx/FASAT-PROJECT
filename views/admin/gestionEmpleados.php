@@ -47,6 +47,12 @@
                         </nav>
 
                     </div>
+                        <div class="pdf">
+                        <a href="pdf/usuarios.php" onclick="" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="plussvg"></a>
+                    </div>
+                    <div class="excel">
+                        <a href="vendor/usuarios.php" onclick="" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="plussvg"></a>
+                    </div>
                     <div class="page-btn">
                         <a href="#" onclick="openModalCreateUser();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
                             Empleado</a>
