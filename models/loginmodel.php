@@ -109,7 +109,7 @@ class LoginModel extends Model
         $query->execute(['correo' => $correo]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        if ($result && $result['intentos_fallidos'] >= 3) {
+        if ($result && $result['intentos_fallidos'] >= 10) {
             $query = $this->prepare('UPDATE usuarios SET id_estado = 2 WHERE correo = :correo');
             $query->execute(['correo' => $correo]);
         }
