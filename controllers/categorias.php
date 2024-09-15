@@ -79,12 +79,25 @@ class Categorias extends SessionController
                 // obtenemos los datos de la categoria con get para asginarlo al objeto y asi poder insertar la data correctamente
 
                 // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
+                if(!$categoriaObj->existSubCategory($this->getPost('subCategoriaNombre'))) {
+                    if ($categoriaObj->saveSubCategory()) {
+                        error_log('Categorias::createCategory -> Se guardo la categoria y subcategoria exitosamente');
+                        echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
+                        return;
+                    } else {
+                        echo json_encode(['status' => false, 'message' => "No se pudo guardar la data correctamente, intentelo nuevamente"]);
+                        return;
+                    }
+                }else {
+                    echo json_encode(['status' => false, 'message' => "La subcategoria ya existe en el sistema, intentelo nuevamente"]);
+                    return;
+                }
                 if ($categoriaObj->saveSubCategory()) {
                     error_log('Categorias::createCategory -> Se guardo la categoria y subcategoria exitosamente');
                     echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
                     return;
                 } else {
-                    echo json_encode(['status' => true, 'message' => "No se guardo la data correctamente en subcategorias"]);
+                    echo json_encode(['status' => false, 'message' => "La subcategoria ya existe, intentelo nuevamente"]);
                     return;
                 }
             }
@@ -220,5 +233,10 @@ class Categorias extends SessionController
             }
         }
     }
+
+    // function para traer la data de las subcategorias asociadasa a una categoria
+    
+    
+    
     
 }

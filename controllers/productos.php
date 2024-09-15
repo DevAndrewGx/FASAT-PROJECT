@@ -19,8 +19,10 @@ class Productos extends SessionController
         // creamos un objeto de categorias para traer las categorias
         $categoriaObj = new CategoriasModel();
         $categories = $categoriaObj->getAll();
-        error_log('Producto::render -> Carga la pagina principal ');
-        $this->view->render('admin/gestionInventario', ['categories' => $categories]);
+        $subCategories = $categoriaObj->getSubCategoriesByCategory($this->getPost('categoria'));
+        error_log($this->getPost('categoria'));
+        error_log('Producto::render -> Carga la pagina principal');
+        $this->view->render('admin/gestionInventario', ['categories' => $categories, 'subcategories' => $subCategories]);
     }
 
     // creamos la funcion que nos permitira crear nuevos productos
@@ -76,4 +78,25 @@ class Productos extends SessionController
             return;
         }
     }
+
+    function getSubcategoriesByCategory()
+    {
+        error_log('its here');
+        // Verificamos si existe el POST 'categoria'
+        if ($this->existPOST('categoria')) {
+            error_log('categoria'.$this->getPost('categoria'));
+            // Creamos un nuevo objeto de la clase CategoriasModel
+            $categoryObj = new CategoriasModel();
+
+            // Obtenemos las subcategorías relacionadas a la categoría recibida
+            $subcategories = $categoryObj->getSubCategoriesByCategory($this->getPost('categoria'));
+            // Devolvemos el resultado en formato JSON
+            echo json_encode(["data"=>$subcategories]);
+            return;
+        } else {
+            // Devolvemos una respuesta en caso de que no exista 'categoria' en el POST
+            echo json_encode(['error' => 'Categoría no proporcionada']);
+        }
+    }
+
 }

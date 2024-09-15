@@ -1,6 +1,7 @@
 <?php
 // llamamos al objeto de categorias para recorrerlo 
 $categories = $this->d['categories'];
+$subcategories = $this->d['subcategories'];
 ?>
 
 
@@ -346,7 +347,6 @@ $categories = $this->d['categories'];
                                 <label for="subcategoria" class="col-form-label">Subcategoria</label>
                                 <select name="subcategoria" class="form-control select" id="subcategoria">
                                     <option>Seleccionar subcategoria</option>
-                                    <option value="1">Sin azucar</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">

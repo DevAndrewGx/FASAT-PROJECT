@@ -21,7 +21,8 @@ options.forEach(option =>  {
 // funciones para el crud
 $(document).ready(function (){
     
-
+    
+    console.log("hello bitch");
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     $("#formProduct").submit(function(e) {
@@ -60,6 +61,47 @@ $(document).ready(function (){
                 }
             }
         })
-    })
+    });
+
+
+     // funcion para filtrar categorias segun la categoria seleccionada
+     $("#modalFormCreateProduct #formProduct #categoria").on("change", function (e) {
+             // cancelamos el evento por default
+             e.preventDefault();
+             console.log("it's changing");
+             // creamos la variable para almacenar el valor que viene del formulario
+             const categoriaNombre = e.target.value;
+             console.log(categoriaNombre); 
+             // Cambiado a la variable correcta
+             // Enviamos los datos mediante $.post
+             $.post(`${baseUrl}productos/getSubcategoriesByCategory`,{ categoria: categoriaNombre },function (response) {
+                    let subcategories = JSON.parse(response);
+                    console.log(subcategories);
+                    let template = "";
+                   
+                   if (subcategories.data.length === 0) {
+                       template += `
+                        <option value="#">No existen categorías asociadas</option>
+                    `;
+                       $("#subcategoria").html(template);
+                       return;
+                   }
+
+                    template += "<option ='#'>Seleccione subcategoria</option>"
+                    subcategories.data.forEach((subcategory) => {
+                        template += `
+                            <option value="${subcategory.id_sub_categoria}">${subcategory.nombre_subcategoria}</option>
+                        `;
+                        
+                    })
+                    // $("#subcategoria").html(template);
+                    $("#subcategoria").html(template);
+                    console.log("Data enviada correctamente");
+                    console.log(response);
+                    return;
+                }
+            );
+         }
+     );
 });
 

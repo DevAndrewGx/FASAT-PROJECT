@@ -279,6 +279,65 @@
                 return;
             }
         }
+
+        // funcion para validar si ya existe una subcategoria dentro la bd
+
+        public function existSubCategory($subCategoria) { 
+            try {
+                $query = $this->prepare('SELECT nombre_subcategoria  FROM sub_categorias WHERE nombre_subcategoria = :nombre');
+
+                $query->execute([
+                    'nombre' => $subCategoria
+                ]);
+                //Si al momento de contar el resultado de la query y es mayor a cero eso significa que 
+                // ya existe una categoria con ese nombre
+                if ($query->rowCount() > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (PDOException $e) {
+                error_log('USERMODEL::existsUser->PDOException' . $e);
+                return;
+            }
+        }
+
+        function getSubCategoriesByCategory($idCategoria)
+        {
+
+            $items = [];
+            try {
+
+                // ejecutamos la consulta con query porque no se estan enviando parametros
+                $query = $this->prepare('SELECT * FROM sub_categorias s INNER JOIN categorias c ON s.id_categoria = c.id_categoria WHERE c.id_categoria = :id');
+
+                $query->execute([
+                    'id' => $idCategoria
+                ]);
+
+                // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
+                // FETCH_ASSOC retorna un objeto de clave y valor
+                while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+
+                    // creamos un objeto de categorias para que cada vez que itere guarde la data 
+
+                    $item = new CategoriasModel();
+
+                    $item->setIdSubCategoria($row['id_sub_categoria']);
+                    $item->setNombreCategoria($row['nombre_categoria']);
+                    $item->setNombreSubCategoria($row['nombre_subcategoria']);
+
+                    // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
+                    array_push($items, $item);
+                    // finalmente retornamos el objeto
+
+                }
+                
+                return $items;
+            } catch (PDOException $e) {
+                error_log('USERMODEL::getId->PDOException' . $e);
+            }
+        }
         public function getIdCategoria() { return $this->id_categoria;}
         public function getNombreCategoria() { return $this->nombre_categoria;}
         public function getIdSubCategoria() { return $this->id_sub_categoria;}

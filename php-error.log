@@ -1,12 +1,1296 @@
-[14-Sep-2024 06:21:32 Europe/Berlin] Testing errors
-[14-Sep-2024 06:21:32 Europe/Berlin] PHP Warning:  require(views/cheff/index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\FAST-PROJECT\libs\view.php on line 19
-[14-Sep-2024 06:21:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'views/cheff/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\FAST-PROJECT\libs\view.php:19
-Stack trace:
-#0 C:\xampp\htdocs\FAST-PROJECT\controllers\cheff.php(14): View->render('cheff/index', Array)
-#1 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(87): Cheff->render()
-#2 C:\xampp\htdocs\FAST-PROJECT\index.php(52): App->__construct()
-#3 {main}
-  thrown in C:\xampp\htdocs\FAST-PROJECT\libs\view.php on line 19
-[14-Sep-2024 06:22:00 Europe/Berlin] Testing errors
-[14-Sep-2024 06:22:01 Europe/Berlin] Testing errors
-[14-Sep-2024 06:22:01 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:16:24 Europe/Berlin] Testing errors
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:16:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:16:24 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:16:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:16:24 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:16:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:16:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:16:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:16:25 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:16:25 Europe/Berlin] its here
+[16-Sep-2024 00:16:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:16:25 Europe/Berlin] categoria60
+[16-Sep-2024 00:17:04 Europe/Berlin] Testing errors
+[16-Sep-2024 00:17:04 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:20:40 Europe/Berlin] Testing errors
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:20:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:20:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:41 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:20:41 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:20:41 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:20:41 Europe/Berlin] 
+[16-Sep-2024 00:20:41 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:20:42 Europe/Berlin] Testing errors
+[16-Sep-2024 00:20:42 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:20:44 Europe/Berlin] Testing errors
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:20:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:20:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:44 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:20:44 Europe/Berlin] its here
+[16-Sep-2024 00:20:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:20:44 Europe/Berlin] categoria62
+[16-Sep-2024 00:20:51 Europe/Berlin] Testing errors
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:20:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:20:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:20:51 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:20:51 Europe/Berlin] its here
+[16-Sep-2024 00:20:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:20:51 Europe/Berlin] categoria60
+[16-Sep-2024 00:21:35 Europe/Berlin] Testing errors
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:21:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:21:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:21:35 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:21:35 Europe/Berlin] its here
+[16-Sep-2024 00:21:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:21:35 Europe/Berlin] categoria62
+[16-Sep-2024 00:21:39 Europe/Berlin] Testing errors
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:21:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:21:39 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:21:39 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:21:39 Europe/Berlin] its here
+[16-Sep-2024 00:21:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:21:39 Europe/Berlin] categoria60
+[16-Sep-2024 00:31:46 Europe/Berlin] Testing errors
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:31:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:31:46 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:46 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:31:46 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:31:46 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:31:46 Europe/Berlin] 
+[16-Sep-2024 00:31:46 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:31:46 Europe/Berlin] Testing errors
+[16-Sep-2024 00:31:46 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:31:49 Europe/Berlin] Testing errors
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:31:49 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:31:49 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:49 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:31:49 Europe/Berlin] its here
+[16-Sep-2024 00:31:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:31:49 Europe/Berlin] categoria62
+[16-Sep-2024 00:31:52 Europe/Berlin] Testing errors
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:31:52 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:31:52 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:52 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:31:52 Europe/Berlin] its here
+[16-Sep-2024 00:31:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:31:52 Europe/Berlin] categoria60
+[16-Sep-2024 00:31:54 Europe/Berlin] Testing errors
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:31:54 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:31:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:31:54 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:31:54 Europe/Berlin] its here
+[16-Sep-2024 00:31:54 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:31:54 Europe/Berlin] categoria62
+[16-Sep-2024 00:32:22 Europe/Berlin] Testing errors
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:32:23 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:32:23 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:32:23 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:32:23 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:32:23 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:32:23 Europe/Berlin] 
+[16-Sep-2024 00:32:23 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:32:23 Europe/Berlin] Testing errors
+[16-Sep-2024 00:32:23 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:32:26 Europe/Berlin] Testing errors
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:32:26 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:32:26 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:32:26 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:32:26 Europe/Berlin] its here
+[16-Sep-2024 00:32:26 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:32:26 Europe/Berlin] categoria62
+[16-Sep-2024 00:35:43 Europe/Berlin] Testing errors
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:35:43 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:35:43 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:43 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:35:43 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:35:43 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:35:43 Europe/Berlin] 
+[16-Sep-2024 00:35:43 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:35:44 Europe/Berlin] Testing errors
+[16-Sep-2024 00:35:44 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:35:47 Europe/Berlin] Testing errors
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:35:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:35:47 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:47 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:35:47 Europe/Berlin] its here
+[16-Sep-2024 00:35:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:35:47 Europe/Berlin] categoria62
+[16-Sep-2024 00:35:51 Europe/Berlin] Testing errors
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:35:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:35:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:51 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:35:51 Europe/Berlin] its here
+[16-Sep-2024 00:35:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:35:51 Europe/Berlin] categoria60
+[16-Sep-2024 00:35:57 Europe/Berlin] Testing errors
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:35:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:35:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:35:57 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:35:57 Europe/Berlin] its here
+[16-Sep-2024 00:35:57 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:35:57 Europe/Berlin] categoria62
+[16-Sep-2024 00:36:06 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:36:06 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:36:06 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:06 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:36:06 Europe/Berlin] its here
+[16-Sep-2024 00:36:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:36:06 Europe/Berlin] categoria2
+[16-Sep-2024 00:36:08 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:36:08 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:36:08 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:08 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:36:08 Europe/Berlin] its here
+[16-Sep-2024 00:36:08 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:36:08 Europe/Berlin] categoria60
+[16-Sep-2024 00:36:18 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:36:18 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:36:18 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:18 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:36:18 Europe/Berlin] its here
+[16-Sep-2024 00:36:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:36:18 Europe/Berlin] categoria62
+[16-Sep-2024 00:36:32 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:36:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:36:32 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:32 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:36:32 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:36:32 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:36:32 Europe/Berlin] 
+[16-Sep-2024 00:36:32 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:36:32 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:32 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:36:38 Europe/Berlin] Testing errors
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:36:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:36:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:36:38 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:36:38 Europe/Berlin] its here
+[16-Sep-2024 00:36:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:36:38 Europe/Berlin] categoria60
+[16-Sep-2024 00:37:40 Europe/Berlin] Testing errors
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:37:40 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:37:40 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:37:40 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:37:40 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:37:40 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:37:40 Europe/Berlin] 
+[16-Sep-2024 00:37:40 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:37:41 Europe/Berlin] Testing errors
+[16-Sep-2024 00:37:41 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:37:44 Europe/Berlin] Testing errors
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:37:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:37:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:37:44 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:37:44 Europe/Berlin] its here
+[16-Sep-2024 00:37:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:37:44 Europe/Berlin] categoria62
+[16-Sep-2024 00:38:44 Europe/Berlin] Testing errors
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:38:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:38:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:38:44 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:38:44 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:38:44 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:38:44 Europe/Berlin] 
+[16-Sep-2024 00:38:44 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:38:44 Europe/Berlin] Testing errors
+[16-Sep-2024 00:38:44 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:38:48 Europe/Berlin] Testing errors
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:38:48 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:38:48 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:38:48 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:38:48 Europe/Berlin] its here
+[16-Sep-2024 00:38:48 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:38:48 Europe/Berlin] categoria62
+[16-Sep-2024 00:40:13 Europe/Berlin] Testing errors
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:40:13 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:40:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:13 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:40:13 Europe/Berlin] its here
+[16-Sep-2024 00:40:13 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:40:13 Europe/Berlin] categoria60
+[16-Sep-2024 00:40:15 Europe/Berlin] Testing errors
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:40:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:40:15 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:15 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:40:15 Europe/Berlin] its here
+[16-Sep-2024 00:40:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:40:15 Europe/Berlin] categoria62
+[16-Sep-2024 00:40:18 Europe/Berlin] Testing errors
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:40:18 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:40:18 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:18 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:40:18 Europe/Berlin] its here
+[16-Sep-2024 00:40:18 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:40:18 Europe/Berlin] categoria60
+[16-Sep-2024 00:40:20 Europe/Berlin] Testing errors
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:40:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:40:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:40:20 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:40:20 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:40:20 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:40:20 Europe/Berlin] 
+[16-Sep-2024 00:40:20 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:40:21 Europe/Berlin] Testing errors
+[16-Sep-2024 00:40:21 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:41:24 Europe/Berlin] Testing errors
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:41:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:41:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:24 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:41:24 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:41:24 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:41:24 Europe/Berlin] 
+[16-Sep-2024 00:41:24 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:41:25 Europe/Berlin] Testing errors
+[16-Sep-2024 00:41:25 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:41:27 Europe/Berlin] Testing errors
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:41:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:41:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:27 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:41:27 Europe/Berlin] its here
+[16-Sep-2024 00:41:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:41:27 Europe/Berlin] categoria62
+[16-Sep-2024 00:41:30 Europe/Berlin] Testing errors
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:41:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:41:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:30 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:41:30 Europe/Berlin] its here
+[16-Sep-2024 00:41:30 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:41:30 Europe/Berlin] categoria60
+[16-Sep-2024 00:41:37 Europe/Berlin] Testing errors
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:41:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:41:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:41:37 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:41:37 Europe/Berlin] its here
+[16-Sep-2024 00:41:37 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:41:37 Europe/Berlin] categoria#
+[16-Sep-2024 00:43:19 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:20 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:20 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:43:20 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:43:20 Europe/Berlin] 
+[16-Sep-2024 00:43:20 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:43:20 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:20 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:43:24 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:24 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:24 Europe/Berlin] its here
+[16-Sep-2024 00:43:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:24 Europe/Berlin] categoria2
+[16-Sep-2024 00:43:25 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:25 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:25 Europe/Berlin] its here
+[16-Sep-2024 00:43:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:25 Europe/Berlin] categoria28
+[16-Sep-2024 00:43:27 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:27 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:27 Europe/Berlin] its here
+[16-Sep-2024 00:43:27 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:27 Europe/Berlin] categoria62
+[16-Sep-2024 00:43:29 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:29 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:29 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:29 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:29 Europe/Berlin] its here
+[16-Sep-2024 00:43:29 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:29 Europe/Berlin] categoria28
+[16-Sep-2024 00:43:32 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:32 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:32 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:32 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:32 Europe/Berlin] its here
+[16-Sep-2024 00:43:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:32 Europe/Berlin] categoria60
+[16-Sep-2024 00:43:47 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:47 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:47 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:47 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:43:47 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:43:47 Europe/Berlin] 
+[16-Sep-2024 00:43:47 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:43:48 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:48 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:43:51 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:51 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:51 Europe/Berlin] its here
+[16-Sep-2024 00:43:51 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:51 Europe/Berlin] categoria28
+[16-Sep-2024 00:43:56 Europe/Berlin] Testing errors
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:43:56 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:43:56 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:43:56 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:43:56 Europe/Berlin] its here
+[16-Sep-2024 00:43:56 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:43:56 Europe/Berlin] categoria31
+[16-Sep-2024 00:44:20 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:20 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:20 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:44:20 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:44:20 Europe/Berlin] 
+[16-Sep-2024 00:44:20 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:44:20 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:20 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:44:23 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:23 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:23 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:23 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:23 Europe/Berlin] its here
+[16-Sep-2024 00:44:23 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:44:23 Europe/Berlin] categoria28
+[16-Sep-2024 00:44:24 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:24 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:24 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:24 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:24 Europe/Berlin] its here
+[16-Sep-2024 00:44:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:44:24 Europe/Berlin] categoria2
+[16-Sep-2024 00:44:27 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:27 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:27 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:44:27 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:44:27 Europe/Berlin] 
+[16-Sep-2024 00:44:27 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:44:27 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:27 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:44:30 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:30 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:30 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:44:30 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:44:30 Europe/Berlin] 
+[16-Sep-2024 00:44:30 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:44:30 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:30 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:44:35 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:35 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:35 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:35 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:35 Europe/Berlin] its here
+[16-Sep-2024 00:44:35 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:44:35 Europe/Berlin] categoria28
+[16-Sep-2024 00:44:36 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:36 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:36 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:36 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:36 Europe/Berlin] its here
+[16-Sep-2024 00:44:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:44:36 Europe/Berlin] categoria60
+[16-Sep-2024 00:44:38 Europe/Berlin] Testing errors
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:44:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:44:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:44:38 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:44:38 Europe/Berlin] its here
+[16-Sep-2024 00:44:38 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:44:38 Europe/Berlin] categoria28
+[16-Sep-2024 00:46:48 Europe/Berlin] Testing errors
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:46:48 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:46:48 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:46:48 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:46:48 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 00:46:48 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 92
+[16-Sep-2024 00:46:48 Europe/Berlin] 
+[16-Sep-2024 00:46:48 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 00:46:48 Europe/Berlin] Testing errors
+[16-Sep-2024 00:46:48 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:46:50 Europe/Berlin] Testing errors
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:46:50 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:46:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:46:50 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:46:50 Europe/Berlin] its here
+[16-Sep-2024 00:46:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:46:50 Europe/Berlin] categoria2
+[16-Sep-2024 00:47:00 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:00 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:00 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:00 Europe/Berlin] its here
+[16-Sep-2024 00:47:00 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:00 Europe/Berlin] categoria60
+[16-Sep-2024 00:47:01 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:01 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:01 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:01 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:01 Europe/Berlin] its here
+[16-Sep-2024 00:47:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:01 Europe/Berlin] categoria62
+[16-Sep-2024 00:47:04 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:04 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:04 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:04 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:04 Europe/Berlin] its here
+[16-Sep-2024 00:47:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:04 Europe/Berlin] categoria60
+[16-Sep-2024 00:47:06 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:06 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:06 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:06 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:06 Europe/Berlin] its here
+[16-Sep-2024 00:47:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:06 Europe/Berlin] categoria31
+[16-Sep-2024 00:47:07 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:07 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:07 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:07 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:07 Europe/Berlin] its here
+[16-Sep-2024 00:47:07 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:07 Europe/Berlin] categoria28
+[16-Sep-2024 00:47:09 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:09 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:09 Europe/Berlin] its here
+[16-Sep-2024 00:47:09 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:09 Europe/Berlin] categoria2
+[16-Sep-2024 00:47:49 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:49 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:49 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:49 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:49 Europe/Berlin] its here
+[16-Sep-2024 00:47:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:49 Europe/Berlin] categoria60
+[16-Sep-2024 00:47:50 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:50 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:50 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:50 Europe/Berlin] its here
+[16-Sep-2024 00:47:50 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:50 Europe/Berlin] categoria28
+[16-Sep-2024 00:47:51 Europe/Berlin] Testing errors
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:47:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:47:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:51 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 00:47:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 00:47:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:47:52 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:47:52 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 00:47:52 Europe/Berlin] its here
+[16-Sep-2024 00:47:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 42
+[16-Sep-2024 00:47:52 Europe/Berlin] categoria62
+[16-Sep-2024 00:48:18 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:18 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:18 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:48:19 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:48:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:48:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:19 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:48:19 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[16-Sep-2024 00:48:19 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:19 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:48:20 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440500265, url => users
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440500265, url => users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:48:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:48:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:20 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:48:37 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:48:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:48:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:37 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:48:37 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[16-Sep-2024 00:48:38 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:38 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:48:38 Europe/Berlin] Testing errors
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440518492, url => users
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440518492, url => users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:48:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:48:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:48:38 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:49:08 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:49:09 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:49:09 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:09 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:49:09 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[16-Sep-2024 00:49:09 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:09 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:49:12 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440550423, url => users
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440550423, url => users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:49:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:49:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:12 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:49:35 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users, url => users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:49:36 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:49:36 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:36 Europe/Berlin] Users::construct -> controlador usuarios
+[16-Sep-2024 00:49:36 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[16-Sep-2024 00:49:37 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:37 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 00:49:37 Europe/Berlin] Testing errors
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440577245, url => users
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::isPublic(): currentURL => users
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1726440577245, url => users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site users
+[16-Sep-2024 00:49:37 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 00:49:37 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 00:49:37 Europe/Berlin] Users::construct -> controlador usuarios
