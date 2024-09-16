@@ -194,9 +194,7 @@ ul li {
     min-height: 100vh;
     min-width: 260px;
     background: #fff;
-    transition: none;
-    min-width: 260px; 
-    
+    transition: all 0.3s ease;
 }
 
 .main-wrapper .left-section .logo {
@@ -262,10 +260,16 @@ ul li {
     font-size: 30px;
 }
 
-.main-wrapper .left-section.close .sidebar .item a {
-    width: 0;
-    opacity: 0;
-    transition: none;
+.main-wrapper .left-section .sidebar a {
+    color: var(--secundary-color);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.5 ease;
+    text-decoration: none;
+    opacity: 1;
 }
 
 .main-wrapper .left-section .sidebar .item.active a,
@@ -285,7 +289,7 @@ ul li {
     border-radius: 50%;
     top: 0;
     transform: translateY(116%);
-    transition: none;
+    transition: all 0.3s ease;
 }
 
 .main-wrapper .left-section .sidebar .item.active a::after {
@@ -294,11 +298,10 @@ ul li {
 }
 
 
-
+/* efecto para cerrar la barra lateral */
 .main-wrapper .left-section.close { 
-    min-width: 80px; 
-    padding: 10px 20px; 
-    transition: none;
+    min-width: 30px;
+    padding: 10px 20px 10px 30px;
 }
 
 
@@ -307,15 +310,8 @@ ul li {
     height: 40px;
 }
 
-.main-wrapper .page-wrapper {
-    margin-left: 260px; 
-    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
-    width: calc(100% - 260px); 
-}
-
 .main-wrapper .page-wrapper.close {
-    margin-left: 80px; 
-    width: calc(100% - 80px); 
+    margin-left: 100px;
 }
 
 .main-wrapper .left-section.close .logo i { 
@@ -323,13 +319,8 @@ ul li {
 }
 
 .main-wrapper .left-section.close .sidebar .item a { 
-    width: 0;
+    width: 1px;
     opacity: 0;
-    transition: none;
-}
-
-.page-wrapper, .page-wrapper * {
-    opacity: 1 !important; 
 }
 
 header {
@@ -373,12 +364,12 @@ header ul li a img {
 /* STYLES FOR DROPDOWN USER MENU*/
 .items-right .dropdown-toggle {
     border: none;
-    padding-right: 0; 
+    padding-right: 0; /* Ajusta el padding derecho según sea necesario */
     width: 40px;
 }
 
 .items-right .dropdown-toggle img {
-    margin-right: 0; 
+    margin-right: 0; /* Ajusta el margen derecho según sea necesario */
 }
 
 .items-right .dropdown-toggle::after {
@@ -1232,17 +1223,17 @@ main-mesa {
     color: #fff;
 }
 
-.close { 
+/* .close { 
     float: right;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #FFF;
-    opacity: .5;
-}
+    opacity: 1;
+}  */
 
-.close:hover {
+/* .close:hover {
   color: #000;
   text-decoration: none;
 }
@@ -1262,7 +1253,7 @@ button.close {
 
 a.close.disabled {
   pointer-events: none;
-}
+}  */
 
 
 .modal-open {

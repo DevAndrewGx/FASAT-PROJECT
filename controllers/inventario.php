@@ -16,4 +16,5 @@
             $this->view->render('admin/gestionInventario');
         }
     }
+
 ?>

@@ -156,7 +156,7 @@ $subcategories = $this->d['subcategories'];
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="example" class="table table-responsive datanew">
+                            <table id="data-productos" class="table datanew" style="width: 100%;">
                                 <thead>
                                     <tr>
                                         <th>
@@ -166,139 +166,14 @@ $subcategories = $this->d['subcategories'];
                                             </label>
                                         </th>
                                         <th>Producto</th>
-                                        <th>SKU</th>
                                         <th>Categoría</th>
-                                        <th>Marca</th>
                                         <th>Precio</th>
-                                        <th>Unidad</th>
                                         <th>Cantidad</th>
-                                        <th>Creado Por</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <td>Pizza</td>
-                                        <td>PT0012</td>
-                                        <td>Comida Rápida</td>
-                                        <td>N/D</td>
-                                        <td>12.99</td>
-                                        <td>pc</td>
-                                        <td>50.00</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <td>Hamburguesa</td>
-                                        <td>HB0034</td>
-                                        <td>Comida Rápida</td>
-                                        <td>N/D</td>
-                                        <td>8.99</td>
-                                        <td>pc</td>
-                                        <td>30.00</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <td>Ensalada César</td>
-                                        <td>EN0056</td>
-                                        <td>Ensaladas</td>
-                                        <td>N/D</td>
-                                        <td>6.99</td>
-                                        <td>pc</td>
-                                        <td>20.00</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <td>Sushi</td>
-                                        <td>SH0089</td>
-                                        <td>Comida Asiática</td>
-                                        <td>N/D</td>
-                                        <td>15.99</td>
-                                        <td>pc</td>
-                                        <td>40.00</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <td>Tacos</td>
-                                        <td>TC0075</td>
-                                        <td>Comida Mexicana</td>
-                                        <td>N/D</td>
-                                        <td>10.99</td>
-                                        <td>pc</td>
-                                        <td>35.00</td>
-                                        <td>Admin</td>
-                                        <td>
-                                            <a href="editarCategory.html">
-                                                <img src="../../imgs/icons/edit.svg" alt="edit">
-                                            </a>
-                                            <a href="#">
-                                                <img src="../../imgs/icons/trash.svg" alt="edit">
-                                            </a>
-                                        </td>
-                                    </tr>
-
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -327,8 +202,8 @@ $subcategories = $this->d['subcategories'];
                                 <input type="text" class="form-control" id="nombreProducto" name="nombreProducto" required>
                             </div>
                         </div>
-                        <div class="row">
 
+                        <div class="row">
                             <div class="form-group col-lg-6 col-md-6">
                                 <label for="categoria" class="col-form-label">Categoría</label>
                                 <select name="categoria" class="form-control select" id="categoria">
