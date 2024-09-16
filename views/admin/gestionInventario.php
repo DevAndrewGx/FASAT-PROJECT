@@ -379,7 +379,7 @@ $subcategories = $this->d['subcategories'];
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" name="tipoFoto" value="Usuarios">
+                            <input type="hidden" name="tipoFoto" value="Productos">
                         </div>
                         <div class="tile-footer">
                             <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;

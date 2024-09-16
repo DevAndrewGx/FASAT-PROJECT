@@ -58,7 +58,7 @@ class Users extends SessionController
         $fotoModel = new FotoModel();
         // llamamos la funcion para crear una imagen
         // var_dump($this->getPost('foto'));
-        $this->createPhoto($fotoModel);
+        $this->createPhoto($fotoModel, "Users");
 
         // Primero validamos que el usuario que se esta tratando de ingresar no exista en la bd
         if(!$userModel->existUser($this->getPost('documento'), $this->getPost('email'))) {
@@ -96,45 +96,7 @@ class Users extends SessionController
         }
         
     }
-    function createPhoto(FotoModel $fotoObjeto) {
-        // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
-        $foto = isset($_FILES['foto']) ? $_FILES['foto']: null;
-        // creamos el directorio de destino donde queremos guardar la imagen
-        $directorioDestino = 'public/imgs/uploads/'; 
-
-        // obtenemos el nombre de la foto
-        $nombreFoto = pathinfo($foto['name'], PATHINFO_FILENAME); // Nombre del archivo sin extensión
-        $ext = strtolower(pathinfo($foto['name'], PATHINFO_EXTENSION)); // Extensión del archivo en minúsculas
-
-        // le damos un hash a la imagen por seguridad
-        $hash = md5((Date('Ymdgi')) . $nombreFoto) . '.' . $ext;
-        // construirmos el archivo final
-        $archivoDestino = $directorioDestino . $hash;
-        $uploadIsOk = false;
-
-        // luego verificamos si el archivo que se subio es una imagen valida
-        $check = getimagesize($foto['tmp_name']);
-
-        if ($check != false) {
-            // cambiabamos la variable bandera a true ya que es una imagen valida
-            $uploadIsOk = true;
-        } else {
-            $uploadIsOk = false;
-        }
-
-        // validamos que la subida del archivo sea valida
-        if (!$uploadIsOk) {
-            $this->redirect('Users', []);
-            return;
-        } else {
-            // ya que la imagen es valida la movemos y la establecemos
-            if (move_uploaded_file($foto['tmp_name'], $archivoDestino)) {
-                // seteamos la foto y el tipo
-                $fotoObjeto->setFoto($hash);
-                $fotoObjeto->setTipo($this->getPost('tipoFoto'));
-            }
-        }
-    }
+   
 
     public function getUsers()
     {
@@ -304,12 +266,11 @@ class Users extends SessionController
         // creamos un objeto de tipo foto
         $fotoModel = new FotoModel();
         // llamamos la funcion para crear una imagen ya que nos permitira setear la nueva data en nuevo objeto
-        $this->createPhoto($fotoModel);
+        $this->createPhoto($fotoModel, "Users");
 
         // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
         // idFoto para actualizar la data
         $idFoto = $this->getPost('id_foto');
-        
         if($fotoModel->update($idFoto)) {
             error_log("Users::updateUser -> el id de la foto es -> ".$idFoto);
             $userModel->setIdFoto($idFoto);

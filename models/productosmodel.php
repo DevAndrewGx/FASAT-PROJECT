@@ -27,10 +27,10 @@
             // inicializar los atributos
             $id_foto = 0;
             $id_stock = 0;
-            $id_provedore = 0;
+            $id_provedor = 0;
             $id_categoria = 0;
+            $id_subcategoria = 0;
             $precio = 0;
-            $tipo = '';
             $nombre = '';
             $descripción = '';
             $disponibilidad = '';
@@ -44,15 +44,16 @@
             
             try { 
                 // creamos la query para insertar datos dentro de la bd
-                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_stock, id_proveedor, id_categoria, id_subcategoria, nombre, precio_unitario, descripcion, permitir_sin_vender) VALUES(:id_foto, :id_stock, :id_proveedor, :id_categoria, :nombre, :precio_unitario, :descripcion, :disponibilidad)");
+                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock,  nombre, precio, descripcion, permitir_sin_vender) VALUES(:id_foto, :id_categoria, :id_subcategoria, :id_proveedor, :id_stock, :nombre, :precio, :descripcion, :disponibilidad)");
 
                 $query->execute([
                     'id_foto'=>$this->id_foto,
-                    'id_stock'=>$this->id_stock,
-                    'id_proveedor'=>$this->id_provedor,
                     'id_categoria' => $this->id_categoria,
+                    'id_subcategoria' => $this->id_subcategoria,
+                    'id_proveedor' => $this->id_provedor,
+                    'id_stock'=>$this->id_stock,
                     'nombre'=>$this->nombre,
-                    'precio_unitario'=>$this->precio,
+                    'precio'=>$this->precio,
                     'descripcion'=>$this->descripcion,
                     'disponibilidad'=>$this->disponibilidad,
                 ]);
@@ -73,7 +74,7 @@
         public function setIdStock($id) { $this->id_stock = $id;}
         public function setIdProvedor($id) { $this->id_provedor = $id;}
         public function setIdCategoria($categoria) { $this->id_categoria = $categoria;}
-        public function setIdSubCategoria($subcategoria) { $this->id_categoria = $subcategoria;}
+        public function setIdSubCategoria($subcategoria) { $this->id_subcategoria = $subcategoria;}
         public function setPrecio($precio) { $this->precio = $precio;}
         public function setNombre($nombre) { $this->nombre = $nombre;}
         public function setDescripcion($descripcion) {  $this->descripcion = $descripcion;}

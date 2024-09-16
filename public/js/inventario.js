@@ -45,19 +45,19 @@ $(document).ready(function (){
                 if(data.status) {
                     Swal.fire({
                         icon: "success",
-                        title: "Producto creado",
+                        title: "Producto creado exitosamente",
                         text: data.message,
-                        showConfirmButton: false,
+                        showConfirmButton: true,
                         allowOutsideClick: false,
-                        timer: 5000,
-                    }).then(function () {
-                        // // Vaciar el campo de email después de enviar el formulario
-                        // $("#txtEmailReset").val("");
-                        // // Ocultar formulario de olvido de contraseña y mostrar el de inicio de sesión
-                        // $("#formOlvidoPass").fadeOut(200, function () {
-                        //     $("#formLogin").fadeIn(200);
-                        // });
+                        confirmButtonText: "Ok",
+                    }).then(function (result) {
+                        if (result.isConfirmed) {
+                            // Cerrar el modal y reiniciar el formulario
+                            $("#formProduct").closest(".modal").modal("hide");
+                        }
                     });
+                }else {
+                    console.log('Something is gone wrong')
                 }
             }
         })
