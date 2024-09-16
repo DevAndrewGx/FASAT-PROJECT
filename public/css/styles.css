@@ -194,7 +194,9 @@ ul li {
     min-height: 100vh;
     min-width: 260px;
     background: #fff;
-    transition: all 0.3s ease;
+    transition: none;
+    min-width: 260px; 
+    
 }
 
 .main-wrapper .left-section .logo {
@@ -260,16 +262,10 @@ ul li {
     font-size: 30px;
 }
 
-.main-wrapper .left-section .sidebar a {
-    color: var(--secundary-color);
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 17px;
-    position: relative;
-    transition: all 0.5 ease;
-    text-decoration: none;
-    opacity: 1;
+.main-wrapper .left-section.close .sidebar .item a {
+    width: 0;
+    opacity: 0;
+    transition: none;
 }
 
 .main-wrapper .left-section .sidebar .item.active a,
@@ -289,7 +285,7 @@ ul li {
     border-radius: 50%;
     top: 0;
     transform: translateY(116%);
-    transition: all 0.3s ease;
+    transition: none;
 }
 
 .main-wrapper .left-section .sidebar .item.active a::after {
@@ -298,10 +294,11 @@ ul li {
 }
 
 
-/* efecto para cerrar la barra lateral */
+
 .main-wrapper .left-section.close { 
-    min-width: 30px;
-    padding: 10px 20px 10px 30px;
+    min-width: 80px; 
+    padding: 10px 20px; 
+    transition: none;
 }
 
 
@@ -310,8 +307,15 @@ ul li {
     height: 40px;
 }
 
+.main-wrapper .page-wrapper {
+    margin-left: 260px; 
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+    width: calc(100% - 260px); 
+}
+
 .main-wrapper .page-wrapper.close {
-    margin-left: 100px;
+    margin-left: 80px; 
+    width: calc(100% - 80px); 
 }
 
 .main-wrapper .left-section.close .logo i { 
@@ -319,8 +323,13 @@ ul li {
 }
 
 .main-wrapper .left-section.close .sidebar .item a { 
-    width: 1px;
+    width: 0;
     opacity: 0;
+    transition: none;
+}
+
+.page-wrapper, .page-wrapper * {
+    opacity: 1 !important; 
 }
 
 header {
@@ -364,12 +373,12 @@ header ul li a img {
 /* STYLES FOR DROPDOWN USER MENU*/
 .items-right .dropdown-toggle {
     border: none;
-    padding-right: 0; /* Ajusta el padding derecho según sea necesario */
+    padding-right: 0; 
     width: 40px;
 }
 
 .items-right .dropdown-toggle img {
-    margin-right: 0; /* Ajusta el margen derecho según sea necesario */
+    margin-right: 0; 
 }
 
 .items-right .dropdown-toggle::after {

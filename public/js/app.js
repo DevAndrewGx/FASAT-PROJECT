@@ -10,12 +10,12 @@ const pageWrapper = document.querySelector('.main-wrapper .page-wrapper');
 
 
 arrowAside.addEventListener('click', () => { 
-    // toggle para el sidebar
+    
     sideBar.classList.toggle('close');
-    // toggle para el contenido principal
+   
     pageWrapper.classList.toggle('close');
 
-    // cambiar el icono
+    
     if(sideBar.classList.contains('close')) { 
         arrowAside.classList.replace('bxs-chevron-left-circle', 'bxs-chevron-right-circle')
     }else { 
@@ -24,6 +24,11 @@ arrowAside.addEventListener('click', () => {
     
     
     
+});
+
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.left-section').classList.toggle('close');
+    document.querySelector('.page-wrapper').classList.toggle('close');
 });
 
 // EFECT FOR SIDEBAR ELEMENTS
