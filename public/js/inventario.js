@@ -13,16 +13,13 @@ options.forEach(option =>  {
         selectPlaceholder.textContent = selectedOption;
         console.log(selectedOption);
     })
-
     console.log(option);
 })
 
 
 // funciones para el crud
 $(document).ready(function (){
-    
-    
-    console.log("hello bitch");
+
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     $("#formProduct").submit(function(e) {

@@ -352,3 +352,63 @@
 [16-Sep-2024 03:12:55 Europe/Berlin] FotoModel::save -> lastId -> 124
 [16-Sep-2024 03:12:55 Europe/Berlin] Users::createUser -> Se guardó la foto correctamente
 [16-Sep-2024 03:12:55 Europe/Berlin] Productos::createProduct -> Se guardó un producto correctamente dentro de la bd
+[16-Sep-2024 03:21:16 Europe/Berlin] Testing errors
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 03:21:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 03:21:17 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:17 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 03:21:17 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[16-Sep-2024 03:21:17 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[16-Sep-2024 03:21:17 Europe/Berlin] 
+[16-Sep-2024 03:21:17 Europe/Berlin] Producto::render -> Carga la pagina principal
+[16-Sep-2024 03:21:18 Europe/Berlin] Testing errors
+[16-Sep-2024 03:21:18 Europe/Berlin] Errores::construct -> inicio de errores
+[16-Sep-2024 03:21:31 Europe/Berlin] Testing errors
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 03:21:31 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 03:21:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:31 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 03:21:31 Europe/Berlin] its here
+[16-Sep-2024 03:21:31 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[16-Sep-2024 03:21:31 Europe/Berlin] categoria60
+[16-Sep-2024 03:21:43 Europe/Berlin] Testing errors
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::validateSession()
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador isn't validate for this site productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[16-Sep-2024 03:21:43 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[16-Sep-2024 03:21:43 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[16-Sep-2024 03:21:43 Europe/Berlin] Producto::construct -> Controlador producto
+[16-Sep-2024 03:21:43 Europe/Berlin] Productos::createProduct -> Funcion para crear nuevos productos
+[16-Sep-2024 03:21:43 Europe/Berlin] CreateProduct:: -> Es posible crear un nuevo producto
+[16-Sep-2024 03:21:43 Europe/Berlin] 60
+[16-Sep-2024 03:21:43 Europe/Berlin] FotoModel::save -> lastId -> 125
+[16-Sep-2024 03:21:43 Europe/Berlin] Users::createUser -> Se guardó la foto correctamente
+[16-Sep-2024 03:21:43 Europe/Berlin] Productos::createProduct -> Se guardó un producto correctamente dentro de la bd

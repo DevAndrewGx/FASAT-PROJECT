@@ -71,6 +71,7 @@ class Productos extends SessionController
             // error_log('Users::createUser -> idFoto: ' . $photoObj);
 
             if ($idPhoto) {
+                $productoObject->setIdFoto($idPhoto);
                 // verificamos si se pudo insertar data dentro la bd
                 if ($productoObject->save()) {
                     error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
