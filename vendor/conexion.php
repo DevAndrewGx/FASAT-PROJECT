@@ -2,7 +2,7 @@
         $user = "root";
         $pass = "";
         $host = "localhost";
-        $db = "test_fast4";
+        $db = "test_fast6";
         $charset = 'utf8';  // Añadido punto y coma
         // creamos variables
         try{
