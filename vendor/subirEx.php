@@ -27,16 +27,15 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
 
         // Mapeo de roles y estados
         $roles = [
-            'admistrador' => 1,
-            'mesero' => 2,
-            'cheff' => 3,
-            'cajero' => 3
+            'administrador' => 1,
+            'chef' => 2,
+            'empleado' => 3
         ];
 
         $estados = [
             'activo' => 1,
-            'inactivo' => 2,
-            'pendiente' => 3
+            'pendiente' => 2,
+            'inactivo' => 3
         ];
 
         foreach ($data as $row) {
@@ -68,13 +67,41 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
                         exit();
                     }
                 } else {
-                    $response['message'] = 'No se encontró la imagen en la ruta: ' . $sourceImagePath;
-                    // Usa la imagen predeterminada si no se encuentra la imagen
-                    $imageName = $defaultImageName;
+                    $imageName = $defaultImageName; // Usa la imagen predeterminada si no se encuentra
                 }
             } else {
-                // Usa la imagen predeterminada si no se especificó ninguna imagen
-                $imageName = $defaultImageName;
+                $imageName = $defaultImageName; // Usa la imagen predeterminada si no se especificó
+            }
+
+            // Validación de datos
+            $errors = [];
+            if (is_null($row[0])) {
+                $errors[] = 'Rol no válido.';
+            }
+            if (is_null($row[1])) {
+                $errors[] = 'Estado no válido.';
+            }
+            if (empty($row[2])) {
+                $errors[] = 'El documento es obligatorio.';
+            }
+            if (empty($row[3])) {
+                $errors[] = 'Los nombres son obligatorios.';
+            }
+            if (empty($row[4])) {
+                $errors[] = 'Los apellidos son obligatorios.';
+            }
+            if (empty($row[5])) {
+                $errors[] = 'El teléfono es obligatorio.';
+            }
+            if (empty($row[6]) || !filter_var($row[6], FILTER_VALIDATE_EMAIL)) {
+                $errors[] = 'El correo es obligatorio y debe ser válido.';
+            }
+            // Puedes agregar más validaciones según sea necesario
+
+            if (!empty($errors)) {
+                $response['message'] = implode(' ', $errors);
+                echo json_encode($response);
+                exit();
             }
 
             // Reemplaza los valores vacíos con NULL, excepto para id_foto, token_password, password_request
