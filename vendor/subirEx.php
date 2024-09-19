@@ -26,16 +26,18 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
         $defaultImageName = 'usuarioPredeterminado.jpg'; // Cambia esto al nombre de tu imagen predeterminada
 
         // Mapeo de roles y estados
+        
         $roles = [
-            'administrador' => 1,
-            'chef' => 2,
-            'empleado' => 3
+            'admistrador' => 1,
+            'mesero' => 2,
+            'cheff' => 3,
+            'cajero' => 3
         ];
 
         $estados = [
             'activo' => 1,
-            'pendiente' => 2,
-            'inactivo' => 3
+            'inactivo' => 2,
+            'pendiente' => 3
         ];
 
         foreach ($data as $row) {
