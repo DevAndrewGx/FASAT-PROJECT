@@ -38,17 +38,16 @@ $(document).ready(function () {
             processing: "Procesando...",
         },
         ajax: {
-            url: baseUrl + "users/getUsers",
+            url: baseUrl + "productos/getProducts",
             type: "GET",
             dataType: "json",
         },
         columns: [
             { data: "checkmarks" },
-            
-            { data: "producto" },
-            { data: "categoria" },
+            { data: "nombre_producto" },
+            { data: "nombre_categoria" },
             { data: "precio" },
-            { data: "cantdad" },
+            { data: "descripcion" },
             { data: "options" },
         ],
         columnDefs: [

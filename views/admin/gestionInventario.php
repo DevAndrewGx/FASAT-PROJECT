@@ -168,7 +168,7 @@ $subcategories = $this->d['subcategories'];
                                         <th>Producto</th>
                                         <th>Categoría</th>
                                         <th>Precio</th>
-                                        <th>Cantidad</th>
+                                        <th>Descripcion</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>

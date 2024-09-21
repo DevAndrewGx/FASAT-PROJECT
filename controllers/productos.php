@@ -87,6 +87,68 @@ class Productos extends SessionController
         
     }
 
+
+    // funcion para obtener los productos
+    function getProducts() {
+        try {
+            // Obtener los parámetros enviados por DataTables
+            $draw = intval($_GET['draw']);
+            $start = intval($_GET['start']);
+            $length = intval($_GET['length']);
+            $search = $_GET['search']['value'];
+            $orderColumnIndex = intval($_GET['order'][0]['column']);
+            $orderDir = $_GET['order'][0]['dir'];
+            $columns = $_GET['columns'];
+            $orderColumnName = $columns[$orderColumnIndex]['data'];
+
+
+            //creamos un objeto del modelocategorias
+
+            $productosObj = new ProductosModel();
+
+            //Obtenemos los datos filtrados
+            $productsData = $productosObj->cargarDatosProductos($length, $start, $orderColumnIndex, $orderDir, $search, $orderColumnName);
+
+            $totalFiltered = $productosObj->totalRegistrosFiltrados($search);
+
+            $totalRecords = $productosObj->totalRegistros();
+
+            $arrayDataProducts = json_decode(json_encode($productsData, JSON_UNESCAPED_UNICODE), true);
+            // print_r($arrayDataCategories);
+            // error_log("Array: ".print_r($categoriasData));
+
+            // Iterar sobre el arreglo y agregar 'options' a cada usuario
+            for ($i = 0; $i < count($arrayDataProducts); $i++) {
+                $arrayDataProducts[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
+                $arrayDataProducts[$i]['options'] = '
+                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '"  >
+                    <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
+                </a>
+                <a class="me-3 botonActualizar" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '" >
+                    <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
+                </a>
+                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '">
+                    <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
+                </a>
+            ';
+            }
+
+            // retornamos la data en un arreglo asociativo con la data filtrada y asociada
+            $response = [
+                "draw" => $draw,
+                "recordsTotal" => $totalRecords,
+                "recordsFiltered" => $totalFiltered,
+                "data" => $arrayDataProducts,
+                "status" => true
+            ];
+            // devolvemos la data y terminamos el proceso
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
+            die();
+        } catch (Exception $e) {
+            error_log('Categorias::getCategories -> Error en traer los datos - getCategories' . $e->getMessage());
+        }
+    }
+
     function getSubcategoriesByCategory()
     {
         error_log('its here');
