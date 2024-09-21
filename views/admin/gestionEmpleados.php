@@ -47,15 +47,17 @@
                         </nav>
 
                     </div>
-                        <div class="pdf">
-                        <a href="pdf/usuarios.php" onclick="" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="plussvg"></a>
-                    </div>
-                    <div class="excel">
-                        <a href="vendor/usuarios.php" onclick="" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="plussvg"></a>
-                    </div>
-                    <div class="page-btn">
-                        <a href="#" onclick="openModalCreateUser();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="plussvg"> Agregar
-                            Empleado</a>
+                    <div class="pdf">
+                        <a href="pdf/usuarios.php" class="btn btn-outline-secondary me-2" style="border: none; background-color: transparent;">
+                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="Exportar a PDF">
+                        </a>
+                        <a href="vendor/usuarios.php" class="btn btn-outline-secondary me-2" style="border: none; background-color: transparent;">
+                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="Exportar a Excel">
+                        </a>
+                        <a href="#" onclick="openModalCreateUser();" class="btn btn-primary">
+                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="Agregar Empleado"> Agregar Empleado
+                        </a>
+                        
                     </div>
                 </div>
 
