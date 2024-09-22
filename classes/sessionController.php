@@ -164,7 +164,7 @@ class SessionController extends Controller
         $url = '';
         for ($i = 0; $i < sizeof($this->sites); $i++) {
             // Dependiendo del rol, lo redirigimos a una página u otra
-            if ($this->sites[$i]['role'] === $role) {
+            if ($this->sites[$i]['role'] == $role) {
                 $url = $this->sites[$i]['site'];
                 break;
             }
@@ -183,9 +183,7 @@ class SessionController extends Controller
             if ($currentURL == $this->sites[$i]['site'] && $this->sites[$i]['role'] == $role) {
                 error_log("SessionController::isAuthorized -> Role ".$role." is validate for this site ".$currentURL);
                 return true;
-            }else {
-                error_log("SessionController::isAuthorized -> Role " . $role . " isn't validate for this site " . $currentURL);
-            }  
+            }
         }
         return false;
     }

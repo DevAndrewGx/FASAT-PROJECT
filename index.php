@@ -11,7 +11,7 @@
 
     // Para evitar imprimir echos o vardumps, utilizamos un archivo de errores para mejor vision de errores
     ini_set("error_log", "C:/xampp/htdocs/FAST-PROJECT/php-error.log");
-    error_log('Testing errors');
+    error_log('Inicializando la aplicacion...');
 
      // En libs vamos a tener nuestros archivos base para que funcione nuestra aplicacion
     // requerimos  nuestras otras depencias

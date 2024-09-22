@@ -1,6 +1,6 @@
 <?php
 
-class Mesero extends Controller
+class Mesero extends SessionController
 {
 
     function __construct()

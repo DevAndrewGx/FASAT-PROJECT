@@ -1,5 +1,5 @@
 <?php
-class Cajero extends Controller
+class Cajero extends SessionController
 {
 
     function __construct()

@@ -1,5 +1,5 @@
 <?php
-class Cheff extends Controller
+class Cheff extends SessionController
 {
 
     function __construct()

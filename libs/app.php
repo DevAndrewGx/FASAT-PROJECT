@@ -70,7 +70,7 @@
                                 }
 
                                 // le pasamos al controlador los parametros atravez de el arreglo params
-                                $controller->{$url[1]}();
+                                $controller->{$url[1]}($params);
                             }else { 
                                 // llamamos el metodo tal cual sin incluir esos parametros, ya que no existen.
                                 // llamamos el metodo de forma dinamica...

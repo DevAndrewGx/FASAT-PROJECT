@@ -474,7 +474,6 @@ $(document).ready(function () {
         });
     });
 
-
     // funcion para actualizar subcategorias y categorias con el modo edición
     $("#data-categorias").on("click", ".botonActualizar", function(e) {
         // prevenimos el efecto por defecto
