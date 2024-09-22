@@ -53,14 +53,14 @@
                         </nav>
                     </div>
                 </div>
-                
+
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Enviar Nuevo Pedido</h5>
                         <button class="btn btn-primary" id="openOrderForm">Ingresar Orden</button>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Historial de Pedidos</h5>
@@ -209,28 +209,25 @@
         </div>
     </div>
 
-    <!-- Scripts de Bootstrap y DataTables -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
-  
+    <!-- APEXCHART LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/charts.js"></script> <!-- DATA-TABLES -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- APP JS -->
+    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+
 </body>
-<script src="../../js/main.js"></script>
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- DataTable -->
-<script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<!-- JS BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<!-- SWEETALERT -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-<script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+
 </html>

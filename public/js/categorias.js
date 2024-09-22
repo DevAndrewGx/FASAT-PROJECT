@@ -1,6 +1,8 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     const submitButton = $(this).find('button[type="submit"]');
+
+    let globalIdCategoria;
     let isDisableButton = false;
 
 
@@ -471,6 +473,59 @@ $(document).ready(function () {
             }
         });
     });
+
+
+    // funcion para actualizar subcategorias y categorias con el modo edición
+    $("#data-categorias").on("click", ".botonActualizar", function(e) {
+        // prevenimos el efecto por defecto
+        e.preventDefault();
+
+        // obtenemos el id de la categoria del formulario
+        globalIdCategoria = $(this).data("id");
+        console.log(globalIdCategoria);
+
+        // cambiamos la clase del title modal para actualizar data
+        $("#titleModal").html("Actualizar categoria");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
+
+        // Enviamos la peteción para traer la data de la categoria y mostrarla en el formulario
+
+        $.ajax({
+            url: baseUrl + "categorias/getCategory",
+            type: "POST",
+            dataType: "json",
+            data: JSON.stringify({ id_categoria: globalIdCategoria}),
+            // respuesta del servidor
+            success: function (response) {
+                // validamos si la respuesta del servidor es correcta
+                if (response.status) {
+                    // verificamos que la data no este nulla
+                    if (response.data) {
+                        // tomamos los datos del arreglo para setearlos al formulario
+                        var categoriaData = response.data;
+
+                        $("#nombreCategoria").val(
+                            categoriaData.nombre_categoria
+                        );
+                        $("#tipoCategoria").val(categoriaData.tipo_categoria);
+                    } else {
+                        console.log("Data isn't exist or is undefined");
+                    }
+                } else {
+                    console.log("Data no exist");
+                }
+            },
+            error: function (response) {},
+            complete: function () {
+                $("#modalFormCategories").modal("show");
+            },
+        });
+    });
+
+    
 
     // Funcion para habilitar nuevamente el boton
     $("#modalFormCategories").on("hidden.bs.modal", function () {

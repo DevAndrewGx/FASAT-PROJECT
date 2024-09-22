@@ -191,6 +191,48 @@ class Categorias extends SessionController
         }
     }
 
+
+    // funcion para trear solamente una categoria
+    public function getCategory() { 
+        
+
+        $data = json_decode(file_get_contents("php://input"),true);
+
+
+        // validamos si la data de la solicitud existe
+        if(isset($data['id_categoria'])) { 
+
+            $idCategoria = $data['id_categoria'];
+            
+            // traemos la data de la categoria
+            $res = $this->model->get($idCategoria);
+            
+            // decodificamos la data que viene del backend en un JSON
+            $arrayData = json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+
+            // verificamos si la data es correcta
+            if($arrayData) { 
+                
+                // devolvemos un arreglo asociativo y devolvemos la data al front
+                $response = [
+                    "data" => $arrayData,
+                    "status" => true,
+                    "message" => "Se obtuvo la data correctamente"
+                ];
+
+                echo json_encode($response, JSON_UNESCAPED_UNICODE);
+                // terminamos el proceso
+                die();
+            }else { 
+                error_log("Categories::getCategory -> No se puedo obtener la categoria correctamente");
+                echo json_encode(["status"=>false, "message" => "No se pudo obtener la categoria"]);
+                return false;
+            }
+            
+            
+        }
+    }
+
     // funcion para verificar y borrar usuarios
     function delete()
     {

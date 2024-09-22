@@ -108,17 +108,18 @@
             }
         }
 
-        public function get($nombreCategoria) {
+        public function get($idCategoria) {
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :nombre_categoria LIMIT 1');
+                $query = $this->prepare('SELECT * FROM categorias WHERE id_categoria = :id LIMIT 1');
                 $query->execute([
-                    'nombre_categoria'=> $nombreCategoria
+                    'id'=> $idCategoria
                 ]);
+                
                 // Como solo queremos obtener un valor, no hay necesidad de tener un while
                 $category = $query->fetch(PDO::FETCH_ASSOC);
-                
+
                 // en este caso no hay necesidad de crear un objeto userModel, solo podemos llamar los metodos del mismo con objeto con this
                 $this->setIdCategoria($category['id_categoria']);
                 $this->setNombreCategoria($category['nombre_categoria']);
