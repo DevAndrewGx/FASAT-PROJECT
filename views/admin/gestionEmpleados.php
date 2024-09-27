@@ -247,7 +247,7 @@
 
     <script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-    script src="<?php echo constant('URL'); ?>public/js/carga.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/carga.js"></script>
 
 </body>
 
