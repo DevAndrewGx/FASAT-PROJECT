@@ -28,10 +28,10 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
         // Mapeo de roles y estados
         
         $roles = [
-            'admistrador' => 1,
+            'administrador' => 1,
             'mesero' => 2,
             'cheff' => 3,
-            'cajero' => 3
+            'cajero' => 4
         ];
 
         $estados = [
