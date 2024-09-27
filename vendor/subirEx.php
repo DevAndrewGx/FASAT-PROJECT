@@ -116,6 +116,8 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
             $stmt->execute([$imageName]);
             $idFoto = $conexion->lastInsertId(); // Obtiene el ID de la imagen insertada
 
+            $password = password_hash($row[7], PASSWORD_DEFAULT);
+
             // Inserta el registro en la tabla `usuarios` con el ID de la imagen
             $sql = "INSERT INTO `usuarios` 
                     (`id_rol`, `id_estado`, `documento`, `nombres`, `apellidos`, `telefono`, `correo`, `password`, `fecha_de_creacion`, `id_foto`, `token_password`, `password_request`) 
@@ -123,7 +125,7 @@ if ($_FILES['excelFile']['error'] === UPLOAD_ERR_OK) {
 
             $stmt = $conexion->prepare($sql);
             $stmt->execute([
-                $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $idFoto, $row[10], $row[11]
+                $row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6],  $password, $row[8], $idFoto, $row[10], $row[11]
             ]);
         }
 
