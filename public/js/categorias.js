@@ -488,7 +488,10 @@ $(document).ready(function () {
         $(".modal-header")
             .removeClass("headerRegister")
             .addClass("headerUpdate");
-        $("#btnText").text("Actualizar");
+        $("#addCategory").text("Actualizar categoria");
+
+        // ocultamos la opcion de subCategoria
+        $("#subCategoryOption").hide();
 
         // Enviamos la peteción para traer la data de la categoria y mostrarla en el formulario
 

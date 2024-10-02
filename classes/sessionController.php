@@ -22,7 +22,6 @@ class SessionController extends Controller
         // cuando se cree un nuevo objeto de sessionController va llamar a init
         $this->init();
     }
-
     // Esta funcion la vamos a implementar para leer el JSON y asi dar los permisos
     private function init()
     {
@@ -150,6 +149,7 @@ class SessionController extends Controller
         // por un string vacio y va ser aplicado de currentURL
         $currentURL = preg_replace("/\?.*/", "", $currentURL); //omitir get info
         // utilizamos el for para recorrer el arreglo de objetos de sites y comparar si es publico o no
+
         for ($i = 0; $i < sizeof($this->sites); $i++) {
             if ($currentURL === $this->sites[$i]['site'] && $this->sites[$i]['access'] === 'public') {
                 return true;

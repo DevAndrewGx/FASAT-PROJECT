@@ -115,8 +115,9 @@ $(document).ready(function () {
                 function (response) {
                     let subcategories = JSON.parse(response);
                     console.log(subcategories);
-                    let template = "";
 
+                    console.log(subcategories);
+                    let template = "";
                     if (subcategories.data.length === 0) {
                         template += `
                         <option value="#">No existen categorías asociadas</option>
@@ -132,7 +133,7 @@ $(document).ready(function () {
                         `;
                     });
                     // $("#subcategoria").html(template);
-                    $("#subcategoria").html(template);
+                    $("#subcategoria").html(template); 
                     console.log("Data enviada correctamente");
                     console.log(response);
                     return;

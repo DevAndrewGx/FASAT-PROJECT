@@ -321,17 +321,16 @@
                 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 
                     // creamos un objeto de categorias para que cada vez que itere guarde la data 
-
                     $item = new CategoriasModel();
 
                     $item->setIdSubCategoria($row['id_sub_categoria']);
                     $item->setNombreCategoria($row['nombre_categoria']);
                     $item->setNombreSubCategoria($row['nombre_subcategoria']);
+                    
 
                     // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
                     array_push($items, $item);
                     // finalmente retornamos el objeto
-
                 }
                 
                 return $items;
