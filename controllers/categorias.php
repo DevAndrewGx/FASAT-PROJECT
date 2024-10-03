@@ -101,7 +101,6 @@ class Categorias extends SessionController
                     return;
                 }
             }
-            
 
         }else if(!$categoriaObj->existCategory($this->getPost("nombreCategoria")) &&  $this->existPOST(['subCategoriaNombre'])){
             // Si no existe la categoria aun, la crea con la subcategoria

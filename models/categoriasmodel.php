@@ -50,7 +50,7 @@
         }
 
 
-        
+
         // Funcion paraa crear subCategorias
         public function saveSubCategory() {
             try {
@@ -112,7 +112,7 @@
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('SELECT * FROM categorias WHERE id_categoria = :id LIMIT 1');
+                $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :id LIMIT 1');
                 $query->execute([
                     'id'=> $idCategoria
                 ]);
@@ -305,7 +305,6 @@
 
         function getSubCategoriesByCategory($idCategoria)
         {
-
             $items = [];
             try {
 
@@ -338,6 +337,7 @@
                 error_log('USERMODEL::getId->PDOException' . $e);
             }
         }
+
         public function getIdCategoria() { return $this->id_categoria;}
         public function getNombreCategoria() { return $this->nombre_categoria;}
         public function getIdSubCategoria() { return $this->id_sub_categoria;}

@@ -227,6 +227,8 @@ $(document).ready(function () {
                                                 null,
                                                 false
                                             );
+                                            submitSubcategoryButton.prop("disabled", false);
+                                            submitButton.prop("disabled", false);
                                         }
                                     });
                                 }
