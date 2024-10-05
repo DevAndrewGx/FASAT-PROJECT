@@ -114,13 +114,35 @@ $(document).ready(function () {
         // evitamos el comportamiento por default
         const categoryName = $("#nombreCategoria").val().trim();
         const categoryType = $("#tipoCategoria").val();
+        submitButton.prop("disabled", false);
         // realizamos las respectivas validaciones de los campos
-        if (categoryName === "" && categoryType === "") {
+        if (categoryName === "" && !categoryType === "") {
             $("#nombreCategoria").addClass("is-invalid");
             $("#categoryNameError").show();
+            
+            
+        }else if(!categoryName === "" && categoryType === ""){
+
+            $("#nombreCategoria").removeClass("is-invalid");
+            $("#categoryNameError").hide();
+
+            $("#tipoCategoria").addClass("is-invalid");
+            $("#typeCategoryNameError").show();
+
+           
+
+        }else if(categoryName === "" && categoryType === "") {
+            $("#nombreCategoria").addClass("is-invalid");
+            $("#categoryNameError").show();
+
+            $("#tipoCategoria").addClass("is-invalid");
+            $("#typeCategoryNameError").show();
         } else {
             $("#nombreCategoria").removeClass("is-invalid");
             $("#categoryNameError").hide();
+
+            $("#tipoCategoria").removeClass("is-invalid");
+            $("#typeCategoryNameError").hide();
 
             // Mostrar modal de subcategoría si el checkbox está marcado y enviar la data con el mismo funcionalmiento
             if ($("#hasSubcategory").is(":checked")) {
@@ -481,7 +503,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         // obtenemos el id de la categoria del formulario
-        globalIdCategoria = $(this).data("id");
+        globalIdCategoria = $(this).data("nombre");
         console.log(globalIdCategoria);
 
         // cambiamos la clase del title modal para actualizar data
@@ -500,7 +522,7 @@ $(document).ready(function () {
             url: baseUrl + "categorias/getCategory",
             type: "POST",
             dataType: "json",
-            data: JSON.stringify({ id_categoria: globalIdCategoria}),
+            data: JSON.stringify({ nombre: globalIdCategoria}),
             // respuesta del servidor
             success: function (response) {
                 // validamos si la respuesta del servidor es correcta
@@ -528,7 +550,6 @@ $(document).ready(function () {
         });
     });
 
-    
 
     // Funcion para habilitar nuevamente el boton
     $("#modalFormCategories").on("hidden.bs.modal", function () {

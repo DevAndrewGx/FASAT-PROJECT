@@ -130,7 +130,7 @@
                                     <option value="Productos">Productos</option>
                                     <option value="Ingredientes">Ingredientes</option>
                                 </select>
-                                <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un tipo de categoría válido.</div>
+                                <div id="typeCategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un tipo de categoría válido.</div>
                             </div>
                             <div class="mb-3" id="subCategoryOption">
                                 <input type="checkbox" id="hasSubcategory">

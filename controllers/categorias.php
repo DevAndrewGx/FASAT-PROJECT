@@ -165,7 +165,7 @@ class Categorias extends SessionController
                 <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
+                <a class="me-3 botonActualizar" data-nombre="'.$arrayDataCategories[$i]['nombre_categoria'] .'" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
                 <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
@@ -199,9 +199,9 @@ class Categorias extends SessionController
 
 
         // validamos si la data de la solicitud existe
-        if(isset($data['id_categoria'])) { 
+        if(isset($data['nombre'])) { 
 
-            $idCategoria = $data['id_categoria'];
+            $idCategoria = $data['nombre'];
             
             // traemos la data de la categoria
             $res = $this->model->get($idCategoria);
