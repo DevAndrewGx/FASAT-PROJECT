@@ -68,7 +68,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
     }
 
 
-    public function jsonSerialize()
+    public function jsonSerialize():mixed
     {
         return [
             'documento' => $this->documento,
@@ -116,7 +116,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
                 $sql .= " ORDER BY u.documento DESC";
             }
 
-            if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
+            if ($registrosPorPagina != null && $registrosPorPagina != -1 || $inicio != null) {
                 $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
             }
 

@@ -170,39 +170,19 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header  headerRegister">
-                        <h5 class="modal-title" id="subCategoriesModel">Agregar Subcategoría</h5>
+                        <h5 class="modal-title" id="nameSubCategory">Agregar Subcategoría</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="formSubcategory">
-                            <div class="mb-3">
+                            <div class="mb-3" id="container-form">
                                 <label for="subCategoriaNombre" class="form-label">Nombre de la Subcategoría</label>
-                                <input type="text" class="form-control" name="subCategoriaNombre" id="subCategoriaNombre" placeholder="Nombre de la Subcategoría">
+                                <input type="text mb-3" class="form-control" name="subCategoriaNombre" id="subCategoriaNombre" placeholder="Nombre de la Subcategoría">
                                 <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un nombre de subcategoría válido.</div>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" id="addSubcategory">Agregar Subcategoría</button>
                             </div>
-                            <!-- <div class="mb-3">
-                                <h5>Lista de Subcategorías</h5>
-                                <div class="table-responsive">
-                                    <table id="data-empleados" class="table datanew nowrap" style="width: 100%;" id="subcategoryTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                       
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div> -->
-                            <!-- <div class="tile-footer">
-                                <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
-                                <button class="btn btn-danger" type="button" data-bs-dismiss="modal"><i class='bx bxs-x-circle'></i>Cerrar</button>
-                            </div> -->
                         </form>
                     </div>
                     <div class="modal-footer">

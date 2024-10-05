@@ -108,13 +108,13 @@
             }
         }
 
-        public function get($idCategoria) {
+        public function get($nombreCategoria) {
 
             try {
                 // we have to use prepare because we're going to assing
-                $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :id LIMIT 1');
+                $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :nombre LIMIT 1');
                 $query->execute([
-                    'id'=> $idCategoria
+                    'nombre'=> $nombreCategoria
                 ]);
                 
                 // Como solo queremos obtener un valor, no hay necesidad de tener un while
@@ -128,7 +128,28 @@
                 //retornamos this porque es el mismo objeto que ya contiene la informacion
                 return $category;
             } catch (PDOException $e) {
-                error_log('USERMODEL::getId->PDOException' . $e);
+                error_log('CategoriesModel::getId->PDOException' . $e);
+            }
+        }
+
+        // funcion para traer la subcategorias
+        public function getSubCategory($idSubCategoria) { 
+
+            try { 
+                $query = $this->prepare('SELECT su.nombre_subcategoria, ca.nombre_categoria FROM sub_categorias su INNER JOIN categorias ca ON su.id_categoria = ca.id_categoria WHERE su.id_sub_categoria = :id');
+
+                $query->execute([
+                    'id'=>$idSubCategoria
+                ]);
+
+                $subCategory = $query->fetch(PDO::FETCH_ASSOC);
+
+                $this->setNombreSubCategoria($subCategory['nombre_subcategoria']);
+                $this->setNombreCategoria($subCategory['nombre_categoria']);
+
+                return $subCategory;
+            }catch(PDOException $e) {
+            error_log('CategoriesModel::getId->PDOException' . $e);
             }
         }
 
@@ -268,7 +289,7 @@
             }
         }
 
-        public function jsonSerialize()
+        public function jsonSerialize():mixed
         {
             return [
                 'id_categoria' => $this->id_categoria,
