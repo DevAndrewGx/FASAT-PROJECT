@@ -241,6 +241,31 @@
             }
         }
 
+        public function updateCategory($idCategoria) { 
+            try{
+                error_log("CategoriasModel::update -> Funcion para actualizar una categoria");
+
+                $query = $this->prepare('UPDATE categorias SET nombre_categoria = :nombreCategoria, tipo_categoria = :tipoCategoria WHERE id_categoria = :id');
+
+                $query->execute([
+                    'nombreCategoria'=>$this->nombre_categoria,
+                    'tipoCategoria' => $this->tipo,
+                    'id'=>$idCategoria
+                ]);
+
+                // verificamos si se actualizo alguna fila
+                if($query->rowCount() > 0 ) { 
+                    return true;
+                }else {
+                    error_log('CategoriasModle::update -> No se actualizó ninguna fila');
+                    return false;
+                }
+            }catch(PDOException $e) {
+                error_log('CategoriasModel::update->PDOException' . $e);
+                return false;
+            }
+        }
+
         public function jsonSerialize()
         {
             return [

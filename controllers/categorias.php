@@ -275,7 +275,55 @@ class Categorias extends SessionController
         }
     }
 
-    // function para traer la data de las subcategorias asociadasa a una categoria
+    
+    // funcion para actualizar una categoria
+
+    public function updateCategory() { 
+        error_log('Categorias::updateCategory -> Funcion para actualizar una categoria');
+        
+        // validamos que los datos que vienen del formulario no este vacios
+        if(!$this->existPOST(['nombreCategoria', 'tipoCategoria', 'id_categoria'])) {
+
+            error_log('Categorias::updateCategory -> Hay algunos parametros vacios enviados en el formulario');
+            
+            echo json_encode(['status'=>false, 'message'=> "Algunos datos enviados del formulario estan vacios"]);
+
+            return;
+        }
+        // validamos que el usuario de la sesión no este vacio
+        if ($this->user == NULL) {
+
+            error_log('Categorias::updateCategory -> El usuario de la sesión esta vacio');
+            
+            echo json_encode(['status'=> false, 'message'=> "El usuario de la sesión intenlo nuevamente"]);
+            return;
+        }
+
+        // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
+        error_log('Categorias::updateCategory -> Es posible actualizar una categoria');
+
+        $objCategory = new CategoriasModel();
+
+        $objCategory->setNombreCategoria($this->getPost('nombreCategoria'));
+        $objCategory->setTipoCategoria($this->getPost('tipoCategoria'));
+
+        // ejecutamos la query para actualizar una categoria
+        $res = $objCategory->updateCategory($this->getPost('id_categoria'));
+        
+        // validamos si la consulta se ejecuto correctamente
+
+        if($res) {
+            error_log('Category::updateCategory -> Se actualizo la categoria correctamente');
+            echo json_encode(['status' => true, 'message' => "La categoria fue actualizada exitosamente!"]);
+            return;
+        }else {
+            error_log('Category::updateCategory -> Error en la consulta del Back');
+            echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
+            return;
+        }
+    }
+
+    
     
     
     

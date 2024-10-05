@@ -148,7 +148,7 @@ class Productos extends SessionController
             error_log('Categorias::getCategories -> Error en traer los datos - getCategories' . $e->getMessage());
         }
     }
-
+  // function para traer la data de las subcategorias asociadasa a una categoria
     function getSubcategoriesByCategory()
     {
         error_log('its here');
