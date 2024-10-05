@@ -135,13 +135,12 @@ class Categorias extends SessionController
             // Obtener los parámetros enviados por DataTables
             $draw = intval($_GET['draw']);
             $start = intval($_GET['start']);
-            $length = intval($_GET['length']);
+            $length = isset($_GET['length']) ? (int)$_GET['length'] : 10;
             $search = $_GET['search']['value'];
             $orderColumnIndex = intval($_GET['order'][0]['column']);
             $orderDir = $_GET['order'][0]['dir'];
             $columns = $_GET['columns'];
             $orderColumnName = $columns[$orderColumnIndex]['data'];
-
 
             //creamos un objeto del modelocategorias
 

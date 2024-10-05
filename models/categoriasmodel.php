@@ -152,12 +152,14 @@
                 } else {
                     $sql .= " ORDER BY c.nombre_categoria DESC";
                 }
-
-                if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
+                error_log("Registros por pagina: ->>>>>>>>>>>>>>>>> ".$registrosPorPagina);
+                error_log("Inicio por pagina: ->>>>>>>>>>>>>>". $inicio);
+                if ($registrosPorPagina != null && $registrosPorPagina != -1 || $inicio != null) {
                     $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
                 }
-
-                error_log('Query....'.$sql);
+                error_log("Consulta 1 : ->>>>>>>>>>>>>>". $registrosPorPagina != null && $registrosPorPagina != -1 || $inicio != null);
+                error_log("Consulta 2 : ->>>>>>>>>>>>>>". $registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null);
+                error_log("Consulta: ->>>>>>>>>>>>>>" . $sql);
                 $query = $this->query($sql);
 
                 while ($p = $query->fetch(PDO::FETCH_ASSOC)) {  
