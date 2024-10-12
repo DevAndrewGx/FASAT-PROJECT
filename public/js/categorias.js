@@ -208,13 +208,10 @@ $("#formCategories").on("submit", function(e) {
             const categoryFormData = new FormData(form);
 
             // verificamos si la clase cambia para hacer la validación de actualización
-            let editar = $(".modal-header").hasClass("headerUpdate")
-                ? true
-                : false;
+            let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
             console.log(editar);
 
             // agregamos el campo id de categoria para realizar la actualización y ademas se agrega la URL construida
-
             if (editar) {
                 categoryFormData.append("id_categoria", globalIdCategoria);
                 console.log(globalIdCategoria);
@@ -266,6 +263,24 @@ $("#formCategories").on("submit", function(e) {
                     editar ? " Categoría actualiza" : "Categoria creada"
                 );
             }
+        }
+    });
+
+    // Actualizar la subcategora con una funcion aparte porque el modal esta dentro del modal de envio de categoria
+    $("#formSubcategory").off("submit").on("submit", function (e) {
+
+        e.preventDefault();
+        const submitSubcategoryButton = $(this).find('button[type="submit"]');
+        submitSubcategoryButton.prop("disabled", true);
+
+        if (validateFormSubCategories()) {
+            // Crear una nueva instancia de FormData para el formulario de subcategoría
+            let subcategoryFormData = new FormData(this); // 'this' hace referencia al formulario de subcategoría
+            subcategoryFormData.append("idSubcategoria",globalIdSubCategoria);
+
+            sendForm(this, subcategoryFormData, baseUrl + "categorias/updateSubCategory","Subcategoria Actualizada!");
+        } else {
+            submitSubcategoryButton.prop("disabled", false);
         }
     });
     
@@ -530,15 +545,30 @@ $("#formCategories").on("submit", function(e) {
     });
 
 
-    // Resetear los formularios al cerrar los modales para evitar que queden datos en ellos Y quede en modo edición
-    $("#modalFormCategories, #subcategoryModal").off('hiddden.bs.modal').on('hidden.bs.modal', function() {
-        $(this).find(".is-invalid").removeClass("is-invalid");
-        $(this).find(".invalid-feedback").hide();
-        $(".modal-header").removeClass("headerUpdate");
-        $(".modal-header").addClass("headerRegister");
-        // mostramos la opcion de subCategoria porque no estamos en edición
-        $("#subCategoryOption").show();
-        $("#categoriaAsociadaContainer").hide();
-    });
+   $("#modalFormCategories, #subcategoryModal").off('hidden.bs.modal').on('hidden.bs.modal', function() {
+    // Limpiar errores previos
+    $(this).find(".is-invalid").removeClass("is-invalid");
+    $(this).find(".invalid-feedback").hide();
+
+    // Restablecer el header a modo "agregar"
+    $(".modal-header").removeClass("headerUpdate").addClass("headerRegister");
+
+    // Limpiar los campos de texto
+    $("#subCategoriaNombre").val("");  // Limpiar el input del nombre de subcategoría
+
+    // Limpiar y ocultar el select de categorías asociadas
+    $("#categoriaAsociada").empty();
+    $("#categoriaAsociadaContainer").hide();
+
+    // Restablecer el texto del botón y del modal para agregar
+    $("#titleModal").html("Agregar subcategoría");
+    $("#nameSubCategory").text("Agregar sucategoria");
+    $("#addSubcategory").text("Agregar subcategoría");
+
+    // Mostramos la opción de subcategoría si es necesario
+    $("#subCategoryOption").show();
+});
+
+
 
 });

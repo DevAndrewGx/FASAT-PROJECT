@@ -279,6 +279,7 @@
             }
         }
 
+        // funcion para actualizar una categoria
         public function updateCategory($idCategoria) { 
             try{
                 error_log("CategoriasModel::update -> Funcion para actualizar una categoria");
@@ -289,6 +290,33 @@
                     'nombreCategoria'=>$this->nombre_categoria,
                     'tipoCategoria' => $this->tipo,
                     'id'=>$idCategoria
+                ]);
+
+                // verificamos si se actualizo alguna fila
+                if($query->rowCount() > 0 ) { 
+                    return true;
+                }else {
+                    error_log('CategoriasModle::update -> No se actualizó ninguna fila');
+                    return false;
+                }
+            }catch(PDOException $e) {
+                error_log('CategoriasModel::update->PDOException' . $e);
+                return false;
+            }
+        }
+
+        // funcion para actualizar una subcategoria
+        public function updateSubCategory($idSubCategoria) { 
+
+            try{
+                error_log("CategoriasModel::update -> Funcion para actualizar una subcategoria");
+
+                $query = $this->prepare('UPDATE sub_categorias SET nombre_subcategoria = :nombre_subcategoria, id_categoria = :id_categoria WHERE id_sub_categoria = :id');
+
+                $query->execute([
+                    'nombre_subcategoria'=>$this->nombre_subcategoria,
+                    'id_categoria' => $this->id_categoria,
+                    'id'=>$idSubCategoria
                 ]);
 
                 // verificamos si se actualizo alguna fila
