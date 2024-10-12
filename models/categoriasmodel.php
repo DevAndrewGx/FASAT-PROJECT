@@ -132,26 +132,41 @@
             }
         }
 
-        // funcion para traer la subcategorias
-        public function getSubCategory($idSubCategoria) { 
+    // funcion para traer la subcategorias con las con las categorias
+        public function getSubCategory($idSubCategoria)
+        {
+            try {
+                // Obtener los datos de la subcategoría y la categoría asociada
+                $querySubCategory = $this->prepare('
+                SELECT su.nombre_subcategoria, ca.id_categoria, ca.nombre_categoria 
+                FROM sub_categorias su 
+                INNER JOIN categorias ca 
+                ON su.id_categoria = ca.id_categoria 
+                WHERE su.id_sub_categoria = :id');
 
-            try { 
-                $query = $this->prepare('SELECT su.nombre_subcategoria, ca.nombre_categoria FROM sub_categorias su INNER JOIN categorias ca ON su.id_categoria = ca.id_categoria WHERE su.id_sub_categoria = :id');
-
-                $query->execute([
-                    'id'=>$idSubCategoria
+                $querySubCategory->execute([
+                    'id' => $idSubCategoria
                 ]);
 
-                $subCategory = $query->fetch(PDO::FETCH_ASSOC);
+                $subCategory = $querySubCategory->fetch(PDO::FETCH_ASSOC);
 
-                $this->setNombreSubCategoria($subCategory['nombre_subcategoria']);
-                $this->setNombreCategoria($subCategory['nombre_categoria']);
+                // Obtener todas las categorías
+                $queryCategories = $this->prepare('SELECT id_categoria, nombre_categoria FROM categorias');
+                $queryCategories->execute();
+                $allCategories = $queryCategories->fetchAll(PDO::FETCH_ASSOC);
 
-                return $subCategory;
-            }catch(PDOException $e) {
-            error_log('CategoriesModel::getId->PDOException' . $e);
+                // Armar la respuesta
+                return [
+                    'nombre_subcategoria' => $subCategory['nombre_subcategoria'],
+                    'id_categoria' => $subCategory['id_categoria'],  // Categoria asociada
+                    'categorias' => $allCategories  // Lista de todas las categorías
+                ];
+            } catch (PDOException $e) {
+                error_log('CategoriesModel::getSubCategory->PDOException' . $e);
+                return null;
             }
         }
+
 
 
         // funciones para dibujar los datos con datatables

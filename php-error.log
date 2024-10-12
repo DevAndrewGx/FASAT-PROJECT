@@ -1184,3 +1184,769 @@
 [05-Oct-2024 23:52:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
 [05-Oct-2024 23:52:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
 [05-Oct-2024 23:52:25 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:13:42 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:44 Europe/Berlin] APP::construct->No hay controlador especificado
+[12-Oct-2024 08:13:44 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[12-Oct-2024 08:13:45 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:45 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:13:46 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:46 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login, url => login
+[12-Oct-2024 08:13:46 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[12-Oct-2024 08:13:46 Europe/Berlin] SessionController::validateSession() public page
+[12-Oct-2024 08:13:46 Europe/Berlin] Login::construct -> inicio de login
+[12-Oct-2024 08:13:46 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[12-Oct-2024 08:13:49 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:49 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/login/authenticate, url => login
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[12-Oct-2024 08:13:49 Europe/Berlin] SessionController::validateSession() public page
+[12-Oct-2024 08:13:49 Europe/Berlin] Login::construct -> inicio de login
+[12-Oct-2024 08:13:49 Europe/Berlin] loginByCorreo: inicio
+[12-Oct-2024 08:13:49 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[12-Oct-2024 08:13:49 Europe/Berlin] login: success
+[12-Oct-2024 08:13:49 Europe/Berlin] This is the state: Activo
+[12-Oct-2024 08:13:49 Europe/Berlin] Login::authenticate() passed
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::authorizeAccess(): role: Administrador
+[12-Oct-2024 08:13:49 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:49 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::isPublic(): currentURL => admin
+[12-Oct-2024 08:13:49 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
+[12-Oct-2024 08:13:49 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
+[12-Oct-2024 08:13:49 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:49 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:49 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:13:52 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos, url => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:53 Europe/Berlin] Producto::construct -> Controlador producto
+[12-Oct-2024 08:13:53 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 96
+[12-Oct-2024 08:13:53 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[12-Oct-2024 08:13:53 Europe/Berlin] 
+[12-Oct-2024 08:13:53 Europe/Berlin] Producto::render -> Carga la pagina principal
+[12-Oct-2024 08:13:53 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:53 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:13:53 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=descripcion&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713633524, url => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::isPublic(): currentURL => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=descripcion&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713633524, url => productos
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site productos
+[12-Oct-2024 08:13:53 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:53 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:53 Europe/Berlin] Producto::construct -> Controlador producto
+[12-Oct-2024 08:13:53 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria
+[12-Oct-2024 08:13:54 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:54 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:54 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:13:54 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:54 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:13:55 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:55 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713635042, url => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713635042, url => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:55 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:13:55 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:13:55 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:13:55 Europe/Berlin] 1
+[12-Oct-2024 08:13:55 Europe/Berlin] 
+[12-Oct-2024 08:13:55 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713635043, url => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728713635043, url => categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:55 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:55 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:13:55 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:13:55 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:13:55 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:13:55 Europe/Berlin] 1
+[12-Oct-2024 08:13:55 Europe/Berlin] 
+[12-Oct-2024 08:13:55 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:13:58 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:13:58 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:13:58 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:13:58 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:13:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:13:58 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:27:25 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714445606, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714445606, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:27:25 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:27:25 Europe/Berlin] 1
+[12-Oct-2024 08:27:25 Europe/Berlin] 
+[12-Oct-2024 08:27:25 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714445607, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714445607, url => categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:27:25 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:25 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:27:25 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:27:25 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:27:25 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:27:25 Europe/Berlin] 1
+[12-Oct-2024 08:27:25 Europe/Berlin] 
+[12-Oct-2024 08:27:25 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:27:41 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:27:41 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:27:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:27:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:27:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:27:41 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:26 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:26 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:26 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:30:26 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:26 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:30:27 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714627064, url => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714627064, url => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:27 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:30:27 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:30:27 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:30:27 Europe/Berlin] 1
+[12-Oct-2024 08:30:27 Europe/Berlin] 
+[12-Oct-2024 08:30:27 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:30:27 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714627065, url => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714627065, url => categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:27 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:27 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:30:27 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:30:27 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:30:27 Europe/Berlin] 1
+[12-Oct-2024 08:30:27 Europe/Berlin] 
+[12-Oct-2024 08:30:27 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:30:29 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:29 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:30:29 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:29 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:29 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:29 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:39 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:39 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:39 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:39 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:30:40 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:40 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:30:41 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:41 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714640880, url => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714640880, url => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:41 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:30:41 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:30:41 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:30:41 Europe/Berlin] 1
+[12-Oct-2024 08:30:41 Europe/Berlin] 
+[12-Oct-2024 08:30:41 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714640881, url => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728714640881, url => categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:41 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:41 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:30:41 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:30:41 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:30:41 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:30:41 Europe/Berlin] 1
+[12-Oct-2024 08:30:41 Europe/Berlin] 
+[12-Oct-2024 08:30:41 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:30:46 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:30:46 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:30:46 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:30:46 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:30:46 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:30:46 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:19 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715759525, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715759525, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:49:19 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:49:19 Europe/Berlin] 1
+[12-Oct-2024 08:49:19 Europe/Berlin] 
+[12-Oct-2024 08:49:19 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715759524, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715759524, url => categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:19 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:19 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:49:19 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:49:19 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:49:19 Europe/Berlin] 1
+[12-Oct-2024 08:49:19 Europe/Berlin] 
+[12-Oct-2024 08:49:19 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:49:22 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:22 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:22 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:22 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:22 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:22 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:30 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:30 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::isPublic(): currentURL => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:49:30 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:30 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:30 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:30 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:30 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:49:30 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:30 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:49:31 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:31 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715771105, url => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715771105, url => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:31 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:49:31 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:49:31 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:49:31 Europe/Berlin] 1
+[12-Oct-2024 08:49:31 Europe/Berlin] 
+[12-Oct-2024 08:49:31 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715771106, url => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715771106, url => categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:31 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:31 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:31 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:49:31 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:49:31 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:49:31 Europe/Berlin] 1
+[12-Oct-2024 08:49:31 Europe/Berlin] 
+[12-Oct-2024 08:49:31 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:49:38 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:38 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:38 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:38 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:38 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:38 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:38 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:38 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:39 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:39 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:42 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:42 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:42 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:42 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:42 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:42 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:49:44 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:49:44 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:49:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:49:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:49:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:49:44 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:50:50 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:50 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::isPublic(): currentURL => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:50:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:50:50 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:50:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:50 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:50:50 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:51 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:50:51 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:51 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715851521, url => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715851521, url => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:51 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:50:51 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:50:51 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:50:51 Europe/Berlin] 1
+[12-Oct-2024 08:50:51 Europe/Berlin] 
+[12-Oct-2024 08:50:51 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715851522, url => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715851522, url => categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:50:51 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:51 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:50:51 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:50:51 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:50:51 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:50:51 Europe/Berlin] 1
+[12-Oct-2024 08:50:51 Europe/Berlin] 
+[12-Oct-2024 08:50:51 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:50:54 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:54 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:50:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:50:54 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:50:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:54 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:50:57 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:50:57 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:50:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:50:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:50:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:50:57 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:00 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:00 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:00 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:00 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:00 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:00 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:03 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:03 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:03 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:03 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:03 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:03 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:10 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:10 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:10 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:10 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:10 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::isPublic(): currentURL => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:12 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:12 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:51:12 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715872775, url => categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715872775, url => categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:12 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:12 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:51:12 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:51:12 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:51:12 Europe/Berlin] 1
+[12-Oct-2024 08:51:12 Europe/Berlin] 
+[12-Oct-2024 08:51:12 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:51:13 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:13 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715872776, url => categorias
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728715872776, url => categorias
+[12-Oct-2024 08:51:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:13 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:13 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:13 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:51:13 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:51:13 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:51:13 Europe/Berlin] 1
+[12-Oct-2024 08:51:13 Europe/Berlin] 
+[12-Oct-2024 08:51:13 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:51:14 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:14 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:14 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:14 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:14 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:14 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:17 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:17 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:17 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:17 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:17 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:17 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:51:20 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:51:20 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:51:20 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:51:20 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:51:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:51:20 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:54:44 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:54:44 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:56:58 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:56:58 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:56:58 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:56:58 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:56:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:56:58 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::isPublic(): currentURL => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:58:57 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716337392, url => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716337392, url => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:58:57 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:58:57 Europe/Berlin] 1
+[12-Oct-2024 08:58:57 Europe/Berlin] 
+[12-Oct-2024 08:58:57 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716337393, url => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716337393, url => categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:58:57 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:58:57 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 08:58:57 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 08:58:57 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 08:58:57 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 08:58:57 Europe/Berlin] 1
+[12-Oct-2024 08:58:57 Europe/Berlin] 
+[12-Oct-2024 08:58:57 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 08:59:04 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 08:59:04 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 08:59:04 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 08:59:04 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 08:59:04 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 08:59:04 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 09:00:11 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:11 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::isPublic(): currentURL => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias?subCategoriaNombre=Y&categoriaAsociada=2, url => categorias?subCategoriaNombre=Y&categoriaAsociada=2
+[12-Oct-2024 09:00:11 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 09:00:11 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 09:00:11 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:11 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 09:00:11 Europe/Berlin] Categorias::render -> Carga la pagina principal de categorias
+[12-Oct-2024 09:00:11 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:12 Europe/Berlin] Errores::construct -> inicio de errores
+[12-Oct-2024 09:00:12 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716412152, url => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_categoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=tipo_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716412152, url => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:12 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 09:00:12 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 09:00:12 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 09:00:12 Europe/Berlin] 1
+[12-Oct-2024 09:00:12 Europe/Berlin] 
+[12-Oct-2024 09:00:12 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY nombre_categoria asc LIMIT 10 OFFSET 0
+[12-Oct-2024 09:00:12 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716412153, url => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getCategories?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_subcategoria&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=options&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1728716412153, url => categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 09:00:12 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:12 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 09:00:12 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria
+[12-Oct-2024 09:00:12 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[12-Oct-2024 09:00:12 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[12-Oct-2024 09:00:12 Europe/Berlin] 1
+[12-Oct-2024 09:00:12 Europe/Berlin] 
+[12-Oct-2024 09:00:12 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria ORDER BY c.nombre_categoria DESC LIMIT 10 OFFSET 0
+[12-Oct-2024 09:00:19 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:19 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 09:00:19 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 09:00:19 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 09:00:19 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:19 Europe/Berlin] Categorias::construct -> Controlador categorias
+[12-Oct-2024 09:00:50 Europe/Berlin] Inicializando la aplicacion...
+[12-Oct-2024 09:00:50 Europe/Berlin] SessionController::validateSession()
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::isPublic(): currentURL => categorias
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/categorias/getSubCategory, url => categorias
+[12-Oct-2024 09:00:50 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site categorias
+[12-Oct-2024 09:00:50 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[12-Oct-2024 09:00:50 Europe/Berlin] sessionController::getUserSessionData(): Dave
+[12-Oct-2024 09:00:50 Europe/Berlin] Categorias::construct -> Controlador categorias

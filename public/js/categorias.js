@@ -361,48 +361,38 @@ $("#formCategories").on("submit", function(e) {
         $("#nameSubCategory").text('Actualizar subcategoria');
         $("#addSubcategory").text("Actualizar subcategoria");
 
+        $("#categoriaAsociadaContainer").show();
+
         $.ajax({
             url: baseUrl + "categorias/getSubCategory",
             type: "POST",
             dataType: "json",
-            data: JSON.stringify({ idSubCategoria: globalIdSubCategoria}),
-            // respuesta del servidor
+            data: JSON.stringify({ idSubCategoria: globalIdSubCategoria }),
             success: function (response) {
-                // validamos si la respuesta del servidor es correcta
                 if (response.status) {
-                    // verificamos que la data no este nulla
-                    if (response.data) {
-                        // tomamos los datos del arreglo para setearlos al formulario
-                       // Crear el select de forma dinámica
-                        let categoriaAsociada = $("<select></select>") // Crear el select
-                            .attr("id", "newSelect") // Asignar un ID
-                            .addClass("form-control") // Añadir la clase form-control
-                            .append($("<option></option>").val("opcion1").text("Opción 1"))
-                            .append($("<option></option>").val("opcion2").text("Opción 2"))
-                            .append($("<option></option>").val("opcion3").text("Opción 3"));
+                    var categoriaData = response.data;
 
-                        // Crear una etiqueta de forma dinámica
-                        let label = $("<label></label>")
-                            .attr("for", "newSelect")
-                            .text("Seleccionar opción")
-                            .addClass("form-label"); // Añadir la clase form-label
+                    // Asignamos el nombre de la subcategoría al input correspondiente
+                    $("#subCategoriaNombre").val(categoriaData.nombre_subcategoria);
 
-                        // Agregar el label y el select después del input en el contenedor
-                        $("#container-form").append(label).append(categoriaAsociada);
-                        // $("#categoriaNombre").val(subCategoriaData.tipo_categoria);
-                    } else {
-                        console.log("Data isn't exist or is undefined");
-                    }
-                } else {
-                    console.log("Data no exist");
+                    // Limpiamos el select de categorías antes de llenarlo, para que no se repita la data en el select
+                    $("#categoriaAsociada").empty();
+
+                    // Recorremos todas las categorías y las añadimos al select
+                    $.each(categoriaData.categorias, function(index, categoria) {
+                        $("#categoriaAsociada").append(
+                            `<option value="${categoria.id_categoria}" ${categoria.id_categoria == categoriaData.id_categoria ? 'selected' : ''}>${categoria.nombre_categoria}</option>`
+                        );
+                    });
                 }
             },
-            error: function (response) {},
+            error: function (response) {
+                console.log("Error al obtener la subcategoría y las categorías.");
+            },
             complete: function () {
                 $("#subcategoryModal").modal("show");
             },
         });
-        
     });
 
     // funcion para eliminar una subcategorias
@@ -548,6 +538,7 @@ $("#formCategories").on("submit", function(e) {
         $(".modal-header").addClass("headerRegister");
         // mostramos la opcion de subCategoria porque no estamos en edición
         $("#subCategoryOption").show();
+        $("#categoriaAsociadaContainer").hide();
     });
 
 });

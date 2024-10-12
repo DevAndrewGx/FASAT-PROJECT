@@ -132,6 +132,7 @@
                                 </select>
                                 <div id="typeCategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un tipo de categoría válido.</div>
                             </div>
+
                             <div class="mb-3" id="subCategoryOption">
                                 <input type="checkbox" id="hasSubcategory">
                                 <label for="hasSubcategory">Agregar Subcategoría</label>
@@ -180,6 +181,15 @@
                                 <input type="text mb-3" class="form-control" name="subCategoriaNombre" id="subCategoriaNombre" placeholder="Nombre de la Subcategoría">
                                 <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un nombre de subcategoría válido.</div>
                             </div>
+                            <!-- select oculto para actualizar la subcategoria con su respectiva categoria
+                              -->
+                            <div class="mb-3" id="categoriaAsociadaContainer" style="display:none;">
+                                <label for="categoriaAsociada" class="form-label">Nombre de la Categoría</label>
+                                <select name="categoriaAsociada" id="categoriaAsociada" class="form-control">
+                                    <!-- Aquí se insertarán las opciones desde JavaScript -->
+                                </select>
+                            </div>
+
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" id="addSubcategory">Agregar Subcategoría</button>
                             </div>
