@@ -230,12 +230,13 @@ $subcategories = $this->d['subcategories'];
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="disponibilidad" class="col-form-label">Permitir vender sin stock</label>
-                                <select name="disponibilidad" class="form-control select" id="disponibilidad">
+                                <label for="cantidad" class="col-form-label">Cantidad</label>
+                                <!-- <select name="disponibilidad" class="form-control select" id="disponibilidad">
                                     <option>Seleccionar opcion</option>
                                     <option value="SI">Si</option>
                                     <option value="NO">No</option>
-                                </select>
+                                </select> -->
+                                <input type="number" class="form-control valid validTest" name="cantidad" required>
                             </div>
 
                         </div>

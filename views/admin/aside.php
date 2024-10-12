@@ -21,7 +21,7 @@
             <i class='bx bx-grid-alt'></i>
             <a href="#">Ordenes</a>
         </div>
-
+        
         <div class="item" id="ventas">
             <i class='bx bx-transfer-alt'></i>
             <a href="<?php echo constant('URL'); ?>ventas">Ventas</a>

@@ -59,6 +59,9 @@ $(document).ready(function () {
     });
 
 
+    let dataTableProductsOnStok = 
+
+
     $("#formProduct").submit(function (e) {
         console.log("It's here");
         e.preventDefault();
@@ -97,7 +100,7 @@ $(document).ready(function () {
         });
     });
 
-    // funcion para filtrar categorias segun la categoria seleccionada
+    // funcion para filtrar categorias segun la categoria seleccionada con el evento change
     $("#modalFormCreateProduct #formProduct #categoria").on(
         "change",
         function (e) {

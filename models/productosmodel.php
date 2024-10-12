@@ -17,7 +17,7 @@
         private $nombre;
         private $nombre_categoria;
         private $descripcion;
-        private $disponibilidad;
+        // private $disponibilidad;
         
         
         // creamos el constructor para inicializar los atributos
@@ -37,7 +37,7 @@
             $this->nombre = '';
             $this->nombre_categoria = '';
             $this->descripcion = '';
-            $this->disponibilidad = '';
+            // $this->disponibilidad = '';
         }
 
         
@@ -48,7 +48,7 @@
             
             try { 
                 // creamos la query para insertar datos dentro de la bd
-                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock,  nombre, precio, descripcion, permitir_sin_vender) VALUES(:id_foto, :id_categoria, :id_subcategoria, :id_proveedor, :id_stock, :nombre, :precio, :descripcion, :disponibilidad)");
+                $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock,  nombre, precio, descripcion) VALUES(:id_foto, :id_categoria, :id_subcategoria, :id_proveedor, :id_stock, :nombre, :precio, :descripcion)");
 
                 $query->execute([
                     'id_foto'=>$this->id_foto,
@@ -59,7 +59,6 @@
                     'nombre'=>$this->nombre,
                     'precio'=>$this->precio,
                     'descripcion'=>$this->descripcion,
-                    'disponibilidad'=>$this->disponibilidad,
                 ]);
 
                 // retornamos true para salirnos de la funcion
@@ -175,7 +174,7 @@
             }
         }
 
-        public function jsonSerialize()
+        public function jsonSerialize():mixed
         {
             return [
                 'id_pinventario' => $this->id_producto,
@@ -197,7 +196,7 @@
         public function setNombre($nombre) { $this->nombre = $nombre;}
         public function setNombreCategoria($nombre) { $this->nombre_categoria = $nombre;}
         public function setDescripcion($descripcion) {  $this->descripcion = $descripcion;}
-        public function setDisponibilidad($disponibilidad) { $this->disponibilidad = $disponibilidad;}
+        // public function setDisponibilidad($disponibilidad) { $this->disponibilidad = $disponibilidad;}
 
 
         public function getIdProducto() { return $this->id_producto; }
@@ -210,7 +209,7 @@
         public function getNombre() { return $this->nombre;}
         public function getNombreCategoria() { return $this->nombre_categoria;}
         public function getDescripcion() { return $this->descripcion;}
-        public function getDisponibilidad() { return $this->disponibilidad;}
+        // public function getDisponibilidad() { return $this->disponibilidad;}
         
     }
 

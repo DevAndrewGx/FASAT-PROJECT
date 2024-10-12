@@ -31,7 +31,7 @@ class Productos extends SessionController
         // primero validamos si la data viene correctamente desde el formulario
         error_log('Productos::createProduct -> Funcion para crear nuevos productos');
 
-        if (!$this->existPOST(['nombreProducto', 'categoria', 'subcategoria', 'precio', 'descripcion','disponibilidad'])) {
+        if (!$this->existPOST(['nombreProducto', 'categoria', 'subcategoria', 'precio', 'descripcion'])) {
             error_log('Users::createUser -> Hay algun error en los parametros enviados en el formulario');
 
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
@@ -58,7 +58,6 @@ class Productos extends SessionController
         $productoObject->setIdSubcategoria($this->getPost('subcategoria'));
         $productoObject->setPrecio($this->getPost('precio'));
         $productoObject->setDescripcion($this->getPost('descripcion'));
-        $productoObject->setDisponibilidad($this->getPost('disponibilidad'));
 
         // creamos un nuevo objeto para guardar una foto
         $photoObj = new FotoModel();
