@@ -3,9 +3,9 @@ const selectBtn = document.querySelector(".select-btn");
 const options = document.querySelectorAll(".option");
 const selectPlaceholder = document.querySelector(".select-placeholder");
 
-selectBtn.addEventListener("click", () => {
-    optionMenu.classList.toggle("active");
-});
+// selectBtn.addEventListener("click", () => {
+//     optionMenu.classList.toggle("active");
+// });
 
 options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -59,8 +59,40 @@ $(document).ready(function () {
     });
 
 
-    let dataTableProductsOnStok = 
-
+    let dataTableProductsOnStok = $("#data-stock-productos").DataTable({
+        responsive: true,
+        processing: true,
+        serverSide: true,
+        pageLength: 10, // Muestra 10 registros por página
+        language: {
+            lengthMenu: "Mostrar _MENU_ registros",
+            zeroRecords: "No se encontraron resultados",
+            info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            infoEmpty:
+                "Mostrando registros del 0 al 0 de un total de 0 registros",
+            infoFiltered: "(filtrado de un total de _MAX_ registros)",
+            search: "Buscar:",
+            processing: "Procesando...",
+        },
+        ajax: {
+            url: baseUrl + "stock/getProductsOnStock",
+            type: "GET",
+            dataType: "json",
+        },
+        columns: [
+            { data: "checkmarks" },
+            { data: "nombre_producto" },
+            { data: "cantidad" },
+            { data: "cantidad_disponible" },
+            { data: "options" },
+        ],
+        columnDefs: [
+            {
+                targets: [0, 4],
+                orderable: false,
+            },  
+        ],
+    });
 
     $("#formProduct").submit(function (e) {
         console.log("It's here");

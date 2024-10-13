@@ -50,15 +50,17 @@
                 // creamos la query para insertar datos dentro de la bd
                 $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock,  nombre, precio, descripcion) VALUES(:id_foto, :id_categoria, :id_subcategoria, :id_proveedor, :id_stock, :nombre, :precio, :descripcion)");
 
+
+                // si los datos no existe los ponemos nullos para que puedan ser insertados dentro la bd
                 $query->execute([
-                    'id_foto'=>$this->id_foto,
-                    'id_categoria' => $this->id_categoria,
-                    'id_subcategoria' => $this->id_subcategoria,
-                    'id_proveedor' => $this->id_provedor,
-                    'id_stock'=>$this->id_stock,
-                    'nombre'=>$this->nombre,
-                    'precio'=>$this->precio,
-                    'descripcion'=>$this->descripcion,
+                    'id_foto' => $this->id_foto ?? null,
+                    'id_categoria' => $this->id_categoria ?? null,
+                    'id_subcategoria' => $this->id_subcategoria ?? null,
+                    'id_proveedor' => $this->id_proveedor ?? null, 
+                    'id_stock' => $this->id_stock ?? null,
+                    'nombre' => $this->nombre,
+                    'precio' => $this->precio,
+                    'descripcion' => $this->descripcion
                 ]);
 
                 // retornamos true para salirnos de la funcion

@@ -37,6 +37,12 @@
             "description": "Tabla donde se visualizan las categorias"
         },
         {
+            "site": "stock", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Tabla donde se visualiza el control del stock"
+        },
+        {
             "site": "users", 
             "access": "private", 
             "role": "Administrador",

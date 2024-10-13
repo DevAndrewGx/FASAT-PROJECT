@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="base-url" content="<?php echo constant('URL'); ?>">
-    <title>FAST | EMPLEADOS</title>
+    <title>FAST | STOCK</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,8 @@
                     <nav>
                         <ul>
                             <li><a href="<?php echo constant('URL'); ?>productos">Lista Productos</a></li>
-                            <li id="active"><a href="#">Control de Stock</a></li>
+                            <li><a href="<?php echo constant('URL'); ?>categorias">Lista Categorias</a></li>
+                            <li id="active"><a href="<?php echo constant('URL'); ?>stock">Control de Stock</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -39,6 +40,11 @@
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Control de Stock</h1>
+                        <nav class="nav-main">
+                            <a href="homeAdmin.php">Admin</a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Stock </a>
+                        </nav>
                     </div>
                     <div class="page-btn">
                         <!-- Botón para abrir el modal de agregar control de stock -->
@@ -55,17 +61,24 @@
                             <div class="card-body">
                                 <h5 class="card-title">Productos</h5>
                                 <div class="table-responsive">
-                                    <table id="controlStockProductos" class="table table-striped">
+                                    <table id="data-stock-productos" class="table datanew table-striped" style="width: 100%;">
                                         <thead>
                                             <tr>
+                                                <th>
+                                                    <label class="checkboxs">
+                                                        <input type="checkbox">
+                                                        <span class="checkmarks"></span>
+                                                    </label>
+                                                </th>
+
                                                 <th>Producto</th>
                                                 <th>Stock</th>
                                                 <th>Disponible</th>
                                                 <th>Acción</th>
-                                            </tr>
+                                            </tr>   
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td>Agua Mineral</td>
                                                 <td>50 unid.</td>
                                                 <td>47 unid.</td>
@@ -84,7 +97,7 @@
                                                     <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
                                                     <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -98,7 +111,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Ingredientes</h5>
                                 <div class="table-responsive">
-                                    <table id="controlStockIngredientes" class="table table-striped">
+                                    <table id="data-stock-ingredientes" class="table table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Ingrediente</th>
@@ -243,7 +256,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
-    <script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/categorias.js"></script>
 
@@ -253,9 +266,6 @@
             // Inicializar DataTables
             $('#controlStockProductos').DataTable();
             $('#controlStockIngredientes').DataTable();
-
-
-
 
         });
 
@@ -300,8 +310,8 @@
                 cancelButtonColor: '#6c757d',
                 confirmButtonText: 'Sí, eliminar',
                 cancelButtonText: 'Cancelar',
-                position: 'center', 
-                heightAuto: false 
+                position: 'center',
+                heightAuto: false
             });
         });
     </script>

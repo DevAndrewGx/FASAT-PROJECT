@@ -16,10 +16,10 @@
         function render()
         {
             error_log('Users::render -> Carga la pagina principal de STOCK');
-            $this->view->render('admin/gestionControlStock', []);
+            $this->view->render('admin/gestionStock', []);
         }
 
-        // funcion para cargar los productos en las datatables
+        // funcion para cargar los pro  ductos en las datatables
         function getProductsOnStock() { 
 
             try {

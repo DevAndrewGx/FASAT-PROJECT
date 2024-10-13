@@ -12,7 +12,7 @@ $subcategories = $this->d['subcategories'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="base-url" content="<?php echo constant('URL'); ?>">
-    <title>FAST | DASHBOARD</title>
+    <title>FAST | INVENTARIO</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- CSS de Bootstrap -->
@@ -44,7 +44,7 @@ $subcategories = $this->d['subcategories'];
                         <ul>
                             <li id="active"><a href="<?php echo constant('URL'); ?>productos">Lista Productos</a></li>
                             <li><a href="<?php echo constant('URL'); ?>categorias">Lista Categorias</a></li>
-                            <li><a href="#">Control de Stock</a></li>
+                            <li><a href="<?php echo constant('URL');?>stock">Control de Stock</a></li>
                         </ul>
                     </nav>
                 </div>

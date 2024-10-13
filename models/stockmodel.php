@@ -22,6 +22,39 @@
         }
 
 
+        // La funcion save nos va ayudar a guardar los datos en la tabla stock
+        public function save() { 
+            
+            try { 
+
+                // creamos la conexión con la bd ya que vamos a recuperar el lastInsertId de la consulta
+                $conn = $this->db->connect();
+                
+                $query = $conn->prepare("INSERT INTO stock_inventario (cantidad, cantidad_minima, cantidad_disponible) VALUES (:cantidad, :cantidad_minima, :cantidad_disponible)");
+
+                $query->execute([
+                    'cantidad' => $this->cantidad,
+                    'cantidad_minima' => $this->cantidad_minima,
+                    'cantidad_disponible' => $this-> cantidad_disponible
+                ]);
+
+                // tomamos el id insertado en la tabla stock para hacer la relación
+
+                $getLastInsertId = $conn->lastInsertId();
+                error_log('StockModel::save -> lastId -> '.$getLastInsertId);
+
+                $this->setIdStock($getLastInsertId);
+
+                // retornamos true para salir de la funcion
+                return true;
+            }catch(PDOException $e) {
+                error_log('StockModel::save->PDOException' . $e);
+                // salimos de la funcion
+                return false;
+            }
+            
+        }
+
         public function getAll() { 
             
             // creamos un arreglo para almacenar los datos que vengan de la bd
@@ -39,10 +72,10 @@
                     // // a cada elemento de la db le creamos un nuevo UserModel para rellenar sus respectivos campos con los setters
                     $item = new StockModel();
                     
-                    $this->setNombreProducto($item["nombre"]);
-                    $this->setCantidad($item["cantidad"]);
-                    $this->setCantidadMinima($item["cantidad_minima"]);
-                    $this->setCantidadDisponible($item["cantidad_disponible"]);
+                    $item->setNombreProducto($row["nombre"]);
+                    $item->setCantidad($row["cantidad"]);
+                    $item->setCantidadMinima($row["cantidad_minima"]);
+                    $item->setCantidadDisponible($row["cantidad_disponible"]);
                     
                     // Ya que asignamos todo lo necesario, lo vamos agregar a items para que al final tenga de elementos de tipo userModel
                     array_push($items, $item);
@@ -73,7 +106,7 @@
                 if ($columna != null && $orden != null) {
                     $sql .= " ORDER BY $nombreColumna $orden";
                 } else {
-                    $sql .= " ORDER BY u.cantidad DESC";
+                    $sql .= " ORDER BY st.cantidad DESC";    
                 }
 
                 if ($registrosPorPagina != null && $registrosPorPagina != -1 || $inicio != null) {
@@ -152,6 +185,7 @@
         }
 
         // GETTERS Y SETTERS
+        public function setIdStock($id) {$this->id_inventario = $id;}
         public function setNombreProducto($nombre) {$this->nombre_producto = $nombre;}
         public function setCantidad($cantidad) { $this->cantidad = $cantidad;}
         public function setCantidadMinima($minima) {$this->cantidad_minima = $minima;}  
@@ -161,6 +195,7 @@
         public function getCantidad() { return $this->cantidad;}
         public function getCantidadMinima() { return $this->cantidad_minima;}
         public function getCantidadDisponible() { return $this->cantidad_disponible;}
+        public function getIdStock() { return $this->id_inventario;}
 
     }
 

@@ -62,6 +62,13 @@ class Productos extends SessionController
         // creamos un nuevo objeto para guardar una foto
         $photoObj = new FotoModel();
 
+        // creamos un nuevo objeto de stock para asignar los valores a sus respectivo atributos
+        $stockObj = new StockModel();
+
+        $stockObj->setCantidad($this->getPost('cantidad'));
+        $stockObj->setCantidadMinima($this->getPost('cantidad'));
+        $stockObj->setCantidadDisponible($this->getPost('cantidad'));
+
         $this->createPhoto($photoObj, "productos");
           // verificamos si la consulta de las fotos se ejecuta correctamente
         if ($photoObj->save()) {
@@ -69,19 +76,27 @@ class Productos extends SessionController
             $idPhoto = $photoObj->getIdFoto();
             // error_log('Users::createUser -> idFoto: ' . $photoObj);
 
-            if ($idPhoto) {
-                $productoObject->setIdFoto($idPhoto);
-                // verificamos si se pudo insertar data dentro la bd
-                if ($productoObject->save()) {
-                    error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
-                    echo json_encode(['status' => true, 'message' => "El producto fue creado exitosamente!"]);
-                    return;
-                } else {
-                    error_log('Productos::createProduct -> No se guardó el producto correctamente');
-                    echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar producto, intentalo nuevamente"]);
-                    return;
-                }
-            }
+            if($stockObj->save()) {
+                error_log("Productos::createProduct -> se guardo la data del id stock correctamente");
+                $idStock = $stockObj->getIdStock();
+                $productoObject->setIdStock($idStock);
+
+                if ($idPhoto) {
+                    $productoObject->setIdFoto($idPhoto);
+                    // verificamos si se pudo insertar data dentro la bd
+                    if ($productoObject->save()) {
+                        error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
+                        echo json_encode(['status' => true, 'message' => "El producto fue creado exitosamente!"]);
+                        return;
+                    } else {
+                        error_log('Productos::createProduct -> No se guardó el producto correctamente');
+                        echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar producto, intentalo nuevamente"]);
+                        return;
+                    }
+                }  
+            }   
+            
+           
         }
         
     }
