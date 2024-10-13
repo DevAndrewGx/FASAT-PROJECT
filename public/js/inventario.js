@@ -123,6 +123,7 @@ $(document).ready(function () {
                         if (result.isConfirmed) {
                             // Cerrar el modal y reiniciar el formulario
                             $("#formProduct").closest(".modal").modal("hide");
+                            dataTable.ajax.reload(null, false);
                         }
                     });
                 } else {

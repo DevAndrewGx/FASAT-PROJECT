@@ -151,10 +151,10 @@
                 st.cantidad LIKE '%$searchValue%' OR 
                 st.cantidad_minima LIKE '%$searchValue%' OR 
                 st.cantidad_disponible LIKE '%$searchValue%'";
-
-                $query = $this->query($sql);
-                return $query->fetch(PDO::FETCH_ASSOC)['total'];
             }
+            
+            $query = $this->query($sql);
+            return $query->fetch(PDO::FETCH_ASSOC)['total'];
         }
 
 

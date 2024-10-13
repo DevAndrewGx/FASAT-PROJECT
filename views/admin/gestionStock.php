@@ -61,7 +61,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Productos</h5>
                                 <div class="table-responsive">
-                                    <table id="data-stock-productos" class="table datanew table-striped" style="width: 100%;">
+                                    <table id="data-stock-productos" class="table datanew" style="width: 100%;">
                                         <thead>
                                             <tr>
                                                 <th>
