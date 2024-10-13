@@ -18,7 +18,7 @@
             "require": {
                 "ext-mbstring": "*",
                 "ext-zlib": "*",
-                "php-64bit": "^8.1"
+                "php-64bit": ""
             },
             "require-dev": {
                 "ext-zip": "*",

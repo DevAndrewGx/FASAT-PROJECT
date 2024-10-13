@@ -61,7 +61,8 @@ $user = $this->d['user'];
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Enviar Nuevo Pedido</h5>
-                        <button class="btn btn-primary" id="openOrderForm">Ingresar Orden</button>
+                        <button class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#orderModal">Ingresar Orden</button>
+
                     </div>
                 </div>
 
@@ -141,13 +142,38 @@ $user = $this->d['user'];
                             </div>
                             <div id="mesasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de mesa válido.</div>
                         </div>
+
+                        <!-- Nueva sección para Categorías y Subcategorías -->
                         <div class="mb-3">
-                            <label for="platos" class="form-label">Platos</label>
+                            <label for="categoria" class="form-label">Categoría</label>
+                            <select class="form-select" id="categoriaSelect">
+                                <option value="" disabled selected>Seleccionar Categoría</option>
+                                <?php
+                                foreach ($categories as $cat) {
+                                ?>
+                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                        <label for="producto" class="form-label">Productos</label>
+                        <select class="producto" id="productoSelect">
+                            <option value="" disabled selected>Seleccionar Producto</option>
+
+
+
+                        </select>
+
+                        <!-- Elementos del pedido (agregados por el usuario) -->
+                        <div class="mb-3">
+                            <label for="elementos" class="form-label">Elementos del Pedido</label>
                             <div class="table-responsive">
-                                <table class="table" id="platosTable">
+                                <table class="table" id="elementosTable">
                                     <thead>
                                         <tr>
-                                            <th>Nombre del Plato</th>
+                                            <th>Nombre del Elemento</th>
                                             <th>Cantidad</th>
                                             <th>Precio Unitario</th>
                                             <th>Subtotal</th>
@@ -159,49 +185,20 @@ $user = $this->d['user'];
                                 </table>
                             </div>
                             <div class="input-group mb-3">
-                                <select class="form-select" id="platoSelect">
-                                    <option value="" disabled selected>Seleccionar Plato</option>
-                                    <option value="Pizza Margarita" data-price="150">Pizza Margarita - $150</option>
-                                    <option value="Ensalada Caesar" data-price="100">Ensalada Caesar - $100</option>
+                                <select class="form-select" id="elementoSelect">
+                                    <option value="" disabled selected>Seleccionar Elemento</option>
+
                                 </select>
-                                <input type="number" class="form-control" id="platoCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
-                                <button type="button" class="btn btn-outline-secondary" id="addPlato">Agregar Plato</button>
+                                <input type="number" class="form-control" id="elementoCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
+                                <button type="button" class="btn btn-outline-secondary" id="addElemento">Agregar Elemento</button>
                             </div>
-                            <div id="platosError" class="invalid-feedback" style="display:none;">Por favor, selecciona un plato y cantidad válidos.</div>
+                            <div id="elementosError" class="invalid-feedback" style="display:none;">Por favor, selecciona un elemento y cantidad válidos.</div>
                         </div>
-                        <div class="mb-3">
-                            <label for="bebidas" class="form-label">Bebidas</label>
-                            <div class="table-responsive">
-                                <table class="table" id="bebidasTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre de la Bebida</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio Unitario</th>
-                                            <th>Subtotal</th>
-                                            <th>Acción</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="input-group mb-3">
-                                <select class="form-select" id="bebidaSelect">
-                                    <option value="" disabled selected>Seleccionar Bebida</option>
-                                    <option value="Coca-Cola" data-price="50">Coca-Cola - $50</option>
-                                    <option value="Agua Mineral" data-price="30">Agua Mineral - $30</option>
-                                </select>
-                                <input type="number" class="form-control" id="bebidaCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
-                                <button type="button" class="btn btn-outline-secondary" id="addBebida">Agregar Bebida</button>
-                            </div>
-                            <div id="bebidasError" class="invalid-feedback" style="display:none;">Por favor, selecciona una bebida y cantidad válidos.</div>
-                        </div>
+
                         <div class="mb-3">
                             <label for="total" class="form-label">Total</label>
                             <input type="text" class="form-control" id="total" readonly>
                         </div>
-                        <input type="hidden" id="mesero" name="mesero">
                         <input type="hidden" id="fecha" name="fecha">
                     </form>
                 </div>
@@ -213,21 +210,21 @@ $user = $this->d['user'];
         </div>
     </div>
 
-    <!-- JQuery -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- Popper.js para Bootstrap (necesario para los modales) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- APEXCHART LIBRARY -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/charts.js"></script> <!-- DATA-TABLES -->
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js">
-    </script>
-    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <!-- DataTables Bootstrap 5 integration -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 
-
-    <!-- JS BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <!-- APP JS -->
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 

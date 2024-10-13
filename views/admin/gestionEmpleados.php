@@ -1,5 +1,5 @@
 <?php
-    $user = $this->d['user'];
+$user = $this->d['user'];
 ?>
 
 <!DOCTYPE html>
@@ -44,24 +44,18 @@
 
                     </div>
                     <div class="pdf">
-                        <a href="pdf/usuarios.php" class="btn btn-outline-secondary me-2" style="border: none; background-color: transparent;">
-                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="Exportar a PDF">
+
+                        <a id="modalcarga" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/upload2.svg" class="mx-2" alt="Agregar Empleado"> Carga masiva
                         </a>
-                        <a href="vendor/usuarios.php" class="btn btn-outline-secondary me-2" style="border: none; background-color: transparent;">
-                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="Exportar a Excel">
-                        </a>
-                        <a href="#" onclick="openModalCreateUser();" class="btn btn-primary">
+                        <a href="#" onclick="openModalCreateUser();" class="btn btn-primary mx-2">
                             <img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="Agregar Empleado"> Agregar Empleado
                         </a>
 
                     </div>
                 </div>
 
-                <div class="contain">
-                    <button id="modalcarga" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                        Subir Archivo Excel
-                    </button>
-                </div>
+
 
                 <!-- Modal -->
                 <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
@@ -116,6 +110,16 @@
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
+                                <div class="container-reports">
+                                    <a href="pdf/usuarios.php" class="btn btn-danger me-2" style="border: none; ">
+                                        <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="Exportar a PDF">
+                                        PDF
+                                    </a>
+                                    <a href="vendor/usuarios.php" class="btn btn-success me-2" style="border: none;">
+                                        <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="Exportar a Excel">
+                                        Excel
+                                    </a>
+                                </div>
                                 <tbody>
                                     <!-- Aqui vamos insertar la data con jquery -->
                                 </tbody>
