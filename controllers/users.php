@@ -16,7 +16,9 @@ class Users extends SessionController
     function render()
     {
         error_log('Users::render -> Carga la pagina principal de los empleados');
-        $this->view->render('admin/gestionEmpleados', []);
+        $this->view->render('admin/gestionEmpleados', [
+            'user' => $this->user
+        ]);
     }
 
     // Metodo para crear un nuevo usuario

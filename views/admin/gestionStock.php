@@ -1,3 +1,7 @@
+<?php
+    $user = $this->d['user'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +79,7 @@
                                                 <th>Stock</th>
                                                 <th>Disponible</th>
                                                 <th>Acción</th>
-                                            </tr>   
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <!-- <tr>

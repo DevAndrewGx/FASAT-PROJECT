@@ -69,14 +69,14 @@
         {
             "site": "cajero", 
             "access": "private", 
-            "role": "cajero",
+            "role": "Cajero",
             "description": "Cajero data sitio"
         },
         {
             "site": "cheff", 
             "access": "private", 
-            "role": "cheff",
-            "description": "Cajero data sitio"
+            "role": "Cheff",
+            "description": "Cheff data sitio"
         }
     ],
 

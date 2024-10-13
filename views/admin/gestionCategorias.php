@@ -1,3 +1,6 @@
+<?php
+$user = $this->d['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +84,7 @@
                     <div class="card col-lg-6" style="width: 48%;">
 
                         <div class="card-body">
-                            <h5 class="card-title">Subcategorias</h5>   
+                            <h5 class="card-title">Subcategorias</h5>
                             <div class="table-responsive">
                                 <table id="data-categorias-subcategorias" class="table datanew nowrap" style="width: 100%;">
                                     <thead>

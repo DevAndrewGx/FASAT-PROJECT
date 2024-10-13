@@ -22,7 +22,7 @@ class Productos extends SessionController
         $subCategories = $categoriaObj->getSubCategoriesByCategory($this->getPost('categoria'));
         error_log($this->getPost('categoria'));
         error_log('Producto::render -> Carga la pagina principal');
-        $this->view->render('admin/gestionInventario', ['categories' => $categories, 'subcategories' => $subCategories]);
+        $this->view->render('admin/gestionInventario', ['categories' => $categories, 'subcategories' => $subCategories, 'user' => $this->user]);
     }
 
     // creamos la funcion que nos permitira crear nuevos productos

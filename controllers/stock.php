@@ -16,7 +16,9 @@
         function render()
         {
             error_log('Users::render -> Carga la pagina principal de STOCK');
-            $this->view->render('admin/gestionStock', []);
+            $this->view->render('admin/gestionStock', [
+                "user" => $this->user
+            ]);
         }
 
         // funcion para cargar los pro  ductos en las datatables

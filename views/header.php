@@ -29,7 +29,6 @@
                     </a>
 
                     <!-- DROPDOWN MENU -->
-
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">

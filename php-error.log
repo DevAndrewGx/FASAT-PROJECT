@@ -1,130 +1,109 @@
-[13-Oct-2024 05:58:13 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:13 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:13 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:58:13 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:58:13 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:13 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:13 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:13 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:13 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:52 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:52 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:52 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:58:52 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:58:52 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:52 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:52 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:52 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:52 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:54 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:54 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:54 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:58:54 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:58:54 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:55 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:55 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:55 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:55 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:58 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:58 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:58:58 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:58:58 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:58:58 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:58:58 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:58 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:58:58 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:58:58 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:59:10 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:59:10 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:59:10 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:59:10 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:59:10 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:59:10 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:59:10 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:59:10 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:59:10 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 05:59:44 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:59:44 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 05:59:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 05:59:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 05:59:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 05:59:45 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 05:59:45 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 06:00:44 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:00:44 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:00:44 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 06:00:44 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 06:00:44 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:00:44 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:00:44 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 06:01:07 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:01:07 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:01:07 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 06:01:07 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 06:01:07 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:01:07 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:01:07 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 06:01:20 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:01:20 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:01:21 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 06:01:21 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 06:01:21 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:01:21 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:01:21 Europe/Berlin] Errores::construct -> inicio de errores
-[13-Oct-2024 06:02:27 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:02:27 Europe/Berlin] SessionController::validateSession()
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::validateSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/admin, url => admin
-[13-Oct-2024 06:02:27 Europe/Berlin] SessionController::isAuthorized -> Role Administrador is validate for this site admin
-[13-Oct-2024 06:02:27 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
-[13-Oct-2024 06:02:27 Europe/Berlin] sessionController::getUserSessionData(): Dave
-[13-Oct-2024 06:02:27 Europe/Berlin] Inicializando la aplicacion...
-[13-Oct-2024 06:02:27 Europe/Berlin] Errores::construct -> inicio de errores
+[13-Oct-2024 06:32:47 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:32:47 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:32:47 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:32:47 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:32:47 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\FAST-PROJECT\views\header.php on line 26
+[13-Oct-2024 06:32:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getFoto() on null in C:\xampp\htdocs\FAST-PROJECT\views\header.php:26
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\views\cajero\index.php(22): require_once()
+#1 C:\xampp\htdocs\FAST-PROJECT\libs\view.php(19): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\FAST-PROJECT\controllers\cajero.php(14): View->render('cajero/index', Array)
+#3 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(87): Cajero->render()
+#4 C:\xampp\htdocs\FAST-PROJECT\index.php(53): App->__construct()
+#5 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\views\header.php on line 26
+[13-Oct-2024 06:33:50 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:33:50 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:33:50 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getFoto() on null in C:\xampp\htdocs\FAST-PROJECT\views\header.php:26
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\views\cajero\index.php(25): require_once()
+#1 C:\xampp\htdocs\FAST-PROJECT\libs\view.php(19): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\FAST-PROJECT\controllers\cajero.php(16): View->render('cajero/index', Array)
+#3 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(87): Cajero->render()
+#4 C:\xampp\htdocs\FAST-PROJECT\index.php(53): App->__construct()
+#5 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\views\header.php on line 26
+[13-Oct-2024 06:33:51 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:33:51 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:33:51 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getFoto() on null in C:\xampp\htdocs\FAST-PROJECT\views\header.php:26
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\views\cajero\index.php(25): require_once()
+#1 C:\xampp\htdocs\FAST-PROJECT\libs\view.php(19): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\FAST-PROJECT\controllers\cajero.php(16): View->render('cajero/index', Array)
+#3 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(87): Cajero->render()
+#4 C:\xampp\htdocs\FAST-PROJECT\index.php(53): App->__construct()
+#5 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\views\header.php on line 26
+[13-Oct-2024 06:33:52 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:33:52 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:33:52 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:33:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getFoto() on null in C:\xampp\htdocs\FAST-PROJECT\views\header.php:26
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\views\cajero\index.php(25): require_once()
+#1 C:\xampp\htdocs\FAST-PROJECT\libs\view.php(19): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\FAST-PROJECT\controllers\cajero.php(16): View->render('cajero/index', Array)
+#3 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(87): Cajero->render()
+#4 C:\xampp\htdocs\FAST-PROJECT\index.php(53): App->__construct()
+#5 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\views\header.php on line 26
+[13-Oct-2024 06:34:35 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:34:35 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:34:36 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:34:36 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:35:11 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::isPublic(): currentURL => cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/cajero, url => cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] SessionController::isAuthorized -> Role Cajero is validate for this site cajero
+[13-Oct-2024 06:35:11 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[13-Oct-2024 06:35:11 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:35:15 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:35:15 Europe/Berlin] SessionController::validateSession()
+[13-Oct-2024 06:35:15 Europe/Berlin] sessionController::getUserSessionData(): Cajero
+[13-Oct-2024 06:35:15 Europe/Berlin] sessionController::validateSession(): username:cajero@x.com - role: Cajero
+[13-Oct-2024 06:35:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[13-Oct-2024 06:35:15 Europe/Berlin] sessionController::isPublic(): currentURL => logout
+[13-Oct-2024 06:35:15 Europe/Berlin] sessionController::getCurrentPage(): actualLink =>/FAST-PROJECT/logout, url => logout
+[13-Oct-2024 06:35:15 Europe/Berlin] SessionController::validateSession() => no autorizado, redirige al main de cada rol
+[13-Oct-2024 06:35:15 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:35:15 Europe/Berlin] APP::construct->No hay controlador especificado
+[13-Oct-2024 06:35:15 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[13-Oct-2024 06:35:17 Europe/Berlin] Inicializando la aplicacion...
+[13-Oct-2024 06:35:17 Europe/Berlin] Errores::construct -> inicio de errores

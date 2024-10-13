@@ -1,9 +1,5 @@
 <?php
-// require_once('../../../models/seguridadAdmin.php');
-// require_once('../../../models/Consultas.php');
-
-// require_once('../../../models/Conexion.php');
-// require_once('../../../models/Sesion.php');
+    $user = $this->d['user'];
 ?>
 
 <!DOCTYPE html>
@@ -57,44 +53,44 @@
                         <a href="#" onclick="openModalCreateUser();" class="btn btn-primary">
                             <img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="Agregar Empleado"> Agregar Empleado
                         </a>
-                        
+
                     </div>
                 </div>
 
-                     <div class="contain">
-                        <button id="modalcarga" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                            Subir Archivo Excel
-                        </button>
-                    </div>
+                <div class="contain">
+                    <button id="modalcarga" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                        Subir Archivo Excel
+                    </button>
+                </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="uploadModalLabel">Cargar Archivo Excel</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- Botón para descargar la plantilla -->
-                                    <a href="vendor/plantilla.php" class="btn btn-secondary mb-3">Descargar Plantilla Excel</a>
-                                    <!-- Contenedor para las alertas -->
-                                    <div id="alertContainer" class="mb-3"></div>
-                                    <!-- Formulario para cargar el archivo Excel -->
-                                    <form id="subirEx" enctype="multipart/form-data">
-                                        <div class="mb-3">
-                                            <label for="excelFile" class="form-label">Selecciona el archivo Excel:</label>
-                                            <input type="file" class="form-control" id="excelFile" name="excelFile" accept=".xlsx, .xls" required>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Subir Archivo</button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="uploadModalLabel">Cargar Archivo Excel</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Botón para descargar la plantilla -->
+                                <a href="vendor/plantilla.php" class="btn btn-secondary mb-3">Descargar Plantilla Excel</a>
+                                <!-- Contenedor para las alertas -->
+                                <div id="alertContainer" class="mb-3"></div>
+                                <!-- Formulario para cargar el archivo Excel -->
+                                <form id="subirEx" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="excelFile" class="form-label">Selecciona el archivo Excel:</label>
+                                        <input type="file" class="form-control" id="excelFile" name="excelFile" accept=".xlsx, .xls" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Subir Archivo</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
                 <div class="card">

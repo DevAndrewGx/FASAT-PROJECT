@@ -18,7 +18,9 @@ class Categorias extends SessionController
     function render()
     {
         error_log('Categorias::render -> Carga la pagina principal de categorias');
-        $this->view->render('admin/gestionCategorias');
+        $this->view->render('admin/gestionCategorias', [
+            'user' => $this->user
+        ]);
     }
 
     // Funcion para crear una nueva categoria

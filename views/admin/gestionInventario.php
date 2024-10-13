@@ -2,8 +2,9 @@
 // llamamos al objeto de categorias para recorrerlo 
 $categories = $this->d['categories'];
 $subcategories = $this->d['subcategories'];
-?>
+$user = $this->d['user'];
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,9 +51,9 @@ $subcategories = $this->d['subcategories'];
                 </div>
 
 
-                <div class="nav-sections">
+                <!-- <div class="nav-sections">
                     <nav>
-                        <!-- cunstom selects -->
+                        
                         <ul>
                             <div class="select-menu">
                                 <div class="select-btn">
@@ -129,12 +130,10 @@ $subcategories = $this->d['subcategories'];
                                 </ul>
                             </div>
 
-                            <!-- <li id="active"><a href="#"></a></li>
-                            <li><a href="listaCategorias.html">Lista Categorias</a></li>
-                            <li><a href="#">Control de Stock</a></li> -->
+            
                         </ul>
                     </nav>
-                </div>
+                </div> -->
 
                 <div class="page-header">
                     <div class="page-title">

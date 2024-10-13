@@ -1,3 +1,6 @@
+<?php
+$user = $this->d['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +32,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
 </head>
+
 <body>
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
@@ -68,7 +72,7 @@
                         </nav>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Órdenes de Platos en Proceso</h5>
@@ -125,7 +129,7 @@
                                             <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
                                         </td>
                                     </tr>
-                                   
+
                                 </tbody>
                             </table>
                         </div>
@@ -198,7 +202,7 @@
                                             <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
                                         </td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
@@ -216,50 +220,51 @@
 
 </body>
 <script src="../../js/main.js"></script>
+
 </html>
 
-    <!-- Scripts de Bootstrap y DataTables -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Scripts de Bootstrap y DataTables -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  
+
 </body>
 <script>
-        $(document).ready(function() {
-            // Inicializar DataTables
-            $('#ordersTable').DataTable({
-                "paging": true,
-                "searching": true,
-                "info": true
-            });
-            $('#beveragesTable').DataTable({
-                "paging": true,
-                "searching": true,
-                "info": true
-            });
-
-            // Manejo de clic en botones
-            $(document).on('click', '.btn-toggle-status', function() {
-                var $button = $(this);
-                var currentStatus = $button.data('status');
-
-                // Cambiar el estado y el texto del botón
-                if (currentStatus === 'en-proceso') {
-                    $button.data('status', 'listo');
-                    $button.text('Marcar como En Proceso');
-                    $button.removeClass('btn-success').addClass('btn-warning');
-                    $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-warning').addClass('bg-success').text('Listo');
-                } else {
-                    $button.data('status', 'en-proceso');
-                    $button.text('Marcar como Listo');
-                    $button.removeClass('btn-warning').addClass('btn-success');
-                    $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-success').addClass('bg-warning').text('En Proceso');
-                }
-            });
+    $(document).ready(function() {
+        // Inicializar DataTables
+        $('#ordersTable').DataTable({
+            "paging": true,
+            "searching": true,
+            "info": true
         });
-    </script>
+        $('#beveragesTable').DataTable({
+            "paging": true,
+            "searching": true,
+            "info": true
+        });
+
+        // Manejo de clic en botones
+        $(document).on('click', '.btn-toggle-status', function() {
+            var $button = $(this);
+            var currentStatus = $button.data('status');
+
+            // Cambiar el estado y el texto del botón
+            if (currentStatus === 'en-proceso') {
+                $button.data('status', 'listo');
+                $button.text('Marcar como En Proceso');
+                $button.removeClass('btn-success').addClass('btn-warning');
+                $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-warning').addClass('bg-success').text('Listo');
+            } else {
+                $button.data('status', 'en-proceso');
+                $button.text('Marcar como Listo');
+                $button.removeClass('btn-warning').addClass('btn-success');
+                $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-success').addClass('bg-warning').text('En Proceso');
+            }
+        });
+    });
+</script>
 <script src="../../js/main.js"></script>
 <!-- JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -276,4 +281,5 @@
 <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
 <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
 <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+
 </html>

@@ -2,10 +2,12 @@
 
 class Mesero extends SessionController
 {
-
+    private $user;
     function __construct()
     {
+        
         parent::__construct();
+        $this->user = $this->getUserSessionData();
     }
 
 
@@ -13,6 +15,8 @@ class Mesero extends SessionController
     {
         // $stats = $this->getStatistics();
 
-        $this->view->render('mesero/index', []);
+        $this->view->render('mesero/index', [
+            'user' => $this->user
+        ]);
     }
 }

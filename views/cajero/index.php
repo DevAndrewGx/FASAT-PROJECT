@@ -1,3 +1,6 @@
+<?php
+    $user = $this->d['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
