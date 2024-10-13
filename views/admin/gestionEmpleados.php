@@ -51,7 +51,6 @@ $user = $this->d['user'];
                         <a href="#" onclick="openModalCreateUser();" class="btn btn-primary mx-2">
                             <img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="Agregar Empleado"> Agregar Empleado
                         </a>
-
                     </div>
                 </div>
 

@@ -17,11 +17,11 @@
             <i class='bx bxs-user-detail'></i>
             <a href="<?php echo constant('URL'); ?>users">Usuarios</a>
         </div>
-        <div class="item" id="ordenes">
-            <i class='bx bx-grid-alt'></i>
-            <a href="#">Ordenes</a>
+        <div class="item" id="mesas">
+            <i class='bx bxs-grid'></i>
+            <a href="<?php echo constant('URL'); ?>mesas">Mesas</a>
         </div>
-        
+
         <div class="item" id="ventas">
             <i class='bx bx-transfer-alt'></i>
             <a href="<?php echo constant('URL'); ?>ventas">Ventas</a>

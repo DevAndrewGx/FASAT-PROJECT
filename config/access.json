@@ -43,6 +43,12 @@
             "description": "Tabla donde se visualiza el control del stock"
         },
         {
+            "site": "mesas", 
+            "access": "private", 
+            "role": "Administrador",
+            "description": "Tabla donde se visualiza la mesa"
+        },
+        {   
             "site": "users", 
             "access": "private", 
             "role": "Administrador",
