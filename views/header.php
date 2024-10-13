@@ -23,7 +23,7 @@
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="user-img">
-                            <img src="<?php echo constant('URL'); ?>public/imgs/uploads/6287c061ca1c7859774d2e4f6f9e31e1.jpg" alt="admin">
+                            <img src="<?php echo constant('URL'); ?>public/imgs/uploads/<?php echo $user->getFoto() ?>" width="32" alt="usr">
                             <span class="status1 online"></span></span>
                         </span>
                     </a>
@@ -33,15 +33,15 @@
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <div class="profileset">
-                                <span class="user-img"><img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="hello">
+                                <span class="user-img"><img src="<?php echo constant('URL'); ?>public/imgs/uploads/<?php echo $user->getFoto() ?>" width="32" alt="usr">
                                     <span class="status2 online"></span></span>
                                 <div class="profilesets">
-                                    <h6>Juanita Dow</h6>
-                                    <h5>Admin</h5>
+                                    <h6><?php echo $user->getNombres(); ?></h6>
+                                    <h5><?php echo $user->getRol(); ?></h5>
                                 </div>
                             </div>
                             <hr class="m-0">
-                            <a class="dropdown-item" href="<?php echo constant('URL')?>views/admin/perfil.html"> <img src="<?php echo constant('URL'); ?>public/imgs/icons/user.svg" alt="user">
+                            <a class="dropdown-item" href="<?php echo constant('URL') ?>views/admin/perfil.html"> <img src="<?php echo constant('URL'); ?>public/imgs/icons/user.svg" alt="user">
                                 My
                                 Profile</a>
                             <a class="dropdown-item" href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/settings.svg" alt="user">Settings</a>

@@ -19,7 +19,6 @@
         public function get($correo)
         {
 
-
             try {
                 // we have to use prepare because we're going to assing
                 $query = $this->prepare('SELECT u.*, r.rol, e.tipo FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol JOIN estados_usuarios e ON e.id_estado = u.id_estado WHERE u.correo  = :correo');

@@ -262,6 +262,19 @@
             // por que al decirle demasiadas veces va tener un constro de procesamiento mayor
             return password_hash($password, PASSWORD_DEFAULT,['cost' => 10]);
         }
+
+        public function getUserPhoto($documento) { 
+            // creamos un objeto de usuarios
+            $userObj = new UsersModel();
+            $userObj->get($documento);
+            // asignamos el id a una variable
+            $idFoto = $userObj->getIdFoto();
+            // traemos la foto, creando un objeto
+            $fotoObj = new FotoModel();
+            $fotoObj->get($idFoto);
+            // retornamos el nombre de la foto para utilizarla en la vista
+            return $fotoObj->getFoto();
+        }
         // Create getters and setters
         public function setIdRol($id){             $this->idRol = $id;}
         public function setIdEstado($id){         $this->idEstado = $id;}

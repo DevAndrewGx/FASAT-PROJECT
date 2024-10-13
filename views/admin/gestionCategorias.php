@@ -55,8 +55,8 @@
 
                 <div class="row gap-3">
                     <div class="card mr-3 col-lg-6" style="width: 50%;">
-
                         <div class="card-body">
+                            <h5 class="card-title">Categorias</h5>
                             <div class="table-responsive">
                                 <table id="data-categorias" class="table datanew nowrap" style="width: 100%;">
                                     <thead>
@@ -81,6 +81,7 @@
                     <div class="card col-lg-6" style="width: 48%;">
 
                         <div class="card-body">
+                            <h5 class="card-title">Subcategorias</h5>   
                             <div class="table-responsive">
                                 <table id="data-categorias-subcategorias" class="table datanew nowrap" style="width: 100%;">
                                     <thead>

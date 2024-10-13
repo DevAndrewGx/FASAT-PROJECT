@@ -12,7 +12,6 @@
             if(session_status() == PHP_SESSION_NONE) {
                 // si no existe creamos una nueva session
                 session_start();
-
             }
         }
 
@@ -23,7 +22,6 @@
         }
 
 
-        
         // funcion para obtener la session del usuario actual
         public function getCurrentUser() {
             return $_SESSION[$this->sessionName];

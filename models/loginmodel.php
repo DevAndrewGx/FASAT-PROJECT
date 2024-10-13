@@ -20,7 +20,7 @@ class LoginModel extends Model
         // cuando vamos acceder a la bd siempre usamos trycatch
         try {
             //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
-            $userObject = new JoinUserRolModel();
+            $userObject = new JoinUserRelationsModel();
             $user = $userObject->get($correo);
 
             if ($user) {

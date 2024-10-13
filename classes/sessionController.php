@@ -122,7 +122,7 @@ class SessionController extends Controller
     function getUserSessionData()
     {
         $id = $this->session->getCurrentUser();
-        $this->user = new JoinUserRolModel();
+        $this->user = new JoinUserRelationsModel();
 
         // obtenemos la data del usuario que tiene session en user apartir del id
         $this->user->get($id);
