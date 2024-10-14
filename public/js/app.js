@@ -124,3 +124,16 @@ function openModalCreateCategory()
     document.querySelector("#formCategories").reset();
     $("#modalFormCategories").modal("show");        
 }
+
+
+function openModalCreateMesas()
+{
+    rowTable = "";
+    // document.querySelector('#idUsuario').value ="";
+    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
+    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
+    document.querySelector('#btnText').innerHTML ="Guardar";
+    document.querySelector('#titleModal').innerHTML = "Nueva Mesa";
+    document.querySelector("#formMesas").reset();
+    $("#modalFormMesas").modal("show");        
+}

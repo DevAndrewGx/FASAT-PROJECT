@@ -36,10 +36,7 @@ $user = $this->d['user'];
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
-
             <div class="content">
-
-
                 <div class="nav-sections">
                     <nav>
                         <ul>
@@ -49,7 +46,6 @@ $user = $this->d['user'];
                         </ul>
                     </nav>
                 </div>
-
                 <div class="page-header">
                     <div class="page-title">
                         <h1>Productos</h1>

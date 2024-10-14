@@ -144,22 +144,6 @@ $user = $this->d['user'];
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" id="addCategory">Agregar Categoría</button>
                             </div>
-                            <!-- <div class="mb-3">
-                                <h5>Lista de Categorías</h5>
-                                <div class="table-responsive">
-                                    <table class="table" id="categoriesTable">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div> -->
                         </form>
                     </div>
                     <div class="modal-footer">

@@ -30,9 +30,9 @@
                     <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
                     <i class='bx bxs-chevron-left-circle'></i>
                 </div>
-                <div class="item" id="ordenes">
+                <div class="item" id="Caja">
                     <i class='bx bx-grid-alt'></i>
-                    <a href="#">Ordenes</a>
+                    <a href="#">Caja</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-cog'></i>
