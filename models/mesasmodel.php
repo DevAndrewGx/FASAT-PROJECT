@@ -1,5 +1,5 @@
 <?php 
-    class MesasModel extends Model implements IModel { 
+    class MesasModel extends Model implements IModel, JsonSerializable { 
 
         private $numeroMesa;
         private $estado;
@@ -30,6 +30,86 @@
             }
         }
         public function get($id) {}
+        public function cargarDatosMesas($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName) { 
+
+            // creamos una array para guardar la data de los objetos que se traen desde la bd
+            $items = [];
+
+             try {
+                $sql = "SELECT * FROM mesas";  
+
+                if (!empty($busqueda)) {
+                    $searchValue = $busqueda;
+                    $sql .= " WHERE 
+                    numero_mesa LIKE '%$searchValue%' OR 
+                    estado LIKE '%$searchValue%'";
+                }
+                if ($columna != null && $orden != null) {
+                    $sql .= " ORDER BY $columnName $orden";
+                } else {
+                    $sql .= " ORDER BY numero_mesa ASC";
+                }
+
+                if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
+                    $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
+                }
+
+                $query = $this->query($sql);
+
+                while ($p = $query->fetch(PDO::FETCH_ASSOC)) {  
+                    $item = new MesasModel();
+
+                    $item->setNumeroMesa($p['numero_mesa']);
+                    $item->setEstado($p['estado']);  
+
+                    array_push($items, $item);  
+                }   
+                
+                return $items;  
+            } catch (PDOException $e) {
+                error_log('MesasModel::cargarDatosMesas - ' . $e->getMessage());
+                return [];
+            }
+        }
+
+         public function totalRegistros()
+        {
+            try {
+                $query = $this->query("SELECT COUNT(*) as total FROM mesas");
+                return $query->fetch(PDO::FETCH_ASSOC)['total'];
+            } catch (PDOException $e) {
+                error_log('MesasModel::totalRegistros - ' . $e->getMessage());
+                return 0;
+            }
+        }
+
+        public function totalRegistrosFiltrados($busqueda)
+        {
+            try {
+                $sql = "SELECT COUNT(*) as total FROM mesas;";
+
+                if (!empty($busqueda)) {
+                    $searchValue = $busqueda;
+                    $sql .= " WHERE 
+                    numeroMesa LIKE '%$searchValue%' OR 
+                    estado LIKE '%$searchValue%'";
+                }
+                $query = $this->query($sql);
+                return $query->fetch(PDO::FETCH_ASSOC)['total'];
+            } catch (PDOException $e) {
+                error_log('ProductosModel::totalRegistrosFiltrados - ' . $e->getMessage());
+                return 0;
+            }
+        }
+
+         public function jsonSerialize():mixed
+        {
+            return [
+                'numeroMesa' => $this->numeroMesa,
+                'estado' => $this->estado,
+            ];
+        }
+
         public function getAll() {}
         public function update($id) {}
         public function delete($id) {}
