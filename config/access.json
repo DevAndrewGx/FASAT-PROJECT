@@ -61,6 +61,12 @@
             "description": "Pagina principal para mesero"
         },
         {
+            "site": "mesas", 
+            "access": "private", 
+            "role": "Mesero",
+            "description": "Pagina principal para mesero"
+        },  
+        {
             "site": "user", 
             "access": "private", 
             "role": "user",

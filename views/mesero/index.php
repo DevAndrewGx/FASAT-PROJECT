@@ -113,98 +113,55 @@ $user = $this->d['user'];
         </main>
     </div>
 
+    <!-- Modal para crear un pedido -->
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="orderModalLabel">Nuevo Pedido</h5>
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Abrir Mesa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="orderForm">
-                        <div class="mb-3">
-                            <label for="mesas" class="form-label">Mesas</label>
-                            <div class="table-responsive">
-                                <table class="table" id="mesasTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Número de Mesa</th>
-                                            <th>Acción</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="number" class="form-control" id="mesaInput" min="1" placeholder="Número de mesa" aria-label="Número de mesa">
-                                <button type="button" class="btn btn-outline-secondary" id="addMesa">Agregar Mesa</button>
-                            </div>
-                            <div id="mesasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de mesa válido.</div>
-                        </div>
-
-                        <!-- Nueva sección para Categorías y Subcategorías -->
-                        <div class="mb-3">
-                            <label for="categoria" class="form-label">Categoría</label>
-                            <select class="form-select" id="categoriaSelect">
-                                <option value="" disabled selected>Seleccionar Categoría</option>
-                                <?php
-                                foreach ($categories as $cat) {
-                                ?>
-                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
-                                <?php
-                                }
-                                ?>
+                        <div class="mb-3" id="container-form">
+                            <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
+                            <select name="numeroMesa" id="numeroMesa" class="form-control">
+                                <option value="#" selected>Seleccione el numero de mesa</option>
                             </select>
+                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
+                        </div>
+                        <!-- select oculto para actualizar la subcategoria con su respectiva categoria
+                              -->
+                        <div class="mb-3" id="meseroAsociado">
+                            <label for="mesero" class="form-label">Nombre mesero asociado</label>
+                            <input type="text" id="mesero" name="mesero" class="form-control" value="<?php echo $user->getNombres();?>" disabled>
                         </div>
 
-                        <label for="producto" class="form-label">Productos</label>
-                        <select class="producto" id="productoSelect">
-                            <option value="" disabled selected>Seleccionar Producto</option>
+                        <!-- <div class="mb-3 col-md-12" id="container-mesas-disponibles">
+                            <label for="mesas-disponible" class="form-label">Mesas disponibles</label>
+                            <table id="data-mesas" class="table table-responsive datanew" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox" id="select-all">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                                        <th class="sorting">Numero de mesa</th>
+                                        <th class="sorting">Estado</th>
+                                        <th class="sorting">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-
-
-                        </select>
-
-                        <!-- Elementos del pedido (agregados por el usuario) -->
-                        <div class="mb-3">
-                            <label for="elementos" class="form-label">Elementos del Pedido</label>
-                            <div class="table-responsive">
-                                <table class="table" id="elementosTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre del Elemento</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio Unitario</th>
-                                            <th>Subtotal</th>
-                                            <th>Acción</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="input-group mb-3">
-                                <select class="form-select" id="elementoSelect">
-                                    <option value="" disabled selected>Seleccionar Elemento</option>
-
-                                </select>
-                                <input type="number" class="form-control" id="elementoCantidad" min="1" placeholder="Cantidad" aria-label="Cantidad">
-                                <button type="button" class="btn btn-outline-secondary" id="addElemento">Agregar Elemento</button>
-                            </div>
-                            <div id="elementosError" class="invalid-feedback" style="display:none;">Por favor, selecciona un elemento y cantidad válidos.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="total" class="form-label">Total</label>
-                            <input type="text" class="form-control" id="total" readonly>
-                        </div>
-                        <input type="hidden" id="fecha" name="fecha">
+                                </tbody>
+                            </table>
+                        </div> -->
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="submitOrder">Enviar Pedido</button>
+                    <button type="button" class="btn btn-primary" id="submitOrder">Abrir Mesa</button>
                 </div>
             </div>
         </div>
@@ -227,6 +184,7 @@ $user = $this->d['user'];
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <!-- APP JS -->
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
 
 </body>
 

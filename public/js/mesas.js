@@ -31,10 +31,10 @@ $(document).ready(function () {
                     // Cambia el estilo según el valor de "estado"
                     let badgeClass;
                     switch (data) {
-                        case "ABIERTA":
+                        case "DISPONIBLE":
                             badgeClass = "bg-lightgreen";
                             break;
-                        case "CERRADA":
+                        case "OCUPADA":
                             badgeClass = "bg-lightred";
                             break;
                         case "EN VENTA":
@@ -88,7 +88,7 @@ $(document).ready(function () {
                         if (result.isConfirmed) {
                             // Cerrar el modal y reiniciar el formulario
                             $("#formMesas").closest(".modal").modal("hide");
-                            dataTable.ajax.reload(null, false);
+                            dataTableMesas.ajax.reload(null, false);
                         }
                     });
                 }
@@ -98,4 +98,26 @@ $(document).ready(function () {
             },
         });
     });
+
+    $("#openOrderForm").on('click', function(e) { 
+        let estado = 'DISPONIBLE';
+        // cancelamos el efecto por default
+        e.preventDefault();
+
+        $.post(`${baseUrl}mesas/getTablesByState`, { estado: estado}, function(response) {
+            let mesas = JSON.parse(response);
+            console.log(mesas);
+
+            let template = "<option ='#'>Seleccione una mesa</option>";
+            
+            mesas.data.forEach((mesa)=> { 
+                template += `
+                    <option value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
+                `;
+            });
+            $("#numeroMesa").html(template);
+        });
+
+        
+    })
 });

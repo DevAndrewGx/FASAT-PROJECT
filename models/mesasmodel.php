@@ -30,6 +30,37 @@
             }
         }
         public function get($id) {}
+
+        public function getTablesByState($state) {
+            // creamos un arreglo para retornar la data 
+            $items = [];
+            // creamos el try catch ya que se va interactuar con la bd
+            try { 
+                // creamos la query con prepare ya que se va insertar data en la consulta para buscar por estado de mesa
+
+                $query = $this->prepare("SELECT * FROM mesas ms WHERE ms.estado = :estado");
+                // ejeuctamos la consulta 
+                $query->execute([
+                    "estado"=>$state
+                ]);
+
+                // Solo vamos a obtener un valor, por lo cual no hay la necesidad de iterar variaces veces para traer los datos
+                while($row = $query->fetch(PDO::FETCH_ASSOC)) {
+                    // para cada item en la base de datos creamos un objeto
+                    $item = new MesasModel();
+
+                    $item->setNumeroMesa($row['numero_mesa']);
+                    $item->setEstado($row['estado']);
+
+                    array_push($items, $item);
+                }
+
+                return $items;
+
+            }catch(PDOException $e) { 
+                error_log("MessasModel::getTablesByState -> ".$e);
+            }
+        }
         public function cargarDatosMesas($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName) { 
 
             // creamos una array para guardar la data de los objetos que se traen desde la bd

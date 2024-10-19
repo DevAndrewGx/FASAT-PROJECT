@@ -127,4 +127,19 @@ class Mesas extends SessionController
             error_log('Mesas::getMesas -> Error en traer los datos - getMesas' . $e->getMessage());
         }
     }
+
+    function getTablesByState() { 
+        // validamos que la data enviada exista
+        if($this->existPOST("estado")) { 
+            error_log("Estado ".$this->getPost('estado'));
+            
+            // creamos un objeto de la clase mesas
+            $mesaObj = new MesasModel();
+
+            $mesas = $mesaObj->getTablesByState($this->getPost('estado'));
+
+            echo json_encode(["data"=>$mesas]);
+            return;
+        }
+    }
 }

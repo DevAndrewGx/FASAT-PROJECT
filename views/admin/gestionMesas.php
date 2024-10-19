@@ -64,7 +64,7 @@ $user = $this->d['user'];
                                         <th class="sorting">Estado</th>
                                         <th class="sorting">Accion</th>
                                     </tr>
-                                </thead>    
+                                </thead>
                                 <tbody>
 
                                 </tbody>
@@ -96,9 +96,9 @@ $user = $this->d['user'];
                             <label for="categoryType" class="form-label">Estado mesa</label>
                             <select class="form-control" name="estado" id="estado">
                                 <option value="" selected>Seleccione estado</option>
-                                <option value="ABIERTA">Abierta</option>
+                                <option value="DISPONIBLE">Disponible</option>
                                 <option value="EN VENTA">En venta</option>
-                                <option value="CERRADA">Cerrada</option>
+                                <option value="OCUPADA">Cerrada</option>
                             </select>
                             <div id="typeCategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un estaddo valido</div>
                         </div>
