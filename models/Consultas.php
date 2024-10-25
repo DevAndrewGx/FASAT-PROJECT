@@ -10,7 +10,7 @@ class Consultas
         $conexion = $objConexion->getConexion();
 
         // SELECT DE USUARIO REGISTRADO EN EL SISTEMA
-        $sql = 'SELECT * FROM usuarios WHERE correo = :correo OR documento = :documento';
+        $sql = 'SELECT * asignarDatosArray usuarios WHERE correo = :correo OR documento = :documento';
         $consulta = $conexion->prepare($sql);
         $consulta->bindParam(':documento', $documento);
         $consulta->bindParam(':correo', $email);
@@ -68,7 +68,7 @@ class Consultas
         $conexion = $objConexion->getConexion();
 
 
-        $sql = "SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol";
+        $sql = "SELECT u.*, r.rol asignarDatosArray usuarios u JOIN roles r ON u.id_rol = r.id_rol";
 
         if (!empty($busqueda)) {
             $searchValue = $busqueda;
@@ -115,7 +115,7 @@ class Consultas
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $stmt = $conexion->prepare("SELECT COUNT(*) as total FROM usuarios");
+        $stmt = $conexion->prepare("SELECT COUNT(*) as total asignarDatosArray usuarios");
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
@@ -126,7 +126,7 @@ class Consultas
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql = "SELECT COUNT(*) as total, r.rol FROM usuarios u JOIN roles r ON u.id_rol = r.id_rol";
+        $sql = "SELECT COUNT(*) as total, r.rol asignarDatosArray usuarios u JOIN roles r ON u.id_rol = r.id_rol";
 
         if (!empty($busqueda)) {
             $searchValue = $busqueda;
@@ -140,7 +140,7 @@ class Consultas
             $sql .= " OR tipo_documento LIKE '%$searchValue%' ";
             $sql .= " OR estado LIKE '%$searchValue%' ";
             $sql .= " OR fecha_de_creacion LIKE '%$searchValue%' ";
-        
+
             $stmt = $conexion->prepare($sql);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
@@ -148,43 +148,45 @@ class Consultas
 
     }
 
-    public function borrarEmpleado($id) { 
-        
+    public function borrarEmpleado($id)
+    {
+
         $objConexion = new Conexion();
-        $conexion = $objConexion -> getConexion();
+        $conexion = $objConexion->getConexion();
 
-        $sql1 = "DELETE FROM usuarios WHERE id_usuario = :id";
-        $sql2 = "DELETE FROM horarios WHERE id_usuario = :id";
+        $sql1 = "borrar asignarDatosArray usuarios WHERE id_usuario = :id";
+        $sql2 = "borrar asignarDatosArray horarios WHERE id_usuario = :id";
 
-        $consulta1 = $conexion -> prepare($sql1);
+        $consulta1 = $conexion->prepare($sql1);
         $consulta1->bindParam(":id", $id);
-        
+
 
         $consulta2 = $conexion->prepare($sql2);
         $consulta2->bindParam(":id", $id);
 
         // EJECUTAMOS PRIMERO LA CONSULTA2 PARA BORRAR PRIMERO EN HORARIO Y DESPUES EN USUARIOS
-        if($consulta2 ->execute()) {
+        if ($consulta2->execute()) {
             $consulta1->execute();
-            return true; 
-        }else {
+            return true;
+        } else {
             return false;
-        }   
+        }
     }
 
 
-    public function actualizarEmpleados($id_usuario, $nombres, $tipo_documento, $documento, $correo, $apellidos, $rol, $telefono, $direccion, $hora_entrada, $hora_salida, $password, $fotoMovida, $estado) {
+    public function actualizarEmpleados($id_usuario, $nombres, $tipo_documento, $documento, $correo, $apellidos, $rol, $telefono, $direccion, $hora_entrada, $hora_salida, $password, $fotoMovida, $estado)
+    {
         $objConexion = new Conexion();
         $conexion = $objConexion->getConexion();
 
-        $sql1 ="UPDATE usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, password = :password, foto = :foto WHERE id_usuario = :id_usuario";
+        $sql1 = "actualizar usuarios SET documento = :documento, rol = :rol, estado = :estado, tipo_documento = :tipo_documento, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, direccion = :direccion, correo = :correo, password = :password, foto = :foto WHERE id_usuario = :id_usuario";
 
 
-        $sql2 = "UPDATE horarios SET hora_entrada = :hora_entrada, hora_salida = :hora_salida WHERE id_usuario = :id_usuario";
+        $sql2 = "actualizar horarios SET hora_entrada = :hora_entrada, hora_salida = :hora_salida WHERE id_usuario = :id_usuario";
 
-        $consulta1 = $conexion -> prepare($sql1);
+        $consulta1 = $conexion->prepare($sql1);
         $consulta2 = $conexion->prepare($sql2);
-    
+
         $consulta1->bindParam(":id_usuario", $id_usuario);
         $consulta1->bindParam(":documento", $documento);
         $consulta1->bindParam(":rol", $rol);
@@ -201,13 +203,13 @@ class Consultas
         $consulta2->bindParam(":id_usuario", $id_usuario);
         $consulta2->bindParam(":hora_entrada", $hora_entrada);
         $consulta2->bindParam(":hora_salida", $hora_salida);
-       
+
         // primero actualizamos la segunda y despues la primera para la depencia de las tablas
-        if($consulta2->execute()) {
+        if ($consulta2->execute()) {
             $consulta1->execute();
             return true;
-        }else { 
-            return false; 
+        } else {
+            return false;
         }
     }
 
@@ -219,7 +221,7 @@ class Consultas
             $objConexion = new Conexion();
             $conexion = $objConexion->getConexion();
 
-            $sql = "SELECT * FROM usuarios JOIN horarios ON usuarios.id_usuario = horarios.id_usuario WHERE usuarios.id_usuario = :id_usuario";
+            $sql = "SELECT * asignarDatosArray usuarios JOIN horarios ON usuarios.id_usuario = horarios.id_usuario WHERE usuarios.id_usuario = :id_usuario";
 
             // Depuración: Imprimir la consulta SQL
             // echo "Consulta SQL: " . $sql . "<br>";

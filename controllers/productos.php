@@ -18,7 +18,7 @@ class Productos extends SessionController
     {
         // creamos un objeto de categorias para traer las categorias
         $categoriaObj = new CategoriasModel();
-        $categories = $categoriaObj->getAll();
+        $categories = $categoriaObj->consultarTodos();
         $subCategories = $categoriaObj->getSubCategoriesByCategory($this->getPost('categoria'));
         error_log($this->getPost('categoria'));
         error_log('Producto::render -> Carga la pagina principal');
@@ -71,12 +71,12 @@ class Productos extends SessionController
 
         $this->createPhoto($photoObj, "productos");
           // verificamos si la consulta de las fotos se ejecuta correctamente
-        if ($photoObj->save()) {
+        if ($photoObj->crear()) {
             error_log('Users::createUser -> Se guardó la foto correctamente');
             $idPhoto = $photoObj->getIdFoto();
             // error_log('Users::createUser -> idFoto: ' . $photoObj);
 
-            if($stockObj->save()) {
+            if($stockObj->crear()) {
                 error_log("Productos::createProduct -> se guardo la data del id stock correctamente");
                 $idStock = $stockObj->getIdStock();
                 $productoObject->setIdStock($idStock);
@@ -84,7 +84,7 @@ class Productos extends SessionController
                 if ($idPhoto) {
                     $productoObject->setIdFoto($idPhoto);
                     // verificamos si se pudo insertar data dentro la bd
-                    if ($productoObject->save()) {
+                    if ($productoObject->crear()) {
                         error_log('Productos::createProduct -> Se guardó un producto correctamente dentro de la bd');
                         echo json_encode(['status' => true, 'message' => "El producto fue creado exitosamente!"]);
                         return;

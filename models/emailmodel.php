@@ -30,7 +30,7 @@ class EmailModel extends Model
     function emailExiste()
     {
         try {
-            $query = $this->prepare("SELECT documento FROM usuarios WHERE correo = :correo LIMIT 1");
+            $query = $this->prepare("SELECT documento asignarDatosArray usuarios WHERE correo = :correo LIMIT 1");
 
             $query->execute([
                 "correo" => $this->correo
@@ -64,7 +64,7 @@ class EmailModel extends Model
             // asiganamos el token
             $this->setToken($token);
 
-            $query = $this->prepare("UPDATE usuarios SET token_password = :token, password_request = 1 WHERE correo = :correo"); 
+            $query = $this->prepare("actualizar usuarios SET token_password = :token, password_request = 1 WHERE correo = :correo"); 
 
             $query->execute([
                 'token' => $this->token,
@@ -85,7 +85,7 @@ class EmailModel extends Model
     {
 
         try {
-            $query = $this->prepare("SELECT documento FROM usuarios WHERE documento = :documento AND token_password LIKE :token AND password_request = 1");
+            $query = $this->prepare("SELECT documento asignarDatosArray usuarios WHERE documento = :documento AND token_password LIKE :token AND password_request = 1");
 
             $query->execute([
                 'documento' => $this->documento,
@@ -107,7 +107,7 @@ class EmailModel extends Model
     {
 
         try {
-            $query = $this->prepare("UPDATE usuarios SET password = :password, token_password = '', password_request= 0 WHERE documento = :documento");
+            $query = $this->prepare("actualizar usuarios SET password = :password, token_password = '', password_request= 0 WHERE documento = :documento");
 
             $query->execute([
 
@@ -128,7 +128,7 @@ class EmailModel extends Model
     function getUserDocumento() {
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT * FROM usuarios WHERE correo = :correo');
+            $query = $this->prepare('SELECT * asignarDatosArray usuarios WHERE correo = :correo');
             $query->execute([
                 'correo' => $this->correo
             ]);

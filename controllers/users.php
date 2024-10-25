@@ -1,7 +1,7 @@
 <?php
 // controlador para modulos empleados
 
-class Users extends SessionController 
+class Users extends SessionController
 {
     private $user;
 
@@ -12,7 +12,7 @@ class Users extends SessionController
         $this->user = $this->getUserSessionData();
         error_log('Users::construct -> controlador usuarios');
     }
-    
+
     function render()
     {
         error_log('Users::render -> Carga la pagina principal de los empleados');
@@ -22,11 +22,12 @@ class Users extends SessionController
     }
 
     // Metodo para crear un nuevo usuario
-    function createUser() {
+    function createUser()
+    {
 
         error_log('Users::createUser -> Funcion para crear un nuevo usuario');
         // validamos la data que viene del formulario, en este caso la negamos para el primer caso
-        if(!$this->existPOST(['documento', 'nombres', 'apellidos', 'telefono', 'email', 'rol', 'estado', 'password', 'validarPassword'] && !$this->existFILES('foto'))) {
+        if (!$this->existPOST(['documento', 'nombres', 'apellidos', 'telefono', 'email', 'rol', 'estado', 'password', 'validarPassword'] && !$this->existFILES('foto'))) {
             // Redirigimos otravez al dashboard
             error_log('Users::createUser -> Hay algun error en los parametros enviados en el formulario');
 
@@ -35,7 +36,7 @@ class Users extends SessionController
             return;
         }
 
-        if($this->user == NULL) {
+        if ($this->user == NULL) {
             error_log('Users::createUser -> El usuario de la session esta vacio');
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
             echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
@@ -63,16 +64,16 @@ class Users extends SessionController
         $this->createPhoto($fotoModel, "Users");
 
         // Primero validamos que el usuario que se esta tratando de ingresar no exista en la bd
-        if(!$userModel->existUser($this->getPost('documento'), $this->getPost('email'))) {
-             // insertamos primero la foto
-            if ($fotoModel->save()) {
+        if (!$userModel->existUser($this->getPost('documento'), $this->getPost('email'))) {
+            // insertamos primero la foto
+            if ($fotoModel->crear()) {
                 error_log('Users::createUser -> Se guardó la foto correctamente');
                 $idFoto = $fotoModel->getIdFoto();
                 error_log('Users::createUser -> idFoto: ' . $idFoto);
-    
+
                 if ($idFoto) {
                     $userModel->setIdFoto($idFoto);
-                    if ($userModel->save()) {
+                    if ($userModel->crear()) {
                         error_log('Users::createUser -> Se guardó el usuario correctamente');
                         echo json_encode(['status' => true, 'message' => "El usuario fue creado exitosamente!"]);
                         return;
@@ -81,8 +82,8 @@ class Users extends SessionController
                         echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
                         return;
                     }
-                    
-                    
+
+
                 } else {
                     error_log('Users::createUser -> No se obtuvo el id de la foto');
                     echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
@@ -90,15 +91,15 @@ class Users extends SessionController
             } else {
                 error_log('Users::createUser -> No se guardó la foto correctamente');
                 echo json_encode(['status' => false, 'message' => "No se guardo la foto correctamente code: 500"]);
-            }   
-        }else {
+            }
+        } else {
             error_log('Users::createUser -> El documento o email ya existen en la db');
             echo json_encode(['status' => false, 'message' => "El documento o correo ya existen en el sistema, intentelo nuevamente"]);
             return;
         }
-        
+
     }
-   
+
 
     public function getUsers()
     {
@@ -162,15 +163,15 @@ class Users extends SessionController
 
             echo json_encode($response, JSON_UNESCAPED_UNICODE);
             die();
-        }catch(Exception $e) {
+        } catch (Exception $e) {
             error_log('Error en getUsers: ' . $e->getMessage());
             echo json_encode(['error' => $e->getMessage()]);
         }
-      
+
     }
 
     // funcion para verificar y borrar usuarios
-    function delete()
+    function borrar()
     {
         $data = json_decode(file_get_contents('php://input'), true);
 
@@ -182,37 +183,38 @@ class Users extends SessionController
             // Creando un objeto de tipo FotoModel
             $fotoModel = new FotoModel();
             // Eliminar la foto asociada
-            if ($fotoModel->delete($idFoto)) {
+            if ($fotoModel->borrar($idFoto)) {
                 // Eliminar el usuario
-                $res = $this->model->delete($idUser);
+                $res = $this->model->borrar($idUser);
                 if ($res) {
-                    error_log('Users::deleteUser -> Se eliminó el usuario correctamente');
+                    error_log('Users::borrarUser -> Se eliminó el usuario correctamente');
                     echo json_encode(['status' => true, 'message' => "El usuario fue eliminado exitosamente!"]);
                     return true;
                 } else {
-                    error_log('Users::deleteUser -> No se pudo eliminar el usuario, intente nuevamente');
+                    error_log('Users::borrarUser -> No se pudo eliminar el usuario, intente nuevamente');
                     echo json_encode(['status' => false, 'message' => "No se pudo eliminar el usuario, intente nuevamente!"]);
                     return false;
                 }
             } else {
-                error_log('Users::delete -> No se pudo eliminar la foto, el ID de la foto es -> ' . $idFoto);
+                error_log('Users::borrar -> No se pudo eliminar la foto, el ID de la foto es -> ' . $idFoto);
                 echo json_encode(['status' => false, 'message' => "No se eliminó la foto correctamente. Código: 500"]);
             }
 
         }
     }
 
-    function getUser() {
+    function getUser()
+    {
         // recuperamos la data del cuerpo de la request
         $data = json_decode(file_get_contents('php://input'), true);
-    
+
         if (isset($data['id_usuario'])) {
             $idUser = $data['id_usuario'];
             // Eliminar traer usuario
             $res = $this->model->get($idUser);
             $arrayData = json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
             if ($arrayData) {
-                error_log('Users::get -> El usuario se trajo correctamente-> '.$res);
+                error_log('Users::get -> El usuario se trajo correctamente-> ' . $res);
                 $response = [
                     "data" => $arrayData,
                     "status" => true,
@@ -221,20 +223,21 @@ class Users extends SessionController
                 echo json_encode($response, JSON_UNESCAPED_UNICODE);
                 die();
             } else {
-                error_log('Users::deleteUser -> No se pudo obtener el usuario correctamente');
+                error_log('Users::borrarUser -> No se pudo obtener el usuario correctamente');
                 echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
                 return false;
             }
-        }else {
-            error_log('Users::deleteUser -> No se obtuvo el id del usuario ');
+        } else {
+            error_log('Users::borrarUser -> No se obtuvo el id del usuario ');
             echo json_encode(['status' => false, 'message' => "No se pudo eliminar el usuario, intente nuevamente!"]);
-            return false;  
+            return false;
         }
     }
 
     // funcion para actualizar data
-    function updateUser() {
-        error_log('Users::updateUser -> Funcion para actualizar un usuario');
+    function actualizarUser()
+    {
+        error_log('Users::actualizarUser -> Funcion para actualizar un usuario');
         // validamos la data que viene del formulario, en este caso la negamos para el primer caso
         if (!$this->existPOST(['documento', 'nombres', 'apellidos', 'telefono', 'email', 'rol', 'estado', 'password', 'validarPassword'] && !$this->existFILES('foto'))) {
             // Redirigimos otravez al dashboard
@@ -245,13 +248,13 @@ class Users extends SessionController
             return;
         }
         if ($this->user == NULL) {
-            error_log('Users::updateUser -> El usuario de la session esta vacio');
+            error_log('Users::actualizarUser -> El usuario de la session esta vacio');
             // enviamos la respuesta al front para que muestre una alerta con el mensaje
             echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
             return;
         }
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
-        error_log('Users::updateUser -> Es posible actualizar un usaurio');
+        error_log('Users::actualizarUser -> Es posible actualizar un usaurio');
 
         // creamos un objeto de tipo user
         $userModel = new UsersModel();
@@ -273,23 +276,23 @@ class Users extends SessionController
         // validamos primero si la foto se actualiza en la tablas fotos y despues actualiamos la data del usuario
         // idFoto para actualizar la data
         $idFoto = $this->getPost('id_foto');
-        if($fotoModel->update($idFoto)) {
-            error_log("Users::updateUser -> el id de la foto es -> ".$idFoto);
+        if ($fotoModel->actualizar($idFoto)) {
+            error_log("Users::actualizarUser -> el id de la foto es -> " . $idFoto);
             $userModel->setIdFoto($idFoto);
             // actualizamos la data del usuario
-            $res = $userModel->update($this->getPost("id_usuario"));
+            $res = $userModel->actualizar($this->getPost("id_usuario"));
             // validamos si la consulta o la respuesta es correcta
-            if($res) {
-                error_log('Users::updateUser -> Se actualizo el usuario correctamente');
+            if ($res) {
+                error_log('Users::actualizarUser -> Se actualizo el usuario correctamente');
                 echo json_encode(['status' => true, 'message' => "El usuario fue actualizado exitosamente!"]);
                 return;
-            }else {
-                error_log('Users::updateUser -> Error en la consulta del Back');
+            } else {
+                error_log('Users::actualizarUser -> Error en la consulta del Back');
                 echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
                 return;
             }
-        }else {
-            error_log('Users::updateUser -> No se pudo actualizar la foto');
+        } else {
+            error_log('Users::actualizarUser -> No se pudo actualizar la foto');
             echo json_encode(['status' => false, 'message' => "Error 500, NO se actualizo la foto!"]);
             return;
         }

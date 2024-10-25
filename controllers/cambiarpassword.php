@@ -56,7 +56,7 @@ class CambiarPassword extends Controller
                     // Creamos un objeto de tipo user para traer y mostrar la data en el correo generado
                     $userObject = new UsersModel();
                     // $userObject->setDocumento($emailObject->getDocumento());
-                    $userObject->get($emailObject->getDocumento());
+                    $userObject->consultar($emailObject->getDocumento());
 
 
                     $url = URL . 'cambiarpassword?documento=' . $userObject->getDocumento() . '&token=' . $emailObject->getToken();
@@ -82,7 +82,7 @@ class CambiarPassword extends Controller
     {
 
         // validamos el token y el documento que vienen de la url
-        if (!$this->existPost('documento', 'token')) {
+        if (!$this->existPost(['documento', 'token'])) {
             // Redirigimos otravez al dashboard
             error_log('CambiarPassword::changePasswor -> No existen parametros');
             // enviamos la respuesta al front para que muestre una alerta con el mensaje

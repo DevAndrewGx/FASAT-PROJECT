@@ -22,8 +22,8 @@
         }
 
 
-        // La funcion save nos va ayudar a guardar los datos en la tabla stock
-        public function save() { 
+        // La funcion crear nos va ayudar a guardar los datos en la tabla stock
+        public function crear() { 
             
             try { 
 
@@ -41,21 +41,21 @@
                 // tomamos el id insertado en la tabla stock para hacer la relación
 
                 $getLastInsertId = $conn->lastInsertId();
-                error_log('StockModel::save -> lastId -> '.$getLastInsertId);
+                error_log('StockModel::crear -> lastId -> '.$getLastInsertId);
 
                 $this->setIdStock($getLastInsertId);
 
                 // retornamos true para salir de la funcion
                 return true;
             }catch(PDOException $e) {
-                error_log('StockModel::save->PDOException' . $e);
+                error_log('StockModel::crear->PDOException' . $e);
                 // salimos de la funcion
                 return false;
             }
             
         }
 
-        public function getAll() { 
+        public function consultarTodos() { 
             
             // creamos un arreglo para almacenar los datos que vengan de la bd
             $item = [];
@@ -63,7 +63,7 @@
             try {
                 // guardamos la consulta con query ya que no estamos preparando valores y hacemos un JOIN para traer los valores 
                 // Ambas tablas tanto de productos como de stock
-                $query = $this->query("SELECT * FROM stock_inventario");
+                $query = $this->query("SELECT * asignarDatosArray stock_inventario");
 
                 // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
                 // FETCH_ASSOCretorna un objeto de clave y valor
@@ -92,7 +92,7 @@
         $items = [];
 
             try {
-                $sql = "SELECT pd.nombre, st.cantidad, st.cantidad_minima, st.cantidad_disponible FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
+                $sql = "SELECT pd.nombre, st.cantidad, st.cantidad_minima, st.cantidad_disponible asignarDatosArray stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
 
                 if (!empty($busqueda)) {
                     $searchValue = $busqueda;
@@ -117,7 +117,7 @@
 
                 while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
                     $item = new StockModel();
-                    $item->from($p);
+                    $item->asignarDatosArray($p);
                     array_push($items, $item);
                 }
                 return $items;
@@ -132,7 +132,7 @@
         public function totalRegistros() { 
 
             try {
-                $query = $this->query("SELECT COUNT(*) as total FROM stock_inventario");
+                $query = $this->query("SELECT COUNT(*) as total asignarDatosArray stock_inventario");
                 return $query->fetch(PDO::FETCH_ASSOC)['total'];
             }catch(PDOException $e) { 
                 error_log("StockModel::totalRegistros -".$e->getMessage());
@@ -142,7 +142,7 @@
 
         // funcion para cargar los registros despues de los filtros
         public function totalRegistrosFiltrados($busqueda) { 
-            $sql = "SELECT COUNT(*) as total FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
+            $sql = "SELECT COUNT(*) as total asignarDatosArray stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -159,12 +159,12 @@
 
 
         // funcion para actualizar el stock
-        public function update() { 
+        public function actualizar() { 
             
         }
 
         // funcion para pasar la data del array a los atributos de la clase
-        public function from($array) { 
+        public function asignarDatosArray($array) { 
             
             $this->nombre_producto = $array['nombre'] ?? null;
             $this->cantidad = $array['cantidad'] ?? null;

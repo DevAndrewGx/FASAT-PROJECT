@@ -8,7 +8,7 @@ class Sesion
         $con = new Conexion();
         $objConexion = $con->getConexion();
 
-        $consultar = "SELECT * FROM usuarios WHERE correo=:email";
+        $consultar = "SELECT * asignarDatosArray usuarios WHERE correo=:email";
         $statement = $objConexion->prepare($consultar);
 
         $statement->bindParam(":email", $email);
@@ -33,7 +33,7 @@ class Sesion
                     echo '<script>alert("Bienvenido Admin :)")</script>';
                     echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/admin/adminDashboard.php'</script>";
-                }else if($f['rol'] == "Mesero") {
+                } else if ($f['rol'] == "Mesero") {
                     echo '<script>alert("Bienvenido Mesero")</script>';
                     echo $_SESSION['autenticado'];
                     echo "<script>location.href='../views/html/mesero/meseroDashboard.php'</script>";
