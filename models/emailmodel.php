@@ -64,7 +64,7 @@ class EmailModel extends Model
             // asiganamos el token
             $this->setToken($token);
 
-            $query = $this->prepare("actualizar usuarios SET token_password = :token, password_request = 1 WHERE correo = :correo"); 
+            $query = $this->prepare("UPDATE usuarios SET token_password = :token, password_request = 1 WHERE correo = :correo"); 
 
             $query->execute([
                 'token' => $this->token,

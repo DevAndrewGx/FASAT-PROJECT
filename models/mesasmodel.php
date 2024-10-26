@@ -1,7 +1,7 @@
 <?php
 class MesasModel extends Model implements IModel, JsonSerializable
 {
-
+    private $idMesa;
     private $numeroMesa;
     private $estado;
 
@@ -32,8 +32,8 @@ class MesasModel extends Model implements IModel, JsonSerializable
             error_log("Mesas::crear -> error " . $e);
         }
     }
-    public function consultar($id)
-    {
+    public function consultar($id){
+
     }
 
     public function getTablasPorEstado($state)
@@ -44,7 +44,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
         try {
             // creamos la query con prepare ya que se va insertar data en la consulta para buscar por estado de mesa
 
-            $query = $this->prepare("SELECT * asignarDatosArray mesas ms WHERE ms.estado = :estado");
+            $query = $this->prepare("SELECT * FROM mesas ms WHERE ms.estado = :estado");
             // ejeuctamos la consulta 
             $query->execute([
                 "estado" => $state
@@ -57,6 +57,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
                 $item->setNumeroMesa($row['numero_mesa']);
                 $item->setEstado($row['estado']);
+                $item->setIdMesa($row['id_mesa']);
 
                 array_push($items, $item);
             }
@@ -74,7 +75,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT * asignarDatosArray mesas";
+            $sql = "SELECT * FROM mesas";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -113,7 +114,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function totalRegistros()
     {
         try {
-            $query = $this->query("SELECT COUNT(*) as total asignarDatosArray mesas");
+            $query = $this->query("SELECT COUNT(*) as total FROM mesas");
             return $query->fetch(PDO::FETCH_ASSOC)['total'];
         } catch (PDOException $e) {
             error_log('MesasModel::totalRegistros - ' . $e->getMessage());
@@ -124,7 +125,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function totalRegistrosFiltrados($busqueda)
     {
         try {
-            $sql = "SELECT COUNT(*) as total asignarDatosArray mesas;";
+            $sql = "SELECT COUNT(*) as total FROM mesas;";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -143,6 +144,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function jsonSerialize(): mixed
     {
         return [
+            'id_mesa'=>$this->idMesa,
             'numeroMesa' => $this->numeroMesa,
             'estado' => $this->estado,
         ];
@@ -151,9 +153,55 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function consultarTodos()
     {
     }
-    public function actualizar($id)
-    {
+
+    public function actualizar($id) {
+        // usamos try catch ya que vamos a interactuar con la BD
+        try {
+            // creamos la query para actualizar
+            $query = $this->prepare('UPDATE mesas SET numero_mesa = :numero_mesa, estado = :estado WHERE id_mesa = :id');
+            // ejecutamos la query para actualizar
+            $query->execute([
+                'id' => $id,
+                'estado' => $this->estado,
+                'numero_mesa' => $this->numeroMesa
+            ]);
+
+            // validamos que la query se ejecuta correctamente y afecta una columna
+            if ($query->rowCount() > 0) {
+                return true;
+            } else {
+                error_log('MesasModel::update -> No se actualizo ninguna fila');
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log("MesasModel::actualizar->PDOException " . $e);
+        }
     }
+
+    public function actualizarEstado($id) {
+
+        // usamos try catch ya que vamos a interactuar con la BD
+        try { 
+            // creamos la query para actualizar
+            $query = $this->prepare('UPDATE mesas SET estado = :estado WHERE id_mesa = :id');
+            // ejecutamos la query para actualizar
+            $query->execute([
+                'id'=>$id,
+                'estado'=>$this->estado
+            ]);
+
+            // validamos que la query se ejecuta correctamente y afecta una columna
+            if($query->rowCount() > 0) { 
+                return true;
+            }else { 
+                error_log('MesasModel::update -> No se actualizo ninguna fila'); 
+                return false;
+            }
+        }catch(PDOException $e) { 
+            error_log("MesasModel::actualizar->PDOException ".$e);
+        }
+    }
+
     public function borrar($id)
     {
     }
@@ -173,6 +221,11 @@ class MesasModel extends Model implements IModel, JsonSerializable
         return $this->estado;
     }
 
+    public function getIdMesa()
+    {
+        return $this->idMesa;
+    }
+
     public function setNumeroMesa($numero)
     {
         $this->numeroMesa = $numero;
@@ -180,6 +233,11 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function setEstado($estado)
     {
         $this->estado = $estado;
+    }
+
+    public function setIdMesa($mesa)
+    {
+        $this->idMesa = $mesa;
     }
 }
 ?>

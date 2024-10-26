@@ -61,7 +61,7 @@ $user = $this->d['user'];
                 <div class="card mb-4">
                     <div class="card-body">
                         <h5 class="card-title">Enviar Nuevo Pedido</h5>
-                        <button class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#orderModal">Ingresar Orden</button>
+                        <button class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#abrirMesaModal">Ingresar Orden</button>
 
                     </div>
                 </div>
@@ -114,51 +114,22 @@ $user = $this->d['user'];
     </div>
 
     <!-- Modal para abrir una mesa -->
-    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="abrirMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister">
-                    <h5 class="modal-title" id="orderModalLabel">Abrir Mesa</h5>
+                    <h5 class="modal-title" id="abrirMesaLabel">Abrir Mesa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="pedidosForm">
-                        <div class="mb-3" id="container-form">
-                            <label for="categoriaPedido" class="form-label">Seleccione categoria</label>
-                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
-                                <option value="#" selected>Seleccione la categoria</option>
-                            </select>
-                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
-                        </div>
+                    <form id="abrirMesaForm">
+
                         <!-- select oculto para actualizar la subcategoria con su respectiva categoria
                               -->
-                        <div class="mb-3" id="container-form">
-                            <label for="productosPedidos" class="form-label">Seleccione producto</label>
-                            <select name="productos" id="productos" class="form-control">
-                                <option value="#" selected>Seleccione la producto</option>
-                            </select>
-                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
+                        <div class="mb-3" id="meseroAsociado">
+                            <label for="mesero" class="form-label">Nombre mesero asociado</label>
+                            <input type="text" id="mesero" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="abrirMesa">Abrir Mesa</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal para crear un pedido -->
-    <div class="modal fade" id="pedidosModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header headerRegister">
-                    <h5 class="modal-title" id="orderModalLabel">Adicionar productos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="pedi">
                         <div class="mb-3" id="container-form">
                             <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
                             <select name="numeroMesa" id="numeroMesa" class="form-control">
@@ -166,16 +137,45 @@ $user = $this->d['user'];
                             </select>
                             <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" id="abrirMesaButton">Abrir Mesa</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal para generar un pedido -->
+    <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Agregar productos - <span id="estado-mesa"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+
                         <!-- select oculto para actualizar la subcategoria con su respectiva categoria
                               -->
                         <div class="mb-3" id="meseroAsociado">
                             <label for="mesero" class="form-label">Nombre mesero asociado</label>
-                            <input type="text" id="mesero" name="mesero" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                            <input type="text" id="mesero" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                        </div>
+                        <div class="mb-3" id="container-form">
+                            <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
+                            <select name="numeroMesa" id="numeroMesa" class="form-control">
+                                <option value="#" selected>Seleccione el numero de mesa</option>
+                            </select>
+                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="abrirMesa">Abrir Mesa</button>
+                    <button type="submit" class="btn btn-primary" id="crearPedido">Confirmar</button>
                 </div>
             </div>
         </div>

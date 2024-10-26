@@ -67,7 +67,7 @@ class Mesas extends SessionController
             return;
         }
     }
-
+    // getMesas nos permite traer y realizar el filtrado de las mesas para mostrarlas en el datatable
     function getMesas()
     {
         try {
@@ -127,7 +127,7 @@ class Mesas extends SessionController
             error_log('Mesas::getMesas -> Error en traer los datos - getMesas' . $e->getMessage());
         }
     }
-
+    // getTablasPorEstado nos permite traer la mesas dependiendo del estado 'DISPONIBLE', 'VENTA', 'CERRADA'
     function getTablasPorEstado()
     {
         // validamos que la data enviada exista
@@ -136,10 +136,47 @@ class Mesas extends SessionController
 
             // creamos un objeto de la clase mesas
             $mesaObj = new MesasModel();
-
             $mesas = $mesaObj->getTablasPorEstado($this->getPost('estado'));
 
+
             echo json_encode(["data" => $mesas]);
+            return;
+        }
+    }
+
+    // abrirMesa nos permite abrir una mesa para generar un pedido desde la interfaz del mesero
+    function abrirMesa() {
+        error_log('Mesas::abrirMesa -> Funcion para abrir una mesa y actualizar el estado');
+        // validamos la data que viene del formulario, en este caso la negamos para el primer caso
+        if (!$this->existPOST(['estado', 'numeroMesa'])) {
+            // Redirigimos otravez al dashboard
+            error_log('Mesas::abrirMesa -> Hay algun error en los parametros enviados en el formulario');
+
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER_EMPTY]);
+            return;
+        }
+        if ($this->user == NULL) {
+            error_log('Mesas::abrirMesa -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+            return;
+        }
+        // si no entra a niguna validacion, significa que la data y el usuario estan correctos
+        error_log('Mesas::abrirMesa -> Es posible actualizar el estado de la mesa');
+
+
+        // creamos un objeto de mesa para guardar la data en los atributos y ejecutar el metodo 
+        $mesaObj = new MesasModel();
+        $mesaObj->setEstado($this->getPost("estado"));
+        error_log('mesaaaaaaaaaaaaaaaaaaa '.$this->getPost('numeroMesa'));
+        if($mesaObj->actualizarEstado($this->getPost('numeroMesa'))) {
+            error_log('Mesas::abrirMesa -> Se actualizo el estado de la mesa correctamente');
+            echo json_encode(['status' => true, 'message' => "Se abrio la mesa correctamente!"]);
+            return;
+        }else {
+            error_log('Mesas::abrirMesa -> No se actualizo la mesa!');
+            echo json_encode(['status' => false, 'message' => "Hubo un problema al agregar usuario, intentalo nuevamente"]);
             return;
         }
     }

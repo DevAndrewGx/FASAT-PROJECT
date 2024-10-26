@@ -11,7 +11,7 @@ class Logout extends SessionController
 
     public function render()
     {
-        $this->logout();
+        $this->cerrarSesion();
         $this->redirect('', []);
     }
 }

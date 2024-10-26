@@ -1,5 +1,6 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    let estado;
 
     // Creamos datatable y la inicializamos 
     let dataTableMesas = $("#data-mesas").DataTable({
@@ -34,7 +35,7 @@ $(document).ready(function () {
                         case "DISPONIBLE":
                             badgeClass = "bg-lightgreen";
                             break;
-                        case "OCUPADA":
+                        case "EN SERVICIO":
                             badgeClass = "bg-lightred";
                             break;
                         case "EN VENTA":
@@ -99,8 +100,19 @@ $(document).ready(function () {
         });
     });
 
-    $("#openOrderForm").on('click', function(e) { 
-        let estado = 'DISPONIBLE';
+
+    /**Esta funcion nos permitira realizar la peticion 
+    para traer las tablas por estado, y asi
+    quemar o hacer scripting en el DOM para mostrar las mesas segun el estado**/
+    $("#openOrderForm").on('click', function(e) {
+        
+        // validamos si el modal esta abierto para asignar el estado
+        if (!$("#abrirMesaModal").hasClass("show")) {
+            estado = "DISPONIBLE";
+        } else {
+            estado = "EN SERVICIO";
+        }
+        console.log(estado);
         // cancelamos el efecto por default
         e.preventDefault();
 
@@ -112,12 +124,47 @@ $(document).ready(function () {
             
             mesas.data.forEach((mesa)=> { 
                 template += `
-                    <option value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
+                <option value="${mesa.idMesa}">${mesa.numeroMesa}</option>
                 `;
             });
             $("#numeroMesa").html(template);
         });
+    });
+    
+    $("#abrirMesaForm").on("submit", function (e) {
+        estado = "EN SERVICIO";
+        // prevenimos el efecto por default
+        e.preventDefault();
+        console.log("its working bitch");
 
-        
-    })
+        // ocultamos el modal para abrir una mesa
+        $("#abrirMesaModal").modal("hide");
+        // mostramos el modal para generar un pedido.
+        $("#generarPedidoModal").modal("show");
+
+        // seleccionamos el formulario del DOM
+        let form = $(this)[0];
+        const formData = new FormData(form);
+        // agregamos el capo de estado
+        formData.append("estado", estado);
+
+        $.ajax({
+            url: baseUrl + "mesas/abrirMesa",
+            type: "POST",
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: function (response) {
+                let data = JSON.parse(response);
+                console.log(data);
+            },
+        });
+    });
+
+    
+    // FUNCIONES UTILITARIAS PARA VALIDAR SI EL MODAL ESTA ABIERTO O CERRADO PARA CAMBIAR EL ESTADO
+    $("#abrirMesaModal").on("shown.bs.modal", function () {
+        estado = "DISPONIBLE"; // Cambiamos el estado a "DISPONIBLE" cuando el modal se abre
+        console.log("El modal se ha abierto, estado: " + estado);
+    });
 });

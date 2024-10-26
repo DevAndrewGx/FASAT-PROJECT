@@ -77,7 +77,6 @@ $user = $this->d['user'];
 
         </main>
     </div>
-
     <div class="modal fade" id="modalFormMesas" tabindex="-1" aria-labelledby="mesasModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -89,7 +88,7 @@ $user = $this->d['user'];
                     <form id="formMesas">
                         <div class="mb-3">
                             <label for="numeroMesa" class="form-label">Numero de mesa</label>
-                            <input type="number" class="form-control" name="numeroMesa" id="numeroMesa" placeholder="Nombre de la Categoría">
+                            <input type="number" class="form-control" name="numeroMesa" id="numeroMesa" placeholder="Numero Mesa">
                             <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de meesa válido.</div>
                         </div>
                         <div class="mb-3">
@@ -98,7 +97,7 @@ $user = $this->d['user'];
                                 <option value="" selected>Seleccione estado</option>
                                 <option value="DISPONIBLE">Disponible</option>
                                 <option value="EN VENTA">En venta</option>
-                                <option value="OCUPADA">Cerrada</option>
+                                <option value="EN SERVICIO">En servicio</option>
                             </select>
                             <div id="typeCategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un estaddo valido</div>
                         </div>
