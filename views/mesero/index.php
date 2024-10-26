@@ -113,7 +113,7 @@ $user = $this->d['user'];
         </main>
     </div>
 
-    <!-- Modal para crear un pedido -->
+    <!-- Modal para abrir una mesa -->
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -122,7 +122,43 @@ $user = $this->d['user'];
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="orderForm">
+                    <form id="pedidosForm">
+                        <div class="mb-3" id="container-form">
+                            <label for="categoriaPedido" class="form-label">Seleccione categoria</label>
+                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
+                                <option value="#" selected>Seleccione la categoria</option>
+                            </select>
+                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
+                        </div>
+                        <!-- select oculto para actualizar la subcategoria con su respectiva categoria
+                              -->
+                        <div class="mb-3" id="container-form">
+                            <label for="productosPedidos" class="form-label">Seleccione producto</label>
+                            <select name="productos" id="productos" class="form-control">
+                                <option value="#" selected>Seleccione la producto</option>
+                            </select>
+                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="abrirMesa">Abrir Mesa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para crear un pedido -->
+    <div class="modal fade" id="pedidosModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Adicionar productos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="pedi">
                         <div class="mb-3" id="container-form">
                             <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
                             <select name="numeroMesa" id="numeroMesa" class="form-control">
@@ -134,34 +170,12 @@ $user = $this->d['user'];
                               -->
                         <div class="mb-3" id="meseroAsociado">
                             <label for="mesero" class="form-label">Nombre mesero asociado</label>
-                            <input type="text" id="mesero" name="mesero" class="form-control" value="<?php echo $user->getNombres();?>" disabled>
+                            <input type="text" id="mesero" name="mesero" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
                         </div>
-
-                        <!-- <div class="mb-3 col-md-12" id="container-mesas-disponibles">
-                            <label for="mesas-disponible" class="form-label">Mesas disponibles</label>
-                            <table id="data-mesas" class="table table-responsive datanew" style="width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox" id="select-all">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <th class="sorting">Numero de mesa</th>
-                                        <th class="sorting">Estado</th>
-                                        <th class="sorting">Accion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div> -->
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="submitOrder">Abrir Mesa</button>
+                    <button type="button" class="btn btn-primary" id="abrirMesa">Abrir Mesa</button>
                 </div>
             </div>
         </div>
