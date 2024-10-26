@@ -10,7 +10,7 @@ class Categorias extends SessionController
     {
         parent::__construct();
 
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Categorias::construct -> Controlador categorias');
     }
 
@@ -59,30 +59,30 @@ class Categorias extends SessionController
 
 
         // Si no existe la subcategoria insertamosla categoria sin ningun paso adicional mas
-        if(!$categoriaObj->existCategory($this->getPost('nombreCategoria')) && !$this->existPOST(['subCategoriaNombre'])) {
+        if (!$categoriaObj->existCategory($this->getPost('nombreCategoria')) && !$this->existPOST(['subCategoriaNombre'])) {
             error_log('Categorias::createCategory -> No existe la subcategoria, se inserta data de la categoria');
-            if ($categoriaObj->saveCategory()) {
+            if ($categoriaObj->crearCategory()) {
                 $idCategoria = $categoriaObj->getIdCategoria();
                 $categoriaObj->setIdCategoria($idCategoria);
                 error_log('Categorias::createCategory -> Se guardo la categoria exitosamente');
                 echo json_encode(['status' => true, 'message' => "La categoria fue creada exitosamente! CASO 1"]);
                 return;
             }
-        }else if($categoriaObj->existCategory($this->getPost("nombreCategoria")) && $this->existPOST(['subCategoriaNombre'])) {
+        } else if ($categoriaObj->existCategory($this->getPost("nombreCategoria")) && $this->existPOST(['subCategoriaNombre'])) {
 
             // error_log('Existe la categoria? '. $categoriaObj->existCategory($this->getPost("nombreCategoria")));
             // error_log('La subcategoria a insertar es: '. $this->existPOST(['subCategoriaNombre']));
-            if(!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
-                return; 
-            }else {
+            if (!$categoriaObj->existCategory($this->getPost("nombreCategoria"))) {
+                return;
+            } else {
                 $categoriaObj->get($this->getPost('nombreCategoria'));
 
                 $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
                 // obtenemos los datos de la categoria con get para asginarlo al objeto y asi poder insertar la data correctamente
 
                 // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
-                if(!$categoriaObj->existSubCategory($this->getPost('subCategoriaNombre'))) {
-                    if ($categoriaObj->saveSubCategory()) {
+                if (!$categoriaObj->existSubCategory($this->getPost('subCategoriaNombre'))) {
+                    if ($categoriaObj->crearSubCategory()) {
                         error_log('Categorias::createCategory -> Se guardo la categoria y subcategoria exitosamente');
                         echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
                         return;
@@ -90,11 +90,11 @@ class Categorias extends SessionController
                         echo json_encode(['status' => false, 'message' => "No se pudo guardar la data correctamente, intentelo nuevamente"]);
                         return;
                     }
-                }else {
+                } else {
                     echo json_encode(['status' => false, 'message' => "La subcategoria ya existe en el sistema, intentelo nuevamente"]);
                     return;
                 }
-                if ($categoriaObj->saveSubCategory()) {
+                if ($categoriaObj->crearSubCategory()) {
                     error_log('Categorias::createCategory -> Se guardo la categoria y subcategoria exitosamente');
                     echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente! CASO 2"]);
                     return;
@@ -104,16 +104,16 @@ class Categorias extends SessionController
                 }
             }
 
-        }else if(!$categoriaObj->existCategory($this->getPost("nombreCategoria")) &&  $this->existPOST(['subCategoriaNombre'])){
+        } else if (!$categoriaObj->existCategory($this->getPost("nombreCategoria")) && $this->existPOST(['subCategoriaNombre'])) {
             // Si no existe la categoria aun, la crea con la subcategoria
-            if ($categoriaObj->saveCategory()) {
+            if ($categoriaObj->crearCategory()) {
                 error_log('Categorias::createCategory -> Se guardó la categoria correctamente');
                 $idCategoria = $categoriaObj->getIdCategoria();
                 $categoriaObj->setIdCategoria($idCategoria);
                 // hacemos la inserción de la subcategoria con el id de la categoria para realizar la asociación
                 $categoriaObj->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
 
-                if ($categoriaObj->saveSubCategory()) {
+                if ($categoriaObj->crearSubCategory()) {
                     echo json_encode(['status' => true, 'message' => "La categoria y subcategoria fueron creadas exitosamente CASO 3"]);
                     return;
                 } else {
@@ -121,11 +121,11 @@ class Categorias extends SessionController
                     return;
                 }
             }
-        }else {
+        } else {
             echo json_encode(['status' => false, 'message' => "La categoria ya se encuentra registrada en el sistema intentelo nuevamente! CASO 4"]);
             return;
         }
-        
+
     }
 
 
@@ -137,7 +137,7 @@ class Categorias extends SessionController
             // Obtener los parámetros enviados por DataTables
             $draw = intval($_GET['draw']);
             $start = intval($_GET['start']);
-            $length = isset($_GET['length']) ? (int)$_GET['length'] : 10;
+            $length = isset($_GET['length']) ? (int) $_GET['length'] : 10;
             $search = $_GET['search']['value'];
             $orderColumnIndex = intval($_GET['order'][0]['column']);
             $orderDir = $_GET['order'][0]['dir'];
@@ -166,7 +166,7 @@ class Categorias extends SessionController
                 <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-nombre="'.$arrayDataCategories[$i]['nombre_categoria'] .'" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
+                <a class="me-3 botonActualizar" data-nombre="' . $arrayDataCategories[$i]['nombre_categoria'] . '" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
                 <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataCategories[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataCategories[$i]['id_sub_categoria'] . '" href="#">
@@ -193,26 +193,27 @@ class Categorias extends SessionController
 
 
     // funcion para trear solamente una categoria
-    public function getCategory() { 
-        
+    public function getCategory()
+    {
 
-        $data = json_decode(file_get_contents("php://input"),true);
+
+        $data = json_decode(file_get_contents("php://input"), true);
 
 
         // validamos si la data de la solicitud existe
-        if(isset($data['nombre'])) { 
+        if (isset($data['nombre'])) {
 
             $idCategoria = $data['nombre'];
-            
+
             // traemos la data de la categoria
             $res = $this->model->get($idCategoria);
-            
+
             // decodificamos la data que viene del backend en un JSON
             $arrayData = json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
 
             // verificamos si la data es correcta
-            if($arrayData) { 
-                
+            if ($arrayData) {
+
                 // devolvemos un arreglo asociativo y devolvemos la data al front
                 $response = [
                     "data" => $arrayData,
@@ -223,13 +224,13 @@ class Categorias extends SessionController
                 echo json_encode($response, JSON_UNESCAPED_UNICODE);
                 // terminamos el proceso
                 die();
-            }else { 
+            } else {
                 error_log("Categories::getCategory -> No se puedo obtener la categoria correctamente");
-                echo json_encode(["status"=>false, "message" => "No se pudo obtener la categoria"]);
+                echo json_encode(["status" => false, "message" => "No se pudo obtener la categoria"]);
                 return false;
             }
-            
-            
+
+
         }
     }
 
@@ -266,20 +267,20 @@ class Categorias extends SessionController
 
 
     // funcion para verificar y borrar usuarios
-    function delete()
+    function borrar()
     {
         $data = json_decode(file_get_contents('php://input'), true);
         // Verificar si los datos fueron recibidos correctamente
         if (isset($data['id_categoria'])) {
 
             $idCategoria = $data['id_categoria'];
-            $res = $this->model->delete($idCategoria);
+            $res = $this->model->borrar($idCategoria);
             if ($res) {
-                error_log('Users::delete -> Se eliminó la categoria correctamente');
+                error_log('Users::borrar -> Se eliminó la categoria correctamente');
                 echo json_encode(['status' => true, 'message' => "La categoria fue eliminada exitosamente!"]);
                 return true;
             } else {
-                error_log('Categorias::delete -> No se pudo eliminar la categoria, intente nuevamente');
+                error_log('Categorias::borrar -> No se pudo eliminar la categoria, intente nuevamente');
                 echo json_encode(['status' => false, 'message' => "No se pudo eliminar la categoria, intente nuevamente!"]);
                 return false;
             }
@@ -288,84 +289,37 @@ class Categorias extends SessionController
 
 
     // funcion para eliminar una subcategoria de una categoria ya existente
-    function deleteSubCategoria()
+    function borrarSubCategoria()
     {
         $data = json_decode(file_get_contents('php://input'), true);
         // Verificar si los datos fueron recibidos correctamente
         if (isset($data['idSubCategoria'])) {
 
             $idSubCategoria = $data['idSubCategoria'];
-            $res = $this->model->deleteSubCategoria($idSubCategoria);
+            $res = $this->model->borrarSubCategoria($idSubCategoria);
             if ($res) {
-                error_log('Users::deleteSubCategoria -> Se eliminó una subCategoria correctamente');
+                error_log('Users::borrarSubCategoria -> Se eliminó una subCategoria correctamente');
                 echo json_encode(['status' => true, 'message' => "La subcategoria fue eliminada exitosamente!"]);
                 return true;
             } else {
-                error_log('Categorias::deleteSubCategoria -> No se pudo eliminar la subcategoria, intente nuevamente');
+                error_log('Categorias::borrarSubCategoria -> No se pudo eliminar la subcategoria, intente nuevamente');
                 echo json_encode(['status' => false, 'message' => "No se pudo eliminar la subcategoria, intente nuevamente!"]);
                 return false;
             }
         }
     }
 
-    
+
     // funcion para con la logica para actualizar la categoria
 
-    public function updateCategory() { 
-        error_log('Categorias::updateCategory -> Funcion para actualizar una categoria');
-        
-        // validamos que los datos que vienen del formulario no este vacios
-        if(!$this->existPOST(['nombreCategoria', 'tipoCategoria', 'id_categoria'])) {
-
-            error_log('Categorias::updateCategory -> Hay algunos parametros vacios enviados en el formulario');
-            
-            echo json_encode(['status'=>false, 'message'=> "Algunos datos enviados del formulario estan vacios"]);
-
-            return;
-        }
-        // validamos que el usuario de la sesión no este vacio
-        if ($this->user == NULL) {
-
-            error_log('Categorias::updateCategory -> El usuario de la sesión esta vacio');
-            
-            echo json_encode(['status'=> false, 'message'=> "El usuario de la sesión intenlo nuevamente"]);
-            return;
-        }
-
-        // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
-        error_log('Categorias::updateCategory -> Es posible actualizar una categoria');
-
-        $objCategory = new CategoriasModel();
-
-        $objCategory->setNombreCategoria($this->getPost('nombreCategoria'));
-        $objCategory->setTipoCategoria($this->getPost('tipoCategoria'));
-
-        // ejecutamos la query para actualizar una categoria
-        $res = $objCategory->updateCategory($this->getPost('id_categoria'));
-        
-        // validamos si la consulta se ejecuto correctamente
-
-        if($res) {
-            error_log('Category::updateCategory -> Se actualizo la categoria correctamente');
-            echo json_encode(['status' => true, 'message' => "La categoria fue actualizada exitosamente!"]);
-            return;
-        }else {
-            error_log('Category::updateCategory -> Error en la consulta del Back');
-            echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
-            return;
-        }
-    }
-
-
-    // funcion para actualizar la subcategoria
-
-    public function updateSubCategory() {
-        error_log('Categorias::updateCategory -> Funcion para actualizar una subCategoria');
+    public function actualizarCategory()
+    {
+        error_log('Categorias::actualizarCategory -> Funcion para actualizar una categoria');
 
         // validamos que los datos que vienen del formulario no este vacios
-        if (!$this->existPOST(['subCategoriaNombre', 'categoriaAsociada', 'idSubcategoria'])) {
+        if (!$this->existPOST(['nombreCategoria', 'tipoCategoria', 'id_categoria'])) {
 
-            error_log('Categorias::updateSubCategory -> Hay algunos parametros vacios enviados en el formulario');
+            error_log('Categorias::actualizarCategory -> Hay algunos parametros vacios enviados en el formulario');
 
             echo json_encode(['status' => false, 'message' => "Algunos datos enviados del formulario estan vacios"]);
 
@@ -374,33 +328,82 @@ class Categorias extends SessionController
         // validamos que el usuario de la sesión no este vacio
         if ($this->user == NULL) {
 
-            error_log('Categorias::updateCategory -> El usuario de la sesión esta vacio');
+            error_log('Categorias::actualizarCategory -> El usuario de la sesión esta vacio');
 
             echo json_encode(['status' => false, 'message' => "El usuario de la sesión intenlo nuevamente"]);
             return;
         }
 
         // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
-        error_log('Categorias::updateSubCategroy -> Es posible actualizar una subCategoria');
+        error_log('Categorias::actualizarCategory -> Es posible actualizar una categoria');
+
+        $objCategory = new CategoriasModel();
+
+        $objCategory->setNombreCategoria($this->getPost('nombreCategoria'));
+        $objCategory->setTipoCategoria($this->getPost('tipoCategoria'));
+
+        // ejecutamos la query para actualizar una categoria
+        $res = $objCategory->actualizarCategory($this->getPost('id_categoria'));
+
+        // validamos si la consulta se ejecuto correctamente
+
+        if ($res) {
+            error_log('Category::actualizarCategory -> Se actualizo la categoria correctamente');
+            echo json_encode(['status' => true, 'message' => "La categoria fue actualizada exitosamente!"]);
+            return;
+        } else {
+            error_log('Category::actualizarCategory -> Error en la consulta del Back');
+            echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
+            return;
+        }
+    }
+
+
+    // funcion para actualizar la subcategoria
+
+    public function actualizarSubCategory()
+    {
+        error_log('Categorias::actualizarCategory -> Funcion para actualizar una subCategoria');
+
+        // validamos que los datos que vienen del formulario no este vacios
+        if (!$this->existPOST(['subCategoriaNombre', 'categoriaAsociada', 'idSubcategoria'])) {
+
+            error_log('Categorias::actualizarSubCategory -> Hay algunos parametros vacios enviados en el formulario');
+
+            echo json_encode(['status' => false, 'message' => "Algunos datos enviados del formulario estan vacios"]);
+
+            return;
+        }
+        // validamos que el usuario de la sesión no este vacio
+        if ($this->user == NULL) {
+
+            error_log('Categorias::actualizarCategory -> El usuario de la sesión esta vacio');
+
+            echo json_encode(['status' => false, 'message' => "El usuario de la sesión intenlo nuevamente"]);
+            return;
+        }
+
+        // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
+        error_log('Categorias::actualizarSubCategroy -> Es posible actualizar una subCategoria');
 
         $objCategory = new CategoriasModel();
 
         $objCategory->setNombreSubCategoria($this->getPost('subCategoriaNombre'));
         $objCategory->setIdCategoria($this->getPost('categoriaAsociada'));
-        
+
 
         // ejecutamos la query para actualizar una categoria
-        $res = $objCategory->updateSubCategory($this->getPost('idSubcategoria'));
+        $res = $objCategory->actualizarSubCategory($this->getPost('idSubcategoria'));
 
         // validamos si la consulta se ejecuto correctamente
         if ($res) {
-            error_log('Category::updateCategory -> Se actualizo la subCategoria correctamente');
+            error_log('Category::actualizarCategory -> Se actualizo la subCategoria correctamente');
             echo json_encode(['status' => true, 'message' => "La subCategoria fue actualizada exitosamente!"]);
             return;
         } else {
-            error_log('Category::updateCategory -> Error en la consulta del Back');
+            error_log('Category::actualizarCategory -> Error en la consulta del Back');
             echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
             return;
         }
-    }  
+    }
 }

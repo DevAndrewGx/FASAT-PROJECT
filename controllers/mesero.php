@@ -7,11 +7,11 @@ class Mesero extends SessionController
     {
         
         parent::__construct();
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         // creamos una instancia de mesas
         $mesasObj = new MesasModel();
         // traemos las mesas que estan disponibles 
-        $mesasObj->getTablesByState($this->getPost('estado'));
+        $mesasObj->getTablasPorEstado($this->getPost('estado'));
     }
 
 

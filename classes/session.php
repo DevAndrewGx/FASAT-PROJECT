@@ -4,7 +4,7 @@
     class Session {
         
         // creamos un atributo con un valor con defecto
-        private $sessionName = 'user';
+        private $nombreSession = 'user';
         public function __construct() {
 
 
@@ -17,27 +17,27 @@
 
 
         // funcion para guardar el nombre del usuario en la session
-        public function setCurrentUser($user) {
-            $_SESSION[$this->sessionName] = $user;
+        public function setUsuarioActual($user) {
+            $_SESSION[$this->nombreSession] = $user;
         }
 
 
         // funcion para obtener la session del usuario actual
-        public function getCurrentUser() {
-            return $_SESSION[$this->sessionName];
+        public function getUsuarioActual() {
+            return $_SESSION[$this->nombreSession];
         }
 
 
         // esta funcion nos ayuda a cerrar la session 
-        public function closeSession() { 
+        public function cerrarSesion() { 
             session_unset(); //esta funcion nos permite borrar todas las variables de session que tengamos
             session_destroy(); // finalmente destruimos la session
         }
 
 
         // esta funcion es util para saber si aun existe la session
-        public function exists() {
-            return isset($_SESSION[$this->sessionName]);
+        public function existe() {
+            return isset($_SESSION[$this->nombreSession]);
         }
     }
 ?>

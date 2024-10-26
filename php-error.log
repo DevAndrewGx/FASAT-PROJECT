@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [14-Oct-2024 08:44:20 Europe/Berlin] Inicializando la aplicacion...
 [14-Oct-2024 08:44:20 Europe/Berlin] SessionController::validateSession()
 [14-Oct-2024 08:44:20 Europe/Berlin] sessionController::getUserSessionData(): Dave
@@ -2097,3 +2098,242 @@
 [20-Oct-2024 02:46:49 Europe/Berlin] Mesas::construct -> controlador usuarios
 [20-Oct-2024 02:46:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
 [20-Oct-2024 02:46:49 Europe/Berlin] Estado DISPONIBLE
+=======
+[26-Oct-2024 03:22:41 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:22:41 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:22:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:22:41 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:22:41 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:22:41 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:22:41 Europe/Berlin] loginPorCorreo: inicio
+[26-Oct-2024 03:22:41 Europe/Berlin] login: user correo cheff@x.com
+[26-Oct-2024 03:22:41 Europe/Berlin] EL USUARIO ESTA NULLO
+[26-Oct-2024 03:22:41 Europe/Berlin] Login::authenticate() user and/or password wrong
+[26-Oct-2024 03:22:41 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:22:41 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:22:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:22:41 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:22:41 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:22:41 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:22:41 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:23:05 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:23:05 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:23:05 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:23:05 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:23:05 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:23:05 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:23:05 Europe/Berlin] loginPorCorreo: inicio
+[26-Oct-2024 03:23:05 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:23:05 Europe/Berlin] login: success
+[26-Oct-2024 03:23:05 Europe/Berlin] EL USUARIO ESTA NULLO
+[26-Oct-2024 03:23:05 Europe/Berlin] Login::authenticate() user and/or password wrong
+[26-Oct-2024 03:23:05 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:23:05 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:23:05 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:23:05 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:23:05 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:23:05 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:23:05 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:25:46 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:25:46 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:25:46 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:25:46 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:25:46 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:25:46 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:25:46 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:25:53 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:25:53 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:25:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:25:53 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:25:53 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:25:53 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:25:53 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:25:53 Europe/Berlin] loginPorCorreo: inicio
+[26-Oct-2024 03:25:53 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:25:53 Europe/Berlin] login: success
+[26-Oct-2024 03:25:53 Europe/Berlin] EL USUARIO ESTA NULLO
+[26-Oct-2024 03:25:53 Europe/Berlin] Login::authenticate() user and/or password wrong
+[26-Oct-2024 03:25:53 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:25:53 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:25:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:25:53 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:25:53 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:25:53 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:25:53 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:27:48 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:27:48 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:27:48 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:48 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:48 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:27:48 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:27:48 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:27:50 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:27:50 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:27:50 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:50 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:50 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:27:50 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:27:50 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:27:57 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:27:57 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:27:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:27:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:27:57 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:27:57 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:27:57 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:27:57 Europe/Berlin] loginPorCorreo: inicio
+[26-Oct-2024 03:27:57 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:27:57 Europe/Berlin] login: success
+[26-Oct-2024 03:27:57 Europe/Berlin] EL USUARIO ESTA NULLO
+[26-Oct-2024 03:27:57 Europe/Berlin] Login::authenticate() user and/or password wrong
+[26-Oct-2024 03:27:57 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:27:57 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:27:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:27:57 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:27:57 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:27:57 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:29:11 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:29:11 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:29:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login?error=6d25fd10e1a6ea0f315321f8vb9621eb, url => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:29:11 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login?error=6d25fd10e1a6ea0f315321f8vb9621eb
+[26-Oct-2024 03:29:11 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:29:11 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:29:11 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:29:19 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:29:19 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:29:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:29:19 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:29:19 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:29:19 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:29:19 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:29:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method LoginModel::loginPorCorreo() in C:\xampp\htdocs\FAST-PROJECT\controllers\login.php:41
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(78): Login->autenticar()
+#1 C:\xampp\htdocs\FAST-PROJECT\index.php(53): App->__construct()
+#2 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\controllers\login.php on line 41
+[26-Oct-2024 03:30:00 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[26-Oct-2024 03:30:00 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[26-Oct-2024 03:30:00 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:01 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:30:01 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:01 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:30:01 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[26-Oct-2024 03:30:01 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:30:01 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:30:01 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:30:01 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:30:09 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:09 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:30:09 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:30:09 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:30:09 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:30:09 Europe/Berlin] loginByCorreo: inicio
+[26-Oct-2024 03:30:09 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:30:09 Europe/Berlin] login: success
+[26-Oct-2024 03:30:09 Europe/Berlin] This is the state: Activo
+[26-Oct-2024 03:30:09 Europe/Berlin] Login::authenticate() passed
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::autorizarAcceso(): role: Administrador
+[26-Oct-2024 03:30:09 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:09 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:30:09 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[26-Oct-2024 03:30:09 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[26-Oct-2024 03:30:09 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:30:09 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:30:09 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:33:00 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:00 Europe/Berlin] APP::construct->No hay controlador especificado
+[26-Oct-2024 03:33:00 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[26-Oct-2024 03:33:01 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:01 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:33:01 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:01 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:33:01 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[26-Oct-2024 03:33:01 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:33:01 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:33:01 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:33:01 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:33:08 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:08 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:33:08 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:33:08 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:33:08 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:33:08 Europe/Berlin] loginByCorreo: inicio
+[26-Oct-2024 03:33:08 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:33:08 Europe/Berlin] login: success
+[26-Oct-2024 03:33:08 Europe/Berlin] This is the state: Activo
+[26-Oct-2024 03:33:08 Europe/Berlin] Login::authenticate() passed
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::autorizarAcceso(): role: Administrador
+[26-Oct-2024 03:33:08 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:08 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:33:08 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[26-Oct-2024 03:33:08 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[26-Oct-2024 03:33:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:33:08 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:33:08 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:34:09 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:09 Europe/Berlin] APP::construct->No hay controlador especificado
+[26-Oct-2024 03:34:09 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 310
+[26-Oct-2024 03:34:10 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:10 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:34:11 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:11 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:34:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[26-Oct-2024 03:34:11 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:34:11 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:34:11 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:34:11 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[26-Oct-2024 03:34:19 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:19 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[26-Oct-2024 03:34:19 Europe/Berlin] SessionController::validarSession() public page
+[26-Oct-2024 03:34:19 Europe/Berlin] Login::construct -> inicio de login
+[26-Oct-2024 03:34:19 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[26-Oct-2024 03:34:19 Europe/Berlin] loginByCorreo: inicio
+[26-Oct-2024 03:34:19 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[26-Oct-2024 03:34:19 Europe/Berlin] login: success
+[26-Oct-2024 03:34:19 Europe/Berlin] This is the state: Activo
+[26-Oct-2024 03:34:19 Europe/Berlin] Login::authenticate() passed
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::autorizarAcceso(): role: Administrador
+[26-Oct-2024 03:34:19 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:19 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:34:19 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[26-Oct-2024 03:34:19 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[26-Oct-2024 03:34:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:34:19 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:19 Europe/Berlin] Errores::construct -> inicio de errores
+[26-Oct-2024 03:34:40 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:40 Europe/Berlin] SessionController::validarSession()
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[26-Oct-2024 03:34:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[26-Oct-2024 03:34:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[26-Oct-2024 03:34:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[26-Oct-2024 03:34:40 Europe/Berlin] Inicializando la aplicacion...
+[26-Oct-2024 03:34:40 Europe/Berlin] Errores::construct -> inicio de errores
+>>>>>>> f539918df1e01b334f44b2b5da94a1085e2346c2

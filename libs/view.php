@@ -14,7 +14,7 @@
         function render($nombre, $data = []) { 
             // variable d -> data
             $this->d = $data;
-            $this->handleMessages();
+            $this->manejarMensajes();
             // llamamos el archivo con el nombre de la vista que queremos cargar
             require 'views/'.$nombre.'.php';
         }
@@ -22,24 +22,24 @@
 
         // function para la manejar los mensajes para mostrarlos en la vista
 
-        private function handleMessages() { 
+        private function manejarMensajes() { 
 
             // validamos si estan los dos errores porque seria un error para la vista
             if(isset($_GET['success']) && isset($_GET['error'])) {
                 //Error
 
             }else if(isset($_GET['success'])) {   // validamos si existe el getSuccess para mostrar los mensajes
-                // llamamos a handleSuccess que nos permitira manejar los mensajes de exito
-                $this->handleSuccess();
+                // llamamos a manejarExito que nos permitira manejar los mensajes de exito
+                $this->manejarExito();
             }else if(isset($_GET['error'])){ 
-                // llamamos a handleError que nos permitira manejar los mensajes de error
-                $this->handleError();
+                // llamamos a manejarError que nos permitira manejar los mensajes de error
+                $this->manejarError();
             }
            
         }
 
         // funcion para maneejar los mensajes de exito
-        private function handleSuccess() { 
+        private function manejarExito() { 
 
             // recuperamos el hash de la URL
             $hash = $_GET['success'];
@@ -48,14 +48,14 @@
 
 
             // validamos si existe el hash que viene de la url
-            if($success->existsKey($hash)) {
+            if($success->existeLlave($hash)) {
                 // $this->d son los datos que vamos a mostrar 
                 $this->d['success'] = $success->getSuccess($hash);
             }
         }
     
         // function para manejar los mensajes de error 
-        private function handleError() { 
+        private function manejarError() { 
 
             // recuperamos el hash de la URL
             $hash = $_GET['error'];
@@ -64,7 +64,7 @@
 
 
             // validamos si existe el hash que viene de la url
-            if($error->existsKey($hash)) {
+            if($error->existeLlave($hash)) {
                 // $this->d son los datos que vamos a mostrar 
                 $this->d['error'] = $error->getError($hash);
             }

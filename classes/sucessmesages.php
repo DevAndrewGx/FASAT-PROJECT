@@ -26,7 +26,7 @@
 
 
         // funcion para validar si existe la key
-        public function existsKey($key) { 
+        public function existeLlave($key) { 
 
             // buscamos si la llave existe en el arreglo
             if(array_key_exists($key, $this->successList)) { 

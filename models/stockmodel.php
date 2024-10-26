@@ -22,8 +22,8 @@
         }
 
 
-        // La funcion save nos va ayudar a guardar los datos en la tabla stock
-        public function save() { 
+        // La funcion crear nos va ayudar a guardar los datos en la tabla stock
+        public function crear() { 
             
             try { 
 
@@ -41,21 +41,21 @@
                 // tomamos el id insertado en la tabla stock para hacer la relación
 
                 $getLastInsertId = $conn->lastInsertId();
-                error_log('StockModel::save -> lastId -> '.$getLastInsertId);
+                error_log('StockModel::crear -> lastId -> '.$getLastInsertId);
 
                 $this->setIdStock($getLastInsertId);
 
                 // retornamos true para salir de la funcion
                 return true;
             }catch(PDOException $e) {
-                error_log('StockModel::save->PDOException' . $e);
+                error_log('StockModel::crear->PDOException' . $e);
                 // salimos de la funcion
                 return false;
             }
             
         }
 
-        public function getAll() { 
+        public function consultarTodos() { 
             
             // creamos un arreglo para almacenar los datos que vengan de la bd
             $item = [];
@@ -117,7 +117,7 @@
 
                 while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
                     $item = new StockModel();
-                    $item->from($p);
+                    $item->asignarDatosArray($p);
                     array_push($items, $item);
                 }
                 return $items;
@@ -159,12 +159,12 @@
 
 
         // funcion para actualizar el stock
-        public function update() { 
+        public function actualizar() { 
             
         }
 
         // funcion para pasar la data del array a los atributos de la clase
-        public function from($array) { 
+        public function asignarDatosArray($array) { 
             
             $this->nombre_producto = $array['nombre'] ?? null;
             $this->cantidad = $array['cantidad'] ?? null;

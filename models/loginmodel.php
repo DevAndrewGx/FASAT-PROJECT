@@ -1,3 +1,4 @@
+
 <?php
 
 // extendemos el modelo base e implementamos la interfaz
@@ -21,7 +22,7 @@ class LoginModel extends Model
         try {
             //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
             $userObject = new JoinUserRelationsModel();
-            $user = $userObject->get($correo);
+            $user = $userObject->consultar($correo);
 
             if ($user) {
                 error_log('login: user correo ' . $user->getCorreo());
@@ -63,7 +64,7 @@ class LoginModel extends Model
                 $item = $query->fetch(PDO::FETCH_ASSOC);
 
                 $user = new UsersModel();
-                $user->from($item);
+                $user->asignarDatosArray($item);
 
                 error_log('login: user documento' . $user->getDocumento());
 

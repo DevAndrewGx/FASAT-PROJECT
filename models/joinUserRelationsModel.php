@@ -32,7 +32,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
         $this->rol = '';
     }
 
-    public function get($correo)
+    public function consultar($correo)
     {
 
         try {

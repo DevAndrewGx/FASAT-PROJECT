@@ -8,7 +8,7 @@ class Mesas extends SessionController
     {
         parent::__construct();
         // obtenemos el usuario de la session
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Mesas::construct -> controlador usuarios');
     }
 
@@ -57,7 +57,7 @@ class Mesas extends SessionController
         $mesaModel->setEstado($this->getPost("estado"));
 
         // validamos y guardamos la data de la consulta
-        if ($mesaModel->save()) {
+        if ($mesaModel->crear()) {
             error_log('Mesas::createTale -> Se guardó la mesa correctamente');
             echo json_encode(['status' => true, 'message' => "La mesa fue creada exitosamente!"]);
             return;
@@ -74,7 +74,7 @@ class Mesas extends SessionController
             // Obtener los parámetros enviados por DataTables
             $draw = intval($_GET['draw']);
             $start = intval($_GET['start']);
-            $length = isset($_GET['length']) ? (int)$_GET['length'] : 10;
+            $length = isset($_GET['length']) ? (int) $_GET['length'] : 10;
             $search = $_GET['search']['value'];
             $orderColumnIndex = intval($_GET['order'][0]['column']);
             $orderDir = $_GET['order'][0]['dir'];
@@ -128,17 +128,18 @@ class Mesas extends SessionController
         }
     }
 
-    function getTablesByState() { 
+    function getTablasPorEstado()
+    {
         // validamos que la data enviada exista
-        if($this->existPOST("estado")) { 
-            error_log("Estado ".$this->getPost('estado'));
-            
+        if ($this->existPOST("estado")) {
+            error_log("Estado " . $this->getPost('estado'));
+
             // creamos un objeto de la clase mesas
             $mesaObj = new MesasModel();
 
-            $mesas = $mesaObj->getTablesByState($this->getPost('estado'));
+            $mesas = $mesaObj->getTablasPorEstado($this->getPost('estado'));
 
-            echo json_encode(["data"=>$mesas]);
+            echo json_encode(["data" => $mesas]);
             return;
         }
     }
