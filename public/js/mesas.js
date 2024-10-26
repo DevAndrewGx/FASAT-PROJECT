@@ -104,7 +104,7 @@ $(document).ready(function () {
         // cancelamos el efecto por default
         e.preventDefault();
 
-        $.post(`${baseUrl}mesas/getTablesByState`, { estado: estado}, function(response) {
+        $.post(`${baseUrl}mesas/getTablasPorEstado`, { estado: estado}, function(response) {
             let mesas = JSON.parse(response);
             console.log(mesas);
 

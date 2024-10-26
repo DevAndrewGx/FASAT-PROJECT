@@ -41,7 +41,7 @@ $(document).ready(function () {
         const formData = new FormData(form);
 
         $.ajax({
-            url: baseUrl + "cambiarpassword/sendEmail",
+            url: baseUrl + "cambiarpassword/enviarEmail",
             type: "POST",
             processData: false,
             contentType: false,
@@ -138,7 +138,7 @@ $(document).ready(function () {
                 const formData = new FormData(form);
 
                 $.ajax({
-                    url: baseUrl + "cambiarpassword/changePassword",
+                    url: baseUrl + "cambiarpassword/cambiarClave",
                     type: "POST",
                     processData: false,
                     contentType: false,

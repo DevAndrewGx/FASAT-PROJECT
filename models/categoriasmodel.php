@@ -86,7 +86,7 @@ class CategoriasModel extends Model implements JsonSerializable
 
         try {
             // ejecutamos la consulta con query porque no se estan enviando parametros
-            $query = $this->query("SELECT * asignarDatosArray categorias");
+            $query = $this->query("SELECT * FROM categorias");
 
             // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
             // FETCH_ASSOC retorna un objeto de clave y valor
@@ -118,7 +118,7 @@ class CategoriasModel extends Model implements JsonSerializable
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT * asignarDatosArray categorias WHERE nombre_categoria = :nombre LIMIT 1');
+            $query = $this->prepare('SELECT * FROM categorias WHERE nombre_categoria = :nombre LIMIT 1');
             $query->execute([
                 'nombre' => $nombreCategoria
             ]);
@@ -145,7 +145,7 @@ class CategoriasModel extends Model implements JsonSerializable
             // Obtener los datos de la subcategoría y la categoría asociada
             $querySubCategory = $this->prepare('
                 SELECT su.nombre_subcategoria, ca.id_categoria, ca.nombre_categoria 
-                asignarDatosArray sub_categorias su 
+                FROM sub_categorias su 
                 INNER JOIN categorias ca 
                 ON su.id_categoria = ca.id_categoria 
                 WHERE su.id_sub_categoria = :id');
@@ -157,7 +157,7 @@ class CategoriasModel extends Model implements JsonSerializable
             $subCategory = $querySubCategory->fetch(PDO::FETCH_ASSOC);
 
             // Obtener todas las categorías
-            $queryCategories = $this->prepare('SELECT id_categoria, nombre_categoria asignarDatosArray categorias');
+            $queryCategories = $this->prepare('SELECT id_categoria, nombre_categoria FROM categorias');
             $queryCategories->execute();
             $allCategories = $queryCategories->fetchAll(PDO::FETCH_ASSOC);
 
@@ -181,7 +181,7 @@ class CategoriasModel extends Model implements JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria asignarDatosArray categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria";
+            $sql = "SELECT c.*, s.nombre_subcategoria, s.id_sub_categoria FROM categorias c LEFT JOIN sub_categorias s ON c.id_categoria = s.id_categoria";
             error_log('ejecucion de la query cargarCategorias' . $sql);
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -227,7 +227,7 @@ class CategoriasModel extends Model implements JsonSerializable
     public function totalRegistros()
     {
         try {
-            $query = $this->query("SELECT COUNT(*) as total asignarDatosArray categorias");
+            $query = $this->query("SELECT COUNT(*) as total FROM categorias");
             return $query->fetch(PDO::FETCH_ASSOC)['total'];
         } catch (PDOException $e) {
             error_log('CategoriasModel::cargarDataosCategorias - ' . $e->getMessage());
@@ -238,7 +238,7 @@ class CategoriasModel extends Model implements JsonSerializable
     public function totalRegistrosFiltrados($busqueda)
     {
         try {
-            $sql = "SELECT COUNT(*) as total asignarDatosArray categorias c JOIN sub_categorias s ON c.id_categoria = s.id_categoria";
+            $sql = "SELECT COUNT(*) as total FROM categorias c JOIN sub_categorias s ON c.id_categoria = s.id_categoria";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -260,7 +260,7 @@ class CategoriasModel extends Model implements JsonSerializable
     {
         try {
             error_log("CategoriasModel::borrar -> Funcion para borrar categorias");
-            $query = $this->prepare('borrar asignarDatosArray categorias WHERE id_categoria = :id_categoria');
+            $query = $this->prepare('borrar FROM categorias WHERE id_categoria = :id_categoria');
             $query->execute([
                 'id_categoria' => $id_categoria
             ]);
@@ -276,7 +276,7 @@ class CategoriasModel extends Model implements JsonSerializable
     {
         try {
             error_log("CategoriasModel::borrar -> Funcion para borrar las subcategorias asociadas a una categoria");
-            $query = $this->prepare('borrar asignarDatosArray sub_categorias WHERE id_sub_categoria = :id');
+            $query = $this->prepare('borrar FROM sub_categorias WHERE id_sub_categoria = :id');
             $query->execute([
                 'id' => $idSubCategoria
             ]);
@@ -354,7 +354,7 @@ class CategoriasModel extends Model implements JsonSerializable
         ];
     }
 
-    public function asignarDatosArray($array)
+    public function FROM($array)
     {
         // $this->id_categoria             = $array['id_categoria'];
         $this->nombre_categoria = $array['nombre_categoria'];
@@ -366,7 +366,7 @@ class CategoriasModel extends Model implements JsonSerializable
     {
 
         try {
-            $query = $this->prepare('SELECT nombre_categoria asignarDatosArray categorias WHERE nombre_categoria = :nombre');
+            $query = $this->prepare('SELECT nombre_categoria FROM categorias WHERE nombre_categoria = :nombre');
 
             $query->execute([
                 'nombre' => $categoria
@@ -389,7 +389,7 @@ class CategoriasModel extends Model implements JsonSerializable
     public function existSubCategory($subCategoria)
     {
         try {
-            $query = $this->prepare('SELECT nombre_subcategoria  asignarDatosArray sub_categorias WHERE nombre_subcategoria = :nombre');
+            $query = $this->prepare('SELECT nombre_subcategoria  FROM sub_categorias WHERE nombre_subcategoria = :nombre');
 
             $query->execute([
                 'nombre' => $subCategoria
@@ -413,7 +413,7 @@ class CategoriasModel extends Model implements JsonSerializable
         try {
 
             // ejecutamos la consulta con query porque no se estan enviando parametros
-            $query = $this->prepare('SELECT * asignarDatosArray sub_categorias s INNER JOIN categorias c ON s.id_categoria = c.id_categoria WHERE c.id_categoria = :id');
+            $query = $this->prepare('SELECT * FROM sub_categorias s INNER JOIN categorias c ON s.id_categoria = c.id_categoria WHERE c.id_categoria = :id');
 
             $query->execute([
                 'id' => $idCategoria

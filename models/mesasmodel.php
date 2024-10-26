@@ -36,7 +36,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     {
     }
 
-    public function getTablesByState($state)
+    public function getTablasPorEstado($state)
     {
         // creamos un arreglo para retornar la data 
         $items = [];
@@ -64,7 +64,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
             return $items;
 
         } catch (PDOException $e) {
-            error_log("MessasModel::getTablesByState -> " . $e);
+            error_log("MessasModel::getTablasPorEstado -> " . $e);
         }
     }
     public function cargarDatosMesas($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName)

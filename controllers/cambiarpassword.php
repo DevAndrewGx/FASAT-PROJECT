@@ -16,9 +16,9 @@ class CambiarPassword extends Controller
     }
 
 
-    function sendEmail()
+    function enviarEmail()
     {
-        error_log('Email::SendEmail -> Funcion para enviar un email');
+        error_log('Email::enviarEmail -> Funcion para enviar un email');
 
 
         if (!$this->existPOST("email")) {
@@ -30,7 +30,7 @@ class CambiarPassword extends Controller
         }
 
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
-        error_log('CambiarPassword::sendEmail -> Se puede enviar un correo');
+        error_log('CambiarPassword::enviarEmail -> Se puede enviar un correo');
 
 
         // creamos el objeto de email para hacer las validaciones y enviar el correo
@@ -44,7 +44,7 @@ class CambiarPassword extends Controller
             if ($emailObject->solicitaPassword()) {
 
 
-                error_log("CambiarPassword::sendEmail -> se solicito correctamente el tocken para el ingreso");
+                error_log("CambiarPassword::enviarEmail -> se solicito correctamente el tocken para el ingreso");
 
 
                 // Validamos que el correo sea diferente de nulo para enviar el correo
@@ -78,7 +78,7 @@ class CambiarPassword extends Controller
         }
     }
 
-    function changePassword()
+    function cambiarClave()
     {
 
         // validamos el token y el documento que vienen de la url
@@ -92,7 +92,7 @@ class CambiarPassword extends Controller
 
     
         // si no entra a niguna validacion, significa que la data y el usuario estan correctos
-        error_log('CambiarPassword::changePassword -> se puede cambiar la contraseña');
+        error_log('CambiarPassword::cambiarClave -> se puede cambiar la contraseña');
 
         // creamos un objeto de emailModel para validar el token
         $emailObject = new EmailModel();

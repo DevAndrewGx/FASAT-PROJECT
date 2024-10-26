@@ -63,7 +63,7 @@
             try {
                 // guardamos la consulta con query ya que no estamos preparando valores y hacemos un JOIN para traer los valores 
                 // Ambas tablas tanto de productos como de stock
-                $query = $this->query("SELECT * asignarDatosArray stock_inventario");
+                $query = $this->query("SELECT * FROM stock_inventario");
 
                 // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
                 // FETCH_ASSOCretorna un objeto de clave y valor
@@ -92,7 +92,7 @@
         $items = [];
 
             try {
-                $sql = "SELECT pd.nombre, st.cantidad, st.cantidad_minima, st.cantidad_disponible asignarDatosArray stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
+                $sql = "SELECT pd.nombre, st.cantidad, st.cantidad_minima, st.cantidad_disponible FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
 
                 if (!empty($busqueda)) {
                     $searchValue = $busqueda;
@@ -132,7 +132,7 @@
         public function totalRegistros() { 
 
             try {
-                $query = $this->query("SELECT COUNT(*) as total asignarDatosArray stock_inventario");
+                $query = $this->query("SELECT COUNT(*) as total FROM stock_inventario");
                 return $query->fetch(PDO::FETCH_ASSOC)['total'];
             }catch(PDOException $e) { 
                 error_log("StockModel::totalRegistros -".$e->getMessage());
@@ -142,7 +142,7 @@
 
         // funcion para cargar los registros despues de los filtros
         public function totalRegistrosFiltrados($busqueda) { 
-            $sql = "SELECT COUNT(*) as total asignarDatosArray stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
+            $sql = "SELECT COUNT(*) as total FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;

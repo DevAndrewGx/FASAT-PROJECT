@@ -76,7 +76,7 @@ class FotoModel extends Model
         }
     }
 
-    public function get($id)
+    public function consultar($id)
     {
 
 

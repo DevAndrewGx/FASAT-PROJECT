@@ -65,12 +65,12 @@ class HorarioModel extends Model
         }
     }
 
-    public function get($id)
+    public function consultar($id)
     {
 
         try {
             // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-            $query = $this->prepare('SELECT * asignarDatosArray horarios WHERE id_horario = :id');
+            $query = $this->prepare('SELECT * FROM horarios WHERE id_horario = :id');
             $query->execute([
                 'id' => $id
             ]);
@@ -95,7 +95,7 @@ class HorarioModel extends Model
     public function borrar($id)
     {
         try {
-            $query = $this->prepare('borrar asignarDatosArray horarios WHERE id_horario = :id');
+            $query = $this->prepare('DELETE FROM horarios WHERE id_horario = :id');
             $query->execute(['id' => $id]);
             return true;
         } catch (PDOException $e) {

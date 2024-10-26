@@ -10,7 +10,7 @@ class Categorias extends SessionController
     {
         parent::__construct();
 
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Categorias::construct -> Controlador categorias');
     }
 

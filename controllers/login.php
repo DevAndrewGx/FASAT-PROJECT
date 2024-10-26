@@ -15,7 +15,7 @@
         }
 
         // la funcion autenticar nos va ayudar a validar si existen el usuario el password
-        function authenticate()
+        function autenticar()
         {
             // validamos si existe la data
             if ($this->existPOST(['correo', 'password'])) {
@@ -31,14 +31,14 @@
                     $this->redirect('login', ['error' => ErrorsMessages::ERROR_LOGIN_AUTHENTICATE_EMPTY]);
                     return;
                 }
-
+                error_log("La data de el formulario no esta nullaaaaaaaaaa");
                 $user = NULL;
                 // error_log('Login::documento '. $documento);
                 // si el login es exitoso regresa solo el ID del usuario
                
 
                 $loginObj = new LoginModel();
-                $user = $loginObj->loginBycorreo($correo, $password);
+                $user = $loginObj->loginByCorreo($correo, $password);
                 
                 // error_log("Login::error -> ". $user);
                 // si el usuario es diferente de null eso significa que si se autentico el usuario
@@ -60,7 +60,7 @@
 
                     // inicializa el proceso de las sesiones
                     error_log('Login::authenticate() passed');
-                    $this->initialize($user);
+                    $this->inicializar($user);
                     echo json_encode(['status' => true, 'message' => 'Login successful']);
                 } else {
                     error_log("EL USUARIO ESTA NULLO");

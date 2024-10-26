@@ -6,7 +6,7 @@ class Cajero extends SessionController
     function __construct()
     {
         parent::__construct();
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
     }
 
 

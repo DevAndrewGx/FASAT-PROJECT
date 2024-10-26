@@ -9,7 +9,7 @@ class Productos extends SessionController
     {
         parent::__construct();
 
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Producto::construct -> Controlador producto');
     }
 

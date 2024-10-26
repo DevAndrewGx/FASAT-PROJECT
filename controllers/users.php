@@ -9,7 +9,7 @@ class Users extends SessionController
     {
         parent::__construct();
         // obtenemos el usuario de la session
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Users::construct -> controlador usuarios');
     }
 
@@ -107,7 +107,7 @@ class Users extends SessionController
             header('Content-Type: application/json');
 
             // Verificar si el usuario está autenticado
-            if (!$this->existsSession()) {
+            if (!$this->existeSession()) {
                 http_response_code(401); // Código de estado HTTP 401: No autorizado
                 echo json_encode(['error' => 'No autenticado']);
                 die();

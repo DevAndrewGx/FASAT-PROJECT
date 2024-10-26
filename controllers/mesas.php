@@ -8,7 +8,7 @@ class Mesas extends SessionController
     {
         parent::__construct();
         // obtenemos el usuario de la session
-        $this->user = $this->getUserSessionData();
+        $this->user = $this->getDatosUsuarioSession();
         error_log('Mesas::construct -> controlador usuarios');
     }
 
@@ -128,7 +128,7 @@ class Mesas extends SessionController
         }
     }
 
-    function getTablesByState()
+    function getTablasPorEstado()
     {
         // validamos que la data enviada exista
         if ($this->existPOST("estado")) {
@@ -137,7 +137,7 @@ class Mesas extends SessionController
             // creamos un objeto de la clase mesas
             $mesaObj = new MesasModel();
 
-            $mesas = $mesaObj->getTablesByState($this->getPost('estado'));
+            $mesas = $mesaObj->getTablasPorEstado($this->getPost('estado'));
 
             echo json_encode(["data" => $mesas]);
             return;

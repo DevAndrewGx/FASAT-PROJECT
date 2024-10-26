@@ -1,3 +1,4 @@
+
 <?php
 
 // extendemos el modelo base e implementamos la interfaz
@@ -19,9 +20,9 @@ class LoginModel extends Model
         error_log("loginByCorreo: inicio");
         // cuando vamos acceder a la bd siempre usamos trycatch
         try {
-            //$query = $this->db->connect()->prepare('SELECT * asignarDatosArray users WHERE username = :username');
+            //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
             $userObject = new JoinUserRelationsModel();
-            $user = $userObject->get($correo);
+            $user = $userObject->consultar($correo);
 
             if ($user) {
                 error_log('login: user correo ' . $user->getCorreo());
@@ -52,8 +53,8 @@ class LoginModel extends Model
         error_log("loginByDocumento: inicio");
         // cuando vamos acceder a la bd siempre usamos trycatch
         try {
-            //$query = $this->db->connect()->prepare('SELECT * asignarDatosArray users WHERE username = :username');
-            $query = $this->prepare(' SELECT u.*, r.rol asignarDatosArray usuarios u JOIN roles r ON u.idRol = r.id 
+            //$query = $this->db->connect()->prepare('SELECT * FROM users WHERE username = :username');
+            $query = $this->prepare(' SELECT u.*, r.rol FROM usuarios u JOIN roles r ON u.idRol = r.id 
                 WHERE u.documento = :documento');
             $query->execute([
                 'documento' => $documento
@@ -89,7 +90,7 @@ class LoginModel extends Model
     // Incrementar el conteo de intentos fallidos
     private function incrementLoginAttempts($correo)
     {
-        $query = $this->prepare('actualizar usuarios SET intentos_fallidos = intentos_fallidos + 1 WHERE correo = :correo');
+        $query = $this->prepare('UPDATE usuarios SET intentos_fallidos = intentos_fallidos + 1 WHERE correo = :correo');
         $query->execute(['correo' => $correo]);
 
         $this->blockUserIfNecessary($correo);
@@ -98,19 +99,19 @@ class LoginModel extends Model
     // Reiniciar los intentos fallidos
     private function resetLoginAttempts($correo)
     {
-        $query = $this->prepare('actualizar usuarios SET intentos_fallidos = 0 WHERE correo = :correo');
+        $query = $this->prepare('UPDATE usuarios SET intentos_fallidos = 0 WHERE correo = :correo');
         $query->execute(['correo' => $correo]);
     }
 
     // Bloquear al usuario si supera el límite de intentos fallidos
     private function blockUserIfNecessary($correo)
     {
-        $query = $this->prepare('SELECT intentos_fallidos asignarDatosArray usuarios WHERE correo = :correo');
+        $query = $this->prepare('SELECT intentos_fallidos FROM usuarios WHERE correo = :correo');
         $query->execute(['correo' => $correo]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         if ($result && $result['intentos_fallidos'] >= 10) {
-            $query = $this->prepare('actualizar usuarios SET id_estado = 2 WHERE correo = :correo');
+            $query = $this->prepare('UPDATE usuarios SET id_estado = 2 WHERE correo = :correo');
             $query->execute(['correo' => $correo]);
         }
     }
@@ -119,7 +120,7 @@ class LoginModel extends Model
     private function isUserBlocked($correo)
     {
 
-        $query = $this->prepare('SELECT u.correo, e.tipo asignarDatosArray usuarios u JOIN estados_usuarios e ON u.id_estado = e.id_estado WHERE correo = :correo');
+        $query = $this->prepare('SELECT u.correo, e.tipo FROM usuarios u JOIN estados_usuarios e ON u.id_estado = e.id_estado WHERE correo = :correo');
 
         $query->execute(['correo' => $correo]);
         $result = $query->fetch(PDO::FETCH_ASSOC);

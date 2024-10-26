@@ -86,7 +86,7 @@ class UsersModel extends Model implements IModel
         $items = [];
         try {
             // guardamos la consulta con query porque no estamos insertando data
-            $query = $this->query('SELECT * asignarDatosArray usuarios');
+            $query = $this->query('SELECT * FROM usuarios');
             // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
             // FETCH_ASSOCretorna un objeto de clave y valor
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -124,7 +124,7 @@ class UsersModel extends Model implements IModel
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT * asignarDatosArray usuarios WHERE documento = :documento');
+            $query = $this->prepare('SELECT * FROM usuarios WHERE documento = :documento');
             $query->execute([
                 'documento' => $documento
             ]);
@@ -174,7 +174,7 @@ class UsersModel extends Model implements IModel
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('actualizar usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password, documento = :documento WHERE documento = :id_usuario');
+            $query = $this->prepare('UPDATE usuarios SET id_rol = :id_rol, id_estado = :id_estado, id_foto = :id_foto, nombres = :nombres, apellidos = :apellidos, telefono = :telefono, correo = :correo, password = :password, documento = :documento WHERE documento = :id_usuario');
 
 
             $query->execute([
@@ -230,7 +230,7 @@ class UsersModel extends Model implements IModel
     {
         // this method is going to return true or false if the registered user is already in the database
         try {
-            $query = $this->prepare('SELECT documento, correo asignarDatosArray usuarios WHERE documento = :documento OR  correo = :correo');
+            $query = $this->prepare('SELECT documento, correo FROM usuarios WHERE documento = :documento OR  correo = :correo');
             $query->execute([
                 'documento' => $documento,
                 'correo' => $correo
@@ -249,7 +249,7 @@ class UsersModel extends Model implements IModel
         }
     }
 
-    public function comparePasswords($password, $documento)
+    public function compararClaves($password, $documento)
     {
         try {
             // no hay la necesidad de hacer la consulta para traer el usuario porque ya tenemos un metodo que hace eso
@@ -260,12 +260,12 @@ class UsersModel extends Model implements IModel
             return password_verify($password, $user->getPassword());
 
         } catch (PDOException $e) {
-            error_log('USERMODEL::comparepasswords->PDOException' . $e);
+            error_log('USERMODEL::compararClaves->PDOException' . $e);
             return false;
         }
     }
     // esta funcion nos permitira crear un hash para la seguridad de la contraseña
-    private function getHashedPassword($password)
+    private function getClaveHasheada($password)
     {
         // password_hash nos retorna un hash basado en unas condiciones que le demos
         // con PASSWORD_DEFAULT le decimos a php que escoja el mejor algoritmo
@@ -274,7 +274,7 @@ class UsersModel extends Model implements IModel
         return password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
     }
 
-    public function getUserPhoto($documento)
+    public function getUsuarioFoto($documento)
     {
         // creamos un objeto de usuarios
         $userObj = new UsersModel();
@@ -283,7 +283,7 @@ class UsersModel extends Model implements IModel
         $idFoto = $userObj->getIdFoto();
         // traemos la foto, creando un objeto
         $fotoObj = new FotoModel();
-        $fotoObj->get($idFoto);
+        $fotoObj->consultar($idFoto);
         // retornamos el nombre de la foto para utilizarla en la vista
         return $fotoObj->getFoto();
     }
@@ -339,7 +339,7 @@ class UsersModel extends Model implements IModel
     {
         if ($hash) {
             // asignamos una funcion que nos permitira hacer el hash de la constraseña
-            $this->password = $this->getHashedPassword($password);
+            $this->password = $this->getClaveHasheada($password);
         } else {
             $this->password = $password;
         }
