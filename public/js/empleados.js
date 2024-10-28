@@ -179,7 +179,7 @@ $(document).ready(function () {
         }
 
         $.ajax({
-            url: editar === false ? baseUrl + "users/createUser" : baseUrl + "users/updateUser",
+            url: editar === false ? baseUrl + "users/createUser" : baseUrl + "users/actualizarUsuario",
             type: "POST",
             processData: false,
             contentType: false,

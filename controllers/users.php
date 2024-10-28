@@ -211,7 +211,7 @@ class Users extends SessionController
         if (isset($data['id_usuario'])) {
             $idUser = $data['id_usuario'];
             // Eliminar traer usuario
-            $res = $this->model->get($idUser);
+            $res = $this->model->consultar($idUser);
             $arrayData = json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
             if ($arrayData) {
                 error_log('Users::get -> El usuario se trajo correctamente-> ' . $res);
@@ -235,7 +235,7 @@ class Users extends SessionController
     }
 
     // funcion para actualizar data
-    function actualizarUser()
+    function actualizarUsuario()
     {
         error_log('Users::actualizarUser -> Funcion para actualizar un usuario');
         // validamos la data que viene del formulario, en este caso la negamos para el primer caso

@@ -1,5 +1,6 @@
 <?php
 $user = $this->d['user'];
+$mesas = $this->d['mesa'];
 ?>
 
 <!DOCTYPE html>
@@ -56,30 +57,25 @@ $user = $this->d['user'];
                             <a href="adminUsu.php" id="actual" data-navegation="#ordenes"> / Gestión de Pedidos </a>
                         </nav>
                     </div>
-                </div>
-
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Enviar Nuevo Pedido</h5>
-                        <button class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#abrirMesaModal">Ingresar Orden</button>
-
+                    <div class="page-btn">
+                        <a href="#" class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#abrirMesaModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                            Crear Nueva Orden</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Historial de Pedidos</h5>
+                        <h5 class="card-title">Pedidos Actuales y en Cola</h5>
                         <div class="table-responsive">
                             <table id="ordersTable" class="table table-responsive datanew">
                                 <thead>
                                     <tr>
                                         <th class="sorting">Mesa</th>
                                         <th class="sorting">Mesero</th>
-                                        <th class="sorting">Plato</th>
+                                        <th class="sorting">Codigo Pedido</th>
                                         <th class="sorting">Cantidad</th>
-                                        <th class="sorting">Fecha</th>
                                         <th class="sorting">Estado</th>
-                                        <th class="text-center">Acción</th>
+                                        <th class="sorting">Estado</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -153,7 +149,7 @@ $user = $this->d['user'];
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister">
-                    <h5 class="modal-title" id="orderModalLabel">Agregar productos - <span id="estado-mesa"></span></h5>
+                    <h5 class="modal-title" id="orderModalLabel">Agregar productos - Mesa <span id="estado-mesa"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

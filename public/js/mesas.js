@@ -124,7 +124,7 @@ $(document).ready(function () {
             
             mesas.data.forEach((mesa)=> { 
                 template += `
-                <option value="${mesa.idMesa}">${mesa.numeroMesa}</option>
+                <option value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
                 `;
             });
             $("#numeroMesa").html(template);
@@ -149,14 +149,15 @@ $(document).ready(function () {
         formData.append("estado", estado);
 
         $.ajax({
-            url: baseUrl + "mesas/abrirMesa",
+            url: baseUrl + "mesero/abrirMesa",
             type: "POST",
             processData: false,
             contentType: false,
             data: formData,
             success: function (response) {
                 let data = JSON.parse(response);
-                console.log(data);
+                
+                $("#estado-mesa").text(data.dataMesa.numero_mesa);
             },
         });
     });

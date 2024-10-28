@@ -82,7 +82,7 @@ class FotoModel extends Model
 
         try {
             // guardamos la consulta y la preparamos antes de ejecutarla para evitar problemas de seguridad
-            $query = $this->prepare('SELECT * asignarDatosArray fotos WHERE id_foto = :id');
+            $query = $this->prepare('SELECT * FROM fotos WHERE id_foto = :id');
             $query->execute([
                 'id' => $id
             ]);
@@ -108,7 +108,7 @@ class FotoModel extends Model
     public function borrar($id)
     {
         try {
-            $query = $this->prepare('borrar asignarDatosArray fotos WHERE id_foto = :id');
+            $query = $this->prepare('DELETE FROM fotos WHERE id_foto = :id');
             $query->execute([
                 'id' => $id
             ]);
@@ -125,7 +125,7 @@ class FotoModel extends Model
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('actualizar fotos SET foto = :foto, tipo = :tipo WHERE id_foto = :id');
+            $query = $this->prepare('UPDATE fotos SET foto = :foto, tipo = :tipo WHERE id_foto = :id');
             $query->execute([
                 'id' => $id,
                 'foto' => $this->foto,
