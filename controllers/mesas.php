@@ -209,6 +209,36 @@ class Mesas extends SessionController
         }
 
     }
+
+    // funcion para elimiinar una mesa desde la interfaz del admin
+    function borrarMesa() {
+        // validamos si existe el id enviado desde la petición
+        error_log("id_mesa:   ".$this->getPost('id_mesa'));
+        if (!$this->existPOST(['id_mesa'])) {
+            error_log('Mesas::borrarMesa -> No se obtuvo el id de la mesa correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar la mesa, intente nuevamente!"]);
+            return false;
+        }
+
+        if ($this->user == NULL) {
+            error_log('Mesas::borrarMesa  -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => "El usuario de la sessión esta vacio"]);
+            return;
+        }
+        // guardamos la ejecución de la query en res
+        $res = $this->model->borrar($this->getPost('id_mesa'));
+
+        if ($res) {
+            error_log('Mesas::borrarMesa  -> Se eliminó la mesa correctamente');
+            echo json_encode(['status' => true, 'message' => "La mesa fue eliminada exitosamente!"]);
+            return true;
+        } else {
+            error_log('Mesas::borrarMesa  -> No se pudo eliminar la subcategoria, intente nuevamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar la mesa, intente nuevamente!"]);
+            return false;
+        }
+    }
     
 
     // getTablasPorEstado nos permite traer la mesas dependiendo del estado 'DISPONIBLE', 'VENTA', 'CERRADA'

@@ -225,8 +225,20 @@ class MesasModel extends Model implements IModel, JsonSerializable
         }
     }
 
-    public function borrar($id)
-    {
+    public function borrar($id) {
+        try {
+            error_log("MesasModel::borrar -> funcion para borrar la mesa");
+            $query = $this->prepare('DELETE FROM mesas WHERE id_mesa = :id_mesa');
+            
+            $query->execute([
+                'id_mesa' => $id
+            ]);
+
+            return true;
+        } catch (PDOException $e) {
+            error_log('MesasModel::borrar -> PDOException' . $e);
+            return false;
+        }
     }
     public function asignarDatosArray($array)
     {

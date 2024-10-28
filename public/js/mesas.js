@@ -3,7 +3,7 @@ $(document).ready(function () {
     let estado;
     let globalIdMesa;
 
-    // Creamos datatable y la inicializamos 
+    // Creamos datatable y la inicializamos
     let dataTableMesas = $("#data-mesas").DataTable({
         responsive: true,
         processing: true,
@@ -68,7 +68,6 @@ $(document).ready(function () {
         // creamos un formData y le pasamos el formulario
         const formData = new FormData(form);
 
-
         // validamos si el modal tiene la clase headerUpdate para enviar la petición en modo actualizar
         let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
 
@@ -77,7 +76,9 @@ $(document).ready(function () {
         }
         // creamos la petición para enviar la data al servidor y obtener una respuesta
         $.ajax({
-            url: editar ? baseUrl + "mesas/createTable" : baseUrl + "mesas/actualizarMesa", 
+            url: editar
+                ? baseUrl + "mesas/createTable"
+                : baseUrl + "mesas/actualizarMesa",
             type: "POST",
             processData: false,
             contentType: false,
@@ -109,12 +110,10 @@ $(document).ready(function () {
         });
     });
 
-
     /**Esta funcion nos permitira realizar la peticion 
     para traer las tablas por estado, y asi
     quemar o hacer scripting en el DOM para mostrar las mesas segun el estado**/
-    $("#openOrderForm").on('click', function(e) {
-        
+    $("#openOrderForm").on("click", function (e) {
         // validamos si el modal esta abierto para asignar el estado
         if (!$("#abrirMesaModal").hasClass("show")) {
             estado = "DISPONIBLE";
@@ -125,21 +124,25 @@ $(document).ready(function () {
         // cancelamos el efecto por default
         e.preventDefault();
 
-        $.post(`${baseUrl}mesas/getTablasPorEstado`, { estado: estado}, function(response) {
-            let mesas = JSON.parse(response);
-            console.log(mesas);
+        $.post(
+            `${baseUrl}mesas/getTablasPorEstado`,
+            { estado: estado },
+            function (response) {
+                let mesas = JSON.parse(response);
+                console.log(mesas);
 
-            let template = "<option ='#'>Seleccione una mesa</option>";
-            
-            mesas.data.forEach((mesa)=> { 
-                template += `
+                let template = "<option ='#'>Seleccione una mesa</option>";
+
+                mesas.data.forEach((mesa) => {
+                    template += `
                 <option value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
                 `;
-            });
-            $("#numeroMesa").html(template);
-        });
+                });
+                $("#numeroMesa").html(template);
+            }
+        );
     });
-    
+
     // funcion para abrir una mesa en la interfaz del mesero para crear un nuevo pedido
     $("#abrirMesaForm").on("submit", function (e) {
         estado = "EN SERVICIO";
@@ -166,19 +169,19 @@ $(document).ready(function () {
             data: formData,
             success: function (response) {
                 let data = JSON.parse(response);
-                
+
                 $("#estado-mesa").text(data.dataMesa.numero_mesa);
             },
         });
     });
 
-    // funcion para actualizar una mesa 
-    $("#data-mesas").on('click', '.botonActualizar', function(e) {
+    // funcion para actualizar una mesa desde la interfaz del admin
+    $("#data-mesas").on("click", ".botonActualizar", function (e) {
         e.preventDefault();
 
         // Obtenemos los valores del data-id para verificar que elemento actualizar
         globalIdMesa = $(this).data("id");
- 
+
         // actualizamos la data del modal
         $("#titleModal").html("Actualizar Mesa");
         $(".modal-header")
@@ -220,7 +223,80 @@ $(document).ready(function () {
         });
     });
 
-    
+    // funcion para borrar una mesa desde la interfaz del admin
+    $("#data-mesas").on("click", ".botonEliminar", function (){
+        // traemos la data del id de la mesa
+        globalIdMesa = $(this).data("id");
+        let formData = new FormData();
+
+        formData.append('id_mesa', globalIdMesa);
+
+        console.log("something "+globalIdMesa);
+
+        // creamos la alerta para la confirmación del usuario
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                
+                $.ajax({
+                    url: baseUrl + "mesas/borrarMesa",
+                    type: "POST",
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function (response) {
+                        let data = JSON.parse(response);
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTableMesas.ajax.reload(null, false);
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    //  mantener el modal abierto para que el usuario intente de nuevo
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // mantener el modal abierto para que el usuario intente de nuevo
+                            }
+                        });
+                    },
+                });
+            }
+        });
+    });
+
     // FUNCIONES UTILITARIAS PARA VALIDAR SI EL MODAL ESTA ABIERTO O CERRADO PARA CAMBIAR EL ESTADO
     $("#abrirMesaModal").on("shown.bs.modal", function () {
         estado = "DISPONIBLE"; // Cambiamos el estado a "DISPONIBLE" cuando el modal se abre
