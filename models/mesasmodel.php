@@ -111,7 +111,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
                 $sql .= " ORDER BY numero_mesa ASC";
             }
 
-            if ($registrosPorPagina != null && $registrosPorPagina != -1 && $inicio != null) {
+            if ($registrosPorPagina != null && $registrosPorPagina != -1 || $inicio != null) {
                 $sql .= " LIMIT " . $registrosPorPagina . " OFFSET " . $inicio;
             }
 
@@ -120,6 +120,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
             while ($p = $query->fetch(PDO::FETCH_ASSOC)) {
                 $item = new MesasModel();
 
+                $item->setIdMesa($p['id_mesa']);
                 $item->setNumeroMesa($p['numero_mesa']);
                 $item->setEstado($p['estado']);
 

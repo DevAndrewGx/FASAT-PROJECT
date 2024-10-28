@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     let estado;
+    let globalIdMesa;
 
     // Creamos datatable y la inicializamos 
     let dataTableMesas = $("#data-mesas").DataTable({
@@ -44,11 +45,12 @@ $(document).ready(function () {
                         default:
                             badgeClass = "bg-lightgray";
                     }
-                   return `<span class="badges ${badgeClass}">${data}</span>`;
+                    return `<span class="badges ${badgeClass}">${data}</span>`;
                 },
             },
             { data: "options" },
         ],
+        order: [[2, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
         columnDefs: [
             {
                 targets: [0, 3],
@@ -65,10 +67,17 @@ $(document).ready(function () {
         console.log(form);
         // creamos un formData y le pasamos el formulario
         const formData = new FormData(form);
-        // creamos la petición para enviar la data al servidor y obtener una respuesta
 
+
+        // validamos si el modal tiene la clase headerUpdate para enviar la petición en modo actualizar
+        let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+
+        if (editar) {
+            formData.append("id_mesa", globalIdMesa);
+        }
+        // creamos la petición para enviar la data al servidor y obtener una respuesta
         $.ajax({
-            url: baseUrl + "mesas/createTable",
+            url: editar ? baseUrl + "mesas/createTable" : baseUrl + "mesas/actualizarMesa", 
             type: "POST",
             processData: false,
             contentType: false,
@@ -80,7 +89,7 @@ $(document).ready(function () {
                 if (data.status) {
                     Swal.fire({
                         icon: "success",
-                        title: "Mesa creada exitosamente",
+                        title: "Exito",
                         text: data.message,
                         showConfirmButton: true,
                         allowOutsideClick: false,
@@ -131,6 +140,7 @@ $(document).ready(function () {
         });
     });
     
+    // funcion para abrir una mesa en la interfaz del mesero para crear un nuevo pedido
     $("#abrirMesaForm").on("submit", function (e) {
         estado = "EN SERVICIO";
         // prevenimos el efecto por default
@@ -158,6 +168,54 @@ $(document).ready(function () {
                 let data = JSON.parse(response);
                 
                 $("#estado-mesa").text(data.dataMesa.numero_mesa);
+            },
+        });
+    });
+
+    // funcion para actualizar una mesa 
+    $("#data-mesas").on('click', '.botonActualizar', function(e) {
+        e.preventDefault();
+
+        // Obtenemos los valores del data-id para verificar que elemento actualizar
+        globalIdMesa = $(this).data("id");
+ 
+        // actualizamos la data del modal
+        $("#titleModal").html("Actualizar Mesa");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
+
+        // enviamos la peticion para traer la data y establecerla en el modal
+        $.ajax({
+            url: baseUrl + "mesas/consultarMesa",
+            type: "POST",
+            dataType: "json",
+            data: { id_mesa: globalIdMesa },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        var mesaData = response.data;
+                        // seteamos la data en los campos
+                        $("#numeroMesa").val(mesaData.numero_mesa);
+                        console.log(mesaData.documento);
+                        $("#estado").val(mesaData.estado);
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                $("#modalFormMesas").modal("show");
             },
         });
     });

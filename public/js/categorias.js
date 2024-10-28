@@ -95,6 +95,7 @@ $(document).ready(function () {
            { data: "nombre_categoria" },
            { data: "options" },
        ],
+       order: [[1, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
        columnDefs: [
            {
                targets: [0, 3],

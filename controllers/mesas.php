@@ -101,13 +101,13 @@ class Mesas extends SessionController
             for ($i = 0; $i < count($arrayDataMesas); $i++) {
                 $arrayDataMesas[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                 $arrayDataMesas[$i]['options'] = '
-                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataMesas[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataMesas[$i]['id_sub_categoria'] . '" >
+                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-nombre="' . $arrayDataMesas[$i]['nombre_categoria'] . '" data-id="' . $arrayDataMesas[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataMesas[$i]['id_sub_categoria'] . '" href="#">
+                <a class="me-3 botonActualizar" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '"href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
-                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataMesas[$i]['id_categoria'] . '"  data-id-s="' . $arrayDataMesas[$i]['id_sub_categoria'] . '" href="#">
+                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '" href="#">
                     <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                 </a>
             ';
@@ -128,6 +128,88 @@ class Mesas extends SessionController
             error_log('Mesas::getMesas -> Error en traer los datos - getMesas' . $e->getMessage());
         }
     }
+    
+
+    // funcion para consultar una mesa especifica
+    function consultarMesa() {
+        // validamos si existe el id enviado desde la petición
+        if(!$this->existPOST(['id_mesa'])) {
+            error_log('Mesas::consultarMesa -> No se obtuvo el id de la mesa correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar la mesa, intente nuevamente!"]);
+            return false;
+        }
+
+        if ($this->user == NULL) {
+            error_log('Users::createUser -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+            return;
+        }
+
+        $res = $this->model->consultar($this->getPost('id_mesa'));
+
+        $arrayData =  json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+
+        if ($arrayData) {
+            error_log('Mesa::consultarMesa -> La mesa se obtuvo correctamente-> ' . $res);
+            $response = [
+                "data" => $arrayData,
+                "status" => true,
+                "message" => "Se obtuvo la data correctamente"
+            ];
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
+            die();
+        } else {
+            error_log('Users::borrarUser -> No se pudo obtener el usuario correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
+            return false;
+        }
+    }
+
+    function actualizarMesa() { 
+        
+        // validamos que la data del formulario no venga vacia
+        if(!$this->existPOST(['numeroMesa', 'estado'])) {
+
+            error_log('MesaModal::actualizarMesa -> Hay algunos parametros vacios enviados en el formulario');
+            echo json_encode(['status' => false, 'message' => "Algunos datos enviados del formulario estan vacios"]);
+            return;
+        }
+
+        // validamos que el usuario de la sesión no este vacio
+        if ($this->user == NULL) {
+
+            error_log('MesaModal::actualizarMesa -> El usuario de la sesión esta vacio');
+
+            echo json_encode(['status' => false, 'message' => "El usuario de la sesión intenlo nuevamente"]);
+            return;
+        }
+
+        // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
+        error_log('MesaModal::actualizarMesa -> Es posible actualizar una mesa');
+
+        $mesaObj = new MesasModel();
+
+        $mesaObj->setNumeroMesa($this->getPost('numeroMesa'));
+        $mesaObj->setEstado($this->getPost('estado'));
+
+        // ejecutamos la query para actualizar una categoria
+        $res = $mesaObj->actualizar($this->getPost('id_mesa'));
+
+        // validamos si la consulta se ejecuto correctamente
+
+        if ($res) {
+            error_log('MesaModal::actualizarMesa -> Se actualizo la mesa correctamente');
+            echo json_encode(['status' => true, 'message' => "La mesa fue actualizada exitosamente!"]);
+            return;
+        } else {
+            error_log('MesaModal::actualizarMesa -> Error en la consulta del Back');
+            echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
+            return;
+        }
+
+    }
+    
 
     // getTablasPorEstado nos permite traer la mesas dependiendo del estado 'DISPONIBLE', 'VENTA', 'CERRADA'
     function getTablasPorEstado()

@@ -116,6 +116,7 @@ td {
 
 table.datanew thead tr th {
     background-color: #fafbfe !important;
+    text-align: center;
     border: 0;
     border-bottom: 2px solid #e9ecef;
 }
@@ -126,7 +127,8 @@ table.datanew tbody tr td {
     font-weight: 500;
     border: 0;
     border-bottom: 1px solid #e9ecef;
-    vertical-align: middle;
+    text-align: center;
+    vertical-align: center;
     white-space: nowrap;
     
 }

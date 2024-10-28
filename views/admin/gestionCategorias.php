@@ -82,7 +82,6 @@ $user = $this->d['user'];
                         </div>
                     </div>
                     <div class="card col-lg-6" style="width: 48%;">
-
                         <div class="card-body">
                             <h5 class="card-title">Subcategorias</h5>
                             <div class="table-responsive">

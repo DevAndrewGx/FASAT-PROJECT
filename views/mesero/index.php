@@ -67,16 +67,24 @@ $mesas = $this->d['mesa'];
                     <div class="card-body">
                         <h5 class="card-title">Pedidos Actuales y en Cola</h5>
                         <div class="table-responsive">
-                            <table id="ordersTable" class="table table-responsive datanew">
+                            <table id="data-pedidos" class="table table-responsive datanew">
                                 <thead>
-                                    <tr>
-                                        <th class="sorting">Mesa</th>
-                                        <th class="sorting">Mesero</th>
-                                        <th class="sorting">Codigo Pedido</th>
-                                        <th class="sorting">Cantidad</th>
-                                        <th class="sorting">Estado</th>
-                                        <th class="sorting">Estado</th>
-                                    </tr>
+                                    <th>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" id="select-all">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </th>
+
+                                    <th class="sorting">Mesa</th>
+                                    <th class="sorting">Mesero</th>
+                                    <th class="sorting">Codigo Pedido</th>
+                                    <th class="sorting">Cantidad</th>
+
+                                    <th class="sorting">Estado</th>
+                                    <th class="sorting">Accion</th>
+                                    <th class="sorting">Fecha</th>
+
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -105,8 +113,33 @@ $mesas = $this->d['mesa'];
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mesas </h5>
+                        <div class="table-responsive">
+                            <table id="data-mesas-pedidos" class="table table-responsive datanew">
+                                <thead>
+                                    <th>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" id="select-all">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </th>
+
+                                    <th class="sorting">Numero mesa</th>
+                                    <th class="sorting">Pedido Asociado</th>
+                                    <th class="sorting">Estado</th>
+                                    <th class="sorting">Accion</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 
     <!-- Modal para abrir una mesa -->
@@ -177,13 +210,9 @@ $mesas = $this->d['mesa'];
         </div>
     </div>
 
-    <!-- jQuery -->
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <!-- Popper.js para Bootstrap (necesario para los modales) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables -->
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
     <!-- DataTables Bootstrap 5 integration -->
@@ -191,10 +220,11 @@ $mesas = $this->d['mesa'];
 
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
-    <!-- APP JS -->
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
 
 </body>
 

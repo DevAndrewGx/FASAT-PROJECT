@@ -154,7 +154,7 @@ class UsersModel extends Model implements IModel
     {
         try {
             error_log("UserModel::borrar -> Si esta borrando el usuario :)");
-            $query = $this->prepare('borrar asignarDatosArray usuarios WHERE documento = :documento');
+            $query = $this->prepare('DELETE FROM usuarios WHERE documento = :documento');
             $query->execute([
                 'documento' => $documento
             ]);

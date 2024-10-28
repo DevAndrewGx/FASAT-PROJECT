@@ -14,7 +14,8 @@ $(document).ready(function () {
             lengthMenu: "Mostrar _MENU_ registros",
             zeroRecords: "No se encontraron resultados",
             info: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-            infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
+            infoEmpty:
+                "Mostrando registros del 0 al 0 de un total de 0 registros",
             infoFiltered: "(filtrado de un total de _MAX_ registros)",
             search: "Buscar:",
             processing: "Procesando...",
@@ -48,6 +49,7 @@ $(document).ready(function () {
             { data: "fechaCreacion" },
             { data: "options" },
         ],
+        order: [[2, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
         columnDefs: [
             {
                 targets: [0, 9],
@@ -248,7 +250,7 @@ $(document).ready(function () {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: baseUrl + "users/delete",
+                    url: baseUrl + "users/borrar",
                     type: "POST",
                     processData: false,
                     contentType: "application/json",
