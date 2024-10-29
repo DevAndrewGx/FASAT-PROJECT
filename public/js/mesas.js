@@ -76,9 +76,7 @@ $(document).ready(function () {
         }
         // creamos la petición para enviar la data al servidor y obtener una respuesta
         $.ajax({
-            url: editar
-                ? baseUrl + "mesas/createTable"
-                : baseUrl + "mesas/actualizarMesa",
+            url: editar? baseUrl + "mesas/actualizarMesa" : baseUrl+"mesas/createTable",
             type: "POST",
             processData: false,
             contentType: false,
