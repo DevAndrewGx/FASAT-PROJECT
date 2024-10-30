@@ -157,7 +157,7 @@ $mesas = $this->d['mesa'];
                               -->
                         <div class="mb-3" id="meseroAsociado">
                             <label for="mesero" class="form-label">Nombre mesero asociado</label>
-                            <input type="text" id="mesero" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                            <input type="text" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
                         </div>
                         <div class="mb-3" id="container-form">
                             <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>

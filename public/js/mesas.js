@@ -169,6 +169,8 @@ $(document).ready(function () {
                 let data = JSON.parse(response);
 
                 $("#estado-mesa").text(data.dataMesa.numero_mesa);
+                // actualizamos la datatable
+                // dataTableMesas.ajax.reload(null, false);
             },
         });
     });
