@@ -3,6 +3,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
 {
     private $idMesa;
     private $numeroMesa;
+    private $codigoPedido;
     private $estado;
 
 
@@ -12,6 +13,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
         parent::__construct();
         $this->numeroMesa = 0;
+        $this->codigoPedido = "";
         $this->estado = "";
 
     }
@@ -38,7 +40,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
         // usamos try catch ya que vamos a interactuar con la bd
         try { 
             // creamos la query para consultar la data
-            $query = $this->prepare('SELECT * FROM mesas WHERE id_mesa = :id');
+            $query = $this->prepare('SELECT me.*, pe.codigo_pedido FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa WHERE me.id_mesa = :id');
             // ejecutamos query 
             $query->execute([
                 'id'=>$id
@@ -97,7 +99,8 @@ class MesasModel extends Model implements IModel, JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT * FROM mesas";
+            // creamos un JOIN para obtener el codigo del pedido y la data de las mesas
+            $sql = "SELECT me.*, pe.codigo_pedido FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -169,6 +172,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
         return [
             'id_mesa'=>$this->idMesa,
             'numeroMesa' => $this->numeroMesa,
+            'codigoPedido' => $this->codigoPedido,
             'estado' => $this->estado,
         ];
     }

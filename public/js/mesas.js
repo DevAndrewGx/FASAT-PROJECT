@@ -8,7 +8,7 @@ $(document).ready(function () {
         responsive: true,
         processing: true,
         serverSide: true,
-        pageLength: 10, // Muestra 10 registros por página
+        pageLength: 10,
         language: {
             lengthMenu: "Mostrar _MENU_ registros",
             zeroRecords: "No se encontraron resultados",
@@ -27,10 +27,10 @@ $(document).ready(function () {
         columns: [
             { data: "checkmarks" },
             { data: "numeroMesa" },
+            
             {
                 data: "estado",
                 render: function (data) {
-                    // Cambia el estilo según el valor de "estado"
                     let badgeClass;
                     switch (data) {
                         case "DISPONIBLE":
@@ -50,7 +50,7 @@ $(document).ready(function () {
             },
             { data: "options" },
         ],
-        order: [[2, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
+        order: [[2, "asc"]],
         columnDefs: [
             {
                 targets: [0, 3],
@@ -58,6 +58,7 @@ $(document).ready(function () {
             },
         ],
     });
+
 
     // validación del formulario de mesas para agrear una mesa con AJAX
     $("#formMesas").on("submit", function (e) {

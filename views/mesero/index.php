@@ -187,7 +187,6 @@ $mesas = $this->d['mesa'];
                 </div>
                 <div class="modal-body">
                     <form id="orderForm">
-
                         <!-- select oculto para actualizar la subcategoria con su respectiva categoria
                               -->
                         <div class="mb-3" id="meseroAsociado">
@@ -205,6 +204,36 @@ $mesas = $this->d['mesa'];
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" id="crearPedido">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal para ver los detalles de la mesa y el pedido asociado -->
+    <div class="modal fade" id="detallesPedidoMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Detalles Mesa y Pedido Asociado<span id="estado-mesa"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Numero Mesa:</td>
+                                <td id="numeroPedidoMesa"></td>
+                            </tr>   
+                            <tr>
+                                <td>Pedido Asociado:</td>
+                                <td id="codigoPedido"></td>
+                            </tr>
+                            <tr>
+                                <td>Estado:</td>
+                                <td id="estado"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

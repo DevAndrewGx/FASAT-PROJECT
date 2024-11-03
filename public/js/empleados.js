@@ -330,24 +330,24 @@ $(document).ready(function () {
                  if (response.status) {
                      // Verifica que response.data no sea undefined o null
                      if (response.data) {
-                         // Asumiendo que necesitas el primer elemento del array data
-                         var userData = response.data;
+                        // Asumiendo que necesitas el primer elemento del array data
+                        var userData = response.data;
 
-                         // seteamos la data en los campos
-                         $("#identificacion").val(userData.documento);
-                         console.log(userData.documento);
-                         $("#nombres").val(userData.nombres);
-                         $("#apellidos").val(userData.apellidos);
-                         $("#telefono").val(userData.telefono);
-                         $("#email").val(userData.correo);
-                         $("#estado").val(userData.id_estado);
-                         $("#rol").val(userData.id_rol);
-                         $("#fechaCreacion").val(userData.fechaCreacion);
+                        // seteamos la data en los campos
+                        $("#identificacion").val(userData.documento);
+                        console.log(userData.documento);
+                        $("#nombres").val(userData.nombres);
+                        $("#apellidos").val(userData.apellidos);
+                        $("#telefono").val(userData.telefono);
+                        $("#email").val(userData.correo);
+                        $("#estado").val(userData.id_estado);
+                        $("#rol").val(userData.id_rol);
+                        $("#fechaCreacion").val(userData.fechaCreacion);
                      } else {
-                         console.log("response.data está vacío o es undefined");
+                        console.log("response.data está vacío o es undefined");
                      }
                  } else {
-                     console.log("No se encontraron datos o hubo un error.");
+                    console.log("No se encontraron datos o hubo un error.");
                  }
              },
              error: function (xhr, status, error) {
