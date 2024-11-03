@@ -1,7 +1,6 @@
 <?php
 class Mesas extends SessionController
 {
-
     private $user;
 
     function __construct()
@@ -13,11 +12,13 @@ class Mesas extends SessionController
     }
 
     function render()
-    {   
-
+    {
+        // creamos un objeto de categorias para traer las categorias
+        $categoriaObj = new CategoriasModel();
+        $categorias = $categoriaObj->consultarTodos();
         error_log('Mesas::render -> Carga la pagina principal de las mesas');
         $this->view->render('admin/gestionMesas', [
-            'user' => $this->user
+            'user' => $this->user, 'categorias' => $categorias
         ]);
     }
 
@@ -101,14 +102,14 @@ class Mesas extends SessionController
             for ($i = 0; $i < count($arrayDataMesas); $i++) {
                 $arrayDataMesas[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                 $arrayDataMesas[$i]['options'] = '
-                <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '" >
+                <a class="me-3 confirm-text botonVisualizar" href="#" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
                 <a class="me-3 botonActualizar" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '"href="#">
-                    <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
+                    <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="update">
                 </a>
                 <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataMesas[$i]['id_mesa'] . '" href="#">
-                    <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
+                    <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="delete">
                 </a>
             ';
             }

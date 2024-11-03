@@ -1,6 +1,7 @@
 <?php
-$user = $this->d['user'];
-$mesas = $this->d['mesa'];
+    $user = $this->d['user'];
+    $mesas = $this->d['mesa'];
+    $categorias = $this->d['categorias'];
 ?>
 
 <!DOCTYPE html>
@@ -187,11 +188,18 @@ $mesas = $this->d['mesa'];
                 </div>
                 <div class="modal-body">
                     <form id="orderForm">
-                        <!-- select oculto para actualizar la subcategoria con su respectiva categoria
-                              -->
-                        <div class="mb-3" id="meseroAsociado">
-                            <label for="mesero" class="form-label">Nombre mesero asociado</label>
-                            <input type="text" id="mesero" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                        <div class="mb-3" id="container-form">
+                            <label for="categoriaPedido" class="form-label">Categoria producto</label>
+                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
+                               <option value="#">Selecciona una categoria</option>
+                                    <?php
+                                    foreach ($categorias as $cat) {
+                                    ?>
+                                        <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                            </select>
                         </div>
                         <div class="mb-3" id="container-form">
                             <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
@@ -223,7 +231,7 @@ $mesas = $this->d['mesa'];
                             <tr>
                                 <td>Numero Mesa:</td>
                                 <td id="numeroPedidoMesa"></td>
-                            </tr>   
+                            </tr>
                             <tr>
                                 <td>Pedido Asociado:</td>
                                 <td id="codigoPedido"></td>

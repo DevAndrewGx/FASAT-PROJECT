@@ -16,8 +16,11 @@ class Mesero extends SessionController
 
     function render()
     {
+        // creamos un objeto de categorias para traer las categorias
+        $categoriaObj = new CategoriasModel();
+        $categorias = $categoriaObj->consultarTodos();
         $this->view->render('mesero/index', [
-            'user' => $this->user, 'mesa'=>$this->mesa
+            'user' => $this->user, 'mesa'=>$this->mesa, 'categorias'=>$categorias
         ]);
     }
 
