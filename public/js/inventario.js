@@ -156,7 +156,7 @@ $(document).ready(function () {
                     let template = "";
                     if (subcategories.data.length === 0) {
                         template += `
-                        <option value="#">No existen categorías asociadas</option>
+                        <option value="">No existen categorías asociadas</option>
                     `;
                         $("#subcategoria").html(template);
                         return;

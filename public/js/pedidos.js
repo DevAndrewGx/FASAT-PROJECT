@@ -144,7 +144,8 @@ $(document).ready(function() {
                         // Mostramos el nuevo modal para generar el pedido
                         $("#generarPedidoModal").modal("show");
 
-                        // Aquí puedes agregar la lógica para abrir un formulario o modal adicional
+                        //seteamos el valor dinamico para cada vez que se consulte una mesa a travez del //registro del datatable
+                        $("#estado-mesa").text(mesa.numero_mesa);
                     });
                 }
             },

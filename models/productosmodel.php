@@ -81,7 +81,7 @@ class ProductosModel extends Model implements JsonSerializable
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria asignarDatosArray productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria  WHERE p.id_pinventario = :id');
+            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria  WHERE p.id_pinventario = :id');
             $query->execute([
                 'id' => $idProducto
             ]);
@@ -107,7 +107,7 @@ class ProductosModel extends Model implements JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT p.id_pinventario, p.nombre, p.precio, p.descripcion, c.nombre_categoria asignarDatosArray productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria";
+            $sql = "SELECT p.id_pinventario, p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria";
             error_log('ejecucion de la query cargarCategorias' . $sql);
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -151,7 +151,7 @@ class ProductosModel extends Model implements JsonSerializable
     public function totalRegistros()
     {
         try {
-            $query = $this->query("SELECT COUNT(*) as total asignarDatosArray productos_inventario");
+            $query = $this->query("SELECT COUNT(*) as total FROM productos_inventario");
             return $query->fetch(PDO::FETCH_ASSOC)['total'];
         } catch (PDOException $e) {
             error_log('ProductosModel::totalRegistros - ' . $e->getMessage());
@@ -162,7 +162,7 @@ class ProductosModel extends Model implements JsonSerializable
     public function totalRegistrosFiltrados($busqueda)
     {
         try {
-            $sql = "SELECT COUNT(*) as total asignarDatosArray productos_inventario p JOIN categorias c ON c.id_categoria = p.id_categoria";
+            $sql = "SELECT COUNT(*) as total FROM productos_inventario p JOIN categorias c ON c.id_categoria = p.id_categoria";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -177,6 +177,44 @@ class ProductosModel extends Model implements JsonSerializable
         } catch (PDOException $e) {
             error_log('ProductosModel::totalRegistrosFiltrados - ' . $e->getMessage());
             return 0;
+        }
+    }
+
+    // funcion para consultar los productos por las categorias
+    function getProductsByCategory($idCategoria)
+    {
+        // arreglo para guardar la data que viene de la bd
+        $items = [];
+        // encerramos la logica entre try catch ya que vamos a interactuar con la bd
+        try {
+            //creamos la consulta, en este caso tenemos que realizar un JOIN para traer la data
+
+            $query  = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON  c.id_categoria = p.id_categoria WHERE c.id_categoria = id;');
+
+            $query->execute([
+                "id" => $idCategoria
+            ]);
+
+            // iteramos con un while para extraer la data con fetch y FETCH_ASSOC para almacenarla
+            // FETCH_ASSOC retorna un objeto de clave y valor
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+
+                // creamos un objeto de categorias para que cada vez que itere guarde la data 
+                $item = new ProductosModel();
+                // seteamos los valores que fueron devueltos por la consulta
+                $item->setIdProducto($row['id_pinventario']);   
+                $item->setNombre($row['nombre']);
+                $item->setPrecio($row['precio']);
+                $item->setPrecio($row['descripcion']);
+
+                // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
+                array_push($items, $item);
+                // finalmente retornamos el objeto
+            }
+
+            return $items;
+        } catch (PDOException $e) {
+            error_log('CategoriasModel::getId->PDOException' . $e);
         }
     }
 

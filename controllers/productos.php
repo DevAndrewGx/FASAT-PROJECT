@@ -54,8 +54,9 @@ class Productos extends SessionController
         // asignamos los datos traidos del formulario a el objeto
         $productoObject->setNombre($this->getPost('nombreProducto'));
         $productoObject->setIdCategoria($this->getPost('categoria'));
-        error_log($this->getPost('categoria'));
-        $productoObject->setIdSubcategoria($this->getPost('subcategoria'));
+        $productoObject->setIdSubcategoria($this->getPost('subcategoria') === '' ? null : $this->getPost('subcategoria'));
+
+        error_log('LOOK AT THIS BITCH'.$this->getPost('subcategoria'));
         $productoObject->setPrecio($this->getPost('precio'));
         $productoObject->setDescripcion($this->getPost('descripcion'));
 
@@ -176,6 +177,27 @@ class Productos extends SessionController
             $subcategories = $categoryObj->getSubCategoriesByCategory($this->getPost('categoria'));
             // Devolvemos el resultado en formato JSON
             echo json_encode(["data"=>$subcategories]);
+            return;
+        } else {
+            // Devolvemos una respuesta en caso de que no exista 'categoria' en el POST
+            echo json_encode(['error' => 'Categoría no proporcionada']);
+        }
+    }
+
+
+    // function para consultar la
+    function getProductsByCategory() {
+
+        // Verificamos si existe el POST 'categoria'
+        if ($this->existPOST('categoria')) {
+            error_log('categoria' . $this->getPost('categoria'));
+            // Creamos un nuevo objeto de la clase CategoriasModel
+            $productoObj = new ProductosModel();
+
+            // Obtenemos los productos relacionadas a la categoría recibida
+            $productos = $productoObj->getProductsByCategory($this->getPost('categoria'));
+            // Devolvemos el resultado en formato JSON
+            echo json_encode(["data" => $productos]);
             return;
         } else {
             // Devolvemos una respuesta en caso de que no exista 'categoria' en el POST

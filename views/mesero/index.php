@@ -116,7 +116,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Mesas </h5>
+                        <h5 class="card-title">Mesas & Pedidos Asociados</h5>
                         <div class="table-responsive">
                             <table id="data-mesas-pedidos" class="table table-responsive datanew">
                                 <thead>

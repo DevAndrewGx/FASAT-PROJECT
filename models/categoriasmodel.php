@@ -18,6 +18,7 @@ class CategoriasModel extends Model implements JsonSerializable
         parent::__construct();
 
         $this->id_categoria = 0;
+        $this->id_sub_categoria = 0;
         $this->nombre_categoria = "";
         $this->tipo = "";
     }
@@ -406,7 +407,9 @@ class CategoriasModel extends Model implements JsonSerializable
             return;
         }
     }
+    
 
+    // funcion para consultar las subcategorias por las categorias
     function getSubCategoriesByCategory($idCategoria)
     {
         $items = [];
@@ -438,7 +441,7 @@ class CategoriasModel extends Model implements JsonSerializable
 
             return $items;
         } catch (PDOException $e) {
-            error_log('USERMODEL::getId->PDOException' . $e);
+            error_log('CategoriasModel::getId->PDOException' . $e);
         }
     }
 
