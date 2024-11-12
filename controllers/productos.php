@@ -185,7 +185,7 @@ class Productos extends SessionController
     }
 
 
-    // function para consultar la
+    // function para realizar el filtro para consultar los productos asociados a una categoria
     function getProductsByCategory() {
 
         // Verificamos si existe el POST 'categoria'

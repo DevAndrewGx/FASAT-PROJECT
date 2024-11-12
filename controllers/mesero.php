@@ -7,7 +7,7 @@ class Mesero extends SessionController
      
     function __construct()
     {
-        
+            
         parent::__construct();
         $this->user = $this->getDatosUsuarioSession();
        
@@ -66,4 +66,6 @@ class Mesero extends SessionController
             return;
         }
     }
+
+    
 }

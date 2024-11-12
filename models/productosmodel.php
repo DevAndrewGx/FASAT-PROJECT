@@ -189,7 +189,7 @@ class ProductosModel extends Model implements JsonSerializable
         try {
             //creamos la consulta, en este caso tenemos que realizar un JOIN para traer la data
 
-            $query  = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON  c.id_categoria = p.id_categoria WHERE c.id_categoria = id;');
+            $query  = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON  c.id_categoria = p.id_categoria WHERE c.id_categoria = id');
 
             $query->execute([
                 "id" => $idCategoria
