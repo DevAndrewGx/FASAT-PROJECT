@@ -101,8 +101,6 @@ class Productos extends SessionController
         }
         
     }
-
-
     // funcion para obtener los productos
     function getProducts() {
         try {
@@ -139,10 +137,10 @@ class Productos extends SessionController
                 <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '"  >
                     <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                 </a>
-                <a class="me-3 botonActualizar" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '" >
+                <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '" >
                     <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                 </a>
-                <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '">
+                <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataProducts[$i]['id_pinventario'] . '">
                     <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                 </a>
             ';
@@ -205,4 +203,33 @@ class Productos extends SessionController
         }
     }
 
+    // esta funcion nos permitira eliminar los productos
+    function borrarProducto() {
+        // validamos si el id enviado desde la peticion existe
+        if (!$this->existPOST(['id_producto'])) {
+            error_log('Productos::borrarProducto -> No se obtuvo el id de la mesa correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar el producto, intente nuevamente!"]);
+            return false;
+        }
+
+        if ($this->user == NULL) {
+            error_log('Productos::borrarProducto  -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => "El usuario de la sessión esta vacio"]);
+            return;
+        }
+        $productObj = new ProductosModel();
+        // guardamos el resultado de la consuta en una variable
+        $res = $productObj->borrar($this->getPost('id_producto'));
+
+        if($res) { 
+            error_log("Productos::borrarProducto -> Se elimino un producto correctamente");
+            echo json_encode(['status' => true, 'message' => "El producto fue eliminado exitosamente!"]);
+            return true;
+        }else {
+            error_log('Productos::borrarProducto  -> No se pudo eliminar el producto, intente nuevamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo eliminar el producto, intente nuevamente!"]);
+            return false;
+        }
+    }
 }

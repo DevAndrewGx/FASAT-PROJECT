@@ -21,7 +21,7 @@ $(document).ready(function () {
     
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
-    let dataTable = $("#data-productos").DataTable({
+    let dataTableProductos = $("#data-productos").DataTable({
         responsive: true,
         processing: true,
         serverSide: true,
@@ -51,7 +51,7 @@ $(document).ready(function () {
                     let imgSrc = row.foto ? 
                         baseUrl + "public/imgs/uploads/" + row.foto : 
                         baseUrl + "public/imgs/icons/product_default.svg";
-
+   
                     // Retornar el HTML con la imagen y el nombre del producto
                     return (
                         '<div style="display: flex; align-items: center; gap: 10px;">' +
@@ -193,4 +193,80 @@ $(document).ready(function () {
             );
         }
     );
+
+    // funcio para eliminar un producto
+    $("#data-productos").on("click", ".botonEliminar", function () {
+        // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
+        $(this).prop("disabled", true);
+        console.log('Its workin.........................');
+        // obtenemos el id del producto del boton
+        const id_producto = $(this).data("id");
+        // creamos un formdata para agregar el id y evitar utilizar jsonStringfy
+        let formData = new FormData();
+
+        formData.append("id_producto", id_producto);
+
+        // Creamos una alerta para avisar al usuario, si esta seguro de realizar esta accion
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: baseUrl + "productos/borrarProducto",
+                    type: "POST",
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function (response) {
+                        let data = JSON.parse(response);
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTableProductos.ajax.reload(null, false);
+                                    dataTableProductos.ajax.reload(null, false);
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    //  mantener el modal abierto para que el usuario intente de nuevo
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // mantener el modal abierto para que el usuario intente de nuevo
+                            }
+                        });
+                    },
+                });
+            }
+        });
+    });
 });

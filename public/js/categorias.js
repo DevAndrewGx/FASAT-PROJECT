@@ -288,7 +288,7 @@ $("#formCategories").on("submit", function(e) {
     // funcion para eliminar una categoria
     $("#data-categorias").on("click", ".botonEliminar", function (e) {
         e.preventDefault();
-        $(this).prop("disabled", true); // Deshabilitar el botón para que el usuario no di click como
+        $(this).prop("disabled", true); // Deshabilitar el botón para que el usuario no di click varias veces 
         const id_categoria = $(this).data("id");
         Swal.fire({
             title: "¿Estás seguro?",

@@ -215,6 +215,24 @@ class ProductosModel extends Model implements JsonSerializable
             error_log('CategoriasModel::getId->PDOException' . $e);
         }
     }
+    
+    // Este metodo nos permitira borrar un producto de la bd
+    public function borrar($id) {
+        // utilizamos try catch para capturar cualquier exception sin afectar la visualización del aplicativo
+        try {
+            error_log("ProductosModel::borrar -> funcion para borrar el producto");
+            $query = $this->prepare('DELETE FROM productos_inventario WHERE id_pinventario = :id_pinventario');
+
+            $query->execute([
+                'id_pinventario' => $id
+            ]);
+
+            return true;
+        } catch (PDOException $e) {
+            error_log('ProductosModel::borrar -> PDOException' . $e);
+            return false;
+        }
+    }
 
     public function jsonSerialize(): mixed
     {
