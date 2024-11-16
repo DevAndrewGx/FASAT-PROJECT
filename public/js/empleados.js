@@ -41,14 +41,30 @@ $(document).ready(function () {
                         row.nombres +
                         "</span>" +
                         "</div>"
-                    );   
+                    );
                 },
             },
             { data: "apellidos" },
             { data: "documento" },
             { data: "telefono" },
             { data: "correo" },
-            { data: "estado" },
+            {
+                data: "estado",
+                render: function (data) {
+                    let state;
+                    switch (data) {
+                        case "Activo":
+                            state = "bg-lightgreen";
+                            break;
+                        case "Inactivo":
+                            state = "bg-lightred";
+                            break;
+                        default:
+                            state = "bg-lightgray";
+                    }
+                    return `<span class="badges ${state}">${data}</span>`;
+                },
+            },
             { data: "rol" },
             { data: "fechaCreacion" },
             { data: "options" },

@@ -1,5 +1,5 @@
 <?php
-    $user = $this->d['user'];
+$user = $this->d['user'];
 ?>
 
 <!DOCTYPE html>
@@ -50,17 +50,14 @@
                 <div id="stock">
                     <div class="status">
                         <div class="info">
-                            <h2>Elementos en stock</h2>
-                            <h3>90 +</h3>
+                            <h2>Ventas del Dia</h2>
+                            <h3>$2590</h3>
+                            <p id="list">En tiempo real</p>
                         </div>
 
                         <div class="progress">
                             <div class="item">
-                                <i class='bx bx-package'></i>
-                            </div>
-
-                            <div class="value">
-                                <p>+ 7%</p>
+                                <img src="<?php echo constant('URL') ?>public/imgs/icons/dollar.svg" alt="bag">
                             </div>
                         </div>
                     </div>
@@ -69,18 +66,14 @@
                 <div id="orders">
                     <div class="status">
                         <div class="info">
-                            <h2>Ordenes hoy </h2>
-                            <h3>15 +</h3>
-
+                            <h2>Ordenes Activas</h2>
+                            <h3>15 </h3>
+                            <p id="list">Hoy</p>
                         </div>
 
                         <div class="progress">
                             <div class="item">
-                                <i class='bx bx-cart-download'></i>
-                            </div>
-
-                            <div class="value">
-                                <p>+ 5%</p>
+                                <img src="<?php echo constant('URL') ?>public/imgs/icons/clock.svg" alt="bag">
                             </div>
                         </div>
                     </div>
@@ -90,39 +83,35 @@
                 <div id="sales-income">
                     <div class="status">
                         <div class="info">
-                            <h2>Ingresos Ventas</h2>
-                            <h3>$80.000</h3>
+                            <h2>Productos Vendidos</h2>
+                            <h3>100 </h3>
+                            <p id="list">Hoy</p>
                         </div>
 
                         <div class="progress">
                             <div class="item">
-                                <i class='bx bxs-dish'></i>
-                            </div>
-
-                            <div class="value">
-                                <p>+ 7%</p>
+                                <img src="<?php echo constant('URL') ?>public/imgs/icons/bag_products.svg" alt="bag">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="total-sales">
+
                     <div class="status">
                         <div class="info">
-                            <h2>Total Ventas</h2>
-                            <h3>100 +</h3>
+                            <h2>Alertas de Stock</h2>
+                            <h3>3</h3>
+                            <p id="list" style="color: #ef4444;">Productos por acabarse</p>
                         </div>
 
                         <div class="progress">
                             <div class="item">
-                                <i class='bx bx-trending-up'></i>
-                            </div>
-
-                            <div class="value">
-                                <p>+ 15%</p>
+                                <img src="<?php echo constant('URL') ?>public/imgs/icons/warning.svg" alt="warning">
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- CHART ANALYTICS -->
@@ -160,7 +149,7 @@
             <div id="orders-employees">
 
                 <div class="employee">
-                    <h2>Empleados</h2>
+                    <h2>Personal Activo</h2>
                     <p id="list">Lista de empleados</p>
                     <div class="data-employee">
 
