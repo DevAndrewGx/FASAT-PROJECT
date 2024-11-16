@@ -21,7 +21,6 @@ $(document).ready(function () {
     
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
-
     let dataTable = $("#data-productos").DataTable({
         responsive: true,
         processing: true,
@@ -44,15 +43,32 @@ $(document).ready(function () {
         },
         columns: [
             { data: "checkmarks" },
-            { data: "nombre_producto" },
+            // { data: "nombre_producto" },
+            {
+            data: null,
+                render: function (data, type, row) {
+                    // Definir la ruta de la imagen y el texto del producto
+                    let imgSrc = row.foto ? 
+                        baseUrl + "public/imgs/uploads/" + row.foto : 
+                        baseUrl + "public/imgs/icons/product_default.svg";
+
+                    // Retornar el HTML con la imagen y el nombre del producto
+                    return (
+                        '<div style="display: flex; align-items: center; gap: 10px;">' +
+                            '<img src="' + imgSrc + '" alt="Foto" style="width:45px; height:45px; border-radius:50%;">' +
+                            '<span style="font-size: 14px; color: #333;">' + row.nombre_producto + '</span>' +
+                        '</div>'
+                    );
+                },
+            },
+
             { data: "nombre_categoria" },
             { data: "precio" },
-            { data: "descripcion" },
             { data: "options" },
         ],
         columnDefs: [
             {
-                targets: [0, 5],
+                targets: [0, 4],
                 orderable: false,
             },
         ],

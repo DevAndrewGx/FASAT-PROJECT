@@ -203,7 +203,7 @@ $("#formCategories").on("submit", function(e) {
         $("#subCategoryOption").show();
 
         // si no esta en modo editar, el endpoint creara una categoria
-        endPoint = baseUrl + "categorias/createCategory";
+        endPoint = baseUrl + "categorias/crearCategoria";
         if (validateFormCategories()) {
             const form = this;
             const categoryFormData = new FormData(form);
@@ -216,7 +216,7 @@ $("#formCategories").on("submit", function(e) {
             if (editar) {
                 categoryFormData.append("id_categoria", globalIdCategoria);
                 console.log(globalIdCategoria);
-                endPoint = baseUrl + "categorias/updateCategory";
+                endPoint = baseUrl + "categorias/actualizarCategoria";
             }
 
             if ($("#hasSubcategory").is(":checked")) {
@@ -231,29 +231,29 @@ $("#formCategories").on("submit", function(e) {
                     const submitSubcategoryButton = $(this).find('button[type="submit"]');
                     submitSubcategoryButton.prop("disabled", true);
 
-                        if (validateFormSubCategories()) {
-                            // Crear una nueva instancia de FormData para el formulario de subcategoría
-                            let subcategoryFormData = new FormData(this); // 'this' hace referencia al formulario de subcategoría
+                    if (validateFormSubCategories()) {
+                        // Crear una nueva instancia de FormData para el formulario de subcategoría
+                        let subcategoryFormData = new FormData(this); // 'this' hace referencia al formulario de subcategoría
 
-                            // Agregar los datos de categoría a la FormData de subcategoría
-                            subcategoryFormData.append(
-                                "nombreCategoria",
-                                $("#nombreCategoria").val().trim()
-                            );
-                            subcategoryFormData.append(
-                                "tipoCategoria",
-                                $("#tipoCategoria").val().trim()
-                            );
+                        // Agregar los datos de categoría a la FormData de subcategoría
+                        subcategoryFormData.append(
+                            "nombreCategoria",
+                            $("#nombreCategoria").val().trim()
+                        );
+                        subcategoryFormData.append(
+                            "tipoCategoria",
+                            $("#tipoCategoria").val().trim()
+                        );
 
-                            sendForm(
-                                this,
-                                subcategoryFormData,
-                                baseUrl + "categorias/createCategory",
-                                "Categoría y subcategoría creadas"
-                            );
-                        } else {
-                            submitSubcategoryButton.prop("disabled", false);
-                        }
+                        sendForm(
+                            this,
+                            subcategoryFormData,
+                            baseUrl + "categorias/createCategory",
+                            "Categoría y subcategoría creadas"
+                        );
+                    } else {
+                        submitSubcategoryButton.prop("disabled", false);
+                    }
                 });
             } else {
                 // Envío solo de la categoría
@@ -279,7 +279,7 @@ $("#formCategories").on("submit", function(e) {
             let subcategoryFormData = new FormData(this); // 'this' hace referencia al formulario de subcategoría
             subcategoryFormData.append("idSubcategoria",globalIdSubCategoria);
 
-            sendForm(this, subcategoryFormData, baseUrl + "categorias/updateSubCategory","Subcategoria Actualizada!");
+            sendForm(this, subcategoryFormData, baseUrl + "categorias/actualizarSubCategoria","Subcategoria Actualizada!");
         } else {
             submitSubcategoryButton.prop("disabled", false);
         }
@@ -301,7 +301,7 @@ $("#formCategories").on("submit", function(e) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: baseUrl + "categorias/delete",
+                    url: baseUrl + "categorias/borrar",
                     type: "POST",
                     processData: false,
                     contentType: "application/json",
@@ -380,7 +380,7 @@ $("#formCategories").on("submit", function(e) {
         $("#categoriaAsociadaContainer").show();
 
         $.ajax({
-            url: baseUrl + "categorias/getSubCategory",
+            url: baseUrl + "categorias/consultarSubCategoria",
             type: "POST",
             dataType: "json",
             data: JSON.stringify({ idSubCategoria: globalIdSubCategoria }),
@@ -431,7 +431,7 @@ $("#formCategories").on("submit", function(e) {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: baseUrl + "categorias/deleteSubCategoria",
+                    url: baseUrl + "categorias/borrarSubCategoria",
                     type: "POST",
                     processData: false,
                     contentType: "application/json",
@@ -514,7 +514,7 @@ $("#formCategories").on("submit", function(e) {
         // Enviamos la peteción para traer la data de la categoria y mostrarla en el formulario
 
         $.ajax({
-            url: baseUrl + "categorias/getCategory",
+            url: baseUrl + "categorias/consultarCategoria",
             type: "POST",
             dataType: "json",
             data: JSON.stringify({ nombre: globalNombreCategoria}),

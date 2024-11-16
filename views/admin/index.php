@@ -216,8 +216,8 @@ $user = $this->d['user'];
                 </div>
 
                 <div id="orders">
-                    <h2>Productos</h2>
-                    <p>Ultimos productos mas vendidos</p>
+                    <h2>Inventario Critico</h2>
+                    <p>Lista de productos en el inventario</p>
                     <table id="example" class="table table-responsive datanew">
                         <thead>
                             <tr>

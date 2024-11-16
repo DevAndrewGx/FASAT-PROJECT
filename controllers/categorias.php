@@ -25,7 +25,7 @@ class Categorias extends SessionController
 
     // Funcion para crear una nueva categoria
 
-    function createCategory()
+    function crearCategoria()
     {
         // primero validamos si la data viene correctamente desde el formulario
         error_log('Categorias::createCategory -> Funcion para crear nuevas categorias');
@@ -193,10 +193,8 @@ class Categorias extends SessionController
 
 
     // funcion para trear solamente una categoria
-    public function getCategory()
+    public function consultarCategoria()
     {
-
-
         $data = json_decode(file_get_contents("php://input"), true);
 
 
@@ -234,7 +232,7 @@ class Categorias extends SessionController
         }
     }
 
-    public function getSubCategory()
+    public function consultarSubCategoria()
     {
         $data = json_decode(file_get_contents("php://input"), true);
 
@@ -312,7 +310,7 @@ class Categorias extends SessionController
 
     // funcion para con la logica para actualizar la categoria
 
-    public function actualizarCategory()
+    public function actualizarCategoria()
     {
         error_log('Categorias::actualizarCategory -> Funcion para actualizar una categoria');
 
@@ -361,7 +359,7 @@ class Categorias extends SessionController
 
     // funcion para actualizar la subcategoria
 
-    public function actualizarSubCategory()
+    public function actualizarSubCategoria()
     {
         error_log('Categorias::actualizarCategory -> Funcion para actualizar una subCategoria');
 

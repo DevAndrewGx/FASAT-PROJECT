@@ -261,7 +261,7 @@ class CategoriasModel extends Model implements JsonSerializable
     {
         try {
             error_log("CategoriasModel::borrar -> Funcion para borrar categorias");
-            $query = $this->prepare('borrar FROM categorias WHERE id_categoria = :id_categoria');
+            $query = $this->prepare('DELETE FROM categorias WHERE id_categoria = :id_categoria');
             $query->execute([
                 'id_categoria' => $id_categoria
             ]);
@@ -277,7 +277,7 @@ class CategoriasModel extends Model implements JsonSerializable
     {
         try {
             error_log("CategoriasModel::borrar -> Funcion para borrar las subcategorias asociadas a una categoria");
-            $query = $this->prepare('borrar FROM sub_categorias WHERE id_sub_categoria = :id');
+            $query = $this->prepare('DELETE FROM sub_categorias WHERE id_sub_categoria = :id');
             $query->execute([
                 'id' => $idSubCategoria
             ]);
@@ -295,7 +295,7 @@ class CategoriasModel extends Model implements JsonSerializable
         try {
             error_log("CategoriasModel::actualizar -> Funcion para actualizar una categoria");
 
-            $query = $this->prepare('actualizar categorias SET nombre_categoria = :nombreCategoria, tipo_categoria = :tipoCategoria WHERE id_categoria = :id');
+            $query = $this->prepare('UPDATE categorias SET nombre_categoria = :nombreCategoria, tipo_categoria = :tipoCategoria WHERE id_categoria = :id');
 
             $query->execute([
                 'nombreCategoria' => $this->nombre_categoria,
@@ -323,7 +323,7 @@ class CategoriasModel extends Model implements JsonSerializable
         try {
             error_log("CategoriasModel::actualizar -> Funcion para actualizar una subcategoria");
 
-            $query = $this->prepare('actualizar sub_categorias SET nombre_subcategoria = :nombre_subcategoria, id_categoria = :id_categoria WHERE id_sub_categoria = :id');
+            $query = $this->prepare('UPDATE sub_categorias SET nombre_subcategoria = :nombre_subcategoria, id_categoria = :id_categoria WHERE id_sub_categoria = :id');
 
             $query->execute([
                 'nombre_subcategoria' => $this->nombre_subcategoria,

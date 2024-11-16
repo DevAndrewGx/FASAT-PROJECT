@@ -4,11 +4,10 @@
 class ProductosModel extends Model implements JsonSerializable
 {
 
-
     // creamos los atributos de la clase
-
     private $id_producto;
     private $id_foto;
+    private $foto;
     private $id_stock;
     private $id_provedor;
     private $id_categoria;
@@ -107,14 +106,14 @@ class ProductosModel extends Model implements JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT p.id_pinventario, p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria";
+            $sql = "SELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto";
+
             error_log('ejecucion de la query cargarCategorias' . $sql);
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
                 $sql .= " WHERE 
                     p.nombre LIKE '%$searchValue%' OR 
                     p.precio LIKE '%$searchValue%' OR 
-                    p.descripcion LIKE '%$searchValue%' OR
                     c.nombre_categoria LIKE '%$searchValue%'";
             }
             if ($columna != null && $orden != null) {
@@ -135,7 +134,7 @@ class ProductosModel extends Model implements JsonSerializable
                 $item->setIdProducto($p['id_pinventario']);
                 $item->setNombre($p['nombre']);
                 $item->setPrecio($p['precio']);
-                $item->setDescripcion($p['descripcion']);
+                $item->setFoto($p['foto']);
                 $item->setNombreCategoria($p['nombre_categoria']);
 
                 array_push($items, $item);
@@ -205,7 +204,6 @@ class ProductosModel extends Model implements JsonSerializable
                 $item->setIdProducto($row['id_pinventario']);   
                 $item->setNombre($row['nombre']);
                 $item->setPrecio($row['precio']);
-                $item->setPrecio($row['descripcion']);
 
                 // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
                 array_push($items, $item);
@@ -223,9 +221,9 @@ class ProductosModel extends Model implements JsonSerializable
         return [
             'id_pinventario' => $this->id_producto,
             'nombre_producto' => $this->nombre,
+            'foto' => $this->foto,
             'nombre_categoria' => $this->nombre_categoria,
             'precio' => $this->precio,
-            'descripcion' => $this->descripcion
         ];
     }
 
@@ -233,6 +231,10 @@ class ProductosModel extends Model implements JsonSerializable
     public function setIdProducto($id)
     {
         $this->id_producto = $id;
+    }
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
     }
     public function setIdFoto($id)
     {
@@ -276,6 +278,11 @@ class ProductosModel extends Model implements JsonSerializable
     public function getIdProducto()
     {
         return $this->id_producto;
+    }
+
+    public function getFoto()
+    {
+        return $this->foto;
     }
     public function getIdFoto()
     {

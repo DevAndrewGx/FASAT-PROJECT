@@ -78,7 +78,6 @@ $user = $this->d['user'];
                                         <th>Producto</th>
                                         <th>Categoría</th>
                                         <th>Precio</th>
-                                        <th>Descripcion</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
