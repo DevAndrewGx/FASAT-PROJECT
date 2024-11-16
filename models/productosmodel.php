@@ -75,12 +75,12 @@ class ProductosModel extends Model implements JsonSerializable
 
 
     // funcion para obtener un producto
-    public function get($idProducto)
+    public function consultar($idProducto)
     {
 
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria  WHERE p.id_pinventario = :id');
+            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria, s.nombre_subcategoria FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria WHERE p.id_pinventario = :id');
             $query->execute([
                 'id' => $idProducto
             ]);
@@ -90,7 +90,6 @@ class ProductosModel extends Model implements JsonSerializable
             // en este caso no hay necesidad de crear un objeto userModel, solo podemos llamar los metodos del mismo con objeto con this
             $this->setNombre($producto['nombre']);
             $this->setPrecio($producto['precio']);
-            $this->setDescripcion($producto['descripcion']);
             $this->setNombreCategoria($producto['nombre_categoria']);
 
             //retornamos this porque es el mismo objeto que ya contiene la informacion
@@ -222,7 +221,6 @@ class ProductosModel extends Model implements JsonSerializable
         try {
             error_log("ProductosModel::borrar -> funcion para borrar el producto");
             $query = $this->prepare('DELETE FROM productos_inventario WHERE id_pinventario = :id_pinventario');
-
             $query->execute([
                 'id_pinventario' => $id
             ]);
@@ -286,6 +284,7 @@ class ProductosModel extends Model implements JsonSerializable
     {
         $this->nombre_categoria = $nombre;
     }
+    
     public function setDescripcion($descripcion)
     {
         $this->descripcion = $descripcion;
@@ -334,12 +333,12 @@ class ProductosModel extends Model implements JsonSerializable
     {
         return $this->nombre_categoria;
     }
+
     public function getDescripcion()
     {
         return $this->descripcion;
     }
-    // public function getDisponibilidad() { return $this->disponibilidad;}
-
+    
 }
 
 ?>

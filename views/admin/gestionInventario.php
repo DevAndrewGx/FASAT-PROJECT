@@ -135,7 +135,7 @@ $user = $this->d['user'];
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="precio" class="col-form-label">Precio</label>
-                                <input type="text" class="form-control valid validText" name="precio" required>
+                                <input type="text" class="form-control valid validText" name="precio" id="precio" required>
                             </div>
 
                             <div class="form-group col-md-6">
@@ -145,7 +145,7 @@ $user = $this->d['user'];
                                     <option value="SI">Si</option>
                                     <option value="NO">No</option>
                                 </select> -->
-                                <input type="number" class="form-control valid validTest" name="cantidad" required>
+                                <input type="number" class="form-control valid validTest" name="cantidad" id="cantidad" required>
                             </div>
 
                         </div>

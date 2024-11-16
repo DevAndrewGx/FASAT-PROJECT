@@ -161,6 +161,43 @@ class Productos extends SessionController
             error_log('Categorias::getCategories -> Error en traer los datos - getCategories' . $e->getMessage());
         }
     }
+
+    // funcion para consultar una mesa en especifico
+    function consultarProducto() {
+        // validamos si existe el id enviado desde la petición
+        if (!$this->existPOST(['id_producto'])) {
+            error_log('Productos::consultarProducto -> No se obtuvo el id del producto correctamente');
+            echo json_encode(['status' => false, 'message' => "Algunos parametros enviados estan vacios, intente nuevamente!"]);
+            return false;
+        }
+
+        if ($this->user == NULL) {
+            error_log('Productos::consultarProductos -> El usuario de la session esta vacio');
+            // enviamos la respuesta al front para que muestre una alerta con el mensaje
+            echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+            return;
+        }
+        // creamos un nuevo objeto de productos
+        $productoObj = new ProductosJoinModel();
+        $res = $productoObj->consultar($this->getPost('id_producto'));
+
+        $arrayData =  json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+
+        if ($arrayData) {
+            error_log('Productos::consultarProductos -> El producto se obtuvo correctamente-> ' . $res);
+            $response = [
+                "data" => $arrayData,
+                "status" => true,
+                "message" => "Se obtuvo la data correctamente"
+            ];
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
+            die();
+        } else {
+            error_log('Users::borrarUser -> No se pudo obtener el usuario correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
+            return false;
+        }
+    }
   // function para traer la data de las subcategorias asociadasa a una categoria
     function getSubcategoriesByCategory()
     {
