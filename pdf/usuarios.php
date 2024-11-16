@@ -35,7 +35,7 @@ function Footer()
         $user = "root";
         $pass = "";
         $host = "localhost";
-        $db = "test_fast4";
+        $db = "test_fast8";
         $charset = 'utf8';  // Añadido punto y coma
     try{
         // Creamos un objeto conexión PDO  // Corregido el comentario

@@ -31,13 +31,17 @@ $(document).ready(function () {
                 data: null,
                 render: function (data, type, row) {
                     return (
+                        '<div style="display: flex;  align-items: center; gap: 10px;">' +
                         '<img src="' +
                         baseUrl +
                         "public/imgs/uploads/" +
                         row.foto +
-                        '" alt="Foto" style="width:45px; height:45px; border-radius:50%;"> ' +
-                        row.nombres
-                    );
+                        '" alt="Foto" style="width:45px; height:45px; border-radius:50%;">' +
+                        '<span style="font-size: 14px; color: #333;">' +
+                        row.nombres +
+                        "</span>" +
+                        "</div>"
+                    );   
                 },
             },
             { data: "apellidos" },

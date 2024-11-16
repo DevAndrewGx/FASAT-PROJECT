@@ -116,21 +116,22 @@ td {
 
 table.datanew thead tr th {
     background-color: #fafbfe !important;
-    text-align: center;
     border: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
     border-bottom: 2px solid #e9ecef;
 }
 
 table.datanew tbody tr td {
     padding: 10px;
-    color: #637381;
-    font-weight: 500;
+    color: #333;
     border: 0;
+    font-size: 15px;
+    font-weight: 500;
     border-bottom: 1px solid #e9ecef;
-    text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
     white-space: nowrap;
-    
 }
 
 table.datanew tbody tr:hover > td {
@@ -902,6 +903,22 @@ main #orders-employees #orders p {
 .card .card-body {
     padding: 20px;
 }
+
+/* styles for button reports */
+
+.card .table-responsive .container-reports .btn-excel{
+    background: #f0fdf4;
+    border: #4cb974 1px solid;
+    color: #4cb974;
+    font-weight: 600;
+}
+
+.card .table-responsive .container-reports .btn-pdf{
+    background: #fef2f2;
+    border: #e45858 1px solid;
+    color: #e45858;
+    font-weight: 600;
+}
 @media (max-width: 991px) {
     .card .card-body {
         padding: 15px;
@@ -925,6 +942,7 @@ main .page-title h4 {
     margin: 0;
     color: #333;
 }
+main .card-gody 
 
 /*********************** TABLES ************************/
 main .table {

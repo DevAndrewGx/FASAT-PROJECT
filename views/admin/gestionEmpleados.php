@@ -110,11 +110,11 @@ $user = $this->d['user'];
                                     </tr>
                                 </thead>
                                 <div class="container-reports">
-                                    <a href="pdf/usuarios.php" class="btn btn-danger me-2" style="border: none; ">
+                                    <a href="pdf/usuarios.php" class="btn btn-pdf me-2">
                                         <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="Exportar a PDF">
                                         PDF
                                     </a>
-                                    <a href="vendor/usuarios.php" class="btn btn-success me-2" style="border: none;">
+                                    <a href="vendor/usuarios.php" class="btn btn-excel me-2">
                                         <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="Exportar a Excel">
                                         Excel
                                     </a>
