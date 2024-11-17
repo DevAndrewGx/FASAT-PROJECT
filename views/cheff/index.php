@@ -12,6 +12,7 @@ $user = $this->d['user'];
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- DataTables styles -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/styles.css">
@@ -65,7 +66,7 @@ $user = $this->d['user'];
             <div class="content">
                 <div class="page-header">
                     <div class="page-title">
-                        <h1>Gestión de Pedidos - Chef</h1>
+                        <h1>Panel de Cocina</h1>
                         <nav class="nav-main">
                             <a href="homeChef.php">Chef</a>
                             <a href="chefPedidos.php" id="actual"> / Gestión de Pedidos </a>
@@ -73,151 +74,110 @@ $user = $this->d['user'];
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Órdenes de Platos en Proceso</h5>
-                        <div class="table-responsive">
-                            <table id="ordersTable" class="table table-responsive datanew">
-                                <thead>
-                                    <tr>
-                                        <th>Mesa</th>
-                                        <th>Plato</th>
-                                        <th>Cantidad</th>
-                                        <th>Fecha</th>
-                                        <th>Estado</th>
-                                        <th class="text-center">Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Pizza Margarita</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Pizza Margarita</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Pizza Margarita</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Pizza Margarita</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
+                <!-- Resumen de estados -->
+                <div class="d-flex justify-content-end mb-4">
+                    <!-- Contador de pendientes -->
+                    <div class="d-flex align-items-center border rounded-pill px-3 py-1 me-2" style="border-color: #ffc107;">
+                        <i class="bi bi-exclamation-circle-fill text-warning me-2" style="font-size: 1.2rem;"></i>
+                        <span class="text-warning fw-bold">Pendientes:</span>
+                        <span class="ms-1 text-warning">1</span>
+                    </div>
 
-                                </tbody>
-                            </table>
-                        </div>
+                    <!-- Contador en preparación -->
+                    <div class="d-flex align-items-center border rounded-pill px-3 py-1 me-2" style="border-color: #000;">
+                        <i class="bi bi-clock text-dark me-2" style="font-size: 1.2rem;"></i>
+                        <span class="text-dark fw-bold">En preparación:</span>
+                        <span class="ms-1 text-dark">1</span>
+                    </div>
+
+                    <!-- Contador completados -->
+                    <div class="d-flex align-items-center border rounded-pill px-3 py-1" style="border-color: #198754;">
+                        <i class="bi bi-check-circle-fill text-success me-2" style="font-size: 1.2rem;"></i>
+                        <span class="text-success fw-bold">Completados:</span>
+                        <span class="ms-1 text-success">0</span>
                     </div>
                 </div>
 
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Órdenes de Bebidas en Proceso</h5>
-                        <div class="table-responsive">
-                            <table id="beveragesTable" class="table table-responsive datanew">
-                                <thead>
-                                    <tr>
-                                        <th>Mesa</th>
-                                        <th>Bebida</th>
-                                        <th>Cantidad</th>
-                                        <th>Fecha</th>
-                                        <th>Estado</th>
-                                        <th class="text-center">Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Coca-Cola</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Coca-Cola</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Coca-Cola</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Coca-Cola</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Coca-Cola</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badge bg-warning text-dark">En Proceso</span></td>
-                                        <td class="text-center">
-                                            <button class="btn btn-success btn-toggle-status" data-status="en-proceso">Marcar como Listo</button>
-                                        </td>
-                                    </tr>
 
-                                </tbody>
-                            </table>
+                <!-- Pedidos -->
+                <div class="row g-4">
+                    <!-- Pedido #001 -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">Pedido #001</h5>
+                                    <small class="text-muted">Mesa 5 <big>|</big> 14:30</small>
+                                </div>
+                                <span class="badge bg-warning text-dark">PENDIENTE</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 border-bottom pb-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>2x Filete de res</h6>
+                                        <p class="mb-2"><small class="text-muted">Notas: Término medio</small></p>
+                                        <button class="btn btn-dark btn-sm me-2">Iniciar</button>
+                                        <button class="btn btn-secondary btn-sm" disabled>Completar</button>
+                                    </div>
+
+                                    <span class="badge bg-warning text-dark">PENDIENTE</span>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>1x Ensalada César</h6>
+                                        <p class="mb-2"><small class="text-muted">Notas: Sin crutones</small></p>
+                                        <button class="btn btn-dark btn-sm me-2">Iniciar</button>
+                                        <button class="btn btn-secondary btn-sm" disabled>Completar</button>
+                                    </div>
+                                    <span class="badge bg-warning text-dark">PENDIENTE</span>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted d-flex align-items-center">
+                                <i class="bi bi-clock me-2"></i> Tiempo transcurrido: 5 min
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pedido #002 -->
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">Pedido #002</h5>
+                                    <small class="text-muted">Mesa 3 <big>|</big> 14:25</small>
+                                </div>
+                                <span class="badge bg-dark text-light">EN PREPARACIÓN</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 border-bottom pb-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>1x Pasta Alfredo</h6>
+                                        <p class="mb-2"><small class="text-muted">Notas: Extra queso</small></p>
+                                        <button class="btn btn-dark btn-sm me-2">Iniciar</button>
+                                        <button class="btn btn-success btn-sm">Completar</button>
+                                    </div>
+                                    <span class="badge bg-dark text-light">EN PREPARACIÓN</span>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>2x Sopa del día</h6>
+                                        <p class="mb-2"><small class="text-muted"></small></p>
+                                        <button class="btn btn-secondary btn-sm me-2" disabled>Iniciar</button>
+                                        <button class="btn btn-success btn-sm" disabled>Completado</button>
+                                    </div>
+                                    <span class="badge bg-success text-light">COMPLETADO</span>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted d-flex align-items-center">
+                                <i class="bi bi-clock me-2"></i> Tiempo transcurrido: 10 min
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </main>
     </div>
-    <!-- Scripts de Bootstrap y DataTables -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </body>
 <script src="../../js/main.js"></script>
 
@@ -231,40 +191,7 @@ $user = $this->d['user'];
 
 
 </body>
-<script>
-    $(document).ready(function() {
-        // Inicializar DataTables
-        $('#ordersTable').DataTable({
-            "paging": true,
-            "searching": true,
-            "info": true
-        });
-        $('#beveragesTable').DataTable({
-            "paging": true,
-            "searching": true,
-            "info": true
-        });
 
-        // Manejo de clic en botones
-        $(document).on('click', '.btn-toggle-status', function() {
-            var $button = $(this);
-            var currentStatus = $button.data('status');
-
-            // Cambiar el estado y el texto del botón
-            if (currentStatus === 'en-proceso') {
-                $button.data('status', 'listo');
-                $button.text('Marcar como En Proceso');
-                $button.removeClass('btn-success').addClass('btn-warning');
-                $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-warning').addClass('bg-success').text('Listo');
-            } else {
-                $button.data('status', 'en-proceso');
-                $button.text('Marcar como Listo');
-                $button.removeClass('btn-warning').addClass('btn-success');
-                $button.closest('tr').find('td:eq(4) .badge').removeClass('bg-success').addClass('bg-warning').text('En Proceso');
-            }
-        });
-    });
-</script>
 <script src="../../js/main.js"></script>
 <!-- JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
