@@ -10,6 +10,7 @@ const selectPlaceholder = document.querySelector(".select-placeholder");
 let id_producto;
 // Definimos productoData fuera del alcance para que esté disponible en el evento change
 let productoData = null;
+let editar = null;
 
 
 options.forEach((option) => {
@@ -167,6 +168,7 @@ $(document).ready(function () {
             .addClass("headerUpdate");
         $("#btnText").text("Actualizar");
 
+        
         // creamos nuestra petición ajax para traer la data y setearla en el modal
         $.ajax({
             url: baseUrl + "productos/consultarProducto",
@@ -264,9 +266,13 @@ $(document).ready(function () {
                     // $("#subcategoria").html(template);
                     $("#subcategoria").html(template);
 
+                    // validamos que este en modo edicion para traer la subcategoria asociada a la categoria seleconada
+                    editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+                    console.log(editar);
+
                     // Selecciona automáticamente la subcategoría
                     // Añadir un pequeño retraso para asegurar que las opciones estén cargadas antes de seleccionar
-                    if (productoData) {
+                    if (productoData && editar) {
                         setTimeout(function () {
                             console.log(
                                 "Seleccionando subcategoría con ID:",

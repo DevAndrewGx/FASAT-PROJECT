@@ -23,7 +23,7 @@ class ProductosJoinModel extends Model implements JsonSerializable {
     public function consultar($idProducto) {
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria, s.nombre_subcategoria, s.id_sub_categoria, st.cantidad FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria INNER JOIN sub_categorias s ON p.id_subcategoria = s.id_sub_categoria INNER JOIN stock_inventario st ON p.id_stock = st.id_stock WHERE p.id_pinventario = :id');
+            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria, s.nombre_subcategoria, s.id_sub_categoria, st.cantidad FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN sub_categorias s ON p.id_subcategoria = s.id_sub_categoria INNER JOIN stock_inventario st ON p.id_stock = st.id_stock WHERE p.id_pinventario = :id');
             $query->execute([
                 'id' => $idProducto
             ]);

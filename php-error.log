@@ -4672,3 +4672,585 @@
 [17-Nov-2024 01:29:47 Europe/Berlin] its here
 [17-Nov-2024 01:29:47 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
 [17-Nov-2024 01:29:47 Europe/Berlin] categoria62
+[17-Nov-2024 01:42:22 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:22 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:42:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:22 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:22 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:42:22 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:42:22 Europe/Berlin] 
+[17-Nov-2024 01:42:22 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:42:22 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:23 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804142809, url => productos
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804142809, url => productos
+[17-Nov-2024 01:42:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:23 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:23 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:42:24 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:24 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:24 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:42:24 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:42:24 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:24 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:24 Europe/Berlin] its here
+[17-Nov-2024 01:42:24 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:42:24 Europe/Berlin] categoria62
+[17-Nov-2024 01:42:36 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:36 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:36 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:36 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:36 Europe/Berlin] its here
+[17-Nov-2024 01:42:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:42:36 Europe/Berlin] categoria62
+[17-Nov-2024 01:42:47 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:47 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:42:47 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:47 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:47 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:47 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:42:47 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:42:47 Europe/Berlin] 
+[17-Nov-2024 01:42:47 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:42:48 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:48 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804167847, url => productos
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804167847, url => productos
+[17-Nov-2024 01:42:48 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:48 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:48 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:48 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:48 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:42:49 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:49 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:49 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:42:49 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:42:49 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:42:49 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:42:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:42:49 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:42:49 Europe/Berlin] its here
+[17-Nov-2024 01:42:49 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:42:49 Europe/Berlin] categoria62
+[17-Nov-2024 01:43:04 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:43:04 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:43:04 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:43:04 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:43:04 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:04 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:43:04 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:43:04 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:43:04 Europe/Berlin] 
+[17-Nov-2024 01:43:04 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:43:05 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:43:05 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804184962, url => productos
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804184962, url => productos
+[17-Nov-2024 01:43:05 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:43:05 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:43:05 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:05 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:43:05 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:43:06 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:06 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:43:06 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:43:06 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:43:06 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:43:06 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:43:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:06 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:43:06 Europe/Berlin] its here
+[17-Nov-2024 01:43:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:43:06 Europe/Berlin] categoria62
+[17-Nov-2024 01:43:10 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:43:10 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:43:10 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:43:10 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:43:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:43:10 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:43:10 Europe/Berlin] its here
+[17-Nov-2024 01:43:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:43:10 Europe/Berlin] categoria62
+[17-Nov-2024 01:44:41 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:44:41 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:44:41 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:44:41 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:44:41 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:41 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:44:41 Europe/Berlin] its here
+[17-Nov-2024 01:44:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:44:41 Europe/Berlin] categoria62
+[17-Nov-2024 01:44:42 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:42 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:44:42 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:44:42 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:44:42 Europe/Berlin] 
+[17-Nov-2024 01:44:42 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:44:42 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804282497, url => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804282497, url => productos
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:44:42 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:44:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:42 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:44:42 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:44:44 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:44:44 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:44:44 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:44:44 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:44:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:44:44 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:44:44 Europe/Berlin] its here
+[17-Nov-2024 01:44:44 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:44:44 Europe/Berlin] categoria62
+[17-Nov-2024 01:45:01 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:45:01 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:45:01 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:45:01 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:45:01 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:01 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:45:01 Europe/Berlin] its here
+[17-Nov-2024 01:45:01 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:45:01 Europe/Berlin] categoria2
+[17-Nov-2024 01:45:32 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:45:32 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[17-Nov-2024 01:45:32 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:45:32 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:45:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:32 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:45:32 Europe/Berlin] Productos::createProduct -> Funcion para crear nuevos productos
+[17-Nov-2024 01:45:32 Europe/Berlin] CreateProduct:: -> Es posible crear un nuevo producto
+[17-Nov-2024 01:45:32 Europe/Berlin] LOOK AT THIS BITCH
+[17-Nov-2024 01:45:32 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php:110
+Stack trace:
+#0 C:\xampp\htdocs\FAST-PROJECT\libs\controller.php(110): getimagesize('')
+#1 C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php(73): Controller->createPhoto(Object(FotoModel), 'productos')
+#2 C:\xampp\htdocs\FAST-PROJECT\libs\app.php(78): Productos->createProduct()
+#3 C:\xampp\htdocs\FAST-PROJECT\index.php(54): App->__construct()
+#4 {main}
+  thrown in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 110
+[17-Nov-2024 01:45:36 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:45:36 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/createProduct, url => productos
+[17-Nov-2024 01:45:36 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:45:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:45:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:36 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:45:36 Europe/Berlin] Productos::createProduct -> Funcion para crear nuevos productos
+[17-Nov-2024 01:45:36 Europe/Berlin] CreateProduct:: -> Es posible crear un nuevo producto
+[17-Nov-2024 01:45:36 Europe/Berlin] LOOK AT THIS BITCH
+[17-Nov-2024 01:45:36 Europe/Berlin] FotoModel::crear -> lastId -> 161
+[17-Nov-2024 01:45:36 Europe/Berlin] Users::createUser -> Se guardó la foto correctamente
+[17-Nov-2024 01:45:36 Europe/Berlin] StockModel::crear -> lastId -> 33
+[17-Nov-2024 01:45:36 Europe/Berlin] Productos::createProduct -> se guardo la data del id stock correctamente
+[17-Nov-2024 01:45:36 Europe/Berlin] Productos::createProduct -> Se guardó un producto correctamente dentro de la bd
+[17-Nov-2024 01:45:43 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:43 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:45:43 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:45:43 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:45:43 Europe/Berlin] 
+[17-Nov-2024 01:45:43 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:45:43 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804343714, url => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804343714, url => productos
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:45:43 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:45:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:45:43 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:45:43 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:45:59 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:00 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:00 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:00 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:00 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 34
+[17-Nov-2024 01:46:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 35
+[17-Nov-2024 01:46:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 36
+[17-Nov-2024 01:46:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 37
+[17-Nov-2024 01:46:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 38
+[17-Nov-2024 01:46:00 Europe/Berlin] Users::borrarUser -> No se pudo obtener el usuario correctamente
+[17-Nov-2024 01:46:03 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:03 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:03 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:46:03 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:46:03 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:03 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:03 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:03 Europe/Berlin] its here
+[17-Nov-2024 01:46:03 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:46:03 Europe/Berlin] categoria62
+[17-Nov-2024 01:46:06 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:06 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:06 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:46:06 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:46:06 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:06 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:06 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:06 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:06 Europe/Berlin] its here
+[17-Nov-2024 01:46:06 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:46:06 Europe/Berlin] categoria62
+[17-Nov-2024 01:46:08 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:08 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:08 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:08 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:08 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 34
+[17-Nov-2024 01:46:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 35
+[17-Nov-2024 01:46:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 36
+[17-Nov-2024 01:46:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 37
+[17-Nov-2024 01:46:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 38
+[17-Nov-2024 01:46:08 Europe/Berlin] Users::borrarUser -> No se pudo obtener el usuario correctamente
+[17-Nov-2024 01:46:12 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:12 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:12 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:12 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:12 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 34
+[17-Nov-2024 01:46:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 35
+[17-Nov-2024 01:46:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 36
+[17-Nov-2024 01:46:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 37
+[17-Nov-2024 01:46:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 38
+[17-Nov-2024 01:46:12 Europe/Berlin] Users::borrarUser -> No se pudo obtener el usuario correctamente
+[17-Nov-2024 01:46:22 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:22 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:22 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 34
+[17-Nov-2024 01:46:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 35
+[17-Nov-2024 01:46:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 36
+[17-Nov-2024 01:46:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 37
+[17-Nov-2024 01:46:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 38
+[17-Nov-2024 01:46:22 Europe/Berlin] Users::borrarUser -> No se pudo obtener el usuario correctamente
+[17-Nov-2024 01:46:28 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:46:28 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:46:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:46:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:46:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:46:28 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:46:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 34
+[17-Nov-2024 01:46:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 35
+[17-Nov-2024 01:46:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 36
+[17-Nov-2024 01:46:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 37
+[17-Nov-2024 01:46:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\productosJoinModel.php on line 38
+[17-Nov-2024 01:46:28 Europe/Berlin] Users::borrarUser -> No se pudo obtener el usuario correctamente
+[17-Nov-2024 01:47:13 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:13 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[17-Nov-2024 01:47:13 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:13 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:13 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:13 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[17-Nov-2024 01:47:13 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 142
+[17-Nov-2024 01:47:13 Europe/Berlin] 
+[17-Nov-2024 01:47:13 Europe/Berlin] Producto::render -> Carga la pagina principal
+[17-Nov-2024 01:47:14 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:14 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804433501, url => productos
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804433501, url => productos
+[17-Nov-2024 01:47:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:14 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:14 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[17-Nov-2024 01:47:15 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:15 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:15 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:47:15 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:47:15 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:15 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:15 Europe/Berlin] its here
+[17-Nov-2024 01:47:15 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:47:15 Europe/Berlin] categoria2
+[17-Nov-2024 01:47:32 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/consultarProducto, url => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:32 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\productos.php on line 187
+[17-Nov-2024 01:47:32 Europe/Berlin] Productos::consultarProductos -> El producto se obtuvo correctamente-> Array
+[17-Nov-2024 01:47:32 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getSubcategoriesByCategory, url => productos
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[17-Nov-2024 01:47:32 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:47:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:47:32 Europe/Berlin] Producto::construct -> Controlador producto
+[17-Nov-2024 01:47:32 Europe/Berlin] its here
+[17-Nov-2024 01:47:32 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 46
+[17-Nov-2024 01:47:32 Europe/Berlin] categoria62
+[17-Nov-2024 01:48:58 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/users, url => users
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => users
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/users, url => users
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site users
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:48:58 Europe/Berlin] Users::construct -> controlador usuarios
+[17-Nov-2024 01:48:58 Europe/Berlin] Users::render -> Carga la pagina principal de los empleados
+[17-Nov-2024 01:48:58 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=2&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804538655, url => users
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => users
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/users/getUsers?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=apellidos&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=documento&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=telefono&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=correo&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=estado&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=rol&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B8%5D%5Bdata%5D=fechaCreacion&columns%5B8%5D%5Bname%5D=&columns%5B8%5D%5Bsearchable%5D=true&columns%5B8%5D%5Borderable%5D=true&columns%5B8%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B8%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B9%5D%5Bdata%5D=options&columns%5B9%5D%5Bname%5D=&columns%5B9%5D%5Bsearchable%5D=true&columns%5B9%5D%5Borderable%5D=false&columns%5B9%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B9%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=2&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1731804538655, url => users
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site users
+[17-Nov-2024 01:48:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:48:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:48:58 Europe/Berlin] Users::construct -> controlador usuarios
+[17-Nov-2024 01:49:03 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:49:03 Europe/Berlin] SessionController::validarSession()
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[17-Nov-2024 01:49:03 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[17-Nov-2024 01:49:03 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[17-Nov-2024 01:49:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[17-Nov-2024 01:49:03 Europe/Berlin] Inicializando la aplicacion...
+[17-Nov-2024 01:49:03 Europe/Berlin] Errores::construct -> inicio de errores
