@@ -158,10 +158,51 @@
         }
 
 
-        // funcion para actualizar el stock
-        public function actualizar() { 
-            
+    // funcion para actualizar el stock
+        public function actualizar($id)
+        {
+            // usamos try catch ya que vamos a interactuar con la BD
+            try {
+                // Primero, consultamos los valores actuales en la base de datos para el id dado
+                $currentQuery = $this->prepare('SELECT cantidad, cantidad_minima, cantidad_disponible FROM stock_inventario WHERE id_stock = :id');
+                $currentQuery->execute(['id' => $id]);
+                $currentData = $currentQuery->fetch();
+
+                // Verificamos si los valores son diferentes antes de hacer la actualización
+                if (
+                    $currentData &&
+                    $currentData['cantidad'] == $this->cantidad &&
+                    $currentData['cantidad_minima'] == $this->cantidad_minima &&
+                    $currentData['cantidad_disponible'] == $this->cantidad_disponible
+                ) {
+                    error_log('StockModel::actualizar -> No hay cambios en los valores, omitiendo actualización');
+                    return true; // Retornamos true aunque no se haya actualizado, ya que los datos son los mismos
+                }
+
+                // Si hay cambios, realizamos la actualización
+                $query = $this->prepare('UPDATE stock_inventario SET cantidad = :cantidad, cantidad_minima = :cantidad_minima, cantidad_disponible = :cantidad_disponible WHERE id_stock = :id');
+                error_log("StockModel::Actualizar -> Actualizando el id_stock: " . $id);
+
+                $query->execute([
+                    'id' => $id,
+                    'cantidad' => $this->cantidad,
+                    'cantidad_minima' => $this->cantidad_minima,
+                    'cantidad_disponible' => $this->cantidad_disponible,
+                ]);
+
+                // Verificamos si la actualización afectó alguna fila
+                if ($query->rowCount() > 0) {
+                    return true;
+                } else {
+                    error_log('StockModel::actualizar -> No se actualizo ninguna fila');
+                    return false;
+                }
+            } catch (PDOException $e) {
+                error_log("StockModel::actualizar->PDOException " . $e);
+                return false;
+            }
         }
+
 
         // funcion para pasar la data del array a los atributos de la clase
         public function asignarDatosArray($array) { 

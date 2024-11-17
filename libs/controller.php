@@ -92,7 +92,7 @@ class Controller
     function createPhoto(FotoModel $photoObj, $redirectTo)
     {
         // En este caso que tenemos la foto podemos moverla a uploads y guardarla alli
-        $foto = isset($_FILES['foto']) ? $_FILES['foto'] : null;
+        $foto = isset($_FILES['foto']) ? $_FILES['foto'] : '';
         // creamos el directorio de destino donde queremos guardar la imagen
         $directorioDestino = 'public/imgs/uploads/';
 

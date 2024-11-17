@@ -11,6 +11,7 @@ let id_producto;
 // Definimos productoData fuera del alcance para que esté disponible en el evento change
 let productoData = null;
 let editar = null;
+let id_foto = null; 
 
 
 options.forEach((option) => {
@@ -119,15 +120,23 @@ $(document).ready(function () {
     });
 
     $("#formProduct").submit(function (e) {
-        console.log("It's here");
         e.preventDefault();
         let form = $(this)[0];
-        console.log(form);
+
         // let form = $(this)[0]; // Selecciona el formulario como un elemento DOM
         const formData = new FormData(form);
 
+        // validamos si el modal tiene la clase headerUpdate para enviar la petición en modo actualizar
+        let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+
+        if (editar) {
+           
+            formData.append("id_producto", id_producto);
+            formData.append("id_foto", id_foto);
+        }
+
         $.ajax({
-            url: baseUrl + "productos/createProduct",
+            url: editar ? baseUrl + "productos/actualizarProducto" : baseUrl+"productos/crearProducto",
             type: "POST",
             processData: false,
             contentType: false,
@@ -138,7 +147,7 @@ $(document).ready(function () {
                 if (data.status) {
                     Swal.fire({
                         icon: "success",
-                        title: "Producto creado exitosamente",
+                        title: "Exito",
                         text: data.message,
                         showConfirmButton: true,
                         allowOutsideClick: false,
@@ -147,7 +156,7 @@ $(document).ready(function () {
                         if (result.isConfirmed) {
                             // Cerrar el modal y reiniciar el formulario
                             $("#formProduct").closest(".modal").modal("hide");
-                            dataTable.ajax.reload(null, false);
+                            dataTableProductos.ajax.reload(null, false);
                         }
                     });
                 } else {
@@ -160,9 +169,14 @@ $(document).ready(function () {
     // funcion para recuperar la data y setearla en los formularios para actualizar un producto - ADMIN
     $("#data-productos").on("click", ".botonActualizar", function () {
         id_producto = $(this).data("id");
+        id_foto = $(this).data("idfoto");
+
+        console.log(id_producto);
+
+        console.log(id_foto);
 
         // actualizamos la data del modal
-        $("#titleModal").html("Actualizar Mesa");
+        $("#titleModal").html("Actualizar Producto");
         $(".modal-header")
             .removeClass("headerRegister")
             .addClass("headerUpdate");

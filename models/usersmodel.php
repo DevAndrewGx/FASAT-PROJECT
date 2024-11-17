@@ -195,10 +195,7 @@ class UsersModel extends Model implements IModel
                 return true;
             } else {
                 error_log('USERMODEL::actualizar -> No se actualizó ninguna fila');
-
                 return false;
-
-
             }
 
         } catch (PDOException $e) {

@@ -3,7 +3,6 @@
     
     class Inventario extends SessionController {
 
-        
         function __construct()
         {
             parent::__construct();

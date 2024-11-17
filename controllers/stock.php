@@ -88,5 +88,50 @@
             }
         }
 
+
+        // Esta funciion nos permitira actualizar el nivel del stock, si el admin asi lo prefiera
+        function actualizarStock() {
+            // validamos que la data del formulario no venga vacia
+            if (!$this->existPOST(['cantidad'])) {
+
+                error_log('Stock::actualizarMesa -> Hay algunos parametros vacios enviados en el formulario');
+                echo json_encode(['status' => false, 'message' => "Algunos datos enviados del formulario estan vacios"]);
+                return;
+            }
+
+            // validamos que el usuario de la sesión no este vacio
+            if ($this->user == NULL) {
+
+                error_log('Stock::actualizarStock -> El usuario de la sesión esta vacio');
+
+                echo json_encode(['status' => false, 'message' => "El usuario de la sesión intenlo nuevamente"]);
+                return;
+            }
+
+            // si no entra a niguna validacion, significa que la data y el usuarioi estan correctos
+            error_log('Stock::actualizarStock -> Es posible actualizar una mesa');
+
+            $stockObj = new StockModel();
+
+            $stockObj->setCantidad($this->getPost('cantidad'));
+            $stockObj->setCantidadDisponible($this->getPost('cantidad'));
+            $stockObj->setCantidadMinima($this->getPOst('cantidad'));
+
+            // ejecutamos la query para actualizar una categoria
+            $res = $stockObj->actualizar($this->getPost('id_stock'));
+
+            // validamos si la consulta se ejecuto correctamente
+
+            if ($res) {
+                error_log('Stock::actualizarStock -> Se actualizo la mesa correctamente');
+                echo json_encode(['status' => true, 'message' => "El stock fue actualizado exitosamente!"]);
+                return;
+            } else {
+                error_log('Stock::actualizarStock -> Error en la consulta del Back');
+                echo json_encode(['status' => false, 'message' => "Error 500, nose actualizo la data!"]);
+                return;
+            }
+        }
+
     }
 ?>

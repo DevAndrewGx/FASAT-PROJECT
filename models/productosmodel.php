@@ -46,7 +46,6 @@ class ProductosModel extends Model implements JsonSerializable
     public function crear()
     {
         // utilizamos siempre el try catch ya que vamos a crear consultas para manipular la bd
-
         try {
             // creamos la query para insertar datos dentro de la bd
             $query = $this->prepare("INSERT INTO productos_inventario(id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock,  nombre, precio, descripcion) VALUES(:id_foto, :id_categoria, :id_subcategoria, :id_proveedor, :id_stock, :nombre, :precio, :descripcion)");
@@ -105,7 +104,7 @@ class ProductosModel extends Model implements JsonSerializable
         $items = [];
 
         try {
-            $sql = "SELECT p.id_pinventario, f.foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto";
+            $sql = "SELECT p.id_pinventario, f.foto, f.id_foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto";
 
             error_log('ejecucion de la query cargarCategorias' . $sql);
             if (!empty($busqueda)) {
@@ -131,6 +130,7 @@ class ProductosModel extends Model implements JsonSerializable
                 $item = new ProductosModel();
 
                 $item->setIdProducto($p['id_pinventario']);
+                $item->setIdFoto($p['id_foto']);
                 $item->setNombre($p['nombre']);
                 $item->setPrecio($p['precio']);
                 $item->setFoto($p['foto']);
@@ -214,6 +214,71 @@ class ProductosModel extends Model implements JsonSerializable
             error_log('CategoriasModel::getId->PDOException' . $e);
         }
     }
+
+    // Este metodo nos permitira actualizar la de los productos en la bd
+    public function actualizar($idProducto)
+    {
+        try {
+            // Consulta los valores actuales para el producto específico
+            $currentQuery = $this->prepare("SELECT id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock, nombre, precio, descripcion 
+                                        FROM productos_inventario 
+                                        WHERE id_pinventario = :id_producto");
+            $currentQuery->execute(['id_producto' => $idProducto]);
+            $currentData = $currentQuery->fetch();
+
+            // Verifica si los valores han cambiado
+            if (
+                $currentData &&
+                $currentData['id_foto'] == $this->id_foto &&
+                $currentData['id_categoria'] == $this->id_categoria &&
+                $currentData['id_subcategoria'] == $this->id_subcategoria &&
+                $currentData['id_proveedor'] == $this->id_proveedor &&
+                $currentData['id_stock'] == $this->id_stock &&
+                $currentData['nombre'] == $this->nombre &&
+                $currentData['precio'] == $this->precio &&
+                $currentData['descripcion'] == $this->descripcion
+            ) {
+                error_log('ProductosModel::actualizar -> No hay cambios en los valores, omitiendo actualización');
+                return true; // Retorna true si no hay cambios
+            }
+
+            // Realiza la actualización si hay cambios
+            $query = $this->prepare("UPDATE productos_inventario SET 
+                                 id_foto = :id_foto, 
+                                 id_categoria = :id_categoria, 
+                                 id_subcategoria = :id_subcategoria, 
+                                 id_proveedor = :id_proveedor, 
+                                 id_stock = :id_stock, 
+                                 nombre = :nombre, 
+                                 precio = :precio, 
+                                 descripcion = :descripcion 
+                                 WHERE id_pinventario = :id_producto");
+
+            $query->execute([
+                'id_producto' => $idProducto ?? null,
+                'id_foto' => $this->id_foto ?? null,
+                'id_categoria' => $this->id_categoria ?? null,
+                'id_subcategoria' => $this->id_subcategoria ?? null,
+                'id_proveedor' => $this->id_proveedor ?? null,
+                'id_stock' => $this->id_stock ?? null,
+                'nombre' => $this->nombre,
+                'precio' => $this->precio,
+                'descripcion' => $this->descripcion
+            ]);
+
+            // Verifica si la actualización afectó filas
+            if ($query->rowCount() > 0) {
+                return true;
+            } else {
+                error_log('ProductosModel::actualizar -> No se actualizó ninguna fila');
+                return false;
+            }
+        } catch (PDOException $e) {
+            error_log('ProductoModel::actualizar->PDOException ' . $e);
+            return false;
+        }
+    }
+
     
     // Este metodo nos permitira borrar un producto de la bd
     public function borrar($id) {
@@ -236,6 +301,7 @@ class ProductosModel extends Model implements JsonSerializable
     {
         return [
             'id_pinventario' => $this->id_producto,
+            'id_foto' => $this->id_foto,
             'nombre_producto' => $this->nombre,
             'foto' => $this->foto,
             'nombre_categoria' => $this->nombre_categoria,
