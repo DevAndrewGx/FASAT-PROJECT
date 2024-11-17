@@ -191,12 +191,13 @@ class MesasModel extends Model implements IModel, JsonSerializable
         // usamos try catch ya que vamos a interactuar con la BD
         try {
             // creamos la query para actualizar
-            $query = $this->prepare('UPDATE mesas SET numero_mesa = :numero_mesa, estado = :estado WHERE id_mesa = :id');
+            $query = $this->prepare('UPDATE mesas SET numero_mesa = :numero_mesa, estado = :estado, capacidad = :capacidad WHERE id_mesa = :id');
             // ejecutamos la query para actualizar
             $query->execute([
                 'id' => $id,
                 'estado' => $this->estado,
-                'numero_mesa' => $this->numeroMesa
+                'numero_mesa' => $this->numeroMesa,
+                'capacidad' => $this->capacidad
             ]);
 
             // validamos que la query se ejecuta correctamente y afecta una columna

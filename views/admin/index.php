@@ -39,7 +39,7 @@ $user = $this->d['user'];
             <h1>Admin Dashboard</h1>
 
             <nav class="nav-main">
-                <a href="homeAdmin.php" id="actual" data-navegation="#admin">Admin</a>
+                <a href="homeAdmin.php" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
             </nav>
 
             <div class="analyse">

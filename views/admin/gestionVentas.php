@@ -1,6 +1,5 @@
-
 <?php
-    $user = $this->d['user'];
+$user = $this->d['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +36,7 @@
                         <h1>Ventas</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#ventas"> / Ventas </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#ventas" data-rol="admin"> / Ventas </a>
                         </nav>
                     </div>
                 </div>

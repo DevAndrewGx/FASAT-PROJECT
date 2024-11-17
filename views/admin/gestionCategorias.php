@@ -45,8 +45,8 @@ $user = $this->d['user'];
                         <h1>Categorias</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Categorias </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Categorias </a>
                         </nav>
                     </div>
                     <div class="page-btn">

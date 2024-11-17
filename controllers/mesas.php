@@ -194,6 +194,7 @@ class Mesas extends SessionController
 
         $mesaObj->setNumeroMesa($this->getPost('numeroMesa'));
         $mesaObj->setEstado($this->getPost('estado'));
+        $mesaObj->setCapacidad($this->getPost('capacidad'));
 
         // ejecutamos la query para actualizar una categoria
         $res = $mesaObj->actualizar($this->getPost('id_mesa'));

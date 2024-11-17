@@ -1,5 +1,5 @@
 <?php
-    $user = $this->d['user'];
+$user = $this->d['user'];
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +46,8 @@
                         <h1>Control de Stock</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Stock </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Stock </a>
                         </nav>
                     </div>
                     <div class="page-btn">

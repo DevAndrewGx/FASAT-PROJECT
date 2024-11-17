@@ -38,7 +38,7 @@ $user = $this->d['user'];
                         <h1>Mesas</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#mesas"> / Mesas </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#mesas" data-rol="admin"> / Mesas </a>
                         </nav>
 
                     </div>

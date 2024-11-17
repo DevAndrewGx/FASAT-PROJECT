@@ -1,7 +1,7 @@
 <?php
-    $user = $this->d['user'];
-    $mesas = $this->d['mesa'];
-    $categorias = $this->d['categorias'];
+$user = $this->d['user'];
+$mesas = $this->d['mesa'];
+$categorias = $this->d['categorias'];
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +31,13 @@
                     <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
                     <i class='bx bxs-chevron-left-circle'></i>
                 </div>
-                <div class="item" id="ordenes">
+                <div class="item active" id="ordenes">
+                    <i class='bx bx-food-menu'></i>
+                    <a href="<?php echo constant('URL'); ?>mesero">Ordenes</a>
+                </div>
+                <div class="item" id="mesas">
                     <i class='bx bx-grid-alt'></i>
-                    <a href="#">Ordenes</a>
+                    <a href="<?php echo constant('URL'); ?>mesasMesero">Mesas</a>
                 </div>
                 <div class="item">
                     <i class='bx bx-cog'></i>
@@ -47,6 +51,7 @@
                 </div>
             </div>
         </aside>
+
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
             <div class="content">
@@ -54,8 +59,7 @@
                     <div class="page-title">
                         <h1>Gestión de Pedidos</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#ordenes"> / Gestión de Pedidos </a>
+                            <a href="homeAdmin.php" id="actual" data-navegation="#mesero" data-rol="mesero">Mesero</a>
                         </nav>
                     </div>
                     <div class="page-btn">
@@ -191,14 +195,14 @@
                         <div class="mb-3" id="container-form">
                             <label for="categoriaPedido" class="form-label">Categoria producto</label>
                             <select name="categoriaPedido" id="categoriaPedido" class="form-control">
-                               <option value="#">Selecciona una categoria</option>
-                                    <?php
-                                    foreach ($categorias as $cat) {
-                                    ?>
-                                        <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
-                                    <?php
-                                    }
-                                    ?>
+                                <option value="#">Selecciona una categoria</option>
+                                <?php
+                                foreach ($categorias as $cat) {
+                                ?>
+                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                <?php
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="mb-3" id="container-form">

@@ -60,11 +60,18 @@
             "role": "Mesero",
             "description": "Pagina principal para mesero"
         },
+        
         {
             "site": "mesas", 
             "access": "private", 
             "role": "Mesero",
-            "description": "Pagina principal para mesero"
+            "description": "Carga la pagina de las mesas para el mesero"
+        }, 
+        {
+            "site": "mesasMesero", 
+            "access": "private", 
+            "role": "Mesero",
+            "description": "Carga la pagina de las mesas para el mesero"
         },  
         {
             "site": "pedidos", 

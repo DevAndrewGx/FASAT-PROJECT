@@ -34,12 +34,27 @@ document.querySelector('.menu-btn').addEventListener('click', function() {
 // EFECT FOR SIDEBAR ELEMENTS
 const activeAside = () => {
     const actual = document.getElementById("actual").getAttribute("data-navegation");
-    console.log(actual);
+    const rol = document.getElementById("actual").getAttribute("data-rol");
+    console.log("Rol: "+rol);
+    console.log("Actual: "+actual);
 
-    if (actual != "#admin") {
+    if (actual != "#admin" && rol == "admin") {
         // Remueve la clase 'active' de todos los elementos
         const items = document.querySelectorAll('.item');
         items.forEach(item => {
+            item.classList.remove("active");
+        });
+        // Añade la clase 'active' al elemento actual
+        const seccion = document.querySelector(actual);
+        console.log(seccion);
+        seccion.classList.add("active");
+    }
+
+    if(actual != "#mesero" && rol == "mesero") {
+        // Remueve la clase 'active' de todos los elementos
+        const items = document.querySelectorAll(".item");
+        console.log('its hereeee');
+        items.forEach((item) => {
             item.classList.remove("active");
         });
         // Añade la clase 'active' al elemento actual

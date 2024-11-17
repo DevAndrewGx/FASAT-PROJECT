@@ -42,7 +42,7 @@ $user = $this->d['user'];
                         <ul>
                             <li id="active"><a href="<?php echo constant('URL'); ?>productos">Lista Productos</a></li>
                             <li><a href="<?php echo constant('URL'); ?>categorias">Lista Categorias</a></li>
-                            <li><a href="<?php echo constant('URL');?>stock">Control de Stock</a></li>
+                            <li><a href="<?php echo constant('URL'); ?>stock">Control de Stock</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,7 +51,7 @@ $user = $this->d['user'];
                         <h1>Productos</h1>
                         <nav class="nav-main">
                             <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario"> / Inventario </a>
+                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
                             <a href="adminUsu.php" id="actual" data-navegation="#inventario-productos"> / Productos </a>
                         </nav>
                     </div>
@@ -82,7 +82,7 @@ $user = $this->d['user'];
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
