@@ -5,6 +5,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     private $numeroMesa;
     private $codigoPedido;
     private $estado;
+    private $capacidad;
 
 
     // inicializamos los atributos de la clas con el contstructor y llamamos el contructor padre
@@ -22,11 +23,12 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
         try {
             // Creamos la query para guardar mesas, ademas de preparala porque vamos a insertar datos en la BD.
-            $query = $this->prepare("INSERT INTO mesas (numero_mesa, estado) VALUES(:numero, :estado)");
+            $query = $this->prepare("INSERT INTO mesas (numero_mesa,estado,capacidad) VALUES(:numero, :estado, :capacidad)");
             // ejecutamos query y hacemos la referencia de los placeholders a los atributos en la clase
             $query->execute([
                 "numero" => $this->numeroMesa,
-                "estado" => $this->estado
+                "estado" => $this->estado,
+                "capacidad" => $this->capacidad
             ]);
             // retornamos true para salir de la funcion y para validar que la query se ejecuto correctamente.
             return true;
@@ -52,6 +54,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
             $this->setIdMesa($mesa['id_mesa']);
             $this->setNumeroMesa($mesa['numero_mesa']);
             $this->setEstado($mesa['estado']);
+            $this->setCapacidad($mesa['capacidad']);
 
             // retornamos el objeto mesa 
             return $mesa;   
@@ -81,6 +84,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
                 $item->setNumeroMesa($row['numero_mesa']);
                 $item->setEstado($row['estado']);
+                $item->setCapacidad($row['capacidad']);
                 $item->setIdMesa($row['id_mesa']);
 
                 array_push($items, $item);
@@ -126,6 +130,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
                 $item->setIdMesa($p['id_mesa']);
                 $item->setNumeroMesa($p['numero_mesa']);
                 $item->setEstado($p['estado']);
+                $item->setCapacidad($p['capacidad']);
 
                 array_push($items, $item);
             }
@@ -174,6 +179,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
             'numeroMesa' => $this->numeroMesa,
             'codigoPedido' => $this->codigoPedido,
             'estado' => $this->estado,
+            'capacidad' => $this->capacidad
         ];
     }
 
@@ -259,7 +265,9 @@ class MesasModel extends Model implements IModel, JsonSerializable
     {
         return $this->estado;
     }
-
+    public function getCapacidad() { 
+        return $this->capacidad;
+    }
     public function getIdMesa()
     {
         return $this->idMesa;
@@ -272,6 +280,11 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function setEstado($estado)
     {
         $this->estado = $estado;
+    }
+
+    public function setCapacidad($capacidad)
+    {
+        return $this->capacidad = $capacidad;
     }
 
     public function setIdMesa($mesa)

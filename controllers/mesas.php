@@ -30,7 +30,7 @@ class Mesas extends SessionController
         error_log("Mesas::createTable -> Funcion para crear una mesa");
 
         // validamos que la data que venga del formulario no este vacia
-        if (!$this->existPOST(['numeroMesa', 'estado'])) {
+        if (!$this->existPOST(['numeroMesa', 'estado', 'capacidad'])) {
             error_log("Mesas::createTable -> Hay algun error en los paremetros enviados desde el formulario");
 
             // en   viamos la respuesta al fronted para mostrar las alertas al usuario
@@ -57,6 +57,7 @@ class Mesas extends SessionController
         // seteamos la data en el objeto de mesas
         $mesaModel->setNumeroMesa($this->getPost("numeroMesa"));
         $mesaModel->setEstado($this->getPost("estado"));
+        $mesaModel->setCapacidad($this->getPost('capacidad'));
 
         // validamos y guardamos la data de la consulta
         if ($mesaModel->crear()) {

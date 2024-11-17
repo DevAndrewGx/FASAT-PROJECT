@@ -26,8 +26,18 @@ $(document).ready(function () {
         },
         columns: [
             { data: "checkmarks" },
-            { data: "numeroMesa" },
-            
+            {
+                data: "numeroMesa",
+                render: function (data) {
+                    return `#${data}`;
+                },
+            },
+            {
+                data: "capacidad",
+                render: function (data) {
+                    return `${data} personas`;
+                },
+            },
             {
                 data: "estado",
                 render: function (data) {

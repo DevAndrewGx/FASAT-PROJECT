@@ -37,5 +37,10 @@
                 echo json_encode(['error' => 'Categoría no proporcionada']);
             }
         }
+        // Esta funcion nos permtira crear los codigos de pedido para una mejor gestion
+        public function generateOrderCode()
+        {
+           
+        }
     }
 ?>

@@ -61,6 +61,7 @@ $user = $this->d['user'];
                                             </label>
                                         </th>
                                         <th class="sorting">Numero de mesa</th>
+                                        <th class="sorting">Capacidad</th>
                                         <th class="sorting">Estado</th>
                                         <th class="sorting">Accion</th>
                                     </tr>
@@ -91,6 +92,13 @@ $user = $this->d['user'];
                             <input type="number" class="form-control" name="numeroMesa" id="numeroMesa" placeholder="Numero Mesa">
                             <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de meesa válido.</div>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="capacidad" class="form-label">Capacidad</label>
+                            <input type="number" class="form-control" name="capacidad" id="capacidad" placeholder="Capacidad">
+                            <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de meesa válido.</div>
+                        </div>
+
                         <div class="mb-3">
                             <label for="categoryType" class="form-label">Estado mesa</label>
                             <select class="form-control" name="estado" id="estado">
