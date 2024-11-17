@@ -261,7 +261,6 @@ $(document).ready(function () {
                     let subcategories = JSON.parse(response);
                     console.log(subcategories);
 
-                    console.log(subcategories);
                     let template = "";
                     if (subcategories.data.length === 0) {
                         template += `

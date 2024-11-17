@@ -100,6 +100,41 @@ $(document).ready(function() {
             }
         }
     );
+    // funcion para filtrar los productos por las categorias
+    $("#categoriaPedido").on("change", function(e) { 
+        // almacenamos el valor del select cuando ejecute el evento en una variable
+        const categoriaPedido = e.target.value;
+        console.log(categoriaPedido);
+        
+        // creamos la peticion
+        $.post(`${baseUrl}pedidos/getProductsByCategory`, {categoria: categoriaPedido}, function(response) { 
+            // convertimos la data devuelta por el servidor en un JSON
+            let productos = JSON.parse(response);
+
+            // creamos un template para concatenar y iterar sobre los valores
+            let template = "";
+            
+            // validamos primero si el arreglo tiene data 
+            if (productos.data.length === 0) { 
+                template += `
+                        <option value="">No existen categorías asociadas</option>
+                    `;
+                $("#producto").html(template);
+                return;
+            }
+
+            template += "<option value=''>Seleccione Producto</option>";
+            productos.data.forEach((subcategory) => {
+                template += `
+                            <option value="${subcategory.nombre_producto}">${subcategory.nombre_producto}</option>
+                        `;
+            });
+            
+            // actualizamos el contenido de #producto
+            $("#producto").html(template);
+        });
+    });
+
 
     // Función para abrir el modal y cargar los datos de la mesa
     function abrirModalMesa(id_mesa) {

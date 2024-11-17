@@ -187,7 +187,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="orderForm">
+                    <form id="formPedido">
                         <div class="mb-3" id="container-form">
                             <label for="categoriaPedido" class="form-label">Categoria producto</label>
                             <select name="categoriaPedido" id="categoriaPedido" class="form-control">
@@ -202,9 +202,9 @@
                             </select>
                         </div>
                         <div class="mb-3" id="container-form">
-                            <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
-                            <select name="numeroMesa" id="numeroMesa" class="form-control">
-                                <option value="#" selected>Seleccione el numero de mesa</option>
+                            <label for="producto" class="form-label">Seleccione Producto</label>
+                            <select name="producto" id="producto" class="form-control">
+                                <option value="#" selected>Seleccione Producto</option>
                             </select>
                             <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
                         </div>

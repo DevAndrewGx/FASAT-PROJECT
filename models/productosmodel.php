@@ -187,7 +187,7 @@ class ProductosModel extends Model implements JsonSerializable
         try {
             //creamos la consulta, en este caso tenemos que realizar un JOIN para traer la data
 
-            $query  = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON  c.id_categoria = p.id_categoria WHERE c.id_categoria = id');
+            $query  = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria FROM productos_inventario p INNER JOIN categorias c ON  c.id_categoria = p.id_categoria WHERE c.id_categoria = :id');
 
             $query->execute([
                 "id" => $idCategoria
@@ -202,6 +202,7 @@ class ProductosModel extends Model implements JsonSerializable
                 // seteamos los valores que fueron devueltos por la consulta
                 $item->setIdProducto($row['id_pinventario']);   
                 $item->setNombre($row['nombre']);
+                $item->setNombreCategoria($row['nombre_categoria']);
                 $item->setPrecio($row['precio']);
 
                 // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
@@ -219,7 +220,9 @@ class ProductosModel extends Model implements JsonSerializable
     public function actualizar($idProducto)
     {
         try {
-            // Consulta los valores actuales para el producto específico
+            /* Consulta los valores actuales para el producto específico, ya que se estaba teniendo un 
+            inconveniente al momento de actualizar data, porque como se realizan pruebas enviando la misma data, 
+            entonces la query no se ejecuta correctamente por lo cual se realiza este paso adicional para evitar errores como estos*/
             $currentQuery = $this->prepare("SELECT id_foto, id_categoria, id_subcategoria, id_proveedor, id_stock, nombre, precio, descripcion 
                                         FROM productos_inventario 
                                         WHERE id_pinventario = :id_producto");
@@ -232,17 +235,17 @@ class ProductosModel extends Model implements JsonSerializable
                 $currentData['id_foto'] == $this->id_foto &&
                 $currentData['id_categoria'] == $this->id_categoria &&
                 $currentData['id_subcategoria'] == $this->id_subcategoria &&
-                $currentData['id_proveedor'] == $this->id_proveedor &&
+                $currentData['id_proveedor'] == $this->id_provedor &&
                 $currentData['id_stock'] == $this->id_stock &&
                 $currentData['nombre'] == $this->nombre &&
                 $currentData['precio'] == $this->precio &&
                 $currentData['descripcion'] == $this->descripcion
             ) {
                 error_log('ProductosModel::actualizar -> No hay cambios en los valores, omitiendo actualización');
-                return true; // Retorna true si no hay cambios
+                return true; // Retornamos true ya que no hay ningun cambio, entonces salimos de la actualizacion
             }
 
-            // Realiza la actualización si hay cambios
+            // Despues de eso si hay cambios en los datos en cualquiera, podemos realizar la query para actualizar data
             $query = $this->prepare("UPDATE productos_inventario SET 
                                  id_foto = :id_foto, 
                                  id_categoria = :id_categoria, 
@@ -253,7 +256,8 @@ class ProductosModel extends Model implements JsonSerializable
                                  precio = :precio, 
                                  descripcion = :descripcion 
                                  WHERE id_pinventario = :id_producto");
-
+            
+            // ejecutamos la query 
             $query->execute([
                 'id_producto' => $idProducto ?? null,
                 'id_foto' => $this->id_foto ?? null,
@@ -266,7 +270,7 @@ class ProductosModel extends Model implements JsonSerializable
                 'descripcion' => $this->descripcion
             ]);
 
-            // Verifica si la actualización afectó filas
+            // verificamos si se afecto alguna fiila para asi retornar true y continuar con el flujo
             if ($query->rowCount() > 0) {
                 return true;
             } else {
