@@ -6,7 +6,11 @@ const selectPlaceholder = document.querySelector(".select-placeholder");
 // selectBtn.addEventListener("click", () => {
 //     optionMenu.classList.toggle("active");
 // });
+// variables especiales
 let id_producto;
+// Definimos productoData fuera del alcance para que esté disponible en el evento change
+let productoData = null;
+
 
 options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -19,7 +23,6 @@ options.forEach((option) => {
 
 // funciones para el crud
 $(document).ready(function () {
-    
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     let dataTableProductos = $("#data-productos").DataTable({
@@ -46,19 +49,23 @@ $(document).ready(function () {
             { data: "checkmarks" },
             // { data: "nombre_producto" },
             {
-            data: null,
+                data: null,
                 render: function (data, type, row) {
                     // Definir la ruta de la imagen y el texto del producto
-                    let imgSrc = row.foto ? 
-                        baseUrl + "public/imgs/uploads/" + row.foto : 
-                        baseUrl + "public/imgs/icons/product_default.svg";
-   
+                    let imgSrc = row.foto
+                        ? baseUrl + "public/imgs/uploads/" + row.foto
+                        : baseUrl + "public/imgs/icons/product_default.svg";
+
                     // Retornar el HTML con la imagen y el nombre del producto
                     return (
                         '<div style="display: flex; align-items: center; gap: 10px;">' +
-                            '<img src="' + imgSrc + '" alt="Foto" style="width:45px; height:45px; border-radius:50%;">' +
-                            '<span style="font-size: 14px; color: #333;">' + row.nombre_producto + '</span>' +
-                        '</div>'
+                        '<img src="' +
+                        imgSrc +
+                        '" alt="Foto" style="width:45px; height:45px; border-radius:50%;">' +
+                        '<span style="font-size: 14px; color: #333;">' +
+                        row.nombre_producto +
+                        "</span>" +
+                        "</div>"
                     );
                 },
             },
@@ -74,7 +81,6 @@ $(document).ready(function () {
             },
         ],
     });
-
 
     let dataTableProductsOnStok = $("#data-stock-productos").DataTable({
         responsive: true,
@@ -107,7 +113,7 @@ $(document).ready(function () {
             {
                 targets: [0, 4],
                 orderable: false,
-            },  
+            },
         ],
     });
 
@@ -150,6 +156,76 @@ $(document).ready(function () {
         });
     });
 
+    // funcion para recuperar la data y setearla en los formularios para actualizar un producto - ADMIN
+    $("#data-productos").on("click", ".botonActualizar", function () {
+        id_producto = $(this).data("id");
+
+        // actualizamos la data del modal
+        $("#titleModal").html("Actualizar Mesa");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
+
+        // creamos nuestra petición ajax para traer la data y setearla en el modal
+        $.ajax({
+            url: baseUrl + "productos/consultarProducto",
+            type: "POST",
+            dataType: "json",
+            data: { id_producto: id_producto },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        productoData = response.data;
+                        console.log(productoData);
+                        // seteamos la data en los campos
+                        $("#nombreProducto").val(productoData.nombre);
+                        // $("#categoriaa").val(productoData.nombre_categoria);
+                        // $("#subcategoriaa").val(productoData.nombre_subcategoria);
+                        $("#precio").val(productoData.precio);
+                        $("#cantidad").val(productoData.cantidad);
+                        $("#descripcion").val(productoData.descripcion);
+
+                        // Encuentra y selecciona la opción que tiene el texto de productoData.nombre_categoria
+                        $("#categoria option").each(function () {
+                            if (
+                                $(this).text() === productoData.nombre_categoria
+                            ) {
+                                $(this).prop("selected", true);
+                            }
+                        });
+
+                        $("#categoria").trigger("change");
+
+                        // Encuentra y selecciona la opción que tiene el texto de productoData.nombre_subcategoria
+                        $("#subcategoria option").each(function () {
+                            if (
+                                $(this).text() ===
+                                productoData.nombre_subcategoria
+                            ) {
+                                $(this).prop("selected", true);
+                            }
+                        });
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                $("#modalFormCreateProduct").modal("show");
+            },
+        });
+    });
+
     // funcion para filtrar categorias segun la categoria seleccionada con el evento change
     $("#modalFormCreateProduct #formProduct #categoria").on(
         "change",
@@ -186,90 +262,35 @@ $(document).ready(function () {
                         `;
                     });
                     // $("#subcategoria").html(template);
-                    $("#subcategoria").html(template); 
-                    console.log("Data enviada correctamente");
-                    console.log(response);
-                    return;
+                    $("#subcategoria").html(template);
+
+                    // Selecciona automáticamente la subcategoría
+                    // Añadir un pequeño retraso para asegurar que las opciones estén cargadas antes de seleccionar
+                    if (productoData) {
+                        setTimeout(function () {
+                            console.log(
+                                "Seleccionando subcategoría con ID:",
+                                productoData.id_sub_categoria
+                            ); // Verificación del valor
+                            $("#subcategoria").val(
+                                productoData.id_sub_categoria
+                            );
+                            console.log(
+                                "Subcategoría seleccionada:",
+                                $("#subcategoria").val()
+                            ); // Verificar si se aplica el valor
+                        }, 100); // 100 ms de espera, ajustable según la necesidad
+                    }
                 }
             );
         }
     );
 
-    
-    // funcion para recuperar la data y setearla en los formularios para actualizar un producto - ADMIN
-    $("#data-productos").on("click", ".botonActualizar", function()  {
-        
-        id_producto = $(this).data("id");
-
-        // actualizamos la data del modal
-        $("#titleModal").html("Actualizar Mesa");
-        $(".modal-header")
-            .removeClass("headerRegister")
-            .addClass("headerUpdate");
-        $("#btnText").text("Actualizar");
-        
-        // creamos nuestra petición ajax para traer la data y setearla en el modal
-        $.ajax({
-            url: baseUrl + "productos/consultarProducto",
-            type: "POST",
-            dataType: "json",
-            data: { id_producto: id_producto },
-            success: function (response) {
-                if (response.status) {
-                    // Verifica que response.data no sea undefined o null
-                    if (response.data) {
-                        // Asumiendo que necesitas el primer elemento del array data
-                        var productoData = response.data;
-                        console.log(productoData);
-                        // seteamos la data en los campos
-                        $("#nombreProducto").val(productoData.nombre);
-                        // $("#categoriaa").val(productoData.nombre_categoria);
-                        // $("#subcategoriaa").val(productoData.nombre_subcategoria);
-                        $("#precio").val(productoData.precio);
-                        $("#cantidad").val(productoData.cantidad);
-                        $("#descripcion").val(productoData.descripcion);
-
-
-                        // Encuentra y selecciona la opción que tiene el texto de productoData.nombre_categoria
-                        $("#categoria option").each(function() {
-                            if ($(this).text() === productoData.nombre_categoria) {
-                                $(this).prop("selected", true);
-                            }
-                        });
-
-                        // Encuentra y selecciona la opción que tiene el texto de productoData.nombre_subcategoria
-                        $("#subcategoria option").each(function() {
-                            if ($(this).text() === productoData.nombre_subcategoria) {
-                                $(this).prop("selected", true);
-                            }
-                        });
-                    } else {
-                        console.log("response.data está vacío o es undefined");
-                    }
-                } else {
-                    console.log("No se encontraron datos o hubo un error.");
-                }
-            },
-            error: function (xhr, status, error) {
-                console.error(
-                    "Error en la solicitud AJAX: " + status + " - " + error
-                );
-            },
-            complete: function () {
-                $("#modalFormCreateProduct").modal("show");
-            },
-        });
-    });
-
-
-    
-
-
     // funcion para eliminar un producto - ADMIN
     $("#data-productos").on("click", ".botonEliminar", function () {
         // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
         $(this).prop("disabled", true);
-        console.log('Its workin.........................');
+        console.log("Its workin.........................");
         // obtenemos el id del producto del boton
         id_producto = $(this).data("id");
         // creamos un formdata para agregar el id y evitar utilizar jsonStringfy

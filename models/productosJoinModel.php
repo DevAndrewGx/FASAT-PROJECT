@@ -23,7 +23,7 @@ class ProductosJoinModel extends Model implements JsonSerializable {
     public function consultar($idProducto) {
         try {
             // we have to use prepare because we're going to assing
-            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria, s.nombre_subcategoria, st.cantidad FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria INNER JOIN sub_categorias s ON p.id_subcategoria = s.id_sub_categoria INNER JOIN stock_inventario st ON p.id_stock = st.id_stock WHERE p.id_pinventario = :id');
+            $query = $this->prepare('SELECT p.nombre, p.precio, p.descripcion, c.nombre_categoria, s.nombre_subcategoria, s.id_sub_categoria, st.cantidad FROM productos_inventario p INNER JOIN categorias c ON p.id_categoria = c.id_categoria INNER JOIN sub_categorias s ON p.id_subcategoria = s.id_sub_categoria INNER JOIN stock_inventario st ON p.id_stock = st.id_stock WHERE p.id_pinventario = :id');
             $query->execute([
                 'id' => $idProducto
             ]);
@@ -34,6 +34,7 @@ class ProductosJoinModel extends Model implements JsonSerializable {
             $this->setNombre($producto['nombre']);
             $this->setPrecio($producto['precio']);
             $this->setNombreCategoria($producto['nombre_categoria']);
+            $this->setIdSubCategoria($producto['id_sub_categoria']);
             $this->setNombreSubcategoria($producto['nombre_subcategoria']);
 
             //retornamos this porque es el mismo objeto que ya contiene la informacion
@@ -48,6 +49,7 @@ class ProductosJoinModel extends Model implements JsonSerializable {
     {
         return [
             'id_pinventario' => $this->id_producto,
+            'id_sub_categoria' => $this->id_subcategoria,
             'nombre_producto' => $this->nombre,
             'foto' => $this->foto,
             'nombre_subcategoria'=>$this->nombre_subcategoria,
