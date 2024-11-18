@@ -178,35 +178,23 @@ $user = $this->d['user'];
 
         </main>
     </div>
+
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    <!-- DataTables Bootstrap 5 integration -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+
+    <!-- SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
 </body>
-<script src="../../js/main.js"></script>
 
-</html>
-
-<!-- Scripts de Bootstrap y DataTables -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-</body>
-
-<script src="../../js/main.js"></script>
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<!-- DataTable -->
-<script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<!-- JS BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<!-- SWEETALERT -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="<?php echo constant('URL'); ?>public/js/empleados.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-<script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
 </html>

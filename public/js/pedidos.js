@@ -100,12 +100,36 @@ $(document).ready(function() {
             }
         }
     );
+
+    $("#btnCrearPedido").on("click", function (e) {
+    
+        $.ajax({  
+            url: baseUrl + "pedidos/crearCodigoPedido", // Ruta para generar el código del pedido
+            method: "GET", // Usamos GET para solo obtener el código
+            success: function (response) {
+                let data = JSON.parse(response);
+                console.log(data.codigo);
+                if (data.codigo) {
+                    
+                    // Asignar el código generado en el modal
+                    $("#codigo-pedido").text(data.codigo); 
+                    $("#fecha-hora").text(data.fecha); 
+            
+                } else {
+                    alert("Error al generar el código del pedido.");
+                }
+            },
+            error: function () {
+                alert("Error al comunicarse con el servidor.");
+            },
+        });
+    });
     // funcion para filtrar los productos por las categorias
     $("#categoriaPedido").on("change", function(e) { 
         // almacenamos el valor del select cuando ejecute el evento en una variable
         const categoriaPedido = e.target.value;
         console.log(categoriaPedido);
-        
+    
         // creamos la peticion
         $.post(`${baseUrl}pedidos/getProductsByCategory`, {categoria: categoriaPedido}, function(response) { 
             // convertimos la data devuelta por el servidor en un JSON
@@ -124,10 +148,10 @@ $(document).ready(function() {
             }
 
             template += "<option value=''>Seleccione Producto</option>";
-            productos.data.forEach((subcategory) => {
+            productos.data.forEach((producto) => {
                 template += `
-                            <option value="${subcategory.nombre_producto}">${subcategory.nombre_producto}</option>
-                        `;
+                            <option value="${producto.nombre_producto}">${producto.nombre_producto} - $${producto.precio}</option>
+                `;
             });
             
             // actualizamos el contenido de #producto

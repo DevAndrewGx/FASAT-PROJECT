@@ -20,7 +20,6 @@ class ProductosModel extends Model implements JsonSerializable
 
 
     // creamos el constructor para inicializar los atributos
-
     public function __construct()
     {
 

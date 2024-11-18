@@ -122,7 +122,7 @@ $(document).ready(function () {
     /**Esta funcion nos permitira realizar la peticion 
     para traer las tablas por estado, y asi
     quemar o hacer scripting en el DOM para mostrar las mesas segun el estado**/
-    $("#openOrderForm").on("click", function (e) {
+    $("#btnCrearPedido").on("click", function (e) {
         // validamos si el modal esta abierto para asignar el estado
         if (!$("#abrirMesaModal").hasClass("show")) {
             estado = "DISPONIBLE";

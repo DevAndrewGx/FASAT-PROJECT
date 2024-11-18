@@ -63,7 +63,7 @@ $categorias = $this->d['categorias'];
                         </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="#" class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#generarPedidoModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                        <a href="#" class="btn btn-primary" id="btnCrearPedido" data-bs-toggle="modal" data-bs-target="#generarPedidoModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Crear Nuevo Pedido</a>
                     </div>
                 </div>
@@ -147,8 +147,7 @@ $categorias = $this->d['categorias'];
     </main>
     </div>
 
-    <!-- Modal para abrir una mesa -->
-    <div class="modal fade" id="abrirMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <!-- <div class="modal fade" id="abrirMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister">
@@ -157,16 +156,13 @@ $categorias = $this->d['categorias'];
                 </div>
                 <div class="modal-body">
                     <form id="abrirMesaForm">
-
-                        <!-- select oculto para actualizar la subcategoria con su respectiva categoria
-                              -->
                         <div class="mb-3" id="meseroAsociado">
                             <label for="mesero" class="form-label">Nombre mesero asociado</label>
                             <input type="text" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
                         </div>
                         <div class="mb-3" id="container-form">
                             <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
-                            <select name="numeroMesa" id="numeroMesa" class="form-control">
+                            <select name="numeroMesa" id="numeroMesaa" class="form-control">
                                 <option value="#" selected>Seleccione el numero de mesa</option>
                             </select>
                             <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
@@ -180,7 +176,7 @@ $categorias = $this->d['categorias'];
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- modal para generar un pedido -->
     <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -190,19 +186,15 @@ $categorias = $this->d['categorias'];
                     <h5 class="modal-title fw-bold" id="orderModalLabel">Nuevo Pedido</h5>
 
                     <div class="d-flex flex-column align-items-end px-4">
-                        <h4 class="fw-bold mb-0">ORD-001</h4>
-                        <p class="mb-0">17/11/2024 6:54:37 PM</p>
+                        <h4 class="fw-bold mb-0" id="codigo-pedido"></h4>
+                        <p class="fw-bold mb-0" id="fecha-hora">17/11/2024 6:54:37 PM</p>
                     </div>
 
                     <!-- Botón de cerrar en la esquina superior derecha -->
                     <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-
-
                 <!-- Encabezado de pedido y fecha -->
-
-
                 <div class="modal-body">
                     <form id="formPedido">
                         <div class="mb-3" id="container-form">
@@ -268,8 +260,7 @@ $categorias = $this->d['categorias'];
                                             <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
-
+                                    <button class="agregar-pedido btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
                                 </div>
                             </div>
 
@@ -288,13 +279,9 @@ $categorias = $this->d['categorias'];
                                 <label for="notasPedido" class="form-label">Notas Generales del Pedido</label>
                                 <textarea class="form-control" id="notasPedido" rows="3" placeholder="Notas adicionales sobre el pedido..."></textarea>
                             </div>
-
-
+                            <button type="submit" class="enviar-pedido btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Enviar Pedido</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" id="crearPedido">Confirmar</button>
                 </div>
             </div>
         </div>

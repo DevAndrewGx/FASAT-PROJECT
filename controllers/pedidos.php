@@ -20,7 +20,6 @@
         // function para realizar el filtro para consultar los productos asociados a una categoria
         function getProductsByCategory()
         {
-
             // Verificamos si existe el POST 'categoria'
             if ($this->existPOST('categoria')) {
                 error_log('categoria' . $this->getPost('categoria'));
@@ -37,10 +36,24 @@
                 echo json_encode(['error' => 'Categoría no proporcionada']);
             }
         }
-        // Esta funcion nos permtira crear los codigos de pedido para una mejor gestion
-        public function generateOrderCode()
-        {
-           
+
+        // funcion para la creación de codigos dinamicos para los pedidos
+        function crearCodigoPedido() {
+
+            //    validamos que sea metodo GET y crearCodigoPedido
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
+                //Llamamos al metodo data para crear la fecha en la que se va crear el pedido, ademas establecemos la zona horaria porque el servidor esta  configurado de otra forma, la cual no no muestra la hora que es.
+
+                date_default_timezone_set('Etc/GMT+5');
+                $fechaHora = date('d/m/Y h:i:s A'); 
+
+                // creamos un objeto de pedidos
+                $pedidoObj = new PedidosModel();
+                $codigo = $pedidoObj->generarCodigoPedido();
+                // devolvemos el codigo generado en formato JSON para utilizarlo y mostrarlo en el frontend
+                echo json_encode(['codigo' => $codigo, 'fecha'=>$fechaHora]);
+            }
         }
     }
 ?>
