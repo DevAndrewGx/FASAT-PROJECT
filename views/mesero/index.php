@@ -63,8 +63,8 @@ $categorias = $this->d['categorias'];
                         </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="#" class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#abrirMesaModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
-                            Crear Nueva Orden</a>
+                        <a href="#" class="btn btn-primary" id="openOrderForm" data-bs-toggle="modal" data-bs-target="#generarPedidoModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                            Crear Nuevo Pedido</a>
                     </div>
                 </div>
 
@@ -186,31 +186,110 @@ $categorias = $this->d['categorias'];
     <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header headerRegister">
-                    <h5 class="modal-title" id="orderModalLabel">Agregar productos - Mesa <span id="estado-mesa"></span></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header headerRegister d-flex justify-content-between align-items-center p-3">
+                    <h5 class="modal-title fw-bold" id="orderModalLabel">Nuevo Pedido</h5>
+
+                    <div class="d-flex flex-column align-items-end px-4">
+                        <h4 class="fw-bold mb-0">ORD-001</h4>
+                        <p class="mb-0">17/11/2024 6:54:37 PM</p>
+                    </div>
+
+                    <!-- Botón de cerrar en la esquina superior derecha -->
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
+
+
+                <!-- Encabezado de pedido y fecha -->
+
+
                 <div class="modal-body">
                     <form id="formPedido">
                         <div class="mb-3" id="container-form">
-                            <label for="categoriaPedido" class="form-label">Categoria producto</label>
-                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
-                                <option value="#">Selecciona una categoria</option>
-                                <?php
-                                foreach ($categorias as $cat) {
-                                ?>
-                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
-                                <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="mb-3" id="container-form">
-                            <label for="producto" class="form-label">Seleccione Producto</label>
-                            <select name="producto" id="producto" class="form-control">
-                                <option value="#" selected>Seleccione Producto</option>
-                            </select>
-                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
+                            <div class="row mb-3">
+                                <div class="form-group col-md-4">
+                                    <label for="numeroMesa" class="form-label">Numero de Mesa</label>
+                                    <select name="numeroMesa" id="numeroMesa" class="form-control">
+                                        <option value="#">Selecciona mesa</option>
+                                    </select>
+                                    <div id="nombresError" class="invalid-feedback" style="display:none;">Seleccione un numero de mesa valido.</div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="apellidos" class="form-label">Nombre Mesero</label>
+                                    <input type="text" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="numeroPersonas" class="form-label">Numero de personas</label>
+                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas">
+                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas valido válido.</div>
+                                </div>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="mb-3">Agregar Productos</h5>
+                                    <div class="row mb-2">
+                                        <div class="form-group col-md-6">
+                                            <label for="categoriaPedido" class="form-label">Categoria</label>
+                                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
+                                                <option value="#">Selecciona una categoria</option>
+                                                <?php
+                                                foreach ($categorias as $cat) {
+                                                ?>
+                                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="producto" class="form-label">Producto</label>
+                                            <select name="producto" id="producto" class="form-control">
+                                                <option value="#">Selecciona producto</option>
+                                                <?php
+                                                foreach ($categorias as $cat) {
+                                                ?>
+                                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="cantidadItems" class="form-label">Cantidad</label>
+                                            <input type="number" class="form-control" id="cantidadItems" name="cantidadItems">
+                                            <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número valido de items. </div>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="notasItems" class="form-label">Notas Producto</label>
+                                            <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
+
+                                </div>
+                            </div>
+
+                            <!-- Los productos del pedido que se van agregar dinamicamente -->
+                            <div class="conatiner-productos">
+                                <h6 class="fw-bold">Productos del Pedido</h6>
+                                <hr class="my-4">
+                            </div>
+
+                            <!-- Total y notas generales del pedido -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="fw-bold">Total:</h5>
+                                <h5 class="text-end fw-bold">$0.00</h5>
+                            </div>
+                            <div class="form-group">
+                                <label for="notasPedido" class="form-label">Notas Generales del Pedido</label>
+                                <textarea class="form-control" id="notasPedido" rows="3" placeholder="Notas adicionales sobre el pedido..."></textarea>
+                            </div>
+
+
                         </div>
                     </form>
                 </div>
