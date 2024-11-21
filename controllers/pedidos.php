@@ -47,10 +47,23 @@
             $pedidoObj->setPersonas($this->getPost($pedido["numeroPersonas"]));
             $pedidoObj->setNotasPedido($this->getPost($pedido["notasPedido"]));
             $pedidoObj->setTotal($this->getPost($pedido["total"]));
+
+
+            // ejecutamos la consulta y guardamos el id del pedido insertado en una variable 
+            if($idPedido = $pedido->crearPedido()) {
+                // despues de realizar la validación ejecutamos un for para recorrer los productos del pedido y insertarlos en la bd
+                foreach($pedido['productos'] as $producto) { 
+                    $this->guardarProductoPedido($idPedido, $producto['idProducto'], $producto['cantidad'], $producto['precio'], $producto['notas']);
+                }
+            }
             
         }
 
         // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
+
+        function guardarProductoPedido($pedidoId, $productoId, $cantidad, $precio, $notas) { 
+            return true;
+        }
         
 
         // function para realizar el filtro para consultar los productos asociados a una categoria

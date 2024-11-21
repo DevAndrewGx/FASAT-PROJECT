@@ -41,8 +41,11 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             
             // utilizamos try catch para evaluar la consulta ya que vamos a interactuar con la bd
             try {
+
+                // en este caso como necesitamos la conexión, la crearemos manual
+                $conn = $this->db->connect();
                 // creamos la query para insertar la data en pedidos
-                $query = $this->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha)");
+                $query = $conn->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha)");
                 
 
                 // asignamos los datos a los placeholders y la ejecutamos
@@ -57,8 +60,12 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                    ":fecha" => $this->fecha_hora
                 ]);
 
+                // obtenemos el id del pedido que se inserto en pedidos para insertarlo en pedidosProductos
+                $lastInsertId = $conn->lastInsertId();
+                $this->setIdPedido($lastInsertId);
+
                 // retornamos true ya que la consulta se ejecuto correctamente
-                return true;
+                return $this->id_pedido;
             }catch(PDOException $e) {
                 error_log('PredidosModel::crear->PDOException' . $e);
                 // salimos de la funcion
