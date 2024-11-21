@@ -104,6 +104,7 @@ class UsersModel extends Model implements IModel
                 $item->setCorreo($row['correo']);
                 $item->setPassword($row['password'], false);
 
+
                 // Ya que asignamos todo lo necesario, lo vamos agregar a items para que al final tenga de elementos de tipo userModel
                 array_push($items, $item);
             }

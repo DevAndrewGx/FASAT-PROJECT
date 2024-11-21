@@ -260,20 +260,24 @@ $categorias = $this->d['categorias'];
                                             <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
                                         </div>
                                     </div>
-                                    <button class="agregar-pedido btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
+                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
                                 </div>
                             </div>
 
                             <!-- Los productos del pedido que se van agregar dinamicamente -->
                             <div class="conatiner-productos">
                                 <h6 class="fw-bold">Productos del Pedido</h6>
+                                <!-- contenedor para mostrar los elementos dinamicamente  -->
+                                <div id="listaProductos">
+
+                                </div>
                                 <hr class="my-4">
                             </div>
 
                             <!-- Total y notas generales del pedido -->
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h5 class="fw-bold">Total:</h5>
-                                <h5 class="text-end fw-bold">$0.00</h5>
+                                <h5 id="totalPedido" class="text-end fw-bold">$0.00</h5>
                             </div>
                             <div class="form-group">
                                 <label for="notasPedido" class="form-label">Notas Generales del Pedido</label>

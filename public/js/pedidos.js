@@ -2,6 +2,9 @@
 $(document).ready(function() {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     let globalIdMesa;
+    // creamos un arreglo para guardar la data de los items del pedido
+    let productos = [];
+    let total = null;
 
     // Creamos datatable y la inicializamos
     let dataTableMesasPedidos = $("#data-mesas-pedidos").DataTable({
@@ -150,9 +153,12 @@ $(document).ready(function() {
             template += "<option value=''>Seleccione Producto</option>";
             productos.data.forEach((producto) => {
                 template += `
-                            <option value="${producto.nombre_producto}">${producto.nombre_producto} - $${producto.precio}</option>
-                `;
+                <option value="${producto.id_producto}" data-precio="${producto.precio}">
+                    ${producto.nombre_producto} - $${producto.precio}
+                </option>
+            `;
             });
+
             
             // actualizamos el contenido de #producto
             $("#producto").html(template);
@@ -213,4 +219,64 @@ $(document).ready(function() {
             },
         });
     }
+
+    // funcion para agregar los items y mostrarlos en el fronted
+    $("#agregar-pedido-btn").on("click", function (e) {
+        
+        // cancelamos el evento por default ya que lo estamos enviando desde un formulario
+        e.preventDefault();
+        // guardamos la data que viene de los input
+        console.log("working.....");
+        const productoNombre = $("#producto option:selected").text();
+        const cantidad = parseInt($("#cantidadItems").val()) || 1;
+        const notas = $("#notasItems").val() || "Sin notas";
+        const precio = parseFloat(
+            $("#producto option:selected").attr("data-precio")
+        );
+
+        // validamos la data
+        // if (!productoId || productoId === "#" || cantidad <= 0) {
+        //     alert(
+        //         "Selecciona un producto válido y asegúrate de que la cantidad sea mayor a 0."
+        //     );
+        //     return;
+        // }
+
+        const subtotal = (precio * cantidad).toFixed(2);
+        total += parseFloat(subtotal);
+
+        productos.push({
+            nombre: productoNombre,
+            cantidad: cantidad,
+            precio: precio,
+            notas: notas,
+            subtotal: subtotal,
+        });
+
+        // Agregar producto al listado de items
+        $("#listaProductos").append(`
+            <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
+                <div class="px-2">
+                    <strong>${productoNombre}</strong><br>
+                    <span>Cantidad: ${cantidad} x $${precio.toFixed(
+            2
+        )} = $${subtotal}</span><br>
+                    <span>Notas: ${notas}</span>
+                </div>
+                <button class="btn btn-danger eliminar-producto">Eliminar</button>
+            </div>
+        `);
+
+
+        console.log("HOLII");
+        // Actualizar total
+        $("#totalPedido").text(`$${total.toFixed(2)}`);
+
+        // Limpiar campos
+        $("#producto").val("#");
+        $("#categoriaPedido").val("#");
+        $("#cantidadItems").val("");
+        $("#notasItems").val("");
+    });
+
 });
