@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 // Todos los modelos heredan de la clase model y implementar la interfaz IModel la cual nos permitira hacer el crud.
 class ProductosModel extends Model implements JsonSerializable

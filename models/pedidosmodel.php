@@ -9,8 +9,13 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         private $id_pedido; 
         private $id_mesa;
         private $id_mesero;
-        private $total;
         private $codigo_pedido;
+        private $estado;
+        private $personas;
+        private $notas_pedido;
+        private $total;
+        private $fecha_hora;
+      
 
         // creamos el constructor para inicializar los atributos
         public function __construct()
@@ -22,15 +27,38 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             $this->id_pedido = 0;
             $this->id_mesa = 0;
             $this->id_mesero = 0;
-            $this->total = 0;
             $this->codigo_pedido = 0;
+            $this->estado = 0;
+            $this->personas = 0;
+            $this->notas_pedido;
+            $this->total = 0;
+            $this->fecha_hora = "";
+            
         }
 
         // esta funcion nos permitira crear un nuevo pedido
         public function crear() { 
             
+            // utilizamos try catch para evaluar la consulta ya que vamos a interactuar con la bd
             try {
+                // creamos la query para insertar la data en pedidos
+                $query = $this->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha)");
                 
+
+                // asignamos los datos a los placeholders y la ejecutamos
+                $query->execute([
+                   ":id_mesero"=>$this->id_mesero, 
+                   ":id_mesa"=>$this->id_mesa, 
+                   ":codigo"=> $this->codigo_pedido, 
+                   ":estado"=> $this->estado, 
+                   ":total" => $this->total, 
+                   ":personas" => $this->personas, 
+                   ":notas" => $this->notas_pedido, 
+                   ":fecha" => $this->fecha_hora
+                ]);
+
+                // retornamos true ya que la consulta se ejecuto correctamente
+                return true;
             }catch(PDOException $e) {
                 error_log('PredidosModel::crear->PDOException' . $e);
                 // salimos de la funcion
@@ -69,6 +97,30 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                 return false;
             }
         }
+
+
+
+        // Getters y setters
+        public function getIdPedido() { return $this->id_pedido;}
+        public function getIdMesa() { return $this->id_mesa;}
+        public function getIdMesero() { return $this->id_mesero;}
+        public function getCodigoPedido() { return $this->codigo_pedido;}
+        public function getEstadoPedido() { return $this->estado;}
+        public function getPersonas() { return $this->personas;}
+        public function getTotal() { return $this->total;}
+        public function getNotasPedido() { return $this->notas_pedido;}
+        public function getFechaHora() { return $this->fecha_hora;}
+
+
+        public function setIdPedido($idPedido) {  $this->id_pedido = $idPedido;}
+        public function setIdMesa($idMesa) {  $this->id_mesa = $idMesa;}
+        public function setIdMesero($idMesero) {  $this->id_mesero = $idMesero;}
+        public function setCodigoPedido($codigoPedido) {  $this->codigo_pedido = $codigoPedido;}
+        public function setEstadoPedido($estadoPedido) {  $this->estado = $estadoPedido;}
+        public function setPersonas($personas) {  $this->personas = $personas;}
+        public function setTotal($total) {  $this->total = $total;}
+        public function setNotasPedido($notasPedido) { return $this->notas_pedido = $notasPedido;}
+        public function setFechaHora($fechaHora) {  $this->fecha_hora = $fechaHora;}
 
         
     }

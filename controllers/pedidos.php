@@ -14,8 +14,44 @@
 
         // creamos la funcion para crear un nuevo pedido
         function crearPedido() {
+            // decodificamos la data que viene del formulario para manipularla en el contralador
+            $pedido = json_decode($_POST['pedido'], true);
+            // validamos que la data que venga del formulario exista
 
+            error_log('Pedidos::crearPedido -> Funcion para crear nuevos pedidos');
+
+            if (!$this->existPOST([$pedido['codigo'], $pedido['fechaHora'], $pedido['numeroMesa'], $pedido["idMesero"], $pedido['numeroPersonas'], $pedido['notasPedido'], $pedido['total']])) {
+                error_log('Pedidos::crearPedido -> Hay algun error en los parametros enviados en el formulario');
+
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => "Los datos que vienen del formulario estan vacios"]);
+                return;
+            }
+
+            if ($this->user == NULL) {
+                error_log('Pedidos::crearPedio -> El usuario de la sesion esta vacio');
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                return;
+            }
+
+            // si no entra a niguna validacion, significa que la data y el usuario estan correctos
+            error_log('Pedidos::CrearPedido -> Es posible crear un nuevo pedido');
+
+            $pedidoObj = new PedidosModel();
+
+
+            $pedidoObj->setCodigoPedido($this->getPost($pedido["codigo"]));
+            $pedidoObj->setIdMesa($this->getPost($pedido["numeroMesa"]));
+            $pedidoObj->setIdMesero($this->getPost($pedido["idMesero"]));
+            $pedidoObj->setPersonas($this->getPost($pedido["numeroPersonas"]));
+            $pedidoObj->setNotasPedido($this->getPost($pedido["notasPedido"]));
+            $pedidoObj->setTotal($this->getPost($pedido["total"]));
+            
         }
+
+        // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
+        
 
         // function para realizar el filtro para consultar los productos asociados a una categoria
         function getProductsByCategory()
@@ -34,6 +70,7 @@
             } else {
                 // Devolvemos una respuesta en caso de que no exista 'categoria' en el POST
                 echo json_encode(['error' => 'Categoría no proporcionada']);
+                return;
             }
         }
 

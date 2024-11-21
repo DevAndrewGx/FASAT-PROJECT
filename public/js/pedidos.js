@@ -326,6 +326,7 @@ $(document).ready(function() {
         const codigoPedido = $("#codigo-pedido").text();
         const fechaHora = $("#fecha-hora").text();
         const numeroMesa = $("#numeroMesa").val();
+        const idMesero = $("#idMesero").data("id");
         const numeroPersonas = $("#numeroPersonas").val();
         const notasPedido = $("#notasPedido").val();
         const total = parseFloat($("#totalPedido").text().replace("$", ""));
@@ -336,6 +337,7 @@ $(document).ready(function() {
             codigoPedido: codigoPedido,
             fechaHora: fechaHora, 
             numeroMesa: numeroMesa,
+            idMesero: idMesero,
             numeroPersonas: numeroPersonas, 
             notasPedido: notasPedido, 
             total: total, 
@@ -353,7 +355,7 @@ $(document).ready(function() {
 
         // Creamos una petición para procesarla y enviarla al servidor
         $.ajax({
-            url: baseUrl+'ruta/al/backend.php', 
+            url: baseUrl+'pedidos/crearPedido', 
             method: 'POST',
             data: { pedido: pedidoCompleto },
             success: function (response) {
