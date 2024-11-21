@@ -187,7 +187,7 @@ $categorias = $this->d['categorias'];
 
                     <div class="d-flex flex-column align-items-end px-4">
                         <h4 class="fw-bold mb-0" id="codigo-pedido"></h4>
-                        <p class="fw-bold mb-0" id="fecha-hora">17/11/2024 6:54:37 PM</p>
+                        <p class="fw-bold mb-0" id="fecha-hora"></p>
                     </div>
 
                     <!-- Botón de cerrar en la esquina superior derecha -->
@@ -283,7 +283,7 @@ $categorias = $this->d['categorias'];
                                 <label for="notasPedido" class="form-label">Notas Generales del Pedido</label>
                                 <textarea class="form-control" id="notasPedido" rows="3" placeholder="Notas adicionales sobre el pedido..."></textarea>
                             </div>
-                            <button type="submit" class="enviar-pedido btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Enviar Pedido</button>
+                            <button type="submit" id="enviar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Enviar Pedido</button>
                         </div>
                     </form>
                 </div>

@@ -315,4 +315,55 @@ $(document).ready(function() {
         productoElemento.remove();
         
     });
+
+
+    // Creamos la funcion para enviar el pedido con los datos completos
+    $("#enviar-pedido-btn").on('click', function(e) {
+        // quitamos el efecto por default
+        e.preventDefault();
+        console.log('its working bitch');
+        // Obtener los datos generales del pedido
+        const codigoPedido = $("#codigo-pedido").text();
+        const fechaHora = $("#fecha-hora").text();
+        const numeroMesa = $("#numeroMesa").val();
+        const numeroPersonas = $("#numeroPersonas").val();
+        const notasPedido = $("#notasPedido").val();
+        const total = parseFloat($("#totalPedido").text().replace("$", ""));
+
+
+        // creamos un JSON con toda la data del pedido
+        const pedidoCompleto = { 
+            codigoPedido: codigoPedido,
+            fechaHora: fechaHora, 
+            numeroMesa: numeroMesa,
+            numeroPersonas: numeroPersonas, 
+            notasPedido: notasPedido, 
+            total: total, 
+            pedidoProductos: pedidoProductos
+        }
+
+        console.log(pedidoCompleto);
+
+        // validamos la data antes de ser enviada
+        // Validar antes de enviar
+        if (!pedidoCompleto.numeroMesa || !pedidoCompleto.numeroPersonas || pedidoCompleto.pedidoProductos.length === 0) {
+            alert('Por favor completa todos los campos y agrega al menos un producto.');
+            return;
+        }
+
+        // Creamos una petición para procesarla y enviarla al servidor
+        $.ajax({
+            url: baseUrl+'ruta/al/backend.php', 
+            method: 'POST',
+            data: { pedido: pedidoCompleto },
+            success: function (response) {
+                alert('Pedido guardado con éxito');
+                console.log(response);
+            },
+            error: function () {
+                alert('Error al guardar el pedido. Inténtalo nuevamente.');
+            }
+        });
+    });
+    
 });
