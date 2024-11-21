@@ -284,7 +284,8 @@ $(document).ready(function () {
                     console.log(editar);
 
                     // Selecciona automáticamente la subcategoría
-                    // Añadir un pequeño retraso para asegurar que las opciones estén cargadas antes de seleccionar
+                    // Añadir un pequeño retraso para asegurar que las opciones estén cargadas antes de seleccionar\
+                    // añadimos otra valiidación para que solo funcione cuando este en modo editar. 
                     if (productoData && editar) {
                         setTimeout(function () {
                             console.log(

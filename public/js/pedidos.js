@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
     const baseUrl = $('meta[name="base-url"]').attr("content");
-    let globalIdMesa;
     // creamos un arreglo para guardar la data de los items del pedido
-    let productos = [];
+    let pedidoProductos = [];
+    // creamos la variable total para guardar el total
     let total = null;
 
     // Creamos datatable y la inicializamos
@@ -105,19 +105,16 @@ $(document).ready(function() {
     );
 
     $("#btnCrearPedido").on("click", function (e) {
-    
-        $.ajax({  
+        $.ajax({
             url: baseUrl + "pedidos/crearCodigoPedido", // Ruta para generar el código del pedido
             method: "GET", // Usamos GET para solo obtener el código
             success: function (response) {
                 let data = JSON.parse(response);
                 console.log(data.codigo);
                 if (data.codigo) {
-                    
                     // Asignar el código generado en el modal
-                    $("#codigo-pedido").text(data.codigo); 
-                    $("#fecha-hora").text(data.fecha); 
-            
+                    $("#codigo-pedido").text(data.codigo);
+                    $("#fecha-hora").text(data.fecha);
                 } else {
                     alert("Error al generar el código del pedido.");
                 }
@@ -127,44 +124,46 @@ $(document).ready(function() {
             },
         });
     });
-    // funcion para filtrar los productos por las categorias
-    $("#categoriaPedido").on("change", function(e) { 
+    // funcion para filtrar los pedidoProductos por las categorias
+    $("#categoriaPedido").on("change", function (e) {
         // almacenamos el valor del select cuando ejecute el evento en una variable
         const categoriaPedido = e.target.value;
         console.log(categoriaPedido);
-    
-        // creamos la peticion
-        $.post(`${baseUrl}pedidos/getProductsByCategory`, {categoria: categoriaPedido}, function(response) { 
-            // convertimos la data devuelta por el servidor en un JSON
-            let productos = JSON.parse(response);
 
-            // creamos un template para concatenar y iterar sobre los valores
-            let template = "";
-            
-            // validamos primero si el arreglo tiene data 
-            if (productos.data.length === 0) { 
-                template += `
+        // creamos la peticion
+        $.post(
+            `${baseUrl}pedidos/getProductsByCategory`,
+            { categoria: categoriaPedido },
+            function (response) {
+                // convertimos la data devuelta por el servidor en un JSON
+                let pedidoProductos = JSON.parse(response);
+
+                // creamos un template para concatenar y iterar sobre los valores
+                let template = "";
+
+                // validamos primero si el arreglo tiene data
+                if (pedidoProductos.data.length === 0) {
+                    template += `
                         <option value="">No existen categorías asociadas</option>
                     `;
-                $("#producto").html(template);
-                return;
-            }
+                    $("#producto").html(template);
+                    return;
+                }
 
-            template += "<option value=''>Seleccione Producto</option>";
-            productos.data.forEach((producto) => {
-                template += `
-                <option value="${producto.id_producto}" data-precio="${producto.precio}">
+                template += "<option value=''>Seleccione Producto</option>";
+                pedidoProductos.data.forEach((producto) => {
+                    template += `
+                <option value="${producto.id_pinventario}" data-precio="${producto.precio}">
                     ${producto.nombre_producto} - $${producto.precio}
                 </option>
             `;
-            });
+                });
 
-            
-            // actualizamos el contenido de #producto
-            $("#producto").html(template);
-        });
+                // actualizamos el contenido de #producto
+                $("#producto").html(template);
+            }
+        );
     });
-
 
     // Función para abrir el modal y cargar los datos de la mesa
     function abrirModalMesa(id_mesa) {
@@ -222,11 +221,12 @@ $(document).ready(function() {
 
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
-        
         // cancelamos el evento por default ya que lo estamos enviando desde un formulario
         e.preventDefault();
         // guardamos la data que viene de los input
         console.log("working.....");
+        const idProducto = $("#producto option:selected").val();
+        console.log(idProducto);
         const productoNombre = $("#producto option:selected").text();
         const cantidad = parseInt($("#cantidadItems").val()) || 1;
         const notas = $("#notasItems").val() || "Sin notas";
@@ -234,18 +234,21 @@ $(document).ready(function() {
             $("#producto option:selected").attr("data-precio")
         );
 
+        //validamos que la categoria aya sido seleccionada
+
         // validamos la data
-        // if (!productoId || productoId === "#" || cantidad <= 0) {
-        //     alert(
-        //         "Selecciona un producto válido y asegúrate de que la cantidad sea mayor a 0."
-        //     );
-        //     return;
-        // }
+        if (productoNombre === " " || cantidad <= 0) {
+            alert(
+                "Selecciona un producto válido y asegúrate de que la cantidad sea mayor a 0."
+            );
+            return;
+        }
 
         const subtotal = (precio * cantidad).toFixed(2);
         total += parseFloat(subtotal);
 
-        productos.push({
+        pedidoProductos.push({
+            idProducto: parseInt(idProducto),
             nombre: productoNombre,
             cantidad: cantidad,
             precio: precio,
@@ -253,30 +256,63 @@ $(document).ready(function() {
             subtotal: subtotal,
         });
 
+        console.log(pedidoProductos);
+
         // Agregar producto al listado de items
         $("#listaProductos").append(`
-            <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
+            <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-id="${idProducto}" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
                 <div class="px-2">
                     <strong>${productoNombre}</strong><br>
-                    <span>Cantidad: ${cantidad} x $${precio.toFixed(
-            2
-        )} = $${subtotal}</span><br>
+                    <span>Cantidad: ${cantidad} x $${precio.toFixed(2)} = $${subtotal}</span><br>
                     <span>Notas: ${notas}</span>
                 </div>
-                <button class="btn btn-danger eliminar-producto">Eliminar</button>
+                <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
             </div>
         `);
 
 
-        console.log("HOLII");
-        // Actualizar total
+        // Actualizamos el total de pedido
         $("#totalPedido").text(`$${total.toFixed(2)}`);
 
-        // Limpiar campos
+        // Limpiamos los campos
         $("#producto").val("#");
         $("#categoriaPedido").val("#");
         $("#cantidadItems").val("");
         $("#notasItems").val("");
     });
 
+    // Creamos un evento para eliminar un producto del pedido
+    $(document).on("click", "#eliminar-producto", function (e) {
+        e.preventDefault();
+
+        // Obtener el contenedor del producto
+        const productoElemento = $(this).closest(".item-pedido");
+
+        // Obtener el ID único del producto desde un atributo data
+        const productoID = parseInt(productoElemento.data("id")); 
+        console.log(productoID);
+        // Eliminamos el elemento del array con filter, si el id del elemento de array es diferente del 
+        pedidoProductos = pedidoProductos.filter(
+            (producto) => producto.idProducto !== productoID
+        );
+
+        // Obtener el subtotal del producto eliminado
+        const subtotalEliminado =
+            parseFloat(productoElemento.data("subtotal")) || 0;
+
+        // Restar el subtotal del producto eliminado del total general
+        let totalActual =
+            parseFloat($("#totalPedido").text().replace("$", "")) || 0;
+        totalActual -= subtotalEliminado;
+
+        // Actualizar el total en la interfaz
+        if (totalActual < 0 || $(".item-pedido").length === 1) {
+            totalActual = 0; // Si no quedan pedidoProductos, dejar el total en $0.00
+        }
+        $("#totalPedido").text(`$${totalActual.toFixed(2)}`);
+        console.log(pedidoProductos);
+        // Eliminar el producto de la lista
+        productoElemento.remove();
+        
+    });
 });
