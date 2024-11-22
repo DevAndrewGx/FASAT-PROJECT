@@ -28,7 +28,7 @@ class Productos extends SessionController
     // creamos la funcion que nos permitira crear nuevos productos
     function crearProducto()
     {
-        // primero validamos si la data viene correctamente desde el formulario
+    // primero validamos si la data viene correctamente desde el formulario
         error_log('Productos::createProduct -> Funcion para crear nuevos productos');
 
         if (!$this->existPOST(['nombreProducto', 'categoria', 'subcategoria', 'precio', 'descripcion'])) {

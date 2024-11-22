@@ -19,12 +19,31 @@
             // validamos que la data que venga del formulario exista
 
             error_log('Pedidos::crearPedido -> Funcion para crear nuevos pedidos');
+            error_log("DATOS PEDIDO: ".$pedido['codigoPedido']);
+            error_log("DATOS PEDIDO: " . $pedido['fechaHora']);
+            error_log("DATOS PEDIDO: " . $pedido['numeroMesa']);
+            error_log("DATOS PEDIDO: " . $pedido['idMesero']);
+            error_log("DATOS PEDIDO: " . $pedido['numeroPersonas']);
+            error_log("DATOS PEDIDO: " . $pedido['notasPedido']);
+            error_log("DATOS PEDIDO: " . $pedido['total']);
 
-            if (!$this->existPOST([$pedido['codigo'], $pedido['fechaHora'], $pedido['numeroMesa'], $pedido["idMesero"], $pedido['numeroPersonas'], $pedido['notasPedido'], $pedido['total']])) {
-                error_log('Pedidos::crearPedido -> Hay algun error en los parametros enviados en el formulario');
+            // if (!isset($data['pedido'])) {
+            //     echo json_encode(['status' => false, 'message' => "No se recibieron los datos del pedido."]);
+            //     return;
+            // }
 
-                // enviamos la respuesta al front para que muestre una alerta con el mensaje
-                echo json_encode(['status' => false, 'message' => "Los datos que vienen del formulario estan vacios"]);
+            // $pedido = $data['pedido'];
+
+            // Verifica que los campos clave existan en el array $pedido
+            if (!$this->existKeys($pedido, ['codigoPedido',
+                'fechaHora',
+                'numeroMesa',
+                'idMesero',
+                'numeroPersonas',
+                'notasPedido',
+                'total'
+            ])) {
+                echo json_encode(['status' => false, 'message' => "Faltan datos obligatorios en el pedido."]);
                 return;
             }
 
@@ -41,28 +60,64 @@
             $pedidoObj = new PedidosModel();
 
 
-            $pedidoObj->setCodigoPedido($this->getPost($pedido["codigo"]));
-            $pedidoObj->setIdMesa($this->getPost($pedido["numeroMesa"]));
-            $pedidoObj->setIdMesero($this->getPost($pedido["idMesero"]));
-            $pedidoObj->setPersonas($this->getPost($pedido["numeroPersonas"]));
-            $pedidoObj->setNotasPedido($this->getPost($pedido["notasPedido"]));
-            $pedidoObj->setTotal($this->getPost($pedido["total"]));
+            $pedidoObj->setCodigoPedido($pedido["codigoPedido"]);
+            $pedidoObj->setIdMesa($pedido["numeroMesa"]);
+            $pedidoObj->setIdMesero($pedido["idMesero"]);
+            $pedidoObj->setPersonas($pedido["numeroPersonas"]);
+            $pedidoObj->setNotasPedido($pedido["notasPedido"]);
+            $pedidoObj->setFechaHora($pedido["fechaHora"]);
+            $pedidoObj->setTotal($pedido["total"]);
 
 
             // ejecutamos la consulta y guardamos el id del pedido insertado en una variable 
-            if($idPedido = $pedido->crearPedido()) {
+            if($idPedido = $pedidoObj->crear()) {
+                error_log('Pedidos::crearPedido -> Se creo el pedido correctamente');
                 // despues de realizar la validación ejecutamos un for para recorrer los productos del pedido y insertarlos en la bd
-                foreach($pedido['productos'] as $producto) { 
+                // creamos un array para guardar los productos del pedido
+                $productos = $pedido['pedidoProductos'];
+                foreach($productos as $producto) { 
                     $this->guardarProductoPedido($idPedido, $producto['idProducto'], $producto['cantidad'], $producto['precio'], $producto['notas']);
                 }
+                error_log('Pedidos::crearPedido -> Se guardo el producto correctamente en la bd');
+                echo json_encode(['status' => true, 'message' => "Pedido creado Exitosamente!"]);
+                return;
+            }else {
+                error_log('Pedidos::crearPedido -> No se guardo el pedido, hay algo raro en la consulta bro');
+                echo json_encode(['status' => false, 'message' => "Intentelo nuevamente, error 500!"]);
+                return;
             }
             
         }
 
         // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
 
-        function guardarProductoPedido($pedidoId, $productoId, $cantidad, $precio, $notas) { 
-            return true;
+        function guardarProductoPedido($pedidoId, $productoId, $cantidad, $precio, $notas) {
+            // validamos que la data que venga del formulario exista
+            error_log('Pedidos::crearPedido -> Funcion para crear nuevos pedidos');
+
+            if (!isset($pedidoId) || !isset($productoId) || !isset($cantidad) || !isset($precio) || !isset($notas)) {
+                error_log('Pedidos::crearPedido -> Hay algun error en los parametros recibiidos');
+
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => "Los datos que vienen del formulario estan vacios"]);
+            return;
+            }
+
+            // creamos un nuevo objeto de pedidosProductos
+            $productosPedidoObj = new PedidosProductosModel();
+
+            // asignamos los datos al objeto
+            $productosPedidoObj->setIdPedido($pedidoId);
+            $productosPedidoObj->setIdProducto($productoId);
+            $productosPedidoObj->setCantidad($cantidad);
+            $productosPedidoObj->setPrecio($precio);
+            $productosPedidoObj->setNotasProducto($notas);
+
+            if($productosPedidoObj->crear()) {
+                error_log('Pedidos::crearPedido -> se guardo el producto en la tabla pedidosProductos OMGG!!!!!!');
+            }else {
+                error_log('Pedidos::crearPedido -> No se guardo el producto en la tabla pedidosProductos OMGG!!!!!!');
+            }
         }
         
 

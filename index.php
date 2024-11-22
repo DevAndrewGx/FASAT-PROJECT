@@ -39,6 +39,7 @@
     include_once 'models/productosmodel.php';
     include_once 'models/categoriasmodel.php';
     include_once 'models/productosJoinModel.php';
+    include_once 'models/pedidosProductosModel.php';
     include_once 'models/stockmodel.php';
     include_once 'models/mesasmodel.php';
     

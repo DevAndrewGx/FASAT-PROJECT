@@ -208,7 +208,7 @@ $categorias = $this->d['categorias'];
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="apellidos" class="form-label">Nombre Mesero</label>
-                                    <input type="text" name="idMesero" data-id="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                                    <input type="text" id="idMesero" name="idMesero" data-id="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
                                 </div>
 
                                 <div class="form-group col-md-4">

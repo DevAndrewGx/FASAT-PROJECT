@@ -33,7 +33,6 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             $this->notas_pedido;
             $this->total = 0;
             $this->fecha_hora = "";
-            
         }
 
         // esta funcion nos permitira crear un nuevo pedido
@@ -106,7 +105,6 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         }
 
 
-
         // Getters y setters
         public function getIdPedido() { return $this->id_pedido;}
         public function getIdMesa() { return $this->id_mesa;}
@@ -118,7 +116,6 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function getNotasPedido() { return $this->notas_pedido;}
         public function getFechaHora() { return $this->fecha_hora;}
 
-
         public function setIdPedido($idPedido) {  $this->id_pedido = $idPedido;}
         public function setIdMesa($idMesa) {  $this->id_mesa = $idMesa;}
         public function setIdMesero($idMesero) {  $this->id_mesero = $idMesero;}
@@ -128,7 +125,6 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function setTotal($total) {  $this->total = $total;}
         public function setNotasPedido($notasPedido) { return $this->notas_pedido = $notasPedido;}
         public function setFechaHora($fechaHora) {  $this->fecha_hora = $fechaHora;}
-
-        
+    
     }
 ?>

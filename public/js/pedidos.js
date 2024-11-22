@@ -331,7 +331,7 @@ $(document).ready(function() {
         const notasPedido = $("#notasPedido").val();
         const total = parseFloat($("#totalPedido").text().replace("$", ""));
 
-
+        console.log(total);
         // creamos un JSON con toda la data del pedido
         const pedidoCompleto = { 
             codigoPedido: codigoPedido,
@@ -344,7 +344,7 @@ $(document).ready(function() {
             pedidoProductos: pedidoProductos
         }
 
-        console.log(pedidoCompleto);
+        console.log(pedidoCompleto.idMesero);
 
         // validamos la data antes de ser enviada
         // Validar antes de enviar
@@ -357,7 +357,7 @@ $(document).ready(function() {
         $.ajax({
             url: baseUrl+'pedidos/crearPedido', 
             method: 'POST',
-            data: { pedido: pedidoCompleto },
+            data: { pedido: JSON.stringify(pedidoCompleto) },
             success: function (response) {
                 alert('Pedido guardado con éxito');
                 console.log(response);

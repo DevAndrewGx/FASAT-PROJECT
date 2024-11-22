@@ -54,6 +54,20 @@ class Controller
         return true;
     }
 
+
+    // creamos la funcion existKeys para validar las claves de un array para poder validarlo en los contraladores
+    function existKeys($data, $keys)
+    {
+        foreach ($keys as $key) {
+            if (!isset($data[$key])) {
+                error_log('Controller::existKeys -> No existe el parámetro ' . $key);
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     // creamos una funcion para verificar si exiten parametros que sean de tipo FILE
     function existFILES($params)
     {
