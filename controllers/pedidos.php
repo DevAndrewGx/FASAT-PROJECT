@@ -48,6 +48,7 @@
             $pedidoObj->setIdMesero($pedido["idMesero"]);
             $pedidoObj->setPersonas($pedido["numeroPersonas"]);
             $pedidoObj->setNotasPedido($pedido["notasPedido"]);
+            $pedidoObj->setEstadoPedido("PENDIENTE");
             $pedidoObj->setFechaHora($pedido["fechaHora"]);
             $pedidoObj->setTotal($pedido["total"]);
 

@@ -355,16 +355,59 @@ $(document).ready(function() {
 
         // Creamos una petición para procesarla y enviarla al servidor
         $.ajax({
-            url: baseUrl+'pedidos/crearPedido', 
-            method: 'POST',
+            url: baseUrl + "pedidos/crearPedido",
+            method: "POST",
             data: { pedido: JSON.stringify(pedidoCompleto) },
             success: function (response) {
-                alert('Pedido guardado con éxito');
-                console.log(response);
+                // mostramos la alerta cuando la respuesta del servidor se devuelve correctamente
+                let data = JSON.parse(response);
+                if (data.status) {
+                    Swal.fire({
+                        title: "Éxito",
+                        text: data.message,
+                        icon: "success",
+                        allowOutsideClick: false,
+                        confirmButtonText: "Ok",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            $("#generarPedidoModal")
+                                .closest(".modal")
+                                .modal("hide");
+                            $("#generarPedidoModal")[0].reset();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        title: "Error",
+                        text: data.message,
+                        icon: "error",
+                        allowOutsideClick: false,
+                        confirmButtonText: "Ok",
+                    }).then((result) => {
+                        // No cerrar el modal en caso de error
+                        if (result.isConfirmed) {
+                            $("#generarPedidoModal")
+                                .closest(".modal")
+                                .modal("hide");
+                            $("#generarPedidoModal")[0].reset();
+                        }
+                    });
+                }
             },
             error: function () {
-                alert('Error al guardar el pedido. Inténtalo nuevamente.');
-            }
+                Swal.fire({
+                    title: "Error",
+                    text: "Hubo un problema con la solicitud.",
+                    icon: "error",
+                    allowOutsideClick: false,
+                    confirmButtonText: "Ok",
+                }).then((result) => {
+                    // No cerramos el modal en caso de un error
+                    if (result.isConfirmed) {
+                        // mantener el modal abierto para que el usuario intente de nuevo
+                    }
+                });
+            },
         });
     });
     
