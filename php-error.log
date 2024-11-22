@@ -934,3 +934,192 @@
 [22-Nov-2024 05:04:00 Europe/Berlin] PedidosProductos::crear -> Crear un producto desde PedidosProductos
 [22-Nov-2024 05:04:00 Europe/Berlin] Pedidos::crearPedido -> se guardo el producto en la tabla pedidosProductos OMGG!!!!!!
 [22-Nov-2024 05:04:00 Europe/Berlin] Pedidos::crearPedido -> Se guardo el producto correctamente en la bd
+[22-Nov-2024 05:09:34 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:34 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[22-Nov-2024 05:09:34 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248574620, url => mesas
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248574620, url => mesas
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:09:34 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:34 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:09:48 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesasMesero
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesasMesero
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:49 Europe/Berlin] MesasMesero::construct -> controlador mesasMesero
+[22-Nov-2024 05:09:49 Europe/Berlin] MesasMesero::render -> carga la pagina principal de las mesaa para el mesero
+[22-Nov-2024 05:09:49 Europe/Berlin] PHP Warning:  Undefined array key "mesa" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 3
+[22-Nov-2024 05:09:49 Europe/Berlin] PHP Warning:  Undefined array key "categorias" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 4
+[22-Nov-2024 05:09:49 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248589290, url => mesas
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248589290, url => mesas
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:09:49 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:49 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:49 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:09:50 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:50 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[22-Nov-2024 05:09:50 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248590421, url => mesas
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248590421, url => mesas
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:09:50 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:09:50 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:09:50 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:11:21 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:11:21 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[22-Nov-2024 05:11:21 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248681732, url => mesas
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732248681732, url => mesas
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:11:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:11:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:11:21 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:30 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:30 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:30 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:30 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:30 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:30 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:30 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:31 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:31 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\mesas.php on line 156
+[22-Nov-2024 05:19:31 Europe/Berlin] Mesa::consultarMesa -> La mesa se obtuvo correctamente-> Array
+[22-Nov-2024 05:19:35 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:35 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:36 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:36 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:36 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\mesas.php on line 156
+[22-Nov-2024 05:19:36 Europe/Berlin] Mesa::consultarMesa -> La mesa se obtuvo correctamente-> Array
+[22-Nov-2024 05:19:38 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:38 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:38 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:38 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:38 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:38 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:38 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\mesas.php on line 156
+[22-Nov-2024 05:19:38 Europe/Berlin] Mesa::consultarMesa -> La mesa se obtuvo correctamente-> Array
+[22-Nov-2024 05:19:41 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:41 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:41 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:41 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:41 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:41 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:41 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\mesas.php on line 156
+[22-Nov-2024 05:19:41 Europe/Berlin] Mesa::consultarMesa -> La mesa se obtuvo correctamente-> Array
+[22-Nov-2024 05:19:43 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:43 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/consultarMesa, url => mesas
+[22-Nov-2024 05:19:43 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:43 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:43 Europe/Berlin] Mesas::construct -> controlador usuarios
+[22-Nov-2024 05:19:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\mesas.php on line 156
+[22-Nov-2024 05:19:43 Europe/Berlin] Mesa::consultarMesa -> La mesa se obtuvo correctamente-> Array
+[22-Nov-2024 05:19:56 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:56 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[22-Nov-2024 05:19:56 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[22-Nov-2024 05:19:56 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:56 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:56 Europe/Berlin] PHP Warning:  Undefined array key "nombre_subcategoria" in C:\xampp\htdocs\FAST-PROJECT\models\categoriasmodel.php on line 102
+[22-Nov-2024 05:19:57 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/consultarPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigoPedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732249197122, url => pedidos
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/consultarPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigoPedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732249197122, url => pedidos
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:57 Europe/Berlin] Inicializando la aplicacion...
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:57 Europe/Berlin] Errores::construct -> inicio de errores
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::validarSession()
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732249197123, url => mesas
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=codigoPedido&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=estado&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1732249197123, url => mesas
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[22-Nov-2024 05:19:57 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[22-Nov-2024 05:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[22-Nov-2024 05:19:57 Europe/Berlin] Mesas::construct -> controlador usuarios

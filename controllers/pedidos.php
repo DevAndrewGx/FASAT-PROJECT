@@ -103,6 +103,27 @@
                 error_log('Pedidos::crearPedido -> No se guardo el producto en la tabla pedidosProductos OMGG!!!!!!');
             }
         }
+
+        // creamos esta funcion para consultar todos los productos
+        function consultarPedidos() { 
+            
+            // utilizamos para capturar cualquier exepcion y no parar la ejecución del codigo
+
+            try {
+                // Obtener los parámetros enviados por DataTables
+                $draw = intval($_GET['draw']);
+                $start = intval($_GET['start']);
+                $length = intval($_GET['length']);
+                $search = $_GET['search']['value'];
+                $orderColumnIndex = intval($_GET['order'][0]['column']);
+                $orderDir = $_GET['order'][0]['dir'];
+                $columns = $_GET['columns'];
+                $orderColumnName = $columns[$orderColumnIndex]['data'];
+
+            }catch(Exception $e) { 
+                error_log("Pedidos::consultarPedidos -> Error en trear los datos - consultarPedidos ".$e->getMessage());
+            }
+        }
         
 
         // function para realizar el filtro para consultar los productos asociados a una categoria

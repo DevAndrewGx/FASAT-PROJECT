@@ -83,36 +83,13 @@ $categorias = $this->d['categorias'];
 
                                     <th class="sorting">Mesa</th>
                                     <th class="sorting">Mesero</th>
-                                    <th class="sorting">Codigo Pedido</th>
-                                    <th class="sorting">Cantidad</th>
+                                    <th class="sorting">Pedido</th>
+                                    <th class="sorting">Total</th>
 
                                     <th class="sorting">Estado</th>
                                     <th class="sorting">Accion</th>
-                                    <th class="sorting">Fecha</th>
-
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Juan Pérez</td>
-                                        <td>Pizza Margarita</td>
-                                        <td>2</td>
-                                        <td>19 Nov 2022</td>
-                                        <td><span class="badges bg-lightgreen">Entregada</span></td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Acción
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">Detalles del Pedido</a></li>
-                                                    <li><a class="dropdown-item" href="#">Editar Pedido</a></li>
-                                                    <li><a class="dropdown-item" href="#">Descargar PDF</a></li>
-                                                    <li><a class="dropdown-item" href="#">Eliminar Pedido</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
