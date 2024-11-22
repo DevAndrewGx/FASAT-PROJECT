@@ -86,7 +86,7 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                 // Si existe un último pedido, extraer el número secuencial
                 if ($ultimoPedido) {
                     // Extraer el número secuencial del último código (suponiendo formato "ORD-001")
-                    $ultimoCodigo = $ultimoPedido['codigo'];
+                    $ultimoCodigo = $ultimoPedido['codigo_pedido'];
                     $numeroSecuencial = intval(substr($ultimoCodigo, 4)) + 1; // Incrementar el número
                 } else {
                     // Si no hay pedidos previos, comenzar desde 1

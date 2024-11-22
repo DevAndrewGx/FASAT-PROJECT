@@ -16,23 +16,6 @@
         function crearPedido() {
             // decodificamos la data que viene del formulario para manipularla en el contralador
             $pedido = json_decode($_POST['pedido'], true);
-            // validamos que la data que venga del formulario exista
-
-            error_log('Pedidos::crearPedido -> Funcion para crear nuevos pedidos');
-            error_log("DATOS PEDIDO: ".$pedido['codigoPedido']);
-            error_log("DATOS PEDIDO: " . $pedido['fechaHora']);
-            error_log("DATOS PEDIDO: " . $pedido['numeroMesa']);
-            error_log("DATOS PEDIDO: " . $pedido['idMesero']);
-            error_log("DATOS PEDIDO: " . $pedido['numeroPersonas']);
-            error_log("DATOS PEDIDO: " . $pedido['notasPedido']);
-            error_log("DATOS PEDIDO: " . $pedido['total']);
-
-            // if (!isset($data['pedido'])) {
-            //     echo json_encode(['status' => false, 'message' => "No se recibieron los datos del pedido."]);
-            //     return;
-            // }
-
-            // $pedido = $data['pedido'];
 
             // Verifica que los campos clave existan en el array $pedido
             if (!$this->existKeys($pedido, ['codigoPedido',
