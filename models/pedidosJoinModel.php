@@ -18,6 +18,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     private $notas_producto;
     private $cantidad;
     private $precio;
+    private $estado_producto;
     private $productos_detallados;
     private $fecha_hora;
 
@@ -41,6 +42,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         $this->notas_producto = "";
         $this->cantidad = 0;
         $this->precio = 0;
+        $this->estado_producto = "";
         $this->fecha_hora = "";
        
     }
@@ -66,7 +68,8 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 GROUP_CONCAT(pp.id_producto) AS productos,
                 GROUP_CONCAT(pr.nombre) AS nombres_productos, 
                 GROUP_CONCAT(pp.cantidad) AS cantidades,
-                GROUP_CONCAT(pp.precio) AS precios
+                GROUP_CONCAT(pp.precio) AS precios,
+                GROUP_CONCAT(pp.estado_producto) AS estados_productos
             FROM pedidos p 
             INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
             INNER JOIN usuarios u ON p.id_mesero = u.documento 
@@ -76,7 +79,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
             GROUP BY m.id_mesa, p.id_pedido;
             ");
 
-
             $query->execute(["codigo" => $codigo]);
             $datos = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -85,6 +87,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 $productos = explode(',', $datos['productos']);
                 $cantidades = explode(',', $datos['cantidades']);
                 $nombres = explode(',', $datos['nombres_productos']);
+                $estados_productos = explode(',', $datos['estados_productos']);
                 $precios = explode(',', $datos['precios']);
 
 
@@ -95,6 +98,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                         'id_producto' => $productos[$i],
                         'nombre_producto' => $nombres[$i],
                         'cantidad' => $cantidades[$i],
+                        'estados_productos' => $estados_productos[$i],
                         'precio' => $precios[$i]
                     ];
                 }

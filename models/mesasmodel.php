@@ -45,7 +45,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
         // usamos try catch ya que vamos a interactuar con la bd
         try { 
             // creamos la query para consultar la data
-            $query = $this->prepare('SELECT me.*, pe.codigo_pedido FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa WHERE me.id_mesa = :id');
+            $query = $this->prepare('SELECT me.*, pe.codigo_pedido, pe.personas FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa WHERE me.id_mesa = :id');
             // ejecutamos query 
             $query->execute([
                 'id'=>$id
@@ -58,7 +58,9 @@ class MesasModel extends Model implements IModel, JsonSerializable
             $this->setNumeroMesa($mesa['numero_mesa']);
             $this->setEstado($mesa['estado']);
             $this->setCapacidad($mesa['capacidad']);
+            $this->setComensales($mesa['personas']);
 
+            
             // retornamos el objeto mesa 
             return $mesa;   
         }catch(PDOException $e) {

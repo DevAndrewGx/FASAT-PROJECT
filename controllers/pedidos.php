@@ -104,6 +104,7 @@
             $productosPedidoObj->setCantidad($cantidad);
             $productosPedidoObj->setPrecio($precio);
             $productosPedidoObj->setNotasProducto($notas);
+            $productosPedidoObj->setEstadoProducto("PENDIENTE");
 
             if($productosPedidoObj->crear()) {
                 error_log('Pedidos::crearPedido -> se guardo el producto en la tabla pedidosProductos OMGG!!!!!!');
@@ -147,7 +148,7 @@
                 for ($i = 0; $i < count($arrayDataPedidos); $i++) {
                     $arrayDataPedidos[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                     $arrayDataPedidos[$i]['options'] = '
-                    <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '"  >
+                    <a class="me-3 visualizar-pedido-eye" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '" data-codigo="'. $arrayDataPedidos[$i]['codigoPedido'].'" >
                         <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                     </a>
                     <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '"">

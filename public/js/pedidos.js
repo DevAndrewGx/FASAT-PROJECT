@@ -318,6 +318,8 @@ $(document).ready(function() {
                     `);
                     }
                     $("#estado").html(mesa.estado);
+                    $("#capacidad").html(mesa.capacidad);
+                    $("#comensales").html(mesa.personas);
 
                     // Mostramos el modal
                     $("#detallesPedidoMesaModal").modal("show");
@@ -341,9 +343,10 @@ $(document).ready(function() {
     }
 
     // Luego, fuera de la configuración del DataTable, usa delegación de eventos
-    $(document).on("click", ".visualizar-pedido-btn", function (e) {
+     $(document).on("click", ".visualizar-pedido-btn, .visualizar-pedido-eye", function (e) {
         e.preventDefault();
         const codigoPedido = $(this).data("pedido");
+        let totalPedido = 0;
 
         $.ajax({
             url: baseUrl + "pedidos/consultarPedido",
@@ -352,9 +355,8 @@ $(document).ready(function() {
             data: { codigoPedido: codigoPedido },
             success: function (response) {
                 if (response.status) {
-                    // Verifica que response.data no sea undefined o null
+                
                     if (response.data) {
-                        // Asumiendo que necesitas el primer elemento del array data
                         pedidosData = response.data;
 
                         // seteamos la data en los campos
@@ -369,31 +371,42 @@ $(document).ready(function() {
                             `${pedidosData.personas} Comensales`
                         );
 
-                        // validamos el tipo de estado para asignar un color de badget
-                        if (pedidosData.estado === "PENDIENTE") {
-                            $("#estado-pedido-detalle").addClass(
-                                "badges bg-lightred"
-                            );
+                        // validamos el estado del pedido para ponerlo en el estado
+                        if(pedidosData.estado === 'PENDIENTE') { 
+                            $("#estado-pedido-detalle").text(pedidosData.estado);
+                            $("#estado-pedido-detalle").addClass("badges bg-lightred");
+                        }else if(pedidosData.estado === 'EN PREPARACION'){ 
                             $("#estado-pedido-detalle").text(
                                 pedidosData.estado
                             );
-                        } else {
-                            $("#estado-pedido-detalle").addClass(
-                                "badges bg-lightgreen"
-                            );
-                            $("#estado-pedido-detalle").text(
-                                pedidosData.estado
-                            );
+                            $("#estado-pedido-detalle").addClass("badges bg-lightyellow");
+                        }else { 
+                            $("#estado-pedido-detalle").text(pedidosData.estado);
+                            $("#estado-pedido-detalle").addClass("badges bg-lightgreen");
                         }
 
                         // Generar filas de productos usando productos_detallados
                         let tableHTML;
+                        // Variable para almacenar la clase según el estado del producto
+                        let estadoClass = "";
                         console.log(pedidosData.productos_detallados);
+                        // iteramos la data para mostrar los datos de los productos en la tabla
                         pedidosData.productos_detallados.forEach((producto) => {
                             const cantidad = parseFloat(producto.cantidad);
                             const precio = parseFloat(producto.precio);
                             const subtotal = cantidad * precio;
-                            total += subtotal;
+                            totalPedido += subtotal;
+
+                            // Comprobación del estado del producto y asignación de la clase correspondiente
+                            if (producto.estados_productos === "PENDIENTE") {
+                                estadoClass = "badges bg-lightred"; // Clase para 'PENDIENTE'
+                            } else if (
+                                producto.estados_productos === "EN PREPARACION"
+                            ) {
+                                estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
+                            } else {
+                                estadoClass = "badges bg-lightgreen"; // Clase para otros estados
+                            }
 
                             tableHTML += `
                             <tr>
@@ -401,11 +414,16 @@ $(document).ready(function() {
                                 <td>${cantidad}</td>
                                 <td>$${precio.toFixed(2)}</td>
                                 <td>$${subtotal.toFixed(2)}</td>
+                               <td><span class="${estadoClass}">${producto.estados_productos}</span>
+                                
+                            </td>
                             </tr>
                         `;
                         });
-                        $("#notas-pedido-detalle").text(pedidosData.notas_general_pedido);
-                        $("#total-pedido-detalle").text(`$${total}`);
+                        $("#notas-pedido-detalle").text(
+                            pedidosData.notas_general_pedido
+                        );
+                        $("#total-pedido-detalle").text(`$${totalPedido}`);
 
                         // Insertar la tabla en el DOM
                         $("#detalles-pedidos-table tbody").html(tableHTML);
@@ -585,6 +603,7 @@ $(document).ready(function() {
                         confirmButtonText: "Ok",
                     }).then((result) => {
                         if (result.isConfirmed) {
+                            dataTablePedidos.ajax.reload(null, false);
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
@@ -601,7 +620,7 @@ $(document).ready(function() {
                     }).then((result) => {
                         // No cerrar el modal en caso de error
                         if (result.isConfirmed) {
-                            dataTablePedidos.ajax.reload(null, false);
+                           
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");

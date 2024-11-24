@@ -276,7 +276,7 @@ $categorias = $this->d['categorias'];
                                     <div>
                                         <small class="text-muted">Estado</small>
                                         <div>
-                                            <span id="estado-pedido-detalle">EN PREPARACIÓN</span>
+                                            <span id="estado-pedido-detalle"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -295,10 +295,11 @@ $categorias = $this->d['categorias'];
                                             <th>Cant.</th>
                                             <th>Precio</th>
                                             <th>Subtotal</th>
+                                            <th>Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       
+
                                     </tbody>
                                 </table>
                             </div>
@@ -354,6 +355,14 @@ $categorias = $this->d['categorias'];
                             <tr>
                                 <td>Pedido Asociado:</td>
                                 <td id="codigoPedido"></td>
+                            </tr>
+                            <tr>
+                                <td>Capacidad:</td>
+                                <td id="capacidad"></td>
+                            </tr>
+                            <tr>
+                                <td>Comensales:</td>
+                                <td id="comensales"></td>
                             </tr>
                             <tr>
                                 <td>Estado:</td>

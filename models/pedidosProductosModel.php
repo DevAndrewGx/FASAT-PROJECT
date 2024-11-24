@@ -8,6 +8,7 @@
         private $cantidad;
         private $precio;
         private $notas_producto;
+        private $estado_producto;
 
 
         // creamos el constructor para inicializar los atributos
@@ -22,6 +23,7 @@
             $this->cantidad = 0;
             $this->precio = 0;
             $this->notas_producto = 0;
+            $this->estado_producto = "";
             
         }
 
@@ -30,7 +32,7 @@
             error_log("PedidosProductos::crear -> Crear un producto desde PedidosProductos");
             // utilizamos try catch para evalucar la consulta ya que vamos a interactuar con la bd
             try {
-                $query = $this->prepare("INSERT INTO pedido_producto(id_pedido, id_producto, cantidad, precio, notas_producto) VALUES (:id_pedido, :id_producto, :cantidad, :precio, :notas_producto)");
+                $query = $this->prepare("INSERT INTO pedido_producto(id_pedido, id_producto, cantidad, precio, notas_producto, estado_producto) VALUES (:id_pedido, :id_producto, :cantidad, :precio, :notas_producto, :estado_producto)");
 
                 // asignamos la data a los placeholder y ejecutamos la query
                 $query->execute([
@@ -38,7 +40,8 @@
                     ":id_producto" => $this->id_producto, 
                     ":cantidad" => $this->cantidad, 
                     ":precio" => $this->precio, 
-                    ":notas_producto" => $this->notas_producto
+                    ":notas_producto" => $this->notas_producto,
+                    ":estado_producto" => $this->estado_producto
                 ]);
 
                 // retornamos true para salirnos de la funcion
@@ -58,11 +61,13 @@
         public function getCantidad() { return $this->cantidad;}
         public function getPrecio() { return $this->precio;}
         public function getNotasProducto() { return $this->notas_producto;}
+        public function getEstadoProducto() { return $this->estado_producto;}
 
         public function setIdPedido($idPedido) { $this->id_pedido = $idPedido;}
         public function setIdProducto($idProducto) { return $this->id_producto = $idProducto;}
         public function setCantidad($cantidad) { return $this->cantidad = $cantidad;}
         public function setPrecio($precio) { return $this->precio = $precio;}
         public function setNotasProducto($notas) { return $this->notas_producto = $notas;}
+        public function setEstadoProducto($estado_producto) { return $this->estado_producto = $estado_producto;}
     }
 ?>
