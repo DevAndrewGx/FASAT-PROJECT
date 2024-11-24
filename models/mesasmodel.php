@@ -6,6 +6,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
     private $codigoPedido;
     private $estado;
     private $capacidad;
+    private $personas;
 
 
     // inicializamos los atributos de la clas con el contstructor y llamamos el contructor padre
@@ -16,6 +17,8 @@ class MesasModel extends Model implements IModel, JsonSerializable
         $this->numeroMesa = 0;
         $this->codigoPedido = "";
         $this->estado = "";
+        $this->capacidad = "";
+        $this->personas = 0;
 
     }
     public function crear()
@@ -104,12 +107,14 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
         try {
             // creamos un JOIN para obtener el codigo del pedido y la data de las mesas
-            $sql = "SELECT me.*, pe.codigo_pedido FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa";
+            $sql = "SELECT me.*, pe.codigo_pedido, pe.personas FROM mesas me LEFT JOIN pedidos pe ON me.id_mesa = pe.id_mesa";
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
                 $sql .= " WHERE 
                     numero_mesa LIKE '%$searchValue%' OR 
+                    capacidad LIKE '%$searchValue%' OR 
+                    personas LIKE '%$searchValue%' OR 
                     estado LIKE '%$searchValue%'";
             }
             if ($columna != null && $orden != null) {
@@ -132,6 +137,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
                 $item->setEstado($p['estado']);
                 $item->setCodigo($p["codigo_pedido"]);
                 $item->setCapacidad($p['capacidad']);
+                $item->setComensales($p['personas']) ?? 0;
 
                 array_push($items, $item);
             }
@@ -180,7 +186,8 @@ class MesasModel extends Model implements IModel, JsonSerializable
             'numeroMesa' => $this->numeroMesa,
             'codigoPedido' => $this->codigoPedido,
             'estado' => $this->estado,
-            'capacidad' => $this->capacidad
+            'capacidad' => $this->capacidad,
+            'personas' => $this->personas
         ];
     }
 
@@ -282,6 +289,10 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function getCapacidad() { 
         return $this->capacidad;
     }
+    public function getComensales()
+    {
+        return $this->personas;
+    }
     public function getIdMesa()
     {
         return $this->idMesa;
@@ -305,6 +316,10 @@ class MesasModel extends Model implements IModel, JsonSerializable
     public function setCapacidad($capacidad)
     {
         return $this->capacidad = $capacidad;
+    }
+    public function setComensales($personas)
+    {
+        return $this->personas = $personas;
     }
 
     public function setIdMesa($mesa)

@@ -109,6 +109,8 @@ $categorias = $this->d['categorias'];
                                     </th>
 
                                     <th class="sorting">Numero mesa</th>
+                                    <th class="sorting">Capacidad</th>
+                                    <th class="sorting">Comensales</th>
                                     <th class="sorting">Pedido Asociado</th>
                                     <th class="sorting">Estado</th>
                                     <th class="sorting">Accion</th>

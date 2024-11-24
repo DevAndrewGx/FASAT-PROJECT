@@ -95,6 +95,32 @@ $(document).ready(function() {
                 },
             },
             {
+                data: "capacidad",
+                render: function (data) {
+                    return `${data} personas`;
+                },
+            },
+            {
+                
+                data: "personas",
+                // renderizamos una funcion que nos permita mostrar los comensale que hay en la mesa y ademas que valide si hay comensales
+                // le agregamos un svg de un usuario para mejor estetica
+                render: function (data) {
+                    const personas = parseInt(data) || 0;
+                    return `
+                        <div class="flex items-center gap-2">
+                            <span class="text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </span>
+                            <span class="font-medium">${personas}</span>
+                        </div>
+                    `;
+                },
+            },
+            {
                 data: "codigoPedido", // Cambia 'pedidoAsociado' por 'codigo_pedido'
                 render: function (data) {
                     return data ? data : "<strong>SIN PEDIDO ASOCIADO</strong>";
@@ -449,6 +475,7 @@ $(document).ready(function() {
                     }).then((result) => {
                         // No cerrar el modal en caso de error
                         if (result.isConfirmed) {
+                            dataTablePedidos.ajax.reload(null, false);
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
