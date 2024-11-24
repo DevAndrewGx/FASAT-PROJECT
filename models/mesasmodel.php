@@ -130,6 +130,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
                 $item->setIdMesa($p['id_mesa']);
                 $item->setNumeroMesa($p['numero_mesa']);
                 $item->setEstado($p['estado']);
+                $item->setCodigo($p["codigo_pedido"]);
                 $item->setCapacidad($p['capacidad']);
 
                 array_push($items, $item);
@@ -193,12 +194,14 @@ class MesasModel extends Model implements IModel, JsonSerializable
             // creamos la query para actualizar
             $query = $this->prepare('UPDATE mesas SET numero_mesa = :numero_mesa, estado = :estado, capacidad = :capacidad WHERE id_mesa = :id');
             // ejecutamos la query para actualizar
+
             $query->execute([
                 'id' => $id,
                 'estado' => $this->estado,
                 'numero_mesa' => $this->numeroMesa,
                 'capacidad' => $this->capacidad
             ]);
+            
 
             // validamos que la query se ejecuta correctamente y afecta una columna
             if ($query->rowCount() > 0) {
@@ -219,6 +222,10 @@ class MesasModel extends Model implements IModel, JsonSerializable
             // creamos la query para actualizar
             $query = $this->prepare('UPDATE mesas SET estado = :estado WHERE id_mesa = :id');
             // ejecutamos la query para actualizar
+
+
+            error_log("Estadooo " . $this->estado);
+            error_log("Mesa " . $this->numeroMesa);
             $query->execute([
                 'id'=>$id,
                 'estado'=>$this->estado
@@ -266,6 +273,12 @@ class MesasModel extends Model implements IModel, JsonSerializable
     {
         return $this->estado;
     }
+
+    public function getCodigo()
+    {
+        return $this->codigoPedido;
+    }
+
     public function getCapacidad() { 
         return $this->capacidad;
     }
@@ -282,6 +295,12 @@ class MesasModel extends Model implements IModel, JsonSerializable
     {
         $this->estado = $estado;
     }
+
+    public function setCodigo($codigo)
+    {
+        $this->codigoPedido = $codigo;
+    }
+
 
     public function setCapacidad($capacidad)
     {

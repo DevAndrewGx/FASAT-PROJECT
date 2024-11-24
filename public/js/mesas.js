@@ -8,6 +8,7 @@ $(document).ready(function () {
         responsive: true,
         processing: true,
         serverSide: true,
+        pagingType: "full_numbers", // Paginado con flechas y números
         pageLength: 10,
         language: {
             lengthMenu: "Mostrar _MENU_ registros",
@@ -23,6 +24,23 @@ $(document).ready(function () {
             url: baseUrl + "mesas/getMesas",
             type: "GET",
             dataType: "json",
+            dataSrc: function (json) {
+                // Crear un nuevo array para almacenar mesas únicas
+                let mesasUnicas = [];
+                // Usar un objeto temporal para verificar duplicados
+                let temp = {};
+
+                json.data.forEach(function (item) {
+                    // Usar el nombre de la categoría como clave para verificar duplicados
+                    if (!temp[item.numeroMesa]) {
+                        temp[item.numeroMesa] = true;
+                        mesasUnicas.push(item);
+                    }
+                });
+
+                // Devolver las categorías únicas
+                return mesasUnicas;
+            },
         },
         columns: [
             { data: "checkmarks" },
@@ -46,11 +64,8 @@ $(document).ready(function () {
                         case "DISPONIBLE":
                             badgeClass = "bg-lightgreen";
                             break;
-                        case "EN SERVICIO":
-                            badgeClass = "bg-lightred";
-                            break;
                         case "EN VENTA":
-                            badgeClass = "bg-lightyellow";
+                            badgeClass = "bg-lightred";
                             break;
                         default:
                             badgeClass = "bg-lightgray";
@@ -60,14 +75,15 @@ $(document).ready(function () {
             },
             { data: "options" },
         ],
-        order: [[2, "asc"]],
+
         columnDefs: [
             {
-                targets: [0, 3],
-                orderable: false,
+                targets: [0, 4],
+                orderable: false, 
             },
         ],
     });
+
 
 
     // validación del formulario de mesas para agrear una mesa con AJAX
@@ -144,7 +160,7 @@ $(document).ready(function () {
 
                 mesas.data.forEach((mesa) => {
                     template += `
-                <option value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
+                <option data-estado="${mesa.estado}" value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
                 `;
                 });
                 $("#numeroMesa").html(template);
@@ -180,8 +196,6 @@ $(document).ready(function () {
                 let data = JSON.parse(response);
 
                 $("#estado-mesa").text(data.dataMesa.numero_mesa);
-                // actualizamos la datatable
-                // dataTableMesas.ajax.reload(null, false);
             },
         });
     });

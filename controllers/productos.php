@@ -28,7 +28,7 @@ class Productos extends SessionController
     // creamos la funcion que nos permitira crear nuevos productos
     function crearProducto()
     {
-    // primero validamos si la data viene correctamente desde el formulario
+        // primero validamos si la data viene correctamente desde el formulario
         error_log('Productos::createProduct -> Funcion para crear nuevos productos');
 
         if (!$this->existPOST(['nombreProducto', 'categoria', 'subcategoria', 'precio', 'descripcion'])) {
@@ -127,9 +127,7 @@ class Productos extends SessionController
             $totalRecords = $productosObj->totalRegistros();
 
             $arrayDataProducts = json_decode(json_encode($productsData, JSON_UNESCAPED_UNICODE), true);
-            // print_r($arrayDataCategories);
-            // error_log("Array: ".print_r($categoriasData));
-
+    
             // Iterar sobre el arreglo y agregar 'options' a cada usuario
             for ($i = 0; $i < count($arrayDataProducts); $i++) {
                 $arrayDataProducts[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';

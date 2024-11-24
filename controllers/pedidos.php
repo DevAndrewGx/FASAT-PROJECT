@@ -52,27 +52,35 @@
             $pedidoObj->setFechaHora($pedido["fechaHora"]);
             $pedidoObj->setTotal($pedido["total"]);
 
-
-            // ejecutamos la consulta y guardamos el id del pedido insertado en una variable 
-            if($idPedido = $pedidoObj->crear()) {
-                error_log('Pedidos::crearPedido -> Se creo el pedido correctamente');
-                // despues de realizar la validación ejecutamos un for para recorrer los productos del pedido y insertarlos en la bd
-                // creamos un array para guardar los productos del pedido
-                $productos = $pedido['pedidoProductos'];
-                foreach($productos as $producto) { 
-                    $this->guardarProductoPedido($idPedido, $producto['idProducto'], $producto['cantidad'], $producto['precio'], $producto['notas']);
+            // creamos un objeto de mesas ya que necesitamos cambiar el estado de la mesa cuando se ocupa
+            $mesaObj = new MesasModel();
+            // guardamos el objeto que retorna al momento de la consulta para devolverlo a la vista.
+            $mesaObj->consultar($pedido['numeroMesa']);
+            $mesaObj->setEstado("EN VENTA");
+            error_log("Pedidos::CrearPedido -> numero mesa -> ".$pedido['numeroMesa']);
+            // actualizamos el estado de la mesa cuando se crea un pedido para no mostrarla en la vista del mesero
+            if($mesaObj->actualizarEstado($pedido["numeroMesa"])) {
+                error_log("Pedidos::crearPedio -> Se actualizo el estado de la mesa correctamente");
+                // ejecutamos la consulta y guardamos el id del pedido insertado en una variable 
+                if ($idPedido = $pedidoObj->crear()) {
+                    error_log('Pedidos::crearPedido -> Se creo el pedido correctamente');
+                    // despues de realizar la validación ejecutamos un for para recorrer los productos del pedido y insertarlos en la bd
+                    // creamos un array para guardar los productos del pedido
+                    $productos = $pedido['pedidoProductos'];
+                    foreach ($productos as $producto) {
+                        $this->guardarProductoPedido($idPedido, $producto['idProducto'], $producto['cantidad'], $producto['precio'], $producto['notas']);
+                    }
+                    error_log('Pedidos::crearPedido -> Se guardo el producto correctamente en la bd');
+                    echo json_encode(['status' => true, 'message' => "Pedido creado Exitosamente!"]);
+                    return;
+                } else {
+                    error_log('Pedidos::crearPedido -> No se guardo el pedido, hay algo raro en la consulta bro');
+                    echo json_encode(['status' => false, 'message' => "Intentelo nuevamente, error 500!"]);
+                    return;
                 }
-                error_log('Pedidos::crearPedido -> Se guardo el producto correctamente en la bd');
-                echo json_encode(['status' => true, 'message' => "Pedido creado Exitosamente!"]);
-                return;
-            }else {
-                error_log('Pedidos::crearPedido -> No se guardo el pedido, hay algo raro en la consulta bro');
-                echo json_encode(['status' => false, 'message' => "Intentelo nuevamente, error 500!"]);
-                return;
             }
             
         }
-
         // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
 
         function guardarProductoPedido($pedidoId, $productoId, $cantidad, $precio, $notas) {
@@ -120,6 +128,48 @@
                 $columns = $_GET['columns'];
                 $orderColumnName = $columns[$orderColumnIndex]['data'];
 
+                // creamos un objeto del model pedidosJoinModel ya que necesitamos traer la data de ahi porque nos permitir hacer un JOIN con las 
+                // tablas principales que conforman a pedidos
+
+                $pedidoObj = new PedidosJoinModel();
+
+                // $obtenemos los datos del modelo para mosrtarlos en el datatable
+                $pedidosData = $pedidoObj->cargarDatosPedidos($length, $start, $orderColumnIndex, $orderDir, $search, $orderColumnName);
+                // obtenemos el total de los producto filtrados para devolverselo al datatable para mostrarlo
+                $totalRegistroFiltrados = $pedidoObj->totalRegistrosFiltrados($search);
+                
+                $totalRegistros = $pedidoObj->totalRegistros();
+
+
+                $arrayDataPedidos = json_decode(json_encode($pedidosData, JSON_UNESCAPED_UNICODE), true);
+
+                // Iterar sobre el arreglo y agregar 'options' a cada usuario
+                for ($i = 0; $i < count($arrayDataPedidos); $i++) {
+                    $arrayDataPedidos[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
+                    $arrayDataPedidos[$i]['options'] = '
+                    <a class="me-3 confirm-text" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '"  >
+                        <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
+                    </a>
+                    <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '"">
+                        <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
+                    </a>
+                    <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '">
+                        <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
+                    </a>
+                ';
+                }
+
+                // retornamos la data en un arreglo asociativo con la data filtrada y asociada
+                $response = [
+                    "draw" => $draw,
+                    "recordsTotal" => $totalRegistros,
+                    "recordsFiltered" =>$totalRegistroFiltrados,
+                    "data" => $arrayDataPedidos,
+                    "status" => true
+                ];
+                // devolvemos la data y terminamos el proceso
+                echo json_encode($response, JSON_UNESCAPED_UNICODE);
+                die();
             }catch(Exception $e) { 
                 error_log("Pedidos::consultarPedidos -> Error en trear los datos - consultarPedidos ".$e->getMessage());
             }

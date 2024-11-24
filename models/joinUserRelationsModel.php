@@ -185,7 +185,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
 
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
-                $sql .= " WHERE 
+                $sql .= " WHERE
                     u.nombres LIKE '%$searchValue%' OR 
                     u.apellidos LIKE '%$searchValue%' OR 
                     u.telefono LIKE '%$searchValue%' OR 
@@ -195,7 +195,7 @@ class JoinUserRelationsModel extends Model implements JsonSerializable
                     e.tipo LIKE '%$searchValue%' OR 
                     u.fecha_de_creacion LIKE '%$searchValue%'";
             }
-
+            
             $query = $this->query($sql);
             return $query->fetch(PDO::FETCH_ASSOC)['total'];
         } catch (PDOException $e) {

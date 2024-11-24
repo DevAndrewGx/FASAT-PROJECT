@@ -209,7 +209,6 @@ class UsersModel extends Model implements IModel
     public function asignarDatosArray($array)
     {
 
-
         $this->idRol = $array['id_rol'];
         $this->idEstado = $array['id_estado'];
         $this->idFoto = $array['id_foto'];

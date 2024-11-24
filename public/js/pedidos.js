@@ -29,9 +29,9 @@ $(document).ready(function() {
         },
         columns: [
             { data: "checkmarks" },
-            { data: "numeroMesa" },
-            { data: "mesero" },
-            { data: "codigoPedido" },
+            { data: "numero_mesa" },
+            { data: "nombre_mesero" },
+            { data: "codigo_pedido" },
             { data: "total" },
             { data: "estado" },
             { data: "options" },
@@ -63,16 +63,44 @@ $(document).ready(function() {
             url: baseUrl + "mesas/getMesas",
             type: "GET",
             dataType: "json",
+            dataSrc: function (json) {
+                let mesasFiltradas = [];
+                let numerosMesasUnicos = new Set(); // Usar Set para evitar duplicados de numeroMesa
+
+                json.data.forEach(function (mesa) {
+                    // Validar si el numeroMesa ya fue agregado al Set
+                    if (numerosMesasUnicos.has(mesa.numeroMesa)) {
+                        console.warn(
+                            `Mesa duplicada ignorada: ${mesa.numeroMesa}`
+                        );
+                    } else {
+                        // Agregar numeroMesa al Set para evitar duplicados
+                        numerosMesasUnicos.add(mesa.numeroMesa);
+                        // Agregar la mesa al array filtrado
+                        mesasFiltradas.push(mesa);
+                    }
+                });
+
+                // Devolver solo mesas únicas al DataTable
+                return mesasFiltradas;
+            },
         },
+
         columns: [
             { data: "checkmarks" },
-            { data: "numeroMesa" },
+            {
+                data: "numeroMesa",
+                render: function (data) {
+                    return `#${data}`;
+                },
+            },
             {
                 data: "codigoPedido", // Cambia 'pedidoAsociado' por 'codigo_pedido'
                 render: function (data) {
                     return data ? data : "<strong>SIN PEDIDO ASOCIADO</strong>";
                 },
             },
+
             {
                 data: "estado",
                 render: function (data) {
@@ -82,11 +110,8 @@ $(document).ready(function() {
                         case "DISPONIBLE":
                             badgeClass = "bg-lightgreen";
                             break;
-                        case "EN SERVICIO":
-                            badgeClass = "bg-lightred";
-                            break;
                         case "EN VENTA":
-                            badgeClass = "bg-lightyellow";
+                            badgeClass = "bg-lightred";
                             break;
                         default:
                             badgeClass = "bg-lightgray";
@@ -96,10 +121,9 @@ $(document).ready(function() {
             },
             { data: "options" },
         ],
-        order: [[3, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
         columnDefs: [
             {
-                targets: [0, 3],
+                targets: [0, 4],
                 orderable: false,
             },
         ],
@@ -364,24 +388,25 @@ $(document).ready(function() {
         const codigoPedido = $("#codigo-pedido").text();
         const fechaHora = $("#fecha-hora").text();
         const numeroMesa = $("#numeroMesa").val();
+        const estadoMesa = $("#numeroMesa option:selected").data("estado");
         const idMesero = $("#idMesero").data("id");
         const numeroPersonas = $("#numeroPersonas").val();
         const notasPedido = $("#notasPedido").val();
         const total = parseFloat($("#totalPedido").text().replace("$", ""));
 
-        console.log(total);
+        console.log(estadoMesa);
         // creamos un JSON con toda la data del pedido
         const pedidoCompleto = { 
             codigoPedido: codigoPedido,
             fechaHora: fechaHora, 
             numeroMesa: numeroMesa,
+            estadoMesa: estadoMesa,
             idMesero: idMesero,
             numeroPersonas: numeroPersonas, 
             notasPedido: notasPedido, 
             total: total, 
             pedidoProductos: pedidoProductos
         }
-
         console.log(pedidoCompleto.idMesero);
 
         // validamos la data antes de ser enviada

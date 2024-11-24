@@ -1036,12 +1036,21 @@ table .checkboxs input[type="checkbox"]:checked ~ .checkmarks:after {
 } */
 
 
+.pagination li > a.page-link { 
+    /* background: none;
+    border-color: none;
+    border: none; */
+    color: var(--primary-color);
+}
 
 .pagination li.active a.page-link {
     background: var(--primary-color);
     border-color: var(--primary-color);
     border-radius: 5px;
+    color: #fff;
 }
+
+
 
 .dt-length #dt-length-0 {
     margin-left: 5px;

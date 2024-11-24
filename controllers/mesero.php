@@ -52,10 +52,7 @@ class Mesero extends SessionController
         $mesaObj = new MesasModel();
         // guardamos el objeto que retorna al momento de la consulta para devolverlo a la vista.
         $this->mesa = $mesaObj->consultar($this->getPost('numeroMesa'));
-        error_log('Valor de mesa: ' . print_r($this->mesa, true));
-        error_log('Numero de mesa para mostrarla en el fronttttttttttttttttttttttttttttt'.$this->getPost('numeroMesa'));
         $mesaObj->setEstado($this->getPost("estado"));
-        error_log('mesaaaaaaaaaaaaaaaaaaa ' . $this->getPost('numeroMesa'));
         if ($mesaObj->actualizarEstado($this->getPost('numeroMesa'))) {
             error_log('Mesas::abrirMesa -> Se actualizo el estado de la mesa correctamente');
             echo json_encode(['status' => true, 'dataMesa' => $this->mesa, 'message' => "Se abrio la mesa correctamente!"]);
