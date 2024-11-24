@@ -276,7 +276,7 @@ $categorias = $this->d['categorias'];
                                     <div>
                                         <small class="text-muted">Estado</small>
                                         <div>
-                                            <span id="estado-pedido" class="badges bg-lightred">EN PREPARACIÓN</span>
+                                            <span id="estado-pedido-detalle">EN PREPARACIÓN</span>
                                         </div>
                                     </div>
                                 </div>
@@ -288,47 +288,17 @@ $categorias = $this->d['categorias'];
                         <div class="card-body">
                             <h5 class="mb-4">Detalle del Pedido</h5>
                             <div class="table-responsive">
-                                <table class="table table-responsive datanew">
+                                <table id="detalles-pedidos-table" class="table table-responsive datanew">
                                     <thead>
                                         <tr>
                                             <th>Item</th>
                                             <th>Cant.</th>
                                             <th>Precio</th>
                                             <th>Subtotal</th>
-                                            <th>Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                Pizza Margherita
-                                                <div><small class="text-muted">Sin cebolla</small></div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>$15</td>
-                                            <td>$30</td>
-                                            <td>
-                                                <span class="badges bg-lightred">EN PREPARACIÓN</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Coca-Cola</td>
-                                            <td>4</td>
-                                            <td>$2.5</td>
-                                            <td>$10</td>
-                                            <td>
-                                                <span class="badges bg-lightred">ENTREGADO</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiramisú</td>
-                                            <td>2</td>
-                                            <td>$6</td>
-                                            <td>$12</td>
-                                            <td>
-                                                <span class="badges bg-lightred">PENDIENTE</span>
-                                            </td>
-                                        </tr>
+                                       
                                     </tbody>
                                 </table>
                             </div>
@@ -338,7 +308,7 @@ $categorias = $this->d['categorias'];
                     <div class="card bg-light mb-3">
                         <div class="card-body">
                             <h6 class="card-title">Notas Pedido</h6>
-                            <p class="card-text mb-0">Cliente regular - Prefiere las bebidas sin hielo</p>
+                            <p id="notas-pedido-detalle" class="card-text mb-0">Cliente regular - Prefiere las bebidas sin hielo</p>
                         </div>
                     </div>
                     <!-- Total y notas generales del pedido -->
@@ -348,7 +318,7 @@ $categorias = $this->d['categorias'];
                             <h5 class="fw-bold">Total:</h5>
                         </div>
 
-                        <h5 id="totalPedido" class="text-end fw-bold">$0.00</h5>
+                        <h5 id="total-pedido-detalle" class="text-end fw-bold px-2">$0.00</h5>
                     </div>
 
 

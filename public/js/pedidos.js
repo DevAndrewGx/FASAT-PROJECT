@@ -357,19 +357,58 @@ $(document).ready(function() {
                         // Asumiendo que necesitas el primer elemento del array data
                         pedidosData = response.data;
 
-                        console.log(pedidosData);
-                        console.log(pedidosData.codigo_pedido);
                         // seteamos la data en los campos
-                        
-                        $("#codigo-pedido-detalle").text(pedidosData.codigo_pedido);
-                        // $("#categoriaa").val(pedidosData.nombre_categoria);
-                        // $("#subcategoriaa").val(pedidosData.nombre_subcategoria);
-                        $("#nombre-mesero-detalle").text(pedidosData.nombre_mesero);
+                        $("#codigo-pedido-detalle").text(
+                            pedidosData.codigo_pedido
+                        );
+                        $("#nombre-mesero-detalle").text(
+                            pedidosData.nombre_mesero
+                        );
                         $("#numero-mesa-detalle").text(pedidosData.numero_mesa);
                         $("#personas-detalle").text(
                             `${pedidosData.personas} Comensales`
                         );
 
+                        // validamos el tipo de estado para asignar un color de badget
+                        if (pedidosData.estado === "PENDIENTE") {
+                            $("#estado-pedido-detalle").addClass(
+                                "badges bg-lightred"
+                            );
+                            $("#estado-pedido-detalle").text(
+                                pedidosData.estado
+                            );
+                        } else {
+                            $("#estado-pedido-detalle").addClass(
+                                "badges bg-lightgreen"
+                            );
+                            $("#estado-pedido-detalle").text(
+                                pedidosData.estado
+                            );
+                        }
+
+                        // Generar filas de productos usando productos_detallados
+                        let tableHTML;
+                        console.log(pedidosData.productos_detallados);
+                        pedidosData.productos_detallados.forEach((producto) => {
+                            const cantidad = parseFloat(producto.cantidad);
+                            const precio = parseFloat(producto.precio);
+                            const subtotal = cantidad * precio;
+                            total += subtotal;
+
+                            tableHTML += `
+                            <tr>
+                                <td>${producto.nombre_producto}</td>
+                                <td>${cantidad}</td>
+                                <td>$${precio.toFixed(2)}</td>
+                                <td>$${subtotal.toFixed(2)}</td>
+                            </tr>
+                        `;
+                        });
+                        $("#notas-pedido-detalle").text(pedidosData.notas_general_pedido);
+                        $("#total-pedido-detalle").text(`$${total}`);
+
+                        // Insertar la tabla en el DOM
+                        $("#detalles-pedidos-table tbody").html(tableHTML);
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }

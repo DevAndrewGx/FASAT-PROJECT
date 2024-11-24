@@ -84,6 +84,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 // Convertimos las cadenas concatenadas en arrays
                 $productos = explode(',', $datos['productos']);
                 $cantidades = explode(',', $datos['cantidades']);
+                $nombres = explode(',', $datos['nombres_productos']);
                 $precios = explode(',', $datos['precios']);
 
 
@@ -92,6 +93,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 for ($i = 0; $i < count($productos); $i++) {
                     $productosDetallados[] = [
                         'id_producto' => $productos[$i],
+                        'nombre_producto' => $nombres[$i],
                         'cantidad' => $cantidades[$i],
                         'precio' => $precios[$i]
                     ];
@@ -283,7 +285,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         $this->total = $array['total'];
         $this->personas = $array['personas'];
         $this->estado = $array['estado_pedido'];
-        $this->notas_general_pedido = $array['notas_pedido'];
+        $this->notas_general_pedido = $array['notas_pedidos'];
         $this->notas_producto = $array['notas_producto'];
         $this->productos_detallados = $array['productos_detallados'];
         $this->fecha_hora = $array['fecha_hora'];
