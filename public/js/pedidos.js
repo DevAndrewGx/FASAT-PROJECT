@@ -31,9 +31,38 @@ $(document).ready(function() {
             { data: "checkmarks" },
             { data: "numero_mesa" },
             { data: "nombre_mesero" },
-            { data: "codigo_pedido" },
+            {
+                data: "codigo_pedido",
+                render: function (data) {
+                    if (data) {
+                        return `<a href="#" 
+                                class="visualizar-pedido-btn text-dark text-decoration-underline hover:text-body" 
+                                data-pedido="${data}">
+                                ${data}
+                            </a>`;
+                    }
+                    return "<strong>SIN PEDIDO ASOCIADO</strong>";
+                },
+            },
             { data: "total" },
-            { data: "estado" },
+            {
+                data: "estado",
+                render: function (data) {
+                    // Cambia el estilo según el valor de "estado"
+                    let badgeClass;
+                    switch (data) {
+                        case "PENDIENTE":
+                            badgeClass = "bg-lightred";
+                            break;
+                        case "COMPLETADO":
+                            badgeClass = "bg-lightgreen";
+                            break;
+                        default:
+                            badgeClass = "bg-lighgray";
+                    }
+                    return `<span class="badges ${badgeClass}">${data}</span>`;
+                },
+            },
             { data: "options" },
         ],
         order: [[3, "asc"]], // Ordenar por la columna nombre_categoria (segunda columna, índice 1)
@@ -101,7 +130,6 @@ $(document).ready(function() {
                 },
             },
             {
-                
                 data: "personas",
                 // renderizamos una funcion que nos permita mostrar los comensale que hay en la mesa y ademas que valide si hay comensales
                 // le agregamos un svg de un usuario para mejor estetica
@@ -121,9 +149,16 @@ $(document).ready(function() {
                 },
             },
             {
-                data: "codigoPedido", // Cambia 'pedidoAsociado' por 'codigo_pedido'
+                data: "codigoPedido",
                 render: function (data) {
-                    return data ? data : "<strong>SIN PEDIDO ASOCIADO</strong>";
+                    if (data) {
+                        return `<a href="javascript:void(0)" 
+                      onclick="verPedido('${data}')" 
+                     class="text-dark text-decoration-underline hover:text-body">
+                      ${data}
+                   </a>`;
+                    }
+                    return "<strong>SIN PEDIDO ASOCIADO</strong>";
                 },
             },
 
@@ -154,7 +189,6 @@ $(document).ready(function() {
             },
         ],
     });
-
 
     // Evento de clic en la fila de la tabla
     $("#data-mesas-pedidos tbody").on("click", "tr", function () {
@@ -252,7 +286,6 @@ $(document).ready(function() {
             }
         );
     });
-
     // Función para abrir el modal y cargar los datos de la mesa
     function abrirModalMesa(id_mesa) {
         const formData = new FormData();
@@ -307,6 +340,57 @@ $(document).ready(function() {
         });
     }
 
+    // Luego, fuera de la configuración del DataTable, usa delegación de eventos
+    $(document).on("click", ".visualizar-pedido-btn", function (e) {
+        e.preventDefault();
+        const codigoPedido = $(this).data("pedido");
+
+        $.ajax({
+            url: baseUrl + "pedidos/consultarPedido",
+            type: "POST",
+            dataType: "json",
+            data: { codigoPedido: codigoPedido },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        pedidosData = response.data;
+
+                        console.log(pedidosData);
+                        console.log(pedidosData.codigo_pedido);
+                        // seteamos la data en los campos
+                        
+                        $("#codigo-pedido-detalle").text(pedidosData.codigo_pedido);
+                        // $("#categoriaa").val(pedidosData.nombre_categoria);
+                        // $("#subcategoriaa").val(pedidosData.nombre_subcategoria);
+                        $("#nombre-mesero-detalle").text(pedidosData.nombre_mesero);
+                        $("#numero-mesa-detalle").text(pedidosData.numero_mesa);
+                        $("#personas-detalle").text(
+                            `${pedidosData.personas} Comensales`
+                        );
+
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                $("#modalFormCreateProduct").modal("show");
+            },
+        });
+        
+        console.log("Visualizando pedido:", codigoPedido);
+        $("#visualizarDetallesPedidosModal").modal("show");
+    });
+
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
         // cancelamos el evento por default ya que lo estamos enviando desde un formulario
@@ -358,7 +442,6 @@ $(document).ready(function() {
             </div>
         `);
 
-
         // Actualizamos el total de pedido
         $("#totalPedido").text(`$${total.toFixed(2)}`);
 
@@ -377,9 +460,9 @@ $(document).ready(function() {
         const productoElemento = $(this).closest(".item-pedido");
 
         // Obtener el ID único del producto desde un atributo data
-        const productoID = parseInt(productoElemento.data("id")); 
+        const productoID = parseInt(productoElemento.data("id"));
         console.log(productoID);
-        // Eliminamos el elemento del array con filter, si el id del elemento de array es diferente del 
+        // Eliminamos el elemento del array con filter, si el id del elemento de array es diferente del
         pedidoProductos = pedidoProductos.filter(
             (producto) => producto.idProducto !== productoID
         );
@@ -401,15 +484,13 @@ $(document).ready(function() {
         console.log(pedidoProductos);
         // Eliminar el producto de la lista
         productoElemento.remove();
-        
     });
 
-
     // Creamos la funcion para enviar el pedido con los datos completos
-    $("#enviar-pedido-btn").on('click', function(e) {
+    $("#enviar-pedido-btn").on("click", function (e) {
         // quitamos el efecto por default
         e.preventDefault();
-        console.log('its working bitch');
+        console.log("its working bitch");
         // Obtener los datos generales del pedido
         const codigoPedido = $("#codigo-pedido").text();
         const fechaHora = $("#fecha-hora").text();
@@ -422,23 +503,29 @@ $(document).ready(function() {
 
         console.log(estadoMesa);
         // creamos un JSON con toda la data del pedido
-        const pedidoCompleto = { 
+        const pedidoCompleto = {
             codigoPedido: codigoPedido,
-            fechaHora: fechaHora, 
+            fechaHora: fechaHora,
             numeroMesa: numeroMesa,
             estadoMesa: estadoMesa,
             idMesero: idMesero,
-            numeroPersonas: numeroPersonas, 
-            notasPedido: notasPedido, 
-            total: total, 
-            pedidoProductos: pedidoProductos
-        }
+            numeroPersonas: numeroPersonas,
+            notasPedido: notasPedido,
+            total: total,
+            pedidoProductos: pedidoProductos,
+        };
         console.log(pedidoCompleto.idMesero);
 
         // validamos la data antes de ser enviada
         // Validar antes de enviar
-        if (!pedidoCompleto.numeroMesa || !pedidoCompleto.numeroPersonas || pedidoCompleto.pedidoProductos.length === 0) {
-            alert('Por favor completa todos los campos y agrega al menos un producto.');
+        if (
+            !pedidoCompleto.numeroMesa ||
+            !pedidoCompleto.numeroPersonas ||
+            pedidoCompleto.pedidoProductos.length === 0
+        ) {
+            alert(
+                "Por favor completa todos los campos y agrega al menos un producto."
+            );
             return;
         }
 
@@ -500,5 +587,4 @@ $(document).ready(function() {
             },
         });
     });
-    
 });

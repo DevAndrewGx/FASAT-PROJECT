@@ -18,6 +18,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     private $notas_producto;
     private $cantidad;
     private $precio;
+    private $productos_detallados;
     private $fecha_hora;
 
 
@@ -45,8 +46,70 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     }
 
     // esta funcion nos permitira buscar un pedido en especifico
-    public function consultar() {
-       
+    public function consultar($codigo) {
+        
+        // utilizamos try catch ya que vamos a interactuar con la bd
+        try {
+            $query = $this->prepare("SELECT 
+                m.id_mesa,
+                m.numero_mesa,
+                m.estado AS estado_mesa,
+                m.capacidad,
+                p.id_pedido,
+                p.codigo_pedido,
+                p.total,
+                p.estado AS estado_pedido,
+                p.personas,
+                p.notas_pedidos,
+                u.documento,
+                u.nombres,
+                GROUP_CONCAT(pp.id_producto) AS productos,
+                GROUP_CONCAT(pr.nombre) AS nombres_productos, 
+                GROUP_CONCAT(pp.cantidad) AS cantidades,
+                GROUP_CONCAT(pp.precio) AS precios
+            FROM pedidos p 
+            INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+            INNER JOIN usuarios u ON p.id_mesero = u.documento 
+            INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+            INNER JOIN productos_inventario pr ON pp.id_producto = pr.id_pinventario
+            WHERE p.codigo_pedido = :codigo
+            GROUP BY m.id_mesa, p.id_pedido;
+            ");
+
+
+            $query->execute(["codigo" => $codigo]);
+            $datos = $query->fetch(PDO::FETCH_ASSOC);
+
+            if ($datos) {
+                // Convertimos las cadenas concatenadas en arrays
+                $productos = explode(',', $datos['productos']);
+                $cantidades = explode(',', $datos['cantidades']);
+                $precios = explode(',', $datos['precios']);
+
+
+                // Creamos un array de productos estructurado
+                $productosDetallados = [];
+                for ($i = 0; $i < count($productos); $i++) {
+                    $productosDetallados[] = [
+                        'id_producto' => $productos[$i],
+                        'cantidad' => $cantidades[$i],
+                        'precio' => $precios[$i]
+                    ];
+                }
+
+                // Agregamos el array de productos al resultado
+                $datos['productos_detallados'] = $productosDetallados;
+                // error_log("productos detallados ".var_dump($datos['productos_detallados']));
+                // Creamos una nueva instancia y asignamos los datos
+                $pedido = new PedidosJoinModel();
+                $pedido->asignarDatosArray($datos);
+
+                return $pedido;
+            }
+            return null;
+        }catch(PDOException $e) {
+            error_log('PedidosJoinModel::get->PDOException ' . $e);
+        }
     }
 
     // esta funcion nos permitira listar todos los pedidos con sus respectivo datos y detalles
@@ -65,6 +128,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     p.codigo_pedido,
                     p.total,
                     p.estado AS estado_pedido,
+                    p.personas,
                     p.notas_pedidos,
                     u.documento,
                     u.nombres,
@@ -75,7 +139,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
                 INNER JOIN usuarios u ON p.id_mesero = u.documento 
                 INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
-                GROUP BY m.id_mesa, p.id_pedido ";
+                GROUP BY m.id_mesa, p.id_pedido";
             error_log('ejecucion de la query de cargaDatosPedidos' . $sql);
             if (!empty($busqueda)) {
                 $searchValue = $busqueda;
@@ -179,6 +243,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
             'personas' => $this->personas,
             'notas_general_pedido' => $this->notas_general_pedido,
             'notas_producto' => $this->notas_producto,
+            'productos_detallados' => $this->productos_detallados,
             'cantidad' => $this->cantidad,
             'precio' => $this->precio,
             'fecha_hora' => $this->fecha_hora
@@ -186,22 +251,41 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     }
 
     // creamos el metodo asignarDatosArray para facilitar el establecimiento de datos de los objetos al momento de recorrer el while
+    // public function asignarDatosArray($array)
+    // {
+    //     $this->id_pedido = $array['id_pedido'];
+    //     $this->id_producto = $array['id_producto'];
+    //     $this->id_mesero = $array['id_mesero'];
+    //     $this->id_mesa = $array['id_mesa'];
+    //     $this->numero_mesa = $array['numero_mesa'];
+    //     $this->nombre_mesero = $array['nombres'];
+    //     $this->codigo_pedido = $array['codigo_pedido'];
+    //     $this->estado = $array['estado_pedido'];
+    //     $this->total = $array['total'];
+    //     $this->personas = $array['personas'];
+    //     $this->notas_general_pedido = $array['notas_pedido'];
+    //     $this->notas_producto = $array['notas_producto'];
+    //     $this->cantidad = $array['cantidad'];
+    //     $this->precio = $array['precio'];
+    //     $this->fecha_hora = $array['fecha_hora'];
+    // }
+
+
+    // Modificamos el método asignarDatosArray para manejar los productos detallados
     public function asignarDatosArray($array)
     {
-        $this->id_pedido = $array['id_mesa'];
-        $this->id_producto = $array['id_producto'];
-        $this->id_mesero = $array['id_mesero'];
         $this->id_mesa = $array['id_mesa'];
-        $this->numero_mesa = $array['numero_mesa'];
+        $this->id_mesero = $array['id_mesero'];
         $this->nombre_mesero = $array['nombres'];
+        $this->numero_mesa = $array['numero_mesa'];
+        $this->id_pedido = $array['id_pedido'];
         $this->codigo_pedido = $array['codigo_pedido'];
-        $this->estado = $array['estado_pedido'];
         $this->total = $array['total'];
         $this->personas = $array['personas'];
+        $this->estado = $array['estado_pedido'];
         $this->notas_general_pedido = $array['notas_pedido'];
         $this->notas_producto = $array['notas_producto'];
-        $this->cantidad = $array['cantidad'];
-        $this->precio = $array['precio'];
+        $this->productos_detallados = $array['productos_detallados'];
         $this->fecha_hora = $array['fecha_hora'];
     }
     

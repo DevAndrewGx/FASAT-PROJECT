@@ -126,37 +126,6 @@ $categorias = $this->d['categorias'];
     </main>
     </div>
 
-    <!-- <div class="modal fade" id="abrirMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header headerRegister">
-                    <h5 class="modal-title" id="abrirMesaLabel">Abrir Mesa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="abrirMesaForm">
-                        <div class="mb-3" id="meseroAsociado">
-                            <label for="mesero" class="form-label">Nombre mesero asociado</label>
-                            <input type="text" name="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
-                        </div>
-                        <div class="mb-3" id="container-form">
-                            <label for="numeroMesa" class="form-label">Seleccione numero mesa</label>
-                            <select name="numeroMesa" id="numeroMesaa" class="form-control">
-                                <option value="#" selected>Seleccione el numero de mesa</option>
-                            </select>
-                            <div id="subcategoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de mesa válido.</div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" id="abrirMesaButton">Abrir Mesa</button>
-                        </div>
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div> -->
-
     <!-- modal para generar un pedido -->
     <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
@@ -270,6 +239,133 @@ $categorias = $this->d['categorias'];
         </div>
     </div>
 
+    <!-- Modal para visualzar un pedido en la interfaz del mesero -->
+    <div class="modal fade" id="visualizarDetallesPedidosModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Detalles Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="container py-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <small class="text-muted">Pedido #</small>
+                                        <div class="fw-bold">
+                                            <span id="codigo-pedido-detalle"></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <small class="text-muted">Mesero</small>
+                                        <div class="fw-bold d-flex">
+                                            <i class='bx bx-user ml-1'></i><span id="nombre-mesero-detalle"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <small class="text-muted">Mesa</small>
+                                        <div class="fw-bold">
+                                            <span id="numero-mesa-detalle"></span>(<span id="personas-detalle"></span>)
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">Estado</small>
+                                        <div>
+                                            <span id="estado-pedido" class="badges bg-lightred">EN PREPARACIÓN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="mb-4">Detalle del Pedido</h5>
+                            <div class="table-responsive">
+                                <table class="table table-responsive datanew">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Cant.</th>
+                                            <th>Precio</th>
+                                            <th>Subtotal</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Pizza Margherita
+                                                <div><small class="text-muted">Sin cebolla</small></div>
+                                            </td>
+                                            <td>2</td>
+                                            <td>$15</td>
+                                            <td>$30</td>
+                                            <td>
+                                                <span class="badges bg-lightred">EN PREPARACIÓN</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coca-Cola</td>
+                                            <td>4</td>
+                                            <td>$2.5</td>
+                                            <td>$10</td>
+                                            <td>
+                                                <span class="badges bg-lightred">ENTREGADO</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiramisú</td>
+                                            <td>2</td>
+                                            <td>$6</td>
+                                            <td>$12</td>
+                                            <td>
+                                                <span class="badges bg-lightred">PENDIENTE</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">Notas Pedido</h6>
+                            <p class="card-text mb-0">Cliente regular - Prefiere las bebidas sin hielo</p>
+                        </div>
+                    </div>
+                    <!-- Total y notas generales del pedido -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex px-2">
+                            <i class='bx bx-money-withdraw'></i>
+                            <h5 class="fw-bold">Total:</h5>
+                        </div>
+
+                        <h5 id="totalPedido" class="text-end fw-bold">$0.00</h5>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="mt-3 text-muted">
+                <small>
+                    <i class="bi bi-clock"></i> Hora del pedido: 14:30
+                    <span class="float-end">Fecha: 21/11/2024</span>
+                </small>
+            </div>
+        </div>
+    </div>
+    </div>
     <!-- modal para ver los detalles de la mesa y el pedido asociado -->
     <div class="modal fade" id="detallesPedidoMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">

@@ -4,7 +4,7 @@
 
         <div class="logo">
             <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
+            <a href="<?php echo constant('URL')?>admin"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
             <i class='bx bxs-chevron-left-circle'></i>
         </div>
 

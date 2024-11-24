@@ -191,8 +191,8 @@ class Productos extends SessionController
             echo json_encode($response, JSON_UNESCAPED_UNICODE);
             die();
         } else {
-            error_log('Users::borrarUser -> No se pudo obtener el usuario correctamente');
-            echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
+            error_log('Users::borrarUser -> No se pudo obtener el Producto correctamente');
+            echo json_encode(['status' => false, 'message' => "No se pudo obtener el Producto!"]);
             return false;
         }
     }
