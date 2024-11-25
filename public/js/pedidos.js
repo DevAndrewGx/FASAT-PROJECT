@@ -23,7 +23,7 @@ $(document).ready(function() {
             processing: "Procesando...",
         },
         ajax: {
-            url: baseUrl + "pedidos/consultarPedidos",
+            url: baseUrl + "pedidos/cargarDatosPedidos",
             type: "GET",
             dataType: "json",
         },
@@ -405,7 +405,7 @@ $(document).ready(function() {
                             ) {
                                 estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
                             } else {
-                                estadoClass = "badges bg-lightgreen"; // Clase para otros estados
+                                estadoClass = "badges bg-lightgreen"; 
                             }
 
                             tableHTML += `

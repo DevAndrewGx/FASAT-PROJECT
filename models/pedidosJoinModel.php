@@ -118,6 +118,74 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         }
     }
 
+
+    public function consultarPedidosCheff()
+    {
+        $items = [];
+
+        try {
+            $query = $this->query('SELECT 
+                m.id_mesa,
+                m.numero_mesa,
+                m.estado AS estado_mesa,
+                m.capacidad,
+                p.id_pedido,
+                p.codigo_pedido,
+                p.total,
+                p.estado AS estado_pedido,
+                p.personas,
+                p.notas_pedidos,
+                u.documento,
+                u.nombres,
+                GROUP_CONCAT(pp.id_producto) AS productos,
+                GROUP_CONCAT(pr.nombre) AS nombres_productos, 
+                GROUP_CONCAT(pp.cantidad) AS cantidades,
+                GROUP_CONCAT(pp.precio) AS precios,
+                GROUP_CONCAT(pp.estado_producto) AS estados_productos
+            FROM pedidos p 
+            INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+            INNER JOIN usuarios u ON p.id_mesero = u.documento 
+            INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+            INNER JOIN productos_inventario pr ON pp.id_producto = pr.id_pinventario
+            GROUP BY m.id_mesa, p.id_pedido');
+
+            while ($datos = $query->fetch(PDO::FETCH_ASSOC)) {
+                // Convertimos las cadenas concatenadas en arrays para cada pedido
+                $productos = explode(',', $datos['productos']);
+                $cantidades = explode(',', $datos['cantidades']);
+                $nombres = explode(',', $datos['nombres_productos']);
+                $estados_productos = explode(',', $datos['estados_productos']);
+                $precios = explode(',', $datos['precios']);
+
+                // Creamos un array de productos estructurado para este pedido
+                $productosDetallados = [];
+                for ($i = 0; $i < count($productos); $i++) {
+                    $productosDetallados[] = [
+                        'id_producto' => $productos[$i],
+                        'nombre_producto' => $nombres[$i],
+                        'cantidad' => $cantidades[$i],
+                        'estados_productos' => $estados_productos[$i],
+                        'precio' => $precios[$i]
+                    ];
+                }
+
+                // Agregamos el array de productos al resultado
+                $datos['productos_detallados'] = $productosDetallados;
+
+                // Creamos una nueva instancia y asignamos los datos
+                $pedido = new PedidosJoinModel();
+                $pedido->asignarDatosArray($datos);
+
+                // Agregamos el pedido al array de items
+                array_push($items, $pedido);
+            }
+            return $items;
+        } catch (PDOException $e) {
+            error_log("PedidosJoinModel::consultarPedidosCheff -> ERROR " . $e);
+            return [];
+        }
+    }
+
     // esta funcion nos permitira listar todos los pedidos con sus respectivo datos y detalles
     public function cargarDatosPedidos($registrosPorPagina, $inicio, $columna, $orden, $busqueda, $columnName) {
         $items = [];

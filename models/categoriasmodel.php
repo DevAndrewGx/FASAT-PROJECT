@@ -105,7 +105,6 @@ class CategoriasModel extends Model implements JsonSerializable
                 // ya que seteamos la data en cada objeto, lo agregamos al objeto principal
                 array_push($items, $item);
                 // finalmente retornamos el objeto
-
             }
 
             return $items;

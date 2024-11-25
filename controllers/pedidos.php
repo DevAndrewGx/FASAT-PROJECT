@@ -114,10 +114,8 @@
         }
 
         // creamos esta funcion para consultar todos los productos
-        function consultarPedidos() { 
-            
+        function cargarDatosPedidos() { 
             // utilizamos para capturar cualquier exepcion y no parar la ejecución del codigo
-
             try {
                 // Obtener los parámetros enviados por DataTables
                 $draw = intval($_GET['draw']);
@@ -172,9 +170,12 @@
                 echo json_encode($response, JSON_UNESCAPED_UNICODE);
                 die();
             }catch(Exception $e) { 
-                error_log("Pedidos::consultarPedidos -> Error en trear los datos - consultarPedidos ".$e->getMessage());
+                error_log("Pedidos::cargarDatosPedidos -> Error en trear los datos - cargarDatosPedidos ".$e->getMessage());
             }
         }
+
+
+        
 
 
         // esta funcion nos permitira consultar un producto en especifico

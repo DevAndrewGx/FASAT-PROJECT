@@ -100,13 +100,13 @@ $user = $this->d['user'];
 
 
                 <!-- Pedidos -->
-                <div class="row g-3">
+                <div id="contenedor-pedidos" class="row g-3">
                     <!-- Pedido #001 -->
                     <div class="col-md-4">
                         <div class="card h-100">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h5 class="card-title mb-0">Pedido #001</h5>
+                                    <h5 class="card-title mb-0">Pedido - <span id="codigo-pedido-cheff"></span></h5>
                                     <small class="text-muted">Mesa 5 <big>|</big> 14:30</small>
                                 </div>
                                 <span class="badges bg-lightred">PENDIENTE</span>
@@ -123,7 +123,7 @@ $user = $this->d['user'];
                                 <p class="mb-2"><small class="text-muted">Notas: Término medio</small></p>
                                 <!-- Botones -->
                                 <button class="btn btn-dark btn-sm me-2">Iniciar</button>
-                                <button class="btn btn-secondary btn-sm" disabled>Completar</button>
+                                <button class="btn bg-transparent btn-sm" disabled>Completar</button>
                             </div>
 
                             <div class="m-3 p-3 border border-secondary rounded" style="border-color: #ccc !important;">
@@ -268,6 +268,7 @@ $user = $this->d['user'];
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/cheff.js"></script>
 </body>
 
 
