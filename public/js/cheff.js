@@ -13,13 +13,49 @@ $(document).ready(function() {
                     // vaciamos el contenedor para evitar la duplicidad de data
                     contenedorPedidos.empty();
 
-                    dataResponse.data.forEach(pedido => { 
+                    dataResponse.data.forEach(pedido => {
                         const pedidoHTML = renderizarPedido(pedido);
                         contenedorPedidos.append(pedidoHTML);
                     });
-                }else { 
-                    console.log("No se encontraron datos o hubo un error.");
-                }
+
+                    // Delegación de eventos para el botón "Iniciar"
+                    // Delegación de eventos para el botón "Iniciar"
+                contenedorPedidos.on('click', '[data-role="iniciar"]', function () {
+                    const iniciarBoton = $(this);
+                    const completarBoton = iniciarBoton.siblings('[data-role="completar"]'); // Encuentra el botón "Completar"
+                    const pedidoCard = iniciarBoton.closest('.card'); // Encuentra la tarjeta del pedido
+                    const pedidoId = pedidoCard.find('#codigo-pedido-cheff').text(); // Identifica el código del pedido
+
+                    // Busca el pedido correspondiente en los datos
+                    const pedido = dataResponse.data.find(p => p.codigo_pedido === pedidoId);
+
+                    if (pedido) {
+                        cambiarEstadoBotonYPedido(iniciarBoton, completarBoton, pedido.productos_detallados, pedido);
+                    }
+                });
+
+                // Delegación de eventos para el botón "Completar"
+                contenedorPedidos.on('click', '[data-role="completar"]', function () {
+                    const completarBoton = $(this);
+                    const iniciarBoton = completarBoton.siblings('[data-role="iniciar"]'); // Encuentra el botón "Iniciar"
+                    const pedidoCard = completarBoton.closest('.card'); // Encuentra la tarjeta del pedido
+                    const pedidoId = pedidoCard.find('#codigo-pedido-cheff').text(); // Identifica el código del pedido
+
+                    // Busca el pedido correspondiente en los datos
+                    const pedido = dataResponse.data.find(p => p.codigo_pedido === pedidoId);
+
+                    if (pedido) {
+                        cambiarEstadoBotonYPedidoACompletado(iniciarBoton, completarBoton, pedido.productos_detallados, pedido);
+
+                        // Deshabilitar ambos botones
+                        iniciarBoton.prop('disabled', true);
+                        completarBoton.prop('disabled', true);
+                    }
+                });
+
+            }else { 
+                console.log("No se encontraron datos o hubo un error.");
+            }
             
                 
             } else {
@@ -33,6 +69,119 @@ $(document).ready(function() {
         },
     });  
 
+
+    // Función para cambiar el estado de los botones y del pedido
+    function cambiarEstadoBotonYPedido(iniciarBoton, completarBoton, productos, pedido) {
+     // Cambiar el estado localmente
+        pedido.estado = "EN PREPARACION";
+        console.log("INICIAR");
+
+         // Actualizar en el servidor
+        // $.ajax({
+        //     url: baseUrl + "cheff/actualizarEstadoPedido",
+        //     type: "POST",
+        //     data: {
+        //         id_pedido: pedido.id_pedido,
+        //         estado: pedido.estado,
+        //         productos: productos.map(producto => ({
+        //             id_producto: producto.id_producto,
+        //             estado: "En preparación"
+        //         }))
+        //     },
+        //     success: function(response) {
+        //         if (response.status) {
+        //             console.log("Estado actualizado correctamente en el servidor");
+        //         } else {
+        //             console.error("Error al actualizar el estado en el servidor");
+        //         }
+        //     },
+        //     error: function(xhr, status, error) {
+        //         console.error("Error en la solicitud AJAX:", error);
+        //     }
+        // });
+
+        // Selecciona el elemento que muestra el estado del pedido
+        const elementoEstado = iniciarBoton.closest('.card').find('.badges');
+
+        // Actualiza visualmente el estado del pedido
+        actualizarEstadoVisual(elementoEstado, pedido.estado);
+
+        // Cambiar el estado de los productos
+        productos.forEach((producto) => {
+            producto.estado = "EN PREPARACION";
+            iniciarBoton.closest(".border").find('.badge').text(producto.estado);
+        });
+
+        // Actualizar los botones en la interfaz
+        iniciarBoton.removeClass('btn-dark').addClass('bg-transparent').prop('disabled', true);
+        completarBoton.removeClass('bg-transparent').addClass('btn-dark').prop('disabled', false);
+}
+
+
+    function cambiarEstadoBotonYPedidoACompletado(iniciarBoton, completarBoton, productos, pedido) {
+        // Cambiar el estado del pedido a "COMPLETADO"
+        // Cambiar el estado localmente
+        pedido.estado = "COMPLETADO";
+        console.log("COMPLETAR");
+
+        // Actualizar en el servidor
+        // $.ajax({
+        //     url: baseUrl + "cheff/actualizarEstadoPedido",
+        //     type: "POST",
+        //     data: {
+        //         id_pedido: pedido.id_pedido,
+        //         estado: pedido.estado,
+        //         productos: productos.map(producto => ({
+        //             id_producto: producto.id_producto,
+        //             estado: "Completado"
+        //         }))
+        //     },
+        //     success: function(response) {
+        //         if (response.status) {
+        //             console.log("Estado actualizado correctamente a COMPLETADO en el servidor");
+        //         } else {
+        //             console.error("Error al actualizar el estado a COMPLETADO en el servidor");
+        //         }
+        //     },
+        //     error: function(xhr, status, error) {
+        //         console.error("Error en la solicitud AJAX:", error);
+        //     }
+        // });
+
+        // Selecciona el elemento que muestra el estado del pedido
+        const elementoEstado = completarBoton.closest(".card").find(".badges");
+
+        // Actualiza visualmente el estado del pedido
+        actualizarEstadoVisual(elementoEstado, pedido.estado);
+
+        // Cambiar el estado de los productos
+        productos.forEach((producto) => {
+            producto.estado = "COMPLETADO";
+            completarBoton
+                .closest(".border")
+                .find(".badge")
+                .text(producto.estado);
+        });
+
+        // Deshabilitar ambos botones
+        iniciarBoton.prop("disabled", true);
+        completarBoton.prop("disabled", true);
+    }
+
+    function actualizarEstadoVisual(elementoEstado, estado) {
+        elementoEstado
+            .removeClass("bg-lightred bg-lightyellow bg-lightgreen") // Quita todas las clases posibles
+            .addClass(
+                estado === "PENDIENTE"
+                    ? "bg-lightred"
+                    : estado === "EN PREPARACION"
+                    ? "bg-lightyellow"
+                    : estado === "COMPLETADO"
+                    ? "bg-lightgreen"
+                    : ""
+            ); // Agrega la clase correspondiente según el estado
+        elementoEstado.text(estado); // Actualiza el texto del estado
+    }
 
     // funcion para renderizar la vista de un pedido ya que es muy grande para mostrarlo solo con scrpting
     function renderizarPedido(pedido) {
@@ -74,8 +223,8 @@ $(document).ready(function() {
                         producto.notas_producto || "Sin notas"
                     }</small>
                 </p>
-                <button class="btn btn-dark btn-sm me-2">Iniciar</button>
-                <button class="btn bg-transparent btn-sm" disabled>Completar</button>
+                <button class="btn btn-dark btn-sm me-2" data-role="iniciar">Iniciar</button>
+                <button class="btn bg-transparent btn-sm" data-role="completar" disabled>Completar</button>
             </div>
         `
              )
