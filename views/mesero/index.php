@@ -149,7 +149,7 @@ $categorias = $this->d['categorias'];
                             <div class="row mb-3">
                                 <div class="form-group col-md-4">
                                     <label for="numeroMesa" class="form-label">Numero de Mesa</label>
-                                    <select name="numeroMesa" id="numeroMesa" class="form-control">
+                                    <select name="numeroMesa" id="numeroMesa" class="form-control" required>
                                         <option value="#">Selecciona mesa</option>
                                     </select>
                                     <div id="nombresError" class="invalid-feedback" style="display:none;">Seleccione un numero de mesa valido.</div>
@@ -161,7 +161,7 @@ $categorias = $this->d['categorias'];
 
                                 <div class="form-group col-md-4">
                                     <label for="numeroPersonas" class="form-label">Numero de personas</label>
-                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas">
+                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" required>
                                     <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas valido válido.</div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ $categorias = $this->d['categorias'];
                                     <div class="row mb-2">
                                         <div class="form-group col-md-6">
                                             <label for="categoriaPedido" class="form-label">Categoria</label>
-                                            <select name="categoriaPedido" id="categoriaPedido" class="form-control">
+                                            <select name="categoriaPedido" id="categoriaPedido" class="form-control" required>
                                                 <option value="#">Selecciona una categoria</option>
                                                 <?php
                                                 foreach ($categorias as $cat) {
@@ -185,7 +185,7 @@ $categorias = $this->d['categorias'];
 
                                         <div class="form-group col-md-6">
                                             <label for="producto" class="form-label">Producto</label>
-                                            <select name="producto" id="producto" class="form-control">
+                                            <select name="producto" id="producto" class="form-control" required>
                                                 <option value="#">Selecciona producto</option>
                                                 <?php
                                                 foreach ($categorias as $cat) {
@@ -199,7 +199,7 @@ $categorias = $this->d['categorias'];
 
                                         <div class="form-group col-md-6">
                                             <label for="cantidadItems" class="form-label">Cantidad</label>
-                                            <input type="number" class="form-control" id="cantidadItems" name="cantidadItems">
+                                            <input type="number" min="1" max="15" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required>
                                             <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número valido de items. </div>
                                         </div>
 
