@@ -56,9 +56,41 @@ $user = $this->d['user'];
                         </nav>
                     </div>
                     <div class="page-btn">
+                    <a id="modalcarga" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                            <img src="<?php echo constant('URL') ?>/public/imgs/icons/upload2.svg" class="mx-2" alt="Agregar Empleado"> Carga masiva
+                        </a>
                         <a href="#" onclick="openModalCreateProduct();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Agregar Nuevo
                             Producto</a>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="uploadModalLabel">Cargar Archivo Excel</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Botón para descargar la plantilla -->
+                                <a href="vendor/plantillain.php" class="btn btn-secondary mb-3">Descargar Plantilla Excel</a>
+                                <!-- Contenedor para las alertas -->
+                                <div id="alertContainer" class="mb-3"></div>
+                                <!-- Formulario para cargar el archivo Excel -->
+                                <form id="subirin" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="excelFile" class="form-label">Selecciona el archivo Excel:</label>
+                                        <input type="file" class="form-control" id="excelFile" name="excelFile" accept=".xlsx, .xls" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Subir Archivo</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -81,6 +113,16 @@ $user = $this->d['user'];
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
+                                <div class="container-reports">
+                                    <a href="pdf/inventario.php" class="btn btn-pdf me-2">
+                                        <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/pdf1.svg" alt="Exportar a PDF">
+                                        PDF
+                                    </a>
+                                    <a href="vendor/inventario.php" class="btn btn-excel me-2">
+                                        <img width="20" src="<?php echo constant('URL') ?>/public/imgs/icons/excel1.svg" alt="Exportar a Excel">
+                                        Excel
+                                    </a>
+                                </div>
                                 <tbody>
 
                                 </tbody>
@@ -190,6 +232,7 @@ $user = $this->d['user'];
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/exinventario.js"></script>
 </body>
 
 

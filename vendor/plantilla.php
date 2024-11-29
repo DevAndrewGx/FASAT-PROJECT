@@ -32,48 +32,6 @@ $sheet->fromArray($columns, null, 'A1');
 // Crear un escritor de archivos Excel
 $writer = new Xlsx($spreadsheet);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Guardar el archivo en el servidor
 $filename = 'plantilla_' . $tableName . '.xlsx';
 try {
