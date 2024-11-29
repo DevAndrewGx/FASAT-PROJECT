@@ -2,7 +2,7 @@
 // definimos nuestras constantes de configuracion para usarlas a lo largo del programa
 define('URL', 'http://localhost/FAST-PROJECT/');
 define('HOST', 'localhost');
-define('DB', 'test_fast9');
+define('DB', 'fast');
 define('USER', 'root');
 define('PASSWORD', '');
 define('CHARSET', 'utf8mb4');

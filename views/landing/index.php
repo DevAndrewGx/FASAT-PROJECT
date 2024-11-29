@@ -72,7 +72,6 @@
                         <a href="#contact" class="nav-item nav-link">Contáctanos</a>
                     </div>
                     <div class="d-flex align-items-center">
-                        <a href="views/sign-up/signup.html" class="btn btn-primary py-2 px-4 me-3">Prueba</a>
                         <a href="<?php echo constant('URL') ?>login" class="btn btn-primary py-2 px-4">Iniciar sesión</a>
                     </div>
                 </div>
@@ -215,34 +214,20 @@
                         <p>El costo de FAST incluye todas las actualizaciones de software y soporte técnico. No hay costos ocultos ni tarifas adicionales.</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="question">
-                        <span class="question-text">6. ¿Puedo probar FAST antes de comprarlo?</span>
-                        <i class="fas fa-chevron-down arrow-icon"></i>
-                    </div>
-                    <div class="answer">
-                        <p>Sí, ofrecemos una demostración gratuita de FAST para que puedas ver cómo funciona nuestro software y cómo puede beneficiar a tu restaurante.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- contactos -->
-
     <section id="contact" class="py-5">
-        <div class="container contact-container">
+        <div class="container contact-container text-center">
             <h2 class="contact-title">¿Tienes alguna pregunta sobre FAST?</h2>
             <p class="contact-text">¿O estás interesado en saber más sobre cómo puede beneficiar a tu restaurante? ¡Estamos aquí para ayudarte!</p>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
-                    <input type="email" class="form-control contact-email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-registrarse">Inicia tu prueba gratis</button>
-                <p class="small confirm-message">Al hacer clic en Regístrate, confirmas que estás de acuerdo con el tratamiento de tus datos.</p>
-            </form>
+            <a href="https://wa.me/57320757892" target="_blank">
+                <img src="<?php echo constant('URL')?>public/imgs/whatsapp.png" alt="Logo WhatsApp" style="width: 100px; height: auto;">
+            </a>
         </div>
     </section>
+
 
     <!-- footer -->
 
@@ -300,20 +285,13 @@
 
 
     <script>
-        // forma para agreegar el background a un selector con JQUERY
-        $(document).ready(function() {
-            var urlBackgroundHero = '<?php echo constant('URL'); ?>views/imgs/img/hero-fondo.png';
-            $('.hero-header').css('background-image', 'url(' + urlBackgroundHero + ')');
-        });
-
         $(document).ready(function() {
             var urlTeamImage = '<?php echo $urlTeamImage; ?>';
             $('.team-image').css('background-image', 'url(' + urlTeamImage + ')');
         });
-
     </script>
 
-    
+
 
 </body>
 
