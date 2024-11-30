@@ -4,36 +4,48 @@
 
         <div class="logo">
             <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-            <a href="<?php echo constant('URL')?>admin"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
+            <a href="<?php echo constant('URL') ?>admin"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
             <i class='bx bxs-chevron-left-circle'></i>
         </div>
 
 
         <div class="item active" id="dashboard">
-            <i class='bx bx-home-alt-2'></i>
-            <a href="<?php echo constant('URL'); ?>admin">Dashboard</a>
+            <a href="<?php echo constant('URL'); ?>admin">
+                <i class='bx bx-home-alt-2'></i>
+                Dashboard
+            </a>
         </div>
         <div class="item" id="empleados">
-            <i class='bx bxs-user-detail'></i>
-            <a href="<?php echo constant('URL'); ?>users">Usuarios</a>
+            <a href="<?php echo constant('URL'); ?>users">
+                <i class='bx bxs-user-detail'></i>
+                Usuarios
+            </a>
         </div>
         <div class="item" id="mesas">
-            <i class='bx bxs-grid'></i>
-            <a href="<?php echo constant('URL'); ?>mesas">Mesas</a>
+            <a href="<?php echo constant('URL'); ?>mesas">
+                <i class='bx bxs-grid'></i>
+                Mesas
+            </a>
         </div>
-
         <div class="item" id="ventas">
-            <i class='bx bx-transfer-alt'></i>
-            <a href="<?php echo constant('URL'); ?>ventas">Ventas</a>
+            <a href="<?php echo constant('URL'); ?>ventas">
+                <i class='bx bx-transfer-alt'></i>
+                Ventas
+            </a>
         </div>
         <div class="item" id="inventario">
-            <i class='bx bx-task'></i>
-            <a href="<?php echo constant('URL'); ?>productos">Inventario</a>
+            <a href="<?php echo constant('URL'); ?>productos">
+                <i class='bx bx-task'></i>
+                Inventario
+            </a>
         </div>
         <div class="item">
-            <i class='bx bx-cog'></i>
-            <a href="#">Settings</a>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                Settings
+            </a>
         </div>
+
     </div>
 
     <div class="log-out sidebar">

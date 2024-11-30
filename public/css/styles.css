@@ -321,10 +321,74 @@ ul li {
     margin-right: 20px;
 }
 
-.main-wrapper .left-section.close .sidebar .item a { 
-    width: 1px;
-    opacity: 0;
+/* Barra lateral colapsada: Oculta el texto, pero mantiene visibles los íconos */
+.main-wrapper .left-section.close .sidebar .item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: -9999px; /* Oculta solo el texto */
+    overflow: hidden; /* Oculta cualquier texto adicional */
+    width: auto; /* Ancho fijo para los íconos */
+    opacity: 1; /* Asegura que los íconos sean visibles */
 }
+
+.main-wrapper .left-section.close .sidebar .item a i {
+    font-size: 26px; /* Tamaño del ícono */
+    opacity: 1; /* Asegura visibilidad */
+    text-indent: 0; /* No muevas el ícono fuera del contenedor */
+}
+
+/* Flecha para colapsar/expandir */
+.main-wrapper .left-section .logo .bx {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estado colapsado: Ajusta la flecha */
+.main-wrapper .left-section.close .logo .bx.bxs-chevron-left-circle {
+    display: none; /* Oculta la flecha izquierda cuando está colapsada */
+}
+
+.main-wrapper .left-section.close .logo .bx.bxs-chevron-right-circle {
+    display: block; /* Muestra la flecha derecha cuando está colapsada */
+}
+
+/* Estado expandido: Ajusta la flecha */
+.main-wrapper .left-section .logo .bx.bxs-chevron-right-circle {
+    display: none; /* Oculta la flecha derecha cuando está expandida */
+}
+
+
+/* Si la barra lateral está colapsada */
+.sidebar-collapsed .left-section {
+    min-width: 30px;
+    padding: 10px 20px 10px 30px;
+}
+
+.sidebar-collapsed .left-section .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-collapsed .page-wrapper {
+    margin-left: 100px;
+}
+
+.sidebar-collapsed .left-section.clase .sidebar .item a {
+    width: 1px;
+    opacity: 1;
+}
+/* 
+.sidebar-collapsed .left-section .logo .bx.bxs-chevron-left-circle {
+    display: none;
+}
+
+.sidebar-collapsed .left-section .logo .bx.bxs-chevron-right-circle {
+    display: inline-block;
+} */
+
+
+
 
 header {
     background: #fff;

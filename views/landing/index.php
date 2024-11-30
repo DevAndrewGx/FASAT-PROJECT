@@ -44,7 +44,7 @@
                     <div class="col-lg-6 text-center text-lg-start">
                         <h1 class="display-4 text-primary mb-4 animated slideInRight trabajos-title">¡Potencia tu Restaurante con FAST!</h1>
                         <p class="lead mb-4 animated fadeInLeft delay-1s">Mejora la eficiencia de tu restaurante con nuestro software especializado en la gestión de pedidos, ventas, inventario y facturación.</p>
-                        <a href="#" class="btn btn-primary btn-lg animated fadeInUp delay-2s">Prueba gratis FAST</a>
+                        <a href="https://wa.me/57320757892" class="btn btn-primary btn-lg animated fadeInUp delay-2s">Contactanos</a>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                         <img class="img-fluid rounded hero-image animated fadeInRight delay-1s" src="views/imgs/img/uno.png" alt="hero">
@@ -223,7 +223,7 @@
             <h2 class="contact-title">¿Tienes alguna pregunta sobre FAST?</h2>
             <p class="contact-text">¿O estás interesado en saber más sobre cómo puede beneficiar a tu restaurante? ¡Estamos aquí para ayudarte!</p>
             <a href="https://wa.me/57320757892" target="_blank">
-                <img src="<?php echo constant('URL')?>public/imgs/whatsapp.png" alt="Logo WhatsApp" style="width: 100px; height: auto;">
+                <img src="<?php echo constant('URL') ?>public/imgs/whatsapp.png" alt="Logo WhatsApp" style="width: 100px; height: auto;">
             </a>
         </div>
     </section>

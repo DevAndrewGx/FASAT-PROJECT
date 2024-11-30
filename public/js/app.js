@@ -1,47 +1,86 @@
-
-const arrowAside = document.querySelector(
+const arrowLeft = document.querySelector(
     ".main-wrapper .left-section .logo .bx.bxs-chevron-left-circle"
 );
-const sideBar = document.querySelector('.left-section');
-// Debemos crear una variable para colapsar tambien el page wrapper cuando colapse la sidebar
-const pageWrapper = document.querySelector('.main-wrapper .page-wrapper');
+const sideBar = document.querySelector(".left-section");
+const pageWrapper = document.querySelector(".main-wrapper .page-wrapper");
 
+// Función para actualizar la interfaz según el estado almacenado
+function setSidebarState(collapsed) {
+    // Añadir un pequeño retraso para evitar el parpadeo
+    setTimeout(() => {
+        if (collapsed) {
+            // Añadir clase de colapsado inmediatamente
+            document.documentElement.classList.add("sidebar-collapsed");
+            sideBar.classList.add("close");
 
+            if (pageWrapper) {
+                pageWrapper.classList.add("close");
+            }
 
+            // Cambiar la clase de la flecha
+            if (arrowLeft) {
+                arrowLeft.classList.remove("bxs-chevron-left-circle");
+                arrowLeft.classList.add("bxs-chevron-right-circle");
+            }
+        } else {
+            // Lógica para estado expandido si es necesario
+            document.documentElement.classList.remove("sidebar-collapsed");
+            sideBar.classList.remove("close");
 
-arrowAside.addEventListener('click', () => { 
-    
-    sideBar.classList.toggle('close');
-   
-    pageWrapper.classList.toggle('close');
+            if (pageWrapper) {
+                pageWrapper.classList.remove("close");
+            }
 
-    
-    if(sideBar.classList.contains('close')) { 
-        arrowAside.classList.replace('bxs-chevron-left-circle', 'bxs-chevron-right-circle')
-    }else { 
-        arrowAside.classList.replace('bxs-chevron-right-circle', 'bxs-chevron-left-circle')
+            if (arrowLeft) {
+                arrowLeft.classList.remove("bxs-chevron-right-circle");
+                arrowLeft.classList.add("bxs-chevron-left-circle");
+            }
+        }
+    }, 50); // Pequeño retraso de 50ms para evitar el parpadeo
+}
+
+// Al cargar la página, aplica el estado almacenado lo más pronto posible
+function initSidebarState() {
+    const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
+
+    // Añadir clase de colapsado antes de que la página termine de cargar
+    if (isCollapsed) {
+        document.documentElement.classList.add("sidebar-collapsed");
+        if (sideBar) sideBar.classList.add("close");
+        if (pageWrapper) pageWrapper.classList.add("close");
     }
-    
-    
-    
-});
 
-document.querySelector('.menu-btn').addEventListener('click', function() {
-    document.querySelector('.left-section').classList.toggle('close');
-    document.querySelector('.page-wrapper').classList.toggle('close');
-});
+    // Esperar a que el DOM esté completamente cargado para ajustes finales
+    document.addEventListener("DOMContentLoaded", () => {
+        setSidebarState(isCollapsed);
+    });
+}
+
+// Iniciar el estado de la sidebar lo antes posible
+initSidebarState();
+
+// Evento para colapsar/expandir (si el elemento existe)
+if (arrowLeft) {
+    arrowLeft.addEventListener("click", () => {
+        const isCurrentlyCollapsed = sideBar.classList.contains("close");
+        localStorage.setItem("sidebar-collapsed", !isCurrentlyCollapsed);
+        setSidebarState(!isCurrentlyCollapsed);
+    });
+}
 
 // EFECT FOR SIDEBAR ELEMENTS
 const activeAside = () => {
-    const actual = document.getElementById("actual").getAttribute("data-navegation");
+    const actual = document
+        .getElementById("actual")
+        .getAttribute("data-navegation");
     const rol = document.getElementById("actual").getAttribute("data-rol");
-    console.log("Rol: "+rol);
-    console.log("Actual: "+actual);
+    console.log("Rol: " + rol);
+    console.log("Actual: " + actual);
 
     if (actual != "#admin" && rol == "admin") {
         // Remueve la clase 'active' de todos los elementos
-        const items = document.querySelectorAll('.item');
-        items.forEach(item => {
+        const items = document.querySelectorAll(".item");
+        items.forEach((item) => {
             item.classList.remove("active");
         });
         // Añade la clase 'active' al elemento actual
@@ -50,10 +89,10 @@ const activeAside = () => {
         seccion.classList.add("active");
     }
 
-    if(actual != "#mesero" && rol == "mesero") {
+    if (actual != "#mesero" && rol == "mesero") {
         // Remueve la clase 'active' de todos los elementos
         const items = document.querySelectorAll(".item");
-        console.log('its hereeee');
+        console.log("its hereeee");
         items.forEach((item) => {
             item.classList.remove("active");
         });
@@ -64,10 +103,8 @@ const activeAside = () => {
     }
 };
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-   activeAside();
+    activeAside();
 });
 
 // EFECT FOR STOCK NAVBAR ELEMENTS
@@ -99,56 +136,62 @@ navegationItems.forEach((element) => {
 //         }
 //     });
 
-
 // functions for modals
 
-function openModalCreateUser()
-{
+function openModalCreateUser() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nuevo Usuario";
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Usuario";
     document.querySelector("#formUsuario").reset();
-    $('#modalFormUsuario').modal('show');
+    $("#modalFormUsuario").modal("show");
 }
 
-
-function openModalCreateProduct()
-{
+function openModalCreateProduct() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nuevo Producto";
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Producto";
     document.querySelector("#formProduct").reset();
-    $('#modalFormCreateProduct').modal('show');
+    $("#modalFormCreateProduct").modal("show");
 }
 
-
-function openModalCreateCategory()
-{
+function openModalCreateCategory() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
     // document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
     // document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nueva categoria";
+    document.querySelector("#titleModal").innerHTML = "Nueva categoria";
     document.querySelector("#formCategories").reset();
-    $("#modalFormCategories").modal("show");        
+    $("#modalFormCategories").modal("show");
 }
 
-
-function openModalCreateMesas()
-{
+function openModalCreateMesas() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nueva Mesa";
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nueva Mesa";
     document.querySelector("#formMesas").reset();
-    $("#modalFormMesas").modal("show");        
+    $("#modalFormMesas").modal("show");
 }
