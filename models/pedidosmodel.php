@@ -72,6 +72,24 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             }
         }
 
+        // Esta funcion nos permitira borrar un pedido en la bd
+        public function borrar($id) {
+
+            // utilizamos try catch ya que vamos a interactuar con la bd y ademas para capturar cualquier exception sin afectar el aplicativo
+            try {
+                error_log("PedidosModel::borrar -> funcion para borrar el pedido");
+                $query = $this->prepare('DELETE FROM pedidos WHERE id_pedido = :id_pedido');
+                $query->execute([
+                    'id_pedido' => $id
+                ]);
+
+                return true;
+            } catch (PDOException $e) {
+                error_log('PedidosModel::borrar -> PDOException' . $e);
+                return false;
+            }
+        }
+
          // Esta funcion nos permtira crear los codigos de pedido para una mejor gestion
         public function generarCodigoPedido() {
             try {

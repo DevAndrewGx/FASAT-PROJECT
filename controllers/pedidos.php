@@ -146,13 +146,13 @@
                 for ($i = 0; $i < count($arrayDataPedidos); $i++) {
                     $arrayDataPedidos[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                     $arrayDataPedidos[$i]['options'] = '
-                    <a class="me-3 visualizar-pedido-eye" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '" data-codigo="'. $arrayDataPedidos[$i]['codigoPedido'].'" >
+                    <a class="me-3 visualizar-pedido-eye" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-codigo="'. $arrayDataPedidos[$i]['codigoPedido'].'" >
                         <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                     </a>
-                    <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '"">
+                    <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '"">
                         <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                     </a>
-                    <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pinventario'] . '">
+                    <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-idMesa="' . $arrayDataPedidos[$i]['id_mesa'] . '">
                         <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                     </a>
                 ';
@@ -213,7 +213,48 @@
                 return false;
             }
         }
-        
+
+        function borrarPedido() {
+            // validamos si el id enviado desde la peticion existe
+            if (!$this->existPOST(['idPedido'])) {
+                error_log('Pedidos::borrarPedido -> No se obtuvo el id de la pedido correctamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo eliminar el pedido, intente nuevamente!"]);
+                return false;
+            }
+
+            if ($this->user == NULL) {
+                error_log('Pedidos::borrarPedido  -> El usuario de la session esta vacio');
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => "El usuario de la sessión esta vacio"]);
+                return;
+            }
+
+            // necestiamos actualizar primero estado ya que nesecitamos cambiar el estado de una mesa cuando ya esta disponible
+            $mesaObj = new MesasModel();
+            $mesaObj->setEstado("DISPONIBLE");
+            $mesaRes = $mesaObj->actualizarEstado($this->getPost('idMesa'));
+
+            // validamos que la data de la mesa se haya actualizado
+            if($mesaRes) {
+                error_log("Pedidos::borrarPedido -> Se actualizo el estado de la mesa correctamente");
+            }else {
+                error_log("Pedidos::borrarPedido -> No se actualizo el estado de la mesa correctamente :( ");
+            }
+            $pedidoObj = new PedidosModel();
+            // guardamos el resultado de la consuta en una variable
+            $res = $pedidoObj->borrar($this->getPost('idPedido'));
+
+            if ($res) {
+                error_log("Pedidos::borrarPedido -> Se elimino un pedido correctamente");
+                echo json_encode(['status' => true, 'message' => "El pedido fue eliminado exitosamente!"]);
+                return true;
+            } else {
+                error_log('Pedidos::borrarPedido  -> No se pudo eliminar el pedido, intente nuevamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo eliminar el pedido, intente nuevamente!"]);
+                return false;
+            }
+        }
+  
 
         // function para realizar el filtro para consultar los productos asociados a una categoria
         function getProductsByCategory()

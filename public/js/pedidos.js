@@ -1,5 +1,4 @@
-
-$(document).ready(function() {
+$(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     // creamos un arreglo para guardar la data de los items del pedido
     let pedidoProductos = [];
@@ -343,110 +342,139 @@ $(document).ready(function() {
     }
 
     // Luego, fuera de la configuración del DataTable, usa delegación de eventos
-     $(document).on("click", ".visualizar-pedido-btn, .visualizar-pedido-eye", function (e) {
-        e.preventDefault();
-        const codigoPedido = $(this).data("pedido");
-        let totalPedido = 0;
+    $(document).on(
+        "click",
+        ".visualizar-pedido-btn, .visualizar-pedido-eye",
+        function (e) {
+            e.preventDefault();
+            const codigoPedido = $(this).data("pedido");
+            let totalPedido = 0;
 
-        $.ajax({
-            url: baseUrl + "pedidos/consultarPedido",
-            type: "POST",
-            dataType: "json",
-            data: { codigoPedido: codigoPedido },
-            success: function (response) {
-                if (response.status) {
-                
-                    if (response.data) {
-                        pedidosData = response.data;
+            $.ajax({
+                url: baseUrl + "pedidos/consultarPedido",
+                type: "POST",
+                dataType: "json",
+                data: { codigoPedido: codigoPedido },
+                success: function (response) {
+                    if (response.status) {
+                        if (response.data) {
+                            pedidosData = response.data;
 
-                        // seteamos la data en los campos
-                        $("#codigo-pedido-detalle").text(
-                            pedidosData.codigo_pedido
-                        );
-                        $("#nombre-mesero-detalle").text(
-                            pedidosData.nombre_mesero
-                        );
-                        $("#numero-mesa-detalle").text(pedidosData.numero_mesa);
-                        $("#personas-detalle").text(
-                            `${pedidosData.personas} Comensales`
-                        );
-
-                        // validamos el estado del pedido para ponerlo en el estado
-                        if(pedidosData.estado === 'PENDIENTE') { 
-                            $("#estado-pedido-detalle").text(pedidosData.estado);
-                            $("#estado-pedido-detalle").addClass("badges bg-lightred");
-                        }else if(pedidosData.estado === 'EN PREPARACION'){ 
-                            $("#estado-pedido-detalle").text(
-                                pedidosData.estado
+                            // seteamos la data en los campos
+                            $("#codigo-pedido-detalle").text(
+                                pedidosData.codigo_pedido
                             );
-                            $("#estado-pedido-detalle").addClass("badges bg-lightyellow");
-                        }else { 
-                            $("#estado-pedido-detalle").text(pedidosData.estado);
-                            $("#estado-pedido-detalle").addClass("badges bg-lightgreen");
-                        }
+                            $("#nombre-mesero-detalle").text(
+                                pedidosData.nombre_mesero
+                            );
+                            $("#numero-mesa-detalle").text(
+                                pedidosData.numero_mesa
+                            );
+                            $("#personas-detalle").text(
+                                `${pedidosData.personas} Comensales`
+                            );
 
-                        // Generar filas de productos usando productos_detallados
-                        let tableHTML;
-                        // Variable para almacenar la clase según el estado del producto
-                        let estadoClass = "";
-                        console.log(pedidosData.productos_detallados);
-                        // iteramos la data para mostrar los datos de los productos en la tabla
-                        pedidosData.productos_detallados.forEach((producto) => {
-                            const cantidad = parseFloat(producto.cantidad);
-                            const precio = parseFloat(producto.precio);
-                            const subtotal = cantidad * precio;
-                            totalPedido += subtotal;
-
-                            // Comprobación del estado del producto y asignación de la clase correspondiente
-                            if (producto.estados_productos === "PENDIENTE") {
-                                estadoClass = "badges bg-lightred"; // Clase para 'PENDIENTE'
+                            // validamos el estado del pedido para ponerlo en el estado
+                            if (pedidosData.estado === "PENDIENTE") {
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightred"
+                                );
                             } else if (
-                                producto.estados_productos === "EN PREPARACION"
+                                pedidosData.estado === "EN PREPARACION"
                             ) {
-                                estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightyellow"
+                                );
                             } else {
-                                estadoClass = "badges bg-lightgreen"; 
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightgreen"
+                                );
                             }
 
-                            tableHTML += `
+                            // Generar filas de productos usando productos_detallados
+                            let tableHTML;
+                            // Variable para almacenar la clase según el estado del producto
+                            let estadoClass = "";
+                            console.log(pedidosData.productos_detallados);
+                            // iteramos la data para mostrar los datos de los productos en la tabla
+                            pedidosData.productos_detallados.forEach(
+                                (producto) => {
+                                    const cantidad = parseFloat(
+                                        producto.cantidad
+                                    );
+                                    const precio = parseFloat(producto.precio);
+                                    const subtotal = cantidad * precio;
+                                    totalPedido += subtotal;
+
+                                    // Comprobación del estado del producto y asignación de la clase correspondiente
+                                    if (
+                                        producto.estados_productos ===
+                                        "PENDIENTE"
+                                    ) {
+                                        estadoClass = "badges bg-lightred"; // Clase para 'PENDIENTE'
+                                    } else if (
+                                        producto.estados_productos ===
+                                        "EN PREPARACION"
+                                    ) {
+                                        estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
+                                    } else {
+                                        estadoClass = "badges bg-lightgreen";
+                                    }
+
+                                    tableHTML += `
                             <tr>
                                 <td>${producto.nombre_producto}</td>
                                 <td>${cantidad}</td>
                                 <td>$${precio.toFixed(2)}</td>
                                 <td>$${subtotal.toFixed(2)}</td>
-                               <td><span class="${estadoClass}">${producto.estados_productos}</span>
+                               <td><span class="${estadoClass}">${
+                                        producto.estados_productos
+                                    }</span>
                                 
                             </td>
                             </tr>
                         `;
-                        });
-                        $("#notas-pedido-detalle").text(
-                            pedidosData.notas_general_pedido
-                        );
-                        $("#total-pedido-detalle").text(`$${totalPedido}`);
+                                }
+                            );
+                            $("#notas-pedido-detalle").text(
+                                pedidosData.notas_general_pedido
+                            );
+                            $("#total-pedido-detalle").text(`$${totalPedido}`);
 
-                        // Insertar la tabla en el DOM
-                        $("#detalles-pedidos-table tbody").html(tableHTML);
+                            // Insertar la tabla en el DOM
+                            $("#detalles-pedidos-table tbody").html(tableHTML);
+                        } else {
+                            console.log(
+                                "response.data está vacío o es undefined"
+                            );
+                        }
                     } else {
-                        console.log("response.data está vacío o es undefined");
+                        console.log("No se encontraron datos o hubo un error.");
                     }
-                } else {
-                    console.log("No se encontraron datos o hubo un error.");
-                }
-            },
-            error: function (xhr, status, error) {
-                console.error(
-                    "Error en la solicitud AJAX: " + status + " - " + error
-                );
-            },
-            complete: function () {
-                $("#modalFormCreateProduct").modal("show");
-            },
-        });
-        
-        console.log("Visualizando pedido:", codigoPedido);
-        $("#visualizarDetallesPedidosModal").modal("show");
-    });
+                },
+                error: function (xhr, status, error) {
+                    console.error(
+                        "Error en la solicitud AJAX: " + status + " - " + error
+                    );
+                },
+                complete: function () {
+                    $("#modalFormCreateProduct").modal("show");
+                },
+            });
+
+            console.log("Visualizando pedido:", codigoPedido);
+            $("#visualizarDetallesPedidosModal").modal("show");
+        }
+    );
 
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
@@ -620,7 +648,6 @@ $(document).ready(function() {
                     }).then((result) => {
                         // No cerrar el modal en caso de error
                         if (result.isConfirmed) {
-                           
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
@@ -643,6 +670,79 @@ $(document).ready(function() {
                     }
                 });
             },
+        });
+    });
+
+    // Creamos la funcion para eliminar un pedido
+    $("#data-pedidos").on("click", ".botonEliminar", function (e) {
+        // quitamos el evento por defecto de los formularios
+        e.preventDefault();
+        const eliminarPedidoBtn = $(this);
+        const idPedido = eliminarPedidoBtn.data("id");
+        const idMesa = eliminarPedidoBtn.data('idmesa');
+        console.log(idMesa);
+
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
+                eliminarPedidoBtn.prop("disabled", true);
+                $.ajax({
+                    url: baseUrl + "pedidos/borrarPedido",
+                    type: "POST",
+                    dataType: "json",
+                    data: { idPedido: idPedido, idMesa: idMesa },
+                    success: function (response) {
+                        console.log(response);
+                        let data = response;
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTablePedidos.ajax.reload(null, false);
+                                    dataTableMesasPedidos.ajax.reload(null, false);
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then(() => {
+                                // habilitamos nuevamente el error si sucede un error
+                                eliminarPedidoBtn.prop("disabled", true);
+                            });
+                        }
+                    },
+
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then(() => {
+                            // habilitamos nuevamente el error si sucede un error
+                            eliminarPedidoBtn.prop("disabled", true);
+                        });
+                    },
+                });
+            }
         });
     });
 });

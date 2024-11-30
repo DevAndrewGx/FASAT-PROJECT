@@ -228,6 +228,7 @@ $(document).ready(function () {
                         var mesaData = response.data;
                         // seteamos la data en los campos
                         $("#numeroMesa").val(mesaData.numero_mesa);
+                        $("#capacidad").val(mesaData.capacidad);
                         $("#estado").val(mesaData.estado);
                     } else {
                         console.log("response.data está vacío o es undefined");
