@@ -338,6 +338,8 @@ ul li {
     text-indent: 0; /* No muevas el ícono fuera del contenedor */
 }
 
+
+
 /* Flecha para colapsar/expandir */
 .main-wrapper .left-section .logo .bx {
     font-size: 24px;
@@ -378,16 +380,15 @@ ul li {
     width: 1px;
     opacity: 1;
 }
-/* 
-.sidebar-collapsed .left-section .logo .bx.bxs-chevron-left-circle {
-    display: none;
+
+
+.left-section {
+    transition: none; /* Elimina animaciones innecesarias */
 }
 
-.sidebar-collapsed .left-section .logo .bx.bxs-chevron-right-circle {
-    display: inline-block;
-} */
-
-
+.sidebar-collapsed .left-section {
+    transition: none; /* Aplica solo los cambios directamente */
+}
 
 
 header {

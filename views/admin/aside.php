@@ -39,19 +39,13 @@
                 Inventario
             </a>
         </div>
-        <div class="item">
-            <a href="#">
-                <i class='bx bx-cog'></i>
-                Settings
-            </a>
-        </div>
 
     </div>
 
     <div class="log-out sidebar">
         <div class="item">
             <i class='bx bx-log-out'></i>
-            <a href="../../sing-up/login.html">Log-out</a>
+            <a href="<?php echo constant("URL"); ?>logout">Cerrar Sesion</a>
         </div>
     </div>
 </aside>

@@ -47,11 +47,10 @@
                             </div>
                             <hr class="m-0">
                             <a class="dropdown-item" href="<?php echo constant('URL') ?>views/admin/perfil.html"> <img src="<?php echo constant('URL'); ?>public/imgs/icons/user.svg" alt="user">
-                                My
-                                Profile</a>
+                                Mi Perfil</a>
                             <a class="dropdown-item" href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/settings.svg" alt="user">Settings</a>
                             <hr class="m-0">
-                            <a class="dropdown-item logout pb-0" href="<?php echo constant("URL"); ?>logout"><img src="<?php echo constant('URL'); ?>public/imgs/icons/log-out.svg" alt="logout">Logout</a>
+                            <a class="dropdown-item logout pb-0" href="<?php echo constant("URL"); ?>logout"><img src="<?php echo constant('URL'); ?>public/imgs/icons/log-out.svg" alt="logout">Cerrar Sesion</a>
                         </div>
                 </li>
             </ul>

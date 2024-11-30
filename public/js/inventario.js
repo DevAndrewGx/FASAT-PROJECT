@@ -308,11 +308,12 @@ $(document).ready(function () {
 
     // funcion para eliminar un producto - ADMIN
     $("#data-productos").on("click", ".botonEliminar", function () {
-        // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
-        $(this).prop("disabled", true);
-        console.log("Its workin.........................");
+
+
+        // guardamos la referencia al boton actual
+        const eliminarProductoBtn = $(this);
         // obtenemos el id del producto del boton
-        id_producto = $(this).data("id");
+        id_producto = eliminarProductoBtn.data("id");
         // creamos un formdata para agregar el id y evitar utilizar jsonStringfy
         let formData = new FormData();
 
@@ -329,6 +330,8 @@ $(document).ready(function () {
             allowOutsideClick: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
+                eliminarProductoBtn.prop("disabled", true);
                 $.ajax({
                     url: baseUrl + "productos/borrarProducto",
                     type: "POST",
@@ -357,10 +360,9 @@ $(document).ready(function () {
                                 icon: "error",
                                 allowOutsideClick: false,
                                 confirmButtonText: "Ok",
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    //  mantener el modal abierto para que el usuario intente de nuevo
-                                }
+                            }).then(() => {
+                                // habilitamos nuevamente el error si sucede un error
+                                eliminarProductoBtn.prop("disabled", true);
                             });
                         }
                     },
@@ -371,10 +373,9 @@ $(document).ready(function () {
                             icon: "error",
                             allowOutsideClick: false,
                             confirmButtonText: "Ok",
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // mantener el modal abierto para que el usuario intente de nuevo
-                            }
+                        }).then(() => {
+                            // habilitamos nuevamente el error si sucede un error
+                            eliminarProductoBtn.prop("disabled", true);
                         });
                     },
                 });

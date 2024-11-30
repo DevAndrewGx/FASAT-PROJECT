@@ -4,57 +4,58 @@ const arrowLeft = document.querySelector(
 const sideBar = document.querySelector(".left-section");
 const pageWrapper = document.querySelector(".main-wrapper .page-wrapper");
 
+
+document.querySelectorAll(".left-section .sidebar .item a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+        // Mantén el estado de colapsado
+        const isCollapsed = sideBar.classList.contains("close");
+        localStorage.setItem("sidebar-collapsed", isCollapsed);
+
+        // Deja que la navegación continúe sin afectar la barra lateral
+    });
+});
+
+
 // Función para actualizar la interfaz según el estado almacenado
 function setSidebarState(collapsed) {
-    // Añadir un pequeño retraso para evitar el parpadeo
-    setTimeout(() => {
-        if (collapsed) {
-            // Añadir clase de colapsado inmediatamente
-            document.documentElement.classList.add("sidebar-collapsed");
-            sideBar.classList.add("close");
+    if (collapsed) {
+        document.documentElement.classList.add("sidebar-collapsed");
+        sideBar.classList.add("close");
+        pageWrapper?.classList.add("close");
 
-            if (pageWrapper) {
-                pageWrapper.classList.add("close");
-            }
+        arrowLeft?.classList.replace(
+            "bxs-chevron-left-circle",
+            "bxs-chevron-right-circle"
+        );
+    } else {
+        document.documentElement.classList.remove("sidebar-collapsed");
+        sideBar.classList.remove("close");
+        pageWrapper?.classList.remove("close");
 
-            // Cambiar la clase de la flecha
-            if (arrowLeft) {
-                arrowLeft.classList.remove("bxs-chevron-left-circle");
-                arrowLeft.classList.add("bxs-chevron-right-circle");
-            }
-        } else {
-            // Lógica para estado expandido si es necesario
-            document.documentElement.classList.remove("sidebar-collapsed");
-            sideBar.classList.remove("close");
-
-            if (pageWrapper) {
-                pageWrapper.classList.remove("close");
-            }
-
-            if (arrowLeft) {
-                arrowLeft.classList.remove("bxs-chevron-right-circle");
-                arrowLeft.classList.add("bxs-chevron-left-circle");
-            }
-        }
-    }, 50); // Pequeño retraso de 50ms para evitar el parpadeo
+        arrowLeft?.classList.replace(
+            "bxs-chevron-right-circle",
+            "bxs-chevron-left-circle"
+        );
+    }
 }
+
 
 // Al cargar la página, aplica el estado almacenado lo más pronto posible
 function initSidebarState() {
     const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
 
-    // Añadir clase de colapsado antes de que la página termine de cargar
+    // Aplica las clases inmediatamente
     if (isCollapsed) {
         document.documentElement.classList.add("sidebar-collapsed");
-        if (sideBar) sideBar.classList.add("close");
-        if (pageWrapper) pageWrapper.classList.add("close");
+        sideBar?.classList.add("close");
+        pageWrapper?.classList.add("close");
     }
 
-    // Esperar a que el DOM esté completamente cargado para ajustes finales
     document.addEventListener("DOMContentLoaded", () => {
-        setSidebarState(isCollapsed);
+        setSidebarState(isCollapsed); // Ajustes finales si es necesario
     });
 }
+
 
 // Iniciar el estado de la sidebar lo antes posible
 initSidebarState();
