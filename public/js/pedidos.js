@@ -1,3 +1,6 @@
+// Importa la función desde mesas.js
+import { cargarMesasPorEstado } from "./mesas.js";
+
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     // creamos un arreglo para guardar la data de los items del pedido
@@ -431,17 +434,17 @@ $(document).ready(function () {
                                     }
 
                                     tableHTML += `
-                            <tr>
-                                <td>${producto.nombre_producto}</td>
-                                <td>${cantidad}</td>
-                                <td>$${precio.toFixed(2)}</td>
-                                <td>$${subtotal.toFixed(2)}</td>
-                               <td><span class="${estadoClass}">${
+                                    <tr>
+                                        <td>${producto.nombre_producto}</td>
+                                        <td>${cantidad}</td>
+                                        <td>$${precio.toFixed(2)}</td>
+                                        <td>$${subtotal.toFixed(2)}</td>
+                                    <td><span class="${estadoClass}">${
                                         producto.estados_productos
                                     }</span>
-                                
-                            </td>
-                            </tr>
+                                        
+                                    </td>
+                                    </tr>
                         `;
                                 }
                             );
@@ -478,6 +481,12 @@ $(document).ready(function () {
 
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
+        // actualizamos la data del modal
+        $("#titleModal").html("Nuevo Pedido");
+        $(".modal-header")
+            .removeClass("headerUpdate")
+            .addClass("headerRegister");
+        $("#btnText").text("Crear");
         // cancelamos el evento por default ya que lo estamos enviando desde un formulario
         e.preventDefault();
         // guardamos la data que viene de los input
@@ -523,7 +532,9 @@ $(document).ready(function () {
             <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-id="${idProducto}" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
                 <div class="px-2">
                     <strong>${productoNombre}</strong><br>
-                    <span>Cantidad: ${cantidad} x $${precio.toFixed(2)} = $${subtotal}</span><br>
+                    <span>Cantidad: ${cantidad} x $${precio.toFixed(
+            2
+        )} = $${subtotal}</span><br>
                     <span>Notas: ${notas}</span>
                 </div>
                 <div>
@@ -664,7 +675,6 @@ $(document).ready(function () {
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
-                            
                         }
                     });
                 }
@@ -800,89 +810,184 @@ $(document).ready(function () {
         }
     });
 
-   $(document).on("click", "#actualizar-pedido-btn", function (e) {
-       e.preventDefault();
+    // utilizamos esta esta funcion para actualizar un producto y mostrarlo en el DOM actualizado
+    $(document).on("click", "#actualizar-pedido-btn", function (e) {
+        e.preventDefault();
 
-       const idProducto = parseInt($(this).attr("data-id"));
-       const index = pedidoProductos.findIndex(
-           (p) => p.idProducto === idProducto
-       );
+        const idProducto = parseInt($(this).attr("data-id"));
+        const index = pedidoProductos.findIndex(
+            (p) => p.idProducto === idProducto
+        );
 
-       if (index === -1) {
-           alert("Error: No se encontró el producto para actualizar.");
-           return;
-       }
+        if (index === -1) {
+            alert("Error: No se encontró el producto para actualizar.");
+            return;
+        }
 
-       const cantidad = parseInt($("#cantidadItems").val()) || 1;
-       const notas = $("#notasItems").val() || "Sin notas";
-       console.log(idProducto);
-       const idCategoriaSelect = $("#categoriaPedido option:selected").val();
-       const idProductoSelect = parseInt($("#producto option:selected").val());
-       console.log(idProductoSelect);
-       const productoNombre = $("#producto option:selected").text();
-       console.log(productoNombre);
+        const cantidad = parseInt($("#cantidadItems").val()) || 1;
+        const notas = $("#notasItems").val() || "Sin notas";
+        console.log(idProducto);
+        const idCategoriaSelect = $("#categoriaPedido option:selected").val();
+        const idProductoSelect = parseInt($("#producto option:selected").val());
+        console.log(idProductoSelect);
+        const productoNombre = $("#producto option:selected").text();
+        console.log(productoNombre);
 
-       const precioProducto = parseFloat(
-           $("#producto option:selected").attr("data-precio")
-       ); // Extraer el nuevo precio del producto seleccionado
+        const precioProducto = parseFloat(
+            $("#producto option:selected").attr("data-precio")
+        ); // Extraer el nuevo precio del producto seleccionado
 
-       // Actualizar los datos del producto en el array
-       pedidoProductos[index].cantidad = cantidad;
-       pedidoProductos[index].idCategoria = idCategoriaSelect;
-       pedidoProductos[index].idProducto = idProductoSelect;
-       pedidoProductos[index].notas = notas;
-       pedidoProductos[index].nombre = productoNombre;
-       pedidoProductos[index].precio = precioProducto; // Actualizar el precio en el array
-       pedidoProductos[index].subtotal = (precioProducto * cantidad).toFixed(2);
+        // Actualizar los datos del producto en el array
+        pedidoProductos[index].cantidad = cantidad;
+        pedidoProductos[index].idCategoria = idCategoriaSelect;
+        pedidoProductos[index].idProducto = idProductoSelect;
+        pedidoProductos[index].notas = notas;
+        pedidoProductos[index].nombre = productoNombre;
+        pedidoProductos[index].precio = precioProducto; // Actualizar el precio en el array
+        pedidoProductos[index].subtotal = (precioProducto * cantidad).toFixed(
+            2
+        );
 
-       // Actualizar el producto en el DOM
-       const productoElemento = $(`.item-pedido[data-id="${idProducto}"]`);
+        // Actualizar el producto en el DOM
+        const productoElemento = $(`.item-pedido[data-id="${idProducto}"]`);
 
-       if (!productoElemento.length) {
-           alert("Error: No se encontró el producto en el DOM.");
-           return;
-       }
+        if (!productoElemento.length) {
+            alert("Error: No se encontró el producto en el DOM.");
+            return;
+        }
 
-       // Actualizar el nombre del producto
-       productoElemento.find("strong").text(productoNombre);
+        // Actualizar el nombre del producto
+        productoElemento.find("strong").text(productoNombre);
 
-       // Actualizar la cantidad, precio y subtotal
-       productoElemento
-           .find("span:first")
-           .text(
-               `Cantidad: ${cantidad} x $${precioProducto.toFixed(2)} = $${
-                   pedidoProductos[index].subtotal
-               }`
-           );
+        // Actualizar la cantidad, precio y subtotal
+        productoElemento
+            .find("span:first")
+            .text(
+                `Cantidad: ${cantidad} x $${precioProducto.toFixed(2)} = $${
+                    pedidoProductos[index].subtotal
+                }`
+            );
 
-       // Actualizar las notas
-       productoElemento.find("span:last").text(`Notas: ${notas}`);
-       // Recalcular el total
-       const total = pedidoProductos.reduce(
-           (sum, prod) => sum + parseFloat(prod.subtotal),
-           0
-       );
+        // Actualizar las notas
+        productoElemento.find("span:last").text(`Notas: ${notas}`);
+        // Recalcular el total
+        const total = pedidoProductos.reduce(
+            (sum, prod) => sum + parseFloat(prod.subtotal),
+            0
+        );
 
-       // Actualizar el data-id en el DOM con el nuevo idProducto
-       productoElemento.attr("data-id", idProductoSelect);
+        // Actualizar el data-id en el DOM con el nuevo idProducto
+        productoElemento.attr("data-id", idProductoSelect);
 
-       console.log(pedidoProductos);
-       $("#totalPedido").text(`$${total.toFixed(2)}`);
+        console.log(pedidoProductos);
+        $("#totalPedido").text(`$${total.toFixed(2)}`);
 
-       // Cambiar el botón de vuelta a "Agregar Producto"
-       $("#actualizar-pedido-btn")
-           .off("click") // Con el off limpiamos el evento anterior para que no hayan bugs raros
-           .attr("id", "agregar-pedido-btn")
-           .html("Agregar Producto")
-           .attr("data-id", $(this).closest(".item-pedido").attr("data-id"));
+        // Cambiar el botón de vuelta a "Agregar Producto"
+        $("#actualizar-pedido-btn")
+            .off("click") // Con el off limpiamos el evento anterior para que no hayan bugs raros
+            .attr("id", "agregar-pedido-btn")
+            .html("Agregar Producto")
+            .attr("data-id", $(this).closest(".item-pedido").attr("data-id"));
 
-       // Limpiar el formulario
-       $("#producto").val("#");
-       $("#categoriaPedido").val("#");
-       $("#cantidadItems").val("");
-       $("#notasItems").val("");
-   });
+        // Limpiar el formulario
+        $("#producto").val("#");
+        $("#categoriaPedido").val("#");
+        $("#cantidadItems").val("");
+        $("#notasItems").val("");
+    });
 
+    // creamos esta funcion para actualizar toda la data de un pedido
+    $("#data-pedidos").on("click", ".botonActualizar", function (e) {
+        // obtenemos el codigo del pedido
+        let codigoPedido = $(this).data("codigopedido");
 
+        // actualizamos los campos del modal para actualizar el pedido
+        $("#titleModal").html("Actualizar Pedido");
 
+        $(".title-products").text("Actualizar Productos");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
+
+        // creamos la peticion para enviar el codigo del producto y asi setearlos en los campos del pedido para actualizarlos
+        $.ajax({
+            url: baseUrl + "pedidos/consultarPedido",
+            type: "POST",
+            dataType: "json",
+            data: { codigoPedido: codigoPedido },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        let pedidoData = response.data;
+                        console.log(pedidoData.id_mesa);
+                        console.log(pedidoData.numero_mesa);
+
+                        // seteamos la data en los campos
+                        $("#codigo-pedido").text(pedidoData.codigo_pedido);
+                        $("#fecha-hora").text(pedidoData.fecha_hora);
+
+                        // cargamos la mesa del pedido al select ya que solo nos trae las mesas disponible por eso dividmos la funcion por aparte en mesas
+                        cargarMesasPorEstado("DISPONIBLE", pedidoData);
+
+                        $("#numeroPersonas").val(pedidoData.personas);
+                        let template = "";
+                        let subtotal = 0;
+
+                        // itereamos sobre el array productos_detallados para mostrar los productos del pedido
+                        pedidoData.productos_detallados.forEach((producto) => {
+                            subtotal = (
+                                producto.precio * producto.cantidad
+                            ).toFixed(2);
+                            console.log(subtotal);
+                            template += `
+                                <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-id="${
+                                    producto.idProducto
+                                }" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
+                                    <div class="px-2">
+                                        <strong>${
+                                            producto.nombre_producto
+                                        }</strong><br>
+                                        <span>Cantidad: ${
+                                            producto.cantidad
+                                        } x $${parseFloat(
+                                producto.precio
+                            ).toFixed(2)} = $${subtotal}</span><br>
+                                        <span>Notas: ${
+                                            producto.notas_producto
+                                        }</span>
+                                    </div>
+                                    <div>
+                                        <button id="actualizar-producto" class="btn" style="background: #28c76f; color: #fff;">Actualizar</button>
+                                        <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                
+                                </div>
+                            `;
+
+                            total += parseFloat(subtotal);
+                        });
+
+                        // Actualizamos el total de pedido
+                        $("#totalPedido").text(`$${total.toFixed(2)}`);
+
+                        $("#listaProductos").html(template);
+                        // mostramos el modal
+                        $("#generarPedidoModal").modal("show");
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+        });
+    });
 });

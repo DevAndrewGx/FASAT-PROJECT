@@ -149,10 +149,10 @@
                     <a class="me-3 visualizar-pedido-eye" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-codigo="'. $arrayDataPedidos[$i]['codigoPedido'].'" >
                         <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                     </a>
-                    <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '"">
+                    <a class="me-3 botonActualizar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-codigoPedido = "'. $arrayDataPedidos[$i]['codigo_pedido'].'">
                         <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                     </a>
-                    <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-idMesa="' . $arrayDataPedidos[$i]['id_mesa'] . '">
+                    <a class="me-3 confirm-text botonEliminar" href="#" data-id="' . $arrayDataPedidos[$i]['id_pedido'] . '" data-idMesa="' . $arrayDataPedidos[$i]['id_mesa'] . '" data-codigoPedido = "' . $arrayDataPedidos[$i]['codigo_pedido'] . '">
                         <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                     </a>
                 ';

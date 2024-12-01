@@ -105,7 +105,7 @@ $categorias = $this->d['categorias'];
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister d-flex justify-content-between align-items-center p-3">
-                    <h5 class="modal-title fw-bold" id="orderModalLabel">Nuevo Pedido</h5>
+                    <h5 class="modal-title fw-bold" id="titleModal">Nuevo Pedido</h5>
 
                     <div class="d-flex flex-column align-items-end px-4">
                         <h4 class="fw-bold mb-0" id="codigo-pedido"></h4>
@@ -363,7 +363,7 @@ $categorias = $this->d['categorias'];
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
 
 </body>
 

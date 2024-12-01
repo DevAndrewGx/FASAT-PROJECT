@@ -59,6 +59,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 m.capacidad,
                 p.id_pedido,
                 p.codigo_pedido,
+                p.fecha_hora,
                 p.total,
                 p.estado AS estado_pedido,
                 p.personas,
@@ -67,6 +68,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 u.nombres,
                 GROUP_CONCAT(pp.id_producto) AS productos,
                 GROUP_CONCAT(pr.nombre) AS nombres_productos, 
+                GROUP_CONCAT(pp.notas_producto) AS notas_producto, 
                 GROUP_CONCAT(pp.cantidad) AS cantidades,
                 GROUP_CONCAT(pp.precio) AS precios,
                 GROUP_CONCAT(pp.estado_producto) AS estados_productos
@@ -87,6 +89,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 $productos = explode(',', $datos['productos']);
                 $cantidades = explode(',', $datos['cantidades']);
                 $nombres = explode(',', $datos['nombres_productos']);
+                $notas_producto = explode(',', $datos['notas_producto']);
                 $estados_productos = explode(',', $datos['estados_productos']);
                 $precios = explode(',', $datos['precios']);
 
@@ -97,6 +100,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     $productosDetallados[] = [
                         'id_producto' => $productos[$i],
                         'nombre_producto' => $nombres[$i],
+                        'notas_producto' => $notas_producto[$i],
                         'cantidad' => $cantidades[$i],
                         'estados_productos' => $estados_productos[$i],
                         'precio' => $precios[$i]
@@ -204,6 +208,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     p.estado AS estado_pedido,
                     p.personas,
                     p.notas_pedidos,
+                    p.fecha_hora,
                     u.documento,
                     u.nombres,
                     GROUP_CONCAT(pp.id_producto) AS productos,

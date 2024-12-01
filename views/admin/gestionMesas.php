@@ -136,7 +136,7 @@ $user = $this->d['user'];
 
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
 </body>
 
 </html>
