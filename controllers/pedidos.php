@@ -214,6 +214,43 @@
             }
         }
 
+        // funcion para traer la data de un producto en un pedido
+        function consultarProductoPedido() {
+            // validamos si existe el id enviado desde la petición
+            if (!$this->existPOST(['id_producto'])) {
+                error_log('Pedidos::consultarProducto -> No se obtuvo el id del producto correctamente');
+                echo json_encode(['status' => false, 'message' => "Algunos parametros enviados estan vacios, intente nuevamente!"]);
+                return false;
+            }
+
+            if ($this->user == NULL) {
+                error_log('Pedidos::consultarProductos -> El usuario de la session esta vacio');
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                return;
+            }
+            // creamos un nuevo objeto de productos
+            $productoObj = new ProductosJoinModel();
+            $res = $productoObj->consultar($this->getPost('id_producto'));
+
+            $arrayData =  json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+
+            if ($arrayData) {
+                error_log('Pedidos::consultarProductos -> El producto se obtuvo correctamente-> ' . $res);
+                $response = [
+                    "data" => $arrayData,
+                    "status" => true,
+                    "message" => "Se obtuvo la data correctamente"
+                ];
+                echo json_encode($response, JSON_UNESCAPED_UNICODE);
+                die();
+            } else {
+                error_log('Users::borrarUser -> No se pudo obtener el Producto correctamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo obtener el Producto!"]);
+                return false;
+            }
+        }
+        // funcion para borrar un pedido
         function borrarPedido() {
             // validamos si el id enviado desde la peticion existe
             if (!$this->existPOST(['idPedido'])) {
@@ -254,6 +291,9 @@
                 return false;
             }
         }
+
+
+        
   
 
         // function para realizar el filtro para consultar los productos asociados a una categoria

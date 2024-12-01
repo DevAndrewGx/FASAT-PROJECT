@@ -141,7 +141,7 @@ $categorias = $this->d['categorias'];
                             </div>
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    <h5 class="mb-3">Agregar Productos</h5>
+                                    <h5 class="mb-3 title-products">Agregar Productos</h5>
                                     <div class="row mb-2">
                                         <div class="form-group col-md-6">
                                             <label for="categoriaPedido" class="form-label">Categoria</label>

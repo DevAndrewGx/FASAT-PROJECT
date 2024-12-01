@@ -484,6 +484,8 @@ $(document).ready(function () {
         console.log("working.....");
         const idProducto = $("#producto option:selected").val();
         console.log(idProducto);
+        const idCategoria = $("#categoriaPedido option:selected").val();
+        console.log(idProducto);
         const productoNombre = $("#producto option:selected").text();
         const cantidad = parseInt($("#cantidadItems").val()) || 1;
         const notas = $("#notasItems").val() || "Sin notas";
@@ -506,6 +508,7 @@ $(document).ready(function () {
 
         pedidoProductos.push({
             idProducto: parseInt(idProducto),
+            idCategoria: parseInt(idCategoria),
             nombre: productoNombre,
             cantidad: cantidad,
             precio: precio,
@@ -523,7 +526,11 @@ $(document).ready(function () {
                     <span>Cantidad: ${cantidad} x $${precio.toFixed(2)} = $${subtotal}</span><br>
                     <span>Notas: ${notas}</span>
                 </div>
-                <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                <div>
+                    <button id="actualizar-producto" class="btn" style="background: #28c76f; color: #fff;">Actualizar</button>
+                    <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                </div>
+                
             </div>
         `);
 
@@ -679,7 +686,7 @@ $(document).ready(function () {
         e.preventDefault();
         const eliminarPedidoBtn = $(this);
         const idPedido = eliminarPedidoBtn.data("id");
-        const idMesa = eliminarPedidoBtn.data('idmesa');
+        const idMesa = eliminarPedidoBtn.data("idmesa");
         console.log(idMesa);
 
         Swal.fire({
@@ -712,7 +719,10 @@ $(document).ready(function () {
                             }).then((result) => {
                                 if (result.isConfirmed) {
                                     dataTablePedidos.ajax.reload(null, false);
-                                    dataTableMesasPedidos.ajax.reload(null, false);
+                                    dataTableMesasPedidos.ajax.reload(
+                                        null,
+                                        false
+                                    );
                                 }
                             });
                         } else {
@@ -745,4 +755,128 @@ $(document).ready(function () {
             }
         });
     });
+
+    // esta funcion nos permitira actualizar un producto
+    // Escuchar el evento de clic en el botón "Actualizar"
+    $(document).on("click", "#actualizar-producto", function (e) {
+        e.preventDefault();
+
+        $(".title-products").html("Actualizar Productos");
+        $("#agregar-pedido-btn")
+            .off("click")
+            .attr("id", "actualizar-pedido-btn")
+            .html("Actualizar Producto")
+            .attr("data-id", $(this).closest(".item-pedido").attr("data-id")); // Asignamos el data-id al botón
+
+        // Obtenemos el elemento padre (el producto en el DOM)
+        const itemPedido = $(this).closest(".item-pedido");
+
+        // Extraemos el ID del producto y la categoría
+        const idProducto = parseInt(itemPedido.attr("data-id"));
+        const producto = pedidoProductos.find(
+            (p) => p.idProducto === idProducto
+        );
+
+        if (producto) {
+            // Llenamos los campos del formulario con los datos del producto
+            $("#categoriaPedido").val(producto.idCategoria).trigger("change");
+
+            // Esperamos que las opciones del select de productos se carguen
+            setTimeout(() => {
+                $("#producto").val(producto.idProducto).trigger("change");
+            }, 500); // Ajusta este tiempo si es necesario
+
+            // Llenamos los otros campos
+            $("#cantidadItems").val(producto.cantidad);
+            $("#notasItems").val(producto.notas);
+        } else {
+            alert("No se encontró el producto seleccionado en el pedido.");
+        }
+    });
+
+   $(document).on("click", "#actualizar-pedido-btn", function (e) {
+       e.preventDefault();
+
+       const idProducto = parseInt($(this).attr("data-id"));
+       const index = pedidoProductos.findIndex(
+           (p) => p.idProducto === idProducto
+       );
+
+       if (index === -1) {
+           alert("Error: No se encontró el producto para actualizar.");
+           return;
+       }
+
+       const cantidad = parseInt($("#cantidadItems").val()) || 1;
+       const notas = $("#notasItems").val() || "Sin notas";
+       console.log(idProducto);
+       const idCategoriaSelect = $("#categoriaPedido option:selected").val();
+       const idProductoSelect = parseInt($("#producto option:selected").val());
+       console.log(idProductoSelect);
+       const productoNombre = $("#producto option:selected").text();
+       console.log(productoNombre);
+
+       const precioProducto = parseFloat(
+           $("#producto option:selected").attr("data-precio")
+       ); // Extraer el nuevo precio del producto seleccionado
+
+       // Actualizar los datos del producto en el array
+       pedidoProductos[index].cantidad = cantidad;
+       pedidoProductos[index].idCategoria = idCategoriaSelect;
+       pedidoProductos[index].idProducto = idProductoSelect;
+       pedidoProductos[index].notas = notas;
+       pedidoProductos[index].nombre = productoNombre;
+       pedidoProductos[index].precio = precioProducto; // Actualizar el precio en el array
+       pedidoProductos[index].subtotal = (precioProducto * cantidad).toFixed(2);
+
+       // Actualizar el producto en el DOM
+       const productoElemento = $(`.item-pedido[data-id="${idProducto}"]`);
+
+       if (!productoElemento.length) {
+           alert("Error: No se encontró el producto en el DOM.");
+           return;
+       }
+
+       // Actualizar el nombre del producto
+       productoElemento.find("strong").text(productoNombre);
+
+       // Actualizar la cantidad, precio y subtotal
+       productoElemento
+           .find("span:first")
+           .text(
+               `Cantidad: ${cantidad} x $${precioProducto.toFixed(2)} = $${
+                   pedidoProductos[index].subtotal
+               }`
+           );
+
+       // Actualizar las notas
+       productoElemento.find("span:last").text(`Notas: ${notas}`);
+       // Recalcular el total
+       const total = pedidoProductos.reduce(
+           (sum, prod) => sum + parseFloat(prod.subtotal),
+           0
+       );
+
+       // Actualizar el data-id en el DOM con el nuevo idProducto
+       productoElemento.attr("data-id", idProductoSelect);
+
+       console.log(pedidoProductos);
+       $("#totalPedido").text(`$${total.toFixed(2)}`);
+
+       // Cambiar el botón de vuelta a "Agregar Producto"
+       $("#actualizar-pedido-btn")
+           .off("click") // Con el off limpiamos el evento anterior para que no hayan bugs raros
+           .attr("id", "agregar-pedido-btn")
+           .html("Agregar Producto")
+           .attr("data-id", $(this).closest(".item-pedido").attr("data-id"));
+
+       // Limpiar el formulario
+       $("#producto").val("#");
+       $("#categoriaPedido").val("#");
+       $("#cantidadItems").val("");
+       $("#notasItems").val("");
+   });
+
+
+
 });
