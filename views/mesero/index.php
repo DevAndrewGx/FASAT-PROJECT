@@ -181,6 +181,18 @@ $categorias = $this->d['categorias'];
                                             <label for="notasItems" class="form-label">Notas Producto</label>
                                             <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
                                         </div>
+
+                                        <!-- creamos un elemento oculto para el estado pero solo se va mostrar cuando este en modo edicion en el pedido -->
+
+                                        <div class="form-group col-md-12 d-none estado-producto-container">
+                                            <label for="estadoProducto" class="form-label">Estado Producto</label>
+                                            <select name="estadoProducto" id="estadoProducto" class="form-control">
+                                                <option value="#">Selecciona un estado</option>
+                                                <option value="PENDIENTE">Pendiente</option>
+                                                <option value="EN PREPARACION">En preparacion</option>
+                                                <option value="COMPLETADO">Completado</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
                                 </div>

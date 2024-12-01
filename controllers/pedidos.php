@@ -12,6 +12,50 @@
             $this->user = $this->getDatosUsuarioSession();
         }
 
+        // creamos la funcion para actualizar un pedido
+
+        function actualizarPedido() { 
+            // decodificamos la data que viene del formulario para manipularla en el contralador
+            $pedido = json_decode($_POST['pedido'], true);
+
+            // Verifica que los campos clave existan en el array $pedido
+            if (!$this->existKeys($pedido, ['codigoPedido',
+                'fechaHora',
+                'numeroMesa',
+                'idMesero',
+                'numeroPersonas',
+                'notasPedido',
+                'total'
+            ])) {
+                echo json_encode(['status' => false, 'message' => "Faltan datos obligatorios en el pedido."]);
+                return;
+            }
+
+            if ($this->user == NULL) {
+                error_log('Pedidos::crearPedio -> El usuario de la sesion esta vacio');
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                return;
+            }
+
+
+             // si no entra a niguna validacion, significa que la data y el usuario estan correctos
+            error_log('Pedidos::actualizarPedido -> Es posible actualizar un pedido');
+
+            $pedidoObj = new PedidosModel();
+
+
+            $pedidoObj->setCodigoPedido($pedido["codigoPedido"]);
+            $pedidoObj->setIdMesa($pedido["numeroMesa"]);
+            $pedidoObj->setIdMesero($pedido["idMesero"]);
+            $pedidoObj->setPersonas($pedido["numeroPersonas"]);
+            $pedidoObj->setNotasPedido($pedido["notasPedido"]);
+            $pedidoObj->setEstadoPedido("PENDIENTE");
+            $pedidoObj->setFechaHora($pedido["fechaHora"]);
+            $pedidoObj->setTotal($pedido["total"]);
+
+        }
+
         // creamos la funcion para crear un nuevo pedido
         function crearPedido() {
             // decodificamos la data que viene del formulario para manipularla en el contralador
@@ -157,7 +201,7 @@
                 ';
                 }
 
-                // retornamos la data en un arreglo asociativo con la data filtrada y asociada
+                // retornamos la data en un arreglo asociativo conconsultarPedido la data filtrada y asociada
                 $response = [
                     "draw" => $draw,
                     "recordsTotal" => $totalRegistros,
