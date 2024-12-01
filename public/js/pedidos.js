@@ -591,7 +591,7 @@ $(document).ready(function () {
         const idMesero = $("#idMesero").data("id");
         const numeroPersonas = $("#numeroPersonas").val();
         const notasPedido = $("#notasPedido").val();
-        const total = parseFloat($("#totalPedido").text().replace("$", ""));
+        total = parseFloat($("#totalPedido").text().replace("$", ""));
 
         console.log(estadoMesa);
         // creamos un JSON con toda la data del pedido
@@ -642,7 +642,13 @@ $(document).ready(function () {
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
-                            $("#generarPedidoModal")[0].reset();
+                            // Limpiar el modal
+                            $("#listaProductos").empty(); // Limpiar la lista de productos
+                            pedidoProductos = []; // Reiniciar el array de productos
+                            $("#numeroPersonas").val(0);
+                            $("#notasPedido").val(0);
+                            total = 0;
+                            $("#totalPedido").text("$0.00"); // Asegúrate de que el total se reinicie a 0
                         }
                     });
                 } else {
@@ -658,7 +664,7 @@ $(document).ready(function () {
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
-                            $("#generarPedidoModal")[0].reset();
+                            
                         }
                     });
                 }
