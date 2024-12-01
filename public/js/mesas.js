@@ -308,40 +308,43 @@ $(document).ready(function () {
     });
 });
 
-export function cargarMesasPorEstado(estado, mesaActual = null) {
+export function cargarMesasPorEstado(estado, mesaActual = null , editar = false) {
     return $.post(
         `${baseUrl}mesas/getTablasPorEstado`,
         { estado: estado },
         function (response) {
             let mesas = JSON.parse(response);
 
+            // Limpia las opciones previas
+            $("#numeroMesa").empty();
+
+            // Añade la opción por defecto
             let template = "<option value=''>Seleccione una mesa</option>";
 
             mesas.data.forEach((mesa) => {
-                // Si la mesa es la mesa actual, seleccionarla
+                // Genera las opciones correctamente
                 template += `
-                    <option data-estado="${mesa.estado}" value="${
-                    mesa.id_mesa
-                }" 
-                    ${mesa.id_mesa == mesaActual.id_mesa ? "selected" : ""}>
+                    <option data-estado="${mesa.estado}" value="${mesa.id_mesa}">
                         ${mesa.numeroMesa}
-                    </option>
-                `;
+                    </option>`;
             });
 
-            // Si la mesa actual no está en la lista de mesas disponibles, la agregamos
+            // Verifica el modo de edición
             if (
                 mesaActual &&
+                editar &&
                 !mesas.data.some((mesa) => mesa.id_mesa == mesaActual.id_mesa)
             ) {
-                console.log(mesaActual)
                 template += `
-                    <option value="${mesaActual.id_mesa}" selected>${mesaActual.numero_mesa}</option>
-                `;
+                    <option value="${mesaActual.id_mesa}" selected>
+                        ${mesaActual.numero_mesa}
+                    </option>`;
             }
 
-            $("#numeroMesa").html(template);
+            // Añade las opciones generadas al select
+            $("#numeroMesa").append(template);
         }
     );
 }
+
 

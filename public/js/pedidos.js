@@ -3,6 +3,8 @@ import { cargarMesasPorEstado } from "./mesas.js";
 
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    // utilizamos una bandera para indicar cuando esta en modo edicion y cuando no
+    let editar = false; 
     // creamos un arreglo para guardar la data de los items del pedido
     let pedidoProductos = [];
     // creamos la variable total para guardar el total
@@ -229,6 +231,13 @@ $(document).ready(function () {
     );
 
     $("#btnCrearPedido").on("click", function (e) {
+        // cancelamos el evento por default ya que lo estamos enviando desde un formulario
+        e.preventDefault();
+
+        // Limpia los campos y el listado de productos
+        limpiarCamposPedido();
+
+        console.log("Modo 'Crear' activado, campos y variables limpiados.");
         $.ajax({
             url: baseUrl + "pedidos/crearCodigoPedido", // Ruta para generar el código del pedido
             method: "GET", // Usamos GET para solo obtener el código
@@ -361,8 +370,7 @@ $(document).ready(function () {
                 success: function (response) {
                     if (response.status) {
                         if (response.data) {
-                            pedidosData = response.data;
-
+                            let pedidosData = response.data;
                             // seteamos la data en los campos
                             $("#codigo-pedido-detalle").text(
                                 pedidosData.codigo_pedido
@@ -481,14 +489,8 @@ $(document).ready(function () {
 
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
-        // actualizamos la data del modal
-        $("#titleModal").html("Nuevo Pedido");
-        $(".modal-header")
-            .removeClass("headerUpdate")
-            .addClass("headerRegister");
-        $("#btnText").text("Crear");
-        // cancelamos el evento por default ya que lo estamos enviando desde un formulario
-        e.preventDefault();
+        
+
         // guardamos la data que viene de los input
         console.log("working.....");
         const idProducto = $("#producto option:selected").val();
@@ -593,7 +595,7 @@ $(document).ready(function () {
     $("#enviar-pedido-btn").on("click", function (e) {
         // quitamos el efecto por default
         e.preventDefault();
-        console.log("its working bitch");
+        
         // Obtener los datos generales del pedido
         const codigoPedido = $("#codigo-pedido").text();
         const fechaHora = $("#fecha-hora").text();
@@ -650,16 +652,9 @@ $(document).ready(function () {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             dataTablePedidos.ajax.reload(null, false);
-                            $("#generarPedidoModal")
-                                .closest(".modal")
-                                .modal("hide");
-                            // Limpiar el modal
-                            $("#listaProductos").empty(); // Limpiar la lista de productos
-                            pedidoProductos = []; // Reiniciar el array de productos
-                            $("#numeroPersonas").val(0);
-                            $("#notasPedido").val(0);
-                            total = 0;
-                            $("#totalPedido").text("$0.00"); // Asegúrate de que el total se reinicie a 0
+                            $("#generarPedidoModal").closest(".modal").modal("hide");
+                            // llamamos la funcion para limpiar los datos
+                            limpiarCamposPedido();
                         }
                     });
                 } else {
@@ -826,12 +821,12 @@ $(document).ready(function () {
 
         const cantidad = parseInt($("#cantidadItems").val()) || 1;
         const notas = $("#notasItems").val() || "Sin notas";
-        console.log(idProducto);
+
         const idCategoriaSelect = $("#categoriaPedido option:selected").val();
+
         const idProductoSelect = parseInt($("#producto option:selected").val());
-        console.log(idProductoSelect);
+       
         const productoNombre = $("#producto option:selected").text();
-        console.log(productoNombre);
 
         const precioProducto = parseFloat(
             $("#producto option:selected").attr("data-precio")
@@ -898,9 +893,12 @@ $(document).ready(function () {
 
     // creamos esta funcion para actualizar toda la data de un pedido
     $("#data-pedidos").on("click", ".botonActualizar", function (e) {
+        // cambiamos el estado de editar ya que estamos en modo edicion
+        editar = true;
+
         // obtenemos el codigo del pedido
         let codigoPedido = $(this).data("codigopedido");
-
+        
         // actualizamos los campos del modal para actualizar el pedido
         $("#titleModal").html("Actualizar Pedido");
 
@@ -929,9 +927,13 @@ $(document).ready(function () {
                         $("#codigo-pedido").text(pedidoData.codigo_pedido);
                         $("#fecha-hora").text(pedidoData.fecha_hora);
 
-                        // cargamos la mesa del pedido al select ya que solo nos trae las mesas disponible por eso dividmos la funcion por aparte en mesas
-                        cargarMesasPorEstado("DISPONIBLE", pedidoData);
-
+                       
+                        // validamos que este en modo edicion para evitar problemas con el formulario de crear
+                        if(editar) {
+                            // cargamos la mesa del pedido al select ya que solo nos trae las mesas disponible por eso dividmos la funcion por aparte en mesas
+                            cargarMesasPorEstado("DISPONIBLE", pedidoData, editar);
+                        }
+                       
                         $("#numeroPersonas").val(pedidoData.personas);
                         let template = "";
                         let subtotal = 0;
@@ -974,8 +976,7 @@ $(document).ready(function () {
                         $("#totalPedido").text(`$${total.toFixed(2)}`);
 
                         $("#listaProductos").html(template);
-                        // mostramos el modal
-                        $("#generarPedidoModal").modal("show");
+                        
                     } else {
                         console.log("response.data está vacío o es undefined");
                     }
@@ -988,6 +989,32 @@ $(document).ready(function () {
                     "Error en la solicitud AJAX: " + status + " - " + error
                 );
             },
+            complete: function () {
+                // mostramos el modal
+                $("#generarPedidoModal").modal("show");
+            }
         });
     });
+
+   function limpiarCamposPedido() {
+       console.log("Limpiando lista de productos y campos...");
+
+       // Limpia el listado de productos en el DOM
+       $("#listaProductos").empty();
+
+       // Reinicia las variables globales
+       pedidoProductos = [];
+       total = 0;
+
+
+       // Resetea los campos del formulario
+       $("#numeroPersonas").val(0);
+       $("#notasPedido").val("");
+       $("#totalPedido").text("$0.00");
+       $("#producto").val("#");
+       $("#categoriaPedido").val("#");
+       $("#cantidadItems").val("");
+       $("#notasItems").val("");
+   }
+
 });

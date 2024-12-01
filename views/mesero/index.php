@@ -37,7 +37,7 @@ $categorias = $this->d['categorias'];
                         </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="#" class="btn btn-primary" id="btnCrearPedido" data-bs-toggle="modal" data-bs-target="#generarPedidoModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                        <a href="#" class="btn btn-primary" id="btnCrearPedido" onclick="openModalGenerateOrder();"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Crear Nuevo Pedido</a>
                     </div>
                 </div>
@@ -360,12 +360,12 @@ $categorias = $this->d['categorias'];
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
-    <script type="module" src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+
+
 
 </body>
-
 
 </html>

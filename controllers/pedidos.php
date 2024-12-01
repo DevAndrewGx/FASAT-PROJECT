@@ -78,11 +78,10 @@
                     echo json_encode(['status' => false, 'message' => "Intentelo nuevamente, error 500!"]);
                     return;
                 }
-            }
-            
+            } 
         }
-        // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
 
+        // creamos una funcion aparte para guardar la data relacionada de productos y pedidos
         function guardarProductoPedido($pedidoId, $productoId, $cantidad, $precio, $notas) {
             // validamos que la data que venga del formulario exista
             error_log('Pedidos::crearPedido -> Funcion para crear nuevos pedidos');

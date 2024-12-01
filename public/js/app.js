@@ -142,9 +142,8 @@ navegationItems.forEach((element) => {
 function openModalCreateUser() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document
-        .querySelector(".modal-header")
-        .classList.replace("headerUpdate", "headerRegister");
+    document.querySelector(".modal-header").classList.replace("headerUpdate", "headerRegister");
+    console.log(document.querySelector(".modal-header"));
     document
         .querySelector("#btnActionForm")
         .classList.replace("btn-info", "btn-primary");
@@ -195,4 +194,19 @@ function openModalCreateMesas() {
     document.querySelector("#titleModal").innerHTML = "Nueva Mesa";
     document.querySelector("#formMesas").reset();
     $("#modalFormMesas").modal("show");
+}
+
+function openModalGenerateOrder() { 
+      rowTable = "";
+
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    // document
+    //     .querySelector("#btnActionForm")
+    //     .classList.replace("btn-info", "btn-primary");
+    // document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Pedido";
+    document.querySelector("#formPedido").reset();
+    $("#generarPedidoModal").modal("show");
 }
