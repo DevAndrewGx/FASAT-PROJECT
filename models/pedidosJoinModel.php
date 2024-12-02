@@ -204,6 +204,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     m.estado AS estado_mesa,
                     m.capacidad,
                     p.id_pedido,
+                    p.id_mesero,
                     p.codigo_pedido,
                     p.total,
                     p.estado AS estado_pedido,
@@ -340,7 +341,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         $this->personas = $array['personas'];
         $this->estado = $array['estado_pedido'];
         $this->notas_general_pedido = $array['notas_pedidos'];
-        $this->notas_producto = $array['notas_producto'];
         $this->productos_detallados = $array['productos_detallados'];
         $this->fecha_hora = $array['fecha_hora'];
     }

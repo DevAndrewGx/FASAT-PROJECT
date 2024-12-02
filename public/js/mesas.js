@@ -314,6 +314,7 @@ export function cargarMesasPorEstado(estado, mesaActual = null , editar = false)
         { estado: estado },
         function (response) {
             let mesas = JSON.parse(response);
+            console.log(mesas);
 
             // Limpia las opciones previas
             $("#numeroMesa").empty();
@@ -330,17 +331,25 @@ export function cargarMesasPorEstado(estado, mesaActual = null , editar = false)
             });
 
             // Verifica el modo de edición
+            // console.error(mesaActual); 
+            // console.error(editar);
+            // console.error(mesas.data.some((mesa) =>  { 
+            //     mesa.id_mesa == mesaActual.id_mesa;
+            //     console.log(mesa.id_mesa);
+            //     console.log(mesaActual.id_mesa);
+            // }));
             if (
                 mesaActual &&
                 editar &&
                 !mesas.data.some((mesa) => mesa.id_mesa == mesaActual.id_mesa)
             ) {
+                console.log("Entra para actualizar la mesa y seleccionarla bb");
                 template += `
                     <option value="${mesaActual.id_mesa}" selected>
                         ${mesaActual.numero_mesa}
                     </option>`;
             }
-
+            console.log("ho hace nada mucho hp :(");
             // Añade las opciones generadas al select
             $("#numeroMesa").append(template);
         }

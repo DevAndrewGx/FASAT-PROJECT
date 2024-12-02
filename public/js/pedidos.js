@@ -7,6 +7,7 @@ $(document).ready(function () {
     let editar = false; 
     // creamos un arreglo para guardar la data de los items del pedido
     let pedidoProductos = [];
+    let pedidoCompleto = {};
     // creamos la variable total para guardar el total
     let total = null;
 
@@ -600,56 +601,59 @@ $(document).ready(function () {
 
         // validamos si esta en modo edicion para cambiar el codigo del pedido
         let editar = $(".modal-header").hasClass('headerUpdate') ? true : false;
-
         if(editar) { 
             console.log("Esta en modo edicion asi que puedes cambiar ciertas cosas bro");
-            let codigoPedido = $(this).data("codigopedido");
-            console.log(codigoPedido);
+            let codigoPedido = $("#codigo-pedido").text();
+            console.log(pedidoCompleto);
+        }else {
+            // Obtener los datos generales del pedido
+            const codigoPedido = $("#codigo-pedido").text();
+            const fechaHora = $("#fecha-hora").text();
+            const numeroMesa = $("#numeroMesa").val();
+            const estadoMesa = $("#numeroMesa option:selected").data("estado");
+            const idMesero = $("#idMesero").data("id");
+            const numeroPersonas = $("#numeroPersonas").val();
+            const notasPedido = $("#notasPedido").val();
+            total = parseFloat($("#totalPedido").text().replace("$", ""));
+
+            console.log(
+                "NOOOOOOOOOOO Esta en modo edicion asi que puedes cambiar ciertas cosas bro"
+            );
+            // creamos un JSON con toda la data del pedido
+            pedidoCompleto = {
+                codigoPedido: codigoPedido,
+                fechaHora: fechaHora,
+                numeroMesa: numeroMesa,
+                estadoMesa: estadoMesa,
+                idMesero: idMesero,
+                numeroPersonas: numeroPersonas,
+                notasPedido: notasPedido,
+                total: total,
+                pedidoProductos: pedidoProductos,
+            };
+            console.log(pedidoCompleto);
+
+            // validamos la data antes de ser enviada
+            // Validar antes de enviar
+            if (
+                !pedidoCompleto.numeroMesa ||
+                !pedidoCompleto.numeroPersonas ||
+                pedidoCompleto.pedidoProductos.length === 0
+            ) {
+                alert(
+                    "Por favor completa todos los campos y agrega al menos un producto."
+                );
+                return;
+            }
         }
         
-        // Obtener los datos generales del pedido
-        const codigoPedido = $("#codigo-pedido").text();
-        const fechaHora = $("#fecha-hora").text();
-        const numeroMesa = $("#numeroMesa").val();
-        const estadoMesa = $("#numeroMesa option:selected").data("estado");
-        const idMesero = $("#idMesero").data("id");
-        const numeroPersonas = $("#numeroPersonas").val();
-        const notasPedido = $("#notasPedido").val();
-        total = parseFloat($("#totalPedido").text().replace("$", ""));
-
-        console.log(estadoMesa);
-        // creamos un JSON con toda la data del pedido
-        const pedidoCompleto = {
-            codigoPedido: codigoPedido,
-            fechaHora: fechaHora,
-            numeroMesa: numeroMesa,
-            estadoMesa: estadoMesa,
-            idMesero: idMesero,
-            numeroPersonas: numeroPersonas,
-            notasPedido: notasPedido,
-            total: total,
-            pedidoProductos: pedidoProductos,
-        };
-        console.log(pedidoCompleto.idMesero);
-
-        // validamos la data antes de ser enviada
-        // Validar antes de enviar
-        if (
-            !pedidoCompleto.numeroMesa ||
-            !pedidoCompleto.numeroPersonas ||
-            pedidoCompleto.pedidoProductos.length === 0
-        ) {
-            alert(
-                "Por favor completa todos los campos y agrega al menos un producto."
-            );
-            return;
-        }
+        
 
         // Creamos una petición para procesarla y enviarla al servidor
         $.ajax({
-            url: editar ? baseUrl + "pedidos/crearPedido" : baseUrl + "pedidos/actualizarPedido",
+            url: editar ? baseUrl + "pedidos/actualizarPedido"  : baseUrl + "pedidos/crearPedido",
             method: "POST",
-            data: { pedido: JSON.stringify(pedidoCompleto) },
+            data: { pedido: JSON.stringify(pedidoCompleto)},
             success: function (response) {
                 // mostramos la alerta cuando la respuesta del servidor se devuelve correctamente
                 let data = JSON.parse(response);
@@ -663,6 +667,7 @@ $(document).ready(function () {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             dataTablePedidos.ajax.reload(null, false);
+                            dataTableMesasPedidos.ajax.reload(null, false);
                             $("#generarPedidoModal").closest(".modal").modal("hide");
                             // llamamos la funcion para limpiar los datos
                             limpiarCamposPedido();
@@ -944,6 +949,7 @@ $(document).ready(function () {
                     if (response.data) {
                         // Asumiendo que necesitas el primer elemento del array data
                         let pedidoData = response.data;
+                        console.log(pedidoData);
                         console.log(pedidoData.id_mesa);
                         console.log(pedidoData.numero_mesa);
 
@@ -953,6 +959,7 @@ $(document).ready(function () {
 
                         // validamos que este en modo edicion para evitar problemas con el formulario de crear
                         if (editar) {
+                            console.log(editar);
                             // cargamos la mesa del pedido al select ya que solo nos trae las mesas disponible por eso dividmos la funcion por aparte en mesas
                             cargarMesasPorEstado(
                                 "DISPONIBLE",
@@ -963,7 +970,9 @@ $(document).ready(function () {
 
                         $("#numeroPersonas").val(pedidoData.personas);
                         let template = "";
-                        let subtotal = 0;
+                        let subtotal;
+                        total = 0;
+                        
 
                         // Define un objeto con los mapeos de estados a clases CSS
                         const estadoClases = {
@@ -976,6 +985,7 @@ $(document).ready(function () {
                         // itereamos sobre el array productos_detallados para mostrar los productos del pedido
                         pedidoData.productos_detallados.forEach((producto) => {
                             // Obtén la clase correspondiente al estado o usa una clase por defecto
+                            subtotal = 0;
                             const claseEstado =
                                 estadoClases[
                                     producto.estados_productos.toLowerCase()
@@ -1010,26 +1020,48 @@ $(document).ready(function () {
                                 
                                 </div>
                             `;
-
+                            
                             total += parseFloat(subtotal);
+                            
                         });
 
-                        console.log(pedidoData.productos_detallados);
+                        // Rellena pedidoCompleto con los valores iniciales
+                        pedidoCompleto = {
+                            idPedido: pedidoData.id_pedido,
+                            codigoPedido: pedidoData.codigo_pedido,
+                            fechaHora: pedidoData.fecha_hora,
+                            numeroMesaAntigua: null, // Lo inicializamos como null
+                            numeroMesa: null,
+                            idMesero: $("#idMesero").data("id"),
+                            numeroPersonas: pedidoData.personas,
+                            notasPedido: pedidoData.notas_general_pedido,
+                            total: total,
+                            pedidoProductos:
+                                pedidoData.productos_detallados.map(
+                                    (producto) => ({
+                                        ...producto,
+                                        id_categoria: producto.id_categoria,
+                                    })
+                                ),
+                        };
 
-                        // Iterar sobre productos_detallados y agregar id_categoria
-                        pedidoProductos = pedidoData.productos_detallados.map(
-                            (producto) => {
-                                return {
-                                    ...producto, // Mantiene las propiedades existentes del producto
-                                    id_categoria: producto.id_categoria, // Agrega la nueva propiedad con el valor de id_categoria
-                                };
-                            }
-                        );
+                        // Esperar que las mesas se carguen para asignar numeroMesaAntigua
+                        setTimeout(() => {
+                            pedidoCompleto.numeroMesaAntigua = $("#numeroMesa option:selected").val();
+                            console.log("Mesa Antigua asignada: ", pedidoCompleto.numeroMesaAntigua);
+                        }, 500);
 
+                        // Escuchar cambios en el select de mesa y actualizar numeroMesa
+                        $("#numeroMesa").on("change", function () {
+                            pedidoCompleto.numeroMesa = $(this).val();
+                            console.log("Nueva Mesa asignada: ", pedidoCompleto.numeroMesa);
+                        });
+
+                        console.log(pedidoCompleto);
 
                         // Actualizamos el total de pedido
                         $("#totalPedido").text(`$${total.toFixed(2)}`);
-
+                        console.log(pedidoData.notas_general_pedido);
                         $("#notasPedido").text(pedidoData.notas_general_pedido);
 
                         $("#listaProductos").html(template);

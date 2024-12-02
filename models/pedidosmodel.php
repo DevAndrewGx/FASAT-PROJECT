@@ -90,6 +90,52 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             }
         }
 
+
+        // Esta funcion nos permitira actualizar la data de un pedido
+        public function actualizar($codigo) { 
+            
+            // usamos try catch ya que vamos a interactuar con la bd, entonces no queremos que en ningun momento se pare la consulta
+            try {
+
+            // Consulta de actualización
+                $query = $this->prepare("UPDATE pedidos 
+                SET 
+                    id_mesero = :id_mesero, 
+                    id_mesa = :id_mesa, 
+                    codigo_pedido = :codigo_pedido, 
+                    estado = :estado, 
+                    total = :total, 
+                    personas = :personas, 
+                    notas_pedidos = :notas_pedido 
+                WHERE 
+                    codigo_pedido = :codigo
+            ");
+
+                // Ejecutar la consulta
+                $query->execute([
+                    "codigo" => $codigo,
+                    "id_mesero" => $this->id_mesero,
+                    "id_mesa" => $this->id_mesa,
+                    "codigo_pedido" => $this->codigo_pedido,
+                    "estado" => $this->estado,
+                    "total" => $this->total,
+                    "personas" => $this->personas,
+                    "notas_pedido" => $this->notas_pedido
+                ]);
+
+                // Verificar si se actualizó alguna fila
+                if ($query->rowCount() >= 0) { // >= 0 es válido porque no siempre habrá cambios
+                    return true;
+                } else {
+                    error_log('PedidosModel::actualizar -> No se actualizó ninguna fila');
+                    return false;
+                }
+            }catch(PDOException $e)  {
+            error_log("PedidosModel::actualizar -> PDOException " . $e->getMessage());
+            return false;
+            }
+        }
+
          // Esta funcion nos permtira crear los codigos de pedido para una mejor gestion
         public function generarCodigoPedido() {
             try {
