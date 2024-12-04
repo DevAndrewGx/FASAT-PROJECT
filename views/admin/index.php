@@ -58,7 +58,7 @@ $user = $this->d['user'];
 
 
             <nav class="nav-main">
-                <a href="<?php echo constant('URL')?>admin" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
+                <a href="<?php echo constant('URL') ?>admin" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
             </nav>
 
             <div class="analyse">
@@ -144,7 +144,7 @@ $user = $this->d['user'];
 
             <div id="orders-employees">
 
-
+                <!-- si nos dejan para otro dia exponer le meto filtros a esto y se arregla mejor -->
                 <div id="orders">
                     <h2>Inventario Critico</h2>
                     <p>Lista de productos en el inventario</p>
@@ -153,20 +153,38 @@ $user = $this->d['user'];
                             <table id="data-inventario-critico" class="table table-responsive datanew">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <label class="checkboxs">
-                                                <input type="checkbox" id="select-all">
-                                                <span class="checkmarks"></span>
-                                            </label>
-                                        </th>
-                                        <th class="sorting">Nombre producto</th>
-                                        <th class="sorting">Cantidad actual</th>
-                                        <th class="sorting">Nivel critico</th>
-                                        <th class="sorting">Accion</th>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Estado</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <!-- Datos quemados -->
+                                    <tr>
+                                        <td>Gaseosa Sprite</td>
+                                        <td>10</td>
+                                        <td><span class="badges bg-lightgreen">Disponible</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Botella Agua</td>
+                                        <td>2</td>
+                                        <td><span class="badges bg-lightred">Crítico</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soda</td>
+                                        <td>5</td>
+                                        <td><span class="badges bg-lightyellow">Bajo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gaseosa CocaCola</td>
+                                        <td>15</td>
+                                        <td><span class="badges bg-lightgreen">Disponible</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Malteada</td>
+                                        <td>1</td>
+                                        <td><span class="badges bg-lightred">Crítico</span></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
