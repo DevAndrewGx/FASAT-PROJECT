@@ -66,6 +66,24 @@
                 error_log("Pedidos::crearPedio -> Se actualizo el estado de la mesa correctamente");
                 // ejecutamos la consulta y guardamos el id del pedido insertado en una variable 
                 if ($idPedido = $pedidoObj->crear()) {
+
+                    // cuando creamos un nuevo pedido se debe guardar la data de ese pedido en la tabla ventas
+                    $ventaObj = new VentasModel();
+                    // seteamos la data en el objeto de ventas para poder insertala en la tabla
+                    $ventaObj->setIdPedido($idPedido);
+                    $ventaObj->setTotal($pedido["total"]);
+                    // guardamos la fecha y la hora en formato ya que la vamos a necesitar en tipo datee para interactuar con ella en la bd
+                    date_default_timezone_set('America/Bogota');
+                    $ventaObj->setFecha(date('Y-m-d H:i:s'));
+                    // ponemos el estado de la venta en pendiente ya que aun no ha sido pagada
+                    $ventaObj->setEstado("PENDIENTE");
+                    
+                    // ejecutamos la consutal para guardar una venta en la tabla ventas cada vez que se crea un pedido en la tabla pedidos
+                    if($ventaObj->crear()) {
+                        error_log('Pedidos::crearPedido -> Se guardo la data correctamente en la tabla ventas que emocionnnhn');
+                    }else {
+                        error_log('Pedidos::crearPedido -> Se guardo la data no correctamente en la tabla ventas ashhhhhhhhhhhhhh');
+                    }
                     error_log('Pedidos::crearPedido -> Se creo el pedido correctamente');
                     // despues de realizar la validación ejecutamos un for para recorrer los productos del pedido y insertarlos en la bd
                     // creamos un array para guardar los productos del pedido

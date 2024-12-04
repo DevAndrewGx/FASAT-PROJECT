@@ -43,7 +43,9 @@
     include_once 'models/pedidosProductosModel.php';
     include_once 'models/stockmodel.php';
     include_once 'models/mesasmodel.php';
-    
+    include_once 'models/ventasmodel.php';
+
+
 
     // MAILER para enviar correo
     require_once 'classes/Mailer.php';
