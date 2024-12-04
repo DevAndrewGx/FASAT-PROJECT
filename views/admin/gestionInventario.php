@@ -76,6 +76,7 @@ $user = $this->d['user'];
                             <div class="modal-body">
                                 <!-- Botón para descargar la plantilla -->
                                 <a href="vendor/plantillain.php" class="btn btn-secondary mb-3">Descargar Plantilla Excel</a>
+                                
                                 <!-- Contenedor para las alertas -->
                                 <div id="alertContainer" class="mb-3"></div>
                                 <!-- Formulario para cargar el archivo Excel -->
@@ -228,11 +229,12 @@ $user = $this->d['user'];
 
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
 
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/exinventario.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/exinvenatrio.js"></script>
 </body>
 
 

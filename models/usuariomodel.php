@@ -15,18 +15,18 @@ class UsuarioModel extends Conexion implements IModel
     public function consultarTodos()
 {
     try {
-        $sql = "SELECT * FROM inventario";
+        $sql = "SELECT * FROM usuarios";
         $stmt = $this->getConnection()->prepare($sql);
         $stmt->execute();
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (empty($resultados)) {
-            error_log("InventarioModel::consultarTodos -> No se encontraron registros.");
+            error_log("usuariosModel::consultarTodos -> No se encontraron registros.");
         }
 
         return $resultados;
     } catch (PDOException $e) {
-        error_log("InventarioModel::consultarTodos -> Error: " . $e->getMessage());
+        error_log("usuariosoModel::consultarTodos -> Error: " . $e->getMessage());
         return [];
     }
 }

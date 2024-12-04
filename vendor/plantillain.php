@@ -1,36 +1,40 @@
 <?php
-require 'autoload.php'; // Asegúrate de haber instalado PhpSpreadsheet usando Composer
+require 'autoload.php'; // Asegúrate de que PhpSpreadsheet esté instalado
+require 'conexion.php'; // Incluye tu archivo de conexión a la base de datos
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-// Crear un nuevo objeto Spreadsheet
-$spreadsheet = new Spreadsheet();
-$sheet = $spreadsheet->getActiveSheet();
-$sheet->setTitle('Plantilla Inventario');
+try {
+    // Crear un nuevo archivo Excel
+    $spreadsheet = new Spreadsheet();
+    $sheet = $spreadsheet->getActiveSheet();
 
-// Encabezados específicos
-$headers = ['id_foto', 'id_categoria', 'id_subcategoria', 'id_stock', 'id_proveedor', 'nombre', 'precio', 'descripcion', 'estado'];
+    // Encabezados de la plantilla (basado en tu consulta SQL, pero sin `id_pinventario` y `id_proveedor`)
+    $headers = [
+        'ID Foto',
+        'ID Categoría',
+        'ID Subcategoría',
+        'ID Stock',
+        'Nombre',
+        'Precio',
+        'Descripción',
+        'Estado'
+    ];
+    $sheet->fromArray($headers, null, 'A1'); // Escribir los encabezados en la primera fila
 
-// Escribir los encabezados en la primera fila
-$sheet->fromArray($headers, null, 'A1');
+    // Configurar el archivo para descarga
+    $filename = 'plantilla_inventario.xlsx';
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header('Content-Disposition: attachment;filename="' . $filename . '"');
+    header('Cache-Control: max-age=0');
 
-// Estilo para los encabezados
-$sheet->getStyle('A1:I1')->getFont()->setBold(true);
-$sheet->getStyle('A1:I1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+    // Crear el escritor de Excel
+    $writer = new Xlsx($spreadsheet);
 
-// Ajustar automáticamente el ancho de las columnas
-foreach (range('A', 'I') as $columnID) {
-    $sheet->getColumnDimension($columnID)->setAutoSize(true);
+    // Enviar el archivo al navegador
+    $writer->save('php://output');
+    exit();
+} catch (Exception $e) {
+    echo 'Error al generar la plantilla Excel: ' . $e->getMessage();
 }
-
-// Configurar las cabeceras para la descarga
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="Plantilla_Inventario.xlsx"');
-header('Cache-Control: max-age=0');
-
-// Guardar el archivo y enviarlo al navegador
-$writer = new Xlsx($spreadsheet);
-$writer->save('php://output');
-exit;
-?>

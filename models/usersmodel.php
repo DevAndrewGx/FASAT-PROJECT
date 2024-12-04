@@ -41,8 +41,6 @@ class UsersModel extends Model implements IModel
         $this->direccion = '';
         $this->correo = '';
         $this->password = '';
-
-
     }
 
     // Implemenatmos los metodos de la interfaz
@@ -111,7 +109,6 @@ class UsersModel extends Model implements IModel
 
             // finalmente reotrnamos el arreglo
             return $items;
-
         } catch (PDOException $e) {
             error_log('USERMODEL::consultarTodos->PDOException' . $e);
         }
@@ -198,7 +195,6 @@ class UsersModel extends Model implements IModel
                 error_log('USERMODEL::actualizar -> No se actualizó ninguna fila');
                 return false;
             }
-
         } catch (PDOException $e) {
             error_log('USERMODEL::actualizar->PDOException' . $e);
             return false;
@@ -255,7 +251,6 @@ class UsersModel extends Model implements IModel
             // la funcion password_verify() nos permite validar dado un hash y un password si son los mismos
             // validando que el password que ingrese el usuario sea el mismo que tenemos almacenado en la base de datos
             return password_verify($password, $user->getPassword());
-
         } catch (PDOException $e) {
             error_log('USERMODEL::compararClaves->PDOException' . $e);
             return false;
@@ -390,6 +385,4 @@ class UsersModel extends Model implements IModel
     {
         return $this->password;
     }
-
 }
-?>

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = new FormData(this); // Crea un objeto FormData con los datos del formulario
 
-        fetch('vendor/inventario.php', { // Asegúrate de que esta ruta sea correcta
+        fetch('vendor/subirin.php', { // Asegúrate de que esta ruta sea correcta
             method: 'POST',
             body: formData
         })
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
             Swal.fire({
                 title: 'Error',
-                text: 'Error en la subida del archivo.',
+                text: 'Error en la subida del .',
                 icon: 'error',
                 confirmButtonText: 'OK'
             }).then((result) => {

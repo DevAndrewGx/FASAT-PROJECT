@@ -4,7 +4,7 @@
 class Conexion
 {
     private $host = 'localhost';   // Host de la base de datos
-    private $db = 'test_fast9';    // Nombre de la base de datos
+    private $db = 'test_fast1';    // Nombre de la base de datos
     private $user = 'root';        // Usuario de la base de datos
     private $pass = '';            // Contraseña del usuario
     private $charset = 'utf8mb4';  // Codificación de caracteres
