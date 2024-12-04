@@ -1580,3 +1580,91 @@ a.close.disabled {
     max-width: 1140px;
   }
 }
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ RESPONSIVE *******************************************************************/
+
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 320px) {
+  /* Estilos específicos para pantallas de 320px */
+}
+
+/* Dispositivos móviles medianos */
+@media (max-width: 768px) {
+    header nav {
+        width: 100%;
+    }
+    main .analyse {
+        grid-template-columns: 1fr !important; /* Forzar apilamiento */
+        gap: 1.2rem !important;
+    }
+}
+
+
+/* Tablets y pantallas grandes */
+@media (max-width: 1024px) {
+  /* Estilos específicos para pantallas de hasta 1024px */
+
+    header nav {
+        width: 100%;
+    }
+
+    .main-wrapper .left-section {
+            min-width: 30px;
+            padding: 10px 20px 10px 30px;
+    }
+
+    .main-wrapper .left-section .logo img {
+        width: 40px;
+        height: 40px; 
+    }
+
+    .main-wrapper .page-wrapper {
+        margin-left: 100px;
+    }
+
+    
+    .main-wrapper .left-section .logo i {
+        margin-right: 20px;
+    }
+
+    .main-wrapper .left-section .sidebar .item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-indent: -9999px; /* Oculta solo el texto */
+        overflow: hidden; /* Oculta cualquier texto adicional */
+        width: auto; /* Ancho fijo para los íconos */
+        opacity: 1; /* Asegura que los íconos sean visibles */
+    }
+
+
+    .main-wrapper .left-section .sidebar .item a i {
+        font-size: 26px; /* Tamaño del ícono */
+        opacity: 1; /* Asegura visibilidad */
+        text-indent: 0; /* No muevas el ícono fuera del contenedor */
+    }
+
+    /* Estilos específicos para pantallas mayores de 1200px */
+    main .analyse {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    main .charts-analytics {
+        grid-template-columns: 1fr; /* Solo una columna */
+        gap: 1.5rem; /* Espacio entre gráficos */
+    }
+
+    main .chart {
+        width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    }
+  
+}
+
+/* Pantallas de escritorio grandes */
+@media (min-width: 1200px) {
+  
+}
