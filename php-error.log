@@ -616,3 +616,1456 @@
 [04-Dec-2024 16:40:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
 [04-Dec-2024 16:40:21 Europe/Berlin] inicio2024-12-04
 [04-Dec-2024 16:40:21 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:41:21 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:41:21 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:41:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:41:21 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:41:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:41:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:41:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:41:21 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:41:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:41:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:41:22 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:41:22 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:42:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:42:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:13 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:42:13 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:42:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:13 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:42:13 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:42:13 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:42:16 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:42:16 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:42:16 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:42:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:42:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:42:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:42:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:17 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:42:17 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:42:17 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:42:19 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:42:19 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:19 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:42:19 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:42:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:19 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:42:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:42:19 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:42:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:42:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:42:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:42:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:42:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:22 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:42:22 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:42:22 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:42:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:42:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:42:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:42:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:42:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:42:23 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:42:23 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:43:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:24 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:43:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:43:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:43:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:24 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:43:24 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:43:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:53 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:43:53 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:43:53 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:43:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:53 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:43:53 Europe/Berlin] Users::render -> Carga la pagina principal de STOCK
+[04-Dec-2024 16:43:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327034116, url => stock
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327034116, url => stock
+[04-Dec-2024 16:43:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:43:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:43:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:54 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:43:54 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:43:57 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:57 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:43:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:43:57 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:43:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/logout, url => logout
+[04-Dec-2024 16:43:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => logout
+[04-Dec-2024 16:43:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/logout, url => logout
+[04-Dec-2024 16:43:57 Europe/Berlin] SessionController::validarSession() => no autorizado, redirige al main de cada rol
+[04-Dec-2024 16:43:57 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:57 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Dec-2024 16:43:57 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 289
+[04-Dec-2024 16:43:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:43:58 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 16:43:59 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:00 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[04-Dec-2024 16:44:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 16:44:00 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 16:44:00 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 16:44:00 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Dec-2024 16:44:02 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:02 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:02 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[04-Dec-2024 16:44:02 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 16:44:02 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 16:44:02 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 16:44:02 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[04-Dec-2024 16:44:02 Europe/Berlin] loginByCorreo: inicio
+[04-Dec-2024 16:44:02 Europe/Berlin] login: user correo mesero@x.com
+[04-Dec-2024 16:44:03 Europe/Berlin] login: success
+[04-Dec-2024 16:44:03 Europe/Berlin] This is the state: Activo
+[04-Dec-2024 16:44:03 Europe/Berlin] Login::authenticate() passed
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::autorizarAcceso(): role: Mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:03 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:03 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327043534, url => pedidos
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327043534, url => pedidos
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:44:03 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:03 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:03 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:44:03 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:44:03 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:44:03 Europe/Berlin] 1
+[04-Dec-2024 16:44:03 Europe/Berlin] 
+[04-Dec-2024 16:44:03 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:04 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:44:04 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327043535, url => mesas
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327043535, url => mesas
+[04-Dec-2024 16:44:04 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:44:04 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:04 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:04 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:44:07 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:07 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:07 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:44:07 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:07 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:08 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327048231, url => pedidos
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327048231, url => pedidos
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:08 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:44:08 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:44:08 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:44:08 Europe/Berlin] 1
+[04-Dec-2024 16:44:08 Europe/Berlin] 
+[04-Dec-2024 16:44:08 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:08 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327048232, url => mesas
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327048232, url => mesas
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:44:08 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:08 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:08 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:44:09 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:10 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesasMesero
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[04-Dec-2024 16:44:10 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesasMesero
+[04-Dec-2024 16:44:10 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:10 Europe/Berlin] MesasMesero::construct -> controlador mesasMesero
+[04-Dec-2024 16:44:10 Europe/Berlin] MesasMesero::render -> carga la pagina principal de las mesaa para el mesero
+[04-Dec-2024 16:44:10 Europe/Berlin] PHP Warning:  Undefined array key "mesa" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 3
+[04-Dec-2024 16:44:10 Europe/Berlin] PHP Warning:  Undefined array key "categorias" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 4
+[04-Dec-2024 16:44:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 119
+[04-Dec-2024 16:44:10 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 133
+[04-Dec-2024 16:44:10 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:11 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327050536, url => mesas
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327050536, url => mesas
+[04-Dec-2024 16:44:11 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:44:11 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:11 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:11 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:44:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:44:12 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:44:12 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:13 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:13 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327052874, url => pedidos
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327052874, url => pedidos
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:13 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:44:13 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:44:13 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:44:13 Europe/Berlin] 1
+[04-Dec-2024 16:44:13 Europe/Berlin] 
+[04-Dec-2024 16:44:13 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:44:13 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327052875, url => mesas
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327052875, url => mesas
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:44:13 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:13 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:44:13 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:44:24 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:44:25 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:44:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:44:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:44:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:44:25 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:44:25 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:45:07 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:45:07 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/consultarPedido, url => pedidos
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/consultarPedido, url => pedidos
+[04-Dec-2024 16:45:07 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:45:07 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:45:07 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:45:07 Europe/Berlin] PHP Warning:  Undefined array key "id_mesero" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 335
+[04-Dec-2024 16:45:07 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:45:25 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:45:25 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:45:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:45:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:45:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:45:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:45:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:45:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:45:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:45:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:45:26 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:45:26 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:46:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:46:27 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:46:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:46:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:46:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:46:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:46:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:47:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:47:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:47:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:47:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:47:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:47:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:47:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:47:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:47:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:47:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:47:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:47:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:48:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:48:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:48:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:48:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:48:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:48:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:48:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:48:52 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:48:52 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:48:52 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:48:52 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:48:52 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327333850, url => pedidos
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327333850, url => pedidos
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:55 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:48:55 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:48:55 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:48:55 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:48:55 Europe/Berlin] 1
+[04-Dec-2024 16:48:55 Europe/Berlin] 
+[04-Dec-2024 16:48:55 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:48:55 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327333851, url => mesas
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327333851, url => mesas
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:48:55 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:48:55 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:48:55 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:49:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327358319, url => pedidos
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327358319, url => pedidos
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:49:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:18 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:49:18 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:49:18 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:49:18 Europe/Berlin] 1
+[04-Dec-2024 16:49:18 Europe/Berlin] 
+[04-Dec-2024 16:49:18 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:18 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:49:20 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesasMesero
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesasMesero, url => mesasMesero
+[04-Dec-2024 16:49:20 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesasMesero
+[04-Dec-2024 16:49:20 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:20 Europe/Berlin] MesasMesero::construct -> controlador mesasMesero
+[04-Dec-2024 16:49:20 Europe/Berlin] MesasMesero::render -> carga la pagina principal de las mesaa para el mesero
+[04-Dec-2024 16:49:20 Europe/Berlin] PHP Warning:  Undefined array key "mesa" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 3
+[04-Dec-2024 16:49:20 Europe/Berlin] PHP Warning:  Undefined array key "categorias" in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 4
+[04-Dec-2024 16:49:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 119
+[04-Dec-2024 16:49:20 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\FAST-PROJECT\views\mesero\mesas.php on line 133
+[04-Dec-2024 16:49:21 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:21 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327361010, url => mesas
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesas
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesas/getMesas?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numeroMesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=capacidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=personas&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=codigoPedido&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327361010, url => mesas
+[04-Dec-2024 16:49:21 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesas
+[04-Dec-2024 16:49:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:21 Europe/Berlin] Mesas::construct -> controlador usuarios
+[04-Dec-2024 16:49:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/mesero, url => mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327363670, url => pedidos
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => pedidos
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/pedidos/cargarDatosPedidos?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=numero_mesa&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_mesero&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=codigo_pedido&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=total&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=estado&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=options&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=3&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327363670, url => pedidos
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::estaAutorizado -> Role Mesero is validate for this site pedidos
+[04-Dec-2024 16:49:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:49:23 Europe/Berlin] ejecucion de la query de cargaDatosPedidosSELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido
+[04-Dec-2024 16:49:23 Europe/Berlin] Registros por pagina: ->>>>>>>>>>>>>>>>> 10
+[04-Dec-2024 16:49:23 Europe/Berlin] Inicio por pagina: ->>>>>>>>>>>>>>0
+[04-Dec-2024 16:49:23 Europe/Berlin] 1
+[04-Dec-2024 16:49:23 Europe/Berlin] 
+[04-Dec-2024 16:49:23 Europe/Berlin] Consulta: ->>>>>>>>>>>>>>SELECT 
+                    m.id_mesa,
+                    m.numero_mesa,
+                    m.estado AS estado_mesa,
+                    m.capacidad,
+                    p.id_pedido,
+                    p.id_mesero,
+                    p.codigo_pedido,
+                    p.total,
+                    p.estado AS estado_pedido,
+                    p.personas,
+                    p.notas_pedidos,
+                    p.fecha_hora_vista,
+                    u.documento,
+                    u.nombres,
+                    GROUP_CONCAT(pp.id_producto) AS productos,
+                    GROUP_CONCAT(pp.cantidad) AS cantidades,
+                    GROUP_CONCAT(pp.precio) AS precios
+                FROM pedidos p 
+                INNER JOIN mesas m ON p.id_mesa = m.id_mesa 
+                INNER JOIN usuarios u ON p.id_mesero = u.documento 
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
+                GROUP BY m.id_mesa, p.id_pedido ORDER BY codigo_pedido asc LIMIT 10 OFFSET 0
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "productos_detallados" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 344
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "fecha_hora" in C:\xampp\htdocs\FAST-PROJECT\models\pedidosJoinModel.php on line 345
+[04-Dec-2024 16:49:23 Europe/Berlin] PHP Warning:  Undefined array key "codigoPedido" in C:\xampp\htdocs\FAST-PROJECT\controllers\pedidos.php on line 304
+[04-Dec-2024 16:49:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:49:27 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:49:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:49:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:49:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:49:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:49:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:50:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:50:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:50:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:50:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:50:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:15 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:50:15 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:50:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:50:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:50:17 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:50:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:50:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:51:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:51:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:51:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:51:34 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:34 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): XXX
+[04-Dec-2024 16:51:34 Europe/Berlin] sessionController::validarSession(): username:mesero@x.com - role: Mesero
+[04-Dec-2024 16:51:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/logout, url => logout
+[04-Dec-2024 16:51:34 Europe/Berlin] sessionController::esSitioPublico(): currentURL => logout
+[04-Dec-2024 16:51:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/logout, url => logout
+[04-Dec-2024 16:51:34 Europe/Berlin] SessionController::validarSession() => no autorizado, redirige al main de cada rol
+[04-Dec-2024 16:51:34 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:34 Europe/Berlin] APP::construct->No hay controlador especificado
+[04-Dec-2024 16:51:34 Europe/Berlin] PHP Warning:  Undefined variable $urlTeamImage in C:\xampp\htdocs\FAST-PROJECT\views\landing\index.php on line 289
+[04-Dec-2024 16:51:36 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:36 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 16:51:36 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:36 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[04-Dec-2024 16:51:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 16:51:36 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 16:51:36 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 16:51:36 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Dec-2024 16:51:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login/autenticar, url => login
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 16:51:39 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 16:51:39 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 16:51:39 Europe/Berlin] La data de el formulario no esta nullaaaaaaaaaa
+[04-Dec-2024 16:51:39 Europe/Berlin] loginByCorreo: inicio
+[04-Dec-2024 16:51:39 Europe/Berlin] login: user correo damerchan99@soy.sena.edu.co
+[04-Dec-2024 16:51:39 Europe/Berlin] login: success
+[04-Dec-2024 16:51:39 Europe/Berlin] This is the state: Activo
+[04-Dec-2024 16:51:39 Europe/Berlin] Login::authenticate() passed
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::autorizarAcceso(): role: Administrador
+[04-Dec-2024 16:51:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 16:51:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:51:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:51:40 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:51:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:44 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:44 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos, url => productos
+[04-Dec-2024 16:51:44 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[04-Dec-2024 16:51:44 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:44 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:51:44 Europe/Berlin] PHP Warning:  Undefined array key "categoria" in C:\xampp\htdocs\FAST-PROJECT\libs\controller.php on line 156
+[04-Dec-2024 16:51:44 Europe/Berlin] 
+[04-Dec-2024 16:51:44 Europe/Berlin] Producto::render -> Carga la pagina principal
+[04-Dec-2024 16:51:44 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:44 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 16:51:45 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:45 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327504879, url => productos
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::esSitioPublico(): currentURL => productos
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/productos/getProducts?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=nombre_categoria&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=precio&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=options&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327504879, url => productos
+[04-Dec-2024 16:51:45 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site productos
+[04-Dec-2024 16:51:45 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:45 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:51:45 Europe/Berlin] ejecucion de la query cargarCategoriasSELECT p.id_pinventario, f.foto, f.id_foto, p.nombre, p.precio, c.nombre_categoria FROM productos_inventario p LEFT JOIN categorias c ON p.id_categoria = c.id_categoria LEFT JOIN fotos f ON f.id_foto = p.id_foto
+[04-Dec-2024 16:51:46 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:46 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:51:46 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:51:46 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:46 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:46 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:51:46 Europe/Berlin] Users::render -> Carga la pagina principal de STOCK
+[04-Dec-2024 16:51:47 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:47 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327507334, url => stock
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327507334, url => stock
+[04-Dec-2024 16:51:47 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:51:47 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:47 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:51:47 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:51:51 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:51:51 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:51:51 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:51:51 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:51:51 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:51:51 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:51:51 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:51:51 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:52:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:52:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:52:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:52:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:52:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:52:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:52:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:53:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:53:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:53:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:53:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:53:37 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:37 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 16:53:37 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:53:37 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:37 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:37 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:53:37 Europe/Berlin] Users::render -> Carga la pagina principal de STOCK
+[04-Dec-2024 16:53:38 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:38 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327618256, url => stock
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733327618256, url => stock
+[04-Dec-2024 16:53:38 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:53:38 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:38 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:38 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 16:53:38 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 16:53:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:53:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:40 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:53:40 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:53:40 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:53:43 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:43 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:43 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:53:43 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:43 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:43 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:53:43 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:53:43 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:53:47 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:53:47 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:53:47 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:53:47 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:53:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:53:47 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:53:47 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:53:47 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:54:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:54:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:54:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:54:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:54:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:54:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:54:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:54:37 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:54:37 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/consultarStock, url => stock
+[04-Dec-2024 16:54:37 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 16:54:37 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:54:37 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:54:37 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 16:54:37 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 114
+[04-Dec-2024 16:54:37 Europe/Berlin] Stock::consultarStock -> La mesa se obtuvo correctamente-> Array
+[04-Dec-2024 16:55:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:55:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:55:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:55:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:55:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:55:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:55:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:55:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:55:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:55:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:55:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:55:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:56:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:56:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:56:19 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:56:19 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:56:19 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:56:19 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:56:19 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:57:19 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:57:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:57:20 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:57:20 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:57:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:57:20 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:57:20 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:58:20 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:58:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:58:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:58:21 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:58:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:58:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:58:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:58:21 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:58:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:58:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:58:21 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:58:21 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 16:59:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 16:59:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 16:59:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 16:59:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 16:59:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 16:59:22 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 16:59:22 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:00:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:00:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:00:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:00:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:00:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:00:23 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:00:23 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:01:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:01:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:01:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:01:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:01:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:01:24 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:01:24 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:02:24 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:02:25 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:02:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:02:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:02:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:02:25 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:02:25 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:03:25 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:03:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:03:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:03:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:03:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:03:26 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:03:26 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:04:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock, url => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:16 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 17:04:16 Europe/Berlin] Users::render -> Carga la pagina principal de STOCK
+[04-Dec-2024 17:04:16 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733328256401, url => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::esSitioPublico(): currentURL => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/stock/getProductsOnStock?draw=1&columns%5B0%5D%5Bdata%5D=checkmarks&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=nombre_producto&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=cantidad&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=cantidad_disponible&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=cantidad_minima&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=options&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=true&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&order%5B0%5D%5Bname%5D=&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1733328256401, url => stock
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site stock
+[04-Dec-2024 17:04:16 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:16 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:16 Europe/Berlin] Producto::construct -> Controlador producto
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 66
+[04-Dec-2024 17:04:16 Europe/Berlin] PHP Warning:  Undefined array key "idFoto" in C:\xampp\htdocs\FAST-PROJECT\controllers\stock.php on line 69
+[04-Dec-2024 17:04:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 17:04:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:04:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:04:23 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 17:04:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:04:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 17:04:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:04:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:04:27 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:04:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:04:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:04:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:04:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:04:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:05:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:05:24 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:05:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:05:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:05:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:05:24 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:05:24 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:05:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:05:27 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:05:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:05:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:05:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:05:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:05:27 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:06:24 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:06:25 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:06:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:06:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:06:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:06:25 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:06:25 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 17:06:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 17:06:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 17:06:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 17:06:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 17:06:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 17:06:27 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 17:06:27 Europe/Berlin] fin2024-12-04

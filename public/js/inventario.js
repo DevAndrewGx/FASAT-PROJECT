@@ -8,6 +8,7 @@ const selectPlaceholder = document.querySelector(".select-placeholder");
 // });
 // variables especiales
 let id_producto;
+
 // Definimos productoData fuera del alcance para que esté disponible en el evento change
 let productoData = null;
 let editar = null;
@@ -25,6 +26,7 @@ options.forEach((option) => {
 
 // funciones para el crud
 $(document).ready(function () {
+    let idStock = 0;
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     let dataTableProductos = $("#data-productos").DataTable({
@@ -386,7 +388,7 @@ $(document).ready(function () {
     // creamos la funcion para actualizar la cantidad del stock
     $("#data-stock-productos").on('click', '.botonActualizar', function(e) { 
         e.preventDefault();
-        let idStock = $(this).data("id");
+        idStock = $(this).data("id");
 
         $.ajax({
             url: baseUrl + "stock/consultarStock",
@@ -423,6 +425,46 @@ $(document).ready(function () {
                  $("#modalEditStock").modal("show");
             },
         });
-      
     });
+
+    $(document).on('click', "btnActioActualizarStock", function(e) { 
+        e.preventDefault();
+        
+        let data = $(this).closest("form")[0]; // Obtiene el formulario HTML desde el contexto
+        let formData = new FormData(data);
+
+        formData.append('idStock', idStock);
+        $.ajax({
+            url: baseUrl + "stock/actualizarStock",
+            type: "POST",
+            dataType: "json",
+            data: { idStock: idStock },
+            success: function (response) {
+                // convertirmos la data que viene del servidor en un JSON para manejar de mejor forma
+                let data = JSON.parse(response);
+
+                if (data.status) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Exito",
+                        text: data.message,
+                        showConfirmButton: true,
+                        allowOutsideClick: false,
+                        confirmButtonText: "Ok",
+                    }).then(function (result) {
+                        if (result.isConfirmed) {
+                            // Cerrar el modal y reiniciar el formulario
+                            $("#modalEditStock").modal("hide");
+                            dataTableProductsOnStok.ajax.reload(null, false);
+                        }
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+        });
+    })
 });

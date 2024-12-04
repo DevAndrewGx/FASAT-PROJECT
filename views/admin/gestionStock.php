@@ -158,7 +158,7 @@ $user = $this->d['user'];
                             <input type="number" id="stockMinimo" class="form-control">
                         </div>
 
-                        <button id="btnActionForm" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Actualizar Stock</span></button>&nbsp;&nbsp;&nbsp;
+                        <button id="btnActioActualizarStock" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Actualizar Stock</span></button>&nbsp;&nbsp;&nbsp;
                     </form>
                 </div>
                 <div class="modal-footer">

@@ -152,11 +152,11 @@
             $stockObj = new StockModel();
 
             $stockObj->setCantidad($this->getPost('cantidad'));
-            $stockObj->setCantidadDisponible($this->getPost('cantidad'));
-            $stockObj->setCantidadMinima($this->getPOst('cantidad'));
+            $stockObj->setCantidadDisponible($this->getPost('cantidad_disponible'));
+            $stockObj->setCantidadMinima($this->getPOst('cantidad_minima'));
 
             // ejecutamos la query para actualizar una categoria
-            $res = $stockObj->actualizar($this->getPost('id_stock'));
+            $res = $stockObj->actualizar($this->getPost('idStock'));
 
             // validamos si la consulta se ejecuto correctamente
 
