@@ -77,5 +77,30 @@
                 return 0;
             }
         }
+
+
+        // funcion para obtener los prodcutos mas vendidos para mostralos en los graficos
+        public function getProductosMasVendidos($fechaFin, $fechaInicio) {
+            // utilizamos try catch ya que vamos a interactuar con la bd 
+            try { 
+                $query = $this->prepare("SELECT p.nombre, SUM(v.total) AS total_vendido
+                        FROM pedido_producto pp INNER JOIN productos_inventario p ON p.id_pinventario = pp.id_producto 
+                        JOIN VENTAS v ON v.id_pedido = pp.id_pedido
+                        WHERE v.fecha BETWEEN :inicio AND :fin
+                        GROUP BY p.nombre
+                        ORDER BY total_vendido DESC
+                        LIMIT 10");
+
+                $query->execute([
+                    'inicio' => $fechaInicio,
+                    'fin' => $fechaFin
+                ]);
+                // retornamos todos los objetos que coinciden con la consulta
+                return $query->fetchAll(PDO::FETCH_ASSOC);
+            }catch(PDOException $e) {
+                error_log('DashboardModel::getProductosMasVendidos -> PDOException ' . $e->getMessage());
+                return 0;
+            }
+        }
     }
 ?>

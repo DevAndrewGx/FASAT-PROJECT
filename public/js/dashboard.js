@@ -56,12 +56,15 @@ $(document).ready(function () {
 
         autoUpdate = filtro === ""; // Desactivar actualización automática si se selecciona filtro
         cargarDataDasboard(fechaInicio, fechaFin);
+        cargarDataProductosMasVendidos(fechaInicio, fechaFin);
+        
 
         if (autoUpdate) startAutoUpdate(); // Reiniciar auto-update si no hay filtro
     });
 
     // Cargar datos iniciales
     cargarDataDasboard();
+    cargarDataProductosMasVendidos();
     startAutoUpdate();
 });
 
@@ -74,36 +77,9 @@ function startAutoUpdate() {
     }, 60000);
 }
 
-// function cargarDataDasboard(fechaInicio = null, fechaFin = null) {
-//     // Construimos la URL de acuerdo a tu sistema de rutas
-//     const postData = {
-//             fechaInicio: fechaInicio || null,
-//             fechaFin: fechaFin || null
-//     };
-
-//     // AJAX para cargar datos
-//     $.ajax({
-//         url: baseUrl+"admin/obtenerDatosDashboard",
-//         method: "POST",
-//         data: postData,
-//         dataType: "json",
-//         success: function (data) {
-//             console.log(data.ventasDelDia);
-//             $("#ventas-del-dia").text(`$${data.ventasDelDia}`);
-//             $("#ordenes-activas").text(`Órdenes activas: ${data.ordenesActivas}`);
-//             $("#productos-vendidos").text(
-//                 `Productos vendidos: ${data.productosVendidos}`
-//             );
-//             $("#alertas-stock").text(`Alertas de stock: ${data.alertasStock}`);
-//         },
-//         error: function (xhr, status, error) {
-//             console.error("Error cargando datos del dashboard:", error);
-//         },
-//     });
-// }
 
 function cargarDataDasboard(fechaInicio = null, fechaFin = null) {
-    // Construimos la URL de acuerdo a tu sistema de rutas
+    // Construimos la URL para enviar la peticion y traer los datos
     let url = baseUrl + "admin/obtenerDatosDashboard";
     if (fechaInicio && fechaFin) {
         url += `/${fechaInicio}/${fechaFin}`;
@@ -126,6 +102,50 @@ function cargarDataDasboard(fechaInicio = null, fechaFin = null) {
         },
         error: function (xhr, status, error) {
             console.error("Error cargando datos del dashboard:", error);
+        },
+    });
+}
+
+function cargarDataProductosMasVendidos(fechaInicio = null, fechaFin = null) {
+    // construimos la URL para envar la petición y traer los datos
+
+    let url = baseUrl + "admin/obtenerDatosGraficos";
+    if (fechaInicio && fechaFin) {
+        url += `/${fechaInicio}/${fechaFin}`;
+    }
+
+    $.ajax({
+        url: url, // Ruta basada en tu sistema de enrutamiento
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            // Gráfico de Productos Más Vendidos
+            const categorias = data.productosMasVendidos.map(
+                (item) => item.nombre
+            );
+            const cantidades = data.productosMasVendidos.map(
+                (item) => item.total_vendido
+            );
+
+            var opcionesProductos = {
+                series: [
+                    {
+                        name: "Cantidad Vendida",
+                        data: cantidades,
+                    },
+                ],
+                chart: { type: "bar", height: 350 },
+                xaxis: { categories: categorias },
+                // title: { text: "Productos Más Vendidos" },
+            };
+            var chartProductos = new ApexCharts(
+                document.querySelector("#chart-productos"),
+                opcionesProductos
+            );
+            chartProductos.render();
+        },
+        error: function (xhr, status, error) {
+            console.error("Error cargando datos en los graficos", error);
         },
     });
 }

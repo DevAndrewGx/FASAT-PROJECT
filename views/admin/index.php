@@ -135,15 +135,9 @@ $user = $this->d['user'];
             </div>
             <!-- CHART ANALYTICS -->
             <div class="charts-analytics">
-                <div class="chart">
-                    <h2>Productos Stock</h2>
-                    <p>Mes-a-mes Comparación</p>
-
-                    <div class="pulse">
-                    </div>
-                    <div class="chart-area">
-                        <div class="grid"></div>
-                    </div>
+                <div class="chart" id="chart-productos">
+                    <h2>Productos mas vendidos</h2>
+                    
                 </div>
 
                 <div class="chart">

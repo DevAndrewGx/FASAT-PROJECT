@@ -18,72 +18,50 @@
                 'user' => $this->user
             ]);
         }
+        public function obtenerDatosDashboard()
 
-    // creamos la funcion para obtener la data del backend para mostrarla en los items de analisis
-    // function obtenerDatosDashboard($filtro) {
-        
-    //     $fechaInicio = null;
-    //     $fechaFin = null;
+        {
+            $dashboardObj = new DashboardModel();
+            // Recuperamos los datos enviados por POST
+            $fechaInicio = isset($_POST['fechaInicio']) ? $_POST['fechaInicio']: date('Y-m-d');
+            $fechaFin = isset($_POST['fechaFin']) ? $_POST['fechaFin']: date('Y-m-d');
 
-    //     // Calcular fechas en base al filtro si existe
-    //     if ($filtro) {
-    //         switch ($filtro) {
-    //             case 'hoy':
-    //                 $fechaInicio = date('Y-m-d 00:00:00');
-    //                 $fechaFin = date('Y-m-d 23:59:59');
-    //                 break;
-    //             case 'semana':
-    //                 $fechaInicio = date('Y-m-d 00:00:00', strtotime('-7 days'));
-    //                 $fechaFin = date('Y-m-d 23:59:59');
-    //                 break;
-    //             case 'mes':
-    //                 $fechaInicio = date('Y-m-d 00:00:00', strtotime('-30 days'));
-    //                 $fechaFin = date('Y-m-d 23:59:59');
-    //                 break;
-    //         }
-    //     }
+            error_log("inicio".$fechaInicio);
+            error_log("fin" . $fechaFin);
 
-    //     // Si no se pasan fechas (ni filtro), usar rango del día actual
-    //     if (!$fechaInicio || !$fechaFin) {
-    //         $fechaInicio = date('Y-m-d 00:00:00');
-    //         $fechaFin = date('Y-m-d 23:59:59');
-    //     }
+            // Llamamos al modelo para obtener los datos
+            $data = [
+                'ventasDelDia' => $dashboardObj->getVentasDelDia($fechaInicio, $fechaFin),
+                'ordenesActivas' => $dashboardObj->getOrdenesPendientes($fechaInicio, $fechaFin),
+                'productosVendidos' => $dashboardObj->getProductosVendidos($fechaInicio, $fechaFin),
+                // 'alertasStock' => $this->model->getAlertasStock(),
+            ];
 
-    //     // finalmente retornamos la data de las fechas 
+            // Devolvemos los datos en formato JSON
+            echo json_encode($data);
+        }
 
-    //     $data = [
-    //     'ventasDelDia' => $dashboardObj->getVentasDelDia($fechaInicio, $fechaFin),
-    //         // 'ordenes_pendientes' => $dashboardObj->getOrdenesPendientes($fechaInicio, $fechaFin),
-    //         // 'productos_vendidos' => $dashboardObj->getProductosVendidos($fechaInicio, $fechaFin),
-    //         // 'alertas_stock' => $dashboardObj->getAlertasStock()
-    //     ];
+        // esta funcion nos permitira traer la data del back para mostrarla en los graficos
+        public function obtenerDatosGraficos() {
 
 
-    //     // devolvemos la data en un JSON
-    //     echo json_encode($data);
-    // }
 
-            public function obtenerDatosDashboard()
+            $dashboardObj = new DashboardModel();
 
-            {
-                $dashboardObj = new DashboardModel();
-                // Recuperamos los datos enviados por POST
-                $fechaInicio = isset($_POST['fechaInicio']) ? $_POST['fechaInicio']: date('Y-m-d');
-                $fechaFin = isset($_POST['fechaFin']) ? $_POST['fechaFin']: date('Y-m-d');
+            $fechaInicio = isset($_POST['fechaInicio']) ? $_POST['fechaInicio'] : date('Y-m-d');
+            $fechaFin = isset($_POST['fechaFin']) ? $_POST['fechaFin'] : date('Y-m-d');
 
-                error_log("inicio".$fechaInicio);
-                error_log("fin" . $fechaFin);
+            // Obtener los productos más vendidos
+            $productosMasVendidos = $dashboardObj->getProductosMasVendidos($fechaInicio, $fechaFin);
 
-                // Llamamos al modelo para obtener los datos
-                $data = [
-                    'ventasDelDia' => $dashboardObj->getVentasDelDia($fechaInicio, $fechaFin),
-                    'ordenesActivas' => $dashboardObj->getOrdenesPendientes($fechaInicio, $fechaFin),
-                    'productosVendidos' => $dashboardObj->getProductosVendidos($fechaInicio, $fechaFin),
-                    // 'alertasStock' => $this->model->getAlertasStock(),
-                ];
+            // Obtener las ventas por categoría
+            // $ventasPorCategoria = $dashboardObj->getVentasPorCategoria($fechaInicio, $fechaFin);
 
-                // Devolvemos los datos en formato JSON
-                echo json_encode($data);
-            }
+            // Devolver los datos en formato JSON
+            echo json_encode([
+                'productosMasVendidos' => $productosMasVendidos,
+                // 'ventasPorCategoria' => $ventasPorCategoria
+            ]);
+        }
     }
 ?>
