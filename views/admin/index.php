@@ -62,10 +62,6 @@ $user = $this->d['user'];
             </nav>
 
             <div class="analyse">
-                <!-- STOCK
-                            SALES
-                            SALES-INCOME
-                            ORDERS TODAY -->
                 <div id="stock">
                     <div class="status">
                         <div class="info">
@@ -163,9 +159,9 @@ $user = $this->d['user'];
                                                 <span class="checkmarks"></span>
                                             </label>
                                         </th>
-                                        <th class="sorting">Numero de mesa</th>
-                                        <th class="sorting">Capacidad</th>
-                                        <th class="sorting">Estado</th>
+                                        <th class="sorting">Nombre producto</th>
+                                        <th class="sorting">Cantidad actual</th>
+                                        <th class="sorting">Nivel critico</th>
                                         <th class="sorting">Accion</th>
                                     </tr>
                                 </thead>

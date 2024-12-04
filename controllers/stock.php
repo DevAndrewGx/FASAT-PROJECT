@@ -60,13 +60,13 @@
                 for($i = 0; $i<count($arrayProductsOnStock); $i++) {
                     $arrayProductsOnStock[$i]['checkmarks'] = '<label class="checkboxs"><input type="checkbox"><span class="checkmarks"></span></label>';
                     $arrayProductsOnStock[$i]['options'] = '
-                    <a class="me-3 confirm-text" href="#" data-id="' . $arrayProductsOnStock[$i]['documento'] . '" >
+                    <a class="me-3 confirm-text" href="#" data-id="' . $arrayProductsOnStock[$i]['id_stock'] . '" >
                         <img src="' . constant("URL") . '/public/imgs/icons/eye.svg" alt="eye">
                     </a>
-                    <a class="me-3 botonActualizar" data-id="' . $arrayProductsOnStock[$i]['documento'] . '" data-idfoto="' . $arrayProductsOnStock[$i]['idFoto'] . '" href="editarEmpleado.php">
+                    <a class="me-3 botonActualizar" data-id="' . $arrayProductsOnStock[$i]['id_stock'] . '" data-idfoto="' . $arrayProductsOnStock[$i]['idFoto'] . '" href="editarEmpleado.php">
                         <img src="' . constant("URL") . '/public/imgs/icons/edit.svg" alt="eye">
                     </a>
-                    <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayProductsOnStock[$i]['documento'] . '" data-idfoto="' . $arrayProductsOnStock[$i]['idFoto'] . '" href="editarEmpleado.php">
+                    <a class="me-3 confirm-text botonEliminar" data-id="' . $arrayProductsOnStock[$i]['id_stock'] . '" data-idfoto="' . $arrayProductsOnStock[$i]['idFoto'] . '" href="editarEmpleado.php">
                         <img src="' . constant("URL") . '/public/imgs/icons/trash.svg" alt="trash">
                     </a>
                 ';
@@ -85,6 +85,44 @@
             }catch(Exception $e) { 
                 error_log("Error en getProductsOnStock: ".$e->getMessage());
                 echo json_encode(['error' => $e->getMessage()]);
+            }
+        }
+
+        // funcion para setear los valores en los campos
+        function consultarStock() {
+            // validamos si existe el id enviado desde la petición
+            if (!$this->existPOST(['idStock'])) {
+                error_log('Stock::consultarStock -> No se obtuvo el id del stock correctamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo eliminar la mesa, intente nuevamente!"]);
+                return false;
+            }
+
+            if ($this->user == NULL) {
+                error_log('Users::createUser -> El usuario de la session esta vacio');
+                // enviamos la respuesta al front para que muestre una alerta con el mensaje
+                echo json_encode(['status' => false, 'message' => ErrorsMessages::ERROR_ADMIN_NEWDATAUSER]);
+                return;
+            }
+
+            $stockObj = new StockModel();
+
+            $res = $stockObj->consultar($this->getPost('idStock'));
+
+            $arrayData =  json_decode(json_encode($res, JSON_UNESCAPED_UNICODE), true);
+
+            if ($arrayData) {
+                error_log('Stock::consultarStock -> La mesa se obtuvo correctamente-> ' . $res);
+                $response = [
+                    "data" => $arrayData,
+                    "status" => true,
+                    "message" => "Se obtuvo la data correctamente"
+                ];
+                echo json_encode($response, JSON_UNESCAPED_UNICODE);
+                die();
+            } else {
+                error_log('Users::borrarUser -> No se pudo obtener el usuario correctamente');
+                echo json_encode(['status' => false, 'message' => "No se pudo obtener el usuario!"]);
+                return false;
             }
         }
 

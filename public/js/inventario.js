@@ -317,7 +317,6 @@ $(document).ready(function () {
         id_producto = eliminarProductoBtn.data("id");
         // creamos un formdata para agregar el id y evitar utilizar jsonStringfy
         let formData = new FormData();
-
         formData.append("id_producto", id_producto);
 
         // Creamos una alerta para avisar al usuario, si esta seguro de realizar esta accion
@@ -382,5 +381,48 @@ $(document).ready(function () {
                 });
             }
         });
+    });
+
+    // creamos la funcion para actualizar la cantidad del stock
+    $("#data-stock-productos").on('click', '.botonActualizar', function(e) { 
+        e.preventDefault();
+        let idStock = $(this).data("id");
+
+        $.ajax({
+            url: baseUrl + "stock/consultarStock",
+            type: "POST",
+            dataType: "json",
+            data: { idStock: idStock },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        var stockData = response.data;
+                        // // seteamos la data en los campos
+                        $("#nombreProductoStock").val(stockData.nombre);
+                        $("#stockActual").val(stockData.cantidad_disponible);
+                        $("#stockMinimo").val(stockData.cantidad_minima);
+                        console.log(stockData.nombre_producto);
+                        console.log(stockData.cantidad_disponible);
+                        console.log(stockData.cantidad_minima);
+
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                 $("#modalEditStock").modal("show");
+            },
+        });
+      
     });
 });
