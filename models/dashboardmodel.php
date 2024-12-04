@@ -102,5 +102,33 @@
                 return 0;
             }
         }
+
+        public function getCategoriasMasVendidas($fechaInicio, $fechaFin)
+        {
+            try {
+                $query = $this->prepare("SELECT c.nombre_categoria, SUM(v.total) AS total_vendido
+                                        FROM categorias c
+                                        JOIN productos_inventario p ON c.id_categoria = p.id_categoria
+                                        JOIN pedido_producto pp ON p.id_pinventario = pp.id_producto
+                                        JOIN ventas v ON pp.id_pedido = v.id_pedido
+                                        WHERE v.fecha BETWEEN :inicio AND :fin
+                                        GROUP BY c.nombre_categoria
+                                        ORDER BY total_vendido DESC
+                                        LIMIT 10");
+
+                // Ejecutar la consulta con los parámetros
+                $query->execute([
+                    'inicio' => $fechaInicio,
+                    'fin' => $fechaFin
+                ]);
+
+                // Retornar los resultados como un arreglo asociativo
+                return $query->fetchAll(PDO::FETCH_ASSOC);
+            } catch (PDOException $e) {
+                error_log('DashboardModel::getCategoriasMasVendidas -> PDOException ' . $e->getMessage());
+                return [];
+            }
+        }
+
     }
 ?>

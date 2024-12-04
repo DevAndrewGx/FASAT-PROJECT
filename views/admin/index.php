@@ -140,22 +140,9 @@ $user = $this->d['user'];
                     
                 </div>
 
-                <div class="chart">
-                    <h2>Ventas & Gastos</h2>
-                    <p>Mes-a-mes Comparison</p>
-                    <div class="pulse-sale">
+                <div class="chart" id="chart-categorias">
+                    <h2>Ventas por categorias</h2>
 
-                    </div>
-                    <span id="sale-span">Ventas</span>
-
-                    <div class="pulse-expense">
-
-                    </div>
-                    <span id="expense-span">Gastos</span>
-
-                    <div class="chart-area chart-ExSa">
-                        <div class="grid"></div>
-                    </div>
                 </div>
             </div>
 

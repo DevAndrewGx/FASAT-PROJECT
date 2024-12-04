@@ -55,12 +55,12 @@
             $productosMasVendidos = $dashboardObj->getProductosMasVendidos($fechaInicio, $fechaFin);
 
             // Obtener las ventas por categoría
-            // $ventasPorCategoria = $dashboardObj->getVentasPorCategoria($fechaInicio, $fechaFin);
+            $ventasPorCategoria = $dashboardObj->getCategoriasMasVendidas($fechaInicio, $fechaFin);
 
             // Devolver los datos en formato JSON
             echo json_encode([
                 'productosMasVendidos' => $productosMasVendidos,
-                // 'ventasPorCategoria' => $ventasPorCategoria
+                'ventasPorCategoria' => $ventasPorCategoria
             ]);
         }
     }

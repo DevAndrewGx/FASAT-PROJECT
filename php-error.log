@@ -1,365 +1,1086 @@
-[04-Dec-2024 09:32:26 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:32:26 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:32:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:32:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:32:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:26 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:32:26 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:32:28 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:32:28 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:28 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:32:28 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:32:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:32:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:32:28 Europe/Berlin] DashboardModel::getProductosMasVendidos -> PDOException SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
-[04-Dec-2024 09:33:28 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:33:28 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:33:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:33:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:33:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:33:28 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:33:28 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:34:25 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:34:25 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:34:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:34:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:34:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:34:25 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:34:25 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:34:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:34:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:34:27 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:34:27 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:34:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:34:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:35:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:35:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:35:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:35:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:35:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:35:27 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:35:27 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:36:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:27 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:36:27 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:36:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:36:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-12-04/2024-12-04, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-12-04/2024-12-04, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:27 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:36:27 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:36:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:36:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:30 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:36:30 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-11-27/2024-12-04, url => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-11-27/2024-12-04, url => admin
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:36:30 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:36:30 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:36:30 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:36:30 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:38:26 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:26 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:26 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:26 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:38:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:27 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:27 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:38:27 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:28 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:28 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:29 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:29 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:38:29 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:29 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:29 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:38:29 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:29 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:29 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:32 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:33 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:38:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:33 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:38:33 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:38:33 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:38:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:32 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:33 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:39:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:33 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:33 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:33 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:33 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:39:33 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:39:34 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:39:34 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:34 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:34 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:44 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:44 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:39:44 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:44 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:44 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:44 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:39:45 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:45 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:45 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:39:45 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:39:45 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:39:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:09 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:40:09 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
-[04-Dec-2024 09:40:09 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:40:09 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:40:09 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:09 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:40:09 Europe/Berlin] Errores::construct -> inicio de errores
-[04-Dec-2024 09:40:10 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:40:10 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:40:10 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:40:10 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:40:10 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:10 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:40:10 Europe/Berlin] fin2024-12-04
-[04-Dec-2024 09:40:10 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:40:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
-[04-Dec-2024 09:40:11 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:40:11 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:40:11 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:41:10 Europe/Berlin] Inicializando la aplicacion...
-[04-Dec-2024 09:41:10 Europe/Berlin] SessionController::validarSession()
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
-[04-Dec-2024 09:41:10 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
-[04-Dec-2024 09:41:10 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
-[04-Dec-2024 09:41:10 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
-[04-Dec-2024 09:41:10 Europe/Berlin] inicio2024-12-04
-[04-Dec-2024 09:41:10 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:05:25 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:05:25 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:05:25 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:05:25 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:05:25 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:25 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:05:25 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:05:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:05:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:05:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:26 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:05:26 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:05:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:05:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:26 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:26 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:06:26 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:06:26 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:06:26 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:26 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:06:26 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:06:35 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:35 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:06:35 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:06:35 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:06:35 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:35 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:35 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:06:36 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:36 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:36 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:06:36 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:06:36 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:06:36 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:06:36 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:07:20 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:20 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:20 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:20 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:07:20 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-12-04/2024-12-04, url => admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:20 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:20 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:23 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:07:23 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos/2024-11-27/2024-12-04, url => admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:07:23 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:07:23 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:14 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:12:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:15 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:12:15 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:17 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:12:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:12:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:12:21 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:21 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:12:21 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:21 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:21 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:21 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:21 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:12:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:22 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:12:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:22 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:22 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:12:22 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:12:22 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:12:22 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:11 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:11 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:13:11 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:11 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:11 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:11 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:11 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:13:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:12 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:13:12 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:12 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:14 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:13:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:13:14 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:13:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:13:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:14:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:14:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:14:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:14 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:14:14 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:14:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:14:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:14:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:14:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:39 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:14:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:40 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:14:40 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:14:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:14:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:15:42 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:15:42 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:15:42 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:15:42 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:15:42 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:15:42 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:15:42 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:16:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:17 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:17 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:17 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:17 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:17 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:17 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:16:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:18 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:18 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:16:18 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:18 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:18 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:39 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:16:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:40 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:16:40 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:57 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:57 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:16:57 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:57 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:58 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:16:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:16:58 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:16:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:16:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:16:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:17:14 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:17:14 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:17:14 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:17:14 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:14 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:17:14 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:17:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:17:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:17:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:15 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:17:15 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:17:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:17:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:15 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:15 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:15 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:15 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:15 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:15 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:18:15 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:18:27 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:27 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:18:27 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:27 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:27 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:28 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:18:28 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:28 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:28 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:18:28 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:28 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:28 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:44 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:44 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:18:44 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:44 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:44 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:44 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:44 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:18:45 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:45 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:45 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:18:45 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:18:45 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:45 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:46 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:18:46 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:18:46 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:18:46 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:18:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:18:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:18:58 Europe/Berlin] SessionController::validarSession() redirect al login
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\FAST-PROJECT\classes\session.php on line 27
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 48
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 49
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 50
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 51
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 52
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 53
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 54
+[04-Dec-2024 10:18:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 55
+[04-Dec-2024 10:18:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): 
+[04-Dec-2024 10:18:59 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:18:59 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:18:59 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[04-Dec-2024 10:18:59 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 10:18:59 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 10:18:59 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 10:18:59 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Dec-2024 10:19:47 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:47 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:47 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:47 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:47 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:47 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:19:47 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:19:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:53 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:19:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:53 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:53 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:53 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:53 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:19:53 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:57 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:57 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:19:57 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:57 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:57 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:57 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:58 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:19:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:58 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:58 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:19:58 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:19:58 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:19:58 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:24 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:24 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:24 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:24 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:24 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:24 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:24 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:20:31 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:31 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:31 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:31 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:31 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:31 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:31 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:20:32 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:32 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:32 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:32 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:32 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:32 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:32 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:20:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:39 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:20:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:20:39 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:20:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:20:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:20:59 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:00 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:21:00 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:00 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:00 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:21:00 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:00 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:00 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:12 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:12 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:12 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:12 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:12 Europe/Berlin] SessionController::validarSession() redirect al login
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\FAST-PROJECT\classes\session.php on line 27
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 48
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 49
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 50
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 51
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 52
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 53
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 54
+[04-Dec-2024 10:21:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp\htdocs\FAST-PROJECT\models\joinUserRelationsModel.php on line 55
+[04-Dec-2024 10:21:12 Europe/Berlin] sessionController::getDatosUsuarioSession(): 
+[04-Dec-2024 10:21:13 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:13 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:13 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/login, url => login
+[04-Dec-2024 10:21:13 Europe/Berlin] sessionController::esSitioPublico(): currentURL => login
+[04-Dec-2024 10:21:13 Europe/Berlin] SessionController::validarSession() public page
+[04-Dec-2024 10:21:13 Europe/Berlin] Login::construct -> inicio de login
+[04-Dec-2024 10:21:13 Europe/Berlin] Login::render -> Carga la pagina principal del login
+[04-Dec-2024 10:21:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:39 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:39 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:39 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:39 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:39 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:39 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:21:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:40 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:40 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:21:40 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:40 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:40 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:54 Europe/Berlin] Errores::construct -> inicio de errores
+[04-Dec-2024 10:21:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:54 Europe/Berlin] Inicializando la aplicacion...
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosDashboard, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] inicio2024-12-04
+[04-Dec-2024 10:21:54 Europe/Berlin] fin2024-12-04
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession()
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::validarSession(): username:damerchan99@soy.sena.edu.co - role: Administrador
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::esSitioPublico(): currentURL => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getPaginaActual(): actualLink =>/FAST-PROJECT/admin/obtenerDatosGraficos, url => admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::estaAutorizado -> Role Administrador is validate for this site admin
+[04-Dec-2024 10:21:54 Europe/Berlin] SessionController::validarSession() => autorizado, lo deja pasar
+[04-Dec-2024 10:21:54 Europe/Berlin] sessionController::getDatosUsuarioSession(): Dave

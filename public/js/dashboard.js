@@ -57,6 +57,7 @@ $(document).ready(function () {
         autoUpdate = filtro === ""; // Desactivar actualización automática si se selecciona filtro
         cargarDataDasboard(fechaInicio, fechaFin);
         cargarDataProductosMasVendidos(fechaInicio, fechaFin);
+        cargarVentasPorCategorias(fechaInicio, fechaFin);
         
 
         if (autoUpdate) startAutoUpdate(); // Reiniciar auto-update si no hay filtro
@@ -65,6 +66,7 @@ $(document).ready(function () {
     // Cargar datos iniciales
     cargarDataDasboard();
     cargarDataProductosMasVendidos();
+    cargarVentasPorCategorias();
     startAutoUpdate();
 });
 
@@ -143,6 +145,85 @@ function cargarDataProductosMasVendidos(fechaInicio = null, fechaFin = null) {
                 opcionesProductos
             );
             chartProductos.render();
+        },
+        error: function (xhr, status, error) {
+            console.error("Error cargando datos en los graficos", error);
+        },
+    });
+}
+
+function cargarVentasPorCategorias(fechaInicio = null, fechaFin = null) { 
+
+    let url = baseUrl + "admin/obtenerDatosGraficos";
+    if (fechaInicio && fechaFin) {
+        url += `/${fechaInicio}/${fechaFin}`;
+    }
+
+    $.ajax({
+        url: url, // Ruta basada en tu sistema de enrutamiento
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            // Gráfico de Productos Más Vendidos
+             var categorias = data.ventasPorCategoria.map((item) => item.nombre_categoria);
+             var ventas = data.ventasPorCategoria.map((item) => item.total_vendido);
+
+             var options = {
+                 series: [
+                     {
+                         name: "Ventas",
+                         data: ventas,
+                     },
+                 ],
+                 chart: {
+                     type: "area", // Cambia a "area" para un gráfico de área curvo
+                     height: 350,
+                 },
+                 xaxis: {
+                     categories: categorias,
+                     title: {
+                         text: "Categorías", // Etiqueta del eje X
+                         style: {
+                             fontSize: "14px",
+                             fontWeight: "bold",
+                         },
+                     },
+                 },
+                 yaxis: {
+                     title: {
+                         text: "Total Vendido", // Etiqueta del eje Y
+                         style: {
+                             fontSize: "14px",
+                             fontWeight: "bold",
+                         },
+                     },
+                 },
+                 stroke: {
+                     curve: "smooth", // Suaviza las líneas del gráfico
+                     width: 3, // Ajusta el grosor de las líneas
+                 },
+                 fill: {
+                     type: "gradient", // Relleno con un degradado
+                     gradient: {
+                         shadeIntensity: 1,
+                         opacityFrom: 0.7,
+                         opacityTo: 0.2,
+                         stops: [0, 90, 100],
+                     },
+                 },
+                 markers: {
+                     size: 5, // Tamaño de los puntos en las líneas
+                     colors: ["#FFA41B"], // Color de los puntos
+                     strokeWidth: 2,
+                     strokeColors: "#fff",
+                 },
+                 tooltip: {
+                     theme: "dark", // Cambia el tema del tooltip a oscuro
+                 },
+             };
+
+             var chartCategorias = new ApexCharts(document.querySelector("#chart-categorias"),options);
+             chartCategorias.render();
         },
         error: function (xhr, status, error) {
             console.error("Error cargando datos en los graficos", error);
