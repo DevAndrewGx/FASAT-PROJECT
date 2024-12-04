@@ -308,7 +308,11 @@ $(document).ready(function () {
     });
 });
 
-export function cargarMesasPorEstado(estado, mesaActual = null , editar = false) {
+export function cargarMesasPorEstado(
+    estado,
+    mesaActual = null,
+    editar = false
+) {
     return $.post(
         `${baseUrl}mesas/getTablasPorEstado`,
         { estado: estado },
@@ -330,14 +334,6 @@ export function cargarMesasPorEstado(estado, mesaActual = null , editar = false)
                     </option>`;
             });
 
-            // Verifica el modo de edición
-            // console.error(mesaActual); 
-            // console.error(editar);
-            // console.error(mesas.data.some((mesa) =>  { 
-            //     mesa.id_mesa == mesaActual.id_mesa;
-            //     console.log(mesa.id_mesa);
-            //     console.log(mesaActual.id_mesa);
-            // }));
             if (
                 mesaActual &&
                 editar &&
@@ -354,6 +350,55 @@ export function cargarMesasPorEstado(estado, mesaActual = null , editar = false)
             $("#numeroMesa").append(template);
         }
     );
+    // Referencia al campo "Número de mesa"
+    const numeroMesaInput = document.getElementById("numeroMesa");
+
+    // Función para validar que el número sea positivo
+    function validarNumeroMesa() {
+        const valor = parseInt(numeroMesaInput.value, 10); // Convertir a número entero
+        const errorDiv = document.getElementById("mesaNameError"); // Div del error
+
+        // Verificar si el valor es menor o igual a 0 o NaN
+        if (isNaN(valor) || valor <= 0) {
+            numeroMesaInput.classList.add("is-invalid"); // Agregar clase de error
+            errorDiv.style.display = "block"; // Mostrar mensaje de error
+            errorDiv.textContent =
+                "Por favor, ingresa un número positivo mayor que 0.";
+        } else {
+            numeroMesaInput.classList.remove("is-invalid"); // Quitar clase de error
+            errorDiv.style.display = "none"; // Ocultar mensaje de error
+        }
+    }
+
+    // Evento en tiempo real para validar mientras se escribe
+    numeroMesaInput.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, ""); // Eliminar caracteres no numéricos
+        validarNumeroMesa(); // Ejecutar validación
+    });
+
+    // Referencia al campo "Capacidad"
+    const capacidadInput = document.getElementById("capacidad");
+
+    // Función para validar el campo "Capacidad"
+    function validarCapacidad() {
+        const valor = parseInt(capacidadInput.value, 10); // Convertir a número entero
+        const errorDiv = document.getElementById("capacidadError"); // Referencia al mensaje de error
+
+        // Verificar si el valor es inválido (NaN, menor que 1 o mayor que 30)
+        if (isNaN(valor) || valor < 1 || valor > 30) {
+            capacidadInput.classList.add("is-invalid"); // Agregar clase de error
+            errorDiv.style.display = "block"; // Mostrar mensaje de error
+            errorDiv.textContent = "Por favor, ingresa un número entre 1 y 30.";
+        } else {
+            capacidadInput.classList.remove("is-invalid"); // Quitar clase de error
+            errorDiv.style.display = "none"; // Ocultar mensaje de error
+        }
+    }
+
+    // Validación en tiempo real
+    capacidadInput.addEventListener("input", function () {
+        // Permitir solo números positivos y eliminar ceros iniciales
+        this.value = this.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+        validarCapacidad(); // Ejecutar validación
+    });
 }
-
-

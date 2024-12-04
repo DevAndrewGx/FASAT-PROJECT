@@ -45,22 +45,16 @@ $user = $this->d['user'];
                     <div class="page-title">
                         <h1>Control de Stock</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Stock </a>
+                            <a href="<?php echo constant('URL') ?>admin">Admin</a>
+                            <a href="<?php echo constant('URL') ?>productos" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
+                            <a href="<?php echo constant('URL') ?>stock" id="actual" data-navegation="#inventario" data-rol="admin"> / Stock </a>
                         </nav>
-                    </div>
-                    <div class="page-btn">
-                        <!-- Botón para abrir el modal de agregar control de stock -->
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalStock">
-                            <i class="fas fa-plus"></i> Agregar Control de Stock
-                        </button>
                     </div>
                 </div>
 
                 <div class="row">
                     <!-- Tabla de Productos -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Productos</h5>
@@ -78,73 +72,11 @@ $user = $this->d['user'];
                                                 <th>Producto</th>
                                                 <th>Stock</th>
                                                 <th>Disponible</th>
+                                                <th>Cantidad Minima</th>
                                                 <th>Acción</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- <tr>
-                                                <td>Agua Mineral</td>
-                                                <td>50 unid.</td>
-                                                <td>47 unid.</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cerveza Rubia</td>
-                                                <td>360 unid.</td>
-                                                <td>354 unid.</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr> -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tabla de Ingredientes -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Ingredientes</h5>
-                                <div class="table-responsive">
-                                    <table id="data-stock-ingredientes" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Ingrediente</th>
-                                                <th>Stock</th>
-                                                <th>Disponible</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Harina de Trigo</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <button class="btn btn-sm"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jamón</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>

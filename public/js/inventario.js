@@ -109,6 +109,7 @@ $(document).ready(function () {
             { data: "nombre_producto" },
             { data: "cantidad" },
             { data: "cantidad_disponible" },
+            { data: "cantidad_minima"},
             { data: "options" },
         ],
         columnDefs: [

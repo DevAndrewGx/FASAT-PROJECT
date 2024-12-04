@@ -204,6 +204,16 @@
         }
 
 
+        public function obtenerInventarioCritico() { 
+            try { 
+                $query = "";   
+            }catch(PDOException $e) {
+                error_log("StockModel::obtenerInventarioCritico->PDOException " . $e);
+                return false;
+            }
+        }
+
+
         // funcion para pasar la data del array a los atributos de la clase
         public function asignarDatosArray($array) { 
             

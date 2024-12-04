@@ -4,7 +4,7 @@ import { cargarMesasPorEstado } from "./mesas.js";
 $(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
     // utilizamos una bandera para indicar cuando esta en modo edicion y cuando no
-    let editar = false; 
+    let editar = false;
     // creamos un arreglo para guardar la data de los items del pedido
     let pedidoProductos = [];
     let pedidoCompleto = {};
@@ -235,8 +235,12 @@ $(document).ready(function () {
         // cancelamos el evento por default ya que lo estamos enviando desde un formulario
         e.preventDefault();
         // Muestra el contenedor de item oculto para el estado del producto
-        $(".estado-producto-container").removeClass("d-block").addClass("d-none");
-        $("#actualizar-pedido-btn").attr("id", "agregar-pedido-btn").html("Agregar Producto");
+        $(".estado-producto-container")
+            .removeClass("d-block")
+            .addClass("d-none");
+        $("#actualizar-pedido-btn")
+            .attr("id", "agregar-pedido-btn")
+            .html("Agregar Producto");
         // Limpia los campos y el listado de productos
         limpiarCamposPedido();
 
@@ -537,9 +541,7 @@ $(document).ready(function () {
             <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-id="${idProducto}" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
                 <div class="px-2">
                     <strong>${productoNombre}</strong><br>
-                    <span>Cantidad: ${cantidad} x $${precio.toFixed(
-            2
-        )} = $${subtotal}</span><br>
+                    <span>Cantidad: ${cantidad} x $${precio.toFixed(2)} = $${subtotal}</span><br>
                     <span>Notas: ${notas}</span>
                 </div>
                 <div>
@@ -600,12 +602,14 @@ $(document).ready(function () {
         e.preventDefault();
 
         // validamos si esta en modo edicion para cambiar el codigo del pedido
-        let editar = $(".modal-header").hasClass('headerUpdate') ? true : false;
-        if(editar) { 
-            console.log("Esta en modo edicion asi que puedes cambiar ciertas cosas bro");
+        let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+        if (editar) {
+            console.log(
+                "Esta en modo edicion asi que puedes cambiar ciertas cosas bro"
+            );
             let codigoPedido = $("#codigo-pedido").text();
             console.log(pedidoCompleto);
-        }else {
+        } else {
             // Obtener los datos generales del pedido
             const codigoPedido = $("#codigo-pedido").text();
             const fechaHora = $("#fecha-hora").text();
@@ -646,14 +650,14 @@ $(document).ready(function () {
                 return;
             }
         }
-        
-        
 
         // Creamos una petición para procesarla y enviarla al servidor
         $.ajax({
-            url: editar ? baseUrl + "pedidos/actualizarPedido"  : baseUrl + "pedidos/crearPedido",
+            url: editar
+                ? baseUrl + "pedidos/actualizarPedido"
+                : baseUrl + "pedidos/crearPedido",
             method: "POST",
-            data: { pedido: JSON.stringify(pedidoCompleto)},
+            data: { pedido: JSON.stringify(pedidoCompleto) },
             success: function (response) {
                 // mostramos la alerta cuando la respuesta del servidor se devuelve correctamente
                 let data = JSON.parse(response);
@@ -668,7 +672,9 @@ $(document).ready(function () {
                         if (result.isConfirmed) {
                             dataTablePedidos.ajax.reload(null, false);
                             dataTableMesasPedidos.ajax.reload(null, false);
-                            $("#generarPedidoModal").closest(".modal").modal("hide");
+                            $("#generarPedidoModal")
+                                .closest(".modal")
+                                .modal("hide");
                             // llamamos la funcion para limpiar los datos
                             limpiarCamposPedido();
                         }
@@ -846,7 +852,7 @@ $(document).ready(function () {
         const idCategoriaSelect = $("#categoriaPedido option:selected").val();
 
         const idProductoSelect = parseInt($("#producto option:selected").val());
-       
+
         const productoNombre = $("#producto option:selected").text();
 
         const precioProducto = parseFloat(
@@ -972,7 +978,6 @@ $(document).ready(function () {
                         let template = "";
                         let subtotal;
                         total = 0;
-                        
 
                         // Define un objeto con los mapeos de estados a clases CSS
                         const estadoClases = {
@@ -1020,9 +1025,8 @@ $(document).ready(function () {
                                 
                                 </div>
                             `;
-                            
+
                             total += parseFloat(subtotal);
-                            
                         });
 
                         // Rellena pedidoCompleto con los valores iniciales
@@ -1047,14 +1051,22 @@ $(document).ready(function () {
 
                         // Esperar que las mesas se carguen para asignar numeroMesaAntigua
                         setTimeout(() => {
-                            pedidoCompleto.numeroMesaAntigua = $("#numeroMesa option:selected").val();
-                            console.log("Mesa Antigua asignada: ", pedidoCompleto.numeroMesaAntigua);
+                            pedidoCompleto.numeroMesaAntigua = $(
+                                "#numeroMesa option:selected"
+                            ).val();
+                            console.log(
+                                "Mesa Antigua asignada: ",
+                                pedidoCompleto.numeroMesaAntigua
+                            );
                         }, 500);
 
                         // Escuchar cambios en el select de mesa y actualizar numeroMesa
                         $("#numeroMesa").on("change", function () {
                             pedidoCompleto.numeroMesa = $(this).val();
-                            console.log("Nueva Mesa asignada: ", pedidoCompleto.numeroMesa);
+                            console.log(
+                                "Nueva Mesa asignada: ",
+                                pedidoCompleto.numeroMesa
+                            );
                         });
 
                         console.log(pedidoCompleto);
@@ -1084,25 +1096,142 @@ $(document).ready(function () {
         });
     });
 
-   function limpiarCamposPedido() {
-       console.log("Limpiando lista de productos y campos...");
+    // ***********************************************************VALIDACIONES***********************************************
 
-       // Limpia el listado de productos en el DOM
-       $("#listaProductos").empty();
+    function limpiarCamposPedido() {
+        console.log("Limpiando lista de productos y campos...");
 
-       // Reinicia las variables globales
-       pedidoProductos = [];
-       total = 0;
+        // Limpia el listado de productos en el DOM
+        $("#listaProductos").empty();
 
+        // Reinicia las variables globales
+        pedidoProductos = [];
+        total = 0;
 
-       // Resetea los campos del formulario
-       $("#numeroPersonas").val(0);
-       $("#notasPedido").val("");
-       $("#totalPedido").text("$0.00");
-       $("#producto").val("#");
-       $("#categoriaPedido").val("#");
-       $("#cantidadItems").val("");
-       $("#notasItems").val("");
-   }
+        // Resetea los campos del formulario
+        $("#numeroPersonas").val(0);
+        $("#notasPedido").val("");
+        $("#totalPedido").text("$0.00");
+        $("#producto").val("#");
+        $("#categoriaPedido").val("#");
+        $("#cantidadItems").val("");
+        $("#notasItems").val("");
+    }
 
+    // Validación completa al enviar el formulario
+    document
+        .getElementById("formPedido")
+        .addEventListener("submit", function (event) {
+            // Validar el campo "Número de personas"
+            const numeroPersonasInput =
+                document.getElementById("numeroPersonas");
+            const numeroPersonas = parseInt(numeroPersonasInput.value, 10);
+
+            if (
+                isNaN(numeroPersonas) ||
+                numeroPersonas < 1 ||
+                numeroPersonas > 99
+            ) {
+                event.preventDefault(); // Evitar el envío del formulario
+                numeroPersonasInput.classList.add("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "block";
+            } else {
+                numeroPersonasInput.classList.remove("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "none";
+            }
+
+            // Validar el campo "Cantidad"
+            const cantidadItemsInput = document.getElementById("cantidadItems");
+            const cantidadItems = parseInt(cantidadItemsInput.value, 10);
+
+            if (
+                isNaN(cantidadItems) ||
+                cantidadItems < 1 ||
+                cantidadItems > 15
+            ) {
+                event.preventDefault(); // Evitar el envío del formulario
+                cantidadItemsInput.classList.add("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "block";
+            } else {
+                cantidadItemsInput.classList.remove("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "none";
+            }
+        });
+
+    // Validación en tiempo real para "Número de personas"
+    document
+        .getElementById("numeroPersonas")
+        .addEventListener("input", function () {
+            const input = this;
+
+            // Limpiar caracteres inválidos y ceros iniciales
+            input.value = input.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+
+            // Validar rango permitido
+            const value = parseInt(input.value, 10);
+            if (isNaN(value) || value < 1 || value > 99) {
+                input.classList.add("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "block";
+            } else {
+                input.classList.remove("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "none";
+            }
+        });
+
+    // Validación en tiempo real para "Cantidad"
+    document
+        .getElementById("cantidadItems")
+        .addEventListener("input", function () {
+            const input = this;
+
+            // Limpiar caracteres inválidos y ceros iniciales
+            input.value = input.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+
+            // Validar rango permitido
+            const value = parseInt(input.value, 10);
+            if (isNaN(value) || value < 1 || value > 15) {
+                input.classList.add("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "block";
+            } else {
+                input.classList.remove("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "none";
+            }
+        });
+
+    // Obtener referencias a los campos y al botón
+    const categoriaInput = document.getElementById("categoriaPedido");
+    const productoInput = document.getElementById("producto");
+    const cantidadInput = document.getElementById("cantidadItems");
+    const agregarPedidoBtn = document.getElementById("agregar-pedido-btn");
+
+    // Función para validar los campos y habilitar el botón
+    function validarCampos() {
+        const categoriaValida =
+            categoriaInput.value !== "#" && categoriaInput.value.trim() !== "";
+        const productoValido =
+            productoInput.value !== "#" && productoInput.value.trim() !== "";
+        const cantidadValida =
+            !isNaN(parseInt(cantidadInput.value, 10)) &&
+            parseInt(cantidadInput.value, 10) > 0;
+
+        // Habilitar o deshabilitar el botón según los valores
+        agregarPedidoBtn.disabled = !(
+            categoriaValida &&
+            productoValido &&
+            cantidadValida
+        );
+    }
+
+    // Asignar eventos a los campos para validación en tiempo real
+    categoriaInput.addEventListener("change", validarCampos);
+    productoInput.addEventListener("change", validarCampos);
+    cantidadInput.addEventListener("input", validarCampos);
 });

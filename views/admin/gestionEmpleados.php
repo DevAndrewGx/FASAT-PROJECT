@@ -38,13 +38,11 @@ $user = $this->d['user'];
                         <!-- <p>Gestiona tus empleados</p> -->
 
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#empleados" data-rol="admin"> / Empleados </a>
+                            <a href="<?php echo constant('URL') ?>admin">Admin</a>
+                            <a href="<?php echo constant('URL') ?>users" id="actual" data-navegation="#empleados" data-rol="admin"> / Empleados </a>
                         </nav>
-
                     </div>
                     <div class="pdf">
-
                         <a id="modalcarga" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
                             <img src="<?php echo constant('URL') ?>/public/imgs/icons/upload2.svg" class="mx-2" alt="Agregar Empleado"> Carga masiva
                         </a>
@@ -53,7 +51,6 @@ $user = $this->d['user'];
                         </a>
                     </div>
                 </div>
-
 
                 <!-- Modal -->
                 <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">

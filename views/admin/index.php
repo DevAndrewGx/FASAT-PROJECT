@@ -58,7 +58,7 @@ $user = $this->d['user'];
 
 
             <nav class="nav-main">
-                <a href="homeAdmin.php" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
+                <a href="<?php echo constant('URL')?>admin" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
             </nav>
 
             <div class="analyse">
@@ -137,7 +137,7 @@ $user = $this->d['user'];
             <div class="charts-analytics">
                 <div class="chart" id="chart-productos">
                     <h2>Productos mas vendidos</h2>
-                    
+
                 </div>
 
                 <div class="chart" id="chart-categorias">
@@ -148,106 +148,35 @@ $user = $this->d['user'];
 
             <div id="orders-employees">
 
-                <div class="employee">
-                    <h2>Personal Activo</h2>
-                    <p id="list">Lista de empleados</p>
-                    <div class="data-employee">
-
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Juan Andres</h3>
-                                <p>Mesero</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="data-employee">
-
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Fernando Gabriel</h3>
-                                <p>Cheff</p>
-                            </div>
-                        </div>
-
-
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="data-employee">
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Maria Antonia</h3>
-                                <p>Mesera</p>
-                            </div>
-                        </div>
-
-
-                        <!-- DISPLAY INFORMATION'S EMPLOYEES -->
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-                    <!-- BUTTON TO WATCH MORE DETAILS ABOUT EMPLOYEES -->
-                    <!-- <div id="more-details">
-                        <a href="#">Mas detalles</a>
-                    </div> -->
-
-                </div>
 
                 <div id="orders">
                     <h2>Inventario Critico</h2>
                     <p>Lista de productos en el inventario</p>
-                    <table id="example" class="table table-responsive datanew">
-                        <thead>
-                            <tr>
-                                <th>h</th>
-                                <th>First</th>
-                                <th>Last</th>
-                                <th>Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="data-inventario-critico" class="table table-responsive datanew">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="checkboxs">
+                                                <input type="checkbox" id="select-all">
+                                                <span class="checkmarks"></span>
+                                            </label>
+                                        </th>
+                                        <th class="sorting">Numero de mesa</th>
+                                        <th class="sorting">Capacidad</th>
+                                        <th class="sorting">Estado</th>
+                                        <th class="sorting">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </main>

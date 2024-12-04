@@ -50,13 +50,13 @@ $user = $this->d['user'];
                     <div class="page-title">
                         <h1>Productos</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario-productos"> / Productos </a>
+                            <a href="<?php echo constant('URL') ?>admin">Admin</a>
+                            <a href="<?php echo constant('URL') ?>productos" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
+                            <a href="<?php echo constant('URL') ?>producto" id="actual" data-navegation="#inventario-productos"> / Productos </a>
                         </nav>
                     </div>
                     <div class="page-btn">
-                    <a id="modalcarga" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                        <a id="modalcarga" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
                             <img src="<?php echo constant('URL') ?>/public/imgs/icons/upload2.svg" class="mx-2" alt="Agregar Empleado"> Carga masiva
                         </a>
                         <a href="#" onclick="openModalCreateProduct();" class="btn btn-added"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">

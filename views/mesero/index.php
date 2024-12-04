@@ -69,7 +69,32 @@ $categorias = $this->d['categorias'];
                         </div>
                     </div>
                 </div>
-                
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mesas & Pedidos Asociados</h5>
+                        <div class="table-responsive">
+                            <table id="data-mesas-pedidos" class="table table-responsive datanew">
+                                <thead>
+                                    <th>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" id="select-all">
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </th>
+
+                                    <th class="sorting">Numero mesa</th>
+                                    <th class="sorting">Capacidad</th>
+                                    <th class="sorting">Comensales</th>
+                                    <th class="sorting">Pedido Asociado</th>
+                                    <th class="sorting">Estado</th>
+                                    <th class="sorting">Accion</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
     </div>
     </main>
@@ -110,9 +135,12 @@ $categorias = $this->d['categorias'];
 
                                 <div class="form-group col-md-4">
                                     <label for="numeroPersonas" class="form-label">Numero de personas</label>
-                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" required>
-                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas valido válido.</div>
+                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" min="1" max="99" step="1" required
+                                        placeholder="" value="" oninput="this.value = this.value.replace(/^0+/, '').replace(/[^0-9]/g, '');">
+                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas válido (entre 1 y 99).</div>
                                 </div>
+
+
                             </div>
                             <div class="card mb-4">
                                 <div class="card-body">
@@ -148,9 +176,11 @@ $categorias = $this->d['categorias'];
 
                                         <div class="form-group col-md-6">
                                             <label for="cantidadItems" class="form-label">Cantidad</label>
-                                            <input type="number" min="1" max="15" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required>
-                                            <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número valido de items. </div>
+                                            <input type="number" min="1" max="99" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '')">
+                                            <div id="cantidadItemsError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número válido entre 1 y 15.</div>
                                         </div>
+
 
                                         <div class="form-group col-md-6">
                                             <label for="notasItems" class="form-label">Notas Producto</label>
@@ -169,7 +199,8 @@ $categorias = $this->d['categorias'];
                                             </select>
                                         </div>
                                     </div>
-                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
+                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900" disabled>Agregar Producto</button>
+
                                 </div>
                             </div>
 

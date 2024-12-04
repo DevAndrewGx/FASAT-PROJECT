@@ -824,7 +824,7 @@ body .apexcharts-tooltip.apexcharts-theme-light {
 
 main #orders-employees {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 20px;
 }
