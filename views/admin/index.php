@@ -8,6 +8,7 @@ $user = $this->d['user'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="<?php echo constant('URL'); ?>">
     <title>FAST | DASHBOARD</title>
     <!-- <link rel="shortcut icon" href="../../imgs/LOGOf.png"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -36,7 +37,25 @@ $user = $this->d['user'];
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px">
-            <h1>Admin Dashboard</h1>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                </div>
+
+                <div>
+                    <label for="filtro-fechas" class="form-label">Filtro</label>
+
+                    <select name="filtro-fechas" id="filtro-fechas" class="form-control">
+                        <option value="">Sin filtro (Actualizacion automatica)</option>
+                        <option value="hoy">Hoy</option>
+                        <option value="semana">Ultimos 7 dias</option>
+                        <option value="mes">Ultimos 30 dias</option>
+                    </select>
+                </div>
+
+
+            </div>
+
 
             <nav class="nav-main">
                 <a href="homeAdmin.php" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
@@ -51,8 +70,8 @@ $user = $this->d['user'];
                     <div class="status">
                         <div class="info">
                             <h2>Ventas del Dia</h2>
-                            <h3>$2590</h3>
-                            <p id="list">En tiempo real</p>
+                            <h3 id="ventas-del-dia">$0</h3>
+                            <p id="list">Actual</p>
                         </div>
 
                         <div class="progress">
@@ -66,8 +85,8 @@ $user = $this->d['user'];
                 <div id="orders">
                     <div class="status">
                         <div class="info">
-                            <h2>Ordenes Activas</h2>
-                            <h3>15 </h3>
+                            <h2>Ordenes Pendientes</h2>
+                            <h3 id="ordenes-pendientes"></h3>
                             <p id="list">Hoy</p>
                         </div>
 
@@ -84,7 +103,7 @@ $user = $this->d['user'];
                     <div class="status">
                         <div class="info">
                             <h2>Productos Vendidos</h2>
-                            <h3>100 </h3>
+                            <h3 id="productos-vendidos">100 </h3>
                             <p id="list">Hoy</p>
                         </div>
 
@@ -272,6 +291,7 @@ $user = $this->d['user'];
 
     <!-- APP JS -->
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/dashboard.js"></script>
 </body>
 
 </html>

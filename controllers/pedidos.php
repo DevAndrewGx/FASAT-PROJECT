@@ -16,6 +16,8 @@
 
         // creamos la funcion para crear un nuevo pedido
         function crearPedido() {
+            // guardamos la fecha y la hora en formato ya que la vamos a necesitar en tipo datee para interactuar con ella en la bd
+            date_default_timezone_set('America/Bogota');
             // decodificamos la data que viene del formulario para manipularla en el contralador
             $pedido = json_decode($_POST['pedido'], true);
 
@@ -52,6 +54,7 @@
             $pedidoObj->setNotasPedido($pedido["notasPedido"]);
             $pedidoObj->setEstadoPedido("PENDIENTE");
             $pedidoObj->setFechaHora($pedido["fechaHora"]);
+            $pedidoObj->setFecha(date('Y-m-d H:i:s'));
             $pedidoObj->setTotal($pedido["total"]);
 
             // creamos un objeto de mesas ya que necesitamos cambiar el estado de la mesa cuando se ocupa
@@ -72,8 +75,7 @@
                     // seteamos la data en el objeto de ventas para poder insertala en la tabla
                     $ventaObj->setIdPedido($idPedido);
                     $ventaObj->setTotal($pedido["total"]);
-                    // guardamos la fecha y la hora en formato ya que la vamos a necesitar en tipo datee para interactuar con ella en la bd
-                    date_default_timezone_set('America/Bogota');
+                    
                     $ventaObj->setFecha(date('Y-m-d H:i:s'));
                     // ponemos el estado de la venta en pendiente ya que aun no ha sido pagada
                     $ventaObj->setEstado("PENDIENTE");

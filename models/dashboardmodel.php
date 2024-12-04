@@ -13,9 +13,9 @@
         public function getVentasDelDia($fechaInicio, $fechaFin)
         {
             try {
-                $query = $this->prepare("SELECT SUM(pp.cantidad * pp.precio) AS ventas_del_dia
+                $query = $this->prepare("SELECT SUM(pp.cantidad * pp.precio) AS ventasDelDia
                 FROM pedidos p
-                INNER JOIN pedidos_productos pp ON p.id_pedido = pp.id_pedido
+                INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
                 WHERE p.fecha BETWEEN :fechaInicio AND :fechaFin");
                 $query->execute([
                     'fechaInicio' => $fechaInicio,
@@ -23,17 +23,17 @@
                 ]);
                 $result = $query->fetch(PDO::FETCH_ASSOC);
 
-                return $result['ventas_del_dia'] ?? 0;
+                return $result['ventasDelDia'] ?? 0;
             } catch (PDOException $e) {
                 error_log('DashboardModel::getVentasDelDia -> PDOException ' . $e->getMessage());
                 return 0;
             }
-        }
+    }
         // funcion para consultar las ordenes que tienen estado pendiente
         public function getOrdenesPendientes($fechaInicio, $fechaFin)
         {
             try {
-                $query = $this->prepare("SELECT COUNT(*) AS ordenes_pendientes FROM pedidos WHERE estado = 'PEDIENTE' AND fecha BETWEEN :fechaInicio AND :fechaFin");
+                $query = $this->prepare("SELECT COUNT(*) AS ordenes_pendientes FROM pedidos WHERE estado = 'PENDIENTE' AND fecha BETWEEN :fechaInicio AND :fechaFin");
                 $query->execute([
                     'fechaInicio' => $fechaInicio,
                     'fechaFin' => $fechaFin
@@ -50,10 +50,7 @@
         public function getProductosVendidos($fechaInicio, $fechaFin)
         {
             try {
-                $query = $this->prepare(" SELECT SUM(pp.cantidad) AS productos_vendidos
-                FROM pedidos p
-                INNER JOIN pedidos_productos pp ON p.id_pedido = pp.id_pedido
-                WHERE p.fecha BETWEEN :fechaInicio AND :fechaFin");
+                $query = $this->prepare("SELECT SUM(pp.cantidad) AS productos_vendidos FROM pedidos p INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido WHERE p.fecha BETWEEN :fechaInicio AND :fechaFin");
                 $query->execute([
                     'fechaInicio' => $fechaInicio,
                     'fechaFin' => $fechaFin

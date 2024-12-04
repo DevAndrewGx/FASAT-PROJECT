@@ -14,7 +14,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         private $personas;
         private $notas_pedido;
         private $total;
-        private $fecha_hora;
+        private $fecha_hora_vista;
+        private $fecha;
       
 
         // creamos el constructor para inicializar los atributos
@@ -32,7 +33,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             $this->personas = 0;
             $this->notas_pedido;
             $this->total = 0;
-            $this->fecha_hora = "";
+            $this->fecha_hora_vista = "";
+            $this->fecha = 0;
         }
 
         // esta funcion nos permitira crear un nuevo pedido
@@ -44,7 +46,7 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                 // en este caso como necesitamos la conexión, la crearemos manual
                 $conn = $this->db->connect();
                 // creamos la query para insertar la data en pedidos
-                $query = $conn->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha)");
+                $query = $conn->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora_vista, fecha)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha_vista, :fecha)");
                 
 
                 // asignamos los datos a los placeholders y la ejecutamos
@@ -56,7 +58,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                    ":total" => $this->total, 
                    ":personas" => $this->personas, 
                    ":notas" => $this->notas_pedido, 
-                   ":fecha" => $this->fecha_hora
+                   ":fecha_vista" => $this->fecha_hora_vista,
+                   ":fecha" => $this->fecha
                 ]);
 
                 // obtenemos el id del pedido que se inserto en pedidos para insertarlo en pedidosProductos
@@ -178,7 +181,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function getPersonas() { return $this->personas;}
         public function getTotal() { return $this->total;}
         public function getNotasPedido() { return $this->notas_pedido;}
-        public function getFechaHora() { return $this->fecha_hora;}
+        public function getFechaHora() { return $this->fecha_hora_vista;}
+        public function getFecha() { return $this->fecha;}
 
         public function setIdPedido($idPedido) {  $this->id_pedido = $idPedido;}
         public function setIdMesa($idMesa) {  $this->id_mesa = $idMesa;}
@@ -188,7 +192,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function setPersonas($personas) {  $this->personas = $personas;}
         public function setTotal($total) {  $this->total = $total;}
         public function setNotasPedido($notasPedido) { return $this->notas_pedido = $notasPedido;}
-        public function setFechaHora($fechaHora) {  $this->fecha_hora = $fechaHora;}
+        public function setFechaHora($fechaHora) {  $this->fecha_hora_vista = $fechaHora;}
+        public function setFecha($fecha) {  $this->fecha = $fecha;}
     
     }
 ?>

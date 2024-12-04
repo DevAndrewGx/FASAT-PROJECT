@@ -44,6 +44,7 @@
     include_once 'models/stockmodel.php';
     include_once 'models/mesasmodel.php';
     include_once 'models/ventasmodel.php';
+    include_once 'models/dashboardmodel.php';
 
 
 

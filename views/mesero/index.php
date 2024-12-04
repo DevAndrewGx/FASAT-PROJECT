@@ -69,32 +69,7 @@ $categorias = $this->d['categorias'];
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mesas & Pedidos Asociados</h5>
-                        <div class="table-responsive">
-                            <table id="data-mesas-pedidos" class="table table-responsive datanew">
-                                <thead>
-                                    <th>
-                                        <label class="checkboxs">
-                                            <input type="checkbox" id="select-all">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </th>
-
-                                    <th class="sorting">Numero mesa</th>
-                                    <th class="sorting">Capacidad</th>
-                                    <th class="sorting">Comensales</th>
-                                    <th class="sorting">Pedido Asociado</th>
-                                    <th class="sorting">Estado</th>
-                                    <th class="sorting">Accion</th>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
     </div>
     </main>
