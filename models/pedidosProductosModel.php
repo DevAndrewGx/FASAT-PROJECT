@@ -54,6 +54,34 @@
         }
 
 
+        // esta funcion nos permitira actualizar dat en la tabla de pedidosProductos
+        public function actualizar($id) { 
+            error_log("PedidosProductos::actualizar -> actualizar un producto desde PedidosProducots");
+
+             // utilizamos try catch para evalucar la consulta ya que vamos a interactuar con la bd
+            try {
+                $query = $this->prepare("UPDATE pedido_producto SET id_pedido = :id_pedido, id_producto = :id_producto, cantidad = :cantidad, precio = :precio, notas_producto = :notas_producto, estado_producto = :estado_producto WHERE id_pedido = :id");
+
+                // asignamos la data a los placeholder y ejecutamos la query
+                $query->execute([
+                    ":id" => $id,
+                    ":id_producto" => $this->id_producto, 
+                    ":cantidad" => $this->cantidad, 
+                    ":precio" => $this->precio, 
+                    ":notas_producto" => $this->notas_producto,
+                    ":estado_producto" => $this->estado_producto
+                ]);
+
+                // retornamos true para salirnos de la funcion
+                return true;
+            }catch(PDOException $e) {
+                error_log('PredidosProducotsModel::crear->PDOException' . $e);
+                // salimos de la funcion
+                return false;
+            }
+        }
+
+
         // getters y setters
 
         public function getIdPedido() { return $this->id_pedido;}

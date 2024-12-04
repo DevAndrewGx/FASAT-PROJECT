@@ -14,7 +14,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         private $personas;
         private $notas_pedido;
         private $total;
-        private $fecha_hora;
+        private $fecha_hora_vista;
+        private $fecha;
       
 
         // creamos el constructor para inicializar los atributos
@@ -32,7 +33,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
             $this->personas = 0;
             $this->notas_pedido;
             $this->total = 0;
-            $this->fecha_hora = "";
+            $this->fecha_hora_vista = "";
+            $this->fecha = 0;
         }
 
         // esta funcion nos permitira crear un nuevo pedido
@@ -44,7 +46,7 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                 // en este caso como necesitamos la conexión, la crearemos manual
                 $conn = $this->db->connect();
                 // creamos la query para insertar la data en pedidos
-                $query = $conn->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha)");
+                $query = $conn->prepare("INSERT INTO pedidos(id_mesero, id_mesa, codigo_pedido, estado, total, personas, notas_pedidos, fecha_hora_vista, fecha)VALUES (:id_mesero, :id_mesa, :codigo, :estado, :total, :personas, :notas, :fecha_vista, :fecha)");
                 
 
                 // asignamos los datos a los placeholders y la ejecutamos
@@ -56,7 +58,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                    ":total" => $this->total, 
                    ":personas" => $this->personas, 
                    ":notas" => $this->notas_pedido, 
-                   ":fecha" => $this->fecha_hora
+                   ":fecha_vista" => $this->fecha_hora_vista,
+                   ":fecha" => $this->fecha
                 ]);
 
                 // obtenemos el id del pedido que se inserto en pedidos para insertarlo en pedidosProductos
@@ -69,6 +72,70 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
                 error_log('PredidosModel::crear->PDOException' . $e);
                 // salimos de la funcion
                 return false;
+            }
+        }
+
+        // Esta funcion nos permitira borrar un pedido en la bd
+        public function borrar($id) {
+
+            // utilizamos try catch ya que vamos a interactuar con la bd y ademas para capturar cualquier exception sin afectar el aplicativo
+            try {
+                error_log("PedidosModel::borrar -> funcion para borrar el pedido");
+                $query = $this->prepare('DELETE FROM pedidos WHERE id_pedido = :id_pedido');
+                $query->execute([
+                    'id_pedido' => $id
+                ]);
+
+                return true;
+            } catch (PDOException $e) {
+                error_log('PedidosModel::borrar -> PDOException' . $e);
+                return false;
+            }
+        }
+
+
+        // Esta funcion nos permitira actualizar la data de un pedido
+        public function actualizar($codigo) { 
+            
+            // usamos try catch ya que vamos a interactuar con la bd, entonces no queremos que en ningun momento se pare la consulta
+            try {
+
+            // Consulta de actualización
+                $query = $this->prepare("UPDATE pedidos 
+                SET 
+                    id_mesero = :id_mesero, 
+                    id_mesa = :id_mesa, 
+                    codigo_pedido = :codigo_pedido, 
+                    estado = :estado, 
+                    total = :total, 
+                    personas = :personas, 
+                    notas_pedidos = :notas_pedido 
+                WHERE 
+                    codigo_pedido = :codigo
+            ");
+
+                // Ejecutar la consulta
+                $query->execute([
+                    "codigo" => $codigo,
+                    "id_mesero" => $this->id_mesero,
+                    "id_mesa" => $this->id_mesa,
+                    "codigo_pedido" => $this->codigo_pedido,
+                    "estado" => $this->estado,
+                    "total" => $this->total,
+                    "personas" => $this->personas,
+                    "notas_pedido" => $this->notas_pedido
+                ]);
+
+                // Verificar si se actualizó alguna fila
+                if ($query->rowCount() >= 0) { // >= 0 es válido porque no siempre habrá cambios
+                    return true;
+                } else {
+                    error_log('PedidosModel::actualizar -> No se actualizó ninguna fila');
+                    return false;
+                }
+            }catch(PDOException $e)  {
+            error_log("PedidosModel::actualizar -> PDOException " . $e->getMessage());
+            return false;
             }
         }
 
@@ -114,7 +181,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function getPersonas() { return $this->personas;}
         public function getTotal() { return $this->total;}
         public function getNotasPedido() { return $this->notas_pedido;}
-        public function getFechaHora() { return $this->fecha_hora;}
+        public function getFechaHora() { return $this->fecha_hora_vista;}
+        public function getFecha() { return $this->fecha;}
 
         public function setIdPedido($idPedido) {  $this->id_pedido = $idPedido;}
         public function setIdMesa($idMesa) {  $this->id_mesa = $idMesa;}
@@ -124,7 +192,8 @@ use PhpOffice\PhpSpreadsheet\Calculation\DateTimeExcel\Week;
         public function setPersonas($personas) {  $this->personas = $personas;}
         public function setTotal($total) {  $this->total = $total;}
         public function setNotasPedido($notasPedido) { return $this->notas_pedido = $notasPedido;}
-        public function setFechaHora($fechaHora) {  $this->fecha_hora = $fechaHora;}
+        public function setFechaHora($fechaHora) {  $this->fecha_hora_vista = $fechaHora;}
+        public function setFecha($fecha) {  $this->fecha = $fecha;}
     
     }
 ?>

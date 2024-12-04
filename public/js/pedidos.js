@@ -1,8 +1,13 @@
+// Importa la función desde mesas.js
+import { cargarMesasPorEstado } from "./mesas.js";
 
-$(document).ready(function() {
+$(document).ready(function () {
     const baseUrl = $('meta[name="base-url"]').attr("content");
+    // utilizamos una bandera para indicar cuando esta en modo edicion y cuando no
+    let editar = false;
     // creamos un arreglo para guardar la data de los items del pedido
     let pedidoProductos = [];
+    let pedidoCompleto = {};
     // creamos la variable total para guardar el total
     let total = null;
 
@@ -227,6 +232,19 @@ $(document).ready(function() {
     );
 
     $("#btnCrearPedido").on("click", function (e) {
+        // cancelamos el evento por default ya que lo estamos enviando desde un formulario
+        e.preventDefault();
+        // Muestra el contenedor de item oculto para el estado del producto
+        $(".estado-producto-container")
+            .removeClass("d-block")
+            .addClass("d-none");
+        $("#actualizar-pedido-btn")
+            .attr("id", "agregar-pedido-btn")
+            .html("Agregar Producto");
+        // Limpia los campos y el listado de productos
+        limpiarCamposPedido();
+
+        console.log("Modo 'Crear' activado, campos y variables limpiados.");
         $.ajax({
             url: baseUrl + "pedidos/crearCodigoPedido", // Ruta para generar el código del pedido
             method: "GET", // Usamos GET para solo obtener el código
@@ -343,118 +361,148 @@ $(document).ready(function() {
     }
 
     // Luego, fuera de la configuración del DataTable, usa delegación de eventos
-     $(document).on("click", ".visualizar-pedido-btn, .visualizar-pedido-eye", function (e) {
-        e.preventDefault();
-        const codigoPedido = $(this).data("pedido");
-        let totalPedido = 0;
+    $(document).on(
+        "click",
+        ".visualizar-pedido-btn, .visualizar-pedido-eye",
+        function (e) {
+            e.preventDefault();
+            const codigoPedido = $(this).data("pedido");
+            let totalPedido = 0;
 
-        $.ajax({
-            url: baseUrl + "pedidos/consultarPedido",
-            type: "POST",
-            dataType: "json",
-            data: { codigoPedido: codigoPedido },
-            success: function (response) {
-                if (response.status) {
-                
-                    if (response.data) {
-                        pedidosData = response.data;
-
-                        // seteamos la data en los campos
-                        $("#codigo-pedido-detalle").text(
-                            pedidosData.codigo_pedido
-                        );
-                        $("#nombre-mesero-detalle").text(
-                            pedidosData.nombre_mesero
-                        );
-                        $("#numero-mesa-detalle").text(pedidosData.numero_mesa);
-                        $("#personas-detalle").text(
-                            `${pedidosData.personas} Comensales`
-                        );
-
-                        // validamos el estado del pedido para ponerlo en el estado
-                        if(pedidosData.estado === 'PENDIENTE') { 
-                            $("#estado-pedido-detalle").text(pedidosData.estado);
-                            $("#estado-pedido-detalle").addClass("badges bg-lightred");
-                        }else if(pedidosData.estado === 'EN PREPARACION'){ 
-                            $("#estado-pedido-detalle").text(
-                                pedidosData.estado
+            $.ajax({
+                url: baseUrl + "pedidos/consultarPedido",
+                type: "POST",
+                dataType: "json",
+                data: { codigoPedido: codigoPedido },
+                success: function (response) {
+                    if (response.status) {
+                        if (response.data) {
+                            let pedidosData = response.data;
+                            // seteamos la data en los campos
+                            $("#codigo-pedido-detalle").text(
+                                pedidosData.codigo_pedido
                             );
-                            $("#estado-pedido-detalle").addClass("badges bg-lightyellow");
-                        }else { 
-                            $("#estado-pedido-detalle").text(pedidosData.estado);
-                            $("#estado-pedido-detalle").addClass("badges bg-lightgreen");
-                        }
+                            $("#nombre-mesero-detalle").text(
+                                pedidosData.nombre_mesero
+                            );
+                            $("#numero-mesa-detalle").text(
+                                pedidosData.numero_mesa
+                            );
+                            $("#personas-detalle").text(
+                                `${pedidosData.personas} Comensales`
+                            );
 
-                        // Generar filas de productos usando productos_detallados
-                        let tableHTML;
-                        // Variable para almacenar la clase según el estado del producto
-                        let estadoClass = "";
-                        console.log(pedidosData.productos_detallados);
-                        // iteramos la data para mostrar los datos de los productos en la tabla
-                        pedidosData.productos_detallados.forEach((producto) => {
-                            const cantidad = parseFloat(producto.cantidad);
-                            const precio = parseFloat(producto.precio);
-                            const subtotal = cantidad * precio;
-                            totalPedido += subtotal;
-
-                            // Comprobación del estado del producto y asignación de la clase correspondiente
-                            if (producto.estados_productos === "PENDIENTE") {
-                                estadoClass = "badges bg-lightred"; // Clase para 'PENDIENTE'
+                            // validamos el estado del pedido para ponerlo en el estado
+                            if (pedidosData.estado === "PENDIENTE") {
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightred"
+                                );
                             } else if (
-                                producto.estados_productos === "EN PREPARACION"
+                                pedidosData.estado === "EN PREPARACION"
                             ) {
-                                estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightyellow"
+                                );
                             } else {
-                                estadoClass = "badges bg-lightgreen"; 
+                                $("#estado-pedido-detalle").text(
+                                    pedidosData.estado
+                                );
+                                $("#estado-pedido-detalle").addClass(
+                                    "badges bg-lightgreen"
+                                );
                             }
 
-                            tableHTML += `
-                            <tr>
-                                <td>${producto.nombre_producto}</td>
-                                <td>${cantidad}</td>
-                                <td>$${precio.toFixed(2)}</td>
-                                <td>$${subtotal.toFixed(2)}</td>
-                               <td><span class="${estadoClass}">${producto.estados_productos}</span>
-                                
-                            </td>
-                            </tr>
-                        `;
-                        });
-                        $("#notas-pedido-detalle").text(
-                            pedidosData.notas_general_pedido
-                        );
-                        $("#total-pedido-detalle").text(`$${totalPedido}`);
+                            // Generar filas de productos usando productos_detallados
+                            let tableHTML;
+                            // Variable para almacenar la clase según el estado del producto
+                            let estadoClass = "";
+                            console.log(pedidosData.productos_detallados);
+                            // iteramos la data para mostrar los datos de los productos en la tabla
+                            pedidosData.productos_detallados.forEach(
+                                (producto) => {
+                                    const cantidad = parseFloat(
+                                        producto.cantidad
+                                    );
+                                    const precio = parseFloat(producto.precio);
+                                    const subtotal = cantidad * precio;
+                                    totalPedido += subtotal;
 
-                        // Insertar la tabla en el DOM
-                        $("#detalles-pedidos-table tbody").html(tableHTML);
+                                    // Comprobación del estado del producto y asignación de la clase correspondiente
+                                    if (
+                                        producto.estados_productos ===
+                                        "PENDIENTE"
+                                    ) {
+                                        estadoClass = "badges bg-lightred"; // Clase para 'PENDIENTE'
+                                    } else if (
+                                        producto.estados_productos ===
+                                        "EN PREPARACION"
+                                    ) {
+                                        estadoClass = "badges bg-lightyellow"; // Clase para 'EN PREPARACION'
+                                    } else {
+                                        estadoClass = "badges bg-lightgreen";
+                                    }
+
+                                    tableHTML += `
+                                    <tr>
+                                        <td>${producto.nombre_producto}</td>
+                                        <td>${cantidad}</td>
+                                        <td>$${precio.toFixed(2)}</td>
+                                        <td>$${subtotal.toFixed(2)}</td>
+                                    <td><span class="${estadoClass}">${
+                                        producto.estados_productos
+                                    }</span>
+                                        
+                                    </td>
+                                    </tr>
+                        `;
+                                }
+                            );
+                            $("#notas-pedido-detalle").text(
+                                pedidosData.notas_general_pedido
+                            );
+                            $("#total-pedido-detalle").text(`$${totalPedido}`);
+
+                            // Insertar la tabla en el DOM
+                            $("#detalles-pedidos-table tbody").html(tableHTML);
+                        } else {
+                            console.log(
+                                "response.data está vacío o es undefined"
+                            );
+                        }
                     } else {
-                        console.log("response.data está vacío o es undefined");
+                        console.log("No se encontraron datos o hubo un error.");
                     }
-                } else {
-                    console.log("No se encontraron datos o hubo un error.");
-                }
-            },
-            error: function (xhr, status, error) {
-                console.error(
-                    "Error en la solicitud AJAX: " + status + " - " + error
-                );
-            },
-            complete: function () {
-                $("#modalFormCreateProduct").modal("show");
-            },
-        });
-        
-        console.log("Visualizando pedido:", codigoPedido);
-        $("#visualizarDetallesPedidosModal").modal("show");
-    });
+                },
+                error: function (xhr, status, error) {
+                    console.error(
+                        "Error en la solicitud AJAX: " + status + " - " + error
+                    );
+                },
+                complete: function () {
+                    $("#modalFormCreateProduct").modal("show");
+                },
+            });
+
+            console.log("Visualizando pedido:", codigoPedido);
+            $("#visualizarDetallesPedidosModal").modal("show");
+        }
+    );
 
     // funcion para agregar los items y mostrarlos en el fronted
     $("#agregar-pedido-btn").on("click", function (e) {
-        // cancelamos el evento por default ya que lo estamos enviando desde un formulario
         e.preventDefault();
+
         // guardamos la data que viene de los input
         console.log("working.....");
         const idProducto = $("#producto option:selected").val();
+        console.log(idProducto);
+        const idCategoria = $("#categoriaPedido option:selected").val();
         console.log(idProducto);
         const productoNombre = $("#producto option:selected").text();
         const cantidad = parseInt($("#cantidadItems").val()) || 1;
@@ -477,11 +525,12 @@ $(document).ready(function() {
         total += parseFloat(subtotal);
 
         pedidoProductos.push({
-            idProducto: parseInt(idProducto),
-            nombre: productoNombre,
+            id_producto: parseInt(idProducto),
+            id_categoria: parseInt(idCategoria),
+            nombre_producto: productoNombre,
             cantidad: cantidad,
             precio: precio,
-            notas: notas,
+            notas_producto: notas,
             subtotal: subtotal,
         });
 
@@ -495,7 +544,11 @@ $(document).ready(function() {
                     <span>Cantidad: ${cantidad} x $${precio.toFixed(2)} = $${subtotal}</span><br>
                     <span>Notas: ${notas}</span>
                 </div>
-                <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                <div>
+                    <button id="actualizar-producto" class="btn" style="background: #28c76f; color: #fff;">Actualizar</button>
+                    <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                </div>
+                
             </div>
         `);
 
@@ -547,48 +600,62 @@ $(document).ready(function() {
     $("#enviar-pedido-btn").on("click", function (e) {
         // quitamos el efecto por default
         e.preventDefault();
-        console.log("its working bitch");
-        // Obtener los datos generales del pedido
-        const codigoPedido = $("#codigo-pedido").text();
-        const fechaHora = $("#fecha-hora").text();
-        const numeroMesa = $("#numeroMesa").val();
-        const estadoMesa = $("#numeroMesa option:selected").data("estado");
-        const idMesero = $("#idMesero").data("id");
-        const numeroPersonas = $("#numeroPersonas").val();
-        const notasPedido = $("#notasPedido").val();
-        const total = parseFloat($("#totalPedido").text().replace("$", ""));
 
-        console.log(estadoMesa);
-        // creamos un JSON con toda la data del pedido
-        const pedidoCompleto = {
-            codigoPedido: codigoPedido,
-            fechaHora: fechaHora,
-            numeroMesa: numeroMesa,
-            estadoMesa: estadoMesa,
-            idMesero: idMesero,
-            numeroPersonas: numeroPersonas,
-            notasPedido: notasPedido,
-            total: total,
-            pedidoProductos: pedidoProductos,
-        };
-        console.log(pedidoCompleto.idMesero);
-
-        // validamos la data antes de ser enviada
-        // Validar antes de enviar
-        if (
-            !pedidoCompleto.numeroMesa ||
-            !pedidoCompleto.numeroPersonas ||
-            pedidoCompleto.pedidoProductos.length === 0
-        ) {
-            alert(
-                "Por favor completa todos los campos y agrega al menos un producto."
+        // validamos si esta en modo edicion para cambiar el codigo del pedido
+        let editar = $(".modal-header").hasClass("headerUpdate") ? true : false;
+        if (editar) {
+            console.log(
+                "Esta en modo edicion asi que puedes cambiar ciertas cosas bro"
             );
-            return;
+            let codigoPedido = $("#codigo-pedido").text();
+            console.log(pedidoCompleto);
+        } else {
+            // Obtener los datos generales del pedido
+            const codigoPedido = $("#codigo-pedido").text();
+            const fechaHora = $("#fecha-hora").text();
+            const numeroMesa = $("#numeroMesa").val();
+            const estadoMesa = $("#numeroMesa option:selected").data("estado");
+            const idMesero = $("#idMesero").data("id");
+            const numeroPersonas = $("#numeroPersonas").val();
+            const notasPedido = $("#notasPedido").val();
+            total = parseFloat($("#totalPedido").text().replace("$", ""));
+
+            console.log(
+                "NOOOOOOOOOOO Esta en modo edicion asi que puedes cambiar ciertas cosas bro"
+            );
+            // creamos un JSON con toda la data del pedido
+            pedidoCompleto = {
+                codigoPedido: codigoPedido,
+                fechaHora: fechaHora,
+                numeroMesa: numeroMesa,
+                estadoMesa: estadoMesa,
+                idMesero: idMesero,
+                numeroPersonas: numeroPersonas,
+                notasPedido: notasPedido,
+                total: total,
+                pedidoProductos: pedidoProductos,
+            };
+            console.log(pedidoCompleto);
+
+            // validamos la data antes de ser enviada
+            // Validar antes de enviar
+            if (
+                !pedidoCompleto.numeroMesa ||
+                !pedidoCompleto.numeroPersonas ||
+                pedidoCompleto.pedidoProductos.length === 0
+            ) {
+                alert(
+                    "Por favor completa todos los campos y agrega al menos un producto."
+                );
+                return;
+            }
         }
 
         // Creamos una petición para procesarla y enviarla al servidor
         $.ajax({
-            url: baseUrl + "pedidos/crearPedido",
+            url: editar
+                ? baseUrl + "pedidos/actualizarPedido"
+                : baseUrl + "pedidos/crearPedido",
             method: "POST",
             data: { pedido: JSON.stringify(pedidoCompleto) },
             success: function (response) {
@@ -604,10 +671,12 @@ $(document).ready(function() {
                     }).then((result) => {
                         if (result.isConfirmed) {
                             dataTablePedidos.ajax.reload(null, false);
+                            dataTableMesasPedidos.ajax.reload(null, false);
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
-                            $("#generarPedidoModal")[0].reset();
+                            // llamamos la funcion para limpiar los datos
+                            limpiarCamposPedido();
                         }
                     });
                 } else {
@@ -620,11 +689,9 @@ $(document).ready(function() {
                     }).then((result) => {
                         // No cerrar el modal en caso de error
                         if (result.isConfirmed) {
-                           
                             $("#generarPedidoModal")
                                 .closest(".modal")
                                 .modal("hide");
-                            $("#generarPedidoModal")[0].reset();
                         }
                     });
                 }
@@ -645,4 +712,526 @@ $(document).ready(function() {
             },
         });
     });
+
+    // Creamos la funcion para eliminar un pedido
+    $("#data-pedidos").on("click", ".botonEliminar", function (e) {
+        // quitamos el evento por defecto de los formularios
+        e.preventDefault();
+        const eliminarPedidoBtn = $(this);
+        const idPedido = eliminarPedidoBtn.data("id");
+        const idMesa = eliminarPedidoBtn.data("idmesa");
+        console.log(idMesa);
+
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "Esta acción no se puede deshacer",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+            allowOutsideClick: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
+                eliminarPedidoBtn.prop("disabled", true);
+                $.ajax({
+                    url: baseUrl + "pedidos/borrarPedido",
+                    type: "POST",
+                    dataType: "json",
+                    data: { idPedido: idPedido, idMesa: idMesa },
+                    success: function (response) {
+                        console.log(response);
+                        let data = response;
+                        if (data.status) {
+                            Swal.fire({
+                                title: "Éxito",
+                                text: data.message,
+                                icon: "success",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    dataTablePedidos.ajax.reload(null, false);
+                                    dataTableMesasPedidos.ajax.reload(
+                                        null,
+                                        false
+                                    );
+                                }
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Error",
+                                text: data.message,
+                                icon: "error",
+                                allowOutsideClick: false,
+                                confirmButtonText: "Ok",
+                            }).then(() => {
+                                // habilitamos nuevamente el error si sucede un error
+                                eliminarPedidoBtn.prop("disabled", true);
+                            });
+                        }
+                    },
+
+                    error: function () {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema con la solicitud.",
+                            icon: "error",
+                            allowOutsideClick: false,
+                            confirmButtonText: "Ok",
+                        }).then(() => {
+                            // habilitamos nuevamente el error si sucede un error
+                            eliminarPedidoBtn.prop("disabled", true);
+                        });
+                    },
+                });
+            }
+        });
+    });
+
+    // esta funcion nos permitira actualizar un producto
+    // Escuchar el evento de clic en el botón "Actualizar"
+    $(document).on("click", "#actualizar-producto", function (e) {
+        e.preventDefault();
+
+        console.log("its click on #actualizar-producto");
+
+        $(".title-products").html("Actualizar Productos");
+        $("#agregar-pedido-btn")
+            .off("click")
+            .attr("id", "actualizar-pedido-btn")
+            .html("Actualizar Producto")
+            .attr("data-id", $(this).closest(".item-pedido").attr("data-id")); // Asignamos el data-id al botón
+
+        // Obtenemos el elemento padre (el producto en el DOM)
+        const itemPedido = $(this).closest(".item-pedido");
+        console.log(itemPedido);
+
+        // Extraemos el ID del producto y la categoría
+        const idProducto = parseInt(itemPedido.attr("data-id"));
+        console.log(idProducto);
+        console.log(pedidoProductos);
+        const producto = pedidoProductos.find(
+            (p) => p.id_producto == idProducto
+        );
+
+        if (producto) {
+            // Llenamos los campos del formulario con los datos del producto
+            $("#categoriaPedido").val(producto.id_categoria).trigger("change");
+
+            // Esperamos que las opciones del select de productos se carguen
+            setTimeout(() => {
+                $("#producto").val(producto.id_producto).trigger("change");
+            }, 500); // Ajusta este tiempo si es necesario
+
+            // Llenamos los otros campos
+            $("#cantidadItems").val(producto.cantidad);
+            $("#notasItems").val(producto.notas_producto);
+            $("#estadoProducto").val(producto.estados_productos);
+        } else {
+            alert("No se encontró el producto seleccionado en el pedido.");
+        }
+    });
+
+    // utilizamos esta esta funcion para actualizar un producto y mostrarlo en el DOM actualizado
+    $(document).on("click", "#actualizar-pedido-btn", function (e) {
+        e.preventDefault();
+
+        const idProducto = parseInt($(this).attr("data-id"));
+        const index = pedidoProductos.findIndex(
+            (p) => p.id_producto === idProducto
+        );
+        if (index === -1) {
+            alert("Error: No se encontró el producto para actualizar.");
+            return;
+        }
+
+        const cantidad = parseInt($("#cantidadItems").val()) || 1;
+        const notas = $("#notasItems").val() || "Sin notas";
+
+        const idCategoriaSelect = $("#categoriaPedido option:selected").val();
+
+        const idProductoSelect = parseInt($("#producto option:selected").val());
+
+        const productoNombre = $("#producto option:selected").text();
+
+        const precioProducto = parseFloat(
+            $("#producto option:selected").attr("data-precio")
+        ); // Extraer el nuevo precio del producto seleccionado
+
+        // Actualizar los datos del producto en el array
+        pedidoProductos[index].cantidad = cantidad;
+        pedidoProductos[index].id_categoria = idCategoriaSelect;
+        pedidoProductos[index].id_producto = idProductoSelect;
+        pedidoProductos[index].notas_producto = notas;
+        pedidoProductos[index].nombre = productoNombre;
+        pedidoProductos[index].precio = precioProducto; // Actualizar el precio en el array
+        pedidoProductos[index].subtotal = (precioProducto * cantidad).toFixed(
+            2
+        );
+
+        // Actualizar el producto en el DOM
+        const productoElemento = $(`.item-pedido[data-id="${idProducto}"]`);
+
+        if (!productoElemento.length) {
+            alert("Error: No se encontró el producto en el DOM.");
+            return;
+        }
+
+        // Actualizar el nombre del producto
+        productoElemento.find("strong").text(productoNombre);
+
+        // Actualizar la cantidad, precio y subtotal
+        productoElemento
+            .find("span:first")
+            .text(
+                `Cantidad: ${cantidad} x $${precioProducto.toFixed(2)} = $${
+                    pedidoProductos[index].subtotal
+                }`
+            );
+
+        // Actualizar las notas
+        productoElemento.find("span:last").text(`Notas: ${notas}`);
+        // Recalcular el total
+        const total = pedidoProductos.reduce(
+            (sum, prod) => sum + parseFloat(prod.subtotal),
+            0
+        );
+
+        // Actualizar el data-id en el DOM con el nuevo idProducto
+        productoElemento.attr("data-id", idProductoSelect);
+
+        console.log(pedidoProductos);
+        $("#totalPedido").text(`$${total.toFixed(2)}`);
+
+        // Cambiar el botón de vuelta a "Agregar Producto"
+        $("#actualizar-pedido-btn")
+            .off("click") // Con el off limpiamos el evento anterior para que no hayan bugs raros
+            .attr("id", "agregar-pedido-btn")
+            .html("Agregar Producto")
+            .attr("data-id", $(this).closest(".item-pedido").attr("data-id"));
+
+        // Limpiar el formulario
+        $("#producto").val("#");
+        $("#categoriaPedido").val("#");
+        $("#cantidadItems").val("");
+        $("#notasItems").val("");
+    });
+
+    // creamos esta funcion para actualizar toda la data de un pedido
+    $("#data-pedidos").on("click", ".botonActualizar", function (e) {
+        // cambiamos el estado de editar ya que estamos en modo edicion
+        editar = true;
+
+        $("#agregar-pedido-btn")
+            .off("click")
+            .attr("id", "actualizar-pedido-btn")
+            .html("Actualizar Producto");
+
+        // obtenemos el codigo del pedido
+        let codigoPedido = $(this).data("codigopedido");
+
+        // actualizamos los campos del modal para actualizar el pedido
+        $("#titleModal").html("Actualizar Pedido");
+        // Muestra el contenedor de item oculto para el estado del producto
+        $(".estado-producto-container")
+            .removeClass("d-none")
+            .addClass("d-block");
+        $(".title-products").text("Actualizar Productos");
+        $(".modal-header")
+            .removeClass("headerRegister")
+            .addClass("headerUpdate");
+        $("#btnText").text("Actualizar");
+
+        // creamos la peticion para enviar el codigo del producto y asi setearlos en los campos del pedido para actualizarlos
+        $.ajax({
+            url: baseUrl + "pedidos/consultarPedido",
+            type: "POST",
+            dataType: "json",
+            data: { codigoPedido: codigoPedido },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        let pedidoData = response.data;
+                        console.log(pedidoData);
+                        console.log(pedidoData.id_mesa);
+                        console.log(pedidoData.numero_mesa);
+
+                        // seteamos la data en los campos
+                        $("#codigo-pedido").text(pedidoData.codigo_pedido);
+                        $("#fecha-hora").text(pedidoData.fecha_hora);
+
+                        // validamos que este en modo edicion para evitar problemas con el formulario de crear
+                        if (editar) {
+                            console.log(editar);
+                            // cargamos la mesa del pedido al select ya que solo nos trae las mesas disponible por eso dividmos la funcion por aparte en mesas
+                            cargarMesasPorEstado(
+                                "DISPONIBLE",
+                                pedidoData,
+                                editar
+                            );
+                        }
+
+                        $("#numeroPersonas").val(pedidoData.personas);
+                        let template = "";
+                        let subtotal;
+                        total = 0;
+
+                        // Define un objeto con los mapeos de estados a clases CSS
+                        const estadoClases = {
+                            pendiente: "badges bg-lightred",
+                            "en preparacion": "badges bg-lightyellow",
+                            completado: "badges bg-ligthgreen",
+                            // Agrega más estados y clases según sea necesario
+                        };
+
+                        // itereamos sobre el array productos_detallados para mostrar los productos del pedido
+                        pedidoData.productos_detallados.forEach((producto) => {
+                            // Obtén la clase correspondiente al estado o usa una clase por defecto
+                            subtotal = 0;
+                            const claseEstado =
+                                estadoClases[
+                                    producto.estados_productos.toLowerCase()
+                                ] || "badges bg-ligthgreey";
+                            subtotal = (
+                                producto.precio * producto.cantidad
+                            ).toFixed(2);
+                            console.log(subtotal);
+                            template += `
+                                <div class="item-pedido d-flex justify-content-between align-items-center mb-3 p-3 border border-secondary rounded" data-id="${
+                                    producto.id_producto
+                                }" data-subtotal="${subtotal}" style="border-color: #ccc !important;">
+                                    <div class="px-2">
+                                        <strong>${
+                                            producto.nombre_producto
+                                        }   - <span class="${claseEstado}">${
+                                producto.estados_productos
+                            }</span></strong><br>
+                                        <span>Cantidad: ${
+                                            producto.cantidad
+                                        } x $${parseFloat(
+                                producto.precio
+                            ).toFixed(2)} = $${subtotal}</span><br>
+                                        <span>Notas: ${
+                                            producto.notas_producto
+                                        }</span>
+                                    </div>
+                                    <div>
+                                        <button id="actualizar-producto" class="btn" style="background: #28c76f; color: #fff;">Actualizar</button>
+                                        <button id="eliminar-producto" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                
+                                </div>
+                            `;
+
+                            total += parseFloat(subtotal);
+                        });
+
+                        // Rellena pedidoCompleto con los valores iniciales
+                        pedidoCompleto = {
+                            idPedido: pedidoData.id_pedido,
+                            codigoPedido: pedidoData.codigo_pedido,
+                            fechaHora: pedidoData.fecha_hora,
+                            numeroMesaAntigua: null, // Lo inicializamos como null
+                            numeroMesa: null,
+                            idMesero: $("#idMesero").data("id"),
+                            numeroPersonas: pedidoData.personas,
+                            notasPedido: pedidoData.notas_general_pedido,
+                            total: total,
+                            pedidoProductos:
+                                pedidoData.productos_detallados.map(
+                                    (producto) => ({
+                                        ...producto,
+                                        id_categoria: producto.id_categoria,
+                                    })
+                                ),
+                        };
+
+                        // Esperar que las mesas se carguen para asignar numeroMesaAntigua
+                        setTimeout(() => {
+                            pedidoCompleto.numeroMesaAntigua = $(
+                                "#numeroMesa option:selected"
+                            ).val();
+                            console.log(
+                                "Mesa Antigua asignada: ",
+                                pedidoCompleto.numeroMesaAntigua
+                            );
+                        }, 500);
+
+                        // Escuchar cambios en el select de mesa y actualizar numeroMesa
+                        $("#numeroMesa").on("change", function () {
+                            pedidoCompleto.numeroMesa = $(this).val();
+                            console.log(
+                                "Nueva Mesa asignada: ",
+                                pedidoCompleto.numeroMesa
+                            );
+                        });
+
+                        console.log(pedidoCompleto);
+
+                        // Actualizamos el total de pedido
+                        $("#totalPedido").text(`$${total.toFixed(2)}`);
+                        console.log(pedidoData.notas_general_pedido);
+                        $("#notasPedido").text(pedidoData.notas_general_pedido);
+
+                        $("#listaProductos").html(template);
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                // mostramos el modal
+                $("#generarPedidoModal").modal("show");
+            },
+        });
+    });
+
+    // ***********************************************************VALIDACIONES***********************************************
+
+    function limpiarCamposPedido() {
+        console.log("Limpiando lista de productos y campos...");
+
+        // Limpia el listado de productos en el DOM
+        $("#listaProductos").empty();
+
+        // Reinicia las variables globales
+        pedidoProductos = [];
+        total = 0;
+
+        // Resetea los campos del formulario
+        $("#numeroPersonas").val(0);
+        $("#notasPedido").val("");
+        $("#totalPedido").text("$0.00");
+        $("#producto").val("#");
+        $("#categoriaPedido").val("#");
+        $("#cantidadItems").val("");
+        $("#notasItems").val("");
+    }
+
+    // Validación completa al enviar el formulario
+    document
+        .getElementById("formPedido")
+        .addEventListener("submit", function (event) {
+            // Validar el campo "Número de personas"
+            const numeroPersonasInput =
+                document.getElementById("numeroPersonas");
+            const numeroPersonas = parseInt(numeroPersonasInput.value, 10);
+
+            if (
+                isNaN(numeroPersonas) ||
+                numeroPersonas < 1 ||
+                numeroPersonas > 99
+            ) {
+                event.preventDefault(); // Evitar el envío del formulario
+                numeroPersonasInput.classList.add("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "block";
+            } else {
+                numeroPersonasInput.classList.remove("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "none";
+            }
+
+            // Validar el campo "Cantidad"
+            const cantidadItemsInput = document.getElementById("cantidadItems");
+            const cantidadItems = parseInt(cantidadItemsInput.value, 10);
+
+            if (
+                isNaN(cantidadItems) ||
+                cantidadItems < 1 ||
+                cantidadItems > 15
+            ) {
+                event.preventDefault(); // Evitar el envío del formulario
+                cantidadItemsInput.classList.add("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "block";
+            } else {
+                cantidadItemsInput.classList.remove("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "none";
+            }
+        });
+
+    // Validación en tiempo real para "Número de personas"
+    document
+        .getElementById("numeroPersonas")
+        .addEventListener("input", function () {
+            const input = this;
+
+            // Limpiar caracteres inválidos y ceros iniciales
+            input.value = input.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+
+            // Validar rango permitido
+            const value = parseInt(input.value, 10);
+            if (isNaN(value) || value < 1 || value > 99) {
+                input.classList.add("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "block";
+            } else {
+                input.classList.remove("is-invalid");
+                document.getElementById("numeroPersonasError").style.display =
+                    "none";
+            }
+        });
+
+    // Validación en tiempo real para "Cantidad"
+    document
+        .getElementById("cantidadItems")
+        .addEventListener("input", function () {
+            const input = this;
+
+            // Limpiar caracteres inválidos y ceros iniciales
+            input.value = input.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+
+            // Validar rango permitido
+            const value = parseInt(input.value, 10);
+            if (isNaN(value) || value < 1 || value > 15) {
+                input.classList.add("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "block";
+            } else {
+                input.classList.remove("is-invalid");
+                document.getElementById("cantidadItemsError").style.display =
+                    "none";
+            }
+        });
+
+    // Obtener referencias a los campos y al botón
+    const categoriaInput = document.getElementById("categoriaPedido");
+    const productoInput = document.getElementById("producto");
+    const cantidadInput = document.getElementById("cantidadItems");
+    const agregarPedidoBtn = document.getElementById("agregar-pedido-btn");
+
+    // Función para validar los campos y habilitar el botón
+    function validarCampos() {
+        const categoriaValida =
+            categoriaInput.value !== "#" && categoriaInput.value.trim() !== "";
+        const productoValido =
+            productoInput.value !== "#" && productoInput.value.trim() !== "";
+        const cantidadValida =
+            !isNaN(parseInt(cantidadInput.value, 10)) &&
+            parseInt(cantidadInput.value, 10) > 0;
+
+        // Habilitar o deshabilitar el botón según los valores
+        agregarPedidoBtn.disabled = !(
+            categoriaValida &&
+            productoValido &&
+            cantidadValida
+        );
+    }
+
+    // Asignar eventos a los campos para validación en tiempo real
+    categoriaInput.addEventListener("change", validarCampos);
+    productoInput.addEventListener("change", validarCampos);
+    cantidadInput.addEventListener("input", validarCampos);
 });

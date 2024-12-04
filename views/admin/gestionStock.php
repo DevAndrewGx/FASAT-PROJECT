@@ -45,22 +45,17 @@ $user = $this->d['user'];
                     <div class="page-title">
                         <h1>Control de Stock</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#inventario" data-rol="admin"> / Stock </a>
+                            <a href="<?php echo constant('URL') ?>admin">Admin</a>
+                            <a href="<?php echo constant('URL') ?>productos" id="actual" data-navegation="#inventario" data-rol="admin"> / Inventario </a>
+                            <a href="<?php echo constant('URL') ?>stock" id="actual" data-navegation="#inventario" data-rol="admin"> / Stock </a>
                         </nav>
                     </div>
-                    <div class="page-btn">
-                        <!-- Botón para abrir el modal de agregar control de stock -->
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalStock">
-                            <i class="fas fa-plus"></i> Agregar Control de Stock
-                        </button>
-                    </div>
+
                 </div>
 
                 <div class="row">
                     <!-- Tabla de Productos -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Productos</h5>
@@ -78,73 +73,11 @@ $user = $this->d['user'];
                                                 <th>Producto</th>
                                                 <th>Stock</th>
                                                 <th>Disponible</th>
+                                                <th>Cantidad Minima</th>
                                                 <th>Acción</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- <tr>
-                                                <td>Agua Mineral</td>
-                                                <td>50 unid.</td>
-                                                <td>47 unid.</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cerveza Rubia</td>
-                                                <td>360 unid.</td>
-                                                <td>354 unid.</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr> -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tabla de Ingredientes -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Ingredientes</h5>
-                                <div class="table-responsive">
-                                    <table id="data-stock-ingredientes" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Ingrediente</th>
-                                                <th>Stock</th>
-                                                <th>Disponible</th>
-                                                <th>Acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Harina de Trigo</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <button class="btn btn-sm"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jamón</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-light"><i class="fas fa-eye"></i></button>
-                                                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditStock"><i class="fas fa-pen"></i></button>
-                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteStock"><i class="fas fa-trash"></i></button>
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -157,7 +90,7 @@ $user = $this->d['user'];
     </div>
 
     <!-- Modal de Control de Stock -->
-    <div class="modal fade" id="modalStock" tabindex="-1" aria-labelledby="stockModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="modalStock" tabindex="-1" aria-labelledby="stockModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister">
@@ -199,7 +132,7 @@ $user = $this->d['user'];
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Modal para Editar Stock -->
@@ -214,17 +147,18 @@ $user = $this->d['user'];
                     <form id="formEditStock">
                         <div class="mb-3">
                             <label for="editProductSelect" class="form-label">Producto o Ingrediente</label>
-                            <input type="text" class="form-control" id="editProductSelect" value="Agua Mineral" disabled>
+                            <input type="text" class="form-control" id="nombreProductoStock" disabled>
                         </div>
                         <div class="mb-3">
                             <label for="editStockActual" class="form-label">Stock Actual</label>
-                            <input type="number" id="editStockActual" class="form-control" value="47">
+                            <input type="number" id="stockActual" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="editStockMinimo" class="form-label">Stock Mínimo</label>
-                            <input type="number" id="editStockMinimo" class="form-control" value="40">
+                            <input type="number" id="stockMinimo" class="form-control">
                         </div>
-                        <button type="button" class="btn btn-warning" id="updateStock">Actualizar Stock</button>
+
+                        <button id="btnActioActualizarStock" class="btn btn-primary" type="submit"><i class='bx bxs-check-circle'></i><span id="btnText">Actualizar Stock</span></button>&nbsp;&nbsp;&nbsp;
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -263,63 +197,6 @@ $user = $this->d['user'];
     <script src="<?php echo constant('URL'); ?>public/js/inventario.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/categorias.js"></script>
-
-
-    <script>
-        $(document).ready(function() {
-            // Inicializar DataTables
-            $('#controlStockProductos').DataTable();
-            $('#controlStockIngredientes').DataTable();
-
-        });
-
-        // Simulación de guardar stock y mostrar alerta de SweetAlert
-        document.getElementById('guardarStock').addEventListener('click', function() {
-            // Mostrar alerta de éxito con SweetAlert
-            Swal.fire({
-                title: '¡Guardado!',
-                text: 'El stock ha sido guardado exitosamente.',
-                icon: 'success',
-                confirmButtonText: 'Ok'
-            }).then(() => {
-                // Cerrar el modal después de la alerta
-                const modal = bootstrap.Modal.getInstance(document.getElementById('modalStock'));
-                modal.hide();
-            });
-        });
-
-        // SweetAlert para actualización del stock
-        document.getElementById('updateStock').addEventListener('click', function() {
-            // Mostrar alerta de éxito con SweetAlert
-            Swal.fire({
-                title: '¡Actualizado!',
-                text: 'El stock ha sido actualizado correctamente.',
-                icon: 'success',
-                confirmButtonText: 'Ok'
-            }).then(() => {
-                // Cerrar el modal después de la alerta
-                const modal = bootstrap.Modal.getInstance(document.getElementById('modalEditStock'));
-                modal.hide();
-            });
-        });
-
-        // Simulación de confirmación de eliminación con SweetAlert
-        document.getElementById('confirmDelete').addEventListener('click', function() {
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: 'Esta acción no se puede deshacer.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#6c757d',
-                confirmButtonText: 'Sí, eliminar',
-                cancelButtonText: 'Cancelar',
-                position: 'center',
-                heightAuto: false
-            });
-        });
-    </script>
-
 
 </body>
 

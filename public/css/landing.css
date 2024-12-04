@@ -36,7 +36,7 @@ body {
 }
 
 .hero-header {
-    min-height: 90vh;
+    min-height: 80vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ body {
 }
 
 .trabajos-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     letter-spacing: 1px;
     color: var(--dark);
@@ -159,11 +159,7 @@ body {
     position: relative;
     z-index: 2;
     animation: fadeIn 0.5s ease;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(240, 248, 255, 1),
-        rgba(240, 248, 255, 0)
-    );
+    background: #f9f9f9;
 }
 
 @keyframes fadeIn {
@@ -178,7 +174,7 @@ body {
 }
 
 .beneficio-item {
-    background-color: #f0f8ff;
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 30px;
@@ -200,7 +196,8 @@ body {
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: #000;
+    font-weight: 400;
 }
 
 .beneficio-item i {
@@ -214,7 +211,6 @@ body {
     font-size: 1.1rem;
     color: #333333;
     margin-bottom: 0;
-    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -230,7 +226,7 @@ body {
 /* acerca de nosotros */
 
 #acerca-de {
-    background-color: #f0f8ff;
+    background-color: #fff;
     padding: 80px 0;
 }
 
@@ -326,13 +322,15 @@ body {
 /* caracteristicas */
 
 #fast-features {
+    background: #f9f9f9;
     padding: 80px 0;
 }
 
 #fast-features .col-md-6 {
+    background: #fff;
     display: flex;
+    width: 50%;
     align-items: center;
-    background-color: #f9f9f9;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 40px;
@@ -405,13 +403,13 @@ body {
 
 /* Estilos para la sección de preguntas frecuentes */
 #faq {
-    background-color: #f8f9fa;
+    background-color: #fff;
     padding: 50px 0;
 }
 
 .section-title {
-    color: #333;
-    font-size: 24px;
+    color: var(--primary);
+    font-weight: 700;
     margin-bottom: 30px;
 }
 
@@ -470,7 +468,7 @@ body {
 }
 
 .contact-title {
-    color: #333;
+    color: var(--primary);
     font-size: 36px;
     margin-bottom: 30px;
 }
@@ -581,7 +579,7 @@ body {
 }
 
 .footer-contact-info a:hover {
-    color: #ffd700;
+   filter: brightness(0.8);
 }
 
 /* Estilos para la descripción de las redes sociales dentro de la columna de redes sociales */
@@ -598,7 +596,7 @@ body {
     line-height: 40px;
     text-align: center;
     margin-right: 10px;
-    background-color: #007bff;
+    background-color: #fff;
     color: #fff;
     border-radius: 50%;
     transition: background-color 0.3s ease;
@@ -606,22 +604,23 @@ body {
 
 .social-links .social-link i {
     font-size: 20px;
+    color: var(--primary);
     margin: 10px 0;
 }
 
 .social-links .social-link:hover {
-    background-color: #0056b3;
+   filter: brightness(0.8);
 }
 
 /* Estilos para los enlaces de política de privacidad y términos de servicio */
 .footer-policy a {
-    color: #ffc107;
+    color: var(--primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-policy a:hover {
-    color: #ffd700;
+    color: var(--primary);
 }
 
 /* Estilos para el texto del footer */

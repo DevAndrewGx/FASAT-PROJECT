@@ -55,6 +55,31 @@
             
         }
 
+
+        public function consultar($idStock) {
+            try {
+                // we have to use prepare because we're going to assing
+                $query = $this->prepare('SELECT pd.nombre, st.id_stock, st.cantidad, st.cantidad_minima, st.cantidad_disponible FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock WHERE st.id_stock = :id');
+                $query->execute([
+                    'id' => $idStock
+                ]);
+                // Como solo queremos obtener un valor, no hay necesidad de tener un while
+                $producto = $query->fetch(PDO::FETCH_ASSOC);
+
+                // en este caso no hay necesidad de crear un objeto userModel, solo podemos llamar los metodos del mismo con objeto con this
+                $this->setIdStock($producto['id_stock']);
+                $this->setNombreProducto($producto['nombre']);
+                $this->setCantidad($producto['cantidad']);
+                $this->setCantidadMinima($producto['cantidad_minima']);
+                $this->setCantidadDisponible($producto['cantidad_disponible']);
+
+                //retornamos this porque es el mismo objeto que ya contiene la informacion
+                return $producto;
+            } catch (PDOException $e) {
+                error_log('PRODUCTOSMODEL::get->PDOException ' . $e);
+            }
+        }
+
         public function consultarTodos() { 
             
             // creamos un arreglo para almacenar los datos que vengan de la bd
@@ -92,7 +117,7 @@
         $items = [];
 
             try {
-                $sql = "SELECT pd.nombre, st.cantidad, st.cantidad_minima, st.cantidad_disponible FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
+                $sql = "SELECT pd.nombre, st.id_stock, st.cantidad, st.cantidad_minima, st.cantidad_disponible FROM stock_inventario st INNER JOIN productos_inventario pd ON pd.id_stock = st.id_stock";
 
                 if (!empty($busqueda)) {
                     $searchValue = $busqueda;
@@ -204,20 +229,31 @@
         }
 
 
+        public function obtenerInventarioCritico() { 
+            try { 
+                $query = "";   
+            }catch(PDOException $e) {
+                error_log("StockModel::obtenerInventarioCritico->PDOException " . $e);
+                return false;
+            }
+        }
+
+
         // funcion para pasar la data del array a los atributos de la clase
         public function asignarDatosArray($array) { 
             
+            $this->id_inventario = $array['id_stock'];
             $this->nombre_producto = $array['nombre'] ?? null;
             $this->cantidad = $array['cantidad'] ?? null;
             $this->cantidad_minima = $array['cantidad_minima'] ?? null;
             $this->cantidad_disponible = $array['cantidad_disponible'] ?? null;
         }
 
-
         // funcion para enviar la respuesta al front
         public function jsonSerialize(): mixed
         {
             return [
+                'id_stock' => $this->id_inventario,
                 'nombre_producto' => $this->nombre_producto,
                 'cantidad' => $this->cantidad,
                 'cantidad_minima' =>$this->cantidad_minima, 

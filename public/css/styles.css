@@ -61,8 +61,6 @@ i {
     background: #f90;
 }
 
-.badges 
-
 /* END STYLES BADGEDS */
 
 .btn-view {
@@ -323,10 +321,75 @@ ul li {
     margin-right: 20px;
 }
 
-.main-wrapper .left-section.close .sidebar .item a { 
-    width: 1px;
-    opacity: 0;
+/* Barra lateral colapsada: Oculta el texto, pero mantiene visibles los íconos */
+.main-wrapper .left-section.close .sidebar .item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: -9999px; /* Oculta solo el texto */
+    overflow: hidden; /* Oculta cualquier texto adicional */
+    width: auto; /* Ancho fijo para los íconos */
+    opacity: 1; /* Asegura que los íconos sean visibles */
 }
+
+.main-wrapper .left-section.close .sidebar .item a i {
+    font-size: 26px; /* Tamaño del ícono */
+    opacity: 1; /* Asegura visibilidad */
+    text-indent: 0; /* No muevas el ícono fuera del contenedor */
+}
+
+
+
+/* Flecha para colapsar/expandir */
+.main-wrapper .left-section .logo .bx {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estado colapsado: Ajusta la flecha */
+.main-wrapper .left-section.close .logo .bx.bxs-chevron-left-circle {
+    display: none; /* Oculta la flecha izquierda cuando está colapsada */
+}
+
+.main-wrapper .left-section.close .logo .bx.bxs-chevron-right-circle {
+    display: block; /* Muestra la flecha derecha cuando está colapsada */
+}
+
+/* Estado expandido: Ajusta la flecha */
+.main-wrapper .left-section .logo .bx.bxs-chevron-right-circle {
+    display: none; /* Oculta la flecha derecha cuando está expandida */
+}
+
+
+/* Si la barra lateral está colapsada */
+.sidebar-collapsed .left-section {
+    min-width: 30px;
+    padding: 10px 20px 10px 30px;
+}
+
+.sidebar-collapsed .left-section .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-collapsed .page-wrapper {
+    margin-left: 100px;
+}
+
+.sidebar-collapsed .left-section.clase .sidebar .item a {
+    width: 1px;
+    opacity: 1;
+}
+
+
+.left-section {
+    transition: none; /* Elimina animaciones innecesarias */
+}
+
+.sidebar-collapsed .left-section {
+    transition: none; /* Aplica solo los cambios directamente */
+}
+
 
 header {
     background: #fff;
@@ -761,7 +824,7 @@ body .apexcharts-tooltip.apexcharts-theme-light {
 
 main #orders-employees {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 20px;
 }
@@ -1516,4 +1579,92 @@ a.close.disabled {
   .modal-xl {
     max-width: 1140px;
   }
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ RESPONSIVE *******************************************************************/
+
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 320px) {
+  /* Estilos específicos para pantallas de 320px */
+}
+
+/* Dispositivos móviles medianos */
+@media (max-width: 768px) {
+    header nav {
+        width: 100%;
+    }
+    main .analyse {
+        grid-template-columns: 1fr !important; /* Forzar apilamiento */
+        gap: 1.2rem !important;
+    }
+}
+
+
+/* Tablets y pantallas grandes */
+@media (max-width: 1024px) {
+  /* Estilos específicos para pantallas de hasta 1024px */
+
+    header nav {
+        width: 100%;
+    }
+
+    .main-wrapper .left-section {
+            min-width: 30px;
+            padding: 10px 20px 10px 30px;
+    }
+
+    .main-wrapper .left-section .logo img {
+        width: 40px;
+        height: 40px; 
+    }
+
+    .main-wrapper .page-wrapper {
+        margin-left: 100px;
+    }
+
+    
+    .main-wrapper .left-section .logo i {
+        margin-right: 20px;
+    }
+
+    .main-wrapper .left-section .sidebar .item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-indent: -9999px; /* Oculta solo el texto */
+        overflow: hidden; /* Oculta cualquier texto adicional */
+        width: auto; /* Ancho fijo para los íconos */
+        opacity: 1; /* Asegura que los íconos sean visibles */
+    }
+
+
+    .main-wrapper .left-section .sidebar .item a i {
+        font-size: 26px; /* Tamaño del ícono */
+        opacity: 1; /* Asegura visibilidad */
+        text-indent: 0; /* No muevas el ícono fuera del contenedor */
+    }
+
+    /* Estilos específicos para pantallas mayores de 1200px */
+    main .analyse {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    main .charts-analytics {
+        grid-template-columns: 1fr; /* Solo una columna */
+        gap: 1.5rem; /* Espacio entre gráficos */
+    }
+
+    main .chart {
+        width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    }
+  
+}
+
+/* Pantallas de escritorio grandes */
+@media (min-width: 1200px) {
+  
 }

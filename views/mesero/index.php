@@ -24,33 +24,7 @@ $categorias = $this->d['categorias'];
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
         <?php require_once('views/header.php') ?>
-        <aside class="left-section">
-            <div class="sidebar">
-                <div class="logo">
-                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
-                    <i class='bx bxs-chevron-left-circle'></i>
-                </div>
-                <div class="item active" id="ordenes">
-                    <i class='bx bx-food-menu'></i>
-                    <a href="<?php echo constant('URL'); ?>mesero">Ordenes</a>
-                </div>
-                <div class="item" id="mesas">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="<?php echo constant('URL'); ?>mesasMesero">Mesas</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Settings</a>
-                </div>
-            </div>
-            <div class="log-out sidebar">
-                <div class="item">
-                    <i class='bx bx-log-out'></i>
-                    <a href="../../sing-up/login.html">Log-out</a>
-                </div>
-            </div>
-        </aside>
+        <?php require_once('aside.php') ?>
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
@@ -63,7 +37,7 @@ $categorias = $this->d['categorias'];
                         </nav>
                     </div>
                     <div class="page-btn">
-                        <a href="#" class="btn btn-primary" id="btnCrearPedido" data-bs-toggle="modal" data-bs-target="#generarPedidoModal"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
+                        <a href="#" class="btn btn-primary" id="btnCrearPedido" onclick="openModalGenerateOrder();"><img src="<?php echo constant('URL') ?>/public/imgs/icons/plus.svg" alt="add-icon">
                             Crear Nuevo Pedido</a>
                     </div>
                 </div>
@@ -95,43 +69,16 @@ $categorias = $this->d['categorias'];
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mesas & Pedidos Asociados</h5>
-                        <div class="table-responsive">
-                            <table id="data-mesas-pedidos" class="table table-responsive datanew">
-                                <thead>
-                                    <th>
-                                        <label class="checkboxs">
-                                            <input type="checkbox" id="select-all">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </th>
-
-                                    <th class="sorting">Numero mesa</th>
-                                    <th class="sorting">Capacidad</th>
-                                    <th class="sorting">Comensales</th>
-                                    <th class="sorting">Pedido Asociado</th>
-                                    <th class="sorting">Estado</th>
-                                    <th class="sorting">Accion</th>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
             </div>
     </div>
     </main>
     </div>
-
     <!-- modal para generar un pedido -->
     <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header headerRegister d-flex justify-content-between align-items-center p-3">
-                    <h5 class="modal-title fw-bold" id="orderModalLabel">Nuevo Pedido</h5>
+                    <h5 class="modal-title fw-bold" id="titleModal">Nuevo Pedido</h5>
 
                     <div class="d-flex flex-column align-items-end px-4">
                         <h4 class="fw-bold mb-0" id="codigo-pedido"></h4>
@@ -161,13 +108,16 @@ $categorias = $this->d['categorias'];
 
                                 <div class="form-group col-md-4">
                                     <label for="numeroPersonas" class="form-label">Numero de personas</label>
-                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" required>
-                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas valido válido.</div>
+                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" min="1" max="99" step="1" required
+                                        placeholder="" value="" oninput="this.value = this.value.replace(/^0+/, '').replace(/[^0-9]/g, '');">
+                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas válido (entre 1 y 99).</div>
                                 </div>
+
+
                             </div>
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    <h5 class="mb-3">Agregar Productos</h5>
+                                    <h5 class="mb-3 title-products">Agregar Productos</h5>
                                     <div class="row mb-2">
                                         <div class="form-group col-md-6">
                                             <label for="categoriaPedido" class="form-label">Categoria</label>
@@ -199,16 +149,31 @@ $categorias = $this->d['categorias'];
 
                                         <div class="form-group col-md-6">
                                             <label for="cantidadItems" class="form-label">Cantidad</label>
-                                            <input type="number" min="1" max="15" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required>
-                                            <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número valido de items. </div>
+                                            <input type="number" min="1" max="99" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '')">
+                                            <div id="cantidadItemsError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número válido entre 1 y 15.</div>
                                         </div>
+
 
                                         <div class="form-group col-md-6">
                                             <label for="notasItems" class="form-label">Notas Producto</label>
                                             <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
                                         </div>
+
+                                        <!-- creamos un elemento oculto para el estado pero solo se va mostrar cuando este en modo edicion en el pedido -->
+
+                                        <div class="form-group col-md-12 d-none estado-producto-container">
+                                            <label for="estadoProducto" class="form-label">Estado Producto</label>
+                                            <select name="estadoProducto" id="estadoProducto" class="form-control">
+                                                <option value="#">Selecciona un estado</option>
+                                                <option value="PENDIENTE">Pendiente</option>
+                                                <option value="EN PREPARACION">En preparacion</option>
+                                                <option value="COMPLETADO">Completado</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
+                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900" disabled>Agregar Producto</button>
+
                                 </div>
                             </div>
 
@@ -386,12 +351,12 @@ $categorias = $this->d['categorias'];
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+
+
 
 </body>
-
 
 </html>

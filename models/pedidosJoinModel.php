@@ -16,8 +16,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     private $personas;
     private $notas_general_pedido;
     private $notas_producto;
-    private $cantidad;
-    private $precio;
     private $estado_producto;
     private $productos_detallados;
     private $fecha_hora;
@@ -40,8 +38,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         $this->personas = 0;
         $this->notas_general_pedido = "";
         $this->notas_producto = "";
-        $this->cantidad = 0;
-        $this->precio = 0;
         $this->estado_producto = "";
         $this->fecha_hora = "";
        
@@ -59,6 +55,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 m.capacidad,
                 p.id_pedido,
                 p.codigo_pedido,
+                p.fecha_hora_vista,
                 p.total,
                 p.estado AS estado_pedido,
                 p.personas,
@@ -66,6 +63,8 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 u.documento,
                 u.nombres,
                 GROUP_CONCAT(pp.id_producto) AS productos,
+                GROUP_CONCAT(pp.notas_producto) AS notas_producto, 
+                GROUP_CONCAT(pr.id_categoria) AS id_categoria,
                 GROUP_CONCAT(pr.nombre) AS nombres_productos, 
                 GROUP_CONCAT(pp.cantidad) AS cantidades,
                 GROUP_CONCAT(pp.precio) AS precios,
@@ -75,18 +74,20 @@ class PedidosJoinModel extends Model implements JsonSerializable {
             INNER JOIN usuarios u ON p.id_mesero = u.documento 
             INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
             INNER JOIN productos_inventario pr ON pp.id_producto = pr.id_pinventario
+            INNER JOIN categorias c ON c.id_categoria = pr.id_categoria
             WHERE p.codigo_pedido = :codigo
             GROUP BY m.id_mesa, p.id_pedido;
             ");
-
             $query->execute(["codigo" => $codigo]);
             $datos = $query->fetch(PDO::FETCH_ASSOC);
 
             if ($datos) {
                 // Convertimos las cadenas concatenadas en arrays
                 $productos = explode(',', $datos['productos']);
+                $categorias = explode(',', $datos['id_categoria']);
                 $cantidades = explode(',', $datos['cantidades']);
                 $nombres = explode(',', $datos['nombres_productos']);
+                $notas_producto = explode(',', $datos['notas_producto']);
                 $estados_productos = explode(',', $datos['estados_productos']);
                 $precios = explode(',', $datos['precios']);
 
@@ -96,7 +97,9 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 for ($i = 0; $i < count($productos); $i++) {
                     $productosDetallados[] = [
                         'id_producto' => $productos[$i],
+                        'id_categoria' => $categorias[$i],
                         'nombre_producto' => $nombres[$i],
+                        'notas_producto' => $notas_producto[$i],
                         'cantidad' => $cantidades[$i],
                         'estados_productos' => $estados_productos[$i],
                         'precio' => $precios[$i]
@@ -138,6 +141,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                 u.documento,
                 u.nombres,
                 GROUP_CONCAT(pp.id_producto) AS productos,
+                GROUP_CONCAT(pr.id_categoria) AS id_categoria,
                 GROUP_CONCAT(pr.nombre) AS nombres_productos, 
                 GROUP_CONCAT(pp.cantidad) AS cantidades,
                 GROUP_CONCAT(pp.precio) AS precios,
@@ -147,6 +151,7 @@ class PedidosJoinModel extends Model implements JsonSerializable {
             INNER JOIN usuarios u ON p.id_mesero = u.documento 
             INNER JOIN pedido_producto pp ON p.id_pedido = pp.id_pedido
             INNER JOIN productos_inventario pr ON pp.id_producto = pr.id_pinventario
+            INNER JOIN categorias c ON c.id_categoria = pr.id_categoria
             GROUP BY m.id_mesa, p.id_pedido');
 
             while ($datos = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -199,11 +204,13 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     m.estado AS estado_mesa,
                     m.capacidad,
                     p.id_pedido,
+                    p.id_mesero,
                     p.codigo_pedido,
                     p.total,
                     p.estado AS estado_pedido,
                     p.personas,
                     p.notas_pedidos,
+                    p.fecha_hora_vista,
                     u.documento,
                     u.nombres,
                     GROUP_CONCAT(pp.id_producto) AS productos,
@@ -224,7 +231,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
                     p.total LIKE '%$searchValue%' OR 
                     p.estado LIKE '%$searchValue%'";
             }
-
 
             if ($columna != null && $orden != null) {
                 $sql .= " ORDER BY $columnName $orden";
@@ -316,33 +322,10 @@ class PedidosJoinModel extends Model implements JsonSerializable {
             'total' => $this->total,
             'personas' => $this->personas,
             'notas_general_pedido' => $this->notas_general_pedido,
-            'notas_producto' => $this->notas_producto,
             'productos_detallados' => $this->productos_detallados,
-            'cantidad' => $this->cantidad,
-            'precio' => $this->precio,
             'fecha_hora' => $this->fecha_hora
         ];
     }
-
-    // creamos el metodo asignarDatosArray para facilitar el establecimiento de datos de los objetos al momento de recorrer el while
-    // public function asignarDatosArray($array)
-    // {
-    //     $this->id_pedido = $array['id_pedido'];
-    //     $this->id_producto = $array['id_producto'];
-    //     $this->id_mesero = $array['id_mesero'];
-    //     $this->id_mesa = $array['id_mesa'];
-    //     $this->numero_mesa = $array['numero_mesa'];
-    //     $this->nombre_mesero = $array['nombres'];
-    //     $this->codigo_pedido = $array['codigo_pedido'];
-    //     $this->estado = $array['estado_pedido'];
-    //     $this->total = $array['total'];
-    //     $this->personas = $array['personas'];
-    //     $this->notas_general_pedido = $array['notas_pedido'];
-    //     $this->notas_producto = $array['notas_producto'];
-    //     $this->cantidad = $array['cantidad'];
-    //     $this->precio = $array['precio'];
-    //     $this->fecha_hora = $array['fecha_hora'];
-    // }
 
 
     // Modificamos el método asignarDatosArray para manejar los productos detallados
@@ -358,7 +341,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
         $this->personas = $array['personas'];
         $this->estado = $array['estado_pedido'];
         $this->notas_general_pedido = $array['notas_pedidos'];
-        $this->notas_producto = $array['notas_producto'];
         $this->productos_detallados = $array['productos_detallados'];
         $this->fecha_hora = $array['fecha_hora'];
     }
@@ -374,8 +356,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     public function getPersonas() { return $this->personas;}
     public function getNotasGeneralPedido() { return $this->notas_general_pedido;}
     public function getNotasProducto() { return $this->notas_producto;}
-    public function getCantidad() { return $this->cantidad;}
-    public function getPrecio() { return $this->precio;}
     public function getFechaHora() { return $this->fecha_hora;}
 
     public function setIdPedido($idPedido) { return $this->id_pedido = $idPedido;}
@@ -388,8 +368,6 @@ class PedidosJoinModel extends Model implements JsonSerializable {
     public function setPersonas($personas) { return $this->personas = $personas;}
     public function setNotasGeneralPedido($notasGeneralPedido) { return $this->notas_general_pedido = $notasGeneralPedido;}
     public function setNotasProducto($notasProducto) { return $this->notas_producto = $notasProducto;}
-    public function setCantidad($cantidad) { return $this->cantidad = $cantidad;}
-    public function setPrecio($precio) { return $this->precio = $precio;}
     public function setFechaHora($fechaHora) { return $this->fecha_hora = $fechaHora;}
 
 }

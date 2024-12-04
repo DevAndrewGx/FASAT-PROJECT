@@ -8,6 +8,7 @@ $user = $this->d['user'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-url" content="<?php echo constant('URL'); ?>">
     <title>FAST | DASHBOARD</title>
     <!-- <link rel="shortcut icon" href="../../imgs/LOGOf.png"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -36,23 +37,37 @@ $user = $this->d['user'];
 
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px">
-            <h1>Admin Dashboard</h1>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                </div>
+
+                <div>
+                    <label for="filtro-fechas" class="form-label">Filtro</label>
+
+                    <select name="filtro-fechas" id="filtro-fechas" class="form-control">
+                        <option value="">Sin filtro (Actualizacion automatica)</option>
+                        <option value="hoy">Hoy</option>
+                        <option value="semana">Ultimos 7 dias</option>
+                        <option value="mes">Ultimos 30 dias</option>
+                    </select>
+                </div>
+
+
+            </div>
+
 
             <nav class="nav-main">
-                <a href="homeAdmin.php" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
+                <a href="<?php echo constant('URL') ?>admin" id="actual" data-navegation="#admin" data-rol="admin">Admin</a>
             </nav>
 
             <div class="analyse">
-                <!-- STOCK
-                            SALES
-                            SALES-INCOME
-                            ORDERS TODAY -->
                 <div id="stock">
                     <div class="status">
                         <div class="info">
                             <h2>Ventas del Dia</h2>
-                            <h3>$2590</h3>
-                            <p id="list">En tiempo real</p>
+                            <h3 id="ventas-del-dia">$0</h3>
+                            <p id="list">Actual</p>
                         </div>
 
                         <div class="progress">
@@ -66,8 +81,8 @@ $user = $this->d['user'];
                 <div id="orders">
                     <div class="status">
                         <div class="info">
-                            <h2>Ordenes Activas</h2>
-                            <h3>15 </h3>
+                            <h2>Ordenes Pendientes</h2>
+                            <h3 id="ordenes-pendientes"></h3>
                             <p id="list">Hoy</p>
                         </div>
 
@@ -84,7 +99,7 @@ $user = $this->d['user'];
                     <div class="status">
                         <div class="info">
                             <h2>Productos Vendidos</h2>
-                            <h3>100 </h3>
+                            <h3 id="productos-vendidos">100 </h3>
                             <p id="list">Hoy</p>
                         </div>
 
@@ -116,138 +131,66 @@ $user = $this->d['user'];
             </div>
             <!-- CHART ANALYTICS -->
             <div class="charts-analytics">
-                <div class="chart">
-                    <h2>Productos Stock</h2>
-                    <p>Mes-a-mes Comparación</p>
+                <div class="chart" id="chart-productos">
+                    <h2>Productos mas vendidos</h2>
 
-                    <div class="pulse">
-                    </div>
-                    <div class="chart-area">
-                        <div class="grid"></div>
-                    </div>
                 </div>
 
-                <div class="chart">
-                    <h2>Ventas & Gastos</h2>
-                    <p>Mes-a-mes Comparison</p>
-                    <div class="pulse-sale">
+                <div class="chart" id="chart-categorias">
+                    <h2>Ventas por categorias</h2>
 
-                    </div>
-                    <span id="sale-span">Ventas</span>
-
-                    <div class="pulse-expense">
-
-                    </div>
-                    <span id="expense-span">Gastos</span>
-
-                    <div class="chart-area chart-ExSa">
-                        <div class="grid"></div>
-                    </div>
                 </div>
             </div>
 
             <div id="orders-employees">
 
-                <div class="employee">
-                    <h2>Personal Activo</h2>
-                    <p id="list">Lista de empleados</p>
-                    <div class="data-employee">
-
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Juan Andres</h3>
-                                <p>Mesero</p>
-
-                            </div>
-                        </div>
-
-
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="data-employee">
-
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Fernando Gabriel</h3>
-                                <p>Cheff</p>
-                            </div>
-                        </div>
-
-
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-
-                    <div class="data-employee">
-                        <div class="info-employee">
-                            <div class="img">
-                                <img src="<?php echo constant('URL'); ?>public/imgs/avatar-02.jpg" alt="avatar-02">
-                            </div>
-                            <div class="info">
-                                <h3>Maria Antonia</h3>
-                                <p>Mesera</p>
-                            </div>
-                        </div>
-
-
-                        <!-- DISPLAY INFORMATION'S EMPLOYEES -->
-                        <div class="display-info">
-                            <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/icons/eye.svg" alt="eye-display"></a>
-                        </div>
-
-                    </div>
-                    <!-- BUTTON TO WATCH MORE DETAILS ABOUT EMPLOYEES -->
-                    <!-- <div id="more-details">
-                        <a href="#">Mas detalles</a>
-                    </div> -->
-
-                </div>
-
+                <!-- si nos dejan para otro dia exponer le meto filtros a esto y se arregla mejor -->
                 <div id="orders">
                     <h2>Inventario Critico</h2>
                     <p>Lista de productos en el inventario</p>
-                    <table id="example" class="table table-responsive datanew">
-                        <thead>
-                            <tr>
-                                <th>h</th>
-                                <th>First</th>
-                                <th>Last</th>
-                                <th>Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="data-inventario-critico" class="table table-responsive datanew">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Datos quemados -->
+                                    <tr>
+                                        <td>Gaseosa Sprite</td>
+                                        <td>10</td>
+                                        <td><span class="badges bg-lightgreen">Disponible</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Botella Agua</td>
+                                        <td>2</td>
+                                        <td><span class="badges bg-lightred">Crítico</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soda</td>
+                                        <td>5</td>
+                                        <td><span class="badges bg-lightyellow">Bajo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gaseosa CocaCola</td>
+                                        <td>15</td>
+                                        <td><span class="badges bg-lightgreen">Disponible</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Malteada</td>
+                                        <td>1</td>
+                                        <td><span class="badges bg-lightred">Crítico</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </main>
@@ -272,6 +215,7 @@ $user = $this->d['user'];
 
     <!-- APP JS -->
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
+    <script src="<?php echo constant('URL'); ?>public/js/dashboard.js"></script>
 </body>
 
 </html>

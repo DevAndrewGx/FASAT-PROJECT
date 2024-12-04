@@ -4,7 +4,11 @@
 class Conexion
 {
     private $host = 'localhost';   // Host de la base de datos
+<<<<<<< HEAD
     private $db = 'test_fast1';    // Nombre de la base de datos
+=======
+    private $db = 'fast';    // Nombre de la base de datos
+>>>>>>> acdb0d98b67ca12db50e1a15ea3e9e711b497157
     private $user = 'root';        // Usuario de la base de datos
     private $pass = '';            // Contraseña del usuario
     private $charset = 'utf8mb4';  // Codificación de caracteres
@@ -31,4 +35,3 @@ class Conexion
         return $this->pdo; // Devuelve el objeto PDO para realizar consultas
     }
 }
-?>

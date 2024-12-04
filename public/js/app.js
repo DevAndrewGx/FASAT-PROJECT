@@ -1,47 +1,87 @@
-
-const arrowAside = document.querySelector(
+const arrowLeft = document.querySelector(
     ".main-wrapper .left-section .logo .bx.bxs-chevron-left-circle"
 );
-const sideBar = document.querySelector('.left-section');
-// Debemos crear una variable para colapsar tambien el page wrapper cuando colapse la sidebar
-const pageWrapper = document.querySelector('.main-wrapper .page-wrapper');
+const sideBar = document.querySelector(".left-section");
+const pageWrapper = document.querySelector(".main-wrapper .page-wrapper");
 
 
+document.querySelectorAll(".left-section .sidebar .item a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+        // Mantén el estado de colapsado
+        const isCollapsed = sideBar.classList.contains("close");
+        localStorage.setItem("sidebar-collapsed", isCollapsed);
+
+        // Deja que la navegación continúe sin afectar la barra lateral
+    });
+});
 
 
-arrowAside.addEventListener('click', () => { 
-    
-    sideBar.classList.toggle('close');
-   
-    pageWrapper.classList.toggle('close');
+// Función para actualizar la interfaz según el estado almacenado
+function setSidebarState(collapsed) {
+    if (collapsed) {
+        document.documentElement.classList.add("sidebar-collapsed");
+        sideBar.classList.add("close");
+        pageWrapper?.classList.add("close");
 
-    
-    if(sideBar.classList.contains('close')) { 
-        arrowAside.classList.replace('bxs-chevron-left-circle', 'bxs-chevron-right-circle')
-    }else { 
-        arrowAside.classList.replace('bxs-chevron-right-circle', 'bxs-chevron-left-circle')
+        arrowLeft?.classList.replace(
+            "bxs-chevron-left-circle",
+            "bxs-chevron-right-circle"
+        );
+    } else {
+        document.documentElement.classList.remove("sidebar-collapsed");
+        sideBar.classList.remove("close");
+        pageWrapper?.classList.remove("close");
+
+        arrowLeft?.classList.replace(
+            "bxs-chevron-right-circle",
+            "bxs-chevron-left-circle"
+        );
     }
-    
-    
-    
-});
+}
 
-document.querySelector('.menu-btn').addEventListener('click', function() {
-    document.querySelector('.left-section').classList.toggle('close');
-    document.querySelector('.page-wrapper').classList.toggle('close');
-});
+
+// Al cargar la página, aplica el estado almacenado lo más pronto posible
+function initSidebarState() {
+    const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
+
+    // Aplica las clases inmediatamente
+    if (isCollapsed) {
+        document.documentElement.classList.add("sidebar-collapsed");
+        sideBar?.classList.add("close");
+        pageWrapper?.classList.add("close");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setSidebarState(isCollapsed); // Ajustes finales si es necesario
+    });
+}
+
+
+// Iniciar el estado de la sidebar lo antes posible
+initSidebarState();
+
+// Evento para colapsar/expandir (si el elemento existe)
+if (arrowLeft) {
+    arrowLeft.addEventListener("click", () => {
+        const isCurrentlyCollapsed = sideBar.classList.contains("close");
+        localStorage.setItem("sidebar-collapsed", !isCurrentlyCollapsed);
+        setSidebarState(!isCurrentlyCollapsed);
+    });
+}
 
 // EFECT FOR SIDEBAR ELEMENTS
 const activeAside = () => {
-    const actual = document.getElementById("actual").getAttribute("data-navegation");
+    const actual = document
+        .getElementById("actual")
+        .getAttribute("data-navegation");
     const rol = document.getElementById("actual").getAttribute("data-rol");
-    console.log("Rol: "+rol);
-    console.log("Actual: "+actual);
+    console.log("Rol: " + rol);
+    console.log("Actual: " + actual);
 
     if (actual != "#admin" && rol == "admin") {
         // Remueve la clase 'active' de todos los elementos
-        const items = document.querySelectorAll('.item');
-        items.forEach(item => {
+        const items = document.querySelectorAll(".item");
+        items.forEach((item) => {
             item.classList.remove("active");
         });
         // Añade la clase 'active' al elemento actual
@@ -50,10 +90,10 @@ const activeAside = () => {
         seccion.classList.add("active");
     }
 
-    if(actual != "#mesero" && rol == "mesero") {
+    if (actual != "#mesero" && rol == "mesero") {
         // Remueve la clase 'active' de todos los elementos
         const items = document.querySelectorAll(".item");
-        console.log('its hereeee');
+        console.log("its hereeee");
         items.forEach((item) => {
             item.classList.remove("active");
         });
@@ -64,10 +104,8 @@ const activeAside = () => {
     }
 };
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-   activeAside();
+    activeAside();
 });
 
 // EFECT FOR STOCK NAVBAR ELEMENTS
@@ -99,56 +137,76 @@ navegationItems.forEach((element) => {
 //         }
 //     });
 
-
 // functions for modals
 
-function openModalCreateUser()
-{
+function openModalCreateUser() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nuevo Usuario";
+    document.querySelector(".modal-header").classList.replace("headerUpdate", "headerRegister");
+    console.log(document.querySelector(".modal-header"));
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Usuario";
     document.querySelector("#formUsuario").reset();
-    $('#modalFormUsuario').modal('show');
+    $("#modalFormUsuario").modal("show");
 }
 
-
-function openModalCreateProduct()
-{
+function openModalCreateProduct() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nuevo Producto";
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Producto";
     document.querySelector("#formProduct").reset();
-    $('#modalFormCreateProduct').modal('show');
+    $("#modalFormCreateProduct").modal("show");
 }
 
-
-function openModalCreateCategory()
-{
+function openModalCreateCategory() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
     // document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
     // document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nueva categoria";
+    document.querySelector("#titleModal").innerHTML = "Nueva categoria";
     document.querySelector("#formCategories").reset();
-    $("#modalFormCategories").modal("show");        
+    $("#modalFormCategories").modal("show");
 }
 
-
-function openModalCreateMesas()
-{
+function openModalCreateMesas() {
     rowTable = "";
     // document.querySelector('#idUsuario').value ="";
-    document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
-    document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
-    document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nueva Mesa";
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    document
+        .querySelector("#btnActionForm")
+        .classList.replace("btn-info", "btn-primary");
+    document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nueva Mesa";
     document.querySelector("#formMesas").reset();
-    $("#modalFormMesas").modal("show");        
+    $("#modalFormMesas").modal("show");
+}
+
+function openModalGenerateOrder() { 
+      rowTable = "";
+
+    document
+        .querySelector(".modal-header")
+        .classList.replace("headerUpdate", "headerRegister");
+    // document
+    //     .querySelector("#btnActionForm")
+    //     .classList.replace("btn-info", "btn-primary");
+    // document.querySelector("#btnText").innerHTML = "Guardar";
+    document.querySelector("#titleModal").innerHTML = "Nuevo Pedido";
+    document.querySelector("#formPedido").reset();
+    $("#generarPedidoModal").modal("show");
 }

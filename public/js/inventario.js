@@ -8,6 +8,7 @@ const selectPlaceholder = document.querySelector(".select-placeholder");
 // });
 // variables especiales
 let id_producto;
+
 // Definimos productoData fuera del alcance para que esté disponible en el evento change
 let productoData = null;
 let editar = null;
@@ -25,6 +26,7 @@ options.forEach((option) => {
 
 // funciones para el crud
 $(document).ready(function () {
+    let idStock = 0;
     const baseUrl = $('meta[name="base-url"]').attr("content");
 
     let dataTableProductos = $("#data-productos").DataTable({
@@ -109,6 +111,7 @@ $(document).ready(function () {
             { data: "nombre_producto" },
             { data: "cantidad" },
             { data: "cantidad_disponible" },
+            { data: "cantidad_minima"},
             { data: "options" },
         ],
         columnDefs: [
@@ -308,14 +311,14 @@ $(document).ready(function () {
 
     // funcion para eliminar un producto - ADMIN
     $("#data-productos").on("click", ".botonEliminar", function () {
-        // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
-        $(this).prop("disabled", true);
-        console.log("Its workin.........................");
+
+
+        // guardamos la referencia al boton actual
+        const eliminarProductoBtn = $(this);
         // obtenemos el id del producto del boton
-        id_producto = $(this).data("id");
+        id_producto = eliminarProductoBtn.data("id");
         // creamos un formdata para agregar el id y evitar utilizar jsonStringfy
         let formData = new FormData();
-
         formData.append("id_producto", id_producto);
 
         // Creamos una alerta para avisar al usuario, si esta seguro de realizar esta accion
@@ -329,6 +332,8 @@ $(document).ready(function () {
             allowOutsideClick: false,
         }).then((result) => {
             if (result.isConfirmed) {
+                // desabilitamos el boton despues de un click para que el usuario no le de click varias veces
+                eliminarProductoBtn.prop("disabled", true);
                 $.ajax({
                     url: baseUrl + "productos/borrarProducto",
                     type: "POST",
@@ -357,10 +362,9 @@ $(document).ready(function () {
                                 icon: "error",
                                 allowOutsideClick: false,
                                 confirmButtonText: "Ok",
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    //  mantener el modal abierto para que el usuario intente de nuevo
-                                }
+                            }).then(() => {
+                                // habilitamos nuevamente el error si sucede un error
+                                eliminarProductoBtn.prop("disabled", true);
                             });
                         }
                     },
@@ -371,14 +375,96 @@ $(document).ready(function () {
                             icon: "error",
                             allowOutsideClick: false,
                             confirmButtonText: "Ok",
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // mantener el modal abierto para que el usuario intente de nuevo
-                            }
+                        }).then(() => {
+                            // habilitamos nuevamente el error si sucede un error
+                            eliminarProductoBtn.prop("disabled", true);
                         });
                     },
                 });
             }
         });
     });
+
+    // creamos la funcion para actualizar la cantidad del stock
+    $("#data-stock-productos").on('click', '.botonActualizar', function(e) { 
+        e.preventDefault();
+        idStock = $(this).data("id");
+
+        $.ajax({
+            url: baseUrl + "stock/consultarStock",
+            type: "POST",
+            dataType: "json",
+            data: { idStock: idStock },
+            success: function (response) {
+                if (response.status) {
+                    // Verifica que response.data no sea undefined o null
+                    if (response.data) {
+                        // Asumiendo que necesitas el primer elemento del array data
+                        var stockData = response.data;
+                        // // seteamos la data en los campos
+                        $("#nombreProductoStock").val(stockData.nombre);
+                        $("#stockActual").val(stockData.cantidad_disponible);
+                        $("#stockMinimo").val(stockData.cantidad_minima);
+                        console.log(stockData.nombre_producto);
+                        console.log(stockData.cantidad_disponible);
+                        console.log(stockData.cantidad_minima);
+
+                    } else {
+                        console.log("response.data está vacío o es undefined");
+                    }
+                } else {
+                    console.log("No se encontraron datos o hubo un error.");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+            complete: function () {
+                 $("#modalEditStock").modal("show");
+            },
+        });
+    });
+
+    $(document).on('click', "btnActioActualizarStock", function(e) { 
+        e.preventDefault();
+        
+        let data = $(this).closest("form")[0]; // Obtiene el formulario HTML desde el contexto
+        let formData = new FormData(data);
+
+        formData.append('idStock', idStock);
+        $.ajax({
+            url: baseUrl + "stock/actualizarStock",
+            type: "POST",
+            dataType: "json",
+            data: { idStock: idStock },
+            success: function (response) {
+                // convertirmos la data que viene del servidor en un JSON para manejar de mejor forma
+                let data = JSON.parse(response);
+
+                if (data.status) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Exito",
+                        text: data.message,
+                        showConfirmButton: true,
+                        allowOutsideClick: false,
+                        confirmButtonText: "Ok",
+                    }).then(function (result) {
+                        if (result.isConfirmed) {
+                            // Cerrar el modal y reiniciar el formulario
+                            $("#modalEditStock").modal("hide");
+                            dataTableProductsOnStok.ajax.reload(null, false);
+                        }
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(
+                    "Error en la solicitud AJAX: " + status + " - " + error
+                );
+            },
+        });
+    })
 });

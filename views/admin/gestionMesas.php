@@ -37,8 +37,8 @@ $user = $this->d['user'];
                     <div class="page-title">
                         <h1>Mesas</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Admin</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#mesas" data-rol="admin"> / Mesas </a>
+                            <a href="<?php echo constant('URL') ?>admin">Admin</a>
+                            <a href="<?php echo constant('URL') ?>mesas" id="actual" data-navegation="#mesas" data-rol="admin"> / Mesas </a>
                         </nav>
 
                     </div>
@@ -89,15 +89,18 @@ $user = $this->d['user'];
                     <form id="formMesas">
                         <div class="mb-3">
                             <label for="numeroMesa" class="form-label">Numero de mesa</label>
-                            <input type="number" class="form-control" name="numeroMesa" id="numeroMesa" placeholder="Numero Mesa">
-                            <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de meesa válido.</div>
+                            <input type="number" class="form-control" name="numeroMesa" id="numeroMesa" placeholder="Numero Mesa" min="1">
+                            <div id="mesaNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número válido mayor que 0.</div>
                         </div>
+
+
 
                         <div class="mb-3">
                             <label for="capacidad" class="form-label">Capacidad</label>
-                            <input type="number" class="form-control" name="capacidad" id="capacidad" placeholder="Capacidad">
-                            <div id="categoryNameError" class="invalid-feedback" style="display:none;">Por favor, ingresa un numero de meesa válido.</div>
+                            <input type="number" class="form-control" name="capacidad" id="capacidad" placeholder="Capacidad" min="1" max="30">
+                            <div id="capacidadError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número entre 1 y 30.</div>
                         </div>
+
 
                         <div class="mb-3">
                             <label for="categoryType" class="form-label">Estado mesa</label>
@@ -136,7 +139,7 @@ $user = $this->d['user'];
 
     <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
 </body>
 
 </html>

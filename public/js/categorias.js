@@ -288,8 +288,12 @@ $("#formCategories").on("submit", function(e) {
     // funcion para eliminar una categoria
     $("#data-categorias").on("click", ".botonEliminar", function (e) {
         e.preventDefault();
-        $(this).prop("disabled", true); // Deshabilitar el botón para que el usuario no di click varias veces 
-        const id_categoria = $(this).data("id");
+
+
+        // guardamos la referencia al boton actual
+        const eliminarCategoriaBtn = $(this);
+        const id_categoria = eliminarCategoriaBtn.data("id");
+
         Swal.fire({
             title: "¿Estás seguro?",
             text: "Esta acción no se puede deshacer",
@@ -300,6 +304,9 @@ $("#formCategories").on("submit", function(e) {
             allowOutsideClick: false,
         }).then((result) => {
             if (result.isConfirmed) {
+
+                // Deshabilitar el botón solo si se confirma la eliminación
+                eliminarCategoriaBtn.prop("disabled", true);
                 $.ajax({
                     url: baseUrl + "categorias/borrar",
                     type: "POST",
@@ -336,10 +343,9 @@ $("#formCategories").on("submit", function(e) {
                                 icon: "error",
                                 allowOutsideClick: false,
                                 confirmButtonText: "Ok",
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    //  mantener el modal abierto para que el usuario intente de nuevo
-                                }
+                            }).then(() => {
+                                // Rehabilitar el botón si ocurre un error
+                                eliminarCategoriaBtn.prop("disabled", false);
                             });
                         }
                     },
@@ -350,10 +356,9 @@ $("#formCategories").on("submit", function(e) {
                             icon: "error",
                             allowOutsideClick: false,
                             confirmButtonText: "Ok",
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                // mantener el modal abierto para que el usuario intente de nuevo
-                            }
+                        }).then(() => {
+                            // Rehabilitar el botón si ocurre un error
+                            eliminarCategoriaBtn.prop("disabled", false);
                         });
                     },
                 });

@@ -99,7 +99,6 @@ class CategoriasModel extends Model implements JsonSerializable
 
                 $item->setIdCategoria($row['id_categoria']);
                 $item->setNombreCategoria($row['nombre_categoria']);
-                $item->setNombreSubCategoria($row['nombre_subcategoria']);
                 $item->setTipoCategoria($row['tipo_categoria']);
 
                 // ya que seteamos la data en cada objeto, lo agregamos al objeto principal

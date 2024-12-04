@@ -235,6 +235,7 @@ class MesasModel extends Model implements IModel, JsonSerializable
 
             error_log("Estadooo " . $this->estado);
             error_log("Mesa " . $this->numeroMesa);
+            error_log("id " . $id);
             $query->execute([
                 'id'=>$id,
                 'estado'=>$this->estado

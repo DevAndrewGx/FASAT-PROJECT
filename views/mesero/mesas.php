@@ -24,33 +24,8 @@ $categorias = $this->d['categorias'];
     <!-- ASIDE CONTAINER -->
     <div class="main-wrapper">
         <?php require_once('views/header.php') ?>
-        <aside class="left-section">
-            <div class="sidebar">
-                <div class="logo">
-                    <button class="menu-btn" id="menu-close"><i class='bx bx-log-out-circle'></i></button>
-                    <a href="#"><img src="<?php echo constant('URL'); ?>public/imgs/LOGOf.png" alt="Logo"></a>
-                    <i class='bx bxs-chevron-left-circle'></i>
-                </div>
-                <div class="item" id="ordenes">
-                    <i class='bx bx-food-menu'></i>
-                    <a href="<?php echo constant('URL'); ?>mesero">Ordenes</a>
-                </div>
-                <div class="item" id="mesas">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="<?php echo constant('URL'); ?>mesasMesero">Mesas</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Settings</a>
-                </div>
-            </div>
-            <div class="log-out sidebar">
-                <div class="item">
-                    <i class='bx bx-log-out'></i>
-                    <a href="../../sing-up/login.html">Log-out</a>
-                </div>
-            </div>
-        </aside>
+        <?php require_once('aside.php') ?>
+
         <!-- MAIN CONTENT -->
         <main class="page-wrapper" style="min-height: 995px;">
             <div class="content">
@@ -58,11 +33,11 @@ $categorias = $this->d['categorias'];
                     <div class="page-title">
                         <h1>Mesas</h1>
                         <nav class="nav-main">
-                            <a href="homeAdmin.php">Mesero</a>
-                            <a href="adminUsu.php" id="actual" data-navegation="#mesas" data-rol="mesero"> / Visualizacion de mesas</a>
+                            <a href="homeAdmin.php" id="actual" data-navegation="#mesero" data-rol="mesero">Mesero</a>
                         </nav>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Mesas & Pedidos Asociados</h5>
@@ -87,36 +62,175 @@ $categorias = $this->d['categorias'];
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mesas & Pedidos Asociados</h5>
-                        <div class="table-responsive">
-                            <table id="dataa-mesas-pedidos" class="table table-responsive datanew">
-                                <thead>
-                                    <th>
-                                        <label class="checkboxs">
-                                            <input type="checkbox" id="select-all">
-                                            <span class="checkmarks"></span>
-                                        </label>
-                                    </th>
 
-                                    <th class="sorting">Numero mesa</th>
-                                    <th class="sorting">Pedido Asociado</th>
-                                    <th class="sorting">Estado</th>
-                                    <th class="sorting">Accion</th>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             </div>
-        </main>
+    </div>
+    </main>
+    </div>
+
+    <!-- modal para generar un pedido -->
+    <div class="modal fade" id="generarPedidoModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister d-flex justify-content-between align-items-center p-3">
+                    <h5 class="modal-title fw-bold" id="titleModal">Nuevo Pedido</h5>
+
+                    <div class="d-flex flex-column align-items-end px-4">
+                        <h4 class="fw-bold mb-0" id="codigo-pedido"></h4>
+                        <p class="fw-bold mb-0" id="fecha-hora"></p>
+                    </div>
+
+                    <!-- Botón de cerrar en la esquina superior derecha -->
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Encabezado de pedido y fecha -->
+                <div class="modal-body">
+                    <form id="formPedido">
+                        <div class="mb-3" id="container-form">
+                            <div class="row mb-3">
+                                <div class="form-group col-md-4">
+                                    <label for="numeroMesa" class="form-label">Numero de Mesa</label>
+                                    <select name="numeroMesa" id="numeroMesa" class="form-control" required>
+                                        <option value="#">Selecciona mesa</option>
+                                    </select>
+                                    <div id="nombresError" class="invalid-feedback" style="display:none;">Seleccione un numero de mesa valido.</div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="apellidos" class="form-label">Nombre Mesero</label>
+                                    <input type="text" id="idMesero" name="idMesero" data-id="<?php echo $user->getDocumento(); ?>" class="form-control" value="<?php echo $user->getNombres(); ?>" disabled>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="numeroPersonas" class="form-label">Numero de personas</label>
+                                    <input type="number" class="form-control" id="numeroPersonas" name="numeroPersonas" required>
+                                    <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número de personas valido válido.</div>
+                                </div>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="mb-3 title-products">Agregar Productos</h5>
+                                    <div class="row mb-2">
+                                        <div class="form-group col-md-6">
+                                            <label for="categoriaPedido" class="form-label">Categoria</label>
+                                            <select name="categoriaPedido" id="categoriaPedido" class="form-control" required>
+                                                <option value="#">Selecciona una categoria</option>
+                                                <?php
+                                                foreach ($categorias as $cat) {
+                                                ?>
+                                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="producto" class="form-label">Producto</label>
+                                            <select name="producto" id="producto" class="form-control" required>
+                                                <option value="#">Selecciona producto</option>
+                                                <?php
+                                                foreach ($categorias as $cat) {
+                                                ?>
+                                                    <option value="<?php echo $cat->getIdCategoria() ?>"><?php echo $cat->getNombreCategoria() ?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="cantidadItems" class="form-label">Cantidad</label>
+                                            <input type="number" min="1" max="15" step="1" class="form-control" id="cantidadItems" name="cantidadItems" required>
+                                            <div id="numeroPersonasError" class="invalid-feedback" style="display:none;">Por favor, ingresa un número valido de items. </div>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="notasItems" class="form-label">Notas Producto</label>
+                                            <input type="text" class="form-control" id="notasItems" name="notasItems" placeholder="Ej:Sin sal, termino medio">
+                                        </div>
+
+                                        <!-- creamos un elemento oculto para el estado pero solo se va mostrar cuando este en modo edicion en el pedido -->
+
+                                        <div class="form-group col-md-12 d-none estado-producto-container">
+                                            <label for="estadoProducto" class="form-label">Estado Producto</label>
+                                            <select name="estadoProducto" id="estadoProducto" class="form-control">
+                                                <option value="#">Selecciona un estado</option>
+                                                <option value="PENDIENTE">Pendiente</option>
+                                                <option value="EN PREPARACION">En preparacion</option>
+                                                <option value="COMPLETADO">Completado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button id="agregar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Agregar Producto</button>
+                                </div>
+                            </div>
+
+                            <!-- Los productos del pedido que se van agregar dinamicamente -->
+                            <div class="conatiner-productos">
+                                <h6 class="fw-bold">Productos del Pedido</h6>
+                                <!-- contenedor para mostrar los elementos dinamicamente  -->
+                                <div id="listaProductos">
+
+                                </div>
+                                <hr class="my-4">
+                            </div>
+
+                            <!-- Total y notas generales del pedido -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="fw-bold">Total:</h5>
+                                <h5 id="totalPedido" class="text-end fw-bold">$0.00</h5>
+                            </div>
+                            <div class="form-group">
+                                <label for="notasPedido" class="form-label">Notas Generales del Pedido</label>
+                                <textarea class="form-control" id="notasPedido" rows="3" placeholder="Notas adicionales sobre el pedido..."></textarea>
+                            </div>
+                            <button type="submit" id="enviar-pedido-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center fw-900">Enviar Pedido</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 
+    <!-- modal para ver los detalles de la mesa y el pedido asociado -->
+    <div class="modal fade" id="detallesPedidoMesaModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header headerRegister">
+                    <h5 class="modal-title" id="orderModalLabel">Detalles Mesa y Pedido Asociado<span id="estado-mesa"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Numero Mesa:</td>
+                                <td id="numeroPedidoMesa"></td>
+                            </tr>
+                            <tr>
+                                <td>Pedido Asociado:</td>
+                                <td id="codigoPedido"></td>
+                            </tr>
+                            <tr>
+                                <td>Capacidad:</td>
+                                <td id="capacidad"></td>
+                            </tr>
+                            <tr>
+                                <td>Comensales:</td>
+                                <td id="comensales"></td>
+                            </tr>
+                            <tr>
+                                <td>Estado:</td>
+                                <td id="estado"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -129,12 +243,12 @@ $categorias = $this->d['categorias'];
     <!-- SWEETALERT2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script type="module" src="<?php echo constant('URL'); ?>public/js/alertas.js"></script>
+    <script type="module" src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/app.js"></script>
     <script src="<?php echo constant('URL'); ?>public/js/mesas.js"></script>
-    <script src="<?php echo constant('URL'); ?>public/js/pedidos.js"></script>
+
+
 
 </body>
-
 
 </html>

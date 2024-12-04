@@ -1,5 +1,5 @@
+const baseUrl = $('meta[name="base-url"]').attr("content");
 $(document).ready(function () {
-    const baseUrl = $('meta[name="base-url"]').attr("content");
     let estado;
     let globalIdMesa;
 
@@ -79,12 +79,10 @@ $(document).ready(function () {
         columnDefs: [
             {
                 targets: [0, 4],
-                orderable: false, 
+                orderable: false,
             },
         ],
     });
-
-
 
     // validación del formulario de mesas para agrear una mesa con AJAX
     $("#formMesas").on("submit", function (e) {
@@ -103,7 +101,9 @@ $(document).ready(function () {
         }
         // creamos la petición para enviar la data al servidor y obtener una respuesta
         $.ajax({
-            url: editar? baseUrl + "mesas/actualizarMesa" : baseUrl+"mesas/createTable",
+            url: editar
+                ? baseUrl + "mesas/actualizarMesa"
+                : baseUrl + "mesas/createTable",
             type: "POST",
             processData: false,
             contentType: false,
@@ -135,37 +135,17 @@ $(document).ready(function () {
         });
     });
 
+    // vamos a dividir la funcion de cargarMesasPorEstado para utilizar en pedidos y asi poder actualizar un pedido facilmente
+
     /**Esta funcion nos permitira realizar la peticion 
     para traer las tablas por estado, y asi
     quemar o hacer scripting en el DOM para mostrar las mesas segun el estado**/
     $("#btnCrearPedido").on("click", function (e) {
-        // validamos si el modal esta abierto para asignar el estado
-        if (!$("#abrirMesaModal").hasClass("show")) {
-            estado = "DISPONIBLE";
-        } else {
-            estado = "EN SERVICIO";
-        }
-        console.log(estado);
-        // cancelamos el efecto por default
+        let estado = $("#abrirMesaModal").hasClass("show")
+            ? "EN SERVICIO"
+            : "DISPONIBLE";
         e.preventDefault();
-
-        $.post(
-            `${baseUrl}mesas/getTablasPorEstado`,
-            { estado: estado },
-            function (response) {
-                let mesas = JSON.parse(response);
-                console.log(mesas);
-
-                let template = "<option ='#'>Seleccione una mesa</option>";
-
-                mesas.data.forEach((mesa) => {
-                    template += `
-                <option data-estado="${mesa.estado}" value="${mesa.id_mesa}">${mesa.numeroMesa}</option>
-                `;
-                });
-                $("#numeroMesa").html(template);
-            }
-        );
+        cargarMesasPorEstado(estado);
     });
 
     // funcion para abrir una mesa en la interfaz del mesero para crear un nuevo pedido
@@ -228,6 +208,7 @@ $(document).ready(function () {
                         var mesaData = response.data;
                         // seteamos la data en los campos
                         $("#numeroMesa").val(mesaData.numero_mesa);
+                        $("#capacidad").val(mesaData.capacidad);
                         $("#estado").val(mesaData.estado);
                     } else {
                         console.log("response.data está vacío o es undefined");
@@ -248,14 +229,14 @@ $(document).ready(function () {
     });
 
     // funcion para borrar una mesa desde la interfaz del admin
-    $("#data-mesas").on("click", ".botonEliminar", function (){
+    $("#data-mesas").on("click", ".botonEliminar", function () {
         // traemos la data del id de la mesa
         globalIdMesa = $(this).data("id");
         let formData = new FormData();
 
-        formData.append('id_mesa', globalIdMesa);
+        formData.append("id_mesa", globalIdMesa);
 
-        console.log("something "+globalIdMesa);
+        console.log("something " + globalIdMesa);
 
         // creamos la alerta para la confirmación del usuario
         Swal.fire({
@@ -268,7 +249,6 @@ $(document).ready(function () {
             allowOutsideClick: false,
         }).then((result) => {
             if (result.isConfirmed) {
-                
                 $.ajax({
                     url: baseUrl + "mesas/borrarMesa",
                     type: "POST",
@@ -327,3 +307,98 @@ $(document).ready(function () {
         console.log("El modal se ha abierto, estado: " + estado);
     });
 });
+
+export function cargarMesasPorEstado(
+    estado,
+    mesaActual = null,
+    editar = false
+) {
+    return $.post(
+        `${baseUrl}mesas/getTablasPorEstado`,
+        { estado: estado },
+        function (response) {
+            let mesas = JSON.parse(response);
+            console.log(mesas);
+
+            // Limpia las opciones previas
+            $("#numeroMesa").empty();
+
+            // Añade la opción por defecto
+            let template = "<option value=''>Seleccione una mesa</option>";
+
+            mesas.data.forEach((mesa) => {
+                // Genera las opciones correctamente
+                template += `
+                    <option data-estado="${mesa.estado}" value="${mesa.id_mesa}">
+                        ${mesa.numeroMesa}
+                    </option>`;
+            });
+
+            if (
+                mesaActual &&
+                editar &&
+                !mesas.data.some((mesa) => mesa.id_mesa == mesaActual.id_mesa)
+            ) {
+                console.log("Entra para actualizar la mesa y seleccionarla bb");
+                template += `
+                    <option value="${mesaActual.id_mesa}" selected>
+                        ${mesaActual.numero_mesa}
+                    </option>`;
+            }
+            console.log("ho hace nada mucho hp :(");
+            // Añade las opciones generadas al select
+            $("#numeroMesa").append(template);
+        }
+    );
+    // Referencia al campo "Número de mesa"
+    const numeroMesaInput = document.getElementById("numeroMesa");
+
+    // Función para validar que el número sea positivo
+    function validarNumeroMesa() {
+        const valor = parseInt(numeroMesaInput.value, 10); // Convertir a número entero
+        const errorDiv = document.getElementById("mesaNameError"); // Div del error
+
+        // Verificar si el valor es menor o igual a 0 o NaN
+        if (isNaN(valor) || valor <= 0) {
+            numeroMesaInput.classList.add("is-invalid"); // Agregar clase de error
+            errorDiv.style.display = "block"; // Mostrar mensaje de error
+            errorDiv.textContent =
+                "Por favor, ingresa un número positivo mayor que 0.";
+        } else {
+            numeroMesaInput.classList.remove("is-invalid"); // Quitar clase de error
+            errorDiv.style.display = "none"; // Ocultar mensaje de error
+        }
+    }
+
+    // Evento en tiempo real para validar mientras se escribe
+    numeroMesaInput.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, ""); // Eliminar caracteres no numéricos
+        validarNumeroMesa(); // Ejecutar validación
+    });
+
+    // Referencia al campo "Capacidad"
+    const capacidadInput = document.getElementById("capacidad");
+
+    // Función para validar el campo "Capacidad"
+    function validarCapacidad() {
+        const valor = parseInt(capacidadInput.value, 10); // Convertir a número entero
+        const errorDiv = document.getElementById("capacidadError"); // Referencia al mensaje de error
+
+        // Verificar si el valor es inválido (NaN, menor que 1 o mayor que 30)
+        if (isNaN(valor) || valor < 1 || valor > 30) {
+            capacidadInput.classList.add("is-invalid"); // Agregar clase de error
+            errorDiv.style.display = "block"; // Mostrar mensaje de error
+            errorDiv.textContent = "Por favor, ingresa un número entre 1 y 30.";
+        } else {
+            capacidadInput.classList.remove("is-invalid"); // Quitar clase de error
+            errorDiv.style.display = "none"; // Ocultar mensaje de error
+        }
+    }
+
+    // Validación en tiempo real
+    capacidadInput.addEventListener("input", function () {
+        // Permitir solo números positivos y eliminar ceros iniciales
+        this.value = this.value.replace(/^0+/, "").replace(/[^0-9]/g, "");
+        validarCapacidad(); // Ejecutar validación
+    });
+}
